@@ -1,0 +1,32 @@
+# build output
+dist
+workflow/draft
+
+# dependencies
+node_modules/
+.snowpack/
+
+venv/
+__pycache__/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# Local Netlify folder
+.netlify
+netlify
+
+.astro/
+.idea/
+.vercel
+
+workflow/test_resources/.env

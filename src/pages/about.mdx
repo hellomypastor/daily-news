@@ -1,0 +1,14 @@
+---
+title: About
+description: 'AI make work life balance'
+---
+
+import DefaultPageLayout from '$/layouts/default.astro'
+import Prose from '$/components/Prose.astro'
+import { Content as AboutAstroInk } from './../../README.md'
+
+<DefaultPageLayout content={{ title: frontmatter.title, description: frontmatter.description }}>
+    <Prose>
+      <AboutAstroInk/>
+    </Prose>
+</DefaultPageLayout>
