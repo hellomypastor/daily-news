@@ -1,0 +1,70 @@
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: 0 15 * * *  # every 23:59 UTC +8
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  create-daily-news:
+    runs-on: ubuntu-latest
+
+    env:
+      GIT_NAME: ${{ secrets.GIT_NAME }}
+      GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+      AI_PROVIDER: ${{ secrets.AI_PROVIDER }}
+      GPT_MODEL_NAME: ${{ secrets.GPT_MODEL_NAME }}
+      GPT_BASE_URL: ${{ secrets.GPT_BASE_URL }}
+      GPT_API_KEY: ${{ secrets.GPT_API_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Before Execute
+        # You may pin to the exact commit or the version.
+        run: |
+          echo $GPT_API_KEY
+          echo $AI_PROVIDER
+          ls -l
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install requirements
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -r ./requirements.txt
+
+      - name: Create Daily News
+        # You may pin to the exact commit or the version.
+        run: python3 ./main.py
+
+      - name: Get branch name
+        run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+      - name: Commit
+        run: |
+          git config --local user.name $GIT_NAME
+          git config --local user.email $GIT_EMAIL
+          git add .
+          git commit -m "Github action update at `date '+%Y-%m-%d %H:%M:%S'`."
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        if: ${{ env.BRANCH_NAME == 'main' }} # only for main
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: main
