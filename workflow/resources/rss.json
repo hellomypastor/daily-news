@@ -11,7 +11,6 @@
                     "url": "https://openai.com/blog/rss.xml",
                     "type": "link",
                     "output_count": 3,
-                    "rsshub_path": "github/trending/daily/swift",
                     "image_enable": true
                 }
             ]
