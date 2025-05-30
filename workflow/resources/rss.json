@@ -4,14 +4,30 @@
     },
     "categories": [
         {
-            "category": "Daily News",
+            "category": "? AI info",
             "items": [
                 {
-                    "title": "OpenAI Blog",
-                    "url": "https://openai.com/blog/rss.xml",
+                    "title": "oneminute_daily_ai_news RSS",
+                    "url": "https://www.reddit.com/user/Excellent-Target-847/.rss",
                     "type": "link",
-                    "output_count": 3,
-                    "image_enable": true
+                    "output_count": 1
+                },
+                {
+                    "title": "Hacker News - AI",
+                    "url": "https://hnrss.org/newest?q=AI",
+                    "type": "link",
+                    "output_count": 3
+                },
+                {
+                    "title": "36Kr 最新资讯频道",
+                    "url": "https://rss.aishort.top/?type=36kr",
+                    "output_count": 1
+                },
+                {
+                    "title": "瓦斯阅读",
+                    "url": "https://rss.aishort.top/?type=wasi",
+                    "type": "link",
+                    "output_count": 0
                 }
             ]
         }
