@@ -19,12 +19,12 @@
                     "output_count": 3
                 },
                 {
-                    "title": "36Kr 最新资讯频道",
+                    "title": "36Kr",
                     "url": "https://rss.aishort.top/?type=36kr",
                     "output_count": 1
                 },
                 {
-                    "title": "瓦斯阅读",
+                    "title": "AIShort",
                     "url": "https://rss.aishort.top/?type=wasi",
                     "type": "link",
                     "output_count": 0
