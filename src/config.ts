@@ -23,10 +23,10 @@ export const NAV_ITEMS: NavItems = {
 export const SITE = {
 	// Your site's detail?
 	name: config.name,
-	title: "zhangferry",
+	title: "anchen's daily news",
 	description: `Made with ${config.aiprovider_model}`,
-	url: "https://daily.zhangferry.com",
-	githubUrl: "https://github.com/zhangferry/AIDailyNews",
+	url: "https://ai.anchen.me",
+	githubUrl: "https://github.com/hellomypastor/daily-news",
 	listDrafts: true,
 	image:
 		"https://cdn.zhangferry.com/Images/moyuzai_alpha.png",
@@ -34,7 +34,7 @@ export const SITE = {
 	ytChannelId: "",
 	// Optional, user/author settings (example)
 	// Author: name
-	author: "zhangferry", // Example: Fred K. Schott
+	author: "anchen", // Example: Fred K. Schott
 	// Author: Twitter handler
 	authorTwitter: "", // Example: FredKSchott
 	// Author: Image external source
