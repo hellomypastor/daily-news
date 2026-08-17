@@ -24,7 +24,7 @@ export const SITE = {
 	// Your site's detail?
 	name: config.name,
 	title: "anchen's daily news",
-	description: `Made with ${config.aiprovider_model}`,
+	description: "Five focused AI briefings, curated daily by Codex",
 	url: "https://ai.anchen.me",
 	githubUrl: "https://github.com/hellomypastor/daily-news",
 	listDrafts: true,
@@ -40,8 +40,7 @@ export const SITE = {
 	// Author: Image external source
 	authorImage: "https://cdn.zhangferry.com/Images/moyuzai_alpha.png", // Example: https://pbs.twimg.com/profile_images/1272979356529221632/sxvncugt_400x400.jpg, https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png
 	// Author: Bio
-	authorBio:
-		"gemini pro",
+	authorBio: "AI and Agent intelligence, curated daily.",
 };
 
 // Ink - Theme configuration
