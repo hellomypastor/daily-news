@@ -1,0 +1,15 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "content": "## 概览\n\n48 小时窗口：2026-08-16 07:03 至 2026-08-18 07:03（Asia/Shanghai）；HN 再浮现窗口为最近 24 小时。本轮找到 2 个可由 GitHub 创建时间二次核对的新项目；未发现满足时效与技术门槛、且发布日期可双重确认的论文或独立技术文章，因此不凑 5 条。星数为 2026-08-18 07:03 附近 API 快照，不代表今日新增。\n\n## 已核实高亮\n\n| 项目 | 是什么 | 为什么重要 | 日期状态 |\n|---|---|---|---|\n| [yetone/cumora](https://github.com/yetone/cumora) | 以 AI agent 为一等成员的跨端团队聊天，含云端 Kubernetes agent 与自带 Claude Code/Codex daemon | 把消息、任务认领、并发协调和成本台账放入同一协作层；快照 1,048 stars | 仓库创建于 2026-08-17 17:13 +08:00，GitHub API 与仓库页核对 |\n| [dance-video-to-prompt](https://github.com/CattleZ/dance-video-to-prompt) | 本地视频抽帧、清晰度救援、BPM 分析与六段式视频提示词 Skill/CLI | 展示多模态 Agent Skill 如何拆分事实观察、生成和校验；快照 34 stars | 仓库创建于 2026-08-17 14:32 +08:00，GitHub API 与仓库页核对 |\n\n## GitHub Trending\n\nGitHub Trending 页面未提供可稳定复核的当天条目快照；本页不把搜索排名或 stars 总量误写为“今日趋势”。\n\n## HN 讨论\n\n- Cumora 于窗口内进入 HN，但互动仅 2 points、0 comments；热度证据很弱，故仍按“新仓库”而非趋势事件处理。[HN 条目](https://news.ycombinator.com/item?id=49338707)\n\n## 旧项目再浮现\n\n- [Rysh CLI](https://github.com/rysh-ai/rysh-cli-code) 是 Go 编写的 agentic terminal multiplexer，可在 pane 中运行 Claude/Codex，并提供会话持久化与多 agent board。仓库创建于 2026-07-27，已超过 7 天；2026-08-18 06:51 +08:00 被提交至 [HN](https://news.ycombinator.com/item?id=49338780)，当时 1 point、0 comments，因此单列且不视为新品。\n\n## 论文/研究\n\n本轮 arXiv API 返回的相关最新论文提交时间早于 48 小时窗口，排除。\n\n## 时间未确认\n\n无。\n\n## 来源\n\n- [Cumora](https://github.com/yetone/cumora)；[HN](https://news.ycombinator.com/item?id=49338707)\n- [dance-video-to-prompt](https://github.com/CattleZ/dance-video-to-prompt)\n- [Rysh CLI](https://github.com/rysh-ai/rysh-cli-code)；[HN](https://news.ycombinator.com/item?id=49338780)",
+  "sources": [
+    {"title":"yetone/cumora","url":"https://github.com/yetone/cumora","source":"GitHub","publishedAt":"2026-08-17 17:13 +08:00","summary":"跨端人类与 Agent 团队聊天及托管运行时。","tags":["Agent","TypeScript"]},
+    {"title":"Cumora on Hacker News","url":"https://news.ycombinator.com/item?id=49338707","source":"Hacker News","publishedAt":"2026-08-18 06:46 +08:00","summary":"Cumora 的 HN 提交与低互动快照。","tags":["Agent","HN"]},
+    {"title":"dance-video-to-prompt","url":"https://github.com/CattleZ/dance-video-to-prompt","source":"GitHub","publishedAt":"2026-08-17 14:32 +08:00","summary":"视频抽帧、节奏分析和多模态提示词生成 Skill。","tags":["Multimodal","Agent Skill"]},
+    {"title":"rysh-ai/rysh-cli-code","url":"https://github.com/rysh-ai/rysh-cli-code","source":"GitHub","publishedAt":"2026-07-27 22:28 +08:00","summary":"可承载 Claude/Codex 的 agentic terminal multiplexer。","tags":["Agent","Go"]},
+    {"title":"Rysh CLI on Hacker News","url":"https://news.ycombinator.com/item?id=49338780","source":"Hacker News","publishedAt":"2026-08-18 06:51 +08:00","summary":"旧项目在 24 小时窗口内重新进入 HN。","tags":["Agent","HN"]}
+  ]
+}

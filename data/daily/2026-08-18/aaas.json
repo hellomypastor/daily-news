@@ -1,0 +1,9 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "content": "## 今日概览\n\n主窗口：2026-08-17 07:03 至 2026-08-18 07:03（Asia/Shanghai）；观察窗口延伸至 72 小时。按托管执行、异步任务、隔离环境、生命周期、编排、可观测性、企业接入和远程编码等维度扫描海外与中国厂商。\n\n## 重点动态\n\n**今日无显著动态。** 未找到同时满足 AaaS 服务层定义、时间窗口、原始来源可打开和发布时间可核实的独立发布。Claude Code 与 Codex 的窗口内版本链接已分别归入更早主题，本页不重复 URL，也不把单纯模型 API 或通用云基础设施算作 AaaS。\n\n## 远程 / 云端 Agent 执行\n\n无可独立收录的新发布。\n\n## 海外厂商\n\n无可独立收录的新发布。\n\n## 中国厂商（含字节跳动重点扫描）\n\n字节跳动 Coze/火山/Doubao/Trae/Seed 及阿里、腾讯、百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek 均未发现窗口内满足证据门槛的显著 AaaS 动态。\n\n## 分类说明\n\n- 仅提供模型推理 API 的变化属于 MaaS，不纳入。\n- 仅提供计算、容器或存储的变化属于 PaaS，不纳入。\n- 开源项目只有在明确提供托管或受管 Agent 服务层时才可归入 AaaS；本轮没有可在不重复前序 URL 的情况下收录的条目。\n\n## 趋势\n\n样本为零，不推断当日行业趋势。\n\n今日扫描完成，共 0 条动态，重点：严格区分 AaaS 与 MaaS/PaaS，并执行跨页面 URL 去重。",
+  "sources": []
+}
