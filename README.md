@@ -1,115 +1,60 @@
-## DailyNewsReport
+# Daily News
 
-My Daily News：一键部署独属于你的每日新闻总览,支持 GPT3，Gemini Pro 模型。
+由 Codex Scheduled Task 每天研究五个主题，生成五篇独立新闻页面，并在一次 Git 提交中发布。站点使用 Astro 构建，通过 Vercel Git 集成部署。
 
-![](https://cdn.zhangferry.com/Images/202411041740985.png)
+## 工作流
 
-基于 RSS 地址，每天早上 9 点采集一次前一天的内容，通过 GPT 进行分析总结，形成一份每日报告。
-
-## Get Started
-
-Fork 该仓库，删除 [src/content/blog](https://github.com/zhangferry/AIDailyNews/tree/main/src/content/blog) 里的文件，然后做如下修改：
-
-1、修改 [rss.json](https://github.com/zhangferry/AIDailyNews/blob/main/workflow/resources/rss.json)，这里是你要订阅的 RSS 内容，以下是各参数说明：
-   ```json5
-{
-    "configuration": {
-      // rsshub domain，当使用自定义 rsshub_path 时会自动拼接这个值
-      "rsshub_domain": "https://rsshub.zhangferry.com/"
-    },
-    "categories": [
-      {
-        // rss分组，同时对应网页二级标题
-        "category": "Daily News",
-        // rss内容
-        "items": [
-          {
-            // rss 标题，仅用做备注
-            "title": "OpenAI Blog",
-            // rss 地址
-            "url": "https://openai.com/blog/rss.xml",
-            // rss 内容获取方式。link：会从关联原始链接获取，code：会通过github api 获取对应仓库readme文件。不带该字段提取 rss 原始信息
-            "type": "link",
-            // 该链接最大输出内容数量，默认为 2
-            "output_count": 3,
-            // 会跟 `configuration.rsshub_domain` 进行拼接
-            "rsshub_path": "github/trending/daily/swift",
-             // 是否提取 rss 中的图片，仅从原始 rss 信息获取
-             "image_enable": true
-          },
-        ],
-      },
-    ]
-}
-   ```
-2、配置数据采集的环境变量，为 Github Action 定时任务所需。
-
-  环境变量配置到 [main.yml](https://github.com/zhangferry/AIDailyNews/blob/main/.github/workflows/main.yml)中，隐私信息通过 Action 的 secret 管理。
-   ![](https://cdn.zhangferry.com/Images/202403161224264.png)
-
-   GPT 能力所需：
-
-   - `AI_PROVIDER`: 可选 `gemini` 和 `openai`。默认 `gemini`
-   - `GPT_API_KEY`: 根据设置的 AI 能力填写对应的 Key
-   - `GPT_MODEL_NAME`: gemimi 默认 `gemini-pro`，openai 默认 `gpt-3.5-turbo`
-   - `GPT_BASE_HOST`: 默认官方地址，可选
-
-   更新仓库所需：
-
-   - `GIT_NAME`：git 提交用户名
-   - `GIT_EMAIL`: git email 地址
-   - `ACCESS_TOKEN`: github token 权限。token 的生成需要到这里：个人头像 -> Settings -> Developer settings -> Personal access tokens，点击 Generate new token。
-
-3、部署到 Vercel：[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzhangferry%2FAIDailyNews)
-
-🎉恭喜，你将会每天收到所订阅内容的总结啦！
-
-## Build & Custom
-
-用于本地调试和项目自定义。项目工作流程如下：
-
-![](https://cdn.zhangferry.com/Images/whiteboard_exported_image.png)
-
-数据采集部分使用 Python 实现，前端渲染使用 Astro 框架。
-
-### 环境准备安装
-
-创建本地环境变量
-
-```bash
-# copy 一个 env 模版
-mv .env.example .env
+```text
+Codex Scheduled Task
+  ├─ 研究 5 个主题
+  ├─ 写入 5 个 data/daily/YYYY-MM-DD/*.json
+  ├─ 生成 5 个 src/content/blog/*.md
+  ├─ 校验并构建
+  └─ 单次 commit + push main
+             ↓
+      GitHub Actions 校验
+             ↓
+       Vercel 自动部署
 ```
 
-在 .env 中填入`AI_PROVIDER` 和 `GPT_API_KEY`的值。
+GitHub Actions 不再负责定时采集，不需要 OpenAI/Gemini API Key，也不会自动修改仓库。
+
+## 本地开发
+
+需要 Node.js 22 和 Yarn 1.x。
 
 ```bash
-# python 依赖：
-pip3 install -r ./requirements.txt
-
-# js 依赖
-yarn install --ignore-engines
-```
-
-### workflow 调试
-
-workflow 的调试可以借助于 `workflow/test_mainflow` 里的 `test_mainflow_flow` 这个单测方法。 测试文件放在 `test_resources` 里， `.env` 和 `rss.json` 两个文件，分别用于指定本地的环境变量和需要观测的 rss 链接。
-
-其他函数的调试对应 `test_` 开头的 python 文件。
-
-### 启动数据采集
-
-```bash
-python3 main.py
-```
-
-### 页面渲染
-
-页面样式基于 [astro-ink](https://github.com/one-aalam/astro-ink) 主题修改的，你可以换成基于该主题定制。
-
-```bash
-# 开启调试
+corepack enable
+yarn install --frozen-lockfile
 yarn dev
 ```
 
-首页样式配置对应 [src/config.ts](https://github.com/zhangferry/AIDailyNews/blob/main/src/config.ts) 中。
+## 手动生成一天的页面
+
+先按照 [数据格式](data/daily/README.md)准备当天恰好五个 JSON 文件，然后执行：
+
+```bash
+yarn news:publish 2026-08-17
+yarn news:check 2026-08-17
+yarn build
+```
+
+生成文件名为 `src/content/blog/dailyNews_YYYY-MM-DD_<slug>.md`，每份 JSON 对应一篇页面。
+
+## Scheduled Task
+
+可直接粘贴的任务提示词见 [Codex Scheduled Task 配置](docs/scheduled-task.md)，五个主题的详细规范保存在 [`automation/topics`](automation/topics/README.md)。
+
+根据 OpenAI 官方说明，本地项目 Scheduled Task 依赖电脑开机且桌面应用运行。项目使用本地项目模式，以便五个主题在同一次运行中统一提交；任务执行前应避免在此 checkout 留下未提交改动。
+
+## CI 与部署
+
+每次 push 或 pull request 会执行：
+
+```bash
+yarn news:check:all
+yarn check:type
+yarn build
+```
+
+部署由 Vercel 的 Git 集成接管：连接本仓库并将 Production Branch 设为 `main`。推送成功后 Vercel 自动构建和发布。

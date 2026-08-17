@@ -6,7 +6,10 @@ const blogCollection = defineCollection({
 			.string()
 			.max(100, "The title length must be less than or equal to 100 chars"),
 		description: z.string().optional(),
-		tags: z.array(z.string()),
+		tags: z
+			.array(z.string())
+			.nullable()
+			.transform((tags) => tags ?? []),
 		date: z.string(),
 		image: z.string().optional(),
 	}),
