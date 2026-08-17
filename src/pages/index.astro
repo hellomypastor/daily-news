@@ -1,59 +1,33 @@
 ---
 export const prerender = true;
 
-import { getCollection, getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import DefaultPageLayout from "$/layouts/default.astro";
-import PostLayout from "$/layouts/post.astro";
 import PostPreviewList from "$/components/PostPreviewList.astro";
-import Prose from "$/components/Prose.astro";
-import { Content as AboutAstroInk } from "./_home_intro.md";
 
-import Code from "../components/Code.astro";
+const posts = (await getCollection("blog")).sort(
+  (a, b) =>
+    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf() ||
+    a.data.title.localeCompare(b.data.title)
+);
 
-const title = "Home";
-const description =
-  "Astro-Ink is a crisp, minimal, personal blog theme for Astro";
+const latestDate = posts[0]?.data.date.slice(0, 10);
+const todaysPosts = latestDate
+  ? posts.filter((post) => post.data.date.slice(0, 10) === latestDate).slice(0, 5)
+  : [];
 
-let posts = await getCollection("blog");
-posts = posts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-
-let post = posts[0];
-
-const { slug } = Astro.params;
-const entry = post;
-
-const { id, collection, data } = entry;
-const { Content } = await entry.render();
+const content = {
+  title: "Today's Briefings",
+  description: latestDate
+    ? `${latestDate} · ${todaysPosts.length} focused AI & Agent reports`
+    : "No briefings have been published yet.",
+};
 ---
 
-<PostLayout meta={{ id, collection, slug }} content={data}>
-  <Content
-    components={{
-      code: Code,
-    }}
-  />
-</PostLayout>
-
-<style>
-  .hero {
-    @apply flex flex-col md:flex-row gap-8 w-full transition-all pb-4;
-  }
-  .hero__face {
-    @apply flex md:flex-none justify-center;
-  }
-  .hero__says {
-    @apply flex-1 text-center md:text-left;
-  }
-  .author-card {
-    @apply h-48 w-48 md:h-56 md:w-56;
-  }
-  .author-card img {
-    @apply h-48 w-48 md:h-56 md:w-56;
-  }
-  .page__actions {
-    @apply flex justify-center md:justify-end py-6;
-  }
-  .action__go-to-blog {
-    @apply py-4 hover:underline;
-  }
-</style>
+<DefaultPageLayout {content}>
+  {todaysPosts.length > 0 ? (
+    <PostPreviewList posts={todaysPosts} />
+  ) : (
+    <p>No briefings have been published yet.</p>
+  )}
+</DefaultPageLayout>

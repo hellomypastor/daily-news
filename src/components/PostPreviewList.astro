@@ -3,14 +3,16 @@ import type { CollectionEntry } from "astro:content";
 import PostPreview from "./PostPreview.astro";
 
 interface Props {
-  posts: CollectionEntry<"blog">;
+  posts: CollectionEntry<"blog">[];
   heading?: string;
   mode?: "row" | "col";
 }
 
 const { posts, heading, isWeekly, mode = "col" } = Astro.props;
-const sortedPosts = posts.sort(
-  (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
+const sortedPosts = [...posts].sort(
+  (a, b) =>
+    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf() ||
+    a.data.title.localeCompare(b.data.title)
 );
 ---
 
