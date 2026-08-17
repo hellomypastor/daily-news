@@ -78,6 +78,13 @@ export function readSources(date) {
 			throw new Error(`${displayFile}: title 不能超过 100 个字符`);
 		}
 		const description = optionalString(value.description, "description", displayFile);
+		const updatedAt = optionalString(value.updatedAt, "updatedAt", displayFile);
+		if (updatedAt && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(updatedAt)) {
+			throw new Error(`${displayFile}: updatedAt 必须使用 YYYY-MM-DDTHH:mm:ss+08:00 格式`);
+		}
+		if (updatedAt && !updatedAt.startsWith(date)) {
+			throw new Error(`${displayFile}: updatedAt 必须属于目录日期 ${date}`);
+		}
 		const content = requiredString(value.content, "content", displayFile);
 		if (content.startsWith("---")) {
 			throw new Error(`${displayFile}: content 不能包含 YAML frontmatter`);
@@ -130,6 +137,7 @@ export function readSources(date) {
 			slug,
 			title,
 			description,
+			updatedAt,
 			tags: pageTags.map((tag) => tag.trim()).filter(Boolean),
 			content,
 			order,

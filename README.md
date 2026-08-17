@@ -1,16 +1,16 @@
 # Daily News
 
-由 Codex Scheduled Task 每天研究五个主题，生成五篇独立新闻页面，并在一次 Git 提交中发布。站点使用 Astro 构建，通过 Vercel Git 集成部署。
+由 Codex Scheduled Task 每 3 小时滚动研究五个主题，每天维护五篇独立新闻页面，并在有实质变化时通过一次 Git 提交发布。站点使用 Astro 构建，通过 Vercel Git 集成部署。
 
 ## 工作流
 
 ```text
-Codex Scheduled Task
+Codex Scheduled Task（每 3 小时）
   ├─ 研究 5 个主题
-  ├─ 写入 5 个 data/daily/YYYY-MM-DD/*.json
+  ├─ 合并更新 5 个 data/daily/YYYY-MM-DD/*.json
   ├─ 生成 5 个 src/content/blog/*.md
   ├─ 校验并构建
-  └─ 单次 commit + push main
+  └─ 有变化时单次 commit + push main
              ↓
       GitHub Actions 校验
              ↓

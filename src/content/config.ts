@@ -11,6 +11,7 @@ const blogCollection = defineCollection({
 			.nullable()
 			.transform((tags) => tags ?? []),
 		date: z.string(),
+		updatedAt: z.string().optional(),
 		image: z.string().optional(),
 	}),
 });

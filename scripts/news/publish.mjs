@@ -18,7 +18,8 @@ for (const source of sources) {
 	const frontmatter = [
 		"---",
 		`title: ${JSON.stringify(source.title)}`,
-		`date: ${JSON.stringify(`${date} 11:00:00`)}`,
+		`date: ${JSON.stringify(`${date}T00:00:00+08:00`)}`,
+		`updatedAt: ${JSON.stringify(source.updatedAt || `${date}T11:00:00+08:00`)}`,
 		`description: ${JSON.stringify(description)}`,
 		...(tags.length ? ["tags:", ...tags.map((tag) => `  - ${quote(tag)}`)] : ["tags: []"]),
 		"---",

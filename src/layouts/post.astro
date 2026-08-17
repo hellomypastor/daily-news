@@ -77,6 +77,20 @@ const AUTHOR_AVATAR = content.authorImage
               )
             }
           </span>
+          {
+            content.updatedAt && (
+              <span class="post__updated">
+                Updated {new Intl.DateTimeFormat("zh-CN", {
+                  timeZone: "Asia/Shanghai",
+                  month: "2-digit",
+                  day: "2-digit",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                }).format(new Date(content.updatedAt))} (Asia/Shanghai)
+              </span>
+            )
+          }
           <span class="post__stats">
             {USE_VIEW_STATS && ` | `}
             {
@@ -130,6 +144,7 @@ const AUTHOR_AVATAR = content.authorImage
       @apply no-underline dark:text-white hover:text-theme-primary;
     }
     .post__date,
+    .post__updated,
     .post__stats {
       @apply text-gray-500;
     }

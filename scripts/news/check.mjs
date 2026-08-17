@@ -10,7 +10,7 @@ if (JSON.stringify(actualFiles) !== JSON.stringify(expectedFiles)) {
 	throw new Error(`${date} 的页面集合不匹配；期望 ${expectedFiles.join(", ")}，实际 ${actualFiles.join(", ")}`);
 }
 
-for (const { slug, title, sources: references } of sources) {
+for (const { slug, title, updatedAt, sources: references } of sources) {
 	const target = outputPath(date, slug);
 	if (!fs.existsSync(target)) {
 		throw new Error(`缺少 ${path.relative(ROOT, target)}，请先运行 yarn news:publish ${date}`);
@@ -18,6 +18,9 @@ for (const { slug, title, sources: references } of sources) {
 	const content = fs.readFileSync(target, "utf8");
 	if (!content.includes(`title: ${JSON.stringify(title)}`)) {
 		throw new Error(`${path.relative(ROOT, target)} 标题与源数据不一致`);
+	}
+	if (updatedAt && !content.includes(`updatedAt: ${JSON.stringify(updatedAt)}`)) {
+		throw new Error(`${path.relative(ROOT, target)} 最后更新时间与源数据不一致`);
 	}
 	for (const item of references) {
 		if (!content.includes(item.url)) {
