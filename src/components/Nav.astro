@@ -3,7 +3,7 @@ import { toTitleCase } from "$/utils";
 import { NAV_ITEMS } from "$/config";
 ---
 
-<nav class="nav py-3">
+<nav class="nav border-y">
   <ul class="nav-list" transition:animate="fade">
     {
       Object.keys(NAV_ITEMS).map((navItemKey) => (
@@ -28,16 +28,17 @@ import { NAV_ITEMS } from "$/config";
 </nav>
 <style>
   .nav-list {
-    @apply flex list-none flex-wrap gap-x-7 gap-y-2;
+    @apply flex list-none flex-wrap gap-x-6 gap-y-1;
   }
   .nav-link {
-    @apply inline-block py-2 text-xs font-semibold uppercase tracking-[0.16em] transition-colors;
+    @apply inline-block py-2 text-sm transition-colors;
     color: var(--muted);
-    border-bottom: 2px solid transparent;
   }
   .nav-link:hover,
   .nav-link--active {
     color: var(--ink);
-    border-bottom-color: var(--signal-orange);
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
+  .nav { border-color: var(--line); }
 </style>

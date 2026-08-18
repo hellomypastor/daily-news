@@ -13,7 +13,6 @@ const { content, showPageHeader = true } = Astro.props
     <MainLayout>
         {showPageHeader &&
             <div class="page__header">
-                <p class="page__eyebrow">Daily signal desk</p>
                 <h1 class="page__title">{content.title}</h1>
                 <p class="page__desc">{content.description}</p>
             </div>
@@ -23,21 +22,17 @@ const { content, showPageHeader = true } = Astro.props
 </html>
 <style>
     .page__header {
-        @apply mb-6 pb-5 pt-2;
+        @apply mb-5 pt-1;
         max-width: 52rem;
     }
-    .page__eyebrow {
-        @apply mb-2 text-xs font-semibold uppercase tracking-[0.2em];
-        color: var(--signal-cyan);
-    }
     .page__title {
-        @apply text-4xl font-semibold leading-tight md:text-6xl;
+        @apply text-3xl font-bold leading-tight md:text-4xl;
         color: var(--ink);
         font-family: var(--font-display);
-        letter-spacing: -0.035em;
+        letter-spacing: -0.02em;
     }
     .page__desc {
-        @apply mt-3 text-base md:text-lg;
+        @apply mt-1 text-sm;
         color: var(--muted);
     }
 </style>

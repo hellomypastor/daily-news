@@ -17,26 +17,26 @@
 @tailwind utilities;
 
 :root {
-	--paper: #f7f9fb;
+	--paper: #ffffff;
 	--paper-raised: #ffffff;
-	--ink: #14213d;
-	--muted: #667085;
-	--line: #dbe2ea;
-	--line-strong: #aebbc9;
-	--signal-orange: #e05a33;
-	--signal-cyan: #087e8b;
+	--ink: #222222;
+	--muted: #666666;
+	--line: #dddddd;
+	--line-strong: #bbbbbb;
+	--signal-orange: #6b3fa0;
+	--signal-cyan: #6b3fa0;
 	--font-display: Georgia, "Times New Roman", serif;
 }
 
 html.dark {
-	--paper: #111820;
-	--paper-raised: #17212b;
-	--ink: #edf3f8;
-	--muted: #9aabba;
-	--line: #2b3a48;
-	--line-strong: #4b6072;
-	--signal-orange: #ff7956;
-	--signal-cyan: #51c5cf;
+	--paper: #1d1d1d;
+	--paper-raised: #1d1d1d;
+	--ink: #eeeeee;
+	--muted: #aaaaaa;
+	--line: #444444;
+	--line-strong: #666666;
+	--signal-orange: #b99adb;
+	--signal-cyan: #b99adb;
 }
 
 html {
@@ -46,9 +46,7 @@ html {
 }
 
 body {
-	background:
-		linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--line) calc(100% - 1px)) top left / 24px 24px,
-		var(--paper);
+	background: var(--paper);
 }
 
 a:focus-visible,

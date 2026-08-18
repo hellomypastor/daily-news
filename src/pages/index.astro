@@ -24,20 +24,15 @@ const todaysPosts = latestDate
   : [];
 
 const content = {
-  title: "Today's intelligence",
+  title: "Latest",
   description: latestDate
-    ? `${latestDate} · Five independent views across the AI and Agent landscape.`
+    ? `Five AI and Agent briefings for ${latestDate}.`
     : "No briefings have been published yet.",
 };
 ---
 
 <DefaultPageLayout {content}>
-  <div class="edition-bar">
-    <span>Latest edition</span>
-    <strong>{latestDate}</strong>
-    <span>{todaysPosts.length} reports</span>
-    <span>Rolling 24-hour window</span>
-  </div>
+  <h2 class="edition-date">{latestDate}</h2>
   {todaysPosts.length > 0 ? (
     <PostPreviewList posts={todaysPosts} mode="signal" />
   ) : (
@@ -46,12 +41,10 @@ const content = {
 </DefaultPageLayout>
 
 <style>
-  .edition-bar {
-    @apply mb-8 grid gap-2 border-y py-3 text-xs uppercase tracking-[0.12em] sm:grid-cols-4;
-    color: var(--muted);
-    border-color: var(--line);
-  }
-  .edition-bar strong {
+  .edition-date {
+    @apply mb-1 border-b pb-2 text-xl font-bold;
+    border-color: var(--line-strong);
     color: var(--ink);
+    font-family: var(--font-display);
   }
 </style>

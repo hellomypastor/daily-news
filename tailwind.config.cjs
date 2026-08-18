@@ -66,12 +66,9 @@ module.exports = {
             },
             h2: {
               color: "var(--ink)",
-              marginTop: "2.25em",
-              marginBottom: "0.75em",
-              paddingTop: "0.65em",
-              borderTop: "1px solid var(--line-strong)",
+              marginTop: "1.75em",
+              marginBottom: "0.6em",
               fontFamily: "var(--font-display)",
-              letterSpacing: "-0.02em",
             },
             h3: {
               color: "var(--ink)",

@@ -7,7 +7,6 @@ import SearchBtn from "./SearchBtn.svelte";
 
 <header class="header">
   <div class="header__identity">
-    <p class="header__eyebrow">AI / Agent intelligence</p>
     <h1 class="header__title">
       <a href="/">{SITE.name}</a>
     </h1>
@@ -50,31 +49,27 @@ import SearchBtn from "./SearchBtn.svelte";
 
 <style>
   .header {
-    @apply flex items-end justify-between gap-6 border-b py-8;
+    @apply flex items-center justify-between gap-6 py-7;
     border-color: var(--line-strong);
   }
   .header__identity {
     min-width: 0;
   }
-  .header__eyebrow {
-    @apply mb-2 text-xs font-semibold uppercase tracking-[0.2em];
-    color: var(--signal-orange);
-  }
   .header__title {
-    @apply text-5xl font-semibold leading-none md:text-7xl;
+    @apply text-4xl font-bold leading-none md:text-5xl;
     color: var(--ink);
     font-family: var(--font-display);
-    letter-spacing: -0.045em;
+    letter-spacing: -0.025em;
   }
   .header__desc {
-    @apply mt-3 text-sm md:text-base;
+    @apply mt-2 text-sm;
     color: var(--muted);
   }
   .header__tools {
     @apply flex shrink-0 items-center gap-5;
   }
   .header__mark img {
-    @apply h-14 w-14 object-contain md:h-16 md:w-16;
+    @apply h-11 w-11 object-contain;
     filter: saturate(0.8);
   }
   .header__ref-list {
@@ -89,10 +84,10 @@ import SearchBtn from "./SearchBtn.svelte";
   }
   @media (max-width: 640px) {
     .header {
-      @apply items-start py-6;
+      @apply items-center py-5;
     }
     .header__title {
-      @apply text-4xl;
+      @apply text-3xl;
     }
     .header__mark {
       display: none;

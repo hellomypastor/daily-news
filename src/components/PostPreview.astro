@@ -50,7 +50,7 @@ const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
 </article>
 <style>
   .post-preview {
-    @apply flex gap-6 border-t py-7;
+    @apply flex gap-6 border-b py-5;
     border-color: var(--line);
   }
   .post-preview--card {
@@ -81,48 +81,28 @@ const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
     color: var(--muted);
   }
   .post-preview__topic {
-    @apply mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em];
-    color: var(--signal-cyan);
+    @apply mb-1 flex items-center gap-2 text-xs font-semibold;
+    color: var(--signal-orange);
   }
   .post-preview__topic span {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     color: var(--muted);
   }
   .post-preview__title {
-    @apply mb-2 text-2xl font-semibold leading-tight;
+    @apply mb-1 text-2xl font-bold leading-tight;
     color: var(--ink);
     font-family: var(--font-display);
   }
   .post-preview__title a:hover { text-decoration: underline; text-decoration-color: var(--signal-orange); text-underline-offset: 4px; }
   .post-preview__desc {
-    @apply line-clamp-3 text-sm leading-6;
+    @apply line-clamp-2 text-sm leading-6;
     color: var(--muted);
   }
   .post-preview__read {
-    @apply mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em];
-    color: var(--ink);
+    @apply mt-2 inline-flex items-center gap-2 text-sm;
+    color: var(--signal-orange);
   }
   .post-preview__read:hover { color: var(--signal-orange); }
-  .post-preview--card {
-    @apply w-auto gap-4 border-0 p-5 sm:w-auto md:w-auto lg:w-auto;
-    min-height: 21rem;
-    background: var(--paper-raised);
-    box-shadow: inset 0 3px 0 var(--topic-color, var(--line-strong));
-  }
-  .post-preview--card[data-topic="claude"] { --topic-color: #d46b3c; }
-  .post-preview--card[data-topic="openai"] { --topic-color: #278b78; }
-  .post-preview--card[data-topic="open-source"] { --topic-color: #8a65aa; }
-  .post-preview--card[data-topic="ai-industry"] { --topic-color: #3978a8; }
-  .post-preview--card[data-topic="aaas"] { --topic-color: #b88a2e; }
-  .post-preview--card .post-preview__date__day {
-    display: none;
-  }
-  .post-preview--card .post-preview__date__month-n-year {
-    @apply text-[0.68rem];
-  }
-  @media (max-width: 1023px) {
-    .post-preview--card { min-height: 17rem; }
-  }
   @media (max-width: 639px) {
     .post-preview { @apply gap-4; }
     .post-preview__date-box { @apply w-16; }
