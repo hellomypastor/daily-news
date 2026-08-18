@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-18T00:00:00+08:00"
-updatedAt: "2026-08-18T16:12:00+08:00"
+updatedAt: "2026-08-18T19:12:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "yetone/cumora"
 featuredUrl: "https://github.com/yetone/cumora"
@@ -12,6 +12,7 @@ featuredImage: "https://opengraph.githubassets.com/104fa03e87ebe58d49ebf9ae80e00
 featuredImageAlt: "Cumora open-source agent team runtime GitHub repository preview"
 featuredImageCaption: "题图来源：Cumora / GitHub"
 tags:
+  - "3D"
   - "A2A"
   - "Agent"
   - "Agent Harness"
@@ -41,6 +42,8 @@ tags:
   - "Education"
   - "Embodied Agent"
   - "Evaluation"
+  - "Fine-Tuning"
+  - "Formal Verification"
   - "Go"
   - "GPU"
   - "GUI Agent"
@@ -52,22 +55,28 @@ tags:
   - "JAX"
   - "Knowledge Graph"
   - "LangChain"
+  - "Lean"
   - "Learning"
+  - "Linux"
   - "LLM"
   - "Local LLM"
   - "macOS"
   - "Maintenance"
+  - "Mathematics"
   - "MCP"
   - "Multi-Agent"
   - "Multimodal"
   - "Observability"
   - "Observation"
+  - "Office"
   - "Open Source"
   - "Payments"
   - "Python"
   - "Qwen"
   - "RAG"
   - "Reinforcement Learning"
+  - "Resurfaced"
+  - "ROCm"
   - "Routing"
   - "Rust"
   - "Scheduling"
@@ -81,6 +90,7 @@ tags:
   - "Verifier"
   - "Video"
   - "Vision"
+  - "vLLM"
   - "Workflow"
   - "World Model"
   - "x402"
@@ -88,20 +98,20 @@ tags:
 
 ## 概览
 
-高亮窗口：2026-08-16 16:12 至 2026-08-18 16:12（Asia/Shanghai）；HN 旧文再浮现窗口为 2026-08-17 16:12 至 2026-08-18 16:12。本轮对 78 个初筛候选做原文、仓库元数据或论文条目复核，保留 54 个唯一来源 URL。13:20 后的实质变化来自一个窗口内新建的 A2A 状态路由仓库、Together AI 的生产 A/B 路由工程说明、Simon Willison 的新 Qwen 条目、三项 HF Daily Papers / arXiv 研究与三条窗口内代码维护提交；新 HN 提交中的旧项目与低互动候选分别进入再浮现和观察池。16:12 复查 GitHub Trending 全站、Python 与 TypeScript 日榜后，原列六个项目仍在今日榜单；纯 stars 与 HN points 波动未触发定量改写，既有数字仍是 10:12–10:15 附近快照，只说明当时热度，不代表发布日或持续趋势。
+高亮窗口：2026-08-16 19:12 至 2026-08-18 19:12（Asia/Shanghai）；HN 旧文再浮现窗口为 2026-08-17 19:12 至 2026-08-18 19:12。本轮对 95 个初筛候选做原文、仓库元数据或论文条目复核，保留 73 个唯一来源 URL。16:12 后的实质新增包括 KTransformers v0.7.0 官方发布、Axiom Math 的公开 Lean 形式化仓库及可信二手核验、三项新的 GitHub Trending AI / Agent 条目，以及若干低互动但可读的新仓库；后者均留在观察池，不以 stars、HN points 或作者自报性能替代技术验证。19:12 复查 GitHub Trending 全站、Python 与 TypeScript 日榜时，早间六项中的五项仍在榜，并新增 OpenViking、AI Agent Book 与 video-use；早间快照仍保留为当日曾上榜证据，榜单更替不反推项目发布日期。
 
 ## 已核实高亮
 
 | 项目 / 文章 | 是什么 | 为什么重要 | 日期 / 证据状态 |
 |---|---|---|---|
 | [Same Cluster, 33 Points More Utilization](https://huggingface.co/blog/Dharma-AI/gpu-management-pt2) | Dharma AI 描述一个约束感知 GPU 分配器：把训练、批推理、实时推理与量化统一进时域调度，并以启发式热路径配合形式化模型 | 给出了 FIFO 与同硬件、同负载的七场景对照；最高利用率提升 33.4 个百分点、优先级加权产出最高提升 105.1%，但均为作者自报基准，尚非独立复现 | HF RSS 标注 2026-08-18 03:46 +08:00，原文可打开 |
+| [KTransformers v0.7.0](https://github.com/kvcache-ai/ktransformers/releases/tag/v0.7.0) | 面向大规模 MoE 的异构推理 / 微调框架新增 AVX-512 CPU LoRA、DeepSeek-V3.1 原生 FP8 LoRA、CPU activation reuse 与 DeepSeek V4 Docker 指南 | 把 LoRA 微调扩展到无 AMX 的大内存 x86 服务器；发布说明称测试配置中 FP8 路径把主机内存需求从约 1.4TB 降至约 800GB，但该数字为项目方验证，不作跨硬件外推 | GitHub Release 发布于 2026-08-17 16:29 +08:00；官方发布页与变更链接可打开 |
 | [Wiz：Snowflake GitHub Actions 脚本注入复盘](https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug) | issue 标题被直接插入 shell，任意用户可触发工作流并让研究者在 PoC 中取到 Jira 凭据；Snowflake 当日修补并轮换凭据 | 展示了 Agent 发现 CI/CD 漏洞的速度，也提醒读者不能从 co-author 标签反推代码一定由 AI 生成 | 2026-08-17 22:00 +08:00 发布；原文后续澄清：Copilot 是共同作者并把变更判为安全，但代码是否 AI 辅助仍不明确 |
 | [Qwen 3.8 27B 本地实测](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) | Simon Willison 在 M5 Max 与 DGX Spark 上运行 17GB Q4_K_M 量化，测试视觉、代码、工具调用和 MTP speculative decoding | 把模型能力与默认 xhigh 推理造成的时延拆开；其自测中 MTP 服务相较 LM Studio 默认 GGUF 提速约 72%，属于单人硬件实验而非通用基准 | Atom feed 标注 2026-08-17 06:00 +08:00，原文可打开 |
 | [yetone/cumora](https://github.com/yetone/cumora) | 人类与 Agent 共用私聊、群聊、看板和日历的跨端团队聊天；支持 Kubernetes 云端 Agent 与本地 Claude Code/Codex daemon | 仓库公开消息新鲜度门、原子任务认领和统一成本台账等多 Agent 协调设计；10:13 API 快照 1,419 stars | 仓库创建于 2026-08-17 17:13 +08:00；仓库页与 API 核对 |
 | [bawadou/ai-data-extractor](https://github.com/bawadou/ai-data-extractor) | 以 Python 标准库从 Claude Code、Cursor、Windsurf、Aider、Cline/Roo Code 等本地存储提取会话，归一化为 JSONL | 为个人备份、可审计分析与训练数据准备提供跨工具出口；README 明示仅提取用户自己的本地历史 | 仓库创建于 2026-08-17 02:35 +08:00；10:13 API 快照 128 stars |
 | [browser-use/macos-harness](https://github.com/browser-use/macos-harness) | 一个持久 Python 进程向模型暴露 see、key、type、click、AX 与 AppleScript 等 macOS 原语 | 用极薄原语层替代大量应用专属工具，是桌面 Agent 工具边界与权限设计的可读样本 | 仓库创建于 2026-08-17 08:22 +08:00；10:13 API 快照 122 stars |
 | [Yevanchen/reclaim-code-entropy](https://github.com/Yevanchen/reclaim-code-entropy) | 以证据排序可删除代码候选的 Agent Skill，分只读审计与落地应用两种模式 | 把删代码转成带信心、风险、净减少量和验证步骤的工程工作流，避免把静态分析候选直接等同于安全删除 | 仓库创建于 2026-08-17 16:19 +08:00；10:13 API 快照 115 stars |
-| [Glitch-Cat-Club/graph-memory-starter](https://github.com/Glitch-Cat-Club/graph-memory-starter) | 三张 SQLite 表、递归查询和 prompt hook 组成的最小知识图谱记忆示例，并附 RAG 对照路径 | 给出了 typed links 与多跳检索的可运行最小实现，适合验证何时应从语义检索升级到显式图关系 | 仓库创建于 2026-08-17 00:51 +08:00；10:13 API 快照 79 stars |
 | [wang2122/sprix-sage-router](https://github.com/wang2122/sprix-sage-router) | 在 SELF、COLLABORATE 与 HANDOFF 三种路径间做状态感知决策，并按权限、预算、时限和 task DAG 分配多 Agent 角色 | README 给出可审计目标函数、beam-search team formation、在线证据更新与测试；仓库自标 research preview，stars 只作发现热度信号，不作为质量结论 | 仓库创建于 2026-08-18 12:08 +08:00；MIT，原仓库与 README 可打开 |
 | [Together AI：生产模型 A/B 测试](https://www.together.ai/blog/a-b-test-models-in-production) | 在 endpoint 层固定分配 control 与最多 20 个 variants，支持采样键粘性、etag 并发保护和 blue-green promotion | 文章给出 95/5、80/20、50/50 的实流量演示及观测份额，说明实验路由如何与 autoscaling、traffic split 和 rollout 组合；数据为厂商自测 | 页面标注 2026-08-17 发布、2026-08-18 更新，原文可打开 |
 
@@ -112,7 +122,7 @@ tags:
 
 ## GitHub Trending
 
-下列数据来自 2026-08-18 10:12 附近 GitHub daily Trending 页面；“today”是页面展示值，不是仓库当日创建量。16:12 对全站、Python、TypeScript 日榜复查时六项仍在榜，故不因 stars 浮动改写下表。
+早间六项沿用 2026-08-18 10:12 附近 GitHub daily Trending 快照；19:12 对全站、Python、TypeScript 日榜复查时，除 modlens 外其余五项仍可见，并新增下表末三项。“today”只表示页面当时展示的日增量，不是仓库当日创建量；保留早间上榜项用于当天轨迹，不因纯 stars 波动改写旧快照。
 
 | 仓库 | 技术定位 | Trending 快照 | 原始创建日 |
 |---|---|---:|---|
@@ -121,7 +131,10 @@ tags:
 | [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) | 编码 Agent 的长期记忆与跨厂商交接层 | 2,132；207 today | 2026-05-22 +08:00 |
 | [jundot/omlx](https://github.com/jundot/omlx) | Apple Silicon 上带连续批处理与 SSD cache 的 LLM 推理服务器 | 19,018；78 today | 2026-02-13 |
 | [cactus-compute/needle](https://github.com/cactus-compute/needle) | 面向手机、可穿戴与机器人等小型设备的 14MB foundation model | 7,157；660 today | 2026-02-24 |
-| [liustack/modlens](https://github.com/liustack/modlens) | 给文本编码 Agent 提供 OCR、布局与语义结构化证据的视觉桥 | 2,816；441 today | 2026-02-22 |
+| [liustack/modlens](https://github.com/liustack/modlens) | 给文本编码 Agent 提供 OCR、布局与语义结构化证据的视觉桥 | 2,816；441 today（早间榜单） | 2026-02-22 |
+| [volcengine/OpenViking](https://github.com/volcengine/OpenViking) | 统一 Agent memory、知识 RAG 与 skills 的上下文数据库 | 29,009 stars；239 today（19:12） | 2026-01-05 +08:00 |
+| [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book) | 《深入理解 AI Agent》正文、PDF 与配套代码的开源主仓库 | 38,857；556 today（19:12） | 2025-09-09 +08:00 |
+| [browser-use/video-use](https://github.com/browser-use/video-use) | 让编码 Agent 通过项目内工具链编辑视频 | 21,011；134 today（19:12） | 2026-04-12 +08:00 |
 
 ## HN 讨论
 
@@ -131,6 +144,8 @@ tags:
 - [GPU Offload in Rust](https://arxiv.org/abs/2608.13759) 在 [HN](https://news.ycombinator.com/item?id=49334991) 为 165 points / 36 comments；论文提出 rustc/LLVM 的多厂商 GPU offload 两阶段编译，但原始提交为 2026-08-14 04:37 +08:00，已超出 48 小时高亮窗。
 - Cumora 的 [HN 提交](https://news.ycombinator.com/item?id=49338707) 为 2 points / 0 comments，热度证据很弱；高亮依据是仓库创建时间与公开实现，而不是 HN 互动。
 - [My friends all hate AI; I just joined an AI startup](https://www.fast.ai/posts/2026-08-18-returning-to-AI/) 在 [HN](https://news.ycombinator.com/item?id=49338139) 的 16:12 前快照为 44 points / 123 comments；这是 fast.ai 联合创始人 Rachel Thomas 对教育、开源维护与人类判断的立场文章，不是技术发布。
+- KTransformers v0.7.0 的 [HN 提交](https://news.ycombinator.com/item?id=49343464) 在 19:12 前仅 2 points / 0 comments；本页高亮依据是官方 GitHub Release，而不是指向 Phoronix 二手报道的低互动提交。
+- Axiom Math 形式化成果的 [HN 提交](https://news.ycombinator.com/item?id=49343957) 在截止前约两分钟出现，快照 1 point / 0 comments；正文只把它当发现入口，事实分开由公开 Lean 仓库与 IEEE Spectrum 报道支持。
 
 ## 论文 / 研究
 
@@ -145,6 +160,7 @@ tags:
 | [Prior Audit-Repair Context Shifts LLM Verifier Thresholds Toward Leniency](https://arxiv.org/abs/2608.16003) | 在保持当前检查任务不变时，把先前 audit→repair 片段放入上下文；作者报告 15/15 个模型×措辞组合的 false alarms 降低，效应落在阈值而非辨别力 | arXiv v1：2026-08-17 09:41 +08:00；v2 更新于 2026-08-18 15:43 +08:00，数值为作者实验 |
 | [UI-Mate: Advancing Open-Weight Foundation GUI Agents with In-Context Demonstrations](https://arxiv.org/abs/2608.15930) | 把环境构建、rollout、过滤、SFT 与在线 RL 连成闭环，并用用户示范约束 GUI 工作流 | arXiv v1：2026-08-17 04:59 +08:00；v2 更新于 2026-08-18 15:40 +08:00，效果尚待独立复现 |
 | [TRACE-Bench: Decomposing and Diagnosing Multi-Reference Image Generation](https://arxiv.org/abs/2608.16765) | 以 Anchor、Disentangle、Apply、Compose 四类原子操作组织约 1,600 个多参考图像生成案例，支持按能力定位失败 | arXiv v1：2026-08-18 00:15 +08:00；v2 更新于 2026-08-18 15:23 +08:00，HF Daily Papers 已收录 |
+| [AxiomMath/PrimeGapsLib](https://github.com/AxiomMath/PrimeGapsLib) | 公开 Lean 库形式化“素数间隔不超过 246 无限次出现”等结果，并提供 comparator challenge；[IEEE Spectrum](https://spectrum.ieee.org/axiom-math-246-theorem-formalization) 报道其由 AxiomProver 多 Agent 系统辅助完成 | 仓库可公开检查且 2026-08-18 07:35 +08:00 前有提交；AI 参与方式与“首次”说法来自 2026-08-17 21:00 +08:00 的可信二手报道，尚未找到同窗官方长文 |
 
 Hugging Face Daily Papers API 本轮复查覆盖 HarnessEval-W、ClawGym II、GenRouter、TRACE-Bench、UI-Mate 与 verifier threshold 研究；本页仍以 arXiv 原始条目核实标题、摘要、v1 时间与本轮 v2 状态。
 
@@ -153,6 +169,7 @@ Hugging Face Daily Papers API 本轮复查覆盖 HarnessEval-W、ClawGym II、Ge
 - [Rysh CLI](https://github.com/rysh-ai/rysh-cli-code) 是 Go 编写的 agentic terminal multiplexer，可在 pane 中运行 Claude/Codex 并提供会话持久化与多 Agent board。仓库创建于 2026-07-27 22:28 +08:00，已超过七天；2026-08-18 06:51 +08:00 被提交到 [HN](https://news.ycombinator.com/item?id=49338780)，10:14 快照 2 points / 0 comments，故只作为弱再浮现信号。
 - [Vyral](https://github.com/Univeracity/vyral) 是本地优先的 canonical data、RAG、durable work 与 MCP contract layer；仓库创建于 2026-08-10 11:21 +08:00，超过七天后于 2026-08-18 14:04 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49341873)，16:12 前快照 3 points / 1 comment。README 和 conformance / qualification 设计可读，但讨论热度很弱。
 - [AgentBridge Atlas](https://github.com/tianzizhiming-svg/agentbridge) 展示 x402 / EIP-3009 的 Agent 付费取数循环；仓库创建于 2026-03-16，2026-08-18 15:07 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49342345)，16:12 前快照 4 points / 0 comments。支付、资产数量和链上闭环均为仓库作者自述，未做独立审计。
+- [LWN：Debating the role of large language models in the kernel community](https://lwn.net/Articles/1083275/) 原文发布于 2026-07-21，梳理 Linux 内核对 Assisted-by 标记、LLM 代码审查、工具依赖和误报责任的争议；2026-08-18 15:34 +08:00 被重新提交到 [HN](https://news.ycombinator.com/item?id=49342593)，19:12 前仅 2 points / 0 comments，属于低互动旧文再浮现。
 
 ## 日期未确认
 
@@ -172,6 +189,12 @@ Hugging Face Daily Papers API 本轮复查覆盖 HarnessEval-W、ClawGym II、Ge
 - **窗口内提交级维护，不等于版本发布**：[Simply Bash timeout 修复](https://github.com/google-deepmind/simply/commit/ee2579c) 让 agent harness 接受禁用 timeout 的配置并补测试，2026-08-18 14:59 +08:00 合入；仓库说明其为 JAX frontier LLM research codebase，且明确不是 Google 官方产品。
 - **窗口内提交级测试，不等于新功能发布**：[LangChain Azure Responses resilience E2E](https://github.com/langchain-ai/langchain-azure/commit/e5abb17) 于 2026-08-18 15:57 +08:00 加入 crash-stage 设计与 E2E 场景；测试需要 Foundry 账户且未加入 CI，不能据此断言 resilience 已在生产验证。
 - **窗口内提交级配置变化**：[OpenWiki output / Bedrock stream limits](https://github.com/langchain-ai/openwiki/commit/21746ce) 于 2026-08-18 14:04 +08:00 增加模型输出上限与 Bedrock stream idle timeout 配置；这是单次代码变更，不提升为版本发布。
+- **可运行记忆样例、采用仍早期**：[graph-memory-starter](https://github.com/Glitch-Cat-Club/graph-memory-starter) 用三张 SQLite 表、递归查询与 prompt hook 展示 typed links 和多跳检索，并附 RAG 对照路径；仓库创建于 2026-08-17 00:51 +08:00，10:13 API 快照 79 stars，保留为设计样例而非成熟方案。
+- **新建 MCP 适配器、互动很弱**：[crhuber/mcp-proxy](https://github.com/crhuber/mcp-proxy) 通过 YAML 把既有 REST endpoint 映射成 MCP tools，README 给出 Go 实现与 Kubernetes sidecar 用法；仓库创建于 2026-08-18 00:04 +08:00，19:12 前 7 stars，其 [HN 提交](https://news.ycombinator.com/item?id=49343705) 仅 2 points / 0 comments。
+- **新建 3D Agent pipeline、作者自述**：[AnyCreature](https://github.com/Ariescar/anyCreature) 以 JSON spec、门控校验和多阶段 cards 生成带骨骼动画的 GLB；仓库创建于 2026-08-17 21:40 +08:00，MIT，19:12 前 6 stars，[HN 提交](https://news.ycombinator.com/item?id=49343561) 为 3 points / 0 comments，尚无独立产物评测。
+- **低互动本地推理打包**：[vLLM ROCm Windows RDNA2](https://github.com/sebastianmechno-sys/vllm-rocm-windows-rdna2) 为 Windows 原生 RDNA2 提供预构建 vLLM / ROCm 栈；README 的约 26 TFLOPS 与 58–62 tok/s 均是作者在 RX 6750 XT 上的自测，[HN 提交](https://news.ycombinator.com/item?id=49343550) 仅 2 points / 0 comments，不能外推到其他硬件。
+- **零星新 fork**：[open-genoffice](https://github.com/douglas168/open-genoffice) 把 GenOffice 默认 AI provider 改为任意 OpenAI-compatible endpoint，README 明示未发布预构建安装包；仓库创建于 2026-08-18 14:32 +08:00，19:12 前 0 stars，[HN 提交](https://news.ycombinator.com/item?id=49343170) 仅 2 points / 0 comments。
+- **安全边界明确但采用尚弱**：[Agent Reach Public](https://github.com/Jaimo-so/agent-reach-public) 把公开网页、YouTube、GitHub、B站、RSS/Atom 与 V2EX 限定为无登录、只读、无凭据入口，并附 doctor / install 流程；仓库创建于 2026-08-18 16:25 +08:00，19:12 前 7 stars，保留为新工具观察信号。
 
 ## 来源链接
 
@@ -179,7 +202,7 @@ Hugging Face Daily Papers API 本轮复查覆盖 HarnessEval-W、ClawGym II、Ge
 
 ## 采集状态
 
-- **已检查来源**：HN 首页/newest/Algolia；GitHub Trending 全站、Python、TypeScript 与仓库元数据；arXiv；Hugging Face Daily Papers/Blog；Simon Willison；Wiz Research；Together AI；fast.ai；Andrew Moffat；Overbring Labs；Kubesimplify；窗口内提交页面。
-- **失败来源**：Scalar Engineering Medium 原文返回 HTTP 403，无法核实日期与全文；GitHub 未认证 REST API 后续查询触发 HTTP 403 rate / secondary limit。前者已用 HN 证据保留为日期未确认，后者已用限流前元数据、公开仓库与 Trending HTML 完成复核。
-- **候选数量**：初筛 78 条；保留 54 个唯一来源 URL，覆盖高亮、Trending、HN、论文、再浮现、日期未确认、观察池与提交级维护信号。
+- **已检查来源**：HN 首页/newest/Algolia；GitHub Trending 全站、Python、TypeScript；GitHub Releases、仓库 README 与公开元数据；arXiv；Hugging Face Daily Papers/Blog；Simon Willison；Wiz Research；Together AI；fast.ai；Andrew Moffat；Overbring Labs；Kubesimplify；LWN；IEEE Spectrum；窗口内提交页面。
+- **失败来源**：Scalar Engineering Medium 原文返回 HTTP 403，无法核实日期与全文；GitHub 未认证 REST API 后续查询触发 HTTP 403 rate limit。前者已用 HN 证据保留为日期未确认，后者已切换 GitHub CLI 公开只读接口、公开仓库页与 Trending HTML 完成复核。
+- **候选数量**：初筛 95 条；保留 73 个唯一来源 URL，覆盖高亮、Trending、HN、论文、再浮现、日期未确认、观察池与提交级维护信号。
 - **二次补搜**：未执行（`secondPass=false`）；本主题最终来源非 0。
