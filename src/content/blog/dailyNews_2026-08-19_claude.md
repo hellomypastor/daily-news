@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T04:11:00+08:00"
+updatedAt: "2026-08-19T07:19:43+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.234"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
@@ -19,49 +19,56 @@ tags:
   - "Comparison"
   - "Cowork"
   - "Date Unconfirmed"
+  - "GitHub Action"
   - "GLM"
   - "Incident"
+  - "MCP"
   - "Plugins"
   - "Remote Control"
   - "Security"
   - "Sentiment"
   - "Skills"
   - "Unverified"
+  - "VS Code"
   - "Watchlist"
 ---
 
 ## 今日概览
 
-扫描窗口：2026-08-18 04:11:00 至 2026-08-19 04:11:00（Asia/Shanghai）。当天累计确认 Claude Code v2.1.234、Agent SDK TypeScript v0.3.234、Claude Code Action v1.0.194、Agent SDK Python 主分支 5 项功能/兼容性改动、官方 Skills 提交，以及插件目录同步。多模型性能降级事故已于 03:01 解决，官方给出的影响时段为 00:11–02:23；未见新模型发布。
+扫描窗口：2026-08-18 07:11:00 至 2026-08-19 07:11:00（Asia/Shanghai）。当天累计确认 Claude Code v2.1.234 与 v2.1.235、Agent SDK TypeScript v0.3.234 与 v0.3.235、Agent SDK Python v0.2.140、Claude Code Action v1.0.194 与 v1.0.195、官方 Skills 提交，以及插件目录同步。多模型性能降级事故已于 03:01 解决，官方给出的影响时段为 00:11–02:23；未见新模型发布。
 
 ## Tier 1
 
 | 产品 | 状态 |
 |---|---|
-| Claude Code CLI | [v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)：新增 GitLab MR 状态、用量重置自动续跑与多项 Remote Control、安全、Windows 修复 |
-| VS Code / JetBrains | VS Code 承接 v2.1.234 的 Remote Control 与文件传输修复；JetBrains 无独立新增 |
+| Claude Code CLI | [v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)：新增可选拼写检查，修复 LSP 重连缓存失效、权限对话框误授权、后台云会话资源占用与多项 TUI / Remote Control 问题；v2.1.234 当天早先内容继续保留 |
+| VS Code / JetBrains | v2.1.235 修复多 Claude 面板窗口恢复或重载后焦点自行跳转；JetBrains 无独立新增 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | 无独立官方发布；权限检查点与 worktree 隔离用户报告列入观察池 |
 | Skills / marketplaces | [discernment-nudge](https://github.com/anthropics/skills/commit/f379e5ad66e2febc1616cf8d6284666fecbe514e) 新增；[academy-guide 更名](https://github.com/anthropics/skills/commit/0a64e398ec6bb34a494f0c347e8ccae53a862f8e)；插件目录有安全插件修正与版本指针同步 |
 | Claude Developer Platform | 无新独立发布；旧 Workbench 退役仅作迁移观察项 |
-| Agent SDK | [TypeScript v0.3.234](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.234) 更新类型、VCS 与 effort 事件；[Python 主分支](https://github.com/anthropics/claude-agent-sdk-python/commits/main/)累计 5 项已合并改动，新增 in-process SDK MCP server 对 MCP 1.x/2.x 的并存支持，但无新 release |
+| Agent SDK | [TypeScript v0.3.235](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235) 跟进 Claude Code v2.1.235；[Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140) 正式发布 MCP 1.x/2.x 并存、subagent 文本转发、结构化 ResultError、字符串 prompt 权限回调与父 tool-use ID 恢复；[Python 主分支](https://github.com/anthropics/claude-agent-sdk-python/commits/main/)提交记录继续保留 |
 | Cowork | v1.32352.0 / v1.32352.1 仅披露日期；功能与修复列入日期未确认，Intel Mac 回归列入观察池 |
 | Design | 无新增 |
 | Tag / @Claude sessions | 无新增 |
-| 当前 Opus、Sonnet、Haiku 编码模型 | 无模型发布；状态页确认多模型性能降级事故已解决，官方最终将影响聚焦到 Opus 5 |
+| 当前 Opus、Sonnet、Haiku 编码模型 | 无模型发布；状态页确认多模型性能降级事故已解决，官方最终将影响聚焦到 Opus 5；限额延长线索因 X 原文不可读仅放观察池 |
 
 ## Tier 2
 
 Chrome / 浏览器 Agent 随 Desktop / Cowork v1.32352.0 收紧全局浏览器授权；v1.32352.1 修复少见 Windows 首次启动失败，但官方只给日期，无法确认是否完全落在窗口内。[Desktop / Cowork 变更日志](https://claude.com/docs/cowork/changelog)
 
-[claude-plugins-official](https://github.com/anthropics/claude-plugins-official/commits/main/) 在窗口内合并 Claude Security 0.10.1 版本修正、目录校验和多项第三方插件指针，03:02 前又同步 migration-to-aws 等条目；[Knowledge Work 目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)继续同步 Carta、Wix、Qdrant 与 Sanity 等指针。这些是目录元数据变化，不等同于第三方产品能力发布。Preview、创意/视频模型、Voice Mode、Microsoft 365 集成均无新官方公告。
+[claude-plugins-official](https://github.com/anthropics/claude-plugins-official/commits/main/) 在窗口内合并 Claude Security 0.10.1 版本修正、目录校验和多项第三方插件指针，截至 06:13 继续同步 Carta 等条目；[Knowledge Work 目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)继续同步 Carta、Wix、Qdrant 与 Sanity 等指针。这些是目录元数据变化，不等同于第三方产品能力发布。Preview、创意/视频模型、Voice Mode、Microsoft 365 集成均无新官方公告。
 
 ## Tier 3
 
-安全方向确认 Claude Code v2.1.234 的 Windows NT-namespace 路径、MCP 诊断脱敏与 marketplace 主机校验修复，以及 Claude Code Action v1.0.194 的路径边界、附件下载与 shell-quote CVE 修复。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育和客服均未发现窗口内新官方公告。
+安全方向确认 Claude Code v2.1.234 的 Windows NT-namespace 路径、MCP 诊断脱敏与 marketplace 主机校验修复，Claude Code Action v1.0.194 的路径边界、附件下载与 shell-quote CVE 修复，以及 v2.1.235 对权限对话框展示/授权范围和 Shift+Tab 误授予会话级编辑权限的修复。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育和客服均未发现窗口内新官方公告。
 
 ## 官方更新
 
-- **官方插件目录同步**（截至 03:02）：继续更新 migration-to-aws、Qdrant、Salesforce、Carta、Hugging Face、PostHog、Supabase、Wix 等第三方插件指针；这是目录元数据变化，不等同于各产品新能力发布。
+- **官方插件目录同步**（截至 06:13）：继续更新 migration-to-aws、Qdrant、Salesforce、Carta、Hugging Face、PostHog、Supabase、Wix 等第三方插件指针；这是目录元数据变化，不等同于各产品新能力发布。
+- **Agent SDK Python v0.2.140**（04:58）：[发布说明](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)正式打包此前主分支的 5 项改动，包括 MCP 1.x/2.x 并存、subagent 文本转发、结构化 ResultError、字符串 prompt 权限回调与父 tool-use ID 恢复。
+- **Claude Code Action v1.0.195**（04:40）：[发布说明](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195)仅给出完整比较链接；比较记录显示本版把 Claude Code 升至 2.1.235、Agent SDK 升至 0.3.235，没有独立功能声明。
+- **Agent SDK TypeScript v0.3.235**（04:39）：[发布说明](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235)称与 Claude Code v2.1.235 对齐。
+- **Claude Code v2.1.235**（04:38）：[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)新增可选拼写检查，并修复 LSP 重连缓存失效、权限对话框误授权、后台云会话资源占用、VS Code 焦点跳转和多项终端交互问题。
 - **多模型性能降级已解决**（8 月 19 日 00:20–03:01）：[Claude Status](https://status.claude.com/incidents/q7txxvbsftgq) 最终称 Opus 5 受影响，实际影响时段为 00:11–02:23；02:26 进入监控，03:01 宣布解决。
 - **Agent SDK Python MCP 兼容性**（01:47）：in-process SDK MCP server 放宽依赖范围，可同时支持 MCP 1.x 与 2.x；尚无新 release。
 - **academy-guide 更名**（00:02）：原 claude-academy-guide 更名并缩短说明，仅为官方 Skills 仓库内容变化。
@@ -106,9 +113,11 @@ Unblocked 的单方复盘称其生产 code review 盲测里 Opus 精度最好、
 - Claude Code 2.1.234 的两条带 has repro 标签的用户报告称 auto mode 忽略 `permissions.ask` 检查点，以及 worktree 子 Agent 把修改写进父 worktree；尚无 Anthropic 修复确认。[权限 Issue](https://github.com/anthropics/claude-code/issues/87639)；[隔离 Issue](https://github.com/anthropics/claude-code/issues/87643)
 - 新增的 [Skills fenced-code 执行 Issue](https://github.com/anthropics/claude-code/issues/87730)带 `has repro`、`reproduced` 与安全标签，称官方 plugin-dev 文档代码块里的 `!` 命令会在项目目录实际执行；仍是未修复 Issue，且报告注明根因早有旧 Issue。
 - [Remote Control 重连 Issue](https://github.com/anthropics/claude-code/issues/87720)带 `has repro` 与 regression 标签，称已连接过的 Windows 会话断开后无法重新附着；单一用户报告，未见官方修复确认。
+- [HN 限额延长转发](https://news.ycombinator.com/item?id=49351995)在 04:14 链向 ClaudeDevs 的 X 帖，标题称 50% 的 Claude Code 周限额提升延长至 8 月 31 日；X 原始页面无正文可读，故不把延长期限写成已确认事实。
+- 04:11 后新增的 Intel Mac Cowork 启动失败 Issue 与既有回归报告属于同一事件，按事件去重，不再新增来源。
 - 旧 Workbench 的访问结束日期为 8 月 17 日，是 Developer Platform 的迁移背景，不是窗口内新品。[Platform release notes](https://platform.claude.com/docs/en/release-notes/overview)
 - Unblocked 文章较旧，仅因窗口内被 HN 再传播而保留；其成本和精度结论不作普遍比较结论。
-- 本轮还检查 315 条窗口内新增 Claude Code Issue；多数为零评论、重复项或缺少复现，不逐条提升为产品事实。
+- 本轮还检查 316 条窗口内新增 Claude Code Issue；多数为零评论、重复项或缺少复现，不逐条提升为产品事实。
 
 ## 来源
 
@@ -118,6 +127,8 @@ Unblocked 的单方复盘称其生产 code review 盲测里 Opus 精度最好、
 - [Claude Code Action v1.0.194](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.194)
 - [discernment-nudge Skill](https://github.com/anthropics/skills/commit/f379e5ad66e2febc1616cf8d6284666fecbe514e)；[academy-guide 更名](https://github.com/anthropics/skills/commit/0a64e398ec6bb34a494f0c347e8ccae53a862f8e)
 - [官方插件目录](https://github.com/anthropics/claude-plugins-official/commits/main/)；[Knowledge Work 目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)
+- [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)；[Agent SDK TypeScript v0.3.235](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235)；[Agent SDK Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)；[Claude Code Action v1.0.195](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195)
+- [HN 限额延长转发](https://news.ycombinator.com/item?id=49351995)
 - [Claude Status 事故](https://status.claude.com/incidents/q7txxvbsftgq)
 - [Desktop / Cowork changelog](https://claude.com/docs/cowork/changelog)
 - [Claude Code 作品展示](https://www.reddit.com/r/ClaudeCode/comments/1vqpqot/weekly_showcase_thread_what_are_you_building_with/)；[事故社区讨论](https://www.reddit.com/r/ClaudeAI/comments/1vrtyin/discussion_hub_for_new_claude_incident_degraded/)
@@ -131,5 +142,5 @@ Unblocked 的单方复盘称其生产 code review 盲测里 Opus 精度最好、
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Claude Blog、Help Center、Platform / Cowork 文档、Status API、Claude Code / Agent SDK / Code Action / Skills / 插件 GitHub、Reddit 五个社区、HN、YouTube 与可信开发者媒体；Tier 1–3 均逐项搜索。
-- 失败：X 登录墙；Reddit JSON API 403；YouTube 结果缺少可稳定核验的精确发布时间与互动快照。GitHub 与 Claude Status API 可访问。
-- 初始候选：422 条；保留来源：23 条；二次补搜：否（最终来源不为 0）。
+- 失败：X 原始帖公开页面返回空正文；Reddit JSON API 403；YouTube 结果缺少可稳定核验的精确发布时间与互动快照。GitHub 与 Claude Status API 可访问。
+- 初始候选：718 条原始记录（316 条 Claude Code Issue、326 条 HN 检索记录、75 条官方仓库提交与 1 条状态事件）；保留来源：28 条；二次补搜：否（最终来源不为 0）。

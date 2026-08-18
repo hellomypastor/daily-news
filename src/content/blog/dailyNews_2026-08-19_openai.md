@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T04:14:34+08:00"
+updatedAt: "2026-08-19T07:17:03+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Introducing ChatGPT for Teens: Built for learning, backed by protections"
 featuredUrl: "https://openai.com/index/chatgpt-for-teens"
@@ -15,17 +15,25 @@ tags:
   - "社区口碑"
   - "未证实传闻"
   - "Agent"
+  - "Agents"
   - "Agents SDK"
   - "API"
+  - "Approvals"
   - "Assistants API"
   - "Astra"
+  - "Async"
   - "Auth"
   - "Auto-review"
   - "Bedrock"
+  - "Billing"
+  - "Bug Fix"
   - "Changelog"
   - "ChatGPT"
+  - "ChatGPT Business"
+  - "ChatGPT Work"
   - "CLI"
   - "Cloud"
+  - "Cloudflare"
   - "Codex"
   - "Customer Story"
   - "Cybersecurity"
@@ -35,16 +43,19 @@ tags:
   - "Enterprise"
   - "Exec"
   - "Exec Server"
+  - "Experimental"
   - "Go"
   - "Gov"
   - "GPT-6"
   - "Guardian"
   - "Hate"
+  - "Hooks"
   - "IDE"
   - "Infrastructure"
   - "Java"
   - "Logging"
   - "Love"
+  - "Managed Config"
   - "Marketplace"
   - "MCP"
   - "Metrics"
@@ -53,6 +64,7 @@ tags:
   - "Models"
   - "National Security"
   - "Networking"
+  - "Node REPL"
   - "Node.js"
   - "OpenAI"
   - "Oversight"
@@ -75,6 +87,8 @@ tags:
   - "SDK"
   - "Security"
   - "Shell"
+  - "Sites"
+  - "Skills"
   - "Sora"
   - "Streaming"
   - "Structured Outputs"
@@ -91,19 +105,21 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-18 04:11:00 至 2026-08-19 04:11:00（Asia/Shanghai）；同日此前已收录来源继续累积保留。窗口内最重要的新证据是 OpenAI 在 [Astra 网络安全能力说明](https://openai.com/index/pacing-model-development-cyber-capabilities)中确认 Astra 是即将推出的模型、初步证据显示它可能达到 Preparedness Framework 的 Critical cybersecurity capability 阈值，并说明部分前沿 RL 训练暂停；这使“Astra”名称本身从传闻升级为官方候选模型，但“GPT-6”别名和 8 月 23 日发布日期仍未获证实。OpenAI 还发布了[民主国家安全监督倡议](https://openai.com/index/strengthening-democratic-oversight-in-national-security)，并以 [Asana 案例](https://openai.com/index/asana)披露 Codex 迁移旧测试系统的项目数据。开发侧在 01:12 后继续合入 Codex 权限、安全、Realtime 与线程迁移，以及 Node / Go SDK 安全和 Responses API 相关提交；这些均是主分支动态，不等同于正式版本交付。
+扫描窗口：2026-08-18 07:17:00 至 2026-08-19 07:17:00（Asia/Shanghai）；同日此前已收录来源继续累积保留。窗口内最重要的新证据是 OpenAI 在 [Astra 网络安全能力说明](https://openai.com/index/pacing-model-development-cyber-capabilities)中确认 Astra 是即将推出的模型、初步证据显示它可能达到 Preparedness Framework 的 Critical cybersecurity capability 阈值，并说明部分前沿 RL 训练暂停；这使“Astra”名称本身从传闻升级为官方候选模型，但“GPT-6”别名和 8 月 23 日发布日期仍未获证实。OpenAI 还发布了[民主国家安全监督倡议](https://openai.com/index/strengthening-democratic-oversight-in-national-security)，并以 [Asana 案例](https://openai.com/index/asana)披露 Codex 迁移旧测试系统的项目数据。开发侧在 01:12 后继续合入 Codex 权限、安全、Realtime 与线程迁移，以及 Node / Go SDK 安全和 Responses API 相关提交；这些均是主分支动态，不等同于正式版本交付。
+
+本轮 04:11–07:17 增量还包括 [Codex 0.148.0 稳定版](https://github.com/openai/codex/releases/tag/rust-v0.148.0)：官方 release notes 列出 TUI 对话导出、`codex exec fork`、会话归档/恢复、线程用量估算、内置 Amazon Bedrock Runtime provider、异步 hooks 与 MCP tool hooks，以及多项恢复与沙箱 fail-closed 修复；[0.148.0-alpha.23](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.23)仅列版本号。Python SDK [v3.3.0](https://github.com/openai/openai-python/releases/tag/v3.3.0)正式交付 named data-residency endpoints，并要求已修补的可选网络依赖。OpenAI RSS 还补充发现 [NVIDIA 的 ChatGPT Work 案例](https://openai.com/index/nvidia/chatgpt-work)，Help Center 则确认 [ChatGPT Business 新增付费席位从 8 月 19 日起改为加入时立即按剩余周期比例收费](https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan)。[Sites 部署错误](https://status.openai.com/incidents/01M0B4WSV41BCFZ9VDWKSMQVSP)于 03:17–03:37 发生并已解决。
 
 ## Tier 1
 
 | 产品 | 状态 |
 |---|---|
-| Codex CLI | [官方 CLI 文档](https://learn.chatgpt.com/docs/codex/cli)确认现有入口；窗口内发布 [0.148.0-alpha.21](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21) 与 [0.148.0-alpha.22](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.22)，发布页仅列版本号，不能把主分支提交等同于已随 alpha 交付 |
+| Codex CLI | [官方 CLI 文档](https://learn.chatgpt.com/docs/codex/cli)确认现有入口；窗口内在 alpha.21 / alpha.22 后又发布 [alpha.23](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.23) 与 [0.148.0 稳定版](https://github.com/openai/codex/releases/tag/rust-v0.148.0)，稳定版功能以 release notes 为准，后续主分支提交仍不等同于已交付 |
 | VS Code / JetBrains 集成 | [Codex IDE 文档](https://learn.chatgpt.com/docs/codex/ide)可确认 IDE extension 现有能力；未见窗口内单独发布，JetBrains 也无可核实新增 |
 | Codex cloud / remote tasks 与 PR agents | [Codex cloud 文档](https://learn.chatgpt.com/docs/cloud)确认现有云端任务入口；无窗口内正式发布，社区仍有任务消失的单用户报告，见观察池 |
 | ChatGPT agentic mode | [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)最新条目仍为 8 月 14 日，本窗口无新 agentic mode 公告 |
-| 当前官方 agent-building 产品 | [Agents SDK 文档](https://developers.openai.com/api/docs/guides/agents)确认 Python / TypeScript 路线；本窗口未见 Agents SDK 正式 release，但主分支有验证沙箱与运行器调整 |
-| Responses API | [迁移文档](https://developers.openai.com/api/docs/guides/migrate-to-responses)仍是官方主路径；Python、Node.js、Java SDK 发布同步 shell streaming / image / service 类型，Node 主分支另有流安全修复 |
-| Agents SDK Python / TypeScript | 无窗口内正式 release；Python 与 TypeScript 主分支均有开发提交，均按“尚非发布”处理 |
+| 当前官方 agent-building 产品 | [Agents SDK 文档](https://developers.openai.com/api/docs/guides/agents)确认 Python / TypeScript 路线；Codex 0.148.0 正式加入异步 command hooks 与 MCP tool hooks，05:32 后的 MCP hook 提交仍属下一轮主分支开发 |
+| Responses API | [迁移文档](https://developers.openai.com/api/docs/guides/migrate-to-responses)仍是官方主路径；Python v3.3.0 正式交付 named data-residency endpoints，Node / Go 主分支继续修补 stream 安全与 accumulator，尚未形成新 release |
+| Agents SDK Python / TypeScript | 无窗口内正式 release；Python 主分支新增 Windows integration bootstrap crash 修复，Python / TypeScript 其余主分支提交继续按尚非发布处理 |
 | Assistants API 弃用 / 迁移 | [Assistants deep dive](https://platform.openai.com/docs/assistants/deep-dive/run-lifecycle%23.webm)仍标记 Deprecated，并写明 2026-08-26 停止服务；本窗口未见时间表变化 |
 | Realtime API | [Realtime 官方文档](https://developers.openai.com/api/docs/guides/realtime)仍为当前入口；Node 与 Ruby 主分支出现 WebSocket 帧校验、等待器性能、转录与区域端点改动，尚未对应新 release |
 | 当前官方 GPT、reasoning、Codex 模型家族 | [模型目录](https://developers.openai.com/api/docs/models)当前列出 GPT-5.6 Sol / Terra / Luna 等已核实名称；[官方说明](https://openai.com/index/pacing-model-development-cyber-capabilities)首次明确把 Astra 称为即将推出的模型，并称其可能达到 Critical cybersecurity capability 阈值，但未公布正式产品名、发布日期或可用性；Model Spec 更新也不是权重发布 |
@@ -117,9 +133,12 @@ tags:
 | Sora / video | 无新产品发布；[官方弃用页](https://developers.openai.com/api/docs/deprecations#2026-03-24-sora-2-video-generation-models-and-videos-api)仍显示 Sora 2 视频模型与 Videos API 是既有弃用事项，不误报为今日新闻 |
 | Voice | 无 ChatGPT Voice 新功能；Ruby 主分支新增 Realtime transcription over WebSockets，但尚未发布 |
 | Connectors / MCP | 无 ChatGPT 连接器正式发布；Codex 主分支继续修补 MCP resource provenance 与跨 compaction 恢复，属于开发动态 |
+| ChatGPT Sites | [官方状态页](https://status.openai.com/incidents/01M0B4WSV41BCFZ9VDWKSMQVSP)记录 03:17–03:37 出现部署错误并已解决；这是短时可靠性事件，不代表持续故障 |
 
 ## Tier 3
 
+- **Business billing（已验证）**：[官方计费说明](https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan)确认从 8 月 19 日起，新增付费席位改为加入时立即按当前账期剩余时间比例收费；总价不变、无需用户操作。
+- **Enterprise / NVIDIA（已验证案例）**：[NVIDIA ChatGPT Work 案例](https://openai.com/index/nvidia/chatgpt-work)称两个内部工作流分别在 GTC 筹备周期每周节省约 16 小时，以及把 25–40 条外部更新提炼成 5–8 条可行动信号；另称原估 2–3 周的原型在 3–5 天完成。均为厂商发布的单一客户案例，不应外推为普遍效率。
 - **Edu / Teen / Safety（已验证）**：[ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens) 官方原文日期为 8 月 18 日。系统估计用户未满 18 岁或自报 13–17 岁时会自动进入该体验；Study Mode、responsible homework reminders、quizzes、Learning Visualizations、Study Hours 与更强默认保护均由原文列出。
 - **Education partnership（已验证）**：[OpenAI × CodeAI](https://openai.com/index/partnering-with-codeai) 将建立顾问委员会，并推进 Hour of AI、Builders Challenge、课程支持与 Career Journeys。
 - **Model Spec / Safety（已验证）**：[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)说明本次更新澄清青少年关系互动、错误或无依据前提与能力边界；[2026-08-18 版本页](https://model-spec.openai.com/2026-08-18.html)是原始证据。
@@ -131,6 +150,12 @@ tags:
 
 ## 官方发布（新到旧）
 
+- **Codex 0.148.0 稳定版**（8 月 19 日 06:26）：新增 TUI Markdown 导出、`codex exec fork`、归档/恢复、线程用量估算、内置 Bedrock provider、异步 command hooks 与 MCP tool hooks，并汇总多项恢复和沙箱 fail-closed 修复。[发布页](https://github.com/openai/codex/releases/tag/rust-v0.148.0)
+- **Codex 0.148.0-alpha.23**（05:23）：发布页只列版本号，不推断功能。[发布页](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.23)
+- **OpenAI Python v3.3.0**（05:17）：正式加入 named data-residency endpoints，并要求已修补的可选网络依赖。[发布页](https://github.com/openai/openai-python/releases/tag/v3.3.0)
+- **ChatGPT Business 新增席位收费时点**（8 月 19 日生效，Help Center 精确更新时间未列）：新增付费席位改为加入时立即按剩余账期比例收费，总价不变。[说明](https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan)
+- **Sites 部署故障**（03:17–03:37）：官方状态页确认部署错误已缓解并解决。[状态页](https://status.openai.com/incidents/01M0B4WSV41BCFZ9VDWKSMQVSP)
+- **NVIDIA ChatGPT Work 案例**（8 月 18 日 08:00）：官方客户案例披露 GTC 筹备、外部情报提炼和原型开发的单一客户数据。[原文](https://openai.com/index/nvidia/chatgpt-work)
 - **民主国家安全监督倡议**（8 月 19 日 03:00）：OpenAI 计划提供 500 万美元培训、技术支持和 credits，并与授权监督机构试点可审查 AI 辅助决策记录的工具。[原文](https://openai.com/index/strengthening-democratic-oversight-in-national-security)
 - **Astra 网络安全能力与训练节奏说明**（8 月 18 日 19:00）：官方确认 Astra 是即将推出的模型，并披露前沿训练暂停、研究环境隔离和监控扩展；未确认 GPT-6 别名或发布日期。[原文](https://openai.com/index/pacing-model-development-cyber-capabilities)
 - **Asana Codex 客户案例**（15:00）：官方案例称 Asana 约两周完成 Enzyme 迁移，列出约 1.2 万美元模型与基础设施成本；这是单一案例。[原文](https://openai.com/index/asana)
@@ -148,6 +173,16 @@ tags:
 
 ## 官方开发动态（主分支，尚非发布；新到旧）
 
+- **Codex 异步 agent message**（8 月 19 日 07:00）：为 agent message 与 app-server item 增加 async delivery 元数据，并跨历史、replay 与 schema 保留；尚非 release。[提交](https://github.com/openai/codex/commit/fb356f3d2c9fa05f9b06771f8e3c877ca66ed330)
+- **Codex unified exec 审批绑定 executable**（06:47）：自定义 shell 的可复用审批绑定具体 executable，避免内层命令信任被其他 shell 复用；尚非 release。[提交](https://github.com/openai/codex/commit/7d9990fa30ab495d473fc555f0d5e7c68e9d205a)
+- **Codex plugin / Guardian**（06:47–06:38）：executor skill invocation 增加 plugin 归属；Guardian V2 风险评分错误改为 fail closed，触发严格 review；均尚非 release。[plugin attribution](https://github.com/openai/codex/commit/280d56b1d823a7e9dfd85f796da38bd825d0052d)、[Guardian fail closed](https://github.com/openai/codex/commit/c97bd2dcb52a8120d96086fac49665452af3161b)
+- **Codex managed config / agent authority**（06:31 / 05:45）：项目发现尊重 managed / MDM 配置；agent role 只能覆盖受限的行为配置，不能扩大父会话权限或替换 provider、MCP 与 endpoint；尚非 release。[managed config](https://github.com/openai/codex/commit/6ec012668b0decdd4506e376f0553816ab684e67)、[bounded roles](https://github.com/openai/codex/commit/1a6e07a4febcc0ecfa04464f5e95cb47144cd746)
+- **Codex Node REPL token 隔离**（05:48）：从模型可达的子进程环境中移除 `NODE_REPL_AUTH_TOKEN`；尚非 release。[提交](https://github.com/openai/codex/commit/fe50b616899eef5aac0dacf1e2d36a09c109944b)
+- **Codex MCP tool hooks**（05:32）：在会话共享 MCP runtime 中执行 `mcp_tool` hook，并限制到已连接、已编目且 policy 允许的 tools；尚非 release。[提交](https://github.com/openai/codex/commit/87070a77925cbffed8b34ddc99afaf40d56863aa)
+- **Codex Windows doctor / TUI 审批**（05:24–05:20）：`codex doctor` 增加 Windows sandbox diagnostics，TUI file-change approval 显示目标路径；尚非 release。[Windows diagnostics](https://github.com/openai/codex/commit/633bd4abf7b223f826032f6f13e6c7f67c9d9185)、[file destinations](https://github.com/openai/codex/commit/e7f9fa9cd9cefa7d21361586c206ea56b6f8cfea)
+- **Codex 实验性 Bedrock setup API schema**（04:34）：只声明 discover / setup request schema，服务端仍返回 method not found，不能视为 setup 已实现。[提交](https://github.com/openai/codex/commit/884a193b78fd323a2a40e6007f9001ebff47d79e)
+- **Node SDK 安全修复**（06:12–04:42）：主分支遮蔽 malformed SSE 与 assistant delta diagnostics、停止保留敏感 assistant stream events、限定 Cloudflare API key 文件范围，并维护 structured response-format 完整性；均尚非 release。[SSE diagnostics](https://github.com/openai/openai-node/commit/272a2cc3d896ff84702d6cd72a2638e0d987834c)、[assistant delta](https://github.com/openai/openai-node/commit/b130b83c22a174104908e160d178fde8bd53da93)、[stream retention](https://github.com/openai/openai-node/commit/dfec1297b4b2c055fc7cacbad676561e4a64f22d)、[Cloudflare key scope](https://github.com/openai/openai-node/commit/4f4b45d59f3d7b5f03dba1674db0d3faa1e0b8ce)、[response-format integrity](https://github.com/openai/openai-node/commit/e69df93db7577631a3608da13acf7bc20f0f1ff2)
+- **Go / Ruby / Agents SDK Python**（06:16–05:26）：Agents SDK Python 修复 Windows integration bootstrap crash，Go SDK stream accumulator 跟踪每个 choice 的 events，Ruby SDK 保留 nullable nil；均在主分支、尚非 release。[Agents Python](https://github.com/openai/openai-agents-python/commit/21a1f9b4e681a8e2fd4a067efd6234124f417175)、[Go](https://github.com/openai/openai-go/commit/8fa5f4504641b33280c3a9cefda82e4cbb668c35)、[Ruby](https://github.com/openai/openai-ruby/commit/79cc15696bdb4255396a165b9a687e177c26f26c)
 - **Codex 线程迁移**（8 月 19 日 03:57）：rollout migration 保留线程名称，尚非 release。[提交](https://github.com/openai/codex/commit/f950a1ba0b12884605d98a48fbedaeccff29dd0e)
 - **Codex Guardian / 权限安全**（03:10–03:01）：向 Guardian review session 注入 Node REPL policy、在被拒绝权限路径下要求新的审批，并改进 Guardian v2 风险分类。[Node REPL policy](https://github.com/openai/codex/commit/4a3e829c56415f8c1e69b18fbe74f4d81eaa926a)、[fresh approval](https://github.com/openai/codex/commit/d68b85a0978e15c49c6e96bde1f73ddaeac35d79)、[risk classification](https://github.com/openai/codex/commit/846a16852f6bcd155d552236d4d893749c6130e6)
 - **Codex Windows DLL 防护**（02:57）：阻止 ConPTY 从当前目录加载 DLL，尚非 release。[提交](https://github.com/openai/codex/commit/726ec7ecbf2f74784bf88f8722d031b1565a0184)
@@ -225,6 +260,6 @@ tags:
 
 ## 采集状态
 
-- 已检查来源：OpenAI News / RSS 与新原文、ChatGPT 与 Model Release Notes、Model Spec、ChatGPT & Codex changelog、API changelog / model catalog / migration / Realtime / deprecations、Codex / Agents SDK / 六种官方 SDK 的 GitHub releases 与截至 04:11 的提交、Reddit、Hacker News、X、YouTube、Developer Community 与可信二手搜索。
-- 失败来源：Reddit JSON / RSS 403 或内容不完整；X 正文提取不稳定；YouTube 频道页信息有限；部分 Hacker News 请求限流；OpenAI 原始 HTML 对 curl 返回 403，已改用可公开打开的原文核实。
-- 初始候选数：105；累积保留来源数：84；二次补搜：否（首轮已获得非零来源）。
+- 已检查来源：OpenAI News / RSS 与新增 NVIDIA 原文、ChatGPT 与 Model Release Notes、Model Spec、ChatGPT & Codex changelog、ChatGPT Business Help Center、OpenAI Status、API changelog / model catalog / migration / Realtime / deprecations、Codex / Agents SDK / 六种官方 SDK 的 GitHub releases 与截至 07:17 的提交、Reddit、Hacker News Algolia、X、YouTube、Developer Community 与可信二手搜索。
+- 失败来源：Reddit JSON / RSS 仍返回 403，old Reddit HTML 可打开但绝对时间与正文提取不稳定；X 正文提取不稳定；YouTube 频道页信息有限；OpenAI News 与 Help Center 的直接 curl 部分返回 403，已改用 RSS、公开页面与官方 GitHub API 交叉核实；JetBrains 未发现窗口内独立官方发布。
+- 初始候选数：123；累积保留来源数：109；二次补搜：否（首轮已获得非零来源）。

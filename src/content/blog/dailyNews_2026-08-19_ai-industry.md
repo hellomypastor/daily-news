@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T04:28:00+08:00"
+updatedAt: "2026-08-19T07:20:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -9,11 +9,13 @@ featuredSummary: "Microsoft Agent Framework 正式发布 .NET 1.18.0。 主流 A
 featuredPublishedAt: "2026-08-18 22:30 +08:00"
 featuredTags: ["Microsoft","Agent Framework","Release"]
 tags:
+  - "AG-UI"
   - "Agent"
   - "Agent Framework"
   - "Agent SDK"
   - "AI"
   - "Anthropic"
+  - "Approvals"
   - "Authentication"
   - "BrowserSkill"
   - "Claude"
@@ -22,30 +24,40 @@ tags:
   - "CLI"
   - "Code Review"
   - "Codex"
+  - "Coding Agent"
   - "Copilot"
   - "Cowork"
+  - "Data"
   - "Date Unconfirmed"
   - "Deep Agents"
   - "Deep Research"
   - "Education"
   - "Evaluation"
+  - "Foxglove"
   - "Gemini"
   - "Generation"
   - "GitHub Action"
   - "Google"
+  - "Governance"
   - "Guardian"
+  - "Hooks"
   - "Hugging Face"
   - "Industry"
   - "Integration"
   - "LangChain"
+  - "Linear"
   - "LlamaIndex"
+  - "MCP"
   - "Memory"
   - "Microsoft"
+  - "Middleware"
+  - "Multi-Agent"
   - "Open Source"
   - "OpenAI"
   - "Permissions"
   - "PowerShell"
   - "Prerelease"
+  - "Protocol"
   - "Quantization"
   - "QuickJS"
   - "Qwen"
@@ -55,6 +67,7 @@ tags:
   - "Research"
   - "Retrieval"
   - "Review"
+  - "Robotics"
   - "Routing"
   - "Safety"
   - "Schema"
@@ -62,6 +75,7 @@ tags:
   - "Skills"
   - "Tencent"
   - "Tools"
+  - "Training"
   - "Transformers"
   - "Vision"
   - "Windows"
@@ -69,12 +83,17 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-18 04:11 至 2026-08-19 04:11（Asia/Shanghai）；近两日为 2026-08-17 04:11 至 2026-08-18 04:11，近三日为 2026-08-16 04:11 至 2026-08-17 04:11。本轮新增可核实的正式版本是 LangChain OpenAI 集成 1.5.2；工程侧新增 Microsoft Agent Framework 的会话持久化多模型路由、Deep Agents QuickJS 快照 HMAC，以及 Codex 的 Windows DLL 搜索路径和拒绝路径审批修复。Microsoft 同时确认消费者 Copilot 的 Deep Research 自 8 月 18 日起退役，但支持页未给发布时间，故只列入“日期未确认”。
+主窗口：2026-08-18 07:17 至 2026-08-19 07:17（Asia/Shanghai）；近两日为 2026-08-17 07:17 至 2026-08-18 07:17，近三日为 2026-08-16 07:17 至 2026-08-17 07:17。本轮新增可核实的正式版本包括 Codex 0.148.0 与 Claude Code 2.1.235；Sam Altman 的官方帖子只确认暂停“部分 frontier RL 训练”，没有披露模型、范围或期限。Foxglove 同时推出面向机器人数据的内置 Agent 与本地 MCP；工程侧新增 Microsoft Agent Framework 的 fail-closed middleware、AG-UI 连续性，以及 Codex 的执行审批、角色权限、Guardian、MCP hooks 与异步消息边界。Linear 数据页因缺少可靠发布日期只列入“日期未确认”。
 
 ## 优先动态
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| OpenAI | [Sam Altman：暂停部分 frontier RL 训练](https://x.com/sama/status/2089787807611195475) | 官方负责人社交账号 | 2026-08-19 02:53 +08:00，已核实 | 原帖称为满足对当前能力水平的 alignment、安全与监控标准，暂停“some frontier RL training”；未说明模型、训练规模、期限或恢复条件。详见 OpenAI 专题页。 | 是高优先级治理信号，但不能扩大为 OpenAI 全面暂停前沿模型训练，也不是产品发布。 |
+| Foxglove | [Foxglove goes agentic](https://foxglove.dev/blog/foxglove-goes-agentic) | 官方产品发布 | 2026-08-19 01:00 +08:00，已核实 | 在应用内加入 Agent sidebar，并以桌面应用内本地 MCP 让外部 Agent 操作机器人数据；官方说明本地/云端工具、skills 与 eval pipeline，beta 面向全部客户。 | 把 Agent 工作流带到多模态机器人数据检索、可视化和脚本场景，是 Physical AI 工具链的直接产品信号。 |
+| OpenAI | [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0) | 官方 GitHub 正式发布 | 2026-08-19 06:26 +08:00，已核实 | 正式 tag 与发布时间可确认，发布页仅写 Release 0.148.0，未列变更说明，因此不把同期主分支提交自动归因到该版本。详见 OpenAI 专题页。 | 将此前 alpha 序列推进为稳定版本，但功能范围仍应等待 changelog 或构建内容核对。 |
+| Anthropic | [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235) | 官方 GitHub 发布 | 2026-08-19 04:38 +08:00，已核实 | 新增可选 spellcheck，修复权限评论框误授权、不可用默认 subagent、notebook 审批信息缺失等问题，并降低后台 cloud session 事件流的 CPU/内存开销。详见 Claude 专题页。 | 同时涉及权限准确性、Agent 可用性提示与后台会话资源效率。 |
+| Microsoft | [Agent Framework MiddlewareFailure](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d) | 官方主分支提交，非正式发布 | 2026-08-19 06:33 +08:00，已核实 | 为 function middleware 增加显式 fail-closed 异常；触发时终止调用循环并取消同批并行工具任务，普通异常仍沿用工具错误并继续的契约。 | 让 guardrail/enforcement middleware 能可靠停止 Agent 执行，而不是被吸收后继续运行；尚待正式发布。 |
 | Microsoft | [Agent Framework .NET 1.18.0](https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0) | 官方 GitHub 发布 | 2026-08-18 22:30 +08:00，已核实 | 正式发布页确认此前仅见于版本号提交的 .NET 1.18.0；发布页本身未列详细说明，不外推功能。 | 把窗口内的“发布准备信号”提升为可确认 release，但具体能力仍以包和后续说明为准。 |
 | LangChain | [langchain-openai 1.5.2](https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.5.2) | 官方 GitHub 发布 | 2026-08-19 01:38 +08:00，已核实 | 正式版本包含 reasoning item 边界保留、响应头 gateway metadata 提取和 o-series token 计数支持。 | 把此前主分支修复带入版本化分发，影响 OpenAI 模型接入层的事件结构和计量。 |
 | LangChain | [Deep Agents 0.7.7](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.7) | 官方 GitHub 发布 | 2026-08-18 23:07 +08:00，已核实 | 发布 Deep Agents Python 库 0.7.7；发布页可确认版本与时刻，具体变更需结合提交记录。 | Hosted/本地 Agent 编排库得到正式版本承载。 |
@@ -87,6 +106,9 @@ tags:
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| Microsoft | [Agent Framework AG-UI run continuity](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561) | 官方主分支提交，非正式发布 | 2026-08-19 06:53 +08:00，已核实 | 对 Python AG-UI 的恢复所有权、checkpoint 与 approval replay 进行统一，测试覆盖本地/托管审批和参数编辑后的恢复边界。 | 减少恢复时重复执行或错投审批控制的风险，仍待 release。 |
+| OpenAI | Codex 执行、角色与 Guardian 边界更新 | 官方主分支提交组，非正式发布 | 2026-08-19 05:45 至 06:47 +08:00，已核实 | [Agent role 只允许有限配置覆盖](https://github.com/openai/codex/commit/1a6e07a4febcc0ecfa04464f5e95cb47144cd746)，[Node REPL token 不再传入子进程](https://github.com/openai/codex/commit/fe50b616899eef5aac0dacf1e2d36a09c109944b)，[Guardian V2 评分错误改为高风险 strict review](https://github.com/openai/codex/commit/c97bd2dcb52a8120d96086fac49665452af3161b)，并将[统一执行审批绑定到 shell executable](https://github.com/openai/codex/commit/7d9990fa30ab495d473fc555f0d5e7c68e9d205a)。详见 OpenAI 专题页。 | 分别限制子 Agent 扩权、凭据继承、风险评分失败和伪装 shell 复用审批；均为主分支信号，不能视为已进入 0.148.0。 |
+| OpenAI | Codex MCP hooks 与异步 Agent 消息 | 官方主分支提交组，非正式发布 | 2026-08-19 05:32 至 07:00 +08:00，已核实 | [MCP tool hooks](https://github.com/openai/codex/commit/87070a77925cbffed8b34ddc99afaf40d56863aa) 仅调用已连接、已编目且策略允许的工具；[异步消息 delivery metadata](https://github.com/openai/codex/commit/fb356f3d2c9fa05f9b06771f8e3c877ca66ed330) 可标识不结束当前 turn 的可见消息。详见 OpenAI 专题页。 | 分别扩展 session hook 能力和后台消息协议，但都尚未形成带说明的正式版本。 |
 | Microsoft | [Agent Framework 会话持久化多模型路由](https://github.com/microsoft/agent-framework/commit/4be584cc53b2094d5a5fa1aa96bf33f126f7f33b) | 官方主分支提交，非正式发布 | 2026-08-19 01:45 +08:00，已核实 | 新增 RoutePersistingRoutingChatClient，把当前路由保存在会话状态中；切换模型时复用客户端侧完整对话历史。 | 为长会话中的多模型切换提供原生状态承载，但尚未进入后续正式 release。 |
 | LangChain | [Deep Agents QuickJS 快照 HMAC](https://github.com/langchain-ai/deepagents/commit/749b386f97ed7b920acfd5936b01f8c425976d92) | 官方主分支提交，非正式发布 | 2026-08-19 03:17 +08:00，已核实 | 为 thread 模式的持久化 REPL 快照增加可选 HMAC-SHA256 签名与恢复前校验；缺失或被篡改的签名会拒绝恢复。 | 强化持久化执行状态的完整性，但默认需配置 signing key 且仍待 release。 |
 | Qwen | [Qwen Code sandboxed verification flakiness gate](https://github.com/QwenLM/qwen-code/commit/f0dcdfc1570ed4e8852060ff55e8b37f61827240) | 官方主分支提交，非正式发布 | 2026-08-18 23:26 +08:00，已核实 | Triage 流程加入确定性的 flaky 判定门槛，避免一次性失败直接决定验证结论。 | 改善 Agent 自动验证对非确定性测试的处理；仍待正式版本。 |
@@ -94,9 +116,6 @@ tags:
 | LangChain | [严格工具 schema 要求嵌套属性完整](https://github.com/langchain-ai/langchain/commit/65e5e3cfa36c6fff2897140a1bfb5fd35de1bdbd) | 官方主分支修复，非正式发布 | 2026-08-19 01:08 +08:00，已核实 | strict tool schema 会把所有嵌套 object 属性纳入 required，以保持递归严格性。 | 减少工具调用 schema 在深层对象处失去严格约束的风险。 |
 | LangChain | [保留 reasoning item 边界](https://github.com/langchain-ai/langchain/commit/32c15bbbd5538677a750229f4f732ad70b8903f4) | 官方主分支修复，后续已发布 | 2026-08-19 00:59 +08:00，已核实 | OpenAI 集成修复 reasoning item 边界保留，随后进入 langchain-openai 1.5.2。 | 有助于多段推理事件的结构一致性，不代表模型能力变化。 |
 | LlamaIndex | [Google GenAI 默认模型改为 Gemini 3.7 Flash](https://github.com/run-llama/llama_index/commit/30e759af1f0ff1f4c062bc13f90c7236fae06c65) | 官方项目主分支提交，非 Google 发布 | 2026-08-19 00:37 +08:00，已核实 | LlamaIndex 的 Google GenAI 集成与文档修改默认模型；这是 LlamaIndex 客户端选择，不能据此宣称 Google 发布新模型。 | 默认值变更可能影响新项目行为，需与 Google 官方文档单独核对。 |
-| Anthropic | [Claude Code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234) | 官方 GitHub 发布 | 2026-08-18 04:20 +08:00，已核实 | 覆盖 GitLab MR、用量重置续跑、Remote Control、安全与可靠性修复。详见 Claude 专题页。 | Claude 编码主工具获得正式更新。 |
-| Anthropic | [Agent SDK TypeScript v0.3.234](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.234) | 官方 GitHub 发布 | 2026-08-18 04:21 +08:00，已核实 | 同步 VCS、权限来源、effort 初始化与类型修正。详见 Claude 专题页。 | Agent 集成接口获得版本化更新。 |
-| Anthropic | [Claude Code Action v1.0.194](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.194) | 官方 GitHub 发布 | 2026-08-18 04:25 +08:00，已核实 | 加强路径与附件限制，修补依赖漏洞并改进 PR 上下文。详见 Claude 专题页。 | CI/评审 Agent 的安全边界和上下文处理同步更新。 |
 | LangChain | [Deep Agents CLI 0.1.57](https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.57) | 官方 GitHub 发布 | 2026-08-18 12:31 +08:00，已核实 | 增加冷缓存提示、可调整输入、多选提问、ACP 审批模式和模型选择，并修复恢复与转录问题。 | Agent CLI 的审批和交互能力获得正式更新。 |
 | Tencent | [EVIE-Preview-4.5B](https://github.com/Tencent/EVIE-Preview-4.5B) | 官方新公开模型仓库 | 2026-08-18，已核实 | 腾讯公开 4.54B 多语言视觉文档检索模型；仓库中的榜单数据仍属发布方自报。 | 为视觉文档检索提供公开权重和复现入口。 |
 | Tencent | [BrowserSkill 支持跨进程 iframe](https://github.com/Tencent/BrowserSkill/commit/c7252529f429e769302f060ba0168061a734f712) | 官方主分支提交，非正式发布 | 2026-08-18 21:16 +08:00，已核实 | 扩展 frame geometry、引用与交互路径，使浏览器 Agent 可观察和操作 OOPIF。 | 改善复杂 iframe 页面的 Agent 覆盖，仍待 release。 |
@@ -110,6 +129,9 @@ tags:
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| Anthropic | [Claude Code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234) | 官方 GitHub 发布 | 2026-08-18 04:20 +08:00，已核实 | 覆盖 GitLab MR、用量重置续跑、Remote Control、安全与可靠性修复。详见 Claude 专题页。 | Claude 编码主工具获得正式更新。 |
+| Anthropic | [Agent SDK TypeScript v0.3.234](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.234) | 官方 GitHub 发布 | 2026-08-18 04:21 +08:00，已核实 | 同步 VCS、权限来源、effort 初始化与类型修正。详见 Claude 专题页。 | Agent 集成接口获得版本化更新。 |
+| Anthropic | [Claude Code Action v1.0.194](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.194) | 官方 GitHub 发布 | 2026-08-18 04:25 +08:00，已核实 | 加强路径与附件限制，修补依赖漏洞并改进 PR 上下文。详见 Claude 专题页。 | CI/评审 Agent 的安全边界和上下文处理同步更新。 |
 | OpenAI | [The Defender's Window](https://openai.com/index/the-defenders-window) | 官方安全文章 | 2026-08-17 13:30 +08:00，已核实 | OpenAI 说明其对 AI 网络安全攻防变化与防护实践的判断。详见 OpenAI 专题页。 | 提供厂商对 Agent 化安全能力和防御窗口的正式立场。 |
 | Anthropic | [claude-academy-guide Skill](https://github.com/anthropics/skills/commit/89dcaa3a283f79ed84fd8fe53e2208b9442a6427) | 官方仓库提交 | 2026-08-17 21:03 +08:00，已核实 | 新增按需读取 Claude Academy 实时目录的课程推荐 Skill。详见 Claude 专题页。 | 是官方 Skill 增量，但已不在主窗口。 |
 | OpenAI | [Codex 0.148.0-alpha.21](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21) | 官方 GitHub 预发布 | 2026-08-18 03:27 +08:00，已核实 | 发布页无变更说明，不推断具体功能。详见 OpenAI 专题页。 | 可确认版本存在，功能判断仍应等待 changelog 或稳定版。 |
@@ -124,6 +146,7 @@ tags:
 |---|---|---|---|
 | Anthropic | [Claude Desktop / Cowork changelog](https://claude.com/docs/cowork/changelog) | v1.32352.1 标注 2026-08-18，但无时刻 | 保留日期证据，不判定是否落入精确 24 小时窗口；详见 Claude 专题页。 |
 | Microsoft | [Copilot 消费者版 Deep Research 退役说明](https://support.microsoft.com/en-US/microsoft-copilot/deep-research-in-microsoft-copilot) | 官方支持页写明 2026-08-18 起退役，但页面未给发布时间 | 仅确认生效日期；现有报告仍保留，Microsoft 365 Premium 用户可改用 Researcher。因发布时间未知，不写成主窗口内发布。 |
+| Linear | [How teams build：AI usage patterns in software teams](https://linear.app/data) | 官方数据页可打开，但未给可靠发布日期 | 页面说明采用口径、样本与 2026 年数据，用于观察 coding agents 与团队行为的相关性；不将相关性写成因果，也不判定为 24 小时内新发布。 |
 
 ## 观察池
 
@@ -136,6 +159,11 @@ tags:
 
 ## 来源链接
 
+- [Sam Altman：暂停部分 frontier RL 训练](https://x.com/sama/status/2089787807611195475)
+- [Foxglove goes agentic](https://foxglove.dev/blog/foxglove-goes-agentic)
+- [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)
+- [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)
+- [Agent Framework MiddlewareFailure](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)
 - [Microsoft Agent Framework .NET 1.18.0](https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0)
 - [Deep Agents 0.7.7](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.7)
 - [Transformers NVFP4](https://github.com/huggingface/transformers/commit/80c667443da1c5cfbd258f46ecceee09950f544a)
@@ -143,10 +171,10 @@ tags:
 - [Qwen Code flakiness gate](https://github.com/QwenLM/qwen-code/commit/f0dcdfc1570ed4e8852060ff55e8b37f61827240)
 - [LangChain strict nested tool schemas](https://github.com/langchain-ai/langchain/commit/65e5e3cfa36c6fff2897140a1bfb5fd35de1bdbd)
 
-**一句话总结：本轮在两个正式版本之外，最值得跟踪的是会话级多模型路由和持久化执行快照完整性校验；Codex 则继续收紧 Windows 与权限边界，而 Copilot Deep Research 的消费者入口进入退役状态。**
+**一句话总结：本轮最高优先级是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 的机器人数据 Agent 发布；Codex、Claude Code 和 Microsoft Agent Framework 同时在版本、权限、恢复与 fail-closed 边界上继续推进。**
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及六类播客/访谈入口。
-- 失败来源：OpenAI News、Dwarkesh 直接抓取 403；GitHub 组织列表在后段批量扫描触发 403 限流，已切换单项 HTML/发布页；xAI、StepFun 及部分中国厂商页面依赖脚本或索引滞后；部分播客缺少稳定精确时刻。
-- 初始候选：240；保留来源：29；二次补搜：否（最终来源不为 0）。
+- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；本轮额外打开 38 个官方版本/提交候选和相关原文。
+- 失败来源：OpenAI News、Dwarkesh 直接抓取 403；GitHub 组织列表批量扫描触发限流后改用单项 HTML/发布页；xAI、StepFun 及部分中国厂商页面依赖脚本或索引滞后；Linear 页面缺少可靠发布日期；A2A/AAIF 新迁移说法仅见二手报道，未作确认。
+- 当日各轮粗筛候选累计 282；累积保留 42 个唯一来源 URL；二次补搜：否（最终来源不为 0）。

@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T04:11:00+08:00"
+updatedAt: "2026-08-19T07:27:13+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Microsoft Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -12,6 +12,7 @@ tags:
   - "AaaS"
   - "Adjacent Signal"
   - "ADP"
+  - "AG-UI"
   - "Agent"
   - "Agent Backend"
   - "Agent Commerce"
@@ -20,9 +21,11 @@ tags:
   - "Agent OS"
   - "Agent Platform"
   - "Agent Runtime"
+  - "Agent SDK"
   - "AgentKit"
   - "Agents SDK"
   - "Approval"
+  - "Async Agent"
   - "Async Task"
   - "Authentication"
   - "Automation"
@@ -30,10 +33,12 @@ tags:
   - "BYOA"
   - "ByteDance"
   - "China Telecom Cloud"
+  - "Claude"
   - "Claude Code"
   - "Cloud Agent"
   - "Cloud Backend"
   - "Cloud Handoff"
+  - "Cloud Session"
   - "Cloudflare"
   - "Cloudflare Agents"
   - "Code Hosting"
@@ -62,6 +67,7 @@ tags:
   - "Google ADK"
   - "Governance"
   - "Guardian"
+  - "Guardrail"
   - "Harness"
   - "Hosted Session"
   - "Huawei Cloud"
@@ -78,6 +84,7 @@ tags:
   - "Older Context"
   - "Open Source"
   - "OpenHands"
+  - "OpenSandbox"
   - "OpenViking"
   - "PaaS"
   - "Permission"
@@ -108,13 +115,16 @@ tags:
   - "Session Resume"
   - "SkillHub"
   - "Snapshot Integrity"
+  - "Stable Release"
   - "Startup"
   - "Tencent Cloud"
+  - "Tool Router"
   - "Tooling"
   - "Tracing"
   - "Unverified"
   - "veADK"
   - "Vercel AI SDK"
+  - "Video"
   - "Voice AI"
   - "Volcengine"
   - "Watchlist"
@@ -123,9 +133,9 @@ tags:
 
 ## 今日概览
 
-主窗口：2026-08-18 04:11:00 至 2026-08-19 04:11:00（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 04:11:00 至 2026-08-18 04:11:00。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
+主窗口：2026-08-18 07:20:00 至 2026-08-19 07:20:00（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 07:20:00 至 2026-08-18 07:20:00。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
 
-主窗口内最明确的正式 AaaS 更新仍是 Microsoft Agent Framework .NET 1.18.0；本轮 01:12–04:11 新增证据主要来自主分支：Codex exec-server 可把既有 WebSocket 执行器注册为远程环境，Microsoft 增加会话持久化模型路由，Google ADK 为跨 Agent 转交输出加数据边界，Deep Agents 则补上 offload 可中断与 thread snapshot 完整性校验。以上新增均没有 release 或 cloud rollout 证据，严格作为受管执行控制面开发信号；Codex 相关详见 OpenAI 专题页。
+主窗口内最明确的正式 AaaS 更新包括 Microsoft Agent Framework .NET 1.18.0，以及 04:11 后新增的 Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。Microsoft AG-UI 连续性、MiddlewareFailure，Codex 异步消息/托管配置/Guardian fail-closed，Google ADK 视频模态和 OpenSandbox FastPath 仍是主分支开发或运行时邻近信号，不等同于云端 rollout；Claude、Codex 相关分别详见对应专题页。
 
 ## 重点动态
 
@@ -135,6 +145,9 @@ tags:
 4. **OpenHands 补齐云后端与 Automations。** [v1.14.0](https://github.com/OpenHands/OpenHands/releases/tag/v1.14.0)于 05:41 发布 Git Sync 页面、云后端完整文件树、backend scope 保留和 LLM 配置预检；证据覆盖开源发行版，不据此推断 OpenHands Cloud 采用规模。
 5. **Cloudflare Agents 与 OpenViking 继续下沉运行控制面。** [Cloudflare Agents 0.21.0](https://github.com/cloudflare/agents/releases/tag/agents%400.21.0)加入子 Agent 路由、Workflow retention、流式转发与遥测；[OpenViking durable source job](https://github.com/volcengine/OpenViking/commit/67603473a5a67c2ac7d4ccc6d22a8190004c5c39)把 `wait=false` 导入改为持久入队和后台处理。后者只是主分支工程信号，未证明 AgentKit 云端 rollout。
 6. **Codex 增加远程执行器转发模式。** [exec-server forward commit](https://github.com/openai/codex/commit/77e688960196dbc82bbeb00c844d2555a61925aa)把既有 WebSocket exec-server 注册为远程环境，并为每条认证 relay stream 建立独立目的连接；目标端仍掌管 session、进程与恢复，转发器不持久化执行状态。这是 02:15 合入的主分支开发信号，尚非产品发布或云端启用，**详见 OpenAI 专题页**。
+7. **Codex 0.148.0 转为稳定发布。** [官方 release](https://github.com/openai/codex/releases/tag/rust-v0.148.0)于 06:26 发布，发行说明汇总 gRPC code-mode sessions、持久线程恢复、远程 exec 与审批/Guardian 等控制面改动；发布页不证明 Codex cloud 已同步启用，**详见 OpenAI 专题页**。
+8. **Claude 补强后台与跨会话执行。** [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)降低后台 cloud session 事件流开销、限制过大跨会话消息并统一 Remote Control 企业网关检查；[Agent SDK Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)加入 subagent 文本转发、结构化错误、MCP 2.x 与取消支持，**详见 Claude 专题页**。
+9. **Microsoft 强化连续性与 fail-closed。** [AG-UI run continuity](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561)持久化 checkpoint 所有权；[MiddlewareFailure](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)让策略失败终止整批工具调用并结清 service-managed conversation 的悬空调用。两项均未进入新 release。
 
 ## 远程 / 云端 Agent 执行
 
@@ -149,6 +162,9 @@ tags:
 | Cloudflare Agents 0.21.0 | Workers/Durable Objects、子 Agent、Workflow、Browser | 路由、持久性、流式转发与遥测 | 官方 release、主窗口内 |
 | Claude Code Remote Control | Desktop/VS Code 与手机、网页联动 | 权限、模型、文件与 effort 跨端同步 | 官方 release、主窗口内；详见 Claude 专题页 |
 | OpenViking durable source job | task_id、持久队列、后台下载/解析/向量化 | 异步任务可恢复与状态可查 | 官方主分支 commit；未证明托管发布 |
+| Codex 0.148.0 | gRPC code-mode、持久线程、远程 exec 与审批控制面 | 稳定 CLI / app-server 发行版连接多种远程执行能力 | 官方 release；未证明 Codex cloud rollout；详见 OpenAI 专题页 |
+| Claude Code / Agent SDK | 后台 cloud session、跨会话消息、Remote Control、subagent/MCP | 后台任务资源、远程接入和嵌套 Agent 流更可控 | 官方 release；详见 Claude 专题页 |
+| Microsoft AG-UI / MiddlewareFailure | checkpoint 所有权与 fail-closed 工具批次 | 恢复连续性与策略失败后的会话结清 | 主分支 commits；尚未发布 |
 | Google ADK | Live resumption handle、后台 tool task 回收 | 会话恢复与运行结束边界 | 官方 release；未证明 Vertex/Jules 同步发布 |
 | pi-wake | SSH watcher、持久 outbox、同 session resume | 自托管长任务唤醒与至少一次交付 | 原仓库、主窗口内；不是托管服务 |
 | Replit 黑盒渗透测试 | 托管应用扫描与 Agent 修复 | 安全验证进入托管构建生命周期 | 官方、24–72 小时 |
@@ -156,7 +172,8 @@ tags:
 
 ### OpenAI 控制面开发信号（尚非产品发布）
 
-- **本轮新增。** [exec-server forward](https://github.com/openai/codex/commit/77e688960196dbc82bbeb00c844d2555a61925aa)连接认证 Noise relay 与既有 WebSocket 执行器；[remote plugin bundle 去重](https://github.com/openai/codex/commit/a998c7a1ce88a521d319a4f336e0a4bf36095637)限制同缓存根的后台同步；[permission profile 安全交集](https://github.com/openai/codex/commit/19d185fec8e1216ddd7b5522b331d69a6ecf3b1c)对文件、网络和拒绝路径取更严格策略；[Guardian v2 风险分类](https://github.com/openai/codex/commit/846a16852f6bcd155d552236d4d893749c6130e6)与[Node REPL 评审策略](https://github.com/openai/codex/commit/4a3e829c56415f8c1e69b18fbe74f4d81eaa926a)扩展默认评审和浏览器/Computer Use 审批上下文。五项均是 01:42–03:22 主分支 commits，没有正式 release 或云端启用范围，**详见 OpenAI 专题页**。
+- **04:11 后新增。** [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)是稳定 release，但发布页只证明 CLI/app-server 发行版；[异步消息 delivery 元数据](https://github.com/openai/codex/commit/fb356f3d2c9fa05f9b06771f8e3c877ca66ed330)让不结束当前 turn 的用户可见消息在历史、重放与 schema 中保留标记；[托管配置参与项目发现](https://github.com/openai/codex/commit/6ec012668b0decdd4506e376f0553816ab684e67)把 MDM/managed-file 信任与根目录规则纳入 app-server 和远程 TUI；[Guardian v2 分类失败关闭](https://github.com/openai/codex/commit/c97bd2dcb52a8120d96086fac49665452af3161b)在无法评分时回退到严格审批。三项 commits 均晚于 release tag，尚未发布，**详见 OpenAI 专题页**。
+- **01:12–04:11 新增。** [exec-server forward](https://github.com/openai/codex/commit/77e688960196dbc82bbeb00c844d2555a61925aa)连接认证 Noise relay 与既有 WebSocket 执行器；[remote plugin bundle 去重](https://github.com/openai/codex/commit/a998c7a1ce88a521d319a4f336e0a4bf36095637)限制同缓存根的后台同步；[permission profile 安全交集](https://github.com/openai/codex/commit/19d185fec8e1216ddd7b5522b331d69a6ecf3b1c)对文件、网络和拒绝路径取更严格策略；[Guardian v2 风险分类](https://github.com/openai/codex/commit/846a16852f6bcd155d552236d4d893749c6130e6)与[Node REPL 评审策略](https://github.com/openai/codex/commit/4a3e829c56415f8c1e69b18fbe74f4d81eaa926a)扩展默认评审和浏览器/Computer Use 审批上下文。五项均是 01:42–03:22 主分支 commits，没有正式 release 或云端启用范围，**详见 OpenAI 专题页**。
 - [memory workspace 拒绝符号链接](https://github.com/openai/codex/commit/a04940cb12cca43510aaf8d601ce42352f0902cb)、[PowerShell fail-closed lowerer](https://github.com/openai/codex/commit/bb701f1e8c8db884fa0cdafff4b8dcb1604f2fdd)、[自定义 provider 不继承环境认证](https://github.com/openai/codex/commit/e13c1d569d953ecac06a09cf5663fb3cd405636d)和[外部 Agent 迁移跳过重定向目标](https://github.com/openai/codex/commit/2a30972fcb646f9d6bfed6de6606aa3f0f8c3dd2)集中收紧文件、命令、认证与仓库边界。
 - [Guardian 认证变化后重连 WebSocket](https://github.com/openai/codex/commit/76ceaddb29444388fbbbae07c46f7e8849f9658b)、[v2 审批评审指标](https://github.com/openai/codex/commit/e7e13c68e224da4dde35fc685ea2a2ab1a62dc9d)与[node_repl 截图纳入评审](https://github.com/openai/codex/commit/9b9b614b02ba04df55479284749c5cbbed695c24)分别覆盖认证刷新、评分滞后和多模态审查来源。
 - 此前窗口内的权限画像、resume/fork、strict review、远程压缩、MCP provenance、沙箱验证与敏感文件读取 commits 仍在今日 24 小时主窗口；它们和两个 0.148.0 alpha 页面都没有正式功能说明或云端启用范围。以上均**详见 OpenAI 专题页**。
@@ -165,6 +182,8 @@ tags:
 
 ### 主窗口内
 
+- **Claude 后台与 Agent SDK。** [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)改进后台 cloud session 资源占用、跨会话消息拒绝与 Remote Control 企业网关检查；[Agent SDK Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)正式发布 subagent 流转发、MCP 2.x 兼容/取消、结构化 ResultError 与父 tool-use ID 恢复，**详见 Claude 专题页**。
+- **Microsoft AG-UI 与中间件。** [run continuity commit](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561)调整 continuation/checkpoint ownership 并持久化；[MiddlewareFailure commit](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)为 guardrail 提供 fail-closed 退出，并在 service-managed conversation 上结清悬空 function call。均未进入 release。
 - **Microsoft 会话路由。** [Agent Framework commit](https://github.com/microsoft/agent-framework/commit/4be584cc53b2094d5a5fa1aa96bf33f126f7f33b)新增 `RoutePersistingRoutingChatClient`，把路由决策写入 Agent session；它可能改善长会话/恢复时的模型一致性，但尚未进入新 release。
 - **Google ADK 跨 Agent 转交防护。** [官方 commit](https://github.com/google/adk-python/commit/9ffe8be6f92fae76541cc948c38c5ef5dc3755b9)把其他 Agent 的文本、思考、工具参数和结果包在显式数据标记内，避免转交内容在结构上与真实用户指令不可区分；提交说明明确承认模型仍可能被说服，因此只写成缓解而非彻底修复。
 - **Deep Agents 长任务与快照。** [offload 可中断 commit](https://github.com/langchain-ai/deepagents/commit/ab82d48cc012c5a991660ad53785c2e26030596e)允许取消卡住的 `/offload`/`/compact`；[QuickJS snapshot HMAC commit](https://github.com/langchain-ai/deepagents/commit/749b386f97ed7b920acfd5936b01f8c425976d92)为 thread 模式快照增加可选签名校验。两项均未进入 release，分别属于长任务控制与执行状态完整性信号。
@@ -172,6 +191,8 @@ tags:
 - **Cloudflare 追踪兼容。** [主分支 commit](https://github.com/cloudflare/agents/commit/bf94bb2f8242f2ad46f6c6c88e56ee5e196cc706)对旧 workerd 的部分 tracing API 做能力检测，无法启动 span 时降级为空 tracer；它晚于 0.21.0 release，不能写成已发布修复。
 - **Docker 沙箱安全。** [官方文章](https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/)于 21:00 发布，讨论已批准命令仍会运行攻击者内容，并将隔离边界放在 Agent sandbox；这是 PaaS/运行时安全邻近信号。
 - **Composio CLI beta。** [0.3.4-beta.355](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcli%400.3.4-beta.355)校验来自不可信输入的路径和 API 返回 URL；属于工具连接层安全信号，不是托管 Agent 发布。
+- **Composio 会话工具路由。** [Core 0.17.0](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcore%400.17.0)允许 Anthropic/OpenAI provider helper 通过 Tool Router session 执行，使 session meta-tools 保留上下文，并为 API 返回的下载/上传 URL 增加 SSRF 防护；属于连接层 SDK release，不是托管 Agent 服务。
+- **Google ADK 视频模态。** [主分支 commit](https://github.com/google/adk-python/commit/dd998a7d5352225b944806abfe0fc7f463abbf38)允许 ADK API server 接收 VIDEO modality；没有 release 或 Vertex/Jules rollout 证据。
 - **Semantic Kernel。** [.NET 1.80.0](https://github.com/microsoft/semantic-kernel/releases/tag/dotnet-1.80.0)主要调整 OpenAPI client、Gemini function list 与向量依赖，未显示受管执行层变化。
 
 ### 24–72 小时观察
@@ -190,6 +211,7 @@ tags:
 
 ## 中国厂商（字节跳动重点）
 
+- **OpenSandbox FastPath。** [官方 commit](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)新增面向 fast-sandbox backend 的 FastPath v2 gRPC client、类型化错误与 RPC deadline；这是 Alibaba 发起的开源沙箱运行时主分支信号，不证明阿里云 AaaS 服务已 rollout。
 - **OpenViking 异步生命周期。** [durable source job commit](https://github.com/volcengine/OpenViking/commit/67603473a5a67c2ac7d4ccc6d22a8190004c5c39)把 `wait=false` 资源导入前移到持久入队，后台完成下载、解析、语义理解与向量化；[计划层级 commit](https://github.com/volcengine/OpenViking/commit/3590b47a25bd008068e35c8423149e3baa3203b8)为火山/BytePlus 增加 Agent/Coding Plan 和按量 API 入口。前者是异步控制面信号，后者更接近 MaaS 商业接入。
 - **OpenViking 0.4.15。** [官方 release](https://github.com/volcengine/OpenViking/releases/tag/v0.4.15)修复 xxhash 4.x 可导致向量未落库却误报任务完成的问题；这是本地记忆/召回可靠性更新。
 - **火山 veADK 与 OpenViking Remote Skills。** [veADK commit](https://github.com/volcengine/veadk-python/commit/0bbfc1ab119618b68c30c7fd8d2d62f744488205)增加远程 Skills manifest、schema 校验、超时和执行代理；[OpenViking commit](https://github.com/volcengine/OpenViking/commit/e3c8e56fea818bcabe675b98ebff11d687851ae7)增加远程 Skill 摘要、缓存、本地物化边界与策略交集。两者都没有 release 或 AgentKit 云端 rollout。
@@ -218,6 +240,7 @@ tags:
 
 ## 邻近信号观察池
 
+- **沙箱与工具连接层。** [OpenSandbox FastPath commit](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)属于 PaaS/运行时；[Composio Core 0.17.0](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcore%400.17.0)属于 session-aware tool router/连接层。两者都不写成托管 Agent 服务上线。
 - **MaaS/模型接入。** [OpenViking 火山/BytePlus plan commit](https://github.com/volcengine/OpenViking/commit/3590b47a25bd008068e35c8423149e3baa3203b8)、[Amazon Bedrock 跨区 OpenAI 模型](https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-cross-region-openai-v2/)、[Cloudflare Workers AI Qwen](https://developers.cloudflare.com/changelog/post/2026-08-17-qwen-3.8-27b-workers-ai/)与[腾讯 youtu 模型切换公告](https://cloud.tencent.com/announce/detail/2393)都更接近模型或兼容性层。
 - **语音路由与自托管沙箱。** [Speko](https://speko.ai/)提供语音模型 gateway；[h5i](https://github.com/h5i-dev/h5i)明确声明 no hosted sandbox/no SaaS，[社区发现帖](https://www.reddit.com/r/ClaudeAI/comments/1vqupxf/selfhosted_sandbox_for_coding_agents/)只作为窗口内发现证据。
 - **Docker sandbox 与 CubeSandbox。** Docker 的[安全文章](https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/)和腾讯的[网络策略 commit](https://github.com/TencentCloud/CubeSandbox/commit/a59396362cc957cda2f87014e7cc10782723de2e)都指向隔离边界，属于 PaaS/运行时而不是 Agent 生命周期服务。
@@ -226,6 +249,8 @@ tags:
 
 ## 趋势
 
+- **稳定发行版开始打包此前分散的远程控制面。** Codex 0.148.0 把 gRPC code-mode、远程 exec、持久线程与审批/Guardian 汇入稳定版；Claude 同轮把后台 cloud session 和 Agent SDK 嵌套流控制推进到正式 release，但两者都不能据此推断云服务端 rollout。
+- **会话连续性与失败结清正在变成显式协议。** Microsoft AG-UI checkpoint ownership、MiddlewareFailure 的悬空调用结清，以及 Codex 异步 delivery 元数据都在减少恢复或策略失败后的状态歧义。
 - **远程执行控制面正在拆分注册、转发与状态所有权。** Codex forwarder 只转发认证 payload，session、进程与恢复仍由目的执行器持有；Microsoft 则把模型路由选择持久化到 session。两者都尚未正式发布。
 - **跨 Agent 边界开始同时处理权限与内容来源。** Google ADK 给转交内容加数据围栏，Codex 对 permission profile 求更严格交集并扩展 Guardian 审查上下文；这些是工程信号，不据此推断云端已启用。
 - **托管沙箱开始显式拆分连续性、会话轨迹与用户隔离。** Microsoft 1.18.0 的 hosted session/user identity 是最直接证据；Codex 的认证和路径边界 commits 说明控制面安全仍在快速下沉。
@@ -316,12 +341,23 @@ tags:
 79. [Fence relayed agent output so it cannot pose as instructions](https://github.com/google/adk-python/commit/9ffe8be6f92fae76541cc948c38c5ef5dc3755b9)
 80. [Make /offload interruptible](https://github.com/langchain-ai/deepagents/commit/ab82d48cc012c5a991660ad53785c2e26030596e)
 81. [Add HMAC check to QuickJS snapshot bytes](https://github.com/langchain-ai/deepagents/commit/749b386f97ed7b920acfd5936b01f8c425976d92)
+82. [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)（详见 Claude 专题页）
+83. [Claude Agent SDK Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)（详见 Claude 专题页）
+84. [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)（详见 OpenAI 专题页）
+85. [Add async delivery metadata to agent messages](https://github.com/openai/codex/commit/fb356f3d2c9fa05f9b06771f8e3c877ca66ed330)（详见 OpenAI 专题页）
+86. [Honor managed config during project discovery](https://github.com/openai/codex/commit/6ec012668b0decdd4506e376f0553816ab684e67)（详见 OpenAI 专题页）
+87. [Fail closed on Guardian V2 risk scoring errors](https://github.com/openai/codex/commit/c97bd2dcb52a8120d96086fac49665452af3161b)（详见 OpenAI 专题页）
+88. [Align AG-UI run continuity](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561)
+89. [Add MiddlewareFailure fail-closed signal](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)
+90. [Composio Core 0.17.0](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcore%400.17.0)
+91. [OpenSandbox FastPath v2 client](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)
+92. [Allow VIDEO modality in Google ADK API server](https://github.com/google/adk-python/commit/dd998a7d5352225b944806abfe0fc7f463abbf38)
 
 ## 采集状态
 
-- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并补查 GitHub Releases/commits、HN Algolia、可访问 Reddit，以及 01:12–04:11 的官方 commits/releases API 增量。
+- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并补查 GitHub Releases/commits、HN Algolia、可访问 Reddit，以及 04:11–07:20 的官方 commits/releases API 增量，并复核主 24 小时与 24–72 小时观察窗口。
 - 失败来源：Replit Blog RSS 404；LangChain changelog feed 403，改查 GitHub Releases；Sourcegraph/Amp 与部分猜测的公开 releases API 路径 404，改查可用官方入口；X 未登录无法稳定读取完整时间线；WorkToper 直连 403；serverlessagent.dev、context-engine.app、premissai.com 仍受本地网络策略限制；部分中国厂商静态页没有可核实发布时间；Octomind 页面只有日期没有时刻；GitHub 网页搜索增量索引滞后，改用官方 API。
-- 初始候选：129 条；保留：81 个唯一来源、65 条动态（12 组主窗口已核实 release/官方发布，17 组主分支或样例开发信号，5 组 24–72 小时观察，8 组较旧基线，9 组日期未确认候选，1 条未证实传闻，13 组 MaaS/PaaS/活动邻近信号）。
+- 累计候选审阅记录：171 条（本轮 90 条原始记录：56 条官方仓库 commits、15 个 releases、19 条网页检索结果；加上既有累计 81 条来源审阅记录；该口径包含重复与未采纳候选）；保留：92 个唯一来源、76 条动态（16 组主窗口已核实 release/官方发布，23 组主分支或样例开发信号，5 组 24–72 小时观察，8 组较旧基线，9 组日期未确认候选，1 条未证实传闻，14 组 MaaS/PaaS/活动邻近信号）。
 - 二次补搜：未运行（主窗口已有正式 AaaS release 且最终 sources 非 0，secondPass=false）。
 
-今日扫描完成，共 65 条动态，重点：Microsoft Agent Framework .NET 1.18.0 仍是正式发布主线；Codex exec-server forward 与 Microsoft 会话持久化路由新增远程执行控制面证据；Google ADK、Deep Agents、Guardian/权限 updates 仍严格标为未发布开发信号。
+今日扫描完成，共 76 条动态，重点：Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0、Claude Code v2.1.235 与 Agent SDK Python v0.2.140 构成正式发布主线；Microsoft AG-UI/MiddlewareFailure、Codex 异步 delivery/托管配置/Guardian 与 Google ADK 仍严格标为未发布开发信号，OpenSandbox 则归入 PaaS 邻近池。

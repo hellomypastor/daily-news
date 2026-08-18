@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T04:11:00+08:00"
+updatedAt: "2026-08-19T07:18:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Mojo🔥 is now open source!"
 featuredUrl: "https://www.modular.com/blog/mojo-open-source"
@@ -28,11 +28,13 @@ tags:
   - "Collaboration"
   - "Commentary"
   - "Compiler"
+  - "Computer Use"
   - "Date Unverified"
   - "Developer Tools"
   - "Education"
   - "Embeddings"
   - "Embodied AI"
+  - "Engineering"
   - "Evaluation"
   - "FPGA"
   - "GitHub"
@@ -40,11 +42,13 @@ tags:
   - "Harness"
   - "HN"
   - "Inference"
+  - "Kernel"
   - "Learning"
   - "LLM"
   - "macOS"
   - "MCP"
   - "Memory"
+  - "ML Systems"
   - "Mojo"
   - "Multi-Agent"
   - "Observation"
@@ -58,17 +62,19 @@ tags:
   - "Resurfaced"
   - "RL"
   - "Robotics"
+  - "Safety"
   - "Scheduling"
   - "Security"
   - "Training"
   - "Trending"
   - "Verifier"
   - "Video"
+  - "Zig"
 ---
 
 ## 概览
 
-高亮窗口为 2026-08-17 04:11:00 至 2026-08-19 04:11:00（Asia/Shanghai），HN 旧文再浮现窗口为 2026-08-18 04:11:00 至 2026-08-19 04:11:00。本轮复核 HN 宽口径关键词并集 476 条、arXiv 四分类 299 条、GitHub 新仓库五组前列结果以及 Trending/博客 feed；与当天已有集合合并后保留 58 个唯一来源 URL。新增强信号包括 IBM 的八模型 Agent memory 实验、Miles v0.1 全栈后训练实现、GitHub Next 的 Agentic Workflows 生成器和一个多机 Agent 协议项目。仓库创建时间、论文/项目自报结果、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
+高亮窗口为 2026-08-17 07:11:00 至 2026-08-19 07:11:00（Asia/Shanghai），HN 旧文再浮现窗口为 2026-08-18 07:11:00 至 2026-08-19 07:11:00。本轮在当天已有扫描上继续补查 HN 新增 144 条、GitHub 五组共 40 条新仓库候选，并复核 Trending、arXiv、Hugging Face、Simon Willison 与独立工程原文；与当天已有集合合并后保留 66 个唯一来源 URL。新增可核实信号包括 Codex 云端无人值守开发的权限与验证复盘，以及重新进入 HN 的 Fx 原生编码 Agent、Popcorn kernel 调度库；Grader Labs computer-use 数据集因原站 403 仅作为日期未确认候选保留。仓库创建时间、论文/项目自报结果、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
 
 ## 已核实高亮
 
@@ -90,6 +96,7 @@ tags:
 | [githubnext/gh-aw-wizard](https://github.com/githubnext/gh-aw-wizard) | 从九类任务、触发器与上下文生成 GitHub Agentic Workflows，并公开模板数据与扫描脚本 | 把工作流能力、权限和触发方式显式化，便于审查生成结果 | 仓库创建于 2026-08-19 01:12 +08:00；MIT |
 | [GishReloaded/agent-mesh](https://github.com/GishReloaded/agent-mesh) | 为分布式编码 Agent 与开发者提供共享 session、顺序日志、版本化 context、任务与事件协议 | Agent token 限定到单 session，顺序日志支持断线续传；仍是低采用新项目 | 仓库创建于 2026-08-19 03:49 +08:00；Apache-2.0 |
 | [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) | 作者记录让多个 AI Agent 持续一个月反编译 MW2 的工程流程、成本与失败模式 | 长时程真实项目能暴露验证、并发和重复劳动问题；结论属于作者经验 | 原文结构化数据：2026-08-17 08:00 +08:00；处于 48 小时窗口内 |
+| [Building in the cloud with Codex, safely](https://www.ivan.codes/blog/building-in-the-cloud-with-codex) | 作者记录以 AGENTS.md、权限边界、可重复检查、trace 和独立 diff review 约束云端无人值守 Codex 的实践 | 重点不是“无人审核”，而是把资源声明、运行证据、预览环境和最终人工判断分层；属于单一工程案例，不外推为通用保证 | 原文 RSS 标注 2026-08-18 08:00 +08:00；正文可打开 |
 
 <figure class="source-image">
   <a href="https://www.modular.com/blog/mojo-open-source"><img src="https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a84597ae2a73bd4973f801f_Mojo-OSS-Blog-Compressed.jpeg" alt="Mojo 开源公告的官方题图，展示 Mojo 标识与开源主题视觉" loading="lazy" /></a>
@@ -116,6 +123,7 @@ tags:
 - agent-codemode 的 [HN 提交](https://news.ycombinator.com/item?id=49346900) 采集快照为 3 points / 0 comments；提交于 2026-08-18 23:15 +08:00，项目高亮依据是窗口内创建时间与公开实现。
 - [Artificial Analysis 的 Qwen 3.8 27B 条目](https://artificialanalysis.ai/models/qwen3-8-27b) 在 [HN](https://news.ycombinator.com/item?id=49334544) 采集快照为 366 points / 169 comments；这是第三方榜单及其讨论热度，不替代模型卡或可复现实验。
 - [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) 的 [HN 提交](https://news.ycombinator.com/item?id=49351299) 于 2026-08-19 03:28 +08:00 出现，快照为 4 points / 1 comment；高亮依据是原文日期与工程内容。
+- [Building in the cloud with Codex, safely](https://www.ivan.codes/blog/building-in-the-cloud-with-codex) 的 [HN 提交](https://news.ycombinator.com/item?id=49354095) 于 2026-08-19 07:05 +08:00 出现，快照为 3 points / 0 comments；技术结论依据可打开的原文与 RSS 日期，而非讨论热度。
 
 ## 论文 / 研究
 
@@ -137,6 +145,8 @@ tags:
 - [AshwinUgale/tracelint](https://github.com/AshwinUgale/tracelint) 以确定性规则检查 Agent trace 中的 schema 违规、未处理错误和循环等结构问题，仓库创建于 2026-08-02；[HN 提交](https://news.ycombinator.com/item?id=49346452) 于 2026-08-18 22:49 +08:00 出现，采集快照为 3 points / 0 comments。README 明示启发式发现只是候选，不能等同于最终答案正确性。
 - [Why Open Source Matters for AI](https://oreillyradar.substack.com/p/why-open-source-matters-for-ai) 原文发布于 2026-08-10，是 Tim O'Reilly 的观点文章；[HN 讨论](https://news.ycombinator.com/item?id=49335468) 于 2026-08-18 02:25 +08:00 出现，采集快照为 23 points / 0 comments，不作技术发布。
 - [LLM-as-a-Verifier](https://github.com/llm-as-a-verifier/llm-as-a-verifier) 是已有的通用 Agent verifier 框架，仓库创建于 2026-04-10；[HN 提交](https://news.ycombinator.com/item?id=49348195) 于 2026-08-19 00:30 +08:00 出现，采集快照为 2 points / 0 comments。README 的 benchmark 领先说法属于项目方结果。
+- [vercel-labs/fx](https://github.com/vercel-labs/fx) 是用 Zig 编写、可构建为原生二进制或 WebAssembly 的实验性 coding-agent harness，仓库创建于 2026-08-11 16:57 +08:00，Apache-2.0；其 [HN 讨论](https://news.ycombinator.com/item?id=49353339) 于 2026-08-19 06:00 +08:00 出现，07:18 快照为 32 points / 6 comments。README 明示 experimental，热度不等于成熟度。
+- [Popcorn](https://blog.tilderesearch.com/blog/popcorn) 是 Tilde 开源的 ML kernel 验证、基准与按输入/硬件调度层，原文标注 2026-08-11，配套仓库为 Apache-2.0；其 [HN 提交](https://news.ycombinator.com/item?id=49353646) 于 2026-08-19 06:25 +08:00 出现，快照为 2 points / 0 comments。性能与正确性边界仍应以项目测试和独立复现判断。
 
 ## 日期未确认
 
@@ -144,6 +154,7 @@ tags:
 - [How to Parallelize a Transformer for Training](https://ezyang.github.io/interactive-parallelize-transformer/) 是可交互的 DP、FSDP、TP、pipeline 与 expert parallelism 估算页面；页面可打开但未暴露可靠发布日期，其 [HN 提交](https://news.ycombinator.com/item?id=49351721) 于 2026-08-19 03:55 +08:00 被发现。
 - [My coding agent invented its own vision](https://nickbusey.com/article/2026-08-18-agent-invented-vision/) 在采集网络返回 403，无法核实正文与原始发布时间；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49351887) 于 2026-08-19 04:07 +08:00 出现。
 - [The Shapes of Agent Memory](https://www.pinglin.tw/blog/the-shapes-of-agent-memory/) 原文在采集网络无法打开，暂不转述技术结论；[HN 提交](https://news.ycombinator.com/item?id=49349906) 于 2026-08-19 02:07 +08:00 出现。
+- [Grader Labs computer-use 任务样例页](https://cua.graderlabs.com/) 在采集网络返回 403，无法核实数据集结构、许可证与原始发布日期；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49353985) 于 2026-08-19 06:55 +08:00 出现，07:18 快照为 10 points / 1 comment，因此不列为已核实数据集发布。
 
 ## 观察池
 
@@ -153,10 +164,10 @@ tags:
 
 ## 来源链接
 
-原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。
+原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、[Fx 原仓库](https://github.com/vercel-labs/fx)、[Popcorn 工程原文](https://blog.tilderesearch.com/blog/popcorn)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest/Algolia 最近 24 小时七组检索；GitHub Trending 全站、Python、TypeScript；GitHub Search/API 与 README/许可证；arXiv 48 小时四分类；Hugging Face Daily Papers/Blog RSS；Simon Willison Atom；IBM Research、LMSYS、Modular 与独立工程原文。
-- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；Nick Busey 与 The Shapes of Agent Memory 原文在采集网络不可访问；Ezyang 与 Shoehorn 页面无可核实原始发布日期，均已分栏。
-- 初始候选 857；累积保留 58 个唯一来源 URL；未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest/Algolia 最近 24 小时七组检索，本轮截止前再核 144 条新增；GitHub Trending 全站、Python、TypeScript；GitHub Search/API 五组本轮 40 条与 README/许可证；arXiv 48 小时四分类；Hugging Face Daily Papers/Blog RSS；Simon Willison Atom；IBM Research、LMSYS、Modular、Fx、Tilde、ivan.codes 与独立工程原文。
+- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；Nick Busey、The Shapes of Agent Memory、Grader Labs CUA 与 Goat Squad Studios 原文在采集网络不可访问；Ezyang 与 Shoehorn 页面无可核实原始发布日期。Grader Labs 已分栏保留，Goat Squad 因仅核到标题未收入 sources。
+- 当日各轮粗筛候选累计 1,041；累积保留 66 个唯一来源 URL；本轮已有可靠来源增量，未触发二次补搜（secondPass=false）。
