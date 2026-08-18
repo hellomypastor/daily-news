@@ -22,6 +22,7 @@ const latestDate = posts[0] ? calendarDate(posts[0].data.date) : undefined;
 const todaysPosts = latestDate
   ? posts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
   : [];
+const highlights = posts.filter((post) => !todaysPosts.some((today) => today.slug === post.slug)).slice(0, 10);
 
 const content = {
   title: "Latest",
@@ -31,20 +32,27 @@ const content = {
 };
 ---
 
-<DefaultPageLayout {content}>
-  <h2 class="edition-date">{latestDate}</h2>
-  {todaysPosts.length > 0 ? (
-    <PostPreviewList posts={todaysPosts} mode="signal" />
-  ) : (
-    <p>No briefings have been published yet.</p>
-  )}
+<DefaultPageLayout {content} showPageHeader={false}>
+  <div class="home-grid">
+    <section>
+      <h2 class="edition-date">{latestDate}</h2>
+      {todaysPosts.length > 0 ? <PostPreviewList posts={todaysPosts} mode="signal" /> : <p>No briefings have been published yet.</p>}
+    </section>
+    <aside class="highlights">
+      <h2>Highlights</h2>
+      <ul>{highlights.map((post) => <li><a href={`/blog/${post.slug}`}>{post.data.title}</a><span> — {calendarDate(post.data.date)}</span></li>)}</ul>
+    </aside>
+  </div>
 </DefaultPageLayout>
 
 <style>
   .edition-date {
-    @apply mb-1 border-b pb-2 text-xl font-bold;
-    border-color: var(--line-strong);
+    @apply mb-2 pb-2 text-xl font-bold;
     color: var(--ink);
-    font-family: var(--font-display);
   }
+  .home-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr); gap: 3.5rem; }
+  .highlights h2 { @apply mb-4 text-xl font-bold; }
+  .highlights li { @apply mb-3 text-sm leading-5; }
+  .highlights span { color: var(--muted); }
+  @media (max-width: 760px) { .home-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
 </style>

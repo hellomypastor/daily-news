@@ -36,16 +36,14 @@ const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
     </div>
   </div>
   <div class="flex-1">
-    {topic && <p class="post-preview__topic"><span>{topic.index}</span>{topic.label}</p>}
+    {topic && <p class="post-preview__topic">{topic.label}</p>}
     <h4 class="post-preview__title dark:text-theme-dark-primary">
       <a href={`/${"blog"}/${slug}`} title={post.title}>{post.title}</a>
     </h4>
     <p class="post-preview__desc">
       {post.description}
     </p>
-    <a class="post-preview__read" href={`/blog/${slug}`} aria-label={`Read ${post.title}`}>
-      Read briefing <span aria-hidden="true">→</span>
-    </a>
+    <p class="post-preview__meta"><a href={`/blog/${slug}`}># read briefing</a> / {post.tags.slice(0, 4).join(", ")}</p>
   </div>
 </article>
 <style>
@@ -81,28 +79,24 @@ const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
     color: var(--muted);
   }
   .post-preview__topic {
-    @apply mb-1 flex items-center gap-2 text-xs font-semibold;
-    color: var(--signal-orange);
+    @apply mb-1 text-sm font-bold;
+    color: var(--muted);
   }
   .post-preview__topic span {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     color: var(--muted);
   }
   .post-preview__title {
-    @apply mb-1 text-2xl font-bold leading-tight;
-    color: var(--ink);
-    font-family: var(--font-display);
+    @apply mb-2 text-lg font-bold leading-snug;
+    color: var(--link);
   }
-  .post-preview__title a:hover { text-decoration: underline; text-decoration-color: var(--signal-orange); text-underline-offset: 4px; }
+  .post-preview__title a { color: var(--link); text-decoration: underline; }
   .post-preview__desc {
-    @apply line-clamp-2 text-sm leading-6;
-    color: var(--muted);
+    @apply text-sm leading-6;
+    color: var(--ink);
   }
-  .post-preview__read {
-    @apply mt-2 inline-flex items-center gap-2 text-sm;
-    color: var(--signal-orange);
-  }
-  .post-preview__read:hover { color: var(--signal-orange); }
+  .post-preview__meta { @apply mt-2 text-xs; color: var(--muted); }
+  .post-preview__meta a { color: var(--link); text-decoration: underline; }
   @media (max-width: 639px) {
     .post-preview { @apply gap-4; }
     .post-preview__date-box { @apply w-16; }

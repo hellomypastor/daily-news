@@ -6,28 +6,19 @@ import SearchBtn from "./SearchBtn.svelte";
 ---
 
 <header class="header">
-  <div class="header__identity">
+  <div class="header__top">
+    <div class="header__identity">
     <h1 class="header__title">
       <a href="/">{SITE.name}</a>
     </h1>
-    <p class="header__desc">{SITE.description}</p>
-  </div>
-  <div class="header__tools">
-    <a href="/" class="header__mark" aria-label="Go to today's briefings">
-      <img src="/assets/logo.png" alt="" />
-    </a>
     <nav aria-label="Site tools">
       <ul class="header__ref-list">
-          <li>
-            <SearchBtn client:visible />
-          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Archive</a></li>
+          <li><a href="/tags">Tags</a></li>
           <li>
             <a href={SITE.githubUrl} title={`${SITE.name}'s Github URL'`}>
-              <SvgIcon>
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
-              </SvgIcon>
+              GitHub
             </a>
           </li>
           <li>
@@ -44,56 +35,58 @@ import SearchBtn from "./SearchBtn.svelte";
           </li>
       </ul>
     </nav>
+    </div>
+    <a href="/rss.xml" class="header__rss" title="RSS" aria-label="RSS feed">
+      <SvgIcon><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></SvgIcon>
+    </a>
   </div>
+  <p class="header__topics">On <a href="/tags/Claude">Claude</a> <a href="/tags/OpenAI">OpenAI</a> <a href="/tags/Open%20Source">open source</a> <a href="/tags/AI%20Industry">AI industry</a> <a href="/tags/AaaS">AaaS</a></p>
+  <div class="header__search"><SearchBtn client:visible /><span>Search this site</span></div>
 </header>
 
 <style>
   .header {
-    @apply flex items-center justify-between gap-6 py-7;
-    border-color: var(--line-strong);
+    @apply py-5;
   }
-  .header__identity {
-    min-width: 0;
+  .header__top, .header__identity, .header__ref-list {
+    @apply flex items-center;
   }
+  .header__top { @apply justify-between gap-4; }
+  .header__identity { @apply min-w-0 flex-wrap gap-x-10 gap-y-2; }
+  .header__rss { @apply h-6 w-6 shrink-0; color: #ed8b22; }
+  .header__rss :global(svg) { width: 100%; height: 100%; }
+  .header__title a { color: var(--ink); text-decoration: none; }
+  .header__title a:hover { text-decoration: none; }
+  .header__topics {
+    @apply mt-2 flex flex-wrap items-center gap-2 text-sm;
+  }
+  .header__topics a {
+    @apply rounded border px-2 py-0.5 text-sm;
+    color: var(--ink); background: var(--tag); border-color: #cfc3d4;
+    text-decoration: none;
+  }
+  .header__search {
+    @apply mt-3 flex h-8 w-full items-center border;
+    border-color: var(--nav); color: var(--muted);
+  }
+  .header__search span { @apply px-2 text-sm; }
+  .header__search :global(button) {
+    @apply order-2 ml-auto h-full px-3 font-bold text-white;
+    background: var(--nav);
+  }
+  .header__search :global(svg) { display: none; }
+  .header__search :global(button)::after { content: "Search"; }
+  .header__ref-list { @apply gap-5 font-bold; }
+  .header__ref-list a { color: var(--link); }
+  .header__ref-list li:nth-last-child(-n+2) { display: none; }
   .header__title {
-    @apply text-4xl font-bold leading-none md:text-5xl;
-    color: var(--ink);
-    font-family: var(--font-display);
-    letter-spacing: -0.025em;
-  }
-  .header__desc {
-    @apply mt-2 text-sm;
-    color: var(--muted);
-  }
-  .header__tools {
-    @apply flex shrink-0 items-center gap-5;
-  }
-  .header__mark img {
-    @apply h-11 w-11 object-contain;
-    filter: saturate(0.8);
-  }
-  .header__ref-list {
-    @apply flex gap-3;
-    color: var(--muted);
-  }
-  .header__ref-list a {
-    @apply transition-colors;
-  }
-  .header__ref-list a:hover {
-    color: var(--ink);
+    @apply text-4xl font-bold leading-none;
+    color: var(--ink); font-family: var(--font-display); letter-spacing: -0.025em;
   }
   @media (max-width: 640px) {
-    .header {
-      @apply items-center py-5;
-    }
-    .header__title {
-      @apply text-3xl;
-    }
-    .header__mark {
-      display: none;
-    }
-    .header__desc {
-      max-width: 18rem;
-    }
+    .header { @apply py-4; }
+    .header__identity { @apply block; }
+    .header__title { @apply text-3xl; max-width: 16rem; }
+    .header__ref-list { @apply mt-3 gap-4; }
   }
 </style>

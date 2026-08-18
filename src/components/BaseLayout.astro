@@ -1,4 +1,4 @@
-<body class="font-sans antialiased min-h-screen">
+<body class="min-h-screen">
   <div class="transition-colors">
     <main class="site-shell">
       <slot />
@@ -8,6 +8,7 @@
 
 <style>
   .site-shell {
-    @apply mx-auto max-w-5xl px-5 md:px-8;
+    @apply mx-auto px-3 sm:px-5;
+    max-width: 1120px;
   }
 </style>

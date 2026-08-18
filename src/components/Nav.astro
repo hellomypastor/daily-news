@@ -3,7 +3,8 @@ import { toTitleCase } from "$/utils";
 import { NAV_ITEMS } from "$/config";
 ---
 
-<nav class="nav border-y">
+<div class="update-strip"><strong>Updated:</strong> every 3 hours · five independent AI briefings, one rolling edition</div>
+<nav class="nav">
   <ul class="nav-list" transition:animate="fade">
     {
       Object.keys(NAV_ITEMS).map((navItemKey) => (
@@ -28,17 +29,16 @@ import { NAV_ITEMS } from "$/config";
 </nav>
 <style>
   .nav-list {
-    @apply flex list-none flex-wrap gap-x-6 gap-y-1;
+    @apply flex list-none flex-wrap gap-x-6 px-3;
   }
   .nav-link {
-    @apply inline-block py-2 text-sm transition-colors;
-    color: var(--muted);
+    @apply inline-block py-1.5 text-sm text-white;
   }
   .nav-link:hover,
   .nav-link--active {
-    color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    color: #fff; text-decoration: underline;
   }
-  .nav { border-color: var(--line); }
+  .nav { margin-inline: calc(50% - 50vw); padding-inline: calc(50vw - 50%); background: var(--nav); }
+  .update-strip { margin-inline: calc(50% - 50vw); padding: .55rem max(calc(50vw - 50%), .75rem); background: var(--notice); color: #324b5c; font-size: .82rem; }
+  html.dark .update-strip { color: #d2e1e8; }
 </style>

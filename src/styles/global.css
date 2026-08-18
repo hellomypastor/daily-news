@@ -26,6 +26,10 @@
 	--signal-orange: #6b3fa0;
 	--signal-cyan: #6b3fa0;
 	--font-display: Georgia, "Times New Roman", serif;
+	--link: #0000aa;
+	--nav: #663399;
+	--notice: #d9edf7;
+	--tag: #eee8f0;
 }
 
 html.dark {
@@ -37,6 +41,10 @@ html.dark {
 	--line-strong: #666666;
 	--signal-orange: #b99adb;
 	--signal-cyan: #b99adb;
+	--link: #b8a7ff;
+	--nav: #51306d;
+	--notice: #243943;
+	--tag: #39313f;
 }
 
 html {
@@ -47,7 +55,13 @@ html {
 
 body {
 	background: var(--paper);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.45;
 }
+
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
 
 a:focus-visible,
 button:focus-visible,
