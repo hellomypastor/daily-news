@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T01:12:02+08:00"
+updatedAt: "2026-08-19T04:11:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Mojo🔥 is now open source!"
 featuredUrl: "https://www.modular.com/blog/mojo-open-source"
@@ -19,6 +19,7 @@ tags:
   - "Audit"
   - "Benchmark"
   - "Browser"
+  - "Case Study"
   - "Code Generation"
   - "Code Quality"
   - "Code Review"
@@ -34,6 +35,7 @@ tags:
   - "Embodied AI"
   - "Evaluation"
   - "FPGA"
+  - "GitHub"
   - "GPU"
   - "Harness"
   - "HN"
@@ -47,12 +49,14 @@ tags:
   - "Multi-Agent"
   - "Observation"
   - "Open Source"
+  - "Post-training"
   - "Python"
   - "Quantization"
   - "Qwen"
   - "RAG"
   - "Repository"
   - "Resurfaced"
+  - "RL"
   - "Robotics"
   - "Scheduling"
   - "Security"
@@ -64,7 +68,7 @@ tags:
 
 ## 概览
 
-高亮窗口为 2026-08-17 01:12:02 至 2026-08-19 01:12:02（Asia/Shanghai），HN 旧文再浮现窗口为 2026-08-18 01:12:02 至 2026-08-19 01:12:02。本轮把 HN、GitHub、arXiv、Hugging Face 与独立工程博客的 165 个相关初筛候选合并复核，保留 46 个唯一来源 URL。最强新信号是 Mojo 在截止前约 55 分钟开放完整编译器与工具链源码；仓库创建时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。项目自报 benchmarks、stars 与讨论热度只作发现或采用信号，未当作独立质量结论。
+高亮窗口为 2026-08-17 04:11:00 至 2026-08-19 04:11:00（Asia/Shanghai），HN 旧文再浮现窗口为 2026-08-18 04:11:00 至 2026-08-19 04:11:00。本轮复核 HN 宽口径关键词并集 476 条、arXiv 四分类 299 条、GitHub 新仓库五组前列结果以及 Trending/博客 feed；与当天已有集合合并后保留 58 个唯一来源 URL。新增强信号包括 IBM 的八模型 Agent memory 实验、Miles v0.1 全栈后训练实现、GitHub Next 的 Agentic Workflows 生成器和一个多机 Agent 协议项目。仓库创建时间、论文/项目自报结果、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
 
 ## 已核实高亮
 
@@ -81,6 +85,11 @@ tags:
 | [Yevanchen/reclaim-code-entropy](https://github.com/Yevanchen/reclaim-code-entropy) | 以证据排序可删除代码候选的 Agent Skill，区分只读审计与实际应用 | 把删代码变成带信心、风险、净减少量与验证步骤的工作流，避免把静态候选直接等同于安全删除 | 仓库创建于 2026-08-17 16:19 +08:00；MIT，README 可打开 |
 | [amitshekhariitbhu/llm-inference-engineering](https://github.com/amitshekhariitbhu/llm-inference-engineering) | 从生成循环、KV cache、PagedAttention 到 vLLM/SGLang serving 的持续更新教程与代码集合 | 适合按可运行的小步实验理解推理系统，而不是只看框架 API；内容仍在快速建设 | 仓库创建于 2026-08-18 11:10 +08:00；Apache-2.0，README 可打开 |
 | [Simon Willison：Qwen 3.8 27B scores 52](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) | 对 Qwen 3.8 27B 的第三方榜单位置与模型规模作简短技术评论 | 提醒把排行榜分数与参数规模、推理设置一起看；该条是评论，不代替模型卡或独立复现实验 | Atom feed 标注 2026-08-18 07:58 +08:00 |
+| [IBM Research：How Much Memory Does Your Agent Actually Need?](https://huggingface.co/blog/ibm-research/altk-evolve-hmm) | 用同一组自蒸馏 guidelines 比较无 memory、全量注入与检索子集，并覆盖八个模型 | 结果显示 memory 收益随模型能力、上下文和任务而变，重点是校准剂量；指标均为作者在 AppWorld 上的实验 | Hugging Face 结构化数据：2026-08-19 02:09 +08:00；原文可打开 |
+| [Miles v0.1: Production-level Post-training](https://www.lmsys.org/blog/2026-08-18-miles-v0-1/) | LMSYS/Miles 展示以 SGLang rollout、异步 RL、TITO、routing replay、低精度训练和 offload 组成的后训练系统 | 把 agentic rollout、训练—推理一致性和权重更新放进同一实现；性能数字属项目方结果 | 官方原文标注 2026-08-18；窗口内可打开 |
+| [githubnext/gh-aw-wizard](https://github.com/githubnext/gh-aw-wizard) | 从九类任务、触发器与上下文生成 GitHub Agentic Workflows，并公开模板数据与扫描脚本 | 把工作流能力、权限和触发方式显式化，便于审查生成结果 | 仓库创建于 2026-08-19 01:12 +08:00；MIT |
+| [GishReloaded/agent-mesh](https://github.com/GishReloaded/agent-mesh) | 为分布式编码 Agent 与开发者提供共享 session、顺序日志、版本化 context、任务与事件协议 | Agent token 限定到单 session，顺序日志支持断线续传；仍是低采用新项目 | 仓库创建于 2026-08-19 03:49 +08:00；Apache-2.0 |
+| [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) | 作者记录让多个 AI Agent 持续一个月反编译 MW2 的工程流程、成本与失败模式 | 长时程真实项目能暴露验证、并发和重复劳动问题；结论属于作者经验 | 原文结构化数据：2026-08-17 08:00 +08:00；处于 48 小时窗口内 |
 
 <figure class="source-image">
   <a href="https://www.modular.com/blog/mojo-open-source"><img src="https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a84597ae2a73bd4973f801f_Mojo-OSS-Blog-Compressed.jpeg" alt="Mojo 开源公告的官方题图，展示 Mojo 标识与开源主题视觉" loading="lazy" /></a>
@@ -106,6 +115,7 @@ tags:
 - Mojo 官方公告在 [HN](https://news.ycombinator.com/item?id=49348079) 采集快照为 26 points / 4 comments；提交于 2026-08-19 00:23 +08:00，讨论热度不影响官方发布日期判定。
 - agent-codemode 的 [HN 提交](https://news.ycombinator.com/item?id=49346900) 采集快照为 3 points / 0 comments；提交于 2026-08-18 23:15 +08:00，项目高亮依据是窗口内创建时间与公开实现。
 - [Artificial Analysis 的 Qwen 3.8 27B 条目](https://artificialanalysis.ai/models/qwen3-8-27b) 在 [HN](https://news.ycombinator.com/item?id=49334544) 采集快照为 366 points / 169 comments；这是第三方榜单及其讨论热度，不替代模型卡或可复现实验。
+- [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) 的 [HN 提交](https://news.ycombinator.com/item?id=49351299) 于 2026-08-19 03:28 +08:00 出现，快照为 4 points / 1 comment；高亮依据是原文日期与工程内容。
 
 ## 论文 / 研究
 
@@ -131,6 +141,9 @@ tags:
 ## 日期未确认
 
 - [Shoehorn](https://notactuallytreyanastasio.github.io/shoehorn/) 描述按精确 VRAM 预算为各 tensor 选择量化方式并交给 llama.cpp 运行；公开页未暴露可靠原始发布日期，因此不列入窗口内已核实发布。其 [HN 提交](https://news.ycombinator.com/item?id=49346135) 可确认于 2026-08-18 22:29 +08:00 被发现，采集快照为 20 points / 2 comments。
+- [How to Parallelize a Transformer for Training](https://ezyang.github.io/interactive-parallelize-transformer/) 是可交互的 DP、FSDP、TP、pipeline 与 expert parallelism 估算页面；页面可打开但未暴露可靠发布日期，其 [HN 提交](https://news.ycombinator.com/item?id=49351721) 于 2026-08-19 03:55 +08:00 被发现。
+- [My coding agent invented its own vision](https://nickbusey.com/article/2026-08-18-agent-invented-vision/) 在采集网络返回 403，无法核实正文与原始发布时间；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49351887) 于 2026-08-19 04:07 +08:00 出现。
+- [The Shapes of Agent Memory](https://www.pinglin.tw/blog/the-shapes-of-agent-memory/) 原文在采集网络无法打开，暂不转述技术结论；[HN 提交](https://news.ycombinator.com/item?id=49349906) 于 2026-08-19 02:07 +08:00 出现。
 
 ## 观察池
 
@@ -144,6 +157,6 @@ tags:
 
 ## 采集状态
 
-- 已检查：HN 首页/newest/Algolia 最近 24 小时；GitHub Trending 全站、Python、TypeScript；GitHub Search/API 与仓库 README；arXiv；Hugging Face Daily Papers/Blog RSS；Simon Willison Atom；Modular 原文。
-- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML 且只记录明确显示的日增 stars；Shoehorn 页面无可核实原始发布日期，已保留在“日期未确认”。
-- 初始候选 165；保留 46 个唯一来源 URL；未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest/Algolia 最近 24 小时七组检索；GitHub Trending 全站、Python、TypeScript；GitHub Search/API 与 README/许可证；arXiv 48 小时四分类；Hugging Face Daily Papers/Blog RSS；Simon Willison Atom；IBM Research、LMSYS、Modular 与独立工程原文。
+- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；Nick Busey 与 The Shapes of Agent Memory 原文在采集网络不可访问；Ezyang 与 Shoehorn 页面无可核实原始发布日期，均已分栏。
+- 初始候选 857；累积保留 58 个唯一来源 URL；未触发二次补搜（secondPass=false）。
