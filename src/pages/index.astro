@@ -3,7 +3,6 @@ export const prerender = true;
 
 import { getCollection } from "astro:content";
 import DefaultPageLayout from "$/layouts/default.astro";
-import Code from "$/components/Code.astro";
 
 const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
 const calendarDate = (date: string) => date.slice(0, 10);
@@ -22,10 +21,6 @@ const latestDate = posts[0] ? calendarDate(posts[0].data.date) : undefined;
 const todaysPosts = latestDate
   ? posts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
   : [];
-const todaysEntries = await Promise.all(todaysPosts.map(async (post) => {
-  const { Content } = await post.render();
-  return { post, Content };
-}));
 
 const content = {
   title: "Latest",
@@ -38,19 +33,21 @@ const content = {
 <DefaultPageLayout {content} showPageHeader={false}>
   <main class="today-stream">
     <h1 class="edition-date">{latestDate}</h1>
-    {todaysEntries.length > 0 ? todaysEntries.map(({ post, Content }, index) => (
+    {todaysPosts.length > 0 ? todaysPosts.map((post) => (
       <article class="daily-entry">
-        <header class="daily-entry__header">
-          <p class="daily-entry__topic">{TOPIC_ORDER[index]?.replace("open-source", "Open source").replace("ai-industry", "Industry").replace("openai", "OpenAI").replace("claude", "Claude").replace("aaas", "AaaS")}</p>
-          <h2><a href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
-          <p class="daily-entry__dek">{post.data.description}</p>
-        </header>
-        <div class="daily-entry__body prose dark:prose-dark">
-          <Content components={{ code: Code }} />
-        </div>
+        <h2><a href={post.data.featuredUrl || `/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a></h2>
+        <p class="daily-entry__summary">{post.data.featuredSummary || post.data.description}</p>
+        {post.data.featuredImage && (
+          <figure class="daily-entry__figure">
+            <a href={post.data.featuredUrl || `/blog/${post.slug}`}>
+              <img src={post.data.featuredImage} alt={post.data.featuredImageAlt || ""} loading="lazy" />
+            </a>
+            {post.data.featuredImageCaption && <figcaption>{post.data.featuredImageCaption}</figcaption>}
+          </figure>
+        )}
         <footer class="daily-entry__footer">
-          <a href={`/blog/${post.slug}`}># permanent link</a>
-          <span>/ {post.data.tags.slice(0, 6).join(", ")}</span>
+          <a href={`/blog/${post.slug}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
+          <span> / {(post.data.featuredTags.length ? post.data.featuredTags : post.data.tags).slice(0, 6).join(", ")}</span>
         </footer>
       </article>
     )) : <p>No briefings have been published yet.</p>}
@@ -59,34 +56,30 @@ const content = {
 
 <style>
   .edition-date {
-    @apply mb-8 pb-3 text-3xl font-bold;
+    @apply mb-6 pb-2 text-2xl font-bold;
     color: var(--ink);
     border-bottom: 2px solid var(--ink);
   }
   .today-stream { max-width: 52rem; }
-  .daily-entry { @apply border-b pb-12 mb-12; border-color: var(--line-strong); }
-  .daily-entry__header { @apply mb-7; }
-  .daily-entry__topic { @apply mb-2 text-sm font-bold; color: var(--muted); }
-  .daily-entry__header h2 { @apply text-2xl font-bold leading-tight md:text-3xl; }
-  .daily-entry__header h2 a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
-  .daily-entry__dek { @apply mt-3 text-base leading-7; color: var(--ink); }
-  .daily-entry__body { max-width: none; }
-  .daily-entry__body :global(table) { display: block; max-width: 100%; overflow-x: auto; }
-  .daily-entry__body :global(figure.source-image) { margin: 1.5rem 0 2rem; }
-  .daily-entry__body :global(figure.source-image img) {
+  .daily-entry { @apply border-b pb-7 mb-7; border-color: var(--line-strong); }
+  .daily-entry h2 { @apply text-xl font-bold leading-snug md:text-2xl; }
+  .daily-entry h2 a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+  .daily-entry__summary { @apply mt-1 text-lg leading-7; color: var(--ink); }
+  .daily-entry__figure { @apply mt-4 mb-0; }
+  .daily-entry__figure img {
     display: block;
     width: 100%;
-    max-height: 42rem;
+    max-height: 32rem;
     object-fit: contain;
     border: 1px solid var(--line-strong);
   }
-  .daily-entry__body :global(figure.source-image figcaption) { margin-top: .5rem; color: var(--muted); font-size: .75rem; }
-  .daily-entry__body :global(figure.source-image figcaption a) { color: var(--link); text-decoration: underline; }
-  .daily-entry__footer { @apply mt-7 text-xs; color: var(--muted); }
+  .daily-entry__figure figcaption { @apply mt-1 text-xs; color: var(--muted); }
+  .daily-entry__footer { @apply mt-3 text-sm; color: var(--muted); }
   .daily-entry__footer a { color: var(--link); text-decoration: underline; }
   @media (max-width: 640px) {
     .edition-date { @apply mb-6 text-2xl; }
-    .daily-entry { @apply mb-9 pb-9; }
-    .daily-entry__header h2 { @apply text-2xl; }
+    .daily-entry { @apply mb-6 pb-6; }
+    .daily-entry h2 { @apply text-xl; }
+    .daily-entry__summary { @apply text-base leading-6; }
   }
 </style>

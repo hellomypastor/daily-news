@@ -42,7 +42,7 @@ Use one local-project task to refresh five topics every three hours, maintain fi
 
 每个主题在有合适素材时，从本页已引用的官方原文、论文或项目页面提取一张公开可访问的配图/OpenGraph 图，按 data/daily/README.md 填写 image.url、alt、sourceUrl 和 caption，并确保 sourceUrl 出现在正文对应新闻条目中。图片会紧跟该条目的说明段落或表格展示；不要把图片当作页面题图，也不要放到首页列表右侧。优先官方发布配图、项目截图和视频封面；禁止生成图片、使用搜索结果缩略图、头像、图库水印图或无法确认出处的图片。没有可靠图片就省略 image，不得硬凑。
 
-Today 首页会像 weblog 一样依次展开当天五篇正文，正文内图片也会随对应条目显示；五篇独立详情页与永久链接仍需保留。
+Today 首页会像 weblog 一样显示当天五条紧凑精选：每个主题取 `image.sourceUrl` 对应来源（无图时取第一条来源）的标题、2–3 句摘要、配图、时间和标签；不得展开完整日报。五篇完整独立详情页与永久链接仍需保留。
 
 五个主题检查完后，先运行 `git status --porcelain -- data/daily/YYYY-MM-DD`。如果当天五份 JSON 均已存在且没有实质变化，停止后续发布，不运行 publish/build，不创建空提交；最终明确报告“本轮无实质更新”。
 

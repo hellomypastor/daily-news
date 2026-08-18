@@ -35,6 +35,7 @@ const addInlineImage = (content, image) => {
 };
 
 for (const source of sources) {
+	const featured = source.sources.find((item) => item.url === source.image?.sourceUrl) ?? source.sources[0];
 	const tags = [...new Set([...source.tags, ...source.sources.flatMap((item) => item.tags)])]
 		.sort((a, b) => a.localeCompare(b, "zh-CN"));
 	const description = source.description || `过去 24 小时精选，共 ${source.sources.length} 个来源。`;
@@ -44,6 +45,16 @@ for (const source of sources) {
 		`date: ${JSON.stringify(`${date}T00:00:00+08:00`)}`,
 		`updatedAt: ${JSON.stringify(source.updatedAt || `${date}T11:00:00+08:00`)}`,
 		`description: ${JSON.stringify(description)}`,
+		`featuredTitle: ${JSON.stringify(featured.title)}`,
+		`featuredUrl: ${JSON.stringify(featured.url)}`,
+		`featuredSummary: ${JSON.stringify(`${featured.summary} ${description}`)}`,
+		...(featured.publishedAt ? [`featuredPublishedAt: ${JSON.stringify(featured.publishedAt)}`] : []),
+		`featuredTags: ${JSON.stringify(featured.tags)}`,
+		...(source.image ? [
+			`featuredImage: ${JSON.stringify(source.image.url)}`,
+			`featuredImageAlt: ${JSON.stringify(source.image.alt)}`,
+			`featuredImageCaption: ${JSON.stringify(source.image.caption)}`,
+		] : []),
 		...(tags.length ? ["tags:", ...tags.map((tag) => `  - ${quote(tag)}`)] : ["tags: []"]),
 		"---",
 	].join("\n");
