@@ -3,7 +3,7 @@ export const prerender = true;
 
 import { getCollection } from "astro:content";
 import DefaultPageLayout from "$/layouts/default.astro";
-import PostPreviewList from "$/components/PostPreviewList.astro";
+import Code from "$/components/Code.astro";
 
 const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
 const calendarDate = (date: string) => date.slice(0, 10);
@@ -22,7 +22,10 @@ const latestDate = posts[0] ? calendarDate(posts[0].data.date) : undefined;
 const todaysPosts = latestDate
   ? posts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
   : [];
-const highlights = posts.filter((post) => !todaysPosts.some((today) => today.slug === post.slug)).slice(0, 10);
+const todaysEntries = await Promise.all(todaysPosts.map(async (post) => {
+  const { Content } = await post.render();
+  return { post, Content };
+}));
 
 const content = {
   title: "Latest",
@@ -33,26 +36,57 @@ const content = {
 ---
 
 <DefaultPageLayout {content} showPageHeader={false}>
-  <div class="home-grid">
-    <section>
-      <h2 class="edition-date">{latestDate}</h2>
-      {todaysPosts.length > 0 ? <PostPreviewList posts={todaysPosts} mode="signal" /> : <p>No briefings have been published yet.</p>}
-    </section>
-    <aside class="highlights">
-      <h2>Highlights</h2>
-      <ul>{highlights.map((post) => <li><a href={`/blog/${post.slug}`}>{post.data.title}</a><span> — {calendarDate(post.data.date)}</span></li>)}</ul>
-    </aside>
-  </div>
+  <main class="today-stream">
+    <h1 class="edition-date">{latestDate}</h1>
+    {todaysEntries.length > 0 ? todaysEntries.map(({ post, Content }, index) => (
+      <article class="daily-entry">
+        <header class="daily-entry__header">
+          <p class="daily-entry__topic">{TOPIC_ORDER[index]?.replace("open-source", "Open source").replace("ai-industry", "Industry").replace("openai", "OpenAI").replace("claude", "Claude").replace("aaas", "AaaS")}</p>
+          <h2><a href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
+          <p class="daily-entry__dek">{post.data.description}</p>
+        </header>
+        <div class="daily-entry__body prose dark:prose-dark">
+          <Content components={{ code: Code }} />
+        </div>
+        <footer class="daily-entry__footer">
+          <a href={`/blog/${post.slug}`}># permanent link</a>
+          <span>/ {post.data.tags.slice(0, 6).join(", ")}</span>
+        </footer>
+      </article>
+    )) : <p>No briefings have been published yet.</p>}
+  </main>
 </DefaultPageLayout>
 
 <style>
   .edition-date {
-    @apply mb-2 pb-2 text-xl font-bold;
+    @apply mb-8 pb-3 text-3xl font-bold;
     color: var(--ink);
+    border-bottom: 2px solid var(--ink);
   }
-  .home-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr); gap: 3.5rem; }
-  .highlights h2 { @apply mb-4 text-xl font-bold; }
-  .highlights li { @apply mb-3 text-sm leading-5; }
-  .highlights span { color: var(--muted); }
-  @media (max-width: 760px) { .home-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .today-stream { max-width: 52rem; }
+  .daily-entry { @apply border-b pb-12 mb-12; border-color: var(--line-strong); }
+  .daily-entry__header { @apply mb-7; }
+  .daily-entry__topic { @apply mb-2 text-sm font-bold; color: var(--muted); }
+  .daily-entry__header h2 { @apply text-2xl font-bold leading-tight md:text-3xl; }
+  .daily-entry__header h2 a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+  .daily-entry__dek { @apply mt-3 text-base leading-7; color: var(--ink); }
+  .daily-entry__body { max-width: none; }
+  .daily-entry__body :global(table) { display: block; max-width: 100%; overflow-x: auto; }
+  .daily-entry__body :global(figure.source-image) { margin: 1.5rem 0 2rem; }
+  .daily-entry__body :global(figure.source-image img) {
+    display: block;
+    width: 100%;
+    max-height: 42rem;
+    object-fit: contain;
+    border: 1px solid var(--line-strong);
+  }
+  .daily-entry__body :global(figure.source-image figcaption) { margin-top: .5rem; color: var(--muted); font-size: .75rem; }
+  .daily-entry__body :global(figure.source-image figcaption a) { color: var(--link); text-decoration: underline; }
+  .daily-entry__footer { @apply mt-7 text-xs; color: var(--muted); }
+  .daily-entry__footer a { color: var(--link); text-decoration: underline; }
+  @media (max-width: 640px) {
+    .edition-date { @apply mb-6 text-2xl; }
+    .daily-entry { @apply mb-9 pb-9; }
+    .daily-entry__header h2 { @apply text-2xl; }
+  }
 </style>
