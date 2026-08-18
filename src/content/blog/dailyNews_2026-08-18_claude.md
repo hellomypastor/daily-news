@@ -3,10 +3,6 @@ title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-18T00:00:00+08:00"
 updatedAt: "2026-08-18T13:16:18+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-image: "https://opengraph.githubassets.com/ba39eb316cf6cee1236ef56aad4550651b557c8e6ee7506b61d311063174410e/anthropics/claude-code/releases/tag/v2.1.234"
-imageAlt: "Anthropic Claude Code GitHub repository social preview"
-imageSource: "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
-imageCaption: "题图来源：Anthropic / GitHub"
 tags:
   - "Agent"
   - "Agent SDK"
@@ -46,6 +42,11 @@ tags:
 | Design | 无新增 |
 | Tag / @Claude sessions | 无新增 |
 | 当前官方编码模型（Claude Opus 5、Sonnet 5、Haiku 4.5） | 无新增 |
+
+<figure class="source-image">
+  <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.234"><img src="https://opengraph.githubassets.com/ba39eb316cf6cee1236ef56aad4550651b557c8e6ee7506b61d311063174410e/anthropics/claude-code/releases/tag/v2.1.234" alt="Anthropic Claude Code GitHub repository social preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.234">题图来源：Anthropic / GitHub</a></figcaption>
+</figure>
 
 ## Tier 2
 

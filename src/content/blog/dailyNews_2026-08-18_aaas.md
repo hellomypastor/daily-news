@@ -3,10 +3,6 @@ title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-18T00:00:00+08:00"
 updatedAt: "2026-08-18T11:07:35+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
-image: "https://cdn.sanity.io/images/bj34pdbp/migration/e76e2cbc56e0c02edda0e7b4292229a0cafdc670-2048x1071.jpg?w=1200&h=630&fit=max&fm=jpg"
-imageAlt: "Replit black-box penetration testing product illustration"
-imageSource: "https://replit.com/blog/black-box-pen-tests"
-imageCaption: "题图来源：Replit"
 tags:
   - "AaaS"
   - "Adjacent Signal"
@@ -48,6 +44,11 @@ tags:
 1. **Replit 为托管应用加入黑盒渗透测试。** [官方文章](https://replit.com/blog/black-box-pen-tests)发布于 2026-08-18 00:52（上海时间）。Level 3 扫描会并行运行白盒与黑盒检查；黑盒扫描从应用链接出发，经浏览器和网络模拟外部攻击，确认的问题可交给 Replit Agent 修复。这把安全验证进一步并入托管 Agent 的构建、发布闭环。
 2. **Cumora 公开云端与自带 Agent 双运行路径。** [GitHub 原仓库](https://github.com/yetone/cumora)创建于 2026-08-17 17:13（上海时间）。其 README 明确称 Cumora Cloud 为每个 Agent 提供独立托管 Pod，并提供工具调用循环、工作区、成本台账、团队协调、邮件和跨端客户端；也可把本机/VPS 上的 Claude Code 或 Codex 作为 Agent 大脑。这里确认的是仓库与架构公开，不等同于已验证商业规模或 SLA。
 3. **Claude Code Remote Control 跨端会话可靠性更新。** [v2.1.234 官方发布页](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)显示发布时间为 2026-08-18 04:20（上海时间），修复手机/网页端文件打开、权限模式与模型同步、远端 effort 设置，以及切换账号/组织后的会话终止反馈；另有远程文件读取与权限预览安全加固。AaaS 含义是远程控制面与宿主会话状态更一致，**详见 Claude 专题页**。
+
+<figure class="source-image">
+  <a href="https://replit.com/blog/black-box-pen-tests"><img src="https://cdn.sanity.io/images/bj34pdbp/migration/e76e2cbc56e0c02edda0e7b4292229a0cafdc670-2048x1071.jpg?w=1200&amp;h=630&amp;fit=max&amp;fm=jpg" alt="Replit black-box penetration testing product illustration" loading="lazy" /></a>
+  <figcaption><a href="https://replit.com/blog/black-box-pen-tests">题图来源：Replit</a></figcaption>
+</figure>
 
 ## 远程 / 云端 Agent 执行
 

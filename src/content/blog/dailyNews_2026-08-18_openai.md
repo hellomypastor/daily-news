@@ -3,10 +3,6 @@ title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-18T00:00:00+08:00"
 updatedAt: "2026-08-18T13:15:40+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-image: "https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg"
-imageAlt: "CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面"
-imageSource: "https://www.youtube.com/watch?v=eXBFnfrt2gU"
-imageCaption: "题图来源：CNBC Television / YouTube"
 tags:
   - "观察池"
   - "日期未确认"
@@ -67,6 +63,11 @@ tags:
 
 - **安全 / Science 邻近信号**（2026-08-17 13:30 +08:00）：OpenAI 发布 [The Defender’s Window](https://openai.com/index/the-defenders-window)，讨论进攻与防守两端的 AI 能力，并披露其内部以 Codex、安全插件和模型协助代码与基础设施防护的做法。这是官方观点与案例，不是独立效果评测。
 - **基础设施 / 公司访谈**（2026-08-17 21:26 +08:00）：CNBC 发布对 OpenAI 总裁 Greg Brockman 的[原始访谈](https://www.youtube.com/watch?v=eXBFnfrt2gU)，主题涵盖 AI 网络安全、领导层、AI 经济与资本开支。可核实采访对象、标题和发布时间；本页不把节目标题中的“compute is the new oil”扩展成量化结论。
+
+<figure class="source-image">
+  <a href="https://www.youtube.com/watch?v=eXBFnfrt2gU"><img src="https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg" alt="CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面" loading="lazy" /></a>
+  <figcaption><a href="https://www.youtube.com/watch?v=eXBFnfrt2gU">题图来源：CNBC Television / YouTube</a></figcaption>
+</figure>
 
 ## 官方更新（新到旧）
 

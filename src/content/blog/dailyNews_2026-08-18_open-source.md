@@ -3,10 +3,6 @@ title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-18T00:00:00+08:00"
 updatedAt: "2026-08-18T13:20:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-image: "https://opengraph.githubassets.com/104fa03e87ebe58d49ebf9ae80e005db2209c299ac4b592242925f32c7b88df5/yetone/cumora"
-imageAlt: "Cumora open-source agent team runtime GitHub repository preview"
-imageSource: "https://github.com/yetone/cumora"
-imageCaption: "题图来源：Cumora / GitHub"
 tags:
   - "Agent"
   - "Agent Memory"
@@ -77,6 +73,11 @@ tags:
 | [browser-use/macos-harness](https://github.com/browser-use/macos-harness) | 一个持久 Python 进程向模型暴露 see、key、type、click、AX 与 AppleScript 等 macOS 原语 | 用极薄原语层替代大量应用专属工具，是桌面 Agent 工具边界与权限设计的可读样本 | 仓库创建于 2026-08-17 08:22 +08:00；10:13 API 快照 122 stars |
 | [Yevanchen/reclaim-code-entropy](https://github.com/Yevanchen/reclaim-code-entropy) | 以证据排序可删除代码候选的 Agent Skill，分只读审计与落地应用两种模式 | 把删代码转成带信心、风险、净减少量和验证步骤的工程工作流，避免把静态分析候选直接等同于安全删除 | 仓库创建于 2026-08-17 16:19 +08:00；10:13 API 快照 115 stars |
 | [Glitch-Cat-Club/graph-memory-starter](https://github.com/Glitch-Cat-Club/graph-memory-starter) | 三张 SQLite 表、递归查询和 prompt hook 组成的最小知识图谱记忆示例，并附 RAG 对照路径 | 给出了 typed links 与多跳检索的可运行最小实现，适合验证何时应从语义检索升级到显式图关系 | 仓库创建于 2026-08-17 00:51 +08:00；10:13 API 快照 79 stars |
+
+<figure class="source-image">
+  <a href="https://github.com/yetone/cumora"><img src="https://opengraph.githubassets.com/104fa03e87ebe58d49ebf9ae80e005db2209c299ac4b592242925f32c7b88df5/yetone/cumora" alt="Cumora open-source agent team runtime GitHub repository preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/yetone/cumora">题图来源：Cumora / GitHub</a></figcaption>
+</figure>
 
 ## GitHub Trending
 

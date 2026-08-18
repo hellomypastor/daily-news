@@ -3,10 +3,6 @@ title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-18T00:00:00+08:00"
 updatedAt: "2026-08-18T13:24:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-image: "https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg"
-imageAlt: "CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面"
-imageSource: "https://www.youtube.com/watch?v=eXBFnfrt2gU"
-imageCaption: "题图来源：CNBC Television / YouTube"
 tags:
   - "Agent"
   - "Agent SDK"
@@ -68,6 +64,11 @@ tags:
 | 厂商 / 节目 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
 | OpenAI / CNBC | [Greg Brockman: Compute is becoming the new oil of the AI age](https://www.youtube.com/watch?v=eXBFnfrt2gU) | 原始视频访谈 | 2026-08-17 21:26 +08:00，已核实 | CNBC 采访 OpenAI 总裁 Greg Brockman，涉及网络安全、AI 经济与资本开支。详见 OpenAI 专题页。 | 提供公司管理层对算力与安全产业趋势的直接表述。 |
+
+<figure class="source-image">
+  <a href="https://www.youtube.com/watch?v=eXBFnfrt2gU"><img src="https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg" alt="CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面" loading="lazy" /></a>
+  <figcaption><a href="https://www.youtube.com/watch?v=eXBFnfrt2gU">题图来源：CNBC Television / YouTube</a></figcaption>
+</figure>
 
 Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现主窗口内可同时确认原始页面与发布时间的新一期；Dwarkesh 入口直接抓取返回 403，搜索索引亦未显示窗口内可核实节目。
 
