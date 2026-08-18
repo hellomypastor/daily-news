@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-18T00:00:00+08:00"
-updatedAt: "2026-08-18T10:20:00+08:00"
+updatedAt: "2026-08-18T11:07:35+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 tags:
   - "AaaS"
@@ -12,6 +12,7 @@ tags:
   - "Agent Runtime"
   - "Claude Code"
   - "Cloud Agent"
+  - "Cloudflare"
   - "Code Hosting"
   - "Codex"
   - "Cursor"
@@ -20,6 +21,7 @@ tags:
   - "Governance"
   - "Harness"
   - "Managed Agent"
+  - "Older Context"
   - "Open Source"
   - "Pre-release"
   - "Remote Control"
@@ -35,7 +37,7 @@ tags:
 
 主窗口：2026-08-17 10:20 至 2026-08-18 10:20（Asia/Shanghai）；观察窗口延伸至 72 小时。按托管执行、异步任务、隔离环境、生命周期、编排、可观测性、企业接入和远程编码等维度扫描海外与中国厂商。
 
-本轮核实到 3 条主窗口内 AaaS 相关动态：Replit 为托管应用加入黑盒渗透测试，Cumora 首次公开包含每 Agent 托管 Pod 的团队运行平台，Claude Code 更新修复多项 Remote Control 跨端会话问题。
+本轮核实到 3 条主窗口内 AaaS 相关动态：Replit 为托管应用加入黑盒渗透测试，Cumora 首次公开包含每 Agent 托管 Pod 的团队运行平台，Claude Code 更新修复多项 Remote Control 跨端会话问题。另补录一篇此前漏抓但与 AaaS 高度相关的 Cloudflare 较旧官方原文，并明确标注其已超出 72 小时窗口。
 
 ## 重点动态
 
@@ -50,12 +52,17 @@ tags:
 | Replit 黑盒渗透测试 | Replit 托管应用、浏览器/网络侧扫描、Agent 修复 | 安全验证成为远程构建与发布生命周期的一部分 | 官方、主窗口内 |
 | Cumora Cloud | 每 Agent Kubernetes Pod、工具循环、共享工作区与成本台账 | 把 Agent 执行、协作与运维放进受管服务层 | 原仓库、主窗口内；规模未验证 |
 | Claude Code Remote Control | Desktop/VS Code 宿主会话与手机、claude.ai/code 联动 | 改进远程操控、权限与状态同步 | 官方、主窗口内；详见 Claude 专题页 |
+| Cloudflare @cloudflare/computer | isolate、Linux container sandbox、browser 与持久文件系统 | 以异构执行后端组成可审计的 Agent runtime | 官方、较旧原文；已超 72 小时 |
 
 ## 海外厂商
 
 ### 24–72 小时观察
 
 - **Replit 企业治理。** [官方文章](https://replit.com/blog/new-enterprise-governance-tools)发布于 2026-08-17 07:57（上海时间），已滑出主窗口但仍在 72 小时观察窗。文章宣布 50 余类审计事件覆盖部署、身份、密钥、连接器与 Agent 活动，并可流式发送到 Datadog、Splunk、Amazon S3 或通用 HTTP；Admin API 同日进入 beta。页面在 2026-08-18 08:44 更新，但未提供版本差异，因此不把更新时间当作新的独立发布。
+
+### 较旧观察
+
+- **Cloudflare @cloudflare/computer（较旧原文）。** [官方文章](https://blog.cloudflare.com/cloudflare-computer/)发布于 2026-08-03 21:15（上海时间），已超出 72 小时窗口。文章介绍 early preview 阶段的开源 Agent runtime：按任务在 isolate、Linux container sandbox 或 browser 之间选择和编排执行后端，并提供跨 isolate/container 的持久文件系统；文件操作可经 Code Mode 或 bash 执行，且支持 gate、audit 与 observe。此处作为 AaaS 运行时架构信号补录，不写成今日发布。
 
 ## 中国厂商（含字节跳动重点扫描）
 
@@ -86,6 +93,7 @@ tags:
 ## 趋势
 
 - **受管执行的竞争点向治理与安全下沉。** Replit 同时补充运行中应用的黑盒验证与企业 Agent 活动审计，关注点已从“能运行”扩展到“可验证、可追溯”。
+- **Agent runtime 正在走向异构执行与持久状态。** Cloudflare 把 isolate、container sandbox、browser 与持久文件系统置于同一运行时抽象下，说明 AaaS 的运行层不再等同于单一容器。该信号来自较旧官方原文，不代表本窗口的新发布。
 - **代码托管与 Agent 执行正在靠拢。** Cursor Origin 与 Cumora 分别从代码协作面和团队协作面把仓库、PR、工作区、Agent 执行放到同一受管控制面；前者发布时间仍需确认。
 - 样本仍小，且包含早期仓库和候选项，不据此推断市场份额、收入或成熟度。
 
@@ -95,17 +103,18 @@ tags:
 2. [Cumora GitHub 仓库](https://github.com/yetone/cumora)
 3. [Anthropic：Claude Code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)
 4. [Replit：Govern Replit at scale](https://replit.com/blog/new-enterprise-governance-tools)
-5. [Cursor：Origin Code Hosting](https://cursor.com/changelog/origin-code-hosting)
-6. [腾讯云 ADP 认证升级公告](https://cloud.tencent.com/announce/detail/2409)
-7. [Reddit：AgentHub/agent commerce 单源说法](https://www.reddit.com/r/AI_Agents/comments/1vqe85r/agenttoagent_to_hit_15b_by_2030/)
-8. [OpenAI Codex 0.148.0-alpha.21](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21)
-9. [Harness：Autonomous Worker Agents 活动](https://www.harness.io/events/autonomous-worker-agents-live)
+5. [Cloudflare：introducing @cloudflare/computer](https://blog.cloudflare.com/cloudflare-computer/)
+6. [Cursor：Origin Code Hosting](https://cursor.com/changelog/origin-code-hosting)
+7. [腾讯云 ADP 认证升级公告](https://cloud.tencent.com/announce/detail/2409)
+8. [Reddit：AgentHub/agent commerce 单源说法](https://www.reddit.com/r/AI_Agents/comments/1vqe85r/agenttoagent_to_hit_15b_by_2030/)
+9. [OpenAI Codex 0.148.0-alpha.21](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21)
+10. [Harness：Autonomous Worker Agents 活动](https://www.harness.io/events/autonomous-worker-agents-live)
 
 ## 采集状态
 
-- 已检查来源：Anthropic/OpenAI/GitHub/Google/Microsoft/AWS 官方入口，Replit、Cursor、Factory、Sourcegraph、LangChain、Harness，GitHub 主窗口新仓库，Reddit，以及字节、阿里、腾讯、百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek 等中国厂商入口。
+- 已检查来源：Anthropic/OpenAI/GitHub/Google/Microsoft/AWS 官方入口，Cloudflare Blog 的 Agents/Sandboxes/Computer/Workers，Replit、Cursor、Factory、Sourcegraph、LangChain、Harness，GitHub 主窗口新仓库，Reddit，以及字节、阿里、腾讯、百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek 等中国厂商入口。
 - 失败来源：Cognition/Devin Blog 直访返回 HTTP 403；X 未登录无法稳定读取完整时间线；部分中国厂商页面缺少可核实发布日期。
-- 初始候选：12 条；保留：9 条（3 条主窗口已验证、1 条 24–72 小时、2 条日期未确认/生态、1 条未证实传闻、2 条邻近/未来信号）。
+- 初始候选：13 条；保留：10 条（3 条主窗口已验证、1 条 24–72 小时、1 条较旧官方原文、2 条日期未确认/生态、1 条未证实传闻、2 条邻近/未来信号）。
 - 二次补搜：未运行（最终 sources 非 0，`secondPass=false`）。
 
-今日扫描完成，共 9 条动态，重点：Replit 将渗透测试和企业审计纳入托管 Agent 生命周期，Cumora 展示每 Agent 托管 Pod 架构，Claude Code 加固 Remote Control 跨端状态一致性。
+今日扫描完成，共 10 条动态，重点：Replit 将渗透测试和企业审计纳入托管 Agent 生命周期，Cumora 展示每 Agent 托管 Pod 架构，Claude Code 加固 Remote Control 跨端状态一致性；另补录 Cloudflare 的异构 Agent runtime 较旧原文。

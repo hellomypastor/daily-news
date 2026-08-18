@@ -8,7 +8,7 @@ AaaS here means a service that hosts or manages Agent execution, asynchronous ta
 
 ## Coverage
 
-- Overseas: Anthropic managed/hosted Agents, Agent SDK/Skills/Claude Code; OpenAI agent-building products, ChatGPT agents and Codex remote/cloud; Google Vertex Agent products and Gemini/Jules; Microsoft Copilot Studio/Azure Agent services; Replit Agent, Devin, Cursor, Lindy, CrewAI, LangGraph Platform, GitHub coding agent, Amazon Q Developer, Factory and Sourcegraph/Amp.
+- Overseas: Anthropic managed/hosted Agents, Agent SDK/Skills/Claude Code; OpenAI agent-building products, ChatGPT agents and Codex remote/cloud; Google Vertex Agent products and Gemini/Jules; Microsoft Copilot Studio/Azure Agent services; Replit Agent, Devin, Cursor, Lindy, CrewAI, LangGraph Platform, GitHub coding agent, Amazon Q Developer; Cloudflare Agents/Sandboxes/Computer/Workers; Factory and Sourcegraph/Amp.
 - Remote/cloud execution: hosted async tasks, background agents, PR agents, environment/runtime isolation, concurrency, pricing and enterprise integration.
 - China: ByteDance Coze/Volcano/Doubao/Trae/Seed; Alibaba Bailian/Qoder/Tongyi/Quark; Tencent Yuanbao/Hunyuan/Cloud; Baidu AgentBuilder/Comate; Zhipu, Moonshot/Kimi, MiniMax, DeepSeek and credible startups.
 - Events: launches, beta/GA, hosted runtime, SDK/skills, pricing, quotas, enterprise adoption, revenue, funding/M&A and meaningful open-source/engineering updates.
