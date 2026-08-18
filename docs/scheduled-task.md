@@ -44,6 +44,8 @@ Use one local-project task to refresh five topics every three hours, maintain fi
 
 Today 首页会像 weblog 一样显示当天五条紧凑精选：每个主题取 `image.sourceUrl` 对应来源（无图时取第一条来源）的标题、2–3 句摘要、配图、时间和标签；不得展开完整日报。五篇完整独立详情页与永久链接仍需保留。
 
+当仓库中存在早于当天的日报时，Today 右侧自动显示 `Highlights`，按日期倒序列出最多 10 条历史精选；仅有当天内容时隐藏右栏并保持单栏。
+
 五个主题检查完后，先运行 `git status --porcelain -- data/daily/YYYY-MM-DD`。如果当天五份 JSON 均已存在且没有实质变化，停止后续发布，不运行 publish/build，不创建空提交；最终明确报告“本轮无实质更新”。
 
 五份数据完成后执行：

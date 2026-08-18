@@ -29,6 +29,9 @@ const latestDate = posts[0] ? calendarDate(posts[0].data.date) : undefined;
 const todaysPosts = latestDate
   ? posts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
   : [];
+const highlights = latestDate
+  ? posts.filter((post) => calendarDate(post.data.date) < latestDate).slice(0, 10)
+  : [];
 
 const content = {
   title: "Latest",
@@ -39,29 +42,44 @@ const content = {
 ---
 
 <DefaultPageLayout {content} showPageHeader={false}>
-  <main class="today-stream">
-    <h1 class="edition-date">{latestDate}</h1>
-    {todaysPosts.length > 0 ? todaysPosts.map((post) => (
-      <article class="daily-entry">
-        <p class="daily-entry__lead">
-          {postTopic(post.slug) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.slug) as keyof typeof TOPIC_LABELS]}</span>}
-          <strong><a href={post.data.featuredUrl || `/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
-        </p>
-        {post.data.featuredImage && (
-          <figure class="daily-entry__figure">
-            <a href={post.data.featuredUrl || `/blog/${post.slug}`}>
-              <img src={post.data.featuredImage} alt={post.data.featuredImageAlt || ""} loading="lazy" />
-            </a>
-            {post.data.featuredImageCaption && <figcaption>{post.data.featuredImageCaption}</figcaption>}
-          </figure>
-        )}
-        <footer class="daily-entry__footer">
-          <a href={`/blog/${post.slug}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
-          <span> / {(post.data.featuredTags.length ? post.data.featuredTags : post.data.tags).slice(0, 6).join(", ")}</span>
-        </footer>
-      </article>
-    )) : <p>No briefings have been published yet.</p>}
-  </main>
+  <div class:list={["home-columns", highlights.length === 0 && "home-columns--single"]}>
+    <main class="today-stream">
+      <h1 class="edition-date">{latestDate}</h1>
+      {todaysPosts.length > 0 ? todaysPosts.map((post) => (
+        <article class="daily-entry">
+          <p class="daily-entry__lead">
+            {postTopic(post.slug) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.slug) as keyof typeof TOPIC_LABELS]}</span>}
+            <strong><a href={post.data.featuredUrl || `/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
+          </p>
+          {post.data.featuredImage && (
+            <figure class="daily-entry__figure">
+              <a href={post.data.featuredUrl || `/blog/${post.slug}`}>
+                <img src={post.data.featuredImage} alt={post.data.featuredImageAlt || ""} loading="lazy" />
+              </a>
+              {post.data.featuredImageCaption && <figcaption>{post.data.featuredImageCaption}</figcaption>}
+            </figure>
+          )}
+          <footer class="daily-entry__footer">
+            <a href={`/blog/${post.slug}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
+            <span> / {(post.data.featuredTags.length ? post.data.featuredTags : post.data.tags).slice(0, 6).join(", ")}</span>
+          </footer>
+        </article>
+      )) : <p>No briefings have been published yet.</p>}
+    </main>
+    {highlights.length > 0 && (
+      <aside class="highlights" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">Highlights</h2>
+        <ul>
+          {highlights.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a>
+              <span> — {calendarDate(post.data.date)}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )}
+  </div>
 </DefaultPageLayout>
 
 <style>
@@ -79,6 +97,29 @@ const content = {
     max-width: 100%;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
   }
+  .home-columns {
+    display: grid;
+    grid-template-columns: 560px minmax(240px, 1fr);
+    gap: 35px;
+    align-items: start;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .home-columns--single { grid-template-columns: 560px; }
+  .highlights h2 {
+    margin: 0 0 11.52px;
+    padding: 0 0 7px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26.1px;
+  }
+  .highlights li {
+    margin: 0 0 14.4px;
+    font-size: 14.4px;
+    line-height: 20.88px;
+  }
+  .highlights a { color: #0000ee; text-decoration: underline; }
+  .highlights span { color: #000; }
   .daily-entry {
     margin: 0 0 10.8px;
     padding: 0 0 10.8px;
@@ -123,7 +164,9 @@ const content = {
   }
   .daily-entry__footer a { color: #0000ee; text-decoration: underline; }
   .daily-entry__footer span { color: #0000ee; }
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
+    .home-columns,
+    .home-columns--single { grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .today-stream { width: 100%; }
   }
 </style>
