@@ -10,6 +10,7 @@ This repository is published by one Codex Scheduled Task. A successful daily run
 4. Each source file represents one page. Never combine the five topics into one page.
 5. Prefer original HTTP(S) sources and verify claims when possible. Retain relevant unverified candidates in labeled watchlists; never present them as confirmed facts or invent an item.
 6. Do not edit historical source data or generated posts unless the task explicitly requests a correction.
+7. Repeated runs on the same Asia/Shanghai date are cumulative: retain every source already committed for that date, merge and deduplicate new findings, and never remove an earlier source merely because it falls outside the current 24-hour discovery window. Start a fresh set of five files after the date changes.
 
 ## Publish contract
 

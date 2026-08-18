@@ -1,6 +1,6 @@
 # Codex Scheduled Task
 
-Use one local-project task to refresh five topics every three hours, maintain five daily pages, and publish only substantive changes in one commit.
+Use one local-project task to refresh five topics every three hours, accumulate five daily pages, and publish only substantive changes in one commit.
 
 ## Configuration
 
@@ -13,7 +13,7 @@ Use one local-project task to refresh five topics every three hours, maintain fi
 ## Prompt to paste
 
 ```text
-在当前 daily-news 仓库执行每 3 小时一次的滚动新闻更新。使用 Asia/Shanghai 时区计算运行日期 YYYY-MM-DD、当前时间和每个主题的准确滚动时间窗口。当天始终维护 5 篇页面，不为每轮运行新增页面。
+在当前 daily-news 仓库执行每 3 小时一次的当天累积新闻更新。使用 Asia/Shanghai 时区计算运行日期 YYYY-MM-DD、当前时间和每个主题的采集窗口。当天始终维护 5 篇页面，不为每轮运行新增页面；跨日后创建新日期目录，历史日期不再改写。
 
 开始前：
 1. 阅读 AGENTS.md、data/daily/README.md、automation/topics/README.md，以及 automation/topics/ 下 01 到 05 的全部主题规范。
@@ -22,10 +22,12 @@ Use one local-project task to refresh five topics every three hours, maintain fi
 
 并行采集 01 到 05 五个主题（按可用并发槽分批并行），最后由主任务统一合并、校验和提交。每个主题优先打开原始来源、核实发布时间和关键事实；日期或原文暂时无法确认的相关候选不得直接丢弃，应进入“日期未确认”或“观察池”并标明限制。禁止编造产品、版本、日期、指标、互动量、引文或趋势。
 
-如果当天目录已存在，先完整读取五份已有 JSON，再做滚动更新：
-- 重新扫描主题规定的时间窗口；日报主题的主窗口始终是运行时刻向前 24 小时，不是仅扫描最近 3 小时。
-- 保留仍处于对应主题有效窗口且事实未失效的已有条目，加入本轮新核实的条目，移除已滑出窗口的条目。
-- 按规范重写完整 content 和 sources；仅在单个页面内按 URL 去重，允许跨主题重复引用。行业与 AaaS 引用 Claude/OpenAI 链接时注明“详见专题页”。不得简单覆盖掉早先有效条目，也不得无限累加历史条目。
+如果当天目录已存在，先完整读取五份已有 JSON，再做当天累积更新：
+- 每轮仍重新扫描运行时刻向前 24 小时，而不是只扫描最近 3 小时；这个窗口只用于发现新候选，不用于删除当天已经收录的内容。
+- 无条件保留当天五份 JSON 中已有的 sources；加入本轮新核实条目，按规范化 URL 和同一事件去重。即使已有条目随后滑出本轮 24 小时采集窗口，也要保留到当天结束。
+- 按累积后的来源集合重写完整 content 和 sources；允许跨主题重复引用。行业与 AaaS 引用 Claude/OpenAI 链接时注明“详见专题页”。禁止用本轮搜索结果替换已有集合。
+- 只有用户明确要求纠错，或原链接被证实错误/恶意时才允许删除当天已有来源；这种人工纠错运行可设置 `ALLOW_DAILY_SOURCE_REMOVAL=1`，并必须在最终报告中列出删除项与原因。定时任务不得自行设置该变量。
+- Asia/Shanghai 日期变化后创建新的五份 JSON；前一日及更早页面保持不变，因此不会跨日无限累加。
 - 只有来源集合、事实、状态、指标或正文结论发生实质变化时才改写对应 JSON，并将其 updatedAt 设为本次上海时间，格式为 YYYY-MM-DDTHH:mm:ss+08:00。
 - 仅扫描截止时间前移、措辞变化或互动数字的无意义波动不算实质变化；此时保留原文件及 updatedAt，不要改写。
 
