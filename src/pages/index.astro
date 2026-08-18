@@ -5,9 +5,17 @@ import { getCollection } from "astro:content";
 import DefaultPageLayout from "$/layouts/default.astro";
 
 const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
+const TOPIC_LABELS = {
+  claude: "Claude",
+  openai: "OpenAI",
+  "open-source": "Open source",
+  "ai-industry": "Industry",
+  aaas: "AaaS",
+} as const;
 const calendarDate = (date: string) => date.slice(0, 10);
+const postTopic = (slug: string) => TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));
 const topicRank = (slug: string) => {
-  const topic = TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));
+  const topic = postTopic(slug);
   return topic ? TOPIC_ORDER.indexOf(topic) : TOPIC_ORDER.length;
 };
 
@@ -36,6 +44,7 @@ const content = {
     {todaysPosts.length > 0 ? todaysPosts.map((post) => (
       <article class="daily-entry">
         <p class="daily-entry__lead">
+          {postTopic(post.slug) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.slug) as keyof typeof TOPIC_LABELS]}</span>}
           <strong><a href={post.data.featuredUrl || `/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
         </p>
         {post.data.featuredImage && (
@@ -79,6 +88,19 @@ const content = {
     line-height: 20.88px;
   }
   .daily-entry__lead { margin: 0 0 11.52px; }
+  .daily-entry__category {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 0 5px;
+    border: 1px solid #cfc4d4;
+    border-radius: 3px;
+    background: #f2edf4;
+    color: #4e315d;
+    font-size: 11.52px;
+    font-weight: 700;
+    line-height: 18px;
+    vertical-align: 1px;
+  }
   .daily-entry__lead strong { font-weight: 700; }
   .daily-entry__lead a { color: #0000ee; text-decoration: underline; }
   .daily-entry__figure { margin: 0 0 11.52px; }
