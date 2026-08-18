@@ -1,13 +1,14 @@
 ---
-import { getMonthName } from '$/utils'
+import { getCalendarDateParts, getMonthName } from '$/utils'
 import { USE_MEDIA_THUMBNAIL } from '$/config'
 const { post } = Astro.props
+const { day, year } = getCalendarDateParts(post.date)
 ---
 <div class="post-preview">
     <div class="sm:w-20 md:w-32">
         <div class="post-preview__date">
-            <span class="post-preview__date__day">{ new Date(post.date).getDate() }</span>
-            <span class="post-preview__date__month-n-year">{ `${getMonthName(post.date)} ${new Date(post.date).getFullYear()}` }</span>
+            <span class="post-preview__date__day">{ day }</span>
+            <span class="post-preview__date__month-n-year">{ `${getMonthName(post.date)} ${year}` }</span>
         </div>
     </div>
     <div class={`flex-1 ${USE_MEDIA_THUMBNAIL && post.thumbnail ? 'flex flex-row gap-4' : ''}`}>

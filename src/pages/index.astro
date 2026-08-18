@@ -5,15 +5,22 @@ import { getCollection } from "astro:content";
 import DefaultPageLayout from "$/layouts/default.astro";
 import PostPreviewList from "$/components/PostPreviewList.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) =>
-    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf() ||
-    a.data.title.localeCompare(b.data.title)
+const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
+const calendarDate = (date: string) => date.slice(0, 10);
+const topicRank = (slug: string) => {
+  const topic = TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));
+  return topic ? TOPIC_ORDER.indexOf(topic) : TOPIC_ORDER.length;
+};
+
+const posts = (await getCollection("blog")).sort((a, b) =>
+  calendarDate(b.data.date).localeCompare(calendarDate(a.data.date)) ||
+  topicRank(a.slug) - topicRank(b.slug) ||
+  a.data.title.localeCompare(b.data.title)
 );
 
-const latestDate = posts[0]?.data.date.slice(0, 10);
+const latestDate = posts[0] ? calendarDate(posts[0].data.date) : undefined;
 const todaysPosts = latestDate
-  ? posts.filter((post) => post.data.date.slice(0, 10) === latestDate).slice(0, 5)
+  ? posts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
   : [];
 
 const content = {

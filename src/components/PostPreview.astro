@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getMonthName } from "$/utils";
+import { getCalendarDateParts, getMonthName } from "$/utils";
 
 interface Props {
   post: CollectionEntry<"blog">;
@@ -11,17 +11,18 @@ const {
   post: { data: post, slug },
   asCard = false,
 } = Astro.props;
+const { day, year } = getCalendarDateParts(post.date);
 ---
 
 <div class={`post-preview ${asCard && "post-preview--card"}`}>
   <div class="post-preview__date-box">
     <div class="post-preview__date">
       <span class="post-preview__date__day"
-        >{new Date(post.date).getDate()}</span
+        >{day}</span
       >
       <span class="post-preview__date__month-n-year"
         >{
-          `${getMonthName(post.date)} ${new Date(post.date).getFullYear()}`
+          `${getMonthName(post.date)} ${year}`
         }</span
       >
     </div>

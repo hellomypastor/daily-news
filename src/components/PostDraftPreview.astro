@@ -1,12 +1,13 @@
 ---
-import { getMonthName, getSlugFromPathname } from '$/utils'
+import { getCalendarDateParts, getMonthName, getSlugFromPathname } from '$/utils'
 const { frontmatter: post, file } = Astro.props.post
+const { day, year } = getCalendarDateParts(post.date)
 ---
 <div class="post-draft-preview">
     <div class="sm:w-20 md:w-32">
         <div class="post-draft-preview__date">
-            <span class="post-draft-preview__date__day">{ new Date(post.date).getDate() }</span>
-            <span class="post-draft-preview__date__month-n-year">{ `${getMonthName(post.date)} ${new Date(post.date).getFullYear()}` }</span>
+            <span class="post-draft-preview__date__day">{ day }</span>
+            <span class="post-draft-preview__date__month-n-year">{ `${getMonthName(post.date)} ${year}` }</span>
         </div>
     </div>
     <div class="flex-1">

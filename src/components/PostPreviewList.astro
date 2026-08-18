@@ -9,9 +9,16 @@ interface Props {
 }
 
 const { posts, heading, isWeekly, mode = "col" } = Astro.props;
+const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
+const calendarDate = (date: string) => date.slice(0, 10);
+const topicRank = (slug: string) => {
+  const topic = TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));
+  return topic ? TOPIC_ORDER.indexOf(topic) : TOPIC_ORDER.length;
+};
 const sortedPosts = [...posts].sort(
   (a, b) =>
-    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf() ||
+    calendarDate(b.data.date).localeCompare(calendarDate(a.data.date)) ||
+    topicRank(a.slug) - topicRank(b.slug) ||
     a.data.title.localeCompare(b.data.title)
 );
 ---
