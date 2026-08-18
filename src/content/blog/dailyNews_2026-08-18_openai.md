@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-18T00:00:00+08:00"
-updatedAt: "2026-08-18T19:12:00+08:00"
+updatedAt: "2026-08-18T22:11:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "OpenAI President Greg Brockman: Compute is becoming the new oil of the AI age"
 featuredUrl: "https://www.youtube.com/watch?v=eXBFnfrt2gU"
@@ -32,9 +32,13 @@ tags:
   - "Deprecation"
   - "Desktop"
   - "Education"
+  - "Gov"
   - "GPT-5.6"
+  - "GPT-6"
   - "Guardian"
+  - "Hate"
   - "Infrastructure"
+  - "Love"
   - "MCP"
   - "Model Spec"
   - "OpenAI"
@@ -51,6 +55,7 @@ tags:
   - "Skills"
   - "Sora"
   - "Teens"
+  - "Test"
   - "Turns"
   - "UI"
   - "Workflow"
@@ -58,22 +63,22 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-17 19:12 至 2026-08-18 19:12（Asia/Shanghai）。19:00 的 OpenAI News RSS 新增 ChatGPT for Teens 与 CodeAI 教育合作两篇官方公告；同日 Model Release Notes 记录 Model Spec 针对青少年互动、错误或无依据前提及能力边界的更新。产品原文链接在扫描时仍返回 404，因此只采用官方 RSS 摘要、可公开打开的合作公告和 Model Release Notes 能交叉确认的范围，不推断地区、套餐或完整上线节奏。16:20 后另有 2 个 Codex 与 3 个 Agents SDK 主分支提交，均为开发动态、不是已发布版本。窗口内此前的 Codex alpha、五个客户端 SDK 版本和 CNBC 访谈继续有效；未发现新的 API changelog、ChatGPT / Codex changelog 条目或状态事故。
+扫描窗口：2026-08-17 22:11 至 2026-08-18 22:11（Asia/Shanghai）。本轮新增 [Codex 0.148.0-alpha.22](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.22) 与 5 个主分支提交；[ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens) 官方正文也已恢复可读，可确认 13–17 岁自动进入青少年体验、Study Hours、负责作业提醒、敏感图片提醒、休息提醒与更强默认保护。官方 API changelog、ChatGPT / Codex 产品 Release Notes 与状态历史未见窗口内新增。
 
 ## Tier 1
 
 | 产品 | 状态 |
 |---|---|
-| Codex CLI | [0.148.0-alpha.21](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21) 于 2026-08-18 03:27 +08:00 发布；发布页仅有版本标识。主分支随后出现权限、安全、agents dashboard 与会话恢复提交，见开发动态；不推断已向用户发布 |
+| Codex CLI | [0.148.0-alpha.22](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.22) 于 21:30 发布，页面仅有版本号；0.148.0-alpha.21 仍在窗口内。主分支新增敏感文件防 symlink 读取与 MCP provenance 修正；不推断均已进入 alpha 构建 |
 | VS Code / JetBrains 集成 | 无经官方原文确认的窗口内新增 |
 | Codex cloud / remote tasks 与 PR agents | 官方无发布；观察池保留单用户报告云任务从 UI 消失 |
 | ChatGPT agentic mode | 无产品发布；较旧背景中的《The Defender’s Window》提供 ChatGPT Work 用于授权安全检查的官方案例 |
 | 当前官方 agent-building 产品 | 无发布 |
 | Responses API | Python、Node.js、Java SDK 同步 shell / streaming、Responses 类型或流错误处理；见各发布说明 |
-| Agents SDK Python / TypeScript | 两个仓库主分支在上一轮 skills runtime probe 审批修正后，又出现验证沙箱、示例 / 集成 runner 与 workflow 执行职责调整；尚无对应 release，见开发动态 |
+| Agents SDK Python / TypeScript | Python 新增验证流程沙箱修正，TypeScript 移除一个 flaky 测试；此前 runner / workflow 与 skills probe 修正仍在窗口内，均尚无对应 release |
 | Assistants API 弃用 / 迁移 | 官方 deprecations 未见窗口内新增 |
 | Realtime API | Node.js SDK 增加 WebSocket stream ID，并修复多项 Realtime 重定向、凭据与错误处理问题；属于客户端更新 |
-| 当前官方 GPT、reasoning、Codex 模型家族 | 无新模型发布；Node.js SDK 的 Daybreak 与 gpt-5.6-cyber 标识仍仅视为类型同步。官方 Model Release Notes 同日记录 Model Spec 行为规范更新，不等同于模型权重或产品版本发布 |
+| 当前官方 GPT、reasoning、Codex 模型家族 | 无新模型发布；[2026-08-18 Model Spec](https://model-spec.openai.com/2026-08-18.html)是行为规范更新，不是模型权重或产品版本发布；GPT‑6 / Astra 见“未证实传闻” |
 
 ## Tier 2
 
@@ -84,24 +89,20 @@ tags:
 | GPTs / GPT Store、Canvas、GPT Image / DALL·E | 无新增 |
 | Sora / video | Node.js SDK 标记 Sora 视频 API 弃用；[官方弃用页](https://developers.openai.com/api/docs/deprecations#2026-03-24-sora-2-video-generation-models-and-videos-api)显示这是 2026-03-24 已通知、计划 2026-09-24 移除的既有状态，不是窗口内新公告 |
 | Voice | 无 ChatGPT Voice 新功能；Node.js SDK 有麦克风泄漏、播放管线死锁等客户端修复 |
-| Connectors / MCP | Node.js 与 Ruby SDK 同步 structured MCP / WebSocket 错误类型；无 ChatGPT 连接器新发布 |
+| Connectors / MCP | 新增 Codex MCP resource provenance 开发提交；Node.js 与 Ruby SDK 同步 structured MCP / WebSocket 类型，无 ChatGPT 连接器新发布 |
 
 ## Tier 3
 
-- **Edu / Teen / Safety**（19:00）：官方 RSS 宣布 [ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens)，定位为以学习为中心的青少年专用体验，摘要称包含更强的内置保护、健康使用功能和额外家长控制；原文扫描时返回 404，暂不写地区、套餐与完整可用性。公开可读的 [CodeAI 合作公告](https://openai.com/index/partnering-with-codeai)交叉确认该产品，并列出联合顾问委员会、Hour of AI、Builders Challenge、课程支持与职业分享等合作计划。
-- **Model Spec**（2026-08-18，官方页面未给精确时刻）：[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)称本次规范更新进一步澄清与青少年的适当关系互动、对错误或无依据前提的处理，并新增“清楚说明能力与限制”等内容；这是行为规范更新，不写成模型能力升级。
-- **Enterprise / Business / Gov / Science**：未发现窗口内官方产品发布。
-- **基础设施 / 公司访谈**（2026-08-17 21:26 +08:00）：CNBC 发布对 OpenAI 总裁 Greg Brockman 的[原始访谈](https://www.youtube.com/watch?v=eXBFnfrt2gU)，主题涵盖 AI 网络安全、领导层、AI 经济与资本开支。可核实采访对象、标题和发布时间；本页不把节目标题中的“compute is the new oil”扩展成量化结论。
+- **Edu / Teen / Safety**（19:00）：[ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens) 原文现已可读。官方称系统估计用户未满 18 岁或自报 13–17 岁时会自动进入该体验；学习功能包括 Study Mode、负责作业提醒、quizzes、Learning Visualizations 与 Study Hours。默认保护涉及自伤、暴力、饮食失调、危险活动和露骨内容，并加入休息、敏感图片、onboarding 与家长控制。[CodeAI 合作公告](https://openai.com/index/partnering-with-codeai)另列出联合顾问委员会、Hour of AI、Builders Challenge、课程支持与 Career Journeys。
+- **Model Spec**（日期确认、精确时刻未列）：[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)概述青少年互动、错误前提与能力边界更新；[原始版本页](https://model-spec.openai.com/2026-08-18.html)确认 Under‑18 Principles 适用于 13–17 岁。
+- **Enterprise / Business / Science**：未发现窗口内其他官方产品发布。
+- **Gov / Infrastructure，日期未确认**：[PORTS-Pike 官方公告](https://openai.com/index/openai-joins-ports-pike-project)只标 2026-08-17、无精确时刻，无法确认是否落在 22:11 边界之后；官方称约 8 GW-IT 协议并给出建设、就业、社区基金与 Codex credits 规划。
 - **安全组织调整**：可信二手报道位于主窗口之前，见“较旧背景”；OpenAI 未在本轮给出可核实的窗口内官方说明。
-
-<figure class="source-image">
-  <a href="https://www.youtube.com/watch?v=eXBFnfrt2gU"><img src="https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg" alt="CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面" loading="lazy" /></a>
-  <figcaption><a href="https://www.youtube.com/watch?v=eXBFnfrt2gU">题图来源：CNBC Television / YouTube</a></figcaption>
-</figure>
 
 ## 官方发布（新到旧）
 
-- **ChatGPT for Teens**（19:00）：官方 RSS 宣布专用青少年体验；原文暂不可达，已按上述证据边界收录。[原文链接](https://openai.com/index/chatgpt-for-teens)
+- **Codex 0.148.0-alpha.22**（21:30）：仅能核实版本与发布时间，无功能清单。[发布页](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.22)
+- **ChatGPT for Teens**（19:00）：官方原文已恢复可读，功能与保护边界见 Tier 3。[原文](https://openai.com/index/chatgpt-for-teens)
 - **OpenAI × CodeAI**（19:00）：合作将围绕 AI 素养、青少年安全反馈、建设者挑战、课堂课程与职业认知展开。[公告](https://openai.com/index/partnering-with-codeai)
 - **Model Spec 行为规范更新**（日期确认为 2026-08-18，精确时刻未列）：增加青少年关系互动、错误前提与能力边界方面的澄清。[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)
 - **Codex 0.148.0-alpha.21**（03:27）：仅能核实版本与发布时间，无功能清单。
@@ -114,6 +115,11 @@ tags:
 
 ## 官方开发动态（主分支提交，尚非发布；新到旧）
 
+- **Codex 敏感文件读取防护**（21:30）：[b5ea64a](https://github.com/openai/codex/commit/b5ea64a203ce1b04629010d3ef0a0d18c3c870a9)新增只读取普通 UTF‑8 文件、拒绝最终 symlink / Windows reparse point 的 reader。
+- **Codex MCP provenance 压缩恢复**（20:32）：[a397079](https://github.com/openai/codex/commit/a397079287e6638b39dda329835350d93222681f)保存有界 checkpoint，使 widget 在 compaction 与重启后仍按原 tool / account / URI 授权读取。
+- **Agents SDK Python 验证沙箱**（19:46）：[ebb746d](https://github.com/openai/openai-agents-python/commit/ebb746dc00b0dd6a90c30bc5ccb7e9c445e55493)保持 Codex verification 在开发沙箱内。
+- **Codex MCP resource call 归属**（19:45）：[880f113](https://github.com/openai/codex/commit/880f1135ea5902f85d7c13d60ee01d61334b6ad9)限制资源读取到产生该资源的原始 call。
+- **Agents SDK TypeScript 测试维护**（19:12）：[2d68a10](https://github.com/openai/openai-agents-js/commit/2d68a10f8c1593f37a8e291e7bce00634ba3e5dd)移除 flaky process-group 测试；不代表 SDK 功能变化。
 - **Agents SDK TypeScript runner 职责迁移**（18:54）：[dcbb1e7](https://github.com/openai/openai-agents-js/commit/dcbb1e7ba9bcf5ce50052a2a8d287c94d1d84daf)将示例与集成 runner 从 skills 迁至仓库脚本 / workflow，并把分析 skill 约束为只读；属于仓库维护。
 - **Agents SDK TypeScript 验证沙箱**（18:54）：[272cb52](https://github.com/openai/openai-agents-js/commit/272cb52e23947f3f47fd9a39475ae3a2a27572b9)要求 Codex 验证流程留在普通 workspace sandbox，并移除继承的 API key；尚非 SDK 发布。
 - **Agents SDK Python workflow 职责迁移**（18:34）：[82e3571](https://github.com/openai/openai-agents-python/commit/82e3571fc55a8583239c74a0cec8c5497f0d7a2c)把 workflow 执行移出仓库 skills；属于开发流程重构。
@@ -132,17 +138,19 @@ tags:
 
 ## Love
 
+- **日期未确认、单一用户陈述**：一名从 Claude Cowork 转来的用户称 Codex 更少遇到卡点且较少需要人工介入；评论提醒两者用途不完全相同，只视为正面迁移体验。[讨论](https://www.reddit.com/r/ChatGPT/comments/1vr3tcv/codex_is_incredible/)
 - **日期未确认、单一用户陈述**：一位无编程经验的教师称 Codex 帮其迭代英语学习应用并生成辅助教学音频，体现了编程之外的使用价值；未独立验证产物质量。[讨论](https://www.reddit.com/r/ChatGPT/comments/1vql0l1/i_now_get_the_codex_reset_excitement/)
 
 ## Hate
 
+- **日期未确认、社区迁移讨论**：新帖称 Codex 周用量与 reset 难以持续；回复同时建议以 Luna 处理常规执行并指出各服务都有配额限制，故不把“永久缩减”写成事实。[讨论](https://www.reddit.com/r/codex/comments/1vrmn2k/thinking_about_making_a_switch/)
 - **日期未确认、单一长期用户陈述**：一名自称使用 Codex 近一年的 Pro 用户认为近期用量、长时 agent token 消耗与多模型选择让产品更难控制，并称转试其他工具后更容易推进工作；评论也有人认为 OpenAI 用量仍较宽松。该帖是主观迁移信号，不是配额或性能测量。[讨论](https://www.reddit.com/r/codex/comments/1vqwxb5/codex_feels_uncertain_right_now/)
 - **日期未确认、社区争议**：Pro 用户抱怨高价套餐周用量不足；评论同时指出 Ultra、超大上下文、长时间 agent 与高频 MCP tool calls 会放大消耗，因而不能把原因归结为单一配额调整。[讨论](https://www.reddit.com/r/codex/comments/1vr2osw/pro_20x_is_a_joke/)
 - **日期未确认、两份用户自报**：一名用户称 Auto-review 在一周内运行 141 次并消耗约 1040 万 tokens；另一名用户称其分析页显示 1600 次 reviewer turns，并把高频触发归因于 writable roots 与工作目录不匹配。[报告一](https://www.reddit.com/r/codex/comments/1vr8pvh/i_found_the_culprit_eating_your_usage_limit/)；[报告二](https://www.reddit.com/r/codex/comments/1vqn523/check_your_codex_usage_because_auto_review_can_go/)。这些数字来自个人截图 / 日志，未获 OpenAI 核实。
 
 ## 情绪
 
-**34/100，低置信度。** 计分采用一条正面用例、两条配额 / 迁移负面讨论与两条 Auto-review 负面报告；新增迁移帖来自一名长期用户，评论存在反向意见，全部仍是自选社区样本。官方 [Auto-review 文档](https://learn.chatgpt.com/docs/sandboxing/auto-review)确认越过沙箱边界、网络或 writable roots 的审批请求会交给 reviewer，普通沙箱内操作不会触发；选择获批 Daybreak 模型时，桌面端在功能可用且组织策略允许时会自动切换到 Approve for me。它支持“配置可导致大量 reviewer 调用”的机制解释，但不证明两名用户的 token 换算或“无故开启”判断。此前的[用户自算样本](https://www.reddit.com/r/codex/comments/1vr3yfe/i_have_bad_news/)认为 7 月至 8 月每 1% 用量的 API 等值大致稳定，评论质疑其 reset 与百分比口径，故继续作为反向证据，不直接改成官方结论。官方发布与仓库提交不计作正向情绪。
+**38/100，低置信度。** 样本包含两条正面用例、三组配额 / 迁移负面讨论与两条 Auto-review 报告，均是自选样本。官方 [Auto-review 文档](https://learn.chatgpt.com/docs/sandboxing/auto-review)能解释触发边界，但不能证明个人 token 换算。此前的[用户自算反向样本](https://www.reddit.com/r/codex/comments/1vr3yfe/i_have_bad_news/)方法也受 reset 与百分比口径质疑。官方发布不计作正向情绪。
 
 ## 对比
 
@@ -155,6 +163,8 @@ tags:
 
 以下页面仅显示相对时间、日期无稳定绝对时刻或文档未标发布日期，相关内容不写成窗口内已确认事实：
 
+- PORTS-Pike 官方页只给 2026-08-17，无精确时刻。
+- 新增 Codex 正面体验、切换供应商讨论与 GPT‑6 / Astra 截图帖。
 - 教师的 Codex 教学与音频用例。
 - Pro 用量限制争议、长期用户的迁移 / 控制感陈述与配额削减反向检验。
 - 两份 Codex Auto-review 用量异常报告，以及当前 Auto-review 官方文档的上线日期。
@@ -164,6 +174,7 @@ tags:
 
 ## 观察池
 
+- **新增配额 / 迁移信号**：[切换供应商讨论](https://www.reddit.com/r/codex/comments/1vrmn2k/thinking_about_making_a_switch/)继续指向用量焦虑，但没有统一任务或账号审计，回复也有反向意见。
 - **Codex 控制感 / 迁移信号**：一名长期 Pro 用户称近期用量与长时 agent 消耗使 Codex 失去此前的可控感，并以另一工具作主观对比；评论存在“OpenAI 限额仍较宽松”等反向意见，帖子也没有统一任务或日志，故不推导为普遍退订或性能退化。[帖子](https://www.reddit.com/r/codex/comments/1vqwxb5/codex_feels_uncertain_right_now/)
 - **Auto-review 用量争议**：两名用户分别报告异常 reviewer turns / token 消耗。官方 [Auto-review 文档](https://learn.chatgpt.com/docs/sandboxing/auto-review)说明该模式会把原本交给人的沙箱边界审批交给独立 reviewer；[Codex 0.147.0 发布说明](https://github.com/openai/codex/releases/tag/rust-v0.147.0)则确认加入 `--approve-for-me`。官方材料未支持“该版本对所有用户静默开启”或帖子中的具体 token 因果，继续等待 OpenAI 状态页、修复说明或可复现实验。
 - **Windows 桌面端性能**：用户称版本 `26.810.4967.0` 在比较 Chrome plugin 路径时反复重建 junction，导致高磁盘读取与 CPU 占用；两名回复者称禁用插件或临时 workaround 有效，但尚无 OpenAI 官方确认，且绝对日期未核实。[帖子](https://www.reddit.com/r/codex/comments/1vorxvv/workaround_for_latest_windows_cpu_mouse_lag_issue/)
@@ -172,16 +183,34 @@ tags:
 
 ## 较旧背景
 
+- **CNBC 访谈**（2026-08-17 21:26 +08:00，已滑出主窗口 45 分钟）：对 Greg Brockman 的[原始访谈](https://www.youtube.com/watch?v=eXBFnfrt2gU)保留为配图来源与背景，不再列作窗口内动态。
 - **官方安全观点**（2026-08-17 13:30 +08:00，已滑出主窗口）：OpenAI 的 [The Defender’s Window](https://openai.com/index/the-defenders-window)讨论 AI 攻防变化，并披露内部以 Codex、安全插件和模型协助代码与基础设施防护的做法。这是官方观点与案例，不是独立效果评测。
 - **Preparedness 团队调整**（2026-08-17 05:32 +08:00，可信二手；所述事件更早）：[The Verge](https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team)转述 Financial Times 称 OpenAI 在 7 月底解散独立 Preparedness 团队，并把生物、网络等职责分配到现有团队；OpenAI 本轮没有可核实的官方说明，因此不把“职责被放弃”或“安全投入下降”写成已证实结论。
 - **Sora 弃用计划**：Videos API 与 Sora 2 模型计划于 2026-09-24 移除，公告日期为 2026-03-24；本轮仅因 Node.js SDK 类型同步再次核对，不算新发布。
 
+<figure class="source-image">
+  <a href="https://www.youtube.com/watch?v=eXBFnfrt2gU"><img src="https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg" alt="CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面" loading="lazy" /></a>
+  <figcaption><a href="https://www.youtube.com/watch?v=eXBFnfrt2gU">题图来源：CNBC Television / YouTube</a></figcaption>
+</figure>
+
 ## 未证实传闻
 
+- Reddit 截图帖猜测“Astra / GPT‑6”会在 8 月 23 日发布；没有可核验的官方公告，评论也讽刺这是对模糊社交帖的过度解读。[帖子](https://www.reddit.com/r/ChatGPT/comments/1vqx1kj/astragpt6_release_on_sunday_the_23rd/)
 - Hacker News 的重复提交指向 [OpenRouter 页面](https://openrouter.ai/openai/gpt-5.6-sol)，该页显示 OpenAI 路由的 GPT-5.6 Sol 为“50% off”、$2.50 / $15；但 [OpenAI 官方模型页](https://developers.openai.com/api/docs/models/gpt-5.6-sol)在本轮仍显示 $5 / $30，且没有窗口内官方降价公告。因此不能写成 OpenAI 已降价，继续观察其是否为渠道促销、页面同步差异或未来变更。
 
 ## 来源
 
+- [Codex 0.148.0-alpha.22](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.22)
+- [Codex 敏感文件读取防护](https://github.com/openai/codex/commit/b5ea64a203ce1b04629010d3ef0a0d18c3c870a9)
+- [Codex MCP provenance 压缩恢复](https://github.com/openai/codex/commit/a397079287e6638b39dda329835350d93222681f)
+- [Agents SDK Python 验证沙箱](https://github.com/openai/openai-agents-python/commit/ebb746dc00b0dd6a90c30bc5ccb7e9c445e55493)
+- [Codex MCP resource call 归属](https://github.com/openai/codex/commit/880f1135ea5902f85d7c13d60ee01d61334b6ad9)
+- [Agents SDK TypeScript 测试维护](https://github.com/openai/openai-agents-js/commit/2d68a10f8c1593f37a8e291e7bce00634ba3e5dd)
+- [2026-08-18 Model Spec](https://model-spec.openai.com/2026-08-18.html)
+- [PORTS-Pike 官方公告](https://openai.com/index/openai-joins-ports-pike-project)
+- [Codex 正面体验](https://www.reddit.com/r/ChatGPT/comments/1vr3tcv/codex_is_incredible/)
+- [Codex 新迁移讨论](https://www.reddit.com/r/codex/comments/1vrmn2k/thinking_about_making_a_switch/)
+- [GPT‑6 / Astra 传闻](https://www.reddit.com/r/ChatGPT/comments/1vqx1kj/astragpt6_release_on_sunday_the_23rd/)
 - [ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens)
 - [OpenAI × CodeAI 合作公告](https://openai.com/index/partnering-with-codeai)
 - [Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)
@@ -226,6 +255,6 @@ tags:
 
 ## 采集状态
 
-- 已检查：OpenAI News RSS 与新原文、ChatGPT Release Notes、Model Release Notes、API changelog / models / deprecations、ChatGPT & Codex changelog、Auto-review 官方文档、Codex 与五个官方客户端 SDK、两套 Agents SDK 的 releases 与主分支提交、OpenAI Status、Reddit 五个社区、Hacker News、X、YouTube、CNBC 原始访谈、The Verge、The Next Web 与 404 Media。
-- 失败来源：OpenAI News HTML 首页 403（已用 RSS 替代）；ChatGPT for Teens 原文链接在发布后仍返回 404（只采用 RSS、CodeAI 合作页和 Model Release Notes 可交叉确认内容）；Reddit JSON / RSS 403 或不可解析（已用 HTML 与搜索索引替代）；HN 单条页此前 429（使用 Algolia）；X 页面无可提取正文；OpenAI YouTube 频道页信息不足；CNBC / WSJ 数据中心报道 403；404 Media 与 The Next Web 正文打开失败，均未据此新增事实。
-- 初始候选：49；保留引用来源：41；二次补搜：否（最终来源不为 0）。
+- 已检查：OpenAI News HTML / RSS 与原文、ChatGPT / Model Release Notes 与原始 Model Spec、API changelog / models / deprecations、ChatGPT & Codex changelog、Auto-review、Codex 与五个客户端 SDK、两套 Agents SDK、OpenAI Status、Reddit 五个社区、HN Algolia、X、YouTube、CNBC、PORTS-Pike、The Verge、The Next Web 与 404 Media。
+- 失败来源：ChatGPT Release Notes 索引路由混杂；Reddit JSON / RSS 403 或不可解析；HN 单条页此前 429；X 官方页无正文；OpenAI YouTube 频道页信息不足；CNBC / WSJ 俄亥俄报道 403；404 Media 与 The Next Web 正文打开失败。
+- 初始候选：60；保留引用来源：52；二次补搜：否（最终来源不为 0）。

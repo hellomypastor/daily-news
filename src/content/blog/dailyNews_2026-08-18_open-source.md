@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-18T00:00:00+08:00"
-updatedAt: "2026-08-18T19:12:00+08:00"
+updatedAt: "2026-08-18T22:11:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "yetone/cumora"
 featuredUrl: "https://github.com/yetone/cumora"
@@ -40,6 +40,7 @@ tags:
   - "Documentation"
   - "Edge AI"
   - "Education"
+  - "Embeddings"
   - "Embodied Agent"
   - "Evaluation"
   - "Fine-Tuning"
@@ -64,6 +65,7 @@ tags:
   - "Maintenance"
   - "Mathematics"
   - "MCP"
+  - "Memory"
   - "Multi-Agent"
   - "Multimodal"
   - "Observability"
@@ -75,7 +77,9 @@ tags:
   - "Qwen"
   - "RAG"
   - "Reinforcement Learning"
+  - "Research"
   - "Resurfaced"
+  - "Robotics"
   - "ROCm"
   - "Routing"
   - "Rust"
@@ -98,7 +102,7 @@ tags:
 
 ## 概览
 
-高亮窗口：2026-08-16 19:12 至 2026-08-18 19:12（Asia/Shanghai）；HN 旧文再浮现窗口为 2026-08-17 19:12 至 2026-08-18 19:12。本轮对 95 个初筛候选做原文、仓库元数据或论文条目复核，保留 73 个唯一来源 URL。16:12 后的实质新增包括 KTransformers v0.7.0 官方发布、Axiom Math 的公开 Lean 形式化仓库及可信二手核验、三项新的 GitHub Trending AI / Agent 条目，以及若干低互动但可读的新仓库；后者均留在观察池，不以 stars、HN points 或作者自报性能替代技术验证。19:12 复查 GitHub Trending 全站、Python 与 TypeScript 日榜时，早间六项中的五项仍在榜，并新增 OpenViking、AI Agent Book 与 video-use；早间快照仍保留为当日曾上榜证据，榜单更替不反推项目发布日期。
+高亮窗口：2026-08-16 22:11 至 2026-08-18 22:11（Asia/Shanghai）；HN 旧文再浮现窗口为 2026-08-17 22:11 至 2026-08-18 22:11。本轮对 131 个初筛候选做原文、仓库元数据或论文条目复核，保留 94 个唯一来源 URL。19:12 后的实质新增包括 Sentence Transformers v6.0 多向量检索、一个可复核的 Agent benchmark 审计、BATON 与 AutoSR 两篇窗口内 arXiv 论文，以及 22:11 时点新增的 GitHub Trending 项目。晚间 HN 带来的旧仓库、低互动协议、作者自报工程个案和无法核实日期的文章已分别放入再浮现、观察池或日期未确认，不以 stars、HN points 或营销说法替代技术验证；早间与 19:12 Trending 快照仍保留为当日曾上榜证据。
 
 ## 已核实高亮
 
@@ -114,6 +118,8 @@ tags:
 | [Yevanchen/reclaim-code-entropy](https://github.com/Yevanchen/reclaim-code-entropy) | 以证据排序可删除代码候选的 Agent Skill，分只读审计与落地应用两种模式 | 把删代码转成带信心、风险、净减少量和验证步骤的工程工作流，避免把静态分析候选直接等同于安全删除 | 仓库创建于 2026-08-17 16:19 +08:00；10:13 API 快照 115 stars |
 | [wang2122/sprix-sage-router](https://github.com/wang2122/sprix-sage-router) | 在 SELF、COLLABORATE 与 HANDOFF 三种路径间做状态感知决策，并按权限、预算、时限和 task DAG 分配多 Agent 角色 | README 给出可审计目标函数、beam-search team formation、在线证据更新与测试；仓库自标 research preview，stars 只作发现热度信号，不作为质量结论 | 仓库创建于 2026-08-18 12:08 +08:00；MIT，原仓库与 README 可打开 |
 | [Together AI：生产模型 A/B 测试](https://www.together.ai/blog/a-b-test-models-in-production) | 在 endpoint 层固定分配 control 与最多 20 个 variants，支持采样键粘性、etag 并发保护和 blue-green promotion | 文章给出 95/5、80/20、50/50 的实流量演示及观测份额，说明实验路由如何与 autoscaling、traffic split 和 rollout 组合；数据为厂商自测 | 页面标注 2026-08-17 发布、2026-08-18 更新，原文可打开 |
+| [Sentence Transformers v6：MultiVectorEncoder](https://huggingface.co/blog/multi-vector-encoder) | Sentence Transformers 新增 ColBERT-style late interaction 模型类型，可加载 PyLate、Stanford ColBERT 与 ColPali checkpoint，并覆盖文本和多模态检索 | 统一训练、编码、MaxSim、索引和评测 API；原文同时量化索引体积代价并给出 pooling、压缩和 retrieve-then-rerank 路径 | 原文标注 2026-08-18 08:00 +08:00；v6.0 示例可检查 |
+| [Who benchmarks the benchmark?](https://shukla.io/blog/2026-08/gym.html) | 把 Agent gym 拆成任务、策略、模型、工具契约/实现、环境和 verifier 七层，并审计 EnterpriseOps Gym | 作者在不更换模型时修复六类 gym 缺陷，把同一 Teams/oracle split 从 26.2% 提到 100%；说明环境缺陷可被误记为模型失败，但仍是单一 benchmark 审计 | 原文标注 2026-08-18；方法与分项增量可复核 |
 
 <figure class="source-image">
   <a href="https://github.com/yetone/cumora"><img src="https://opengraph.githubassets.com/104fa03e87ebe58d49ebf9ae80e005db2209c299ac4b592242925f32c7b88df5/yetone/cumora" alt="Cumora open-source agent team runtime GitHub repository preview" loading="lazy" /></a>
@@ -122,7 +128,7 @@ tags:
 
 ## GitHub Trending
 
-早间六项沿用 2026-08-18 10:12 附近 GitHub daily Trending 快照；19:12 对全站、Python、TypeScript 日榜复查时，除 modlens 外其余五项仍可见，并新增下表末三项。“today”只表示页面当时展示的日增量，不是仓库当日创建量；保留早间上榜项用于当天轨迹，不因纯 stars 波动改写旧快照。
+早间六项沿用 10:12 快照，19:12 新增 OpenViking、AI Agent Book 与 video-use；22:11 再查全站、Python、TypeScript 日榜时，新增 Munder Difflin、Anthropic Cybersecurity Skills、PipesHub 与 Unsloth。下表保留当天各时点相关项目；“today”只表示当时日增量，不是仓库创建量，纯 stars 波动不改写旧快照。
 
 | 仓库 | 技术定位 | Trending 快照 | 原始创建日 |
 |---|---|---:|---|
@@ -135,6 +141,10 @@ tags:
 | [volcengine/OpenViking](https://github.com/volcengine/OpenViking) | 统一 Agent memory、知识 RAG 与 skills 的上下文数据库 | 29,009 stars；239 today（19:12） | 2026-01-05 +08:00 |
 | [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book) | 《深入理解 AI Agent》正文、PDF 与配套代码的开源主仓库 | 38,857；556 today（19:12） | 2025-09-09 +08:00 |
 | [browser-use/video-use](https://github.com/browser-use/video-use) | 让编码 Agent 通过项目内工具链编辑视频 | 21,011；134 today（19:12） | 2026-04-12 +08:00 |
+| [chaitanyagiri/munder-difflin](https://github.com/chaitanyagiri/munder-difflin) | 包装多种终端编码 CLI、带邮箱和本地记忆的桌面多 Agent harness；自标 working prototype | 1,734；256 today（22:11） | 2026-05-31 +08:00 |
+| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 独立社区 Agent 网络安全 skill 库；README 明示不隶属 Anthropic且含双用途内容 | 28,871；726 today（22:11） | 2026-02-25 +08:00 |
+| [pipeshub-ai/pipeshub-ai](https://github.com/pipeshub-ai/pipeshub-ai) | 企业搜索、RAG、MCP 与 Agent workflow 的自托管 context layer | 3,407；50 today（22:11） | 2025-03-07 +08:00 |
+| [unslothai/unsloth](https://github.com/unslothai/unsloth) | 本地运行与训练 LLM / diffusion model 的开源工具链 | 73,475；739 today（22:11） | 2023-11-30 +08:00 |
 
 ## HN 讨论
 
@@ -151,6 +161,8 @@ tags:
 
 | 论文 | 核心内容 | 核实时间 |
 |---|---|---|
+| [Don't Drop the BATON](https://arxiv.org/abs/2608.16889) | 把长程机器人任务拆成可独立探索的子任务，并以 transition-aware memory 处理调用、handoff 与 lookahead；冻结 VLA | arXiv v1：2026-08-18 01:59 +08:00；11.6% / 14.9% 改进为作者自报 |
+| [AutoSR](https://arxiv.org/abs/2608.16876) | 以 proposer/reviewer agents、研究状态与 PW-MCTS 搜索符号回归，保留动机、计算证据与审阅记录 | arXiv v1：2026-08-18 01:55 +08:00；九项挑战结果待独立复现 |
 | [When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding](https://arxiv.org/abs/2608.16801) | 把 Agent、文件、消息与读写建模成时序网络；论文报告 1,902 次运行，并另做 244 次密封环境复验，用于分析团队规模、共享文件和 coordinator 角色 | arXiv v1：2026-08-18 00:57 +08:00 |
 | [TDD-Agent: Test-Driven Reasoning for Code Generation](https://arxiv.org/abs/2608.16742) | 先生成可执行测试，再以执行反馈同时迭代代码与测试；论文在 LiveCodeBench 与 RepoEval 上报告相对基线改进 | arXiv v1：2026-08-17 23:52 +08:00 |
 | [Security of Foundation-Model-Powered Embodied Agents](https://arxiv.org/abs/2608.16843) | 以“首个被攻破的信任边界”组织五层、十二类攻击面，并汇总攻击、防御与评测记录 | arXiv v1：2026-08-18 01:28 +08:00；综述结论尚待同行评议 |
@@ -170,10 +182,13 @@ Hugging Face Daily Papers API 本轮复查覆盖 HarnessEval-W、ClawGym II、Ge
 - [Vyral](https://github.com/Univeracity/vyral) 是本地优先的 canonical data、RAG、durable work 与 MCP contract layer；仓库创建于 2026-08-10 11:21 +08:00，超过七天后于 2026-08-18 14:04 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49341873)，16:12 前快照 3 points / 1 comment。README 和 conformance / qualification 设计可读，但讨论热度很弱。
 - [AgentBridge Atlas](https://github.com/tianzizhiming-svg/agentbridge) 展示 x402 / EIP-3009 的 Agent 付费取数循环；仓库创建于 2026-03-16，2026-08-18 15:07 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49342345)，16:12 前快照 4 points / 0 comments。支付、资产数量和链上闭环均为仓库作者自述，未做独立审计。
 - [LWN：Debating the role of large language models in the kernel community](https://lwn.net/Articles/1083275/) 原文发布于 2026-07-21，梳理 Linux 内核对 Assisted-by 标记、LLM 代码审查、工具依赖和误报责任的争议；2026-08-18 15:34 +08:00 被重新提交到 [HN](https://news.ycombinator.com/item?id=49342593)，19:12 前仅 2 points / 0 comments，属于低互动旧文再浮现。
+- [NexusMem](https://github.com/yaminbkk/NexusMem) 把 shell、exit code、Git diff/commit 与文档索引到本地 SQLite；仓库创建于 2026-08-08 14:48 +08:00，超过七天后于 2026-08-18 21:47 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49345583)，截止 1 point / 0 comments。
+- [NeoBrowser](https://github.com/pitiflautico/neobrowser) 是驱动真实登录态 Chrome 的 Rust MCP server；仓库创建于 2026-03-13 03:06 +08:00，于 2026-08-18 21:25 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49345320)，截止 10 points / 2 comments。登录态扩大权限面且未做安全审计，故只列再浮现。
 
 ## 日期未确认
 
 - [Going AI-native to enhance how humans/agents access ScalarDB and ScalarDL docs](https://medium.com/scalar-engineering/going-ai-native-to-enhance-how-humans-and-agents-access-scalardb-and-scalardl-docs-fb7dbb0d304b)：本轮访问 Medium 原文返回 HTTP 403，无法核实文章发布日期与完整技术细节；仅能确认其于 2026-08-18 09:51 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49340170)，快照 2 points / 0 comments。
+- [Software Factories Are Distributed Systems](https://www.sjarmak.ai/writing/software-factories-are-distributed-systems/)：原文被企业安全策略拦截，无法核实日期与全文；只能确认 2026-08-18 21:48 +08:00 进入 [HN](https://news.ycombinator.com/item?id=49345600)，截止 1 point / 1 comment，不据标题推断正文结论。
 
 ## 观察池
 
@@ -195,14 +210,18 @@ Hugging Face Daily Papers API 本轮复查覆盖 HarnessEval-W、ClawGym II、Ge
 - **低互动本地推理打包**：[vLLM ROCm Windows RDNA2](https://github.com/sebastianmechno-sys/vllm-rocm-windows-rdna2) 为 Windows 原生 RDNA2 提供预构建 vLLM / ROCm 栈；README 的约 26 TFLOPS 与 58–62 tok/s 均是作者在 RX 6750 XT 上的自测，[HN 提交](https://news.ycombinator.com/item?id=49343550) 仅 2 points / 0 comments，不能外推到其他硬件。
 - **零星新 fork**：[open-genoffice](https://github.com/douglas168/open-genoffice) 把 GenOffice 默认 AI provider 改为任意 OpenAI-compatible endpoint，README 明示未发布预构建安装包；仓库创建于 2026-08-18 14:32 +08:00，19:12 前 0 stars，[HN 提交](https://news.ycombinator.com/item?id=49343170) 仅 2 points / 0 comments。
 - **安全边界明确但采用尚弱**：[Agent Reach Public](https://github.com/Jaimo-so/agent-reach-public) 把公开网页、YouTube、GitHub、B站、RSS/Atom 与 V2EX 限定为无登录、只读、无凭据入口，并附 doctor / install 流程；仓库创建于 2026-08-18 16:25 +08:00，19:12 前 7 stars，保留为新工具观察信号。
+- **官方仓库、早于高亮窗**：[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 是官方开源、插件化的 developer preview；仓库创建于 2026-08-13，2026-08-18 21:46 +08:00 的 [HN](https://news.ycombinator.com/item?id=49345565) 截止仅 1 point / 0 comments，不提升为当日新品。
+- **窗口内新协议、采用近零**：[Krystal Loop Protocol](https://github.com/KrystalUnity/krystal-loop-protocol) 把 build-check-critic-repair 写成有界多 Agent 循环；2026-08-18 20:58 +08:00 的 [HN](https://news.ycombinator.com/item?id=49344975) 截止 1 point / 0 comments，可靠性仅有作者说明。
+- **独立工程实践**：[A practical workflow for LLM-assisted development](https://yogthos.net/posts/2026-08-17-llm-workflow.html) 讨论架构先行、边界、测试契约和 harness 机械防错，结论来自作者个案。
+- **旧文更新、厂商自报**：[Moving Agent Loops to GLM](https://getunblocked.com/blog/moving-agent-loops-from-anthropic-to-glm/) 原始发布 2026-08-13、2026-08-18 06:12 +08:00 更新；22:02 进入 [HN](https://news.ycombinator.com/item?id=49345796)，截止 4 points / 0 comments，成本数字未获独立复现。
 
 ## 来源链接
 
-正文中的每个链接均已在 `sources` 中以唯一 URL 登记；时间无法确认的 Medium 候选已保留空发布日期并标明访问限制。本轮只在页内去重，未因其他专题可能引用同源而删除。
+正文中的每个链接均已在 `sources` 中以唯一 URL 登记；时间无法确认的 Medium 与 Sjarmak 候选均已保留空发布日期并标明访问限制。本轮只在页内去重，未因其他专题可能引用同源而删除。
 
 ## 采集状态
 
-- **已检查来源**：HN 首页/newest/Algolia；GitHub Trending 全站、Python、TypeScript；GitHub Releases、仓库 README 与公开元数据；arXiv；Hugging Face Daily Papers/Blog；Simon Willison；Wiz Research；Together AI；fast.ai；Andrew Moffat；Overbring Labs；Kubesimplify；LWN；IEEE Spectrum；窗口内提交页面。
-- **失败来源**：Scalar Engineering Medium 原文返回 HTTP 403，无法核实日期与全文；GitHub 未认证 REST API 后续查询触发 HTTP 403 rate limit。前者已用 HN 证据保留为日期未确认，后者已切换 GitHub CLI 公开只读接口、公开仓库页与 Trending HTML 完成复核。
-- **候选数量**：初筛 95 条；保留 73 个唯一来源 URL，覆盖高亮、Trending、HN、论文、再浮现、日期未确认、观察池与提交级维护信号。
-- **二次补搜**：未执行（`secondPass=false`）；本主题最终来源非 0。
+- **已检查来源**：HN 首页/newest/Algolia；GitHub Trending 全站、Python、TypeScript；GitHub Releases、仓库 README 与元数据；arXiv；Hugging Face Daily Papers/Blog 与 Sentence Transformers 原文；Simon Willison；Wiz；Together AI；fast.ai；Andrew Moffat；Overbring；Kubesimplify；LWN；IEEE Spectrum；Shukla、Yogthos、Unblocked、Sjarmak 与窗口内提交页。
+- **失败来源**：Scalar Medium 返回 HTTP 403；GitHub 未认证 REST API 触发 HTTP 403 rate limit；Sjarmak 被企业安全策略拦截。两篇无法核实的文章均以 HN 证据保留在日期未确认；GitHub 已切换 CLI、仓库页与 Trending HTML。
+- **候选数量**：初筛 131 条；保留 94 个唯一来源 URL。
+- **二次补搜**：未执行（secondPass=false）；最终来源非 0。
