@@ -8,7 +8,7 @@ This repository is published by one Codex Scheduled Task. A successful daily run
 2. Require a clean working tree, then run `git pull --ff-only origin main` before changing files. Stop on local changes or divergence.
 3. Write exactly five source files under `data/daily/YYYY-MM-DD/`, following `data/daily/README.md`.
 4. Each source file represents one page. Never combine the five topics into one page.
-5. Use original HTTP(S) sources, verify every claim, and never invent an item to reach a quota.
+5. Prefer original HTTP(S) sources and verify claims when possible. Retain relevant unverified candidates in labeled watchlists; never present them as confirmed facts or invent an item.
 6. Do not edit historical source data or generated posts unless the task explicitly requests a correction.
 
 ## Publish contract

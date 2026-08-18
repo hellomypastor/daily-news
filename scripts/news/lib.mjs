@@ -53,7 +53,6 @@ export function readSources(date) {
 		throw new Error(`${path.relative(ROOT, directory)} 必须恰好包含 5 个 JSON 数据文件，当前为 ${files.length} 个`);
 	}
 
-	const seenUrls = new Set();
 	const seenSlugs = new Set();
 	const sources = files.map((name) => {
 		const file = path.join(directory, name);
@@ -100,7 +99,34 @@ export function readSources(date) {
 		if (!Array.isArray(value.sources)) {
 			throw new Error(`${displayFile}: sources 必须是数组`);
 		}
+		const scan = value.scan ?? {};
+		const checkedSources = scan.checkedSources ?? [];
+		const failedSources = scan.failedSources ?? [];
+		const candidateCount = scan.candidateCount == null ? value.sources.length : Number(scan.candidateCount);
+		if (!Array.isArray(checkedSources) || checkedSources.some((item) => typeof item !== "string")) {
+			throw new Error(`${displayFile}: scan.checkedSources 必须是字符串数组`);
+		}
+		if (!Array.isArray(failedSources) || failedSources.some((item) => typeof item !== "string")) {
+			throw new Error(`${displayFile}: scan.failedSources 必须是字符串数组`);
+		}
+		if (!Number.isInteger(candidateCount) || candidateCount < 0) {
+			throw new Error(`${displayFile}: scan.candidateCount 必须是非负整数`);
+		}
+		if (updatedAt && checkedSources.length === 0) {
+			throw new Error(`${displayFile}: 更新后的页面必须记录 scan.checkedSources`);
+		}
+		if (candidateCount < value.sources.length) {
+			throw new Error(`${displayFile}: scan.candidateCount 不能少于最终 sources 数量`);
+		}
+		const secondPass = scan.secondPass === true;
+		if (updatedAt && value.sources.length === 0 && !secondPass) {
+			throw new Error(`${displayFile}: 0 来源时必须完成二次补搜并设置 scan.secondPass=true`);
+		}
+		if (updatedAt && !content.includes("采集状态")) {
+			throw new Error(`${displayFile}: 更新后的正文必须包含“采集状态”`);
+		}
 
+		const fileUrls = new Set();
 		const sources = value.sources.map((item, index) => {
 			const prefix = `sources[${index}]`;
 			const title = requiredString(item.title, `${prefix}.title`, displayFile);
@@ -111,10 +137,10 @@ export function readSources(date) {
 			} catch {
 				throw new Error(`${displayFile}: ${prefix}.url 不是有效的 HTTP(S) URL`);
 			}
-			if (seenUrls.has(url)) {
-				throw new Error(`${displayFile}: 重复链接 ${url}`);
+			if (fileUrls.has(url)) {
+				throw new Error(`${displayFile}: 页面内重复链接 ${url}`);
 			}
-			seenUrls.add(url);
+			fileUrls.add(url);
 			if (!content.includes(url)) {
 				throw new Error(`${displayFile}: content 中没有引用 ${prefix}.url`);
 			}
@@ -143,6 +169,12 @@ export function readSources(date) {
 			order,
 			name,
 			sources,
+			scan: {
+				checkedSources: checkedSources.map((item) => item.trim()).filter(Boolean),
+				failedSources: failedSources.map((item) => item.trim()).filter(Boolean),
+				candidateCount,
+				secondPass,
+			},
 		};
 	});
 

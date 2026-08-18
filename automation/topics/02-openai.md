@@ -8,7 +8,7 @@ Scan the previous 24 hours, with coding, Agents and the developer platform as th
 
 - Tier 1, search and show every item separately: Codex CLI; VS Code/JetBrains integrations; Codex cloud/remote tasks and PR agents; ChatGPT agentic mode; current official agent-building products; Responses API; Agents SDK Python/TypeScript; Assistants API deprecation/migration status; Realtime API; current official GPT, reasoning and Codex model families.
 - Tier 2, search all and combine no-update rows: current official browser/Operator capabilities; Desktop apps; GPTs/GPT Store; Canvas; Sora/video; GPT Image/DALL·E; voice; Connectors/MCP.
-- Tier 3, include only with verified updates: Enterprise, Business, Edu, Gov, Science, safety and industry offerings.
+- Tier 3, list verified updates plus relevant unverified-date candidates in a clearly labeled watchlist: Enterprise, Business, Edu, Gov, Science, safety and industry offerings.
 
 Treat listed names and versions as search terms, not facts. Verify names, availability, aliases, migrations and deprecations using current OpenAI official documentation before reporting. Mark unverified names `未确认` and existing products without 24h news `无新增`.
 
@@ -16,4 +16,4 @@ Treat listed names and versions as search terms, not facts. Verify names, availa
 
 Prioritize official OpenAI news/index/research pages, developers/platform docs and changelogs, ChatGPT release notes, model/deprecation docs, official GitHub repositories/releases, and official OpenAI/Developer/Codex accounts. Then sample recent Reddit (r/OpenAI, r/ChatGPT, r/ChatGPTCoding, r/singularity), Hacker News, X, YouTube and reputable developers/podcasts.
 
-The compact Markdown page contains: Tier 1 table; Tier 2 table; Tier 3 if relevant; official updates newest first; Love; Hate; 0–100 sentiment with confidence/evidence; historical trend only with a repository baseline; at most two organic comparisons with Claude/Cursor/Copilot/Gemini CLI/Kimi/QoderWork/Devin/Jules; source links. Official announcements do not count as positive sentiment.
+The Markdown page contains: Tier 1 table; Tier 2 table; Tier 3; official updates newest first; Love; Hate; sentiment with confidence/evidence; comparisons; `日期未确认`; `观察池`; source links; and `采集状态`. Include useful community and secondary-source candidates with explicit evidence labels instead of silently dropping them. Official announcements do not count as positive sentiment.

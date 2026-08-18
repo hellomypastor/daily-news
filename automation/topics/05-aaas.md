@@ -4,7 +4,7 @@ Write `aaas.json` with order `50`, slug `aaas`, title `AaaS（Agent-as-a-Service
 
 ## Definition
 
-AaaS here means a service that hosts or manages Agent execution, asynchronous tasks, environments, lifecycle, orchestration, observability, enterprise access or remote coding work. A model API alone is MaaS; generic cloud infrastructure alone is PaaS. Exclude items that do not demonstrate an Agent service layer.
+AaaS here means a service that hosts or manages Agent execution, asynchronous tasks, environments, lifecycle, orchestration, observability, enterprise access or remote coding work. A model API alone is MaaS; generic cloud infrastructure alone is PaaS. Keep adjacent MaaS/PaaS signals in a separate `邻近信号观察池` instead of silently excluding them.
 
 ## Coverage
 
@@ -13,8 +13,8 @@ AaaS here means a service that hosts or manages Agent execution, asynchronous ta
 - China: ByteDance Coze/Volcano/Doubao/Trae/Seed; Alibaba Bailian/Qoder/Tongyi/Quark; Tencent Yuanbao/Hunyuan/Cloud; Baidu AgentBuilder/Comate; Zhipu, Moonshot/Kimi, MiniMax, DeepSeek and credible startups.
 - Events: launches, beta/GA, hosted runtime, SDK/skills, pricing, quotas, enterprise adoption, revenue, funding/M&A and meaningful open-source/engineering updates.
 
-Use a primary 24h window. A separate 24–72h watchlist is allowed only for important items and must show dates. Product names are search terms until confirmed by official evidence. Leaks/rumors require at least two independent credible sources, must be labeled unconfirmed, and cannot be presented as product launches.
+Use a primary 24h window and include all relevant 24–72h items in a watchlist. Keep older or undated candidates in `日期未确认` or `观察池`. Product names are search terms until confirmed. One-source leaks/rumors may appear only in `未证实传闻`, labeled with source count and never presented as product launches.
 
-Apply global URL ownership: do not repeat links already used in Claude, OpenAI, open-source or industry pages. Synthesize the AaaS implication without duplicating those URLs.
+Relevant links from Claude, OpenAI, open-source or industry pages may be repeated; add `详见对应专题页` and explain the AaaS implication.
 
-The compact Markdown page contains: 3–5 top items; remote/cloud Agent execution; overseas vendors; China with ByteDance highlighted; AaaS vs MaaS/PaaS classification notes where needed; brief trends; source links. If no significant 24h developments exist, say `今日无显著动态` rather than filling space. End with `今日扫描完成，共 N 条动态，重点：...`.
+The Markdown page contains: top items; remote/cloud Agent execution; overseas vendors; China with ByteDance highlighted; AaaS vs MaaS/PaaS notes; `日期未确认`; `未证实传闻`; `邻近信号观察池`; trends; source links; and `采集状态`. If verified 24h developments are empty, say so but still list relevant candidates and complete a second search pass. End with `今日扫描完成，共 N 条动态，重点：...`.

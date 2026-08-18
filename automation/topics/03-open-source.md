@@ -8,11 +8,12 @@ Inspect Hacker News front/newest and recent Algolia submissions; GitHub daily tr
 
 ## Time and selection
 
-- Top highlights: original publication must be within the previous 48 hours; open each original page and verify the date twice.
+- Verified highlights: prioritize original publications from the previous 48 hours and verify dates where possible.
 - GitHub Trending: today's listing establishes current popularity, not today's publication. Record stars and daily growth only when displayed.
 - Old article resurfacing: original older than seven days but discussed on HN in the previous 24 hours; isolate it and show original date plus current HN points/comments.
-- Unverified date: isolate and explain; never place it in highlights.
+- Unverified date: retain in `日期未确认` with the reason and available discovery evidence.
+- Older, weakly related, marketing-heavy or otherwise borderline candidates: retain compactly in `观察池` with a status label instead of discarding them.
 
-Select 5–10 genuinely technical highlights when available, focusing on AI/LLM/Agent/RAG/inference/evaluation/developer tools. Filter marketing, SEO summaries and weakly related projects. Do not fill a quota.
+Lead with 5–10 genuinely technical highlights when available, focusing on AI/LLM/Agent/RAG/inference/evaluation/developer tools, then list remaining relevant candidates compactly. Do not present marketing or SEO claims as verified technical facts.
 
-The compact Markdown page contains: overview; verified highlights; GitHub Trending; HN discussion; papers/research; resurfaced articles; unverified timing; source links. Each item includes title, what it is, why it matters, source, original URL and verified date/status.
+The Markdown page contains: overview; verified highlights; GitHub Trending; HN discussion; papers/research; resurfaced articles; `日期未确认`; `观察池`; source links; and `采集状态`. Each item includes title, what it is, why it matters, source, original URL and verified date/status.
