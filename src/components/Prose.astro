@@ -9,8 +9,13 @@ import Comment from "$/components/Comment.svelte";
 
 <style>
   .prose {
-    @apply max-w-none
+    @apply max-w-4xl
         /* Size Modifiers: https://github.com/tailwindlabs/tailwindcss-typography#size-modifiers */
         /* Color Themes: https://github.com/tailwindlabs/tailwindcss-typography#color-modifiers */;
+  }
+  .prose :global(table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
   }
 </style>

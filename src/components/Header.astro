@@ -6,21 +6,19 @@ import SearchBtn from "./SearchBtn.svelte";
 ---
 
 <header class="header">
-  <div class="header__logo">
-    <a href="/" class="avatar">
-      <img class="header__logo-img" src="/assets/logo.png" alt="Astro logo" />
-    </a>
-  </div>
-  <div class="header__meta flex-1">
-    <h2 class="header__title">
+  <div class="header__identity">
+    <p class="header__eyebrow">AI / Agent intelligence</p>
+    <h1 class="header__title">
       <a href="/">{SITE.name}</a>
-    </h2>
-    <div class="header__meta-more flex">
-      <p class="header__desc">
-        {SITE.description}
-      </p>
-      <nav class="header__nav flex">
-        <ul class="header__ref-list">
+    </h1>
+    <p class="header__desc">{SITE.description}</p>
+  </div>
+  <div class="header__tools">
+    <a href="/" class="header__mark" aria-label="Go to today's briefings">
+      <img src="/assets/logo.png" alt="" />
+    </a>
+    <nav aria-label="Site tools">
+      <ul class="header__ref-list">
           <li>
             <SearchBtn client:visible />
           </li>
@@ -45,26 +43,62 @@ import SearchBtn from "./SearchBtn.svelte";
           <li>
             <ModeSwitcherBtn client:visible />
           </li>
-        </ul>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <style>
   .header {
-    @apply flex gap-4 border-b py-3 /* border-gray-200 dark:border-gray-700 - check styles/global.css */;
+    @apply flex items-end justify-between gap-6 border-b py-8;
+    border-color: var(--line-strong);
   }
-  .header__logo-img {
-    @apply w-20 h-20 overflow-hidden;
+  .header__identity {
+    min-width: 0;
+  }
+  .header__eyebrow {
+    @apply mb-2 text-xs font-semibold uppercase tracking-[0.2em];
+    color: var(--signal-orange);
   }
   .header__title {
-    @apply text-4xl font-extrabold md:text-5xl text-theme-primary dark:text-theme-dark-primary;
+    @apply text-5xl font-semibold leading-none md:text-7xl;
+    color: var(--ink);
+    font-family: var(--font-display);
+    letter-spacing: -0.045em;
   }
   .header__desc {
-    @apply text-xl flex-1 dark:text-gray-200;
+    @apply mt-3 text-sm md:text-base;
+    color: var(--muted);
+  }
+  .header__tools {
+    @apply flex shrink-0 items-center gap-5;
+  }
+  .header__mark img {
+    @apply h-14 w-14 object-contain md:h-16 md:w-16;
+    filter: saturate(0.8);
   }
   .header__ref-list {
-    @apply flex gap-3 text-gray-400;
+    @apply flex gap-3;
+    color: var(--muted);
+  }
+  .header__ref-list a {
+    @apply transition-colors;
+  }
+  .header__ref-list a:hover {
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .header {
+      @apply items-start py-6;
+    }
+    .header__title {
+      @apply text-4xl;
+    }
+    .header__mark {
+      display: none;
+    }
+    .header__desc {
+      max-width: 18rem;
+    }
   }
 </style>

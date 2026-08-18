@@ -8,13 +8,11 @@ import SearchModal from './SearchModal.svelte'
 
 ---
 <BaseLayout>
-    <br class="my-4"/>
     <Header/>
     <Nav/>
     <div class="content">
         <slot />
     </div>
-    <br class="my-4"/>
     <Footer/>
     <Portal>
             <SearchModal client:load/>
@@ -23,6 +21,7 @@ import SearchModal from './SearchModal.svelte'
 
 <style>
     .content {
-        min-height: 580px
+        min-height: 580px;
+        padding: 2.5rem 0 5rem;
     }
 </style>

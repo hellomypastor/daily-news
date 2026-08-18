@@ -12,9 +12,17 @@ const {
   asCard = false,
 } = Astro.props;
 const { day, year } = getCalendarDateParts(post.date);
+const topics = [
+  { key: "claude", label: "Claude", index: "01" },
+  { key: "openai", label: "OpenAI", index: "02" },
+  { key: "open-source", label: "Open source", index: "03" },
+  { key: "ai-industry", label: "Industry", index: "04" },
+  { key: "aaas", label: "AaaS", index: "05" },
+];
+const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
 ---
 
-<div class={`post-preview ${asCard && "post-preview--card"}`}>
+<article class={`post-preview ${asCard && "post-preview--card"}`} data-topic={topic?.key}>
   <div class="post-preview__date-box">
     <div class="post-preview__date">
       <span class="post-preview__date__day"
@@ -28,17 +36,22 @@ const { day, year } = getCalendarDateParts(post.date);
     </div>
   </div>
   <div class="flex-1">
+    {topic && <p class="post-preview__topic"><span>{topic.index}</span>{topic.label}</p>}
     <h4 class="post-preview__title dark:text-theme-dark-primary">
       <a href={`/${"blog"}/${slug}`} title={post.title}>{post.title}</a>
     </h4>
     <p class="post-preview__desc">
       {post.description}
     </p>
+    <a class="post-preview__read" href={`/blog/${slug}`} aria-label={`Read ${post.title}`}>
+      Read briefing <span aria-hidden="true">→</span>
+    </a>
   </div>
-</div>
+</article>
 <style>
   .post-preview {
-    @apply flex gap-6;
+    @apply flex gap-6 border-t py-7;
+    border-color: var(--line);
   }
   .post-preview--card {
     @apply flex flex-col-reverse gap-4 sm:w-72 md:w-60 lg:w-64;
@@ -56,18 +69,62 @@ const { day, year } = getCalendarDateParts(post.date);
     @apply text-left flex flex-row gap-1;
   }
   .post-preview__date__day {
-    @apply text-6xl font-semibold text-gray-500 dark:text-gray-300;
+    @apply text-5xl font-semibold;
+    color: var(--ink);
+    font-family: var(--font-display);
   }
   .post-preview--card .post-preview__date__day {
     @apply text-4xl;
   }
   .post-preview__date__month-n-year {
-    @apply text-gray-400;
+    @apply text-xs uppercase tracking-[0.12em];
+    color: var(--muted);
+  }
+  .post-preview__topic {
+    @apply mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em];
+    color: var(--signal-cyan);
+  }
+  .post-preview__topic span {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    color: var(--muted);
   }
   .post-preview__title {
-    @apply text-2xl font-semibold text-theme-primary dark:text-theme-dark-primary /* this doesn't works here */ hover:underline mb-2;
+    @apply mb-2 text-2xl font-semibold leading-tight;
+    color: var(--ink);
+    font-family: var(--font-display);
   }
+  .post-preview__title a:hover { text-decoration: underline; text-decoration-color: var(--signal-orange); text-underline-offset: 4px; }
   .post-preview__desc {
-    @apply text-lg leading-6 line-clamp-2 dark:text-white hyphens-auto;
+    @apply line-clamp-3 text-sm leading-6;
+    color: var(--muted);
+  }
+  .post-preview__read {
+    @apply mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em];
+    color: var(--ink);
+  }
+  .post-preview__read:hover { color: var(--signal-orange); }
+  .post-preview--card {
+    @apply w-auto gap-4 border-0 p-5 sm:w-auto md:w-auto lg:w-auto;
+    min-height: 21rem;
+    background: var(--paper-raised);
+    box-shadow: inset 0 3px 0 var(--topic-color, var(--line-strong));
+  }
+  .post-preview--card[data-topic="claude"] { --topic-color: #d46b3c; }
+  .post-preview--card[data-topic="openai"] { --topic-color: #278b78; }
+  .post-preview--card[data-topic="open-source"] { --topic-color: #8a65aa; }
+  .post-preview--card[data-topic="ai-industry"] { --topic-color: #3978a8; }
+  .post-preview--card[data-topic="aaas"] { --topic-color: #b88a2e; }
+  .post-preview--card .post-preview__date__day {
+    display: none;
+  }
+  .post-preview--card .post-preview__date__month-n-year {
+    @apply text-[0.68rem];
+  }
+  @media (max-width: 1023px) {
+    .post-preview--card { min-height: 17rem; }
+  }
+  @media (max-width: 639px) {
+    .post-preview { @apply gap-4; }
+    .post-preview__date-box { @apply w-16; }
   }
 </style>

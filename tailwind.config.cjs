@@ -65,25 +65,31 @@ module.exports = {
               color: colors.primary,
             },
             h2: {
-              color: colors.primary,
-              margin: "1em 0em",
-              textAlign: "center",
-              textDecoration: "underline",
-              underlineColor: "#fcaf17",
-              textDecorationThickness: 4,
-              textDecorationColor: "#fcaf17",
-              textUnderlineOffset: 7,
+              color: "var(--ink)",
+              marginTop: "2.25em",
+              marginBottom: "0.75em",
+              paddingTop: "0.65em",
+              borderTop: "1px solid var(--line-strong)",
+              fontFamily: "var(--font-display)",
+              letterSpacing: "-0.02em",
             },
             h3: {
-              color: colors.secondary,
-              margin: "1em 0em",
-              // borderLeftWidth: 4,
-              // borderColor: colors.primary,
-              // borderLeftOffset: 4,
-              // paddingLeft: 6,
+              color: "var(--ink)",
+              margin: "1.5em 0 0.5em",
+              fontFamily: "var(--font-display)",
             },
             p: {
-              margin: "0.5em 0em",
+              margin: "0.75em 0em",
+              lineHeight: "1.8",
+            },
+            table: {
+              fontSize: "0.86em",
+            },
+            thead: {
+              borderBottomColor: "var(--line-strong)",
+            },
+            "tbody tr": {
+              borderBottomColor: "var(--line)",
             },
             ".prose blockquote": {
               fontStyle: "normal", // 设置引用内部的文字不斜体

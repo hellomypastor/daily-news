@@ -24,17 +24,34 @@ const todaysPosts = latestDate
   : [];
 
 const content = {
-  title: "Today's Briefings",
+  title: "Today's intelligence",
   description: latestDate
-    ? `${latestDate} · ${todaysPosts.length} focused AI & Agent reports`
+    ? `${latestDate} · Five independent views across the AI and Agent landscape.`
     : "No briefings have been published yet.",
 };
 ---
 
 <DefaultPageLayout {content}>
+  <div class="edition-bar">
+    <span>Latest edition</span>
+    <strong>{latestDate}</strong>
+    <span>{todaysPosts.length} reports</span>
+    <span>Rolling 24-hour window</span>
+  </div>
   {todaysPosts.length > 0 ? (
-    <PostPreviewList posts={todaysPosts} />
+    <PostPreviewList posts={todaysPosts} mode="signal" />
   ) : (
     <p>No briefings have been published yet.</p>
   )}
 </DefaultPageLayout>
+
+<style>
+  .edition-bar {
+    @apply mb-8 grid gap-2 border-y py-3 text-xs uppercase tracking-[0.12em] sm:grid-cols-4;
+    color: var(--muted);
+    border-color: var(--line);
+  }
+  .edition-bar strong {
+    color: var(--ink);
+  }
+</style>

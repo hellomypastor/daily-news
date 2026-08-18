@@ -5,7 +5,7 @@ import PostPreview from "./PostPreview.astro";
 interface Props {
   posts: CollectionEntry<"blog">[];
   heading?: string;
-  mode?: "row" | "col";
+  mode?: "row" | "col" | "signal";
 }
 
 const { posts, heading, isWeekly, mode = "col" } = Astro.props;
@@ -37,7 +37,7 @@ const sortedPosts = [...posts].sort(
     sortedPosts.map((post) => (
       <PostPreview
         post={post}
-        asCard={mode === "row" ? true : false}
+        asCard={mode === "row" || mode === "signal"}
         isWeekly={isWeekly}
       />
     ))
@@ -57,6 +57,11 @@ const sortedPosts = [...posts].sort(
     @apply flex-row flex-wrap md:px-6 lg:px-0 gap-12 md:gap-8 sm:gap-10 lg:gap-12;
   }
   .post-preview__list--col {
-    @apply flex-col gap-12;
+    @apply flex-col gap-0;
+  }
+  .post-preview__list--signal {
+    @apply grid grid-cols-1 gap-px border sm:grid-cols-2 lg:grid-cols-5;
+    border-color: var(--line);
+    background: var(--line);
   }
 </style>

@@ -16,9 +16,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ink specific styles */
+:root {
+	--paper: #f7f9fb;
+	--paper-raised: #ffffff;
+	--ink: #14213d;
+	--muted: #667085;
+	--line: #dbe2ea;
+	--line-strong: #aebbc9;
+	--signal-orange: #e05a33;
+	--signal-cyan: #087e8b;
+	--font-display: Georgia, "Times New Roman", serif;
+}
+
+html.dark {
+	--paper: #111820;
+	--paper-raised: #17212b;
+	--ink: #edf3f8;
+	--muted: #9aabba;
+	--line: #2b3a48;
+	--line-strong: #4b6072;
+	--signal-orange: #ff7956;
+	--signal-cyan: #51c5cf;
+}
+
+html {
+	background: var(--paper);
+	color: var(--ink);
+	scroll-behavior: smooth;
+}
+
+body {
+	background:
+		linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), var(--line) calc(100% - 1px)) top left / 24px 24px,
+		var(--paper);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+	outline: 3px solid color-mix(in srgb, var(--signal-orange) 55%, transparent);
+	outline-offset: 3px;
+}
+
+::selection {
+	background: color-mix(in srgb, var(--signal-cyan) 25%, transparent);
+}
+
 .ink-h {
-    @apply inline-block text-sm font-bold uppercase drop-shadow-lg py-4 tracking-wider opacity-40 dark:opacity-70
+    @apply inline-block py-4 text-xs font-bold uppercase tracking-[0.18em];
+	color: var(--muted);
 }
 
 ::-webkit-scrollbar {
@@ -26,11 +72,13 @@
 }
 
 ::-webkit-scrollbar-track {
-	@apply bg-theme-dark-primary dark:bg-theme-primary bg-opacity-20;
+	background: var(--paper);
 }
 
 ::-webkit-scrollbar-thumb {
-	@apply bg-theme-primary dark:bg-theme-dark-primary bg-opacity-20 dark:bg-opacity-100 shadow-2xl rounded-full;
+	background: var(--line-strong);
+	border: 3px solid var(--paper);
+	border-radius: 999px;
 }
 
 /** Code block **/

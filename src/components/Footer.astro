@@ -9,16 +9,25 @@ const currentYear = new Intl.DateTimeFormat("en", {
 
 <footer class="footer">
   <nav class="nav">
-    <div>
-      &copy; {currentYear} <a
+    <div class="footer__inner">
+      <p>&copy; {currentYear} <a
         href={SITE.githubUrl}
         title={`${SITE.name}'s Github URL'`}>{SITE.name}</a
-      >
+      ></p>
+      <p>Five signals. One rolling view of AI.</p>
     </div>
   </nav>
 </footer>
 <style>
   .footer {
-    @apply py-6 border-t;
+    @apply border-t py-7 text-xs uppercase tracking-[0.1em];
+    border-color: var(--line-strong);
+    color: var(--muted);
+  }
+  .footer__inner {
+    @apply flex flex-col justify-between gap-2 sm:flex-row;
+  }
+  .footer a:hover {
+    color: var(--signal-orange);
   }
 </style>
