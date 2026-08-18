@@ -6,7 +6,7 @@
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "THEME_KEY=ferry astro dev",
-    "build": "THEME_KEY=ferry astro build --force",
+    "build": "THEME_KEY=ferry astro build",
     "check": "astro check",
     "news:publish": "node ./scripts/news/publish.mjs",
     "news:check": "node ./scripts/news/check.mjs",
