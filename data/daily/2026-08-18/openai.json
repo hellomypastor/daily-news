@@ -4,6 +4,12 @@
   "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
   "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
   "order": 20,
+  "image": {
+    "url": "https://i.ytimg.com/vi/eXBFnfrt2gU/maxresdefault.jpg",
+    "alt": "CNBC 对 OpenAI 总裁 Greg Brockman 的视频访谈画面",
+    "sourceUrl": "https://www.youtube.com/watch?v=eXBFnfrt2gU",
+    "caption": "题图来源：CNBC Television / YouTube"
+  },
   "updatedAt": "2026-08-18T13:15:40+08:00",
   "scan": {
     "checkedSources": [

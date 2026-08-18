@@ -22,6 +22,12 @@
   "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
   "order": 20,
   "updatedAt": "2026-08-18T13:30:00+08:00",
+  "image": {
+    "url": "https://example.com/original-image.jpg",
+    "alt": "图片所展示内容的准确描述",
+    "sourceUrl": "https://example.com/original-article",
+    "caption": "图片来源：发布方名称"
+  },
   "scan": {
     "checkedSources": ["OpenAI News", "OpenAI GitHub", "Reddit r/OpenAI"],
     "failedSources": ["X 搜索：页面未登录不可访问"],
@@ -45,6 +51,8 @@
 ## Rules
 
 - `content` 是最终页面正文，不包含 YAML frontmatter；可以使用 Markdown 表格和小节。
+- `image` 可选。优先选择本页已引用的官方原文、论文或项目页面自带的题图/OpenGraph 图；`sourceUrl` 必须对应 `sources` 中的 URL。必须填写准确 `alt` 和来源说明，禁止使用搜索结果缩略图、图库水印图、头像或无法确认出处的图片。没有合适图片时省略，不要硬凑。
+- 只引用公开可访问的 HTTP(S) 图片；不得使用登录态 URL、临时签名 URL、`data:` URL 或社交平台用户上传的争议图片。
 - `updatedAt` 是本页发生实质内容变化的上海时间，格式固定为 `YYYY-MM-DDTHH:mm:ss+08:00`。仅推进扫描时间但内容无变化时不得改写它。
 - `sources` 记录正文引用的来源；每个 URL 必须实际出现在 `content` 中，同一页面内 URL 唯一。
 - 同一 URL 可以跨主题出现；行业与 AaaS 页面引用 Claude/OpenAI 来源时注明“详见专题页”。

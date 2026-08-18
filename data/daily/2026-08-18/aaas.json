@@ -4,6 +4,12 @@
   "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
   "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
   "order": 50,
+  "image": {
+    "url": "https://cdn.sanity.io/images/bj34pdbp/migration/e76e2cbc56e0c02edda0e7b4292229a0cafdc670-2048x1071.jpg?w=1200&h=630&fit=max&fm=jpg",
+    "alt": "Replit black-box penetration testing product illustration",
+    "sourceUrl": "https://replit.com/blog/black-box-pen-tests",
+    "caption": "题图来源：Replit"
+  },
   "updatedAt": "2026-08-18T11:07:35+08:00",
   "scan": {
     "checkedSources": [

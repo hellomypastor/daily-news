@@ -77,6 +77,26 @@ export function readSources(date) {
 			throw new Error(`${displayFile}: title 不能超过 100 个字符`);
 		}
 		const description = optionalString(value.description, "description", displayFile);
+		let image = null;
+		if (value.image != null) {
+			if (typeof value.image !== "object" || Array.isArray(value.image)) {
+				throw new Error(`${displayFile}: image 必须是对象`);
+			}
+			image = {
+				url: requiredString(value.image.url, "image.url", displayFile),
+				alt: requiredString(value.image.alt, "image.alt", displayFile),
+				sourceUrl: requiredString(value.image.sourceUrl, "image.sourceUrl", displayFile),
+				caption: requiredString(value.image.caption, "image.caption", displayFile),
+			};
+			for (const [field, url] of [["image.url", image.url], ["image.sourceUrl", image.sourceUrl]]) {
+				try {
+					const parsed = new URL(url);
+					if (!["http:", "https:"].includes(parsed.protocol)) throw new Error();
+				} catch {
+					throw new Error(`${displayFile}: ${field} 不是有效的 HTTP(S) URL`);
+				}
+			}
+		}
 		const updatedAt = optionalString(value.updatedAt, "updatedAt", displayFile);
 		if (updatedAt && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(updatedAt)) {
 			throw new Error(`${displayFile}: updatedAt 必须使用 YYYY-MM-DDTHH:mm:ss+08:00 格式`);
@@ -158,11 +178,15 @@ export function readSources(date) {
 				tags: tags.map((tag) => tag.trim()).filter(Boolean),
 			};
 		});
+		if (image && !sources.some((item) => item.url === image.sourceUrl)) {
+			throw new Error(`${displayFile}: image.sourceUrl 必须对应 sources 中的一条原文 URL`);
+		}
 
 		return {
 			slug,
 			title,
 			description,
+			image,
 			updatedAt,
 			tags: pageTags.map((tag) => tag.trim()).filter(Boolean),
 			content,

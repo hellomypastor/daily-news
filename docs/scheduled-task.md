@@ -40,6 +40,8 @@ Use one local-project task to refresh five topics every three hours, maintain fi
 
 每个主题必须填写 scan：已检查来源、失败来源及原因、候选数量、是否二次补搜；正文末尾写“采集状态”。如果某主题最终 sources 为 0，必须扩大中英文关键词，改查备用入口、GitHub 与可信二手来源再搜索一次，并设置 `scan.secondPass=true`。二次补搜后仍为 0 才可提交空结果。
 
+每个主题在有合适素材时，从本页已引用的官方原文、论文或项目页面提取一张公开可访问的题图/OpenGraph 图，按 data/daily/README.md 填写 image.url、alt、sourceUrl 和 caption。优先官方发布配图、项目截图和视频封面；禁止生成图片、使用搜索结果缩略图、头像、图库水印图或无法确认出处的图片。没有可靠题图就省略 image，不得硬凑。
+
 五个主题检查完后，先运行 `git status --porcelain -- data/daily/YYYY-MM-DD`。如果当天五份 JSON 均已存在且没有实质变化，停止后续发布，不运行 publish/build，不创建空提交；最终明确报告“本轮无实质更新”。
 
 五份数据完成后执行：

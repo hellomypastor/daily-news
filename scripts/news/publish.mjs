@@ -21,6 +21,12 @@ for (const source of sources) {
 		`date: ${JSON.stringify(`${date}T00:00:00+08:00`)}`,
 		`updatedAt: ${JSON.stringify(source.updatedAt || `${date}T11:00:00+08:00`)}`,
 		`description: ${JSON.stringify(description)}`,
+		...(source.image ? [
+			`image: ${JSON.stringify(source.image.url)}`,
+			`imageAlt: ${JSON.stringify(source.image.alt)}`,
+			`imageSource: ${JSON.stringify(source.image.sourceUrl)}`,
+			`imageCaption: ${JSON.stringify(source.image.caption)}`,
+		] : []),
 		...(tags.length ? ["tags:", ...tags.map((tag) => `  - ${quote(tag)}`)] : ["tags: []"]),
 		"---",
 	].join("\n");

@@ -45,6 +45,11 @@ const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
     </p>
     <p class="post-preview__meta"><a href={`/blog/${slug}`}># read briefing</a> / {post.tags.slice(0, 4).join(", ")}</p>
   </div>
+  {post.image && (
+    <a class="post-preview__image" href={`/blog/${slug}`} aria-label={`Read ${post.title}`}>
+      <img src={post.image} alt={post.imageAlt || ""} loading="lazy" />
+    </a>
+  )}
 </article>
 <style>
   .post-preview {
@@ -97,8 +102,12 @@ const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
   }
   .post-preview__meta { @apply mt-2 text-xs; color: var(--muted); }
   .post-preview__meta a { color: var(--link); text-decoration: underline; }
+  .post-preview__image { @apply block shrink-0 self-start; width: 180px; }
+  .post-preview__image img { @apply h-auto w-full border object-cover; border-color: var(--line-strong); aspect-ratio: 3 / 2; }
   @media (max-width: 639px) {
-    .post-preview { @apply gap-4; }
+    .post-preview { @apply flex-col gap-3; }
     .post-preview__date-box { @apply w-16; }
+    .post-preview__image { @apply order-2 w-full; }
+    .post-preview__image img { aspect-ratio: 16 / 9; }
   }
 </style>

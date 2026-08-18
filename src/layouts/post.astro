@@ -115,10 +115,12 @@ const AUTHOR_AVATAR = content.authorImage
             <br />
           </>
         ) : (
-          <>
-            <img class="img__outer" src={content.image} alt={content.title} />
-            <br />
-          </>
+          <figure class="post__figure">
+            <img class="img__outer" src={content.image} alt={content.imageAlt || content.title} />
+            {(content.imageCaption || content.imageSource) && (
+              <figcaption>{content.imageSource ? <a href={content.imageSource}>{content.imageCaption || "查看图片来源"}</a> : content.imageCaption}</figcaption>
+            )}
+          </figure>
         )
       ) : (
         ""
@@ -172,8 +174,13 @@ const AUTHOR_AVATAR = content.authorImage
     }
 
     .img__outer {
-      @apply relative rounded-lg shadow-xl overflow-hidden;
+      @apply relative w-full border object-cover overflow-hidden;
+      border-color: var(--line-strong);
+      max-height: 34rem;
     }
+    .post__figure { @apply mb-8 max-w-4xl; }
+    .post__figure figcaption { @apply mt-2 text-xs; color: var(--muted); }
+    .post__figure figcaption a { color: var(--link); text-decoration: underline; }
     .img_gradient {
       @apply absolute z-10 w-full bottom-0 left-0 h-full bg-gradient-to-tr from-theme-primary dark:from-theme-dark-primary;
     }

@@ -4,6 +4,12 @@
   "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
   "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
   "order": 10,
+  "image": {
+    "url": "https://opengraph.githubassets.com/ba39eb316cf6cee1236ef56aad4550651b557c8e6ee7506b61d311063174410e/anthropics/claude-code/releases/tag/v2.1.234",
+    "alt": "Anthropic Claude Code GitHub repository social preview",
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+    "caption": "题图来源：Anthropic / GitHub"
+  },
   "updatedAt": "2026-08-18T13:16:18+08:00",
   "scan": {
     "checkedSources": [
