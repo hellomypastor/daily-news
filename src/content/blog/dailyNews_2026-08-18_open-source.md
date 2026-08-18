@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-18T00:00:00+08:00"
-updatedAt: "2026-08-18T10:15:59+08:00"
+updatedAt: "2026-08-18T13:20:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 tags:
   - "Agent"
@@ -20,13 +20,16 @@ tags:
   - "Data"
   - "Date Unverified"
   - "Developer Tools"
+  - "DGX Spark"
   - "Documentation"
   - "Edge AI"
   - "Embodied Agent"
   - "Evaluation"
   - "Go"
   - "GPU"
+  - "Harness"
   - "HN"
+  - "Image Generation"
   - "Inference"
   - "Infrastructure"
   - "Knowledge Graph"
@@ -39,6 +42,8 @@ tags:
   - "Python"
   - "Qwen"
   - "RAG"
+  - "Reinforcement Learning"
+  - "Routing"
   - "Rust"
   - "Scheduling"
   - "Security"
@@ -49,11 +54,12 @@ tags:
   - "Video"
   - "Vision"
   - "Workflow"
+  - "World Model"
 ---
 
 ## 概览
 
-高亮窗口：2026-08-16 10:10 至 2026-08-18 10:10（Asia/Shanghai）；HN 旧文再浮现窗口为最近 24 小时。本轮对 53 个初筛候选做原文、仓库元数据或论文条目复核，保留 30 个唯一来源 URL。新增信号主要来自五个 48 小时内创建的 Agent 工程仓库、三篇窗口内 arXiv 论文，以及 GPU 调度与 CI/CD 安全两篇原始技术文章。GitHub stars 与 HN 互动量是 2026-08-18 10:12–10:15 附近快照，只用于说明当时热度，不代表发布日或持续趋势。
+高亮窗口：2026-08-16 13:15 至 2026-08-18 13:15（Asia/Shanghai）；HN 旧文再浮现窗口为最近 24 小时。本轮对 60 个初筛候选做原文、仓库元数据或论文条目复核，保留 34 个唯一来源 URL。10:15 后的实质变化来自 Hugging Face Daily Papers 新出现的三篇 Agent 评测 / 工作流论文，以及一篇带完整环境、命令和限制说明的 Qwen 3.8 27B DGX Spark 推理实测；纯 stars 与 HN points 波动未触发条目改写。既有 GitHub stars 与 HN 互动量仍是 2026-08-18 10:12–10:15 附近快照，只用于说明当时热度，不代表发布日或持续趋势。
 
 ## 已核实高亮
 
@@ -96,8 +102,11 @@ tags:
 | [When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding](https://arxiv.org/abs/2608.16801) | 把 Agent、文件、消息与读写建模成时序网络；论文报告 1,902 次运行，并另做 244 次密封环境复验，用于分析团队规模、共享文件和 coordinator 角色 | arXiv v1：2026-08-18 00:57 +08:00 |
 | [TDD-Agent: Test-Driven Reasoning for Code Generation](https://arxiv.org/abs/2608.16742) | 先生成可执行测试，再以执行反馈同时迭代代码与测试；论文在 LiveCodeBench 与 RepoEval 上报告相对基线改进 | arXiv v1：2026-08-17 23:52 +08:00 |
 | [Security of Foundation-Model-Powered Embodied Agents](https://arxiv.org/abs/2608.16843) | 以“首个被攻破的信任边界”组织五层、十二类攻击面，并汇总攻击、防御与评测记录 | arXiv v1：2026-08-18 01:28 +08:00；综述结论尚待同行评议 |
+| [HarnessEval-W: Agentifying the Evaluation of Visual Worlds](https://arxiv.org/abs/2608.16859) | 根据具体评测问题拆分子任务、派生专用子 Agent，再由父 Agent 验证证据并形成可检查证据树；论文覆盖 18 个 world models、330 个案例 | arXiv v1：2026-08-18 01:43 +08:00；效果为作者自报 |
+| [ClawGym II: Exploring Black-Box RL on Agent Harness](https://arxiv.org/abs/2608.16798) | 在模型调用边界捕获复杂 harness 的轨迹，重建 prefix tree 后做 PPO/GRPO，并支持混合 harness 训练 | arXiv v1：2026-08-18 00:53 +08:00；Pass@1 增益尚待独立复现 |
+| [GenRouter: Unified Workflow Routing for Agentic Image Generation](https://arxiv.org/abs/2608.16721) | 把不同 agentic image pipeline 统一成可执行模板，再按需求、经验与 Pareto 过滤选择工作流 | arXiv v1：2026-08-17 23:36 +08:00；成本与延迟降幅为作者自报 |
 
-Hugging Face Daily Papers API 本轮可见的最新 paper 日期为 8 月 14 日，未把旧榜单条目伪装成 48 小时新品。
+Hugging Face Daily Papers API 本轮已出现上述 HarnessEval-W、ClawGym II 与 GenRouter；本页仍以 arXiv 原始条目核实标题、摘要和提交时间。
 
 ## 旧项目再浮现
 
@@ -112,6 +121,7 @@ Hugging Face Daily Papers API 本轮可见的最新 paper 日期为 8 月 14 日
 - **超出高亮窗但当前讨论活跃**：GPU Offload in Rust 原始提交早于 48 小时窗，HN 互动较高；保留在 HN 讨论，不提升为新品。
 - **高热度观点而非技术发布**：AI;DR 对 AI 摘要造成的信息污染提出批评；HN 讨论量很高，但没有可核实的软件、论文或测量方法。
 - **作者个案、尚未独立复现**：[Qwen3.8-27B: slower tokens, faster and better results](https://overbring.com/blog/2026-08-17-qwen3-8-27b-wall-clock/) 记录双 RTX 5060 Ti 上的本地 agentic coding 个案，作者报告约十分钟完成跨三个代码库的缺陷修复；正文也明确这是特定任务、量化与硬件配置下的经验，不应外推为通用性能结论。
+- **窗口内独立硬件实测**：[Running Qwen3.8-27B on DGX Spark](https://blog.kubesimplify.com/qwen3-8-27b-on-dgx-spark) 给出 llama.cpp、Ollama、vLLM、SGLang、FP8/GGUF/NVFP4 与 MTP 路径的命令和作者测量值；文章标注 2026-08-17 22:00 +08:00，结果受单台 DGX Spark、软件版本与量化配置约束。
 
 ## 来源链接
 
@@ -119,7 +129,7 @@ Hugging Face Daily Papers API 本轮可见的最新 paper 日期为 8 月 14 日
 
 ## 采集状态
 
-- **已检查来源**：HN 首页/newest/Algolia；GitHub Trending 全站、Python、TypeScript 与 GitHub API；arXiv；Hugging Face Daily Papers/Blog；Simon Willison；Wiz Research；Overbring Labs。
+- **已检查来源**：HN 首页/newest/Algolia；GitHub Trending 全站、Python、TypeScript 与 GitHub API；arXiv；Hugging Face Daily Papers/Blog；Simon Willison；Wiz Research；Overbring Labs；Kubesimplify。
 - **失败来源**：Scalar Engineering Medium 原文返回 HTTP 403，无法核实日期与全文；已通过 HN 条目保留发现时间和低互动证据。
-- **候选数量**：初筛 53 条；保留 30 个唯一来源 URL，覆盖高亮、Trending、HN、论文、再浮现、日期未确认与观察池。
+- **候选数量**：初筛 60 条；保留 34 个唯一来源 URL，覆盖高亮、Trending、HN、论文、再浮现、日期未确认与观察池。
 - **二次补搜**：未执行（`secondPass=false`）；本主题最终来源非 0。
