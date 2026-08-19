@@ -1,0 +1,338 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Open Source",
+    "LLM"
+  ],
+  "order": 30,
+  "updatedAt": "2026-08-20T01:19:00+08:00",
+  "image": {
+    "url": "https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/PYy1cufo9frwFjiHZLq2S.png",
+    "alt": "Liquid AI 的 LFM2.5 QAD 四比特量化模型文章配图",
+    "sourceUrl": "https://huggingface.co/blog/LiquidAI/qad",
+    "caption": "图片来源：Liquid AI / Hugging Face"
+  },
+  "scan": {
+    "checkedSources": [
+      "Hacker News 首页、newest 与 Algolia 最近 24 小时 AI/LLM/Agent/MCP/RAG/inference/open-source 七组检索；原始命中合计 700 条",
+      "GitHub Trending 日榜：全站、Python、TypeScript 共 47 行；仅记录页面明确显示的 stars today",
+      "GitHub Search/Repositories API：48 小时内 Agent、LLM、RAG、MCP、inference 五组各取前 10，共复核 50 条",
+      "arXiv submittedDate API：48 小时内 cs.AI、cs.CL、cs.LG、cs.SE 共 208 条，并逐项打开重点摘要",
+      "Hugging Face Daily Papers 100 条、Blog RSS 窗口内 4 条与原文",
+      "Simon Willison Atom feed 与窗口内原文",
+      "Modular、Liquid AI、IBM Research、Jeremy Morrell 等原始工程文章",
+      "窗口内新仓库与 HN 回流仓库的 GitHub API、README、许可证和创建时间"
+    ],
+    "failedSources": [
+      "GitHub Trending 没有结构化官方 API：改用公开 HTML，日增 stars 仅视为 01:13 榜单快照",
+      "GitHub 仓库宽口径搜索夹杂无关、规避订阅与游戏作弊仓库：只把可读 README、许可证及主题相关性通过复核的候选收入正文",
+      "Ornith-1.5 原文只显示 Aug. 2026、没有可核实日号：保留 HN 发现证据并列入日期未确认",
+      "部分新项目没有独立复现或成熟 release：项目方性能、安全与可用性主张均按自报证据或观察状态处理"
+    ],
+    "candidateCount": 1110,
+    "secondPass": false
+  },
+  "content": "## 概览\n\n技术高亮窗口为 2026-08-18 01:12 至 2026-08-20 01:12，HN 讨论/发现窗口为 2026-08-19 01:12 至 2026-08-20 01:12（Asia/Shanghai）。本轮首日扫描覆盖 HN 七组检索原始命中 700 条、GitHub 三类 Trending 47 行、五组新仓库检索 50 条、arXiv 208 条、Hugging Face Daily Papers 100 条以及 Blog/独立工程原文；粗筛候选共 1,110 条，最终保留 37 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。\n\n## 已核实高亮\n\n| 项目 / 文章 | 是什么 | 为什么重要 | 日期 / 证据状态 |\n|---|---|---|---|\n| [LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation](https://huggingface.co/blog/LiquidAI/qad) | Liquid AI 发布 LFM2.5 230M、350M、1.2B 与 2.6B 四档 QAD Q4_0 GGUF | 作者将 BF16、PTQ 与 QAD 在推理、指令、tool use、agentic 等评测上做五次重复，并测试 Mac、AMD 迷你机、Galaxy S26 Ultra 与树莓派；精度恢复和吞吐仍属项目方实验 | HF RSS：2026-08-19 21:48 +08:00；原文和公开配图可打开 |\n| [How Much Memory Does Your Agent Actually Need?](https://huggingface.co/blog/ibm-research/altk-evolve-hmm) | IBM Research 比较无记忆、全量指南与按任务检索指南等 Agent memory dosage | 把“记忆越多越好”改写为按基础模型能力校准记忆剂量的问题，并同时讨论准确率与成本；结论以作者实验为准 | HF RSS：2026-08-19 02:09 +08:00；原文可打开 |\n| [Mojo is now open source](https://www.modular.com/blog/mojo-open-source) | Modular 开放 Mojo 编译器、工具链与语言源码，采用 Apache-2.0 并含 LLVM 例外 | 此次范围不只标准库；官方给出 Bazel 源码构建与测试路径，同时说明编译器/工具链暂未接受外部贡献 | 官方结构化时间：2026-08-19 00:17 +08:00；原文可打开 |\n| [INXM // local](https://github.com/inxm-ai/inxm-local) | Rust 本地桌面应用让 LLM 先把意图编译为带类型、版本化的 plan，再由确定性执行器运行 | README 展示拓扑执行、逐步持久化、人工确认、失败修复和 MCP 管理，适合观察“模型编译、确定性运行”的 Agent 边界 | 仓库创建于 2026-08-19 03:09 +08:00；Apache-2.0 |\n| [Extensible Software in the Age of LLMs](https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/) | Jeremy Morrell 讨论 LLM 编程如何改变软件的长尾扩展方式 | 文章把 personal software、插件边界与安全/维护责任放在同一框架中；属于工程论证，不写成普遍产品结论 | 页面元数据：2026-08-18 08:00 +08:00 |\n\n## GitHub Trending\n\n01:13 的公开日榜相关项目包括：[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)（2,221 stars today）、[OpenViking](https://github.com/volcengine/OpenViking)（803）、[munder-difflin](https://github.com/chaitanyagiri/munder-difflin)（797）、[mattpocock/skills](https://github.com/mattpocock/skills)（1,214）、[Graphify](https://github.com/Graphify-Labs/graphify)（454）和 [Strix](https://github.com/usestrix/strix)（590）。这些数字只证明当天榜单热度，不代表今日创建、技术质量或独立采用；其中 munder-difflin 的仓库 API 未识别到许可证，因此不把它写成已确认许可证的开源项目。\n\n## HN 讨论\n\n| 讨论 | HN 时间与快照 | 证据解读 |\n|---|---|---|\n| [Mojo language now open-source](https://news.ycombinator.com/item?id=49358327) | 2026-08-19 15:47 +08:00；193 points / 95 comments | 指向 Modular 的 ModCon 公告；热度用于说明讨论，不替代官方发布时间和许可证核验 |\n| [Ornith-1.5](https://news.ycombinator.com/item?id=49362401) | 2026-08-19 22:48 +08:00；56 / 4 | 原始 [Ornith-1.5 文章](https://ornith.ai/ornith_1_5.html) 可读，但只显示月份，故模型规模和 benchmark 均按项目方自报且日期未确认 |\n| [OneCLI](https://news.ycombinator.com/item?id=49363710) | 2026-08-20 00:29 +08:00；14 / 0 | [当前仓库](https://github.com/onecli/onecli) 描述团队 Agent、隔离 sandbox、gateway 凭据注入与人工审批；仓库创建于 2026-03-08，属于旧项目今日回流 |\n| [Extensible Software in the Age of LLMs](https://news.ycombinator.com/item?id=49363668) | 2026-08-20 00:26 +08:00；12 / 4 | 讨论发生在 24 小时内，文章原日为 8 月 18 日 |\n| [Mathematics in the Age of AI](https://news.ycombinator.com/item?id=49362728) | 2026-08-19 23:14 +08:00；14 / 5 | [arXiv 论文](https://arxiv.org/abs/2608.16753) 是基于 ICM 公开演讲的观点文，讨论数学共同体目标与价值，不是模型能力 benchmark |\n| [INXM // local](https://news.ycombinator.com/item?id=49362974) | 2026-08-19 23:35 +08:00；4 / 3 | HN 发现落入讨论窗口；项目创建时间和功能仍以 GitHub 原仓库为准 |\n\n## 论文 / 研究\n\n- [On the Fragility of Self-Improving Agents](https://arxiv.org/abs/2608.18066)（arXiv v1：2026-08-19 01:55 +08:00）复跑两种 memory-based self-improvement 方法，指出多轮方差、任务顺序隐含 curriculum 与任务/环境欠规范会显著影响结论；改进 rubric 和环境反馈只能部分缩小差距。\n- [StagedWorkspace](https://arxiv.org/abs/2608.18050)（v1：2026-08-19 01:44 +08:00）把解析视图、原生文件、diff 与提交物绑定到版本和内容哈希，要求 knowledge-work Agent 遵守 workspace-state contract；分数均为论文作者实验。\n- [LEGO-RL](https://arxiv.org/abs/2608.17393)（v1：2026-08-19 13:34 +08:00）通过进程内 LLM proxy、trainer 端 log-prob 重算与 sandbox 防护连接原生 coding harness 和策略梯度训练；SWE-bench 结果属于作者复现管线。\n- [PTXBench](https://arxiv.org/abs/2608.17379)（v1：2026-08-19 13:14 +08:00）同时测 GPU kernel 的正确性、目标 PTX 指令实际执行与相对前沿库加速，作者发现执行指定指令并不等于具备竞争力的性能。\n- [Agent Lightning v1.0](https://arxiv.org/abs/2608.17528)（v1：2026-08-19 16:50 +08:00）聚焦 harness 拥有环境交互循环时的重分词、样本合并、advantage 和调度问题，并发布可复现 coding-agent RL 流程；增益数字为论文实验。\n- [HarnessRisk](https://arxiv.org/abs/2608.17597)（v1：2026-08-19 18:03 +08:00）以 128 个 sandbox case 覆盖配置、扩展、运行、持久状态、动作控制与事故恢复六阶段，强调识别风险并不自动意味着采取安全动作。\n\n## 旧项目回流\n\n以下仓库原始创建时间早于七天，但在 HN 最近 24 小时重新出现，因此不冒充本日发布：\n\n- [RelArena-α](https://github.com/PriorLabs/relarena) 创建于 2026-08-06、Apache-2.0，统一 RelBench v1 数据状态、调参和评估协议；README 明确称 alpha research code、非 production-ready。[HN](https://news.ycombinator.com/item?id=49363970) 于 2026-08-20 00:48 +08:00 出现，快照 2 / 0。\n- [Grove](https://github.com/alxshelepenok/grove) 创建于 2026-05-05、AGPL-3.0，以 checksummed lockfile、typed reasoning graph 和可证伪 evidence 约束长周期 coding Agent；绝对可复现等表述仍属项目方主张。[HN](https://news.ycombinator.com/item?id=49362786) 于 2026-08-19 23:19 +08:00 出现，2 / 0。\n- [android-remote-control-mcp](https://github.com/danielealbano/android-remote-control-mcp) 创建于 2026-02-11、MIT，把 Android 控制和文件能力暴露为本机 MCP server；PII 与 tunnel 安全性需独立审计。[HN](https://news.ycombinator.com/item?id=49362047) 于 22:23 出现，5 / 0。\n- [CrewCode](https://github.com/OnPoint-Dev-Tools/crewcode) 创建于 2026-08-07、Apache-2.0，用桌面界面协调多 Agent、Git worktree、会话和 review；跨平台成熟度仍以 README 为证据。[HN](https://news.ycombinator.com/item?id=49364088) 于 2026-08-20 00:56 +08:00 出现，1 / 0。\n- [NAEOS](https://github.com/NAEOS-foundation/naeos) 创建于 2026-07-09、Apache-2.0，将 YAML/JSON spec 解析为统一工程模型、DAG 任务与多语言生成结果；生成质量未独立复核。[HN](https://news.ycombinator.com/item?id=49363778) 于 2026-08-20 00:34 +08:00 出现，3 / 0。\n\n## 日期未确认\n\n- [Ornith-1.5 原文](https://ornith.ai/ornith_1_5.html) 只标示“Aug. 2026”，未提供可靠日号，不能硬判为 48 小时内发布；HN 发现时间已在上表记录。文章描述 397B MoE、35B MoE 与 9B dense 三档，以及自生成任务、harness 和 solution rollout 的训练闭环；所有 benchmark 对比均按项目方自报，等待模型卡、精确发布日期与独立评测交叉验证。\n\n## 观察池\n\n- [Let's Infer](https://github.com/letsinferlabs/letsinfer) 创建于 2026-08-19 04:19 +08:00、AGPL-3.0，尝试把 checkpoint revision、硬件契约、digest-pinned runtime、cache 兼容性和 benchmark evidence 打包为可复现实例；README 明确第一项公共 runtime 尚未 sealed，因此列观察池而不是成熟发布。\n- 新仓库搜索中出现规避订阅、游戏作弊和仅堆砌关键词的仓库；这些候选与本页技术选择无关或存在明显滥用风险，未作为来源。没有许可证、仅有营销页或只有项目方性能主张的候选，也没有被提升为已验证技术事实。\n\n## 来源链接\n\n来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 37 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。\n\n## 采集状态\n\n- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组原始命中 700 条；GitHub Trending 全站/Python/TypeScript 47 行；GitHub Search 五组 50 条；arXiv 48 小时四分类 208 条；Hugging Face Daily Papers 100 条、Blog 4 条；Simon Willison feed 与重点原文、README、许可证和时间元数据。\n- 失败/受限：GitHub Trending 无结构化官方 API；Ornith 原文缺精确日期；宽口径 GitHub 搜索噪声较多；新项目性能、安全和成熟度多缺少独立验证，均已在条目中降级标注。\n- 初始候选 1,110 条，保留 37 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。",
+  "sources": [
+    {
+      "title": "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation",
+      "url": "https://huggingface.co/blog/LiquidAI/qad",
+      "source": "Liquid AI / Hugging Face",
+      "publishedAt": "2026-08-19 21:48 +08:00",
+      "summary": "发布四档 LFM2.5 QAD Q4_0 GGUF，并给出多评测和多设备项目方实验。",
+      "tags": ["LLM", "Quantization", "Inference"]
+    },
+    {
+      "title": "How Much Memory Does Your Agent Actually Need?",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+      "source": "IBM Research / Hugging Face",
+      "publishedAt": "2026-08-19 02:09 +08:00",
+      "summary": "比较不同 Agent memory dosage 对准确率和成本的影响。",
+      "tags": ["Agent Memory", "Evaluation"]
+    },
+    {
+      "title": "Mojo🔥 is now open source!",
+      "url": "https://www.modular.com/blog/mojo-open-source",
+      "source": "Modular",
+      "publishedAt": "2026-08-19 00:17 +08:00",
+      "summary": "Mojo 编译器、工具链和语言源码以 Apache-2.0（含 LLVM 例外）开放。",
+      "tags": ["Mojo", "Compiler", "Open Source"]
+    },
+    {
+      "title": "inxm-ai/inxm-local",
+      "url": "https://github.com/inxm-ai/inxm-local",
+      "source": "GitHub",
+      "publishedAt": "2026-08-19 03:09 +08:00",
+      "summary": "将 LLM 用作 workflow compiler、确定性执行器负责运行的本地桌面项目。",
+      "tags": ["Agent", "Workflow", "Rust"]
+    },
+    {
+      "title": "Extensible Software in the Age of LLMs",
+      "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
+      "source": "Jeremy Morrell",
+      "publishedAt": "2026-08-18 08:00 +08:00",
+      "summary": "讨论 LLM 编程、个人软件与可扩展软件边界。",
+      "tags": ["LLM", "Software Design"]
+    },
+    {
+      "title": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "source": "GitHub Trending",
+      "publishedAt": "2024-03-11",
+      "summary": "AI 短视频工作流，日榜快照显示 2,221 stars today。",
+      "tags": ["AI", "Video", "Trending"]
+    },
+    {
+      "title": "volcengine/OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "source": "GitHub Trending",
+      "publishedAt": "2026-01-05 15:11 +08:00",
+      "summary": "Agent memory、RAG 和 skills 上下文数据库，日榜快照 803 stars today。",
+      "tags": ["Agent", "RAG", "Trending"]
+    },
+    {
+      "title": "chaitanyagiri/munder-difflin",
+      "url": "https://github.com/chaitanyagiri/munder-difflin",
+      "source": "GitHub Trending",
+      "publishedAt": "2026-05-31 23:25 +08:00",
+      "summary": "本地多 Agent harness，日榜快照 797 stars today；未识别到许可证。",
+      "tags": ["Agent", "Harness", "Trending"]
+    },
+    {
+      "title": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "source": "GitHub Trending",
+      "publishedAt": "2026-02-03 19:15 +08:00",
+      "summary": "工程 Agent skills 集合，日榜快照 1,214 stars today。",
+      "tags": ["Agent Skills", "Trending"]
+    },
+    {
+      "title": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "source": "GitHub Trending",
+      "publishedAt": "2026-04-03 23:49 +08:00",
+      "summary": "把代码、文档和 schema 转为可查询知识图，日榜快照 454 stars today。",
+      "tags": ["Knowledge Graph", "Developer Tools", "Trending"]
+    },
+    {
+      "title": "usestrix/strix",
+      "url": "https://github.com/usestrix/strix",
+      "source": "GitHub Trending",
+      "publishedAt": "2025-08-06 05:28 +08:00",
+      "summary": "AI 渗透测试项目，日榜快照 590 stars today。",
+      "tags": ["Security", "Agent", "Trending"]
+    },
+    {
+      "title": "HN: The Mojo language is now open-source",
+      "url": "https://news.ycombinator.com/item?id=49358327",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 15:47 +08:00",
+      "summary": "Mojo 开源公告的 HN 讨论快照为 193 points / 95 comments。",
+      "tags": ["HN", "Mojo"]
+    },
+    {
+      "title": "Ornith-1.5: From Self-Scaffolding to Self-Improvement",
+      "url": "https://ornith.ai/ornith_1_5.html",
+      "source": "Ornith AI",
+      "publishedAt": "",
+      "summary": "介绍 Ornith-1.5 三档模型和自生成任务、harness、rollout 的训练闭环；日号未确认。",
+      "tags": ["LLM", "Agent", "Date Unverified"]
+    },
+    {
+      "title": "HN: Ornith-1.5",
+      "url": "https://news.ycombinator.com/item?id=49362401",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 22:48 +08:00",
+      "summary": "Ornith-1.5 原文的 HN 发现证据，快照 56 points / 4 comments。",
+      "tags": ["HN", "LLM"]
+    },
+    {
+      "title": "onecli/onecli",
+      "url": "https://github.com/onecli/onecli",
+      "source": "GitHub",
+      "publishedAt": "2026-03-08 18:38 +08:00",
+      "summary": "面向团队的隔离 Agent、gateway 凭据注入和审批平台。",
+      "tags": ["Agent", "Sandbox", "Security"]
+    },
+    {
+      "title": "HN: OneCLI",
+      "url": "https://news.ycombinator.com/item?id=49363710",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 00:29 +08:00",
+      "summary": "OneCLI 的 HN 回流证据，快照 14 points / 0 comments。",
+      "tags": ["HN", "Agent"]
+    },
+    {
+      "title": "HN: Extensible Software in the Age of LLMs",
+      "url": "https://news.ycombinator.com/item?id=49363668",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 00:26 +08:00",
+      "summary": "LLM 时代可扩展软件文章的 HN 讨论，快照 12 points / 4 comments。",
+      "tags": ["HN", "LLM"]
+    },
+    {
+      "title": "Mathematics in the age of AI",
+      "url": "https://arxiv.org/abs/2608.16753",
+      "source": "arXiv",
+      "publishedAt": "2026-08-17 23:59 +08:00",
+      "summary": "讨论 AI 研究能力假设下数学共同体的目标与价值。",
+      "tags": ["AI", "Mathematics", "Essay"]
+    },
+    {
+      "title": "HN: Mathematics in the Age of AI",
+      "url": "https://news.ycombinator.com/item?id=49362728",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 23:14 +08:00",
+      "summary": "数学与 AI 观点文的 HN 讨论，快照 14 points / 5 comments。",
+      "tags": ["HN", "AI", "Mathematics"]
+    },
+    {
+      "title": "HN: INXM local",
+      "url": "https://news.ycombinator.com/item?id=49362974",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 23:35 +08:00",
+      "summary": "INXM local 的 HN 发现证据，快照 4 points / 3 comments。",
+      "tags": ["HN", "Agent"]
+    },
+    {
+      "title": "On the Fragility of Self-Improving Agents",
+      "url": "https://arxiv.org/abs/2608.18066",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 01:55 +08:00",
+      "summary": "研究自改进 Agent 的多轮方差、任务顺序和欠规范问题。",
+      "tags": ["Agent", "Evaluation", "Research"]
+    },
+    {
+      "title": "StagedWorkspace: A Versioned Workspace for Knowledge-Work Agents",
+      "url": "https://arxiv.org/abs/2608.18050",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 01:44 +08:00",
+      "summary": "以版本和内容哈希绑定 Agent 的解析视图、原生文件、diff 与提交物。",
+      "tags": ["Agent", "Workspace", "Research"]
+    },
+    {
+      "title": "LEGO-RL: Harness-Native Reinforcement Learning for Coding Agents",
+      "url": "https://arxiv.org/abs/2608.17393",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 13:34 +08:00",
+      "summary": "连接原生 coding harness 与策略梯度训练的框架和作者实验。",
+      "tags": ["Coding Agent", "Reinforcement Learning"]
+    },
+    {
+      "title": "PTXBench",
+      "url": "https://arxiv.org/abs/2608.17379",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 13:14 +08:00",
+      "summary": "评测 LLM 使用架构特定 PTX 优化 GPU kernel 的正确性与性能。",
+      "tags": ["GPU", "LLM", "Benchmark"]
+    },
+    {
+      "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
+      "url": "https://arxiv.org/abs/2608.17528",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 16:50 +08:00",
+      "summary": "研究 harness 主导环境交互时的 Agent RL 训练挑战与复现流程。",
+      "tags": ["Agent", "Reinforcement Learning"]
+    },
+    {
+      "title": "HarnessRisk",
+      "url": "https://arxiv.org/abs/2608.17597",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 18:03 +08:00",
+      "summary": "覆盖 Agent harness 六个生命周期阶段的 128 案例安全 benchmark。",
+      "tags": ["Agent", "Safety", "Benchmark"]
+    },
+    {
+      "title": "PriorLabs/relarena",
+      "url": "https://github.com/PriorLabs/relarena",
+      "source": "GitHub",
+      "publishedAt": "2026-08-06 20:11 +08:00",
+      "summary": "统一 RelBench v1 数据状态、调参和评估协议的 alpha 研究框架。",
+      "tags": ["Relational Learning", "Benchmark"]
+    },
+    {
+      "title": "HN: RelArena-alpha",
+      "url": "https://news.ycombinator.com/item?id=49363970",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 00:48 +08:00",
+      "summary": "RelArena 旧项目回流证据，快照 2 points / 0 comments。",
+      "tags": ["HN", "Benchmark"]
+    },
+    {
+      "title": "alxshelepenok/grove",
+      "url": "https://github.com/alxshelepenok/grove",
+      "source": "GitHub",
+      "publishedAt": "2026-05-05 06:48 +08:00",
+      "summary": "以 typed graph、checksummed lockfile 和 evidence 约束长周期 coding Agent。",
+      "tags": ["Coding Agent", "Workflow"]
+    },
+    {
+      "title": "HN: Grove",
+      "url": "https://news.ycombinator.com/item?id=49362786",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 23:19 +08:00",
+      "summary": "Grove 旧项目回流证据，快照 2 points / 0 comments。",
+      "tags": ["HN", "Coding Agent"]
+    },
+    {
+      "title": "danielealbano/android-remote-control-mcp",
+      "url": "https://github.com/danielealbano/android-remote-control-mcp",
+      "source": "GitHub",
+      "publishedAt": "2026-02-11 23:17 +08:00",
+      "summary": "在 Android 手机本机运行的远程控制 MCP server。",
+      "tags": ["MCP", "Android", "Agent"]
+    },
+    {
+      "title": "HN: Android remote control MCP",
+      "url": "https://news.ycombinator.com/item?id=49362047",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 22:23 +08:00",
+      "summary": "Android MCP 项目回流证据，快照 5 points / 0 comments。",
+      "tags": ["HN", "MCP"]
+    },
+    {
+      "title": "OnPoint-Dev-Tools/crewcode",
+      "url": "https://github.com/OnPoint-Dev-Tools/crewcode",
+      "source": "GitHub",
+      "publishedAt": "2026-08-07 09:38 +08:00",
+      "summary": "协调多 coding Agent、Git worktree、会话与 review 的桌面工具。",
+      "tags": ["Coding Agent", "Developer Tools"]
+    },
+    {
+      "title": "HN: CrewCode",
+      "url": "https://news.ycombinator.com/item?id=49364088",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 00:56 +08:00",
+      "summary": "CrewCode 旧项目回流证据，快照 1 point / 0 comments。",
+      "tags": ["HN", "Coding Agent"]
+    },
+    {
+      "title": "NAEOS-foundation/naeos",
+      "url": "https://github.com/NAEOS-foundation/naeos",
+      "source": "GitHub",
+      "publishedAt": "2026-07-09 23:14 +08:00",
+      "summary": "把工程 spec 解析为统一模型、DAG 任务和多语言生成结果的平台。",
+      "tags": ["Agent", "Code Generation", "Specification"]
+    },
+    {
+      "title": "HN: NAEOS",
+      "url": "https://news.ycombinator.com/item?id=49363778",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 00:34 +08:00",
+      "summary": "NAEOS 旧项目回流证据，快照 3 points / 0 comments。",
+      "tags": ["HN", "Developer Tools"]
+    },
+    {
+      "title": "letsinferlabs/letsinfer",
+      "url": "https://github.com/letsinferlabs/letsinfer",
+      "source": "GitHub",
+      "publishedAt": "2026-08-19 04:19 +08:00",
+      "summary": "把模型、硬件、推理 runtime、cache 与证据打包为可复现实例；首个公共 runtime 尚未 sealed。",
+      "tags": ["Inference", "Runtime", "Watchlist"]
+    }
+  ]
+}

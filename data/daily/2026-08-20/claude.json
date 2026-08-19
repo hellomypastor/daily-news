@@ -1,0 +1,181 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-08-20T01:17:02+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom、Research 与 Claude Blog",
+      "Claude Help Center、Platform release notes、Cowork/Desktop changelog",
+      "Claude Status API 与事故详情页",
+      "Claude Code、Agent SDK TypeScript/Python、Claude Code Action、Skills、官方插件目录 GitHub",
+      "Reddit r/ClaudeAI、r/ClaudeCode、r/Anthropic",
+      "Hacker News、X/ClaudeDevs、YouTube"
+    ],
+    "failedSources": [
+      "X/ClaudeDevs：公开时间线无法稳定读取原帖时间与互动数",
+      "Reddit JSON API：四个原帖入口均返回 403，改用公开搜索快照与原帖 URL",
+      "YouTube：未找到可稳定核验为窗口内发布的相关视频",
+      "Hacker News：未找到窗口内具备原始证据的新 Claude 条目"
+    ],
+    "candidateCount": 23,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n扫描窗口：2026-08-19 01:14 至 2026-08-20 01:14（Asia/Shanghai）。本轮核实到 Claude Code v2.1.235、Agent SDK TypeScript v0.3.235、Agent SDK Python v0.2.140、Claude Code Action v1.0.195，以及 Claude Code 周限额活动延期。官方状态页还记录了两起在窗口内完成处置的模型性能事件，其中 Opus 5 / Haiku 4.5 事故发生并解决于本窗口。官方插件仓库有密集版本指针同步，但这只证明目录元数据变化，不等同于第三方插件发布新能力。\n\n## Tier 1\n\n| 产品 | 状态 |\n|---|---|\n| Claude Code CLI | [v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235) 于 04:38 发布：增加可选拼写检查，修复 LSP 重连导致整段提示缓存失效、权限对话框误授权、后台云会话资源占用及多项 TUI / Remote Control 问题。官方[周限额活动](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)于 04:04 更新为延长至 8 月 31 日；只提高周限额 50%，不改变 5 小时限额。 |\n| VS Code 集成 | v2.1.235 修复多个 Claude 面板恢复或重载后焦点自行跳转；另有[连续编辑使用陈旧 diff 基线](https://github.com/anthropics/claude-code/issues/87943)的单用户、has repro 报告，未获官方修复确认。 |\n| JetBrains 集成 | 无独立官方新增；本轮只检出低信息量功能请求，未提升为动态。 |\n| Managed Agents：sessions | 无新增发布。 |\n| Managed Agents：webhooks | 无新增发布。 |\n| Managed Agents：environments | 无新增发布。 |\n| Managed Agents：memory stores | 无新增发布。 |\n| Skills | 无官方 Skills 仓库新增提交；观察到 Claude Code 的 hook、skill 与权限相关用户报告，均不写成官方缺陷事实。 |\n| marketplaces | [官方插件目录](https://github.com/anthropics/claude-plugins-official/commits/main/)与[知识工作插件目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)同步 Sentry CLI、Appwrite、Wix、Datadog、DataRobot、Exa、TinyFish、Carta 等版本指针；属于目录维护，不代表所指向项目在本页已核实有新功能。 |\n| Claude Developer Platform | 无窗口内独立发布说明。 |\n| Agent SDK | [TypeScript v0.3.235](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235)对齐 Claude Code 2.1.235；[Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)增加 MCP 2.x 并存、subagent 文本转发、结构化 ResultError、字符串 prompt 的权限回调与父 tool-use 关联恢复。 |\n| Cowork | [Desktop / Cowork changelog](https://claude.com/docs/cowork/changelog)仅给 8 月 18 日日期，列有 Research 消息排队、跨会话消息、权限提示、MCP 启动与 Intel Mac 启动等修复；时分无法确认，归入“日期未确认”。 |\n| Design | 无窗口内可核实发布。 |\n| Tag / @Claude sessions | [Claude Tag CI/CD 值班案例](https://claude.com/blog/ai-ci-cd-on-call)公开日期为 8 月 18 日、页面显示 8 月 19 日修改但无时分；其 Slack 持久记忆、Skills、MCP、Remote 与子 Agent 流程列入“日期未确认”，不宣称是本窗口新品。 |\n| 当前 Sonnet 编码模型 | 无模型发布；前一起跨窗口事故最初涉及多模型，最终状态更新只确认 Opus 5 的实际影响，故不把 Sonnet 5 写成已确认受影响。 |\n| 当前 Opus 编码模型 | [两起官方状态事件](https://status.anthropic.com/incidents/hkcw95k7r0f4)均涉及 Opus 5；最近一起在 17:42–19:02 处置完毕。 |\n| 当前 Haiku 编码模型 | 同一 17:42–19:02 [状态事件](https://status.anthropic.com/incidents/hkcw95k7r0f4)确认 Haiku 4.5 请求错误升高并已解决。 |\n\n## Tier 2\n\n| 组合产品 | 状态 |\n|---|---|\n| Chrome / 浏览器 Agent | 无官方发布；Issue 搜索出现连接、视口和浏览器工具问题报告，但多为零评论单账户样本，留在候选层而不写成普遍故障。 |\n| Desktop / Preview | Desktop/Cowork 变更日志只有日期、没有时分，列入“日期未确认”；Preview 无独立新增。 |\n| Marketplace / Connectors / Plugins | 官方目录有版本指针同步，未把元数据变更外推成第三方能力更新。 |\n| 当前官方创意 / 视频模型 | 无窗口内新公告；不根据社区昵称或猜测补造型号。 |\n| Voice Mode | 无新增。 |\n| Microsoft 365 集成 | 无新增。 |\n\n## Tier 3\n\n安全方向没有新官方产品公告，但 Claude Code v2.1.235 包含权限对话框和跨会话消息尺寸等修复；[Stop hook 回归报告](https://github.com/anthropics/claude-code/issues/87972)、[只读 cwd 令 sandboxed Bash 无法恢复](https://github.com/anthropics/claude-code/issues/87935)均带 has repro，后者还有 reproduced 标签，仍只是 GitHub 用户报告。Science 方向，[Claude Science 产品指南](https://claude.com/blog/the-claude-science-product-guide)和[蛋白设计与分析化学研究](https://www.anthropic.com/research/Claude-accelerates-protein-design)公开日期为 8 月 18 日；研究页内部元数据在窗口内更新，但公开页面未披露具体改动，因此仅作较旧内容/邻近信号，不写成当天新研究。金融服务、生命科学以外的医疗、法律、政府、非营利、教育和客服未发现窗口内新官方公告。\n\n## 官方更新\n\n- **Opus 5 / Haiku 4.5 性能事故已解决（17:42–19:02）**：[Claude Status](https://status.anthropic.com/incidents/hkcw95k7r0f4)确认两模型请求错误升高，18:33 进入监控，19:02 宣布解决；未披露根因。\n- **官方插件目录同步（01:55–21:08）**：[通用目录](https://github.com/anthropics/claude-plugins-official/commits/main/)和[知识工作目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)出现多轮版本指针提交；这是可核实的仓库维护，不是第三方发布结论。\n- **Agent SDK Python v0.2.140（04:58）**：[发布说明](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)正式打包 MCP 1.x/2.x 并存、subagent 文本转发、结构化错误和权限回调等更新。\n- **Claude Code Action v1.0.195（04:40）**：[发布页](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195)只提供与 v1.0.194 的完整比较链接，没有单独功能声明。\n- **Agent SDK TypeScript v0.3.235（04:39）**：[发布说明](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235)称与 Claude Code v2.1.235 对齐。\n- **Claude Code v2.1.235（04:38）**：[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)覆盖拼写检查、缓存、权限、后台云会话、VS Code 焦点和终端交互修复。\n- **Claude Code 周限额活动延期（帮助页 04:04 更新）**：[官方帮助页](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)确认符合条件的 Pro、Max、Team 与旧席位制 Enterprise 用户，Claude Code 周限额提高 50% 延长至 8 月 31 日。\n- **前一起多模型性能事件完成处置（03:01）**：[状态页](https://status.anthropic.com/incidents/q7txxvbsftgq)显示事件始于窗口前的 00:20，最终确认 Opus 5 实际影响为 00:11–02:23，03:01 解决；因解决状态落入窗口而保留。\n\n## Love\n\n- [额度延期社区帖](https://www.reddit.com/r/ClaudeAI/comments/1vrzmx9/anthropic_extends_50_limit_increase_to_aug_31/)把延长至月底视为短期利好；公开搜索快照约 3 票，互动很低，且回复仍包含对额度和 Fable 可用性的抱怨，因此只能作为弱正向样本。\n- 官方发布不计入 Love；本轮未发现能够同时核验时间、互动数与实际效果的高置信正向独立样本。\n\n## Hate\n\n- [Opus 5 / Haiku 4.5 事故讨论枢纽](https://www.reddit.com/r/ClaudeAI/comments/1vshrj8/discussion_hub_for_new_claude_incident_degraded/)转录官方时间线，公开搜索快照约 4 票；回复抱怨连续事故。样本小且自选，只作情绪旁证，事故事实仍以状态页为准。\n- Claude Code Issue 中保留四个复现信息较强的负向候选：[Stop hook 回归](https://github.com/anthropics/claude-code/issues/87972)、[长会话 prompt cache 间歇失配](https://github.com/anthropics/claude-code/issues/87966)、[VS Code 陈旧 diff 基线](https://github.com/anthropics/claude-code/issues/87943)、[只读 cwd sandbox 卡死](https://github.com/anthropics/claude-code/issues/87935)。其中用量数字、受影响范围和根因均来自报告者，未获 Anthropic 确认。\n\n## 情绪\n\n**偏负向，低置信度。** 依据是同日两起完成处置的状态事件、低互动事故讨论及带复现标签的 GitHub 报告；正向信号主要是周限额活动延期。样本来自自选社区与 Issue，且 Reddit JSON API 无法读取，不能外推总体用户口碑。\n\n## 对比\n\n社区回复中有人把 Claude Code 与 Codex 等工具并列，讨论额度与故障时切换工具；本轮没有找到受控测试、统一工作负载或可复验成本数据，因此不做“谁更好”的事实结论。\n\n## 日期未确认\n\n- [Claude Tag CI/CD 值班案例](https://claude.com/blog/ai-ci-cd-on-call)发布日为 8 月 18 日、页面显示 8 月 19 日修改，但未提供时分或修改差异；只确认案例内容，不确认它是本窗口新增。\n- [Desktop / Cowork changelog](https://claude.com/docs/cowork/changelog)的 v1.32885.1 只标注 8 月 18 日，无法判定是否落入本窗口。\n- [Claude Science 产品指南](https://claude.com/blog/the-claude-science-product-guide)只标 8 月 18 日；[Anthropic 研究页](https://www.anthropic.com/research/Claude-accelerates-protein-design)可见窗口内内部更新时间，但未披露版本差异，均作为邻近信号。\n- 两个 Reddit 原帖的精确发帖时分未能通过 JSON API 核实，publishedAt 留空；搜索结果只支持它们在 8 月 19 日相关讨论中出现。\n\n## 未证实传闻\n\n本轮没有发现同时具备可追溯链接与最低限度上下文的新型号或发布日期传闻；不根据“性能变差意味着新模型将发布”等社区影射补造结论。\n\n## 观察池\n\n- 四个 GitHub Issue 均有 has repro 或 reproduced 等标签，但仍属于用户提交，等待维护方复现、关闭说明或 release note 后再改变证据等级。\n- 周限额延期已由官方帮助页证实；关于“会永久化”或额度计量方式变化的社区猜测没有官方依据，继续留在观察层。\n- Fable 5 帮助页本轮被搜索引擎标成近期更新，但页面自身 `dateModified` 为 7 月 20 日，未作为当天候选保留。\n\n## 来源\n\n- [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)\n- [Claude Code 周限额活动](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)\n- [Agent SDK TypeScript v0.3.235](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235)\n- [Agent SDK Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)\n- [Claude Code Action v1.0.195](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195)\n- [官方插件目录](https://github.com/anthropics/claude-plugins-official/commits/main/)\n- [知识工作插件目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)\n- [Opus 5 / Haiku 4.5 性能事故](https://status.anthropic.com/incidents/hkcw95k7r0f4)\n- [前一起多模型性能事件](https://status.anthropic.com/incidents/q7txxvbsftgq)\n- [Claude Tag CI/CD 值班案例](https://claude.com/blog/ai-ci-cd-on-call)\n- [Claude Science 产品指南](https://claude.com/blog/the-claude-science-product-guide)\n- [蛋白设计与分析化学研究](https://www.anthropic.com/research/Claude-accelerates-protein-design)\n- [Desktop / Cowork changelog](https://claude.com/docs/cowork/changelog)\n- [Reddit 事故讨论](https://www.reddit.com/r/ClaudeAI/comments/1vshrj8/discussion_hub_for_new_claude_incident_degraded/)\n- [Reddit 额度延期讨论](https://www.reddit.com/r/ClaudeAI/comments/1vrzmx9/anthropic_extends_50_limit_increase_to_aug_31/)\n- [Stop hook 回归 Issue](https://github.com/anthropics/claude-code/issues/87972)\n- [prompt cache 失配 Issue](https://github.com/anthropics/claude-code/issues/87966)\n- [VS Code 陈旧 diff Issue](https://github.com/anthropics/claude-code/issues/87943)\n- [只读 cwd Bash Issue](https://github.com/anthropics/claude-code/issues/87935)\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Research、Claude Blog、Help Center、Platform / Cowork 文档、Status API、Claude Code / Agent SDK / Code Action / Skills / 官方插件 GitHub、Reddit 三个社区、HN、X 与 YouTube；Tier 1–3 逐项搜索。\n- 失败：X 公开时间线无法稳定读取；Reddit JSON API 返回 403；YouTube 无可核时新视频；HN 无窗口内新 Claude 条目。\n- 初始候选：23 条；保留来源：19 条；二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.235",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.235",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-08-19 04:38 +08:00",
+      "summary": "新增可选拼写检查，并修复缓存、权限、后台云会话、VS Code 焦点与终端交互问题。",
+      "tags": ["Claude Code", "CLI", "VS Code"]
+    },
+    {
+      "title": "Claude Code May–August 2026 weekly limits promotion",
+      "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+      "source": "Claude Help Center",
+      "publishedAt": "2026-08-19 04:04 +08:00（页面更新时间）",
+      "summary": "Claude Code 周限额提高 50% 的活动延长至 2026 年 8 月 31 日，5 小时限额不变。",
+      "tags": ["Claude Code", "Usage Limits"]
+    },
+    {
+      "title": "Claude Agent SDK TypeScript v0.3.235",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-08-19 04:39 +08:00",
+      "summary": "TypeScript Agent SDK 对齐 Claude Code v2.1.235。",
+      "tags": ["Agent SDK", "TypeScript"]
+    },
+    {
+      "title": "Claude Agent SDK Python v0.2.140",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-08-19 04:58 +08:00",
+      "summary": "增加 MCP 2.x、subagent 文本转发、结构化错误与权限回调等能力。",
+      "tags": ["Agent SDK", "Python", "MCP"]
+    },
+    {
+      "title": "Claude Code Action v1.0.195",
+      "url": "https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-08-19 04:40 +08:00",
+      "summary": "发布页仅提供与 v1.0.194 的完整比较链接。",
+      "tags": ["Claude Code Action", "GitHub Actions"]
+    },
+    {
+      "title": "anthropics/claude-plugins-official commits",
+      "url": "https://github.com/anthropics/claude-plugins-official/commits/main/",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-08-19 01:55–21:08 +08:00（多次提交）",
+      "summary": "官方插件目录在窗口内同步多项第三方项目版本指针。",
+      "tags": ["Plugins", "Marketplace"]
+    },
+    {
+      "title": "anthropics/knowledge-work-plugins commits",
+      "url": "https://github.com/anthropics/knowledge-work-plugins/commits/main/",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-08-19 01:57–21:07 +08:00（多次提交）",
+      "summary": "知识工作插件目录同步 Wix、Datadog、DataRobot、Exa、TinyFish 与 Carta 等指针。",
+      "tags": ["Plugins", "Knowledge Work"]
+    },
+    {
+      "title": "Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
+      "url": "https://status.anthropic.com/incidents/hkcw95k7r0f4",
+      "source": "Claude Status",
+      "publishedAt": "2026-08-19 17:42 +08:00",
+      "summary": "Opus 5 与 Haiku 4.5 请求错误升高，19:02 已解决。",
+      "tags": ["Claude Opus", "Claude Haiku", "Incident"]
+    },
+    {
+      "title": "Degraded performance for multiple models",
+      "url": "https://status.anthropic.com/incidents/q7txxvbsftgq",
+      "source": "Claude Status",
+      "publishedAt": "2026-08-19 00:20 +08:00（03:01 解决）",
+      "summary": "事件始于窗口前，最终确认 Opus 5 实际影响并在窗口内完成处置。",
+      "tags": ["Claude Opus", "Incident"]
+    },
+    {
+      "title": "How Claude Tag serves as Anthropic’s first responder for CI/CD failures",
+      "url": "https://claude.com/blog/ai-ci-cd-on-call",
+      "source": "Claude Blog",
+      "publishedAt": "2026-08-18（8 月 19 日修改，时分未公开）",
+      "summary": "Anthropic 介绍 Claude Tag、Skills、MCP、Remote 与子 Agent 的内部 CI/CD 值班流程。",
+      "tags": ["Claude Tag", "CI/CD", "日期未确认"]
+    },
+    {
+      "title": "The Claude Science product guide",
+      "url": "https://claude.com/blog/the-claude-science-product-guide",
+      "source": "Claude Blog",
+      "publishedAt": "2026-08-18（时分未公开）",
+      "summary": "Claude Science beta 的产品指南；因时间不完整作为邻近信号保留。",
+      "tags": ["Claude Science", "日期未确认"]
+    },
+    {
+      "title": "How Claude is accelerating protein design and analytical chemistry",
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "source": "Anthropic Research",
+      "publishedAt": "2026-08-18（窗口内页面更新，差异未披露）",
+      "summary": "官方研究页讨论蛋白设计和分析化学；公开日期早于窗口且修订差异未知。",
+      "tags": ["Science", "Research", "观察池"]
+    },
+    {
+      "title": "Desktop / Cowork changelog",
+      "url": "https://claude.com/docs/cowork/changelog",
+      "source": "Claude Documentation",
+      "publishedAt": "2026-08-18（时分未公开）",
+      "summary": "v1.32885.1 列出 Research 消息排队与多项 Desktop/Cowork 修复，精确时间无法确认。",
+      "tags": ["Cowork", "Desktop", "日期未确认"]
+    },
+    {
+      "title": "Discussion Hub for Claude Opus 5 and Haiku 4.5 incident",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1vshrj8/discussion_hub_for_new_claude_incident_degraded/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "",
+      "summary": "低互动事故讨论，转录官方时间线并出现对连续事故的负向回复；精确发帖时间未核实。",
+      "tags": ["Community", "Hate", "日期未确认"]
+    },
+    {
+      "title": "Anthropic extends 50% limit increase to Aug 31",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1vrzmx9/anthropic_extends_50_limit_increase_to_aug_31/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "",
+      "summary": "低互动额度延期讨论，正负回复混合；精确发帖时间未核实。",
+      "tags": ["Community", "Usage Limits", "日期未确认"]
+    },
+    {
+      "title": "Stop hook no longer fires on stream-stall-terminated turns",
+      "url": "https://github.com/anthropics/claude-code/issues/87972",
+      "source": "Claude Code GitHub Issues",
+      "publishedAt": "2026-08-19 22:13 +08:00",
+      "summary": "带 has repro 与 regression 标签的用户报告；尚无官方修复确认。",
+      "tags": ["Claude Code", "Hooks", "观察池"]
+    },
+    {
+      "title": "Prompt cache lookup fails intermittently mid-session",
+      "url": "https://github.com/anthropics/claude-code/issues/87966",
+      "source": "Claude Code GitHub Issues",
+      "publishedAt": "2026-08-19 21:57 +08:00",
+      "summary": "带 has repro 的长会话缓存成本报告，数字仅代表报告者环境。",
+      "tags": ["Claude Code", "Prompt Cache", "观察池"]
+    },
+    {
+      "title": "VS Code panel sequential edits use a stale diff snapshot",
+      "url": "https://github.com/anthropics/claude-code/issues/87943",
+      "source": "Claude Code GitHub Issues",
+      "publishedAt": "2026-08-19 20:34 +08:00",
+      "summary": "带 has repro 的 VS Code diff 基线用户报告，尚未获官方确认。",
+      "tags": ["Claude Code", "VS Code", "观察池"]
+    },
+    {
+      "title": "Sandboxed Bash wedges when cwd is read-only",
+      "url": "https://github.com/anthropics/claude-code/issues/87935",
+      "source": "Claude Code GitHub Issues",
+      "publishedAt": "2026-08-19 20:07 +08:00",
+      "summary": "带 has repro 与 reproduced 标签的 Linux sandbox 用户报告，尚无修复发布。",
+      "tags": ["Claude Code", "Sandbox", "观察池"]
+    }
+  ]
+}
