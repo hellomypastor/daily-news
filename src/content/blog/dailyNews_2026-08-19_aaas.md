@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T07:27:13+08:00"
+updatedAt: "2026-08-19T10:26:27+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Microsoft Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -55,12 +55,14 @@ tags:
   - "Date Unverified"
   - "Deep Agents"
   - "Deep Agents Code"
+  - "DeepSeek Harness"
   - "Development Signal"
   - "Discovery"
   - "Docker"
   - "Durable Job"
   - "Durable Workflow"
   - "Enterprise"
+  - "Environment Policy"
   - "Evaluation"
   - "External Agent"
   - "Foundry"
@@ -71,6 +73,7 @@ tags:
   - "Harness"
   - "Hosted Session"
   - "Huawei Cloud"
+  - "Kubernetes"
   - "LangSmith"
   - "Lifecycle"
   - "Long-running Task"
@@ -129,13 +132,14 @@ tags:
   - "Volcengine"
   - "Watchlist"
   - "WorkflowAgent"
+  - "Workspace Policy"
 ---
 
 ## 今日概览
 
-主窗口：2026-08-18 07:20:00 至 2026-08-19 07:20:00（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 07:20:00 至 2026-08-18 07:20:00。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
+主窗口：2026-08-18 10:12:17 至 2026-08-19 10:12:17（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 10:12:17 至 2026-08-18 10:12:17。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
 
-主窗口内最明确的正式 AaaS 更新包括 Microsoft Agent Framework .NET 1.18.0，以及 04:11 后新增的 Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。Microsoft AG-UI 连续性、MiddlewareFailure，Codex 异步消息/托管配置/Guardian fail-closed，Google ADK 视频模态和 OpenSandbox FastPath 仍是主分支开发或运行时邻近信号，不等同于云端 rollout；Claude、Codex 相关分别详见对应专题页。
+主窗口内最明确的正式 AaaS 更新仍包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。07:20 后新增的 Codex 异步用户消息工具、环境 MCP 策略与工作区认证限制，veADK DeepSeek Harness 沙箱信息，以及 OpenSandbox 容器 securityContext 修复都只是主分支或预发布工程信号，不等同于云端 rollout；Claude、Codex 相关分别详见对应专题页。
 
 ## 重点动态
 
@@ -148,6 +152,7 @@ tags:
 7. **Codex 0.148.0 转为稳定发布。** [官方 release](https://github.com/openai/codex/releases/tag/rust-v0.148.0)于 06:26 发布，发行说明汇总 gRPC code-mode sessions、持久线程恢复、远程 exec 与审批/Guardian 等控制面改动；发布页不证明 Codex cloud 已同步启用，**详见 OpenAI 专题页**。
 8. **Claude 补强后台与跨会话执行。** [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)降低后台 cloud session 事件流开销、限制过大跨会话消息并统一 Remote Control 企业网关检查；[Agent SDK Python v0.2.140](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.140)加入 subagent 文本转发、结构化错误、MCP 2.x 与取消支持，**详见 Claude 专题页**。
 9. **Microsoft 强化连续性与 fail-closed。** [AG-UI run continuity](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561)持久化 checkpoint 所有权；[MiddlewareFailure](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)让策略失败终止整批工具调用并结清 service-managed conversation 的悬空调用。两项均未进入新 release。
+10. **07:20 后控制面继续收紧异步沟通、认证与环境边界。** Codex 主分支加入[异步用户消息工具](https://github.com/openai/codex/commit/71dbf72b0576f9e7be1ef28d275bc79ece6d4b6c)、[header 认证工作区限制](https://github.com/openai/codex/commit/b537d5a0970f9d3153b1e647e2b42deed32555e0)、[hook MCP 连接复用](https://github.com/openai/codex/commit/d35e5495f991508409ff30e38db8dbe49d565570)与[环境 MCP 策略](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)；均未进入稳定 release 或证明云端启用，**详见 OpenAI 专题页**。
 
 ## 远程 / 云端 Agent 执行
 
@@ -163,6 +168,7 @@ tags:
 | Claude Code Remote Control | Desktop/VS Code 与手机、网页联动 | 权限、模型、文件与 effort 跨端同步 | 官方 release、主窗口内；详见 Claude 专题页 |
 | OpenViking durable source job | task_id、持久队列、后台下载/解析/向量化 | 异步任务可恢复与状态可查 | 官方主分支 commit；未证明托管发布 |
 | Codex 0.148.0 | gRPC code-mode、持久线程、远程 exec 与审批控制面 | 稳定 CLI / app-server 发行版连接多种远程执行能力 | 官方 release；未证明 Codex cloud rollout；详见 OpenAI 专题页 |
+| Codex 异步消息 / 环境 MCP 策略 | turn 内异步用户更新、当前 MCP 连接集、环境级工具过滤 | 长任务可持续汇报，同时将托管环境与工作区策略下沉到执行控制面 | 主分支 commits；尚未进入稳定 release；详见 OpenAI 专题页 |
 | Claude Code / Agent SDK | 后台 cloud session、跨会话消息、Remote Control、subagent/MCP | 后台任务资源、远程接入和嵌套 Agent 流更可控 | 官方 release；详见 Claude 专题页 |
 | Microsoft AG-UI / MiddlewareFailure | checkpoint 所有权与 fail-closed 工具批次 | 恢复连续性与策略失败后的会话结清 | 主分支 commits；尚未发布 |
 | Google ADK | Live resumption handle、后台 tool task 回收 | 会话恢复与运行结束边界 | 官方 release；未证明 Vertex/Jules 同步发布 |
@@ -172,6 +178,7 @@ tags:
 
 ### OpenAI 控制面开发信号（尚非产品发布）
 
+- **07:20–10:12 新增。** [异步用户消息工具](https://github.com/openai/codex/commit/71dbf72b0576f9e7be1ef28d275bc79ece6d4b6c)让根 Agent 在 turn 继续运行时发出不回填模型上下文的用户可见更新；[header 认证工作区限制](https://github.com/openai/codex/commit/b537d5a0970f9d3153b1e647e2b42deed32555e0)拒绝缺失或不允许的 ChatGPT workspace；[hook MCP 连接复用](https://github.com/openai/codex/commit/d35e5495f991508409ff30e38db8dbe49d565570)避免 hook 等待重连并按更短 timeout 执行；[环境 MCP 策略](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)把环境过滤应用到工具暴露、OAuth、遥测和 Skill 依赖。同期 [0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1)为无功能说明的预发布；这些证据均不证明 Codex cloud rollout，**详见 OpenAI 专题页**。
 - **04:11 后新增。** [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)是稳定 release，但发布页只证明 CLI/app-server 发行版；[异步消息 delivery 元数据](https://github.com/openai/codex/commit/fb356f3d2c9fa05f9b06771f8e3c877ca66ed330)让不结束当前 turn 的用户可见消息在历史、重放与 schema 中保留标记；[托管配置参与项目发现](https://github.com/openai/codex/commit/6ec012668b0decdd4506e376f0553816ab684e67)把 MDM/managed-file 信任与根目录规则纳入 app-server 和远程 TUI；[Guardian v2 分类失败关闭](https://github.com/openai/codex/commit/c97bd2dcb52a8120d96086fac49665452af3161b)在无法评分时回退到严格审批。三项 commits 均晚于 release tag，尚未发布，**详见 OpenAI 专题页**。
 - **01:12–04:11 新增。** [exec-server forward](https://github.com/openai/codex/commit/77e688960196dbc82bbeb00c844d2555a61925aa)连接认证 Noise relay 与既有 WebSocket 执行器；[remote plugin bundle 去重](https://github.com/openai/codex/commit/a998c7a1ce88a521d319a4f336e0a4bf36095637)限制同缓存根的后台同步；[permission profile 安全交集](https://github.com/openai/codex/commit/19d185fec8e1216ddd7b5522b331d69a6ecf3b1c)对文件、网络和拒绝路径取更严格策略；[Guardian v2 风险分类](https://github.com/openai/codex/commit/846a16852f6bcd155d552236d4d893749c6130e6)与[Node REPL 评审策略](https://github.com/openai/codex/commit/4a3e829c56415f8c1e69b18fbe74f4d81eaa926a)扩展默认评审和浏览器/Computer Use 审批上下文。五项均是 01:42–03:22 主分支 commits，没有正式 release 或云端启用范围，**详见 OpenAI 专题页**。
 - [memory workspace 拒绝符号链接](https://github.com/openai/codex/commit/a04940cb12cca43510aaf8d601ce42352f0902cb)、[PowerShell fail-closed lowerer](https://github.com/openai/codex/commit/bb701f1e8c8db884fa0cdafff4b8dcb1604f2fdd)、[自定义 provider 不继承环境认证](https://github.com/openai/codex/commit/e13c1d569d953ecac06a09cf5663fb3cd405636d)和[外部 Agent 迁移跳过重定向目标](https://github.com/openai/codex/commit/2a30972fcb646f9d6bfed6de6606aa3f0f8c3dd2)集中收紧文件、命令、认证与仓库边界。
@@ -211,6 +218,8 @@ tags:
 
 ## 中国厂商（字节跳动重点）
 
+- **火山 veADK DeepSeek Harness 沙箱信息。** [主分支 commit](https://github.com/volcengine/veadk-python/commit/f3eccd4c7d0084721c4fc826f1cb65df4308934d)在 Studio system info 中加入 `deepseek_harness` 与 snapshot 类型并固定沙箱工具展示顺序；这是 09:57 合入的前端/CLI 工程信号，没有 veADK 或 AgentKit 云端 rollout 证据。
+- **OpenSandbox 容器安全上下文。** [合并 PR](https://github.com/opensandbox-group/OpenSandbox/pull/1564)修复 BatchSandbox 从模板生成 Pod 时丢失容器级 `securityContext` 的问题；它改善 Kubernetes 沙箱隔离配置传递，但仍属于开源 PaaS/运行时主分支，不是阿里云 AaaS 发布。
 - **OpenSandbox FastPath。** [官方 commit](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)新增面向 fast-sandbox backend 的 FastPath v2 gRPC client、类型化错误与 RPC deadline；这是 Alibaba 发起的开源沙箱运行时主分支信号，不证明阿里云 AaaS 服务已 rollout。
 - **OpenViking 异步生命周期。** [durable source job commit](https://github.com/volcengine/OpenViking/commit/67603473a5a67c2ac7d4ccc6d22a8190004c5c39)把 `wait=false` 资源导入前移到持久入队，后台完成下载、解析、语义理解与向量化；[计划层级 commit](https://github.com/volcengine/OpenViking/commit/3590b47a25bd008068e35c8423149e3baa3203b8)为火山/BytePlus 增加 Agent/Coding Plan 和按量 API 入口。前者是异步控制面信号，后者更接近 MaaS 商业接入。
 - **OpenViking 0.4.15。** [官方 release](https://github.com/volcengine/OpenViking/releases/tag/v0.4.15)修复 xxhash 4.x 可导致向量未落库却误报任务完成的问题；这是本地记忆/召回可靠性更新。
@@ -218,7 +227,7 @@ tags:
 - **AgentKit 样例。** [Situla v0.1.1](https://github.com/bytedance/agentkit-samples/commit/df534245143acbd38ac68d4e6753ecf227da3bef)加入 session snapshot restore、sandbox preview 与更长 turn timeout；[Ark CUA Skill](https://github.com/bytedance/agentkit-samples/commit/e9dd57f93b72e296a870fae46132080d1b924a67)进入 SkillHub。只证明公开样例仓库变化。
 - **veADK-Python 1.1.2（24–72 小时）。** [官方 release](https://github.com/volcengine/veadk-python/releases/tag/1.1.2)加入用量统计、可唤醒沙箱快照、IAM 预检、生成物持久化和可恢复的本地到云端交接。
 - **腾讯邻近信号。** [CubeSandbox egress commit](https://github.com/TencentCloud/CubeSandbox/commit/a59396362cc957cda2f87014e7cc10782723de2e)支持 L7 规则自定义端口与 scheme；它属于沙箱网络/PaaS，未证明 ADP 托管层同步发布。
-- 本轮增量再次检查字节 Coze、AgentKit、Doubao、Trae、Seed 与 veADK/OpenViking 官方仓库；01:12–04:11 未发现新 commit/release。阿里、腾讯、百度、华为、智谱、Moonshot/Kimi、MiniMax、DeepSeek 的官方入口也未发现主窗口内可核实的托管服务 GA、定价或 SLA 更新。
+- 本轮增量再次检查字节 Coze、AgentKit、Doubao、Trae、Seed 与 veADK/OpenViking 官方仓库；07:20–10:12 仅核实 veADK 的 DeepSeek Harness system-info commit，未发现 AgentKit 云端 release。阿里侧新增 OpenSandbox `securityContext` 合并修复；腾讯、百度、华为、智谱、Moonshot/Kimi、MiniMax、DeepSeek 的官方入口仍未发现主窗口内可核实的托管服务 GA、定价或 SLA 更新。
 
 ## AaaS 与 MaaS/PaaS 分类说明
 
@@ -240,7 +249,7 @@ tags:
 
 ## 邻近信号观察池
 
-- **沙箱与工具连接层。** [OpenSandbox FastPath commit](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)属于 PaaS/运行时；[Composio Core 0.17.0](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcore%400.17.0)属于 session-aware tool router/连接层。两者都不写成托管 Agent 服务上线。
+- **沙箱与工具连接层。** [OpenSandbox FastPath commit](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)与[容器 securityContext 修复](https://github.com/opensandbox-group/OpenSandbox/pull/1564)属于 PaaS/运行时；[Composio Core 0.17.0](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcore%400.17.0)属于 session-aware tool router/连接层。三项都不写成托管 Agent 服务上线。
 - **MaaS/模型接入。** [OpenViking 火山/BytePlus plan commit](https://github.com/volcengine/OpenViking/commit/3590b47a25bd008068e35c8423149e3baa3203b8)、[Amazon Bedrock 跨区 OpenAI 模型](https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-cross-region-openai-v2/)、[Cloudflare Workers AI Qwen](https://developers.cloudflare.com/changelog/post/2026-08-17-qwen-3.8-27b-workers-ai/)与[腾讯 youtu 模型切换公告](https://cloud.tencent.com/announce/detail/2393)都更接近模型或兼容性层。
 - **语音路由与自托管沙箱。** [Speko](https://speko.ai/)提供语音模型 gateway；[h5i](https://github.com/h5i-dev/h5i)明确声明 no hosted sandbox/no SaaS，[社区发现帖](https://www.reddit.com/r/ClaudeAI/comments/1vqupxf/selfhosted_sandbox_for_coding_agents/)只作为窗口内发现证据。
 - **Docker sandbox 与 CubeSandbox。** Docker 的[安全文章](https://www.docker.com/blog/coding-agent-horror-stories-the-command-you-already-approved/)和腾讯的[网络策略 commit](https://github.com/TencentCloud/CubeSandbox/commit/a59396362cc957cda2f87014e7cc10782723de2e)都指向隔离边界，属于 PaaS/运行时而不是 Agent 生命周期服务。
@@ -250,9 +259,9 @@ tags:
 ## 趋势
 
 - **稳定发行版开始打包此前分散的远程控制面。** Codex 0.148.0 把 gRPC code-mode、远程 exec、持久线程与审批/Guardian 汇入稳定版；Claude 同轮把后台 cloud session 和 Agent SDK 嵌套流控制推进到正式 release，但两者都不能据此推断云服务端 rollout。
-- **会话连续性与失败结清正在变成显式协议。** Microsoft AG-UI checkpoint ownership、MiddlewareFailure 的悬空调用结清，以及 Codex 异步 delivery 元数据都在减少恢复或策略失败后的状态歧义。
+- **会话连续性与失败结清正在变成显式协议。** Microsoft AG-UI checkpoint ownership、MiddlewareFailure 的悬空调用结清，以及 Codex 异步 delivery 元数据与异步用户消息工具都在减少恢复、长任务汇报或策略失败后的状态歧义。
 - **远程执行控制面正在拆分注册、转发与状态所有权。** Codex forwarder 只转发认证 payload，session、进程与恢复仍由目的执行器持有；Microsoft 则把模型路由选择持久化到 session。两者都尚未正式发布。
-- **跨 Agent 边界开始同时处理权限与内容来源。** Google ADK 给转交内容加数据围栏，Codex 对 permission profile 求更严格交集并扩展 Guardian 审查上下文；这些是工程信号，不据此推断云端已启用。
+- **跨 Agent 边界开始同时处理权限、身份与工具来源。** Google ADK 给转交内容加数据围栏，Codex 对 permission profile 求更严格交集、校验 workspace 身份并应用环境 MCP policy；这些是工程信号，不据此推断云端已启用。
 - **托管沙箱开始显式拆分连续性、会话轨迹与用户隔离。** Microsoft 1.18.0 的 hosted session/user identity 是最直接证据；Codex 的认证和路径边界 commits 说明控制面安全仍在快速下沉。
 - **durable Agent 执行从“能恢复”走向“能解释重试和观测”。** Vercel WorkflowAgent、OpenViking durable job、Deep Agents resume trace、Google ADK 与 pi-wake 分别覆盖重试、队列、追踪、回收和唤醒。
 - **正式 release 与主分支开发信号必须分开。** Microsoft、Deep Agents、OpenHands、Cloudflare、Vercel 是 release；OpenAI Guardian、OpenViking 23:22/23:31 和 Cloudflare 23:19 仍只是 commits。
@@ -352,12 +361,19 @@ tags:
 90. [Composio Core 0.17.0](https://github.com/ComposioHQ/composio/releases/tag/%40composio%2Fcore%400.17.0)
 91. [OpenSandbox FastPath v2 client](https://github.com/opensandbox-group/OpenSandbox/commit/415259e527d2d692deffda80a50faddd046bf49c)
 92. [Allow VIDEO modality in Google ADK API server](https://github.com/google/adk-python/commit/dd998a7d5352225b944806abfe0fc7f463abbf38)
+93. [Add the async user message tool](https://github.com/openai/codex/commit/71dbf72b0576f9e7be1ef28d275bc79ece6d4b6c)（详见 OpenAI 专题页）
+94. [Enforce workspace restrictions for header authentication](https://github.com/openai/codex/commit/b537d5a0970f9d3153b1e647e2b42deed32555e0)（详见 OpenAI 专题页）
+95. [Route hook MCP calls through current connections](https://github.com/openai/codex/commit/d35e5495f991508409ff30e38db8dbe49d565570)（详见 OpenAI 专题页）
+96. [Enforce environment MCP policies](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)（详见 OpenAI 专题页）
+97. [Codex 0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1)（详见 OpenAI 专题页）
+98. [Add DeepSeek Harness sandbox system info](https://github.com/volcengine/veadk-python/commit/f3eccd4c7d0084721c4fc826f1cb65df4308934d)
+99. [Propagate template container securityContext to BatchSandbox pods](https://github.com/opensandbox-group/OpenSandbox/pull/1564)
 
 ## 采集状态
 
-- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并补查 GitHub Releases/commits、HN Algolia、可访问 Reddit，以及 04:11–07:20 的官方 commits/releases API 增量，并复核主 24 小时与 24–72 小时观察窗口。
-- 失败来源：Replit Blog RSS 404；LangChain changelog feed 403，改查 GitHub Releases；Sourcegraph/Amp 与部分猜测的公开 releases API 路径 404，改查可用官方入口；X 未登录无法稳定读取完整时间线；WorkToper 直连 403；serverlessagent.dev、context-engine.app、premissai.com 仍受本地网络策略限制；部分中国厂商静态页没有可核实发布时间；Octomind 页面只有日期没有时刻；GitHub 网页搜索增量索引滞后，改用官方 API。
-- 累计候选审阅记录：171 条（本轮 90 条原始记录：56 条官方仓库 commits、15 个 releases、19 条网页检索结果；加上既有累计 81 条来源审阅记录；该口径包含重复与未采纳候选）；保留：92 个唯一来源、76 条动态（16 组主窗口已核实 release/官方发布，23 组主分支或样例开发信号，5 组 24–72 小时观察，8 组较旧基线，9 组日期未确认候选，1 条未证实传闻，14 组 MaaS/PaaS/活动邻近信号）。
+- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并补查 GitHub Releases/commits、HN Algolia、可访问 Reddit，以及 07:20–10:12 的官方 commits/releases API 增量，并复核主 24 小时与 24–72 小时观察窗口。
+- 失败来源：Replit Blog RSS 404；LangChain changelog feed 403，改查 GitHub Releases；Sourcegraph/Amp 与部分猜测的公开 releases API 路径 404，改查可用官方入口；X 未登录无法稳定读取完整时间线；WorkToper 直连 403；serverlessagent.dev、context-engine.app、premissai.com 仍受本地网络策略限制；部分中国厂商静态页没有可核实发布时间；Octomind 页面只有日期没有时刻；GitHub 网页搜索增量索引滞后，改用官方 API；无认证 API 单项详情接口在达到频率上限后返回 403，已用公开 GitHub 页面复核。
+- 累计候选审阅记录：215 条（本轮新增 44 条原始记录：15 条官方仓库 commits、1 个 release、28 条网页检索结果；加上既有累计 171 条审阅记录；该口径包含重复与未采纳候选）；保留：99 个唯一来源、83 条动态（16 组主窗口已核实 release/官方发布，29 组主分支或样例开发信号，5 组 24–72 小时观察，8 组较旧基线，9 组日期未确认候选，1 条未证实传闻，15 组 MaaS/PaaS/活动/预发布邻近信号）。
 - 二次补搜：未运行（主窗口已有正式 AaaS release 且最终 sources 非 0，secondPass=false）。
 
-今日扫描完成，共 76 条动态，重点：Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0、Claude Code v2.1.235 与 Agent SDK Python v0.2.140 构成正式发布主线；Microsoft AG-UI/MiddlewareFailure、Codex 异步 delivery/托管配置/Guardian 与 Google ADK 仍严格标为未发布开发信号，OpenSandbox 则归入 PaaS 邻近池。
+今日扫描完成，共 83 条动态，重点：Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0、Claude Code v2.1.235 与 Agent SDK Python v0.2.140 构成正式发布主线；07:20 后 Codex 异步用户消息/工作区认证/环境 MCP 策略与 veADK DeepSeek Harness 均严格标为未发布开发信号，OpenSandbox `securityContext` 修复归入 PaaS 邻近池。

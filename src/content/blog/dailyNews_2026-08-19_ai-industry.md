@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T07:20:00+08:00"
+updatedAt: "2026-08-19T10:31:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -17,7 +17,9 @@ tags:
   - "Anthropic"
   - "Approvals"
   - "Authentication"
+  - "Billing"
   - "BrowserSkill"
+  - "ChatGPT Business"
   - "Claude"
   - "Claude Code"
   - "Claude Desktop"
@@ -25,6 +27,7 @@ tags:
   - "Code Review"
   - "Codex"
   - "Coding Agent"
+  - "Community"
   - "Copilot"
   - "Cowork"
   - "Data"
@@ -49,12 +52,14 @@ tags:
   - "LlamaIndex"
   - "MCP"
   - "Memory"
+  - "Messaging"
   - "Microsoft"
   - "Middleware"
   - "Multi-Agent"
   - "Open Source"
   - "OpenAI"
   - "Permissions"
+  - "Policy"
   - "PowerShell"
   - "Prerelease"
   - "Protocol"
@@ -63,7 +68,9 @@ tags:
   - "Qwen"
   - "Qwen Code"
   - "Reasoning"
+  - "Reinforcement Learning"
   - "Release"
+  - "Reliability"
   - "Research"
   - "Retrieval"
   - "Review"
@@ -78,12 +85,13 @@ tags:
   - "Training"
   - "Transformers"
   - "Vision"
+  - "VLM"
   - "Windows"
 ---
 
 ## 扫描结论
 
-主窗口：2026-08-18 07:17 至 2026-08-19 07:17（Asia/Shanghai）；近两日为 2026-08-17 07:17 至 2026-08-18 07:17，近三日为 2026-08-16 07:17 至 2026-08-17 07:17。本轮新增可核实的正式版本包括 Codex 0.148.0 与 Claude Code 2.1.235；Sam Altman 的官方帖子只确认暂停“部分 frontier RL 训练”，没有披露模型、范围或期限。Foxglove 同时推出面向机器人数据的内置 Agent 与本地 MCP；工程侧新增 Microsoft Agent Framework 的 fail-closed middleware、AG-UI 连续性，以及 Codex 的执行审批、角色权限、Guardian、MCP hooks 与异步消息边界。Linear 数据页因缺少可靠发布日期只列入“日期未确认”。
+主窗口：2026-08-18 10:12:17 至 2026-08-19 10:12:17（Asia/Shanghai）；近两日为 2026-08-17 10:12:17 至 2026-08-18 10:12:17，近三日为 2026-08-16 10:12:17 至 2026-08-17 10:12:17。本轮继续保留当天全部既有来源，并新增 Qwen Code 0.21.14-preview.0、Codex 0.149.0-alpha.1 以及 Codex 的环境 MCP、工作区认证、异步消息和 hook 环境边界更新；Qwen Code 还修复了长生命周期 PR 超过 100 条 review thread 时的分页缺口。Hugging Face 上新出现的 Bedrock-RL 属社区作者文章而非 Hugging Face 官方研究，保留在“观察池”；OpenAI Help Center 的 ChatGPT Business 加座计费变化可确认 8 月 19 日生效，但页面只显示相对更新时间，列入“日期未确认”。
 
 ## 优先动态
 
@@ -106,6 +114,10 @@ tags:
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| Qwen | [Qwen Code 0.21.14-preview.0](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14-preview.0) | 官方 GitHub 预发布 | 2026-08-19 08:52 +08:00，已核实 | 发布说明覆盖 live-session registry、会话状态、媒体引用、`/advisor`、可恢复 PR review、记忆召回与 fail-closed autofix。 | 是本轮功能面最完整的正式预览版本，但仍应按预发布质量看待。 |
+| OpenAI | [Codex 0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1) | 官方 GitHub 预发布 | 2026-08-19 08:54 +08:00，已核实 | tag 与发布时间可确认，发布页未给 changelog，不把同期提交自动归因到该版本。详见 OpenAI 专题页。 | 0.149 序列已启动，功能范围仍待正式说明。 |
+| OpenAI | Codex 环境、认证与异步消息边界 | 官方主分支提交组，非正式发布 | 2026-08-19 07:17 至 09:21 +08:00，已核实 | [hooks 使用捕获会话环境并清理凭据](https://github.com/openai/codex/commit/4d8c664a4976833b2142974bdba6e8d1a270d671)、[新增不中断 turn 的异步用户消息](https://github.com/openai/codex/commit/71dbf72b0576f9e7be1ef28d275bc79ece6d4b6c)、[对 header 认证执行工作区限制](https://github.com/openai/codex/commit/b537d5a0970f9d3153b1e647e2b42deed32555e0)，并[将环境 MCP 策略用于工具、OAuth、遥测与 skill 依赖](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)。详见 OpenAI 专题页。 | 同时收紧环境/身份策略并扩展后台沟通协议；均为主分支证据。 |
+| Qwen | [Qwen Code review thread 完整分页](https://github.com/QwenLM/qwen-code/commit/b6e93d27adf9fb08959049843d43032144f2681b) | 官方主分支修复，非正式发布 | 2026-08-19 09:32 +08:00，已核实 | Autofix 改为分页拉取 review thread，并加固部分失败和 stderr 临时文件路径。 | 避免长 PR 的新线程无法被回复或标记解决，并修补失败路径风险；尚待 release。 |
 | Microsoft | [Agent Framework AG-UI run continuity](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561) | 官方主分支提交，非正式发布 | 2026-08-19 06:53 +08:00，已核实 | 对 Python AG-UI 的恢复所有权、checkpoint 与 approval replay 进行统一，测试覆盖本地/托管审批和参数编辑后的恢复边界。 | 减少恢复时重复执行或错投审批控制的风险，仍待 release。 |
 | OpenAI | Codex 执行、角色与 Guardian 边界更新 | 官方主分支提交组，非正式发布 | 2026-08-19 05:45 至 06:47 +08:00，已核实 | [Agent role 只允许有限配置覆盖](https://github.com/openai/codex/commit/1a6e07a4febcc0ecfa04464f5e95cb47144cd746)，[Node REPL token 不再传入子进程](https://github.com/openai/codex/commit/fe50b616899eef5aac0dacf1e2d36a09c109944b)，[Guardian V2 评分错误改为高风险 strict review](https://github.com/openai/codex/commit/c97bd2dcb52a8120d96086fac49665452af3161b)，并将[统一执行审批绑定到 shell executable](https://github.com/openai/codex/commit/7d9990fa30ab495d473fc555f0d5e7c68e9d205a)。详见 OpenAI 专题页。 | 分别限制子 Agent 扩权、凭据继承、风险评分失败和伪装 shell 复用审批；均为主分支信号，不能视为已进入 0.148.0。 |
 | OpenAI | Codex MCP hooks 与异步 Agent 消息 | 官方主分支提交组，非正式发布 | 2026-08-19 05:32 至 07:00 +08:00，已核实 | [MCP tool hooks](https://github.com/openai/codex/commit/87070a77925cbffed8b34ddc99afaf40d56863aa) 仅调用已连接、已编目且策略允许的工具；[异步消息 delivery metadata](https://github.com/openai/codex/commit/fb356f3d2c9fa05f9b06771f8e3c877ca66ed330) 可标识不结束当前 turn 的可见消息。详见 OpenAI 专题页。 | 分别扩展 session hook 能力和后台消息协议，但都尚未形成带说明的正式版本。 |
@@ -147,11 +159,13 @@ tags:
 | Anthropic | [Claude Desktop / Cowork changelog](https://claude.com/docs/cowork/changelog) | v1.32352.1 标注 2026-08-18，但无时刻 | 保留日期证据，不判定是否落入精确 24 小时窗口；详见 Claude 专题页。 |
 | Microsoft | [Copilot 消费者版 Deep Research 退役说明](https://support.microsoft.com/en-US/microsoft-copilot/deep-research-in-microsoft-copilot) | 官方支持页写明 2026-08-18 起退役，但页面未给发布时间 | 仅确认生效日期；现有报告仍保留，Microsoft 365 Premium 用户可改用 Researcher。因发布时间未知，不写成主窗口内发布。 |
 | Linear | [How teams build：AI usage patterns in software teams](https://linear.app/data) | 官方数据页可打开，但未给可靠发布日期 | 页面说明采用口径、样本与 2026 年数据，用于观察 coding agents 与团队行为的相关性；不将相关性写成因果，也不判定为 24 小时内新发布。 |
+| OpenAI | [ChatGPT Business：新增付费席位改为即时扣费](https://help.openai.com/en/articles/8542115-chatgpt-business-faq) | 官方帮助页确认 2026-08-19 生效；本轮访问只显示相对更新时间 | 按当前周期剩余时间即时收费，总金额口径不变；因无稳定绝对更新时间，不写成精确时刻发布。详见 OpenAI 专题页。 |
 
 ## 观察池
 
 | 厂商 | 候选 | 状态 | 处理 |
 |---|---|---|---|
+| Hugging Face 社区 | [Bedrock-RL：确定性 Minecraft VLM Agent 训练框架](https://huggingface.co/blog/Michael-E/bedrock-rl) | 2026-08-19 09:42 +08:00；社区作者文章，非 Hugging Face 官方研究 | 原文公开基于 Netherite 与 verl 的可替换训练/评测框架；示例指标为作者自报且明确称不构成 benchmark claim，因此仅作邻近工程信号。 |
 | Google / LlamaIndex | Gemini 3.7 Flash 默认值 | 仅在 LlamaIndex 主分支核实 | 不把第三方集成默认值写成 Google 产品发布，等待 Google 官方 changelog。 |
 | Meta、xAI、Mistral、Cohere、中国主要厂商 | 官方入口扫描 | 未核实到主窗口内的新正式技术发布 | 保留无新增结论；动态页依赖脚本或索引滞后的厂商已列入失败来源。 |
 | Google DeepMind、Microsoft、LangChain、Hugging Face、NVIDIA | 常规依赖、文档、测试与主分支提交 | 原始仓库信号 | 已检查；只保留有明确 Agent、模型接入或安全意义的提交，不因提交数量放大为重大动态。 |
@@ -170,11 +184,16 @@ tags:
 - [Codex fail-closed PowerShell lowerer](https://github.com/openai/codex/commit/bb701f1e8c8db884fa0cdafff4b8dcb1604f2fdd)
 - [Qwen Code flakiness gate](https://github.com/QwenLM/qwen-code/commit/f0dcdfc1570ed4e8852060ff55e8b37f61827240)
 - [LangChain strict nested tool schemas](https://github.com/langchain-ai/langchain/commit/65e5e3cfa36c6fff2897140a1bfb5fd35de1bdbd)
+- [Qwen Code 0.21.14-preview.0](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14-preview.0)
+- [Codex 0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1)
+- [Codex environment MCP policies](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)
+- [Qwen Code review thread pagination](https://github.com/QwenLM/qwen-code/commit/b6e93d27adf9fb08959049843d43032144f2681b)
+- [Bedrock-RL 社区文章](https://huggingface.co/blog/Michael-E/bedrock-rl)
 
-**一句话总结：本轮最高优先级是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 的机器人数据 Agent 发布；Codex、Claude Code 和 Microsoft Agent Framework 同时在版本、权限、恢复与 fail-closed 边界上继续推进。**
+**一句话总结：当天最高优先级仍是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 机器人数据 Agent 发布；最新一轮则由 Qwen Code 预览版、Codex 环境/认证策略及长 PR 自动评审可靠性修复补充工程进展。**
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；本轮额外打开 38 个官方版本/提交候选和相关原文。
-- 失败来源：OpenAI News、Dwarkesh 直接抓取 403；GitHub 组织列表批量扫描触发限流后改用单项 HTML/发布页；xAI、StepFun 及部分中国厂商页面依赖脚本或索引滞后；Linear 页面缺少可靠发布日期；A2A/AAIF 新迁移说法仅见二手报道，未作确认。
-- 当日各轮粗筛候选累计 282；累积保留 42 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
+- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；10:12 补扫额外核验 18 个官方提交/版本，并复核 OpenAI Help Center、Hugging Face 社区文章与 MiniMax 新闻页。
+- 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接访问返回 403 或依赖脚本；GitHub 组织列表批量扫描曾触发限流，继续改用单项 API/HTML 与发布页；Linear 与 OpenAI Help 页面缺少稳定绝对更新时间；A2A/AAIF 新迁移说法仍仅见二手报道，未作确认。
+- 当日各轮粗筛候选累计 304（10:12 本轮新增粗筛 22 个）；累积保留 51 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
