@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T19:12:00+08:00"
+updatedAt: "2026-08-19T22:42:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Building Shared Memory for AI Agents in Notion"
 featuredUrl: "https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"
@@ -23,11 +23,13 @@ tags:
   - "Agent Governance"
   - "Agent Handoff"
   - "Agent Memory"
+  - "Agent Observability"
   - "Agent OS"
   - "Agent Platform"
   - "Agent Runtime"
   - "Agent Sandbox"
   - "Agent SDK"
+  - "Agent-native Hosting"
   - "Agentforce"
   - "AgentKit"
   - "Agents SDK"
@@ -35,18 +37,25 @@ tags:
   - "Async Agent"
   - "Async Task"
   - "Authentication"
+  - "Author Claim"
   - "Authorization"
+  - "Auto Commit"
   - "Automation"
+  - "Automations"
+  - "Background Agent"
   - "Baidu Cloud"
   - "Bedrock"
   - "Billing"
+  - "Browser Sandbox"
   - "BYOA"
   - "ByteDance"
+  - "Catalog"
   - "ChatGPT Business"
   - "Checkpoint"
   - "China Telecom Cloud"
   - "Claude"
   - "Claude Code"
+  - "Cloud"
   - "Cloud Agent"
   - "Cloud Backend"
   - "Cloud Handoff"
@@ -62,12 +71,15 @@ tags:
   - "Computer Use"
   - "Concurrency"
   - "Configuration"
+  - "Contract"
   - "Control Plane"
+  - "Conversational Flow"
   - "Coze Loop"
   - "Credential Lifecycle"
   - "CrewAI"
   - "CubeSandbox"
   - "Cursor"
+  - "Daemon"
   - "Data Lifecycle"
   - "Date Unconfirmed"
   - "Date Unverified"
@@ -79,12 +91,14 @@ tags:
   - "Discovery Signal"
   - "Docker"
   - "Durable Job"
+  - "Durable Recovery"
   - "Durable Workflow"
   - "Enterprise"
   - "Environment Policy"
   - "Evaluation"
   - "External Agent"
   - "FastPath"
+  - "Feishu"
   - "Filesystem"
   - "Flow"
   - "Foundry"
@@ -97,13 +111,16 @@ tags:
   - "Helm"
   - "Hosted Session"
   - "Huawei Cloud"
+  - "Knowledge Import"
   - "Kubernetes"
+  - "Langfuse"
   - "LangSmith"
   - "Lifecycle"
   - "Logging"
   - "Long-running Task"
   - "MaaS"
   - "Managed Agent"
+  - "Managed Runtime"
   - "Marketplace"
   - "MCP"
   - "Memory"
@@ -120,6 +137,7 @@ tags:
   - "OpenAI"
   - "OpenHands"
   - "OpenSandbox"
+  - "OpenTelemetry"
   - "OpenViking"
   - "Operations"
   - "Orchestration"
@@ -129,14 +147,18 @@ tags:
   - "Pre-release"
   - "Qoder"
   - "QuickJS"
+  - "Qwen Code"
   - "Red Hat"
   - "Release"
   - "Reliability"
   - "Remote Agent"
+  - "Remote Coding Agent"
   - "Remote Control"
   - "Remote Environment"
   - "Remote Plugin"
+  - "Remote Session"
   - "Remote Skills"
+  - "Replay"
   - "Replit"
   - "Resource Limits"
   - "Resume"
@@ -156,6 +178,7 @@ tags:
   - "Session History"
   - "Session Queue"
   - "Session Resume"
+  - "Session State"
   - "SkillHub"
   - "Snapshot Integrity"
   - "Stable Release"
@@ -165,18 +188,24 @@ tags:
   - "Subagents"
   - "Template Lifecycle"
   - "Tencent Cloud"
+  - "Tool Call"
   - "Tool Router"
   - "Tooling"
   - "Tracing"
   - "Unverified"
+  - "URI"
+  - "Usage"
   - "veADK"
   - "Vercel"
   - "Vercel AI SDK"
+  - "Version Pointer"
   - "Video"
   - "VikingDB"
+  - "Visualization"
   - "Voice AI"
   - "Volcengine"
   - "Watchlist"
+  - "Web Shell"
   - "Workflow Resume"
   - "WorkflowAgent"
   - "Workspace Policy"
@@ -184,9 +213,9 @@ tags:
 
 ## 今日概览
 
-主窗口：2026-08-18 19:12 至 2026-08-19 19:12（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 19:12 至 2026-08-18 19:12。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
+主窗口：2026-08-18 22:42 至 2026-08-19 22:42（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 22:42 至 2026-08-18 22:42。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
 
-主窗口内最明确的正式 AaaS 更新仍包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。16:10 后没有新的正式托管服务 GA；新增证据主要是 Microsoft Agent Hooks 的 fail-closed 控制契约、Codex 异步消息去特性门、OpenAI Agents SDK checkpoint 用量隔离、OpenHands 会话成本指标恢复，以及字节 veADK/OpenViking 和腾讯 CubeSandbox 的记忆、账户、URI、沙箱生命周期开发信号。Codex 0.149.0-alpha.2 仍是无功能说明的预发布；Knownbase 作为日期未确认的托管 MCP 记忆服务保留，AeonBox 则严格归为自托管沙箱/PaaS 邻近候选。Claude、Codex 相关分别详见对应专题页。
+当日累计的正式 AaaS/Agent 运行层更新包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140、Qwen Code v0.21.14，以及 OpenAI Agents SDK Python v0.22.0 / JavaScript v0.17.0。19:12 后没有新的托管服务 GA，但 Cloudflare Agents 将 durable chat recovery 改为始终启用；OpenHands Automations、CrewAI conversational flow、OpenViking 跨会话记忆与 Qwen daemon/后台 Agent 继续补齐可恢复执行、会话编排和观测边界。Yado 的独立 Fly.io 远程机与定价只得到作者 HN 自述，列入观察而不当作已验证规模；Fuji、Compartment Up、BrowserCode 与 Langfuse 则按 AaaS、PaaS/自托管运行时和观测平台边界分层。Claude、OpenAI 相关分别详见对应专题页。
 
 ## 重点动态
 
@@ -201,6 +230,9 @@ tags:
 9. **Microsoft 强化连续性与 fail-closed。** [AG-UI run continuity](https://github.com/microsoft/agent-framework/commit/e6536fb45915b1d91e8702e43dcfe31d9b671561)持久化 checkpoint 所有权；[MiddlewareFailure](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)让策略失败终止整批工具调用并结清 service-managed conversation 的悬空调用。两项均未进入新 release。
 10. **07:20 后控制面继续收紧异步沟通、认证与环境边界。** Codex 主分支加入[异步用户消息工具](https://github.com/openai/codex/commit/71dbf72b0576f9e7be1ef28d275bc79ece6d4b6c)、[header 认证工作区限制](https://github.com/openai/codex/commit/b537d5a0970f9d3153b1e647e2b42deed32555e0)、[hook MCP 连接复用](https://github.com/openai/codex/commit/d35e5495f991508409ff30e38db8dbe49d565570)与[环境 MCP 策略](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)；均未进入稳定 release 或证明云端启用，**详见 OpenAI 专题页**。
 11. **10:12–13:12 增量集中在会话隔离、恢复与沙箱生命周期。** Codex [按 thread 隔离审批](https://github.com/openai/codex/commit/8843960ba06b1b2570e689f3fff354c324ab2417)并[把同名排队请求指向最近会话](https://github.com/openai/codex/commit/14a8ac89af0a3c9033c1fa4d747ec5d6333e9890)；Microsoft Agent Framework 修复[JSON 工作流恢复载荷](https://github.com/microsoft/agent-framework/commit/e74ac4613c2d7b8653457dd94c26a67f572c74d7)与[会话历史超线性增长](https://github.com/microsoft/agent-framework/commit/da11daebe51ef70a03908f610165714a17491da4)。四项均是主分支 commit、尚未进入新 release；Codex 两项**详见 OpenAI 专题页**。
+12. **Qwen Code v0.21.14 把 daemon、Web Shell 与 live session 管理打入正式版。** [官方 release](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14)于 19:05 发布 `qwen sessions ps`、workspace live-state、可轮询 turn 状态、Local Control 配对凭据与 Web Shell 断流输入/队列修复；它证明本地/自管远程控制面正式交付，不等同于 Qoder Cloud Agents 服务端 rollout。
+13. **OpenAI Agents SDK Python / JavaScript 连续正式发布。** [Python v0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0)于 21:44 将 output guardrail replay 脱敏、checkpoint 用量隔离和 terminal response 校验打入 release；[JavaScript v0.17.0](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)于 22:38加入 approval checkpoint fail-closed、guardrail 批次结清与 replay 脱敏。它们是 SDK 运行安全发布，不证明 OpenAI 托管 Agent 平台同步 rollout，**详见 OpenAI 专题页**。
+14. **Cloudflare durable chat recovery 改为不再可关闭。** [主分支 commit](https://github.com/cloudflare/agents/commit/9620b58fcc78035e1dd9a65a647455f83328bc28)于 22:11让 AIChatAgent 与 Think 的 WebSocket、程序化、重试和 continuation 路径全部运行在 recovery fiber 中；这是发布后的主分支变更，尚未进入新 release。
 
 ## 远程 / 云端 Agent 执行
 
@@ -226,6 +258,10 @@ tags:
 | Codex 会话队列与审批隔离 | 最近同名会话选择、thread+approval 双键 | 并发后台线程不会误处理另一线程审批，异步排队定位更确定 | 主分支 commits；尚未发布；详见 OpenAI 专题页 |
 | Microsoft 工作流恢复与历史持久化 | AG-UI JSON resume coercion、序列感知消息去重 | 跨进程恢复类型更稳定，长会话历史不再超线性膨胀 | 主分支 commits；尚未发布 |
 | OpenViking 上传任务统计 | 完成任务返回上传归属的 context_count | 异步资源导入结果更可观测 | 主分支 commit；未证明 AgentKit 云端 rollout |
+| Qwen Code v0.21.14 | daemon live-session registry、turn polling、Web Shell/Local Control | 自管远程会话、队列与配对控制面进入正式 CLI | 官方 release；不等同于 Qoder Cloud Agents rollout |
+| Cloudflare always-on recovery | 所有 chat 入口运行在 recovery fiber | Durable Object 重启后保留恢复账本和中断处理 | 主分支 commit；尚未进入新 release |
+| OpenHands automation catalog bundle | catalog entry 携带脚本包、多仓库配置与归档校验 | 自动化安装可带受验证执行资产 | 主分支 commit + automation 1.8.0 版本指针；尚未 release |
+| OpenAI Agents SDK 0.22.0 / 0.17.0 | checkpoint、replay、guardrail 与 provider 配置 | SDK 级持久状态与失败边界正式收紧 | 官方 releases；不证明托管平台 rollout；详见 OpenAI 专题页 |
 
 ### OpenAI 控制面开发信号（尚非产品发布）
 
@@ -325,6 +361,7 @@ tags:
 - **托管沙箱开始显式拆分连续性、会话轨迹与用户隔离。** Microsoft 1.18.0 的 hosted session/user identity 是最直接证据；Codex 的认证和路径边界 commits 说明控制面安全仍在快速下沉。
 - **durable Agent 执行从“能恢复”走向“能解释重试和观测”。** Vercel WorkflowAgent、OpenViking durable job、Deep Agents resume trace、Google ADK 与 pi-wake 分别覆盖重试、队列、追踪、回收和唤醒。
 - **正式 release 与主分支开发信号必须分开。** Microsoft、Deep Agents、OpenHands、Cloudflare、Vercel 是 release；OpenAI Guardian、OpenViking 23:22/23:31 和 Cloudflare 23:19 仍只是 commits。
+- **恢复与观测正在从可选插件变成运行时不变量。** Cloudflare 把所有 chat turn 置于 recovery fiber，Qwen Code 把 daemon 请求接入 W3C traceparent，OpenAI Agents SDK 则把 checkpoint、guardrail replay 与失败结清打入正式版本；这些仍需与具体托管服务 rollout 分开。
 - 样本包含 release、官方文章、主分支 commits、样例、静态产品页、社区发现和单源传闻；不据此推断市场份额、收入、采用规模或成熟度。
 
 ## 16:10 滚动补充
@@ -386,6 +423,38 @@ tags:
 - **Knownbase 托管 Agent 记忆。** [产品页](https://knownbase.dev/)提供带 OAuth/API key 的托管 MCP endpoint、workspace/project 隔离、版本化 notes、免费与付费计划，支持 Claude Code、Codex、Cursor 与 ChatGPT 跨会话共享记忆；页面未标发布日期。[HN 发现帖](https://news.ycombinator.com/item?id=49359680)于 18:43 出现且只有 1 分、0 评论，因此仅确认发现时间，不把采用规模写成事实。
 - **AeonBox 确定性沙箱。** [原始文章](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/)描述用 liquid types、线性 session 与受限 GitHub SDK 阻止从私有仓读取后向公开端写出的行为路径；[HN 发现帖](https://news.ycombinator.com/item?id=49359459)于 18:19 出现且只有 1 分、0 评论。它是研究原型/自托管 agent harness，不是 AaaS 服务，归 PaaS/安全邻近信号。
 - HN 还出现 Orvena 本地 iPhone 4B agent harness 与 Cairn 自托管 PM agent；前者产品页返回 403，后者明确自托管且不提供受管执行，故记录在扫描候选而不提升为 AaaS 动态。
+
+## 22:42 滚动补充
+
+### 正式发布与远程 / 云端 Agent 执行
+
+- **Qwen Code v0.21.14。** [官方 release](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14)于 19:05 发布，加入 live-session registry 与 `qwen sessions ps`、workspace live-state、daemon turn polling、Local Control 配对凭据、Web Shell SSE 解耦和队列权威状态；它覆盖自管 daemon/远程会话正式交付，但没有 Qoder Cloud Agents 服务端 rollout 证据。
+- **OpenAI Agents SDK Python v0.22.0。** [正式 release](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0)于 21:44 发布 output-guardrail replay 脱敏、terminal failed/incomplete 拒绝、RunState checkpoint 用量隔离与 handoff graph 展开。release 之后的[聚合请求用量 detach](https://github.com/openai/openai-agents-python/commit/629f9b56a5d32d52d1216f8866f5f0beae2484dc)避免共享 Usage entry 被后续变更污染，[重复同名节点保留](https://github.com/openai/openai-agents-python/commit/fe34ba3aa9a0f53e190badb41fc8b921ec2ca51b)修复编排图节点覆盖；后两项尚未进入 release，**详见 OpenAI 专题页**。
+- **OpenAI Agents SDK JavaScript v0.17.0。** [正式 release](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)于 22:38 对归属不明的序列化 approval checkpoint fail closed，等待同批 guardrail 全部结清并脱敏被拒工具输出；这是 SDK 发布，不证明 OpenAI 托管 Agent 平台同步 rollout，**详见 OpenAI 专题页**。
+- **Cloudflare durable recovery。** [官方主分支 commit](https://github.com/cloudflare/agents/commit/9620b58fcc78035e1dd9a65a647455f83328bc28)于 22:11让 AIChatAgent 与 Think 的 WebSocket、程序化、重试和 continuation chat turn 全部进入 recovery fiber，`chatRecovery=false` 不再受支持；尚未进入新 release。
+- **OpenHands Automations 安装资产。** [catalog script bundle commit](https://github.com/OpenHands/OpenHands/commit/7c3b2423fb401820d5ecc472adf70d0b82ecc1ab)于 19:42加入多仓库表单、tar.gz bundle、manifest/version/hash/路径校验和安装前审阅，[1.8.0 版本指针](https://github.com/OpenHands/OpenHands/commit/61c18c9ae3c11fbf5e2b2302f3751fcd26ffbe4b)于 20:47跟进；两者属于同一 Automations 安装链事件，尚未进入 OpenHands 新 release。
+- **CrewAI 编排与 MCP 观测。** [MCP server_name 修复](https://github.com/crewAIInc/crewAI/commit/dabd123528e2b9c9cdab1d2f0e6bf3df52ab4618)只以 hostname 命名 HTTP/SSE 连接事件并把完整 URL 留在 `server_url`；[声明驱动 conversational flow](https://github.com/crewAIInc/crewAI/commit/6f16e741aa803998df62eeca0658231585333969)让 definition、路由、state 与显式 opt-in 一致。两项为 21:22–21:33 主分支信号，尚未发布。
+
+### 中国厂商：字节 OpenViking 与阿里 Qwen Code
+
+| 厂商 | 动态 | 时间 / 状态 | AaaS 含义 |
+|---|---|---|---|
+| 字节 / OpenViking | [旧版飞书文档导入](https://github.com/volcengine/OpenViking/commit/592c0fe0369a66f7119a44af79b82b6b283a7ced) | 19:42；主分支 | legacy doc/doccn 保持在旧 API 路径并细化错误映射，改善企业知识导入。 |
+| 字节 / OpenViking | [实体 URI 大小写规范](https://github.com/volcengine/OpenViking/commit/84467b1be8c4aefcf939ea7e2241063f569f6326) | 20:46；主分支 | entity category/name 路径统一小写，降低跨会话记忆身份分裂。 |
+| 字节 / OpenViking | [跨会话更新与部分删除](https://github.com/volcengine/OpenViking/commit/b9ec4f5b9adb3ac1777296acc0ce442ef6dcc37a) | 21:05；主分支 | 合并跨会话操作并支持 DELETE blocks，避免整项误删；未证明 AgentKit rollout。 |
+| 字节 / OpenViking | [属性过滤与 auto-commit 默认值](https://github.com/volcengine/OpenViking/commit/98a0104aaa975f6348256c78c7a2276398d54700) | 21:11；主分支 | 过滤旧式无效 attrs，并提高 session 自动提交阈值、默认不保留近期消息；属于记忆/会话 PaaS 信号。 |
+| 阿里 / Qwen Code | [后台 Agent 图片驱逐隔离](https://github.com/QwenLM/qwen-code/commit/872dd614f79b2a15d5c41902eeb420a78b3ceae2) | 19:33；主分支 | fork/background agent 在原地图片驱逐前克隆历史，并限制引用重挂，降低共享状态污染。 |
+| 阿里 / Qwen Code | [tool-call ID replay 指纹](https://github.com/QwenLM/qwen-code/commit/4b77a6e47201e21124171d66feadd5573f5c1509) | 20:02；主分支 | daemon、ACP、TUI 与 headless 只在 ID、工具名和规范参数都一致时判定 replay，避免 Kimi 等跨轮 ID 重用误杀。 |
+| 阿里 / Qwen Code | [daemon W3C traceparent](https://github.com/QwenLM/qwen-code/commit/d96f264de76bc522ce0564fdd51d37b093dde9a6) | 20:21；主分支 | HTTP/ACP 入站链路连接远程 trace，并在未启用遥测时也把 traceId 写入访问日志。 |
+| 阿里 / Qwen Code | [Web Shell transcript 契约预验证](https://github.com/QwenLM/qwen-code/commit/5003ab3c7f0d35ce00de61ed43a6698fcd2cc25f) | 22:13；主分支 | 固化 daemon/ACP/export 安全与 identity fixture；提交明确未改变生产行为，列开发观察。 |
+
+### 日期未确认、24–72 小时与邻近信号观察池
+
+- **Langfuse Agent 观测。** [Turn scores into charts](https://langfuse.com/changelog/2026-08-19-turn-scores-into-charts)只给 8 月 19 日日期，可把 score table 视图转为趋势图、异常 Pulse 和 dashboard widget；精确时刻未确认。[Langfuse v4](https://langfuse.com/changelog/2026-08-17-langfuse-v4)则是 24–72 小时官方补充，确认 Cloud 与自托管 GA、以 immutable observations table 直接查询 Agent step，并给出 Cloud v3 于 11 月 16 日切换；[HN 发现帖](https://news.ycombinator.com/item?id=49360858)于 20:46 出现，只作为本轮发现证据。
+- **Yado 远程移动编码（作者自述、来源数：1）。** [Show HN](https://news.ycombinator.com/item?id=49361945)于 22:16称每位用户获得独立 Fly.io Linux machine，手机通过 WebSocket relay 使用 Claude Code/Codex，锁屏后任务继续并以通知结束，定价 19 美元/月；App Store 链接在本地区重定向，未独立核验可用范围或订阅，因此列观察而非确认上线规模。Claude/Codex 分别详见对应专题页。
+- **Fuji 自托管 fleet runtime。** [原仓库](https://github.com/paradise-runner/fuji)描述可嵌入 Go/headless one-shot Agent runtime、JSONL session resume、批处理和 fleet orchestrator；[HN 发现帖](https://news.ycombinator.com/item?id=49361042)于 21:00出现。它不提供托管执行，严格归自托管运行时/PaaS 邻近信号。
+- **Compartment Up：Agent-native 应用托管。** [原始入口](https://up.compartment.dev/humans.html)描述无需人类账户、由 Agent 注册并部署网站/API/脚本，属于 Agent 驱动的应用 PaaS，不托管 Agent 本身；[HN 发现帖](https://news.ycombinator.com/item?id=49360331)于 19:58出现。直连浏览器端点返回 403，文本通过公开代理读取，服务状态未独立验证。
+- **BrowserCode Codex WASM。** [原始页](https://browsercode.io/agents/codex)把 Codex CLI 加载进 BrowserPod 浏览器沙箱并要求用户提供 API key；[HN 发现帖](https://news.ycombinator.com/item?id=49362139)于 22:30出现。它更接近客户端浏览器沙箱/PaaS，未证明远程持久执行，Codex **详见 OpenAI 专题页**。
 
 ## 来源链接
 
@@ -520,14 +589,43 @@ tags:
 129. [Knownbase HN 发现帖](https://news.ycombinator.com/item?id=49359680)
 130. [AeonBox 原始文章](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/)
 131. [AeonBox HN 发现帖](https://news.ycombinator.com/item?id=49359459)
+132. [Qwen Code v0.21.14](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14)
+133. [Cloudflare durable chat recovery](https://github.com/cloudflare/agents/commit/9620b58fcc78035e1dd9a65a647455f83328bc28)
+134. [OpenHands automation catalog script bundle](https://github.com/OpenHands/OpenHands/commit/7c3b2423fb401820d5ecc472adf70d0b82ecc1ab)
+135. [OpenHands automation 1.8.0](https://github.com/OpenHands/OpenHands/commit/61c18c9ae3c11fbf5e2b2302f3751fcd26ffbe4b)
+136. [CrewAI MCP server_name hostname](https://github.com/crewAIInc/crewAI/commit/dabd123528e2b9c9cdab1d2f0e6bf3df52ab4618)
+137. [CrewAI declaration-driven conversational flow](https://github.com/crewAIInc/crewAI/commit/6f16e741aa803998df62eeca0658231585333969)
+138. [OpenAI Agents SDK Python v0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0)（详见 OpenAI 专题页）
+139. [Detach aggregated request usage entries](https://github.com/openai/openai-agents-python/commit/629f9b56a5d32d52d1216f8866f5f0beae2484dc)（详见 OpenAI 专题页）
+140. [Preserve graph nodes with duplicate names](https://github.com/openai/openai-agents-python/commit/fe34ba3aa9a0f53e190badb41fc8b921ec2ca51b)（详见 OpenAI 专题页）
+141. [OpenAI Agents SDK JavaScript v0.17.0](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)（详见 OpenAI 专题页）
+142. [OpenViking legacy Feishu doc imports](https://github.com/volcengine/OpenViking/commit/592c0fe0369a66f7119a44af79b82b6b283a7ced)
+143. [OpenViking canonical entity URI casing](https://github.com/volcengine/OpenViking/commit/84467b1be8c4aefcf939ea7e2241063f569f6326)
+144. [OpenViking cross-session memory updates and partial deletes](https://github.com/volcengine/OpenViking/commit/b9ec4f5b9adb3ac1777296acc0ce442ef6dcc37a)
+145. [OpenViking attrs and auto-commit defaults](https://github.com/volcengine/OpenViking/commit/98a0104aaa975f6348256c78c7a2276398d54700)
+146. [Qwen Code image eviction isolation](https://github.com/QwenLM/qwen-code/commit/872dd614f79b2a15d5c41902eeb420a78b3ceae2)
+147. [Qwen Code tool-call replay fingerprints](https://github.com/QwenLM/qwen-code/commit/4b77a6e47201e21124171d66feadd5573f5c1509)
+148. [Qwen Code daemon W3C traceparent](https://github.com/QwenLM/qwen-code/commit/d96f264de76bc522ce0564fdd51d37b093dde9a6)
+149. [Qwen Code transcript contract prevalidation](https://github.com/QwenLM/qwen-code/commit/5003ab3c7f0d35ce00de61ed43a6698fcd2cc25f)
+150. [Langfuse Turn scores into charts](https://langfuse.com/changelog/2026-08-19-turn-scores-into-charts)
+151. [Langfuse v4](https://langfuse.com/changelog/2026-08-17-langfuse-v4)
+152. [Langfuse v4 HN 发现帖](https://news.ycombinator.com/item?id=49360858)
+153. [Fuji](https://github.com/paradise-runner/fuji)
+154. [Fuji HN 发现帖](https://news.ycombinator.com/item?id=49361042)
+155. [Yado HN 自述](https://news.ycombinator.com/item?id=49361945)（Claude/Codex 详见对应专题页）
+156. [Compartment Up](https://up.compartment.dev/humans.html)
+157. [Compartment Up HN 发现帖](https://news.ycombinator.com/item?id=49360331)
+158. [BrowserCode Codex CLI](https://browsercode.io/agents/codex)（详见 OpenAI 专题页）
+159. [BrowserCode HN 发现帖](https://news.ycombinator.com/item?id=49362139)（详见 OpenAI 专题页）
 
 ## 采集状态
 
-- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并复核主 24 小时与 24–72 小时观察窗口。
+- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code/Agent SDK，OpenAI Codex/Agents SDK Python/JavaScript，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind、Langfuse；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder/Qwen Code/OpenSandbox、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek。
 - 16:10 补查：GitHub commits/releases API 与 releases.atom 覆盖 OpenAI Agents SDK、Google ADK、Vercel AI SDK、CrewAI、veADK、OpenViking、CubeSandbox、OpenSandbox；另查 HN、Notion、Salesforce、OpenAI Help Center 与中外托管 Agent 官网。
 - 19:12 补查：GitHub REST 未认证额度耗尽后改用官方 commits.atom、releases.atom 与 commit patch，核到 31 条区间 commit 记录、2 条 release feed 记录；HN Algolia 对 Agent/AI/sandbox/Codex 等关键词去重 30 条；另查 Knownbase、AeonBox、Orvena、Cairn、Qoder、AWS AgentCore、Replit、Lindy 与中外厂商官方入口。
-- 失败来源：Replit Blog RSS 404；LangChain changelog feed 403；X 未登录无法稳定读取；WorkToper 403；serverlessagent.dev、context-engine.app、premissai.com 受本地网络策略限制；部分中国厂商静态页无可核更新时间；Orvena 产品页 403；GitHub REST API 额度耗尽但 Atom feed 与原始 commit patch 可访问。
-- 累计候选审阅记录：387 条（本轮新增 63 条明确记录：31 commits、2 release feed、30 HN 去重投稿；口径包含重复、低相关与未采纳候选）；保留：150 个唯一来源、130 条动态；新增项按主分支开发、日期未确认与 MaaS/PaaS 邻近信号分层。
-- 二次补搜：未运行（主窗口已有正式 AaaS release 且最终 sources 非 0，secondPass=false）。
+- 22:42 补查：并行复核 15 个核心仓库 commits.atom、19 个 releases feed/latest record 与原始 patch，覆盖 Cloudflare、OpenHands、CrewAI、OpenAI Agents SDK Python/JavaScript、Qwen Code、OpenViking、Microsoft、Google、LangChain/Vercel、veADK、Coze、CubeSandbox、OpenSandbox、Codex；HN Algolia 11 组关键词得到 44 个去重投稿，并打开 Langfuse、Fuji、Yado、Compartment Up、BrowserCode 等原始或作者入口。
+- 失败来源：Replit Blog RSS 404；LangChain changelog feed 403；X 未登录无法稳定读取；WorkToper 403；serverlessagent.dev、context-engine.app、premissai.com 受本地网络策略限制；部分中国厂商静态页无可核更新时间；Orvena 产品页 403；GitHub REST API 未认证额度仍耗尽但 Atom feed、release feed 与原始 patch 可访问；Compartment Up 浏览器直连返回 403，改用公开文本代理核对；Yado 的 App Store 链接在本地区重定向到 Today 首页，无法独立核验上架范围。
+- 累计候选审阅记录：473 条（本轮新增 86 条明确记录：23 条截止 22:42 的官方 commit feed 记录、19 个 release feed/latest record、44 个 HN 去重投稿；口径包含重复、低相关与未采纳候选）；保留：178 个唯一来源、153 条动态。本轮新增 28 个来源、23 条去重动态，按正式 release、主分支开发、日期未确认、可信作者自述和 MaaS/PaaS 邻近信号分层。
+- 二次补搜：未运行（主窗口已有正式 Agent SDK/CLI release 且最终 sources 非 0，secondPass=false）。
 
-今日扫描完成，共 130 条动态，重点：Microsoft Agent Hooks 将 fail-closed 与 verdict-before-durability 下沉到 host-owned session；Codex/Agents SDK 改善异步进度与 checkpoint 用量边界；字节记忆/账户治理和腾讯沙箱修复仍是未发布开发信号，Knownbase 日期未确认，AeonBox 严格归邻近 PaaS。
+今日扫描完成，共 153 条动态，重点：Qwen Code daemon/remote session 能力进入 v0.21.14，OpenAI Agents SDK Python/JavaScript 正式收紧 checkpoint 与 guardrail replay，Cloudflare 将 durable chat recovery 设为运行时不变量；OpenHands、CrewAI、OpenViking 与 Qwen 主分支继续补齐自动化资产、声明编排、跨会话记忆和 trace 边界，Yado/Compartment/BrowserCode 按证据强度留在观察层。

@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T19:12:00+08:00"
+updatedAt: "2026-08-19T22:25:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -19,6 +19,7 @@ tags:
   - "AI"
   - "Anthropic"
   - "Approvals"
+  - "ASR"
   - "Async"
   - "Authentication"
   - "AWS Bedrock"
@@ -34,8 +35,11 @@ tags:
   - "Coding Agent"
   - "Cohere"
   - "Community"
+  - "Compatibility"
+  - "Context"
   - "Copilot"
   - "Cowork"
+  - "CPM-Ant"
   - "Daemon"
   - "Data"
   - "Date Unconfirmed"
@@ -43,6 +47,7 @@ tags:
   - "Deep Research"
   - "Development Signal"
   - "Diagnostics"
+  - "Edge AI"
   - "Education"
   - "Evaluation"
   - "Extensions"
@@ -55,15 +60,19 @@ tags:
   - "Governance"
   - "Graph"
   - "Guardian"
+  - "Guardrails"
   - "Handoff"
   - "Hooks"
   - "Hugging Face"
+  - "Images"
   - "Industry"
   - "Instructions"
   - "Integration"
   - "LangChain"
+  - "LFM2.5"
   - "Linear"
   - "Linux"
+  - "Liquid AI"
   - "LlamaIndex"
   - "Logging"
   - "MCP"
@@ -88,6 +97,8 @@ tags:
   - "PowerShell"
   - "Prerelease"
   - "Protocol"
+  - "Provider"
+  - "Python"
   - "Quantization"
   - "Queue"
   - "QuickJS"
@@ -97,6 +108,7 @@ tags:
   - "Reinforcement Learning"
   - "Release"
   - "Reliability"
+  - "Replay"
   - "Research"
   - "Responses"
   - "Resume"
@@ -113,13 +125,19 @@ tags:
   - "Sessions"
   - "Skills"
   - "Subagents"
+  - "Telemetry"
   - "Tencent"
+  - "Token Counting"
+  - "Tool Calling"
   - "Tools"
+  - "Tracing"
   - "Training"
+  - "Transcript"
   - "Transformers"
   - "Usage"
   - "Validation"
   - "Vision"
+  - "Visualization"
   - "VLM"
   - "Web Shell"
   - "Whisper"
@@ -129,7 +147,7 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-18 19:12:00 至 2026-08-19 19:12:00（Asia/Shanghai）；近两日为 2026-08-17 19:12:00 至 2026-08-18 19:12:00，近三日为 2026-08-16 19:12:00 至 2026-08-17 19:12:00。本轮继续保留当天全部既有来源，并确认 Cohere Python 7.0.9、Transformers 5.15.1、Codex 0.149.0-alpha.2、Claude Agent SDK/Code Action、腾讯 BrowserSkill 插件等版本增量；Microsoft Agent Framework、Qwen Code、OpenAI Codex/Agents SDK 与 Transformers 另有可核验主分支工程信号。所有 OpenAI/Anthropic 条目均按专题分流注明，主分支提交不自动归入正式版本。
+主窗口：2026-08-18 22:25:00 至 2026-08-19 22:25:00（Asia/Shanghai）；近两日为 2026-08-17 22:25:00 至 2026-08-18 22:25:00，近三日为 2026-08-16 22:25:00 至 2026-08-17 22:25:00。本轮继续保留当天全部既有来源，并新增确认 Liquid AI 的 LFM2.5 QAD Q4_0 checkpoints、OpenAI Agents SDK Python 0.22.0，以及 Qwen Code、Transformers、LangChain 与 OpenAI Agents SDK 的主分支工程信号。所有 OpenAI/Anthropic 条目均按专题分流注明，主分支提交不自动归入正式版本；Liquid AI 自报评测仅按发布方数据呈现。
 
 ## 优先动态
 
@@ -177,7 +195,7 @@ tags:
 
 ## 播客与访谈
 
-主窗口内，Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时确认原始页面和发布时间的新一期；13:12 复核时 Dwarkesh 入口仍直接返回 403，搜索索引也未显示可核实的新节目。
+截至 22:25，Latent Space、The Cognitive Revolution、a16z AI 与厂商播客入口未发现主窗口内可核实的新一期；No Priors 官方 YouTube RSS 仅在 05:55 出现 Chess.com 相关短片，不按完整节目收录。Dwarkesh 入口仍返回 403，未据搜索索引单独确认新节目。
 
 ## 近两日补充（24–48 小时）
 
@@ -247,6 +265,21 @@ tags:
 | OpenAI | Codex 与 Agents SDK 运行边界 | 16:40–17:01；主分支，非正式发布 | Codex [移除异步用户消息旧 feature gate](https://github.com/openai/codex/commit/f5a3dc55404ddc066a4e4a65602fee166ecc46b3)并改按模型能力判定；Agents SDK 分别[隔离 RunState checkpoint usage](https://github.com/openai/openai-agents-python/commit/fb8fa1ba5c23f7ec61ca20c735999cf81e829a8e)、[扩展 agent graph handoff targets](https://github.com/openai/openai-agents-python/commit/9432f7ed30b9554ab5eaa84a4c0977059f96d5f0)和[拒绝失败/未完成终态响应](https://github.com/openai/openai-agents-python/commit/0486792662bd44791dfa5838425c54c52e971d08)。详见 OpenAI 专题页。 |
 | Hugging Face | [Qwen Omni generation 兼容 compilable cache](https://github.com/huggingface/transformers/commit/279dbcf4d66051c6e184d8d6960e96294d830f11) | 18:56；主分支，非正式发布 | 修复 Qwen2.5-Omni 与 Qwen3-Omni-MoE generation 在 compilable cache 路径的兼容问题，尚待后续 release 承载。 |
 
+## 22:25 滚动补充
+
+本轮新增确认 13 个唯一来源：1 项 Liquid AI 日期可核实发布、1 项 OpenAI Agents SDK 正式版，以及 Qwen Code、Transformers、LangChain、OpenAI Agents SDK 的 11 项主分支工程信号。所有主分支提交均非正式 release；OpenAI 项详见 OpenAI 专题页。
+
+| 厂商 | 动态 | 日期 / 状态 | 摘要与意义 |
+|---|---|---|---|
+| Liquid AI | [LFM2.5 Q4_0：面向边缘部署的量化感知蒸馏](https://www.liquid.ai/blog/qad) | 2026-08-19；原文无时刻，Hugging Face 官方组织同步页为 21:48 +08:00 | 发布 LFM2.5-230M、350M、1.2B-Instruct 与 2.6B 的 QAD Q4_0 GGUF；官方称在其七项任务与五次重复口径下恢复各 BF16 基线约 96.5%–97.4% 的表现。指标均属发布方自报，不外推为独立 benchmark 结论。 |
+| OpenAI | [Agents SDK Python 0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0) | 21:44；正式发布 | 正式版汇总 guardrail 后 replay/session state、Responses 终态、usage、handoff graph、tracing 与 sandbox 修复；详见 OpenAI 专题页。 |
+| OpenAI | Agents SDK Python 发布后修复 | 21:55–22:07；主分支，非正式发布 | [聚合 usage entry 深拷贝](https://github.com/openai/openai-agents-python/commit/629f9b56a5d32d52d1216f8866f5f0beae2484dc)避免来源对象后续变更互相污染；[同名 graph 节点保留](https://github.com/openai/openai-agents-python/commit/fe34ba3aa9a0f53e190badb41fc8b921ec2ca51b)以稳定 ID 区分同名 agent、tool 与 MCP server。两项均晚于 0.22.0 tag，详见 OpenAI 专题页。 |
+| OpenAI | Agents SDK TypeScript guardrail 与 provider 配置 | 20:29–21:56；主分支，非正式发布 | [阻止被 output guardrail 拒绝的 tool output 及别名进入 replay state](https://github.com/openai/openai-agents-js/commit/33fe55c62e5a0535766f8adbac63430593b7acd9)，并在[显式 client 与 organization/project 并用时拒绝静默忽略](https://github.com/openai/openai-agents-js/commit/d80736ace3c8ac32c41ba2b353a3e64ed31354b3)。详见 OpenAI 专题页。 |
+| Qwen | Qwen Code 图像载荷与重复 tool-call 回放边界 | 19:33–20:02；主分支，非正式发布 | [隔离 image payload eviction state](https://github.com/QwenLM/qwen-code/commit/872dd614f79b2a15d5c41902eeb420a78b3ceae2)，保护后台 Agent 历史快照并限制图片重挂载；[重复 provider tool-call ID 仅在参数指纹相同时视为 replay](https://github.com/QwenLM/qwen-code/commit/4b77a6e47201e21124171d66feadd5573f5c1509)，避免 Kimi 等每轮重用 ID 的调用被误杀。 |
+| Qwen | Qwen Code W3C trace 关联与 transcript 预校验 | 20:21–22:13；主分支，非正式发布 | [daemon HTTP span 关联入站 W3C traceparent](https://github.com/QwenLM/qwen-code/commit/d96f264de76bc522ce0564fdd51d37b093dde9a6)，并让 telemetry 关闭时 access log 仍携带 traceId；[transcript contract prevalidation](https://github.com/QwenLM/qwen-code/commit/5003ab3c7f0d35ce00de61ed43a6698fcd2cc25f)只固化证据与 fail-closed 门禁，当前 overall 为 fail、MR2 生产迁移尚未进入主分支，不改变 Web Shell/Desktop 生产行为。 |
+| Hugging Face | Transformers CPM-Ant 与 ASR 多声道输入修复 | 19:58–20:00；主分支，非正式发布 | [CPM-Ant lm_head 按 vocab_size 构建](https://github.com/huggingface/transformers/commit/e872ca25f3746721b900ddeafcd041b8466feb0d)以匹配已发布 checkpoint；[ASR pipeline 对不符合 documented channels-first 的多声道布局 fail closed](https://github.com/huggingface/transformers/commit/bb8f235353fb7a29ef293c9925182c497cad4ba4)，避免 channels-last 音频被错误压成极短序列。 |
+| LangChain | [ContextEditingMiddleware 支持自定义 token_counter](https://github.com/langchain-ai/langchain/commit/37f266278d780cd7ebdfbf1891ba92066192d687) | 21:35；主分支，非正式发布 | 自定义计数器优先于内置 approximate/model 方式，可针对 CJK 重负载或 provider tokenizer 决定 context edit 触发时机；尚待 release。 |
+
 ## 来源链接
 
 - [Sam Altman：暂停部分 frontier RL 训练](https://x.com/sama/status/2089787807611195475)
@@ -295,11 +328,12 @@ tags:
 - [Agents SDK rejects failed terminal responses](https://github.com/openai/openai-agents-python/commit/0486792662bd44791dfa5838425c54c52e971d08)（详见 OpenAI 专题页）
 - [Transformers Qwen Omni compilable cache fix](https://github.com/huggingface/transformers/commit/279dbcf4d66051c6e184d8d6960e96294d830f11)
 
-**一句话总结：19:12 增量以 Cohere Python 7.0.9、Transformers 5.15.1 和多项 Agent 工具版本为主；Microsoft、Qwen、OpenAI 与 Hugging Face 的新增提交集中在拦截契约、失败处理、状态保真与模型运行兼容，均未被误写为正式版本。**
+**一句话总结：22:25 增量新增 Liquid AI 的边缘量化模型发布与 OpenAI Agents SDK Python 0.22.0；Qwen、Transformers、LangChain 和 OpenAI 的后续提交集中在 replay/状态隔离、可观测性、fail-closed 输入与上下文计量，均未被误写为已交付版本。**
 
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节 Seed/豆包、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口；按主窗口、24–48h、48–72h 分档复核。
 - 19:12 补查：逐项打开 Anthropic Agent SDK/Code Action、Codex、Transformers、BrowserSkill、Cohere Python 的发布页，以及 Microsoft Agent Framework、Qwen Code、OpenAI Codex/Agents SDK、Transformers 的原始提交页；本轮保留 18 个唯一增量来源。
-- 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接入口仍有 403、脚本依赖或精确时间缺失；GitHub API 在首批查询后触发限流，改用官方 release.atom、发布 HTML 与原始 commit HTML 核验，未据搜索索引单独确认发布。
-- 当日各轮粗筛候选累计 420（19:12 本轮新增粗筛 57 个）；累积保留 89 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
+- 22:25 补查：新增核验 Liquid AI 1 项原始发布、OpenAI Agents SDK Python 0.22.0，以及 Qwen Code、Transformers、LangChain、OpenAI Agents SDK 11 项主分支提交；本轮保留 13 个唯一增量来源。
+- 失败来源：OpenAI News 网页、xAI、百度、Kimi、Dwarkesh 与 No Priors 旧域名存在 403、连接失败、脚本依赖或精确时间缺失；已改用可访问官方 RSS、GitHub、YouTube feed 与原始文章交叉核验，未据集合页 dateModified 或搜索索引单独确认发布。
+- 当日各轮粗筛候选累计 466（22:25 本轮新增粗筛 46 个）；累积保留 102 个唯一来源 URL；二次补搜：否（最终来源不为 0）。

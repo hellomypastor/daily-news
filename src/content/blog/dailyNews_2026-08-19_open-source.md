@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T19:12:00+08:00"
+updatedAt: "2026-08-19T22:22:09+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Building Shared Memory for AI Agents in Notion"
 featuredUrl: "https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"
@@ -16,8 +16,10 @@ tags:
   - "Agent"
   - "Agent Memory"
   - "Agent Skill"
+  - "Agent Skills"
   - "AI"
   - "API"
+  - "ASR"
   - "Audit"
   - "Benchmark"
   - "BitNet"
@@ -34,10 +36,13 @@ tags:
   - "Coding Agent"
   - "Collaboration"
   - "Commentary"
+  - "Commit"
   - "Compiler"
   - "Computer Use"
   - "Context"
   - "Continual Learning"
+  - "Coordination"
+  - "Cost"
   - "Cybersecurity"
   - "Data"
   - "Date Unconfirmed"
@@ -53,12 +58,14 @@ tags:
   - "Evolution Strategies"
   - "Fine-tuning"
   - "FPGA"
+  - "Git"
   - "GitHub"
   - "GitHub Trending"
   - "GPU"
   - "Hacker News"
   - "Harness"
   - "HN"
+  - "HTTP Signatures"
   - "Human in the Loop"
   - "Inference"
   - "Interpretability"
@@ -69,11 +76,13 @@ tags:
   - "LLM"
   - "LLM Judge"
   - "Local First"
+  - "Local Models"
   - "macOS"
   - "MCP"
   - "Memory"
   - "ML Systems"
   - "Model Architecture"
+  - "Model Loading"
   - "Mojo"
   - "Multi-Agent"
   - "Notion"
@@ -86,6 +95,7 @@ tags:
   - "Python"
   - "Quantization"
   - "Qwen"
+  - "Qwen Code"
   - "R"
   - "RAG"
   - "Reasoning"
@@ -96,6 +106,7 @@ tags:
   - "Review"
   - "RL"
   - "Robotics"
+  - "Runtime"
   - "Rust"
   - "Safety"
   - "Sandbox"
@@ -104,11 +115,19 @@ tags:
   - "Self Evolving"
   - "Session"
   - "Skills"
+  - "Software Architecture"
+  - "Software Engineering"
   - "Speculative Decoding"
   - "State"
   - "Statistics"
+  - "Telemetry"
+  - "tmux"
+  - "Tool Calling"
   - "Training"
+  - "Transformers"
   - "Trending"
+  - "Unverified Date"
+  - "Validation"
   - "Vector Search"
   - "Verification"
   - "Verifier"
@@ -126,7 +145,7 @@ tags:
 
 ## 概览
 
-高亮窗口为 2026-08-17 19:12 至 2026-08-19 19:12（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 19:12 至 2026-08-19 19:12。本轮在当天已有扫描上补查 HN 16:10–19:12 增量 102 条、GitHub 三类 Trending 共 40 行、五组新仓库检索前 10 去重 49 个、Hugging Face Daily Papers 100 条，并复核 Hugging Face Blog、Simon Willison 与原始工程页面；与当天已有集合合并后保留 157 个唯一来源 URL。新增已核实信号包括四个窗口内创建的 Agent 工程仓库和一篇窗口内论文；四个较旧项目因最近 24 小时 HN 讨论而单列回流，六个发布日期或原文受限候选进入“日期未确认”。仓库创建时间、论文提交时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
+高亮窗口为 2026-08-17 22:22 至 2026-08-19 22:22（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 22:22 至 2026-08-19 22:22。本轮在当天已有扫描上补查 HN 19:12–22:22 增量七组原始命中 132 条、GitHub 三类 Trending 共 47 行、五组新仓库检索前 10 去重 46 个、arXiv 48 小时四分类 346 条，并复核 Hugging Face、Simon Willison、Qwen Code 与 Transformers 官方主分支。与当天已有集合合并后保留 192 个唯一来源 URL；新增内容按窗口内原文、今日 Trending、近期 HN 发现、日期未确认与观察状态分层，仓库创建、提交、榜单和讨论时间不互相替代。
 
 ## 已核实高亮
 
@@ -305,12 +324,48 @@ tags:
 - [Orvena](https://orvena.app/) 本轮返回 403，无法核实所谓 4B 模型 agentic harness 的实现、许可证与发布时间；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359341) 的 18:03 发现证据，快照 3 points / 0 comments。
 - [Pander Score](https://sophronresearch.org/pander/) 本轮返回 403，无法核实评测集、方法与发布日期；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359125) 的 17:32 发现证据，快照 2 points / 0 comments。
 
+## 22:22 滚动补充
+
+### 已验证高亮
+
+| 项目 / 原文 | 日期 / 状态 | 技术要点 |
+|---|---|---|
+| [LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation](https://huggingface.co/blog/LiquidAI/qad) | HF RSS：2026-08-19 21:48 +08:00 | Liquid AI 发布四档 LFM2.5 QAD Q4_0 GGUF；作者以 BF16、PTQ 和多档量化对照，并报告五次重复的平均结果。精度恢复和端侧吞吐均为项目方实验，未作独立复现。 |
+| [Why LLMs can’t make your code simpler](https://www.answer.ai/posts/2026-08-19-llms-code-simpler.html) | 原页路径与正文标注 2026-08-19，时分未确认 | Answer.AI 以 Naur 的 theory-building 解释为何 LoC、圈复杂度等代码指标不能覆盖团队掌握的业务约束与设计判断；属于工程观点，不写成模型能力定论。[HN](https://news.ycombinator.com/item?id=49360447) 于 20:09 出现。 |
+| [How I run AI coding agents as a team with AI DevKit](https://codeaholicguy.com/2026/08/19/how-i-run-ai-coding-agents-as-a-team-with-ai-devkit/) | 原文元数据：2026-08-19 19:45 +08:00 | 作者记录以 manager/executor、共享上下文、Telegram 远程会话和人工 PR review 协调多家 coding harness；只是个人工作流证据。[HN](https://news.ycombinator.com/item?id=49360515) 于 20:17 出现。 |
+| [dotproject](https://github.com/jasonnam/dotproject) | 创建于 2026-08-18 21:30 +08:00；MIT | 以 write-once 定义和按 ULID/actor 命名的 append-only 事件避免 Agent 分支写同一字节，并把语义分歧显式报告；确定性合并结论限于 `.project/` 协议。[HN](https://news.ycombinator.com/item?id=49361544) 于 21:46 出现。 |
+| [tmux-agent-hub](https://github.com/mrybas/tmux-agent-hub) | 创建于 2026-08-19 19:12 +08:00；MIT | 通过 Claude Code/Codex lifecycle hooks 写入小型 JSON 状态，为多会话提供等待/完成状态、跳转、交叉 review 和 skills inspector；仓库刚创建，采用度很低。 |
+| [dsh-cost-meter](https://github.com/uruana33/dsh-cost-meter) | 创建于 2026-08-19 20:18 +08:00；MIT | 将 provider usage、缓存/输出 token 与版本化价格快照写入本地账本，并明确区分流式估算和最终结算；不是厂商官方账单，价格与金额仍需控制台核对。 |
+| [dsh-github](https://github.com/ChenYiming-aaa/dsh-github) | 创建于 2026-08-19 21:34 +08:00；MIT | 面向 DeepSeek Harness 的 GitHub 插件公开 45 个 REST 工具、持久凭据路径、输出脱敏和高风险操作审批门；安全性为 README/实现层证据，尚未独立审计。 |
+| [The Specification Is Not a Document](https://aicoding.leaflet.pub/3mtgs36dnq22o) | 页面元数据：2026-08-19 21:01 +08:00 | 文章主张将需求、事件、决策、实现和评测组织为可追溯关系图，再按问题生成视图；属于 generative software architecture 的设计论证。[HN](https://news.ycombinator.com/item?id=49361095) 于 21:04 出现。 |
+
+### 官方主分支工程信号
+
+- Qwen Code 在窗口内合入四项可读修复/能力：[隔离图像载荷 eviction 状态](https://github.com/QwenLM/qwen-code/commit/872dd614f79b2a15d5c41902eeb420a78b3ceae2)（19:33）、[仅在参数一致时把重复 provider tool-call id 判为 replay](https://github.com/QwenLM/qwen-code/commit/4b77a6e47201e21124171d66feadd5573f5c1509)（20:02）、[将 daemon HTTP span 关联到入站 W3C traceparent](https://github.com/QwenLM/qwen-code/commit/d96f264de76bc522ce0564fdd51d37b093dde9a6)（20:21）和 [web-shell transcript contract 预校验](https://github.com/QwenLM/qwen-code/commit/5003ab3c7f0d35ce00de61ed43a6698fcd2cc25f)（22:13）。它们是主分支提交，不等于 release。
+- Transformers 主分支合入 [CPM-Ant 依 vocab_size 构建 lm_head](https://github.com/huggingface/transformers/commit/e872ca25f3746721b900ddeafcd041b8466feb0d)（19:58）与 [ASR pipeline 对 channels-last 音频做单声道转换](https://github.com/huggingface/transformers/commit/bb8f235353fb7a29ef293c9925182c497cad4ba4)（20:00）两项修复；同样只视作提交信号。
+
+### GitHub Trending
+
+截止 22:22 的日榜新增相关项目包括：[mattpocock/skills](https://github.com/mattpocock/skills)（1,214 stars today）、[obra/superpowers](https://github.com/obra/superpowers)（514）、[Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)（454）、[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)（563）和 [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)（63）。这些数字只是 GitHub 公共日榜快照，不代表今日创建、技术质量或独立采用验证。
+
+### 旧项目回流与观察池
+
+- [H2AI Chat](https://github.com/Tonterias/h2aichat) 创建于 2026-07-10 00:53 +08:00、AGPL-3.0，支持本地模型的轮流多模型讨论；[HN](https://news.ycombinator.com/item?id=49361964) 于 22:17 回流，快照 1 point / 0 comments，效果主张待独立评估。
+- [LLM-Shield-Proxy](https://github.com/ninadphalak/LLM-Shield-Proxy) 创建于 2026-08-02、Apache-2.0，以 OpenAI-compatible reverse proxy 做 PII/secret redaction 和 SSE rehydration；[HN](https://news.ycombinator.com/item?id=49360413) 于 20:06 回流。合规、延迟和召回数字均为项目方陈述。
+- [Fuji](https://github.com/paradise-runner/fuji) 创建于 2026-08-17 03:41 +08:00、仓库未标 LICENSE；Go 实现的 headless one-shot Agent runtime 提供内置文件/Git/bash 工具和 JSONL session。[HN](https://news.ycombinator.com/item?id=49361042) 于 21:00 出现，列观察池而非已确认开源项目。
+- [regent-httpsig](https://github.com/regent-protocol/regent-httpsig) 创建于 2026-08-17 13:33 +08:00、Apache-2.0，实现 RFC 9421 / Web Bot Auth 的 Python 签名验证与签名发送；[HN](https://news.ycombinator.com/item?id=49361754) 于 22:01 出现，互操作与上游协议细节仍以仓库测试为证据。
+
+### 日期未确认
+
+- [Langfuse v4](https://langfuse.com/changelog/2026-08-17-langfuse-v4) 原页只确认 2026-08-17、无可靠时分，因此不硬判是否落入 48 小时；文章描述 immutable ClickHouse observation table、去 join/dedup 的查询路径和迁移要求，性能倍数为项目方数据。[HN](https://news.ycombinator.com/item?id=49360858) 于 20:46 讨论。
+- [A merge gate for coding agents cannot be a boolean](https://gist.github.com/fskroes/9061fc1c4284146561b1ede1c1e7fea2) 主张把验证结果建模为 passed/failed/inconclusive，避免未运行检查被误显示为绿色；Gist 未暴露可靠首发时间，仅以 [HN](https://news.ycombinator.com/item?id=49361414) 21:35 的发现证据保留。
+
 ## 来源链接
 
 原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、[DFlash 2 工程原文](https://inco.ai/blog/dflash2/)、[SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/)、[Volta 的 OOPSLA 页面](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组检索，本轮 16:10–19:12 增量 102 条、七组原始命中 652 条；GitHub Trending 全站/Python/TypeScript 共 40 行；GitHub Search 五组前 10 去重 49 个；Hugging Face Daily Papers 100 条、Blog 3 条与 Simon Willison feed 3 条；并打开 arXiv、GitHub README/许可证、独立工程原文与 HN 原帖核验。
-- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；arXiv submittedDate API 返回 429，改用 HF Daily Papers 并逐页打开候选 arXiv；Common Mistakes 原文返回 404，Orvena 与 Pander Score 返回 403，均只按 HN 发现证据列入日期未确认。当天前序扫描中的 Nick Busey、The Shapes of Agent Memory、Grader Labs CUA、Goat Squad Studios 与 exe.dev 原文仍不可访问。
-- 当日各轮粗筛候选累计 2,474（19:12 本轮复核 291 条原始记录）；累积保留 157 个唯一来源 URL；本轮有可靠来源增量，未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组检索，本轮 19:12–22:22 增量原始命中 132 条、去重 88 条，完整 24 小时原始命中 662 条、去重 447 条；GitHub Trending 全站/Python/TypeScript 47 行；GitHub Search 五组前 10 去重 46 个；arXiv 48 小时四分类 346 条并复核前 100；Hugging Face Daily Papers 100 条、Blog 4 条、Simon Willison 3 条；并核验 GitHub README/许可证与官方提交。
+- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；quaesitor.eu Silent Failures 与 karavox Agents as Subcontractors 原文返回域名拦截页，未收入 sources；Fuji 无 LICENSE，性能、合规和安全主张仅按项目方证据标注。当天前序扫描记录的 403/404/限流来源继续保留在 scan。
+- 当日各轮粗筛候选累计 2,762（22:22 本轮复核 288 条原始记录）；累积保留 192 个唯一来源 URL；本轮有实质来源增量，未触发二次补搜（secondPass=false）。

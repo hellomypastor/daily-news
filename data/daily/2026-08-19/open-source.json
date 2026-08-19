@@ -9,7 +9,7 @@
     "LLM"
   ],
   "order": 30,
-  "updatedAt": "2026-08-19T19:12:00+08:00",
+  "updatedAt": "2026-08-19T22:22:09+08:00",
   "image": {
     "url": "https://images.ctfassets.net/spoqsaf9291f/3KcypMugRMDnYguXzeAcKm/da0e5d9d74872fbf0769a50432fe9e8e/Lore.jpg",
     "alt": "Notion Lore 项目的共享 Agent 记忆示意图",
@@ -36,7 +36,10 @@
       "16:10 滚动补扫：HN front/newest 与 Algolia 13:12–16:10 新增 117 条并打开原始页；GitHub Trending 全站/Python/TypeScript 41 行；GitHub Search 五组前 10 去重 47 个并复核 README/许可证；arXiv 48 小时 468 条、复核前 300；Hugging Face Daily Papers 100 条、Blog 3 条与 Simon Willison 3 条",
       "19:12 滚动补扫：HN front/newest 与 Algolia 16:10–19:12 增量 102 条；完整 24 小时 AI/LLM/Agent/MCP/RAG/inference/open-source 七组检索原始命中 652 条，并打开相关原文与 HN 原帖",
       "19:12 滚动补扫：GitHub Trending 全站/Python/TypeScript 共 40 行；GitHub Search 对 Agent、LLM、RAG、MCP、inference 五组前 10 去重 49 个，并复核 README、创建时间与许可证",
-      "19:12 滚动补扫：Hugging Face Daily Papers 100 条、Blog 3 条、Simon Willison feed 3 条；逐页核验 Quipu arXiv、四个新仓库及 HN 回流项目"
+      "19:12 滚动补扫：Hugging Face Daily Papers 100 条、Blog 3 条、Simon Willison feed 3 条；逐页核验 Quipu arXiv、四个新仓库及 HN 回流项目",
+      "22:22 滚动补扫：HN front/newest 与 Algolia 19:12–22:22 增量七组原始命中 132 条、去重 88 条；完整 24 小时七组原始命中 662 条、去重 447 条，并打开相关原文与 HN 原帖",
+      "22:22 滚动补扫：GitHub Trending 全站/Python/TypeScript 共 47 行；GitHub Search 对 Agent、LLM、RAG、MCP、inference 五组前 10 去重 46 个，并复核 README、创建时间与许可证",
+      "22:22 滚动补扫：arXiv 48 小时四分类共 346 条并复核前 100；Hugging Face Daily Papers 100 条、Blog 窗口内 4 条、Simon Willison feed 窗口内 3 条；复核 Qwen Code 与 Transformers 官方主分支提交"
     ],
     "failedSources": [
       "GitHub Trending 无结构化 API：改用公开 HTML，并只记录页面明确显示的日增 stars",
@@ -51,12 +54,14 @@
       "Opus 5 code-comments fingerprint 原文返回 403：仅核到 HN 标题，证据不足，未收入 sources",
       "16:10 补扫：GitHub Core API 核验 7 个仓库后触发未认证 IP 限流，改用 raw README/LICENSE 与公开仓库页；GitHub Trending 无结构化 API；Lattice 与 Tracepack TLS 证书失败，ZEON 缺仓库与日期，均未写成已核实项目",
       "19:12 补扫：arXiv submittedDate API 返回 429 限流；改用 Hugging Face Daily Papers 复核并直接打开候选 arXiv 原页",
-      "19:12 补扫：Common Mistakes AI-Generated Apps 原文返回 404，Orvena 与 Pander Score 原页返回 403；仅保留原 URL 与 HN 发现证据，列入日期未确认，不转述页面细节"
+      "19:12 补扫：Common Mistakes AI-Generated Apps 原文返回 404，Orvena 与 Pander Score 原页返回 403；仅保留原 URL 与 HN 发现证据，列入日期未确认，不转述页面细节",
+      "22:22 补扫：quaesitor.eu Silent Failures 与 karavox Agents as Subcontractors 原文在采集网络返回域名拦截页，仅保留 HN 候选、不收入 sources",
+      "22:22 补扫：GitHub Trending 仍无结构化 API，改用公开 HTML；部分新仓库无 LICENSE 或仅有项目方性能/合规主张，按观察状态处理，不外推"
     ],
-    "candidateCount": 2474,
+    "candidateCount": 2762,
     "secondPass": false
   },
-  "content": "## 概览\n\n高亮窗口为 2026-08-17 19:12 至 2026-08-19 19:12（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 19:12 至 2026-08-19 19:12。本轮在当天已有扫描上补查 HN 16:10–19:12 增量 102 条、GitHub 三类 Trending 共 40 行、五组新仓库检索前 10 去重 49 个、Hugging Face Daily Papers 100 条，并复核 Hugging Face Blog、Simon Willison 与原始工程页面；与当天已有集合合并后保留 157 个唯一来源 URL。新增已核实信号包括四个窗口内创建的 Agent 工程仓库和一篇窗口内论文；四个较旧项目因最近 24 小时 HN 讨论而单列回流，六个发布日期或原文受限候选进入“日期未确认”。仓库创建时间、论文提交时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。\n\n## 已核实高亮\n\n| 项目 / 文章 | 是什么 | 为什么重要 | 日期 / 证据状态 |\n|---|---|---|---|\n| [DFlash 2: Keep Drafting Parallel](https://inco.ai/blog/dflash2/) | Inco AI 将 speculative decoding 的 draft block 保持一次并行生成，再以 candidate lists 重排提升命中 | 作者报告相对 DFlash 1 在其基准上再提升 16–25%，并给出 SGLang、vLLM、llama.cpp 与 oMLX 接入路径；性能与“输出不变”结论仍以项目方测试为准 | 原文标注 2026-08-18；页面与实现入口可打开 |\n| [Mojo🔥 is now open source](https://www.modular.com/blog/mojo-open-source) | Modular 将 Mojo 编译器、工具链和语言源码以 Apache-2.0（含 LLVM 例外）开放，并给出 Bazel 源码构建与测试命令 | 此前已开放标准库和部分 kernel；这次覆盖编译器与完整工具链。官方同时说明目前尚未接受编译器/工具链贡献，计划年内开放 | 官方结构化数据标注 2026-08-19 00:17 +08:00；原文与源码入口可打开 |\n| [Sentence Transformers：Multi-Vector Encoder](https://huggingface.co/blog/multi-vector-encoder) | Sentence Transformers v6 增加 ColBERT-style late interaction，可加载 PyLate、Stanford ColBERT 与 ColPali checkpoint | 把多向量训练、MaxSim、索引和评测纳入同一 API；原文也明确说明索引体积代价与 pooling/压缩路径 | HF RSS 标注 2026-08-18 08:00 +08:00；原文可打开 |\n| [Same Cluster, 33 Points More Utilization](https://huggingface.co/blog/Dharma-AI/gpu-management-pt2) | Dharma AI 描述一个约束感知 GPU 分配器，把训练、批推理、实时推理和量化统一进时域调度 | 同硬件、同负载七场景中作者报告最高利用率提升 33.4 个百分点；属于项目方实验，尚非独立复现 | HF RSS 标注 2026-08-18 03:46 +08:00；原文可打开 |\n| [janwilmake/agent-codemode](https://github.com/janwilmake/agent-codemode) | 让编码 Agent 写一段脚本批量调用已连接的 MCP server，而不是逐个工具往返 | README 给出单次真实任务的字符量和往返次数对照，但节省比例为作者个案；核心价值是把可重复工具链固化成脚本 | 仓库创建于 2026-08-18 18:08 +08:00；MIT，README 与元数据可核对 |\n| [yetone/cumora](https://github.com/yetone/cumora) | 人类与 Agent 共用私聊、群聊、看板和日历的跨端协作系统，可连接云端或本地 Claude Code/Codex daemon | 可读实现展示消息新鲜度门、任务认领和成本台账等多 Agent 协调边界 | 仓库创建于 2026-08-17 17:13 +08:00；MIT，截止前 API 快照 2,301 stars |\n| [browser-use/macos-harness](https://github.com/browser-use/macos-harness) | 以持久 Python 进程向模型暴露 see、key、type、click、Accessibility 与 AppleScript 等 macOS 原语 | 很薄的原语层便于审视桌面 Agent 的能力边界、权限与可观察性 | 仓库创建于 2026-08-17 08:22 +08:00；MIT，README 可打开 |\n| [jdshfhds/northcinder](https://github.com/jdshfhds/northcinder) | 买方运行的购物 Agent MCP，强调确定性排序、签名购买 mandate 与本地审计轨迹 | 把推荐、授权和购买动作拆开，为高风险 Agent 行为提供可审计设计样本；实际安全性仍需独立测试 | 仓库创建于 2026-08-17 19:42 +08:00；MIT，README 与元数据可核对 |\n| [SigmanticAI/apex-inference-chip](https://github.com/SigmanticAI/apex-inference-chip) | 在 FPGA 上以 RTL 实现 Qwen2.5-0.5B 的 transformer decoder layer，并与 golden model 做 bit-exact 对照 | 少见地公开硬件、验证路径和测量脚本；0.56 tok/s 与 140× 改进均为作者当前硬件结果，不外推 | 仓库创建于 2026-08-17 12:25 +08:00；Apache-2.0，README 可打开 |\n| [Yevanchen/reclaim-code-entropy](https://github.com/Yevanchen/reclaim-code-entropy) | 以证据排序可删除代码候选的 Agent Skill，区分只读审计与实际应用 | 把删代码变成带信心、风险、净减少量与验证步骤的工作流，避免把静态候选直接等同于安全删除 | 仓库创建于 2026-08-17 16:19 +08:00；MIT，README 可打开 |\n| [amitshekhariitbhu/llm-inference-engineering](https://github.com/amitshekhariitbhu/llm-inference-engineering) | 从生成循环、KV cache、PagedAttention 到 vLLM/SGLang serving 的持续更新教程与代码集合 | 适合按可运行的小步实验理解推理系统，而不是只看框架 API；内容仍在快速建设 | 仓库创建于 2026-08-18 11:10 +08:00；Apache-2.0，README 可打开 |\n| [Simon Willison：Qwen 3.8 27B scores 52](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) | 对 Qwen 3.8 27B 的第三方榜单位置与模型规模作简短技术评论 | 提醒把排行榜分数与参数规模、推理设置一起看；该条是评论，不代替模型卡或独立复现实验 | Atom feed 标注 2026-08-18 07:58 +08:00 |\n| [IBM Research：How Much Memory Does Your Agent Actually Need?](https://huggingface.co/blog/ibm-research/altk-evolve-hmm) | 用同一组自蒸馏 guidelines 比较无 memory、全量注入与检索子集，并覆盖八个模型 | 结果显示 memory 收益随模型能力、上下文和任务而变，重点是校准剂量；指标均为作者在 AppWorld 上的实验 | Hugging Face 结构化数据：2026-08-19 02:09 +08:00；原文可打开 |\n| [Miles v0.1: Production-level Post-training](https://www.lmsys.org/blog/2026-08-18-miles-v0-1/) | LMSYS/Miles 展示以 SGLang rollout、异步 RL、TITO、routing replay、低精度训练和 offload 组成的后训练系统 | 把 agentic rollout、训练—推理一致性和权重更新放进同一实现；性能数字属项目方结果 | 官方原文标注 2026-08-18；窗口内可打开 |\n| [githubnext/gh-aw-wizard](https://github.com/githubnext/gh-aw-wizard) | 从九类任务、触发器与上下文生成 GitHub Agentic Workflows，并公开模板数据与扫描脚本 | 把工作流能力、权限和触发方式显式化，便于审查生成结果 | 仓库创建于 2026-08-19 01:12 +08:00；MIT |\n| [GishReloaded/agent-mesh](https://github.com/GishReloaded/agent-mesh) | 为分布式编码 Agent 与开发者提供共享 session、顺序日志、版本化 context、任务与事件协议 | Agent token 限定到单 session，顺序日志支持断线续传；仍是低采用新项目 | 仓库创建于 2026-08-19 03:49 +08:00；Apache-2.0 |\n| [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) | 作者记录让多个 AI Agent 持续一个月反编译 MW2 的工程流程、成本与失败模式 | 长时程真实项目能暴露验证、并发和重复劳动问题；结论属于作者经验 | 原文结构化数据：2026-08-17 08:00 +08:00；处于 48 小时窗口内 |\n| [Building in the cloud with Codex, safely](https://www.ivan.codes/blog/building-in-the-cloud-with-codex) | 作者记录以 AGENTS.md、权限边界、可重复检查、trace 和独立 diff review 约束云端无人值守 Codex 的实践 | 重点不是“无人审核”，而是把资源声明、运行证据、预览环境和最终人工判断分层；属于单一工程案例，不外推为通用保证 | 原文 RSS 标注 2026-08-18 08:00 +08:00；正文可打开 |\n| [MazzaWill/code-agent-board](https://github.com/MazzaWill/code-agent-board) | 让两个不同厂商的 AI CLI 独立审查未提交 diff，再多轮对照阻塞项的 Agent skill | README 明确记录失败投票、超时和结构化空 verdict 不得默认为通过，也提醒跨厂商审查仍需人工核验 | 仓库创建于 2026-08-19 11:42 +08:00；MIT，README 与实现可打开 |\n| [liangyuan0219/session-migrator](https://github.com/liangyuan0219/session-migrator) | 按目标模型上下文容量迁移或压缩会话的 MCP server 与 Python 库 | 把跨 Agent 交接拆成容量判断、完整迁移或最新消息优先截断；静态模型容量表可能随厂商更新而过时 | 仓库创建于 2026-08-19 11:18 +08:00；MIT，README 与测试入口可打开 |\n| [gunwoo55/unlimited-agent](https://github.com/gunwoo55/unlimited-agent) | 通过私有 Secure MCP Tunnel 让 ChatGPT 控制 Windows 文件、PowerShell、桌面与浏览器的本地桥接 | README 将范围限制、危险动作本地审批和敏感读取审批显式化；完整远控风险高，安全性仍需独立审计 | 仓库创建于 2026-08-19 10:45 +08:00；MIT，README、SECURITY 与工具契约可打开 |\n| [celiumsai/celiums-bitnet](https://github.com/celiumsai/celiums-bitnet) | 面向 BitNet b1.58 的 correctness-first CPU inference fork，修复 I2_S packing、数值恢复、GGUF 转换与线程调度 | 公开严格数值契约、标量/SIMD 对照和多层测试，适合审视低比特推理中“能生成”与“计算等价”的差别；性能主张仍为项目方数据 | 仓库创建于 2026-08-19 12:23 +08:00；Apache-2.0，README 与变更文档可打开 |\n\n## GitHub Trending\n\n以下为截止时公开日榜快照；“stars today”只代表页面显示的当日新增，不是仓库创建量。总 stars 也不用于推断技术质量。\n\n| 仓库 | 技术定位 | 日榜证据 | 原始创建时间 |\n|---|---|---:|---|\n| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 主题到短视频的自动化 AI 工作流 | 2,306 stars today | 2024-03-11 |\n| [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) | 编码 Agent 的长期记忆与跨厂商交接层 | 730 stars today | 2026-05-22 +08:00 |\n| [volcengine/OpenViking](https://github.com/volcengine/OpenViking) | 统一 Agent memory、知识 RAG 与 skills 的上下文数据库 | 298 stars today | 2026-01-05 15:11 +08:00 |\n| [jundot/omlx](https://github.com/jundot/omlx) | Apple Silicon 上带连续批处理与 SSD cache 的 LLM 推理服务器 | 366 stars today | 2026-02-13 22:13 +08:00 |\n| [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book) | 《深入理解 AI Agent》正文、PDF 与配套代码 | 556 stars today | 2025-09-09 10:41 +08:00 |\n| [usestrix/strix](https://github.com/usestrix/strix) | 开源 AI 渗透测试与漏洞验证工具 | 1,218 stars today | 2025-08-06 05:28 +08:00 |\n| [unslothai/unsloth](https://github.com/unslothai/unsloth) | 本地运行和训练 LLM / diffusion model 的工具链 | 443 stars today | 2023-11-30 00:50 +08:00 |\n| [browser-use/video-use](https://github.com/browser-use/video-use) | 由 coding Agent 驱动 ffmpeg、字幕与动画子 Agent 的视频编辑 skill | 125 stars today | 2026-04-12 09:34 +08:00 |\n| [pipeshub-ai/pipeshub-ai](https://github.com/pipeshub-ai/pipeshub-ai) | 带权限感知检索、引用和连接器的自托管企业 AI context layer | 48 stars today | 2025-03-07 02:51 +08:00 |\n| [cactus-compute/needle](https://github.com/cactus-compute/needle) | 面向小型设备、带 schema 约束工具调用与有界 memory 的小模型运行时 | 364 stars today | 2026-02-24 12:50 +08:00 |\n| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 从多类公开平台检索并汇总近期信号的 Agent skill | 144 stars today | 2026-01-24 04:37 +08:00 |\n\n## HN 讨论\n\n- Mojo 官方公告在 [HN](https://news.ycombinator.com/item?id=49348079) 采集快照为 26 points / 4 comments；提交于 2026-08-19 00:23 +08:00，讨论热度不影响官方发布日期判定。\n- [DFlash 2](https://inco.ai/blog/dflash2/) 的 [HN 提交](https://news.ycombinator.com/item?id=49354885) 于 2026-08-19 08:20 +08:00 出现，10:12 快照为 4 points / 0 comments；技术结论依据原文，互动仅作发现证据。\n- agent-codemode 的 [HN 提交](https://news.ycombinator.com/item?id=49346900) 采集快照为 3 points / 0 comments；提交于 2026-08-18 23:15 +08:00，项目高亮依据是窗口内创建时间与公开实现。\n- [Artificial Analysis 的 Qwen 3.8 27B 条目](https://artificialanalysis.ai/models/qwen3-8-27b) 在 [HN](https://news.ycombinator.com/item?id=49334544) 采集快照为 366 points / 169 comments；这是第三方榜单及其讨论热度，不替代模型卡或可复现实验。\n- [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) 的 [HN 提交](https://news.ycombinator.com/item?id=49351299) 于 2026-08-19 03:28 +08:00 出现，快照为 4 points / 1 comment；高亮依据是原文日期与工程内容。\n- [Building in the cloud with Codex, safely](https://www.ivan.codes/blog/building-in-the-cloud-with-codex) 的 [HN 提交](https://news.ycombinator.com/item?id=49354095) 于 2026-08-19 07:05 +08:00 出现，快照为 3 points / 0 comments；技术结论依据可打开的原文与 RSS 日期，而非讨论热度。\n- [A2A 加入 AAIF 的原文](https://aaif.io/blog/a2a-joins-aaif)在 [HN](https://news.ycombinator.com/item?id=49356130) 于 2026-08-19 11:05 +08:00 出现，13:12 快照为 1 point / 0 comments；原文页面可打开，但只标注 2026-08-17 而无时分。\n- [Model Hypnosis](https://arxiv.org/abs/2608.16834) 的 [HN 提交](https://news.ycombinator.com/item?id=49356648) 于 2026-08-19 12:07 +08:00 出现，13:12 快照为 1 point / 0 comments；论文日期依据 arXiv v1，而非讨论热度。\n\n## 论文 / 研究\n\n| 论文 | 核心方向 | 日期 / 限制 |\n|---|---|---|\n| [Don't Drop the BATON](https://arxiv.org/abs/2608.16889) | 以子任务探索和 transition-aware memory 处理长时程机器人操作 | arXiv v1：2026-08-18 01:59 +08:00；论文主张待同行复核 |\n| [When State Becomes an Attack Surface](https://arxiv.org/abs/2608.16806) | 研究 LLM 具身 Agent 的 state-semantic injection 攻击面 | arXiv v1：2026-08-18 01:02 +08:00；窗口内原始条目 |\n| [When Agents Coordinate](https://arxiv.org/abs/2608.16801) | 用时序网络测量多 Agent 编码团队的消息与文件协调 | arXiv v1：2026-08-18 00:57 +08:00；指标结论来自论文实验 |\n| [TDD-Agent](https://arxiv.org/abs/2608.16742) | 以测试先行与执行反馈联合迭代代码和测试 | arXiv v1：2026-08-17 23:52 +08:00；论文主张待复现 |\n| [The Working Set of a Coding Agent](https://arxiv.org/abs/2608.16630) | 研究仓库级任务中工作集与 coherence debt 的关系 | arXiv v1：2026-08-17 22:30 +08:00；窗口内原始条目 |\n| [DSPrompt](https://arxiv.org/abs/2608.16536) | 用动态 soft prompt 防御多源 RAG corruption | arXiv v1：2026-08-17 21:11 +08:00；论文主张待复现 |\n| [On the Fragility of Self-Improving Agents](https://arxiv.org/abs/2608.18066) | 以多次运行与任务顺序打乱重评 memory-based self-improving agents，指出方差、隐式 curriculum 与环境欠规范会放大脆弱性 | arXiv v1：2026-08-19 01:55 +08:00；论文结论待独立复核 |\n| [StagedWorkspace](https://arxiv.org/abs/2608.18050) | 将文档、表格、幻灯片等 knowledge-work Agent 的 parsed view、native file、diff 与提交物绑定到明确版本与内容哈希 | arXiv v1：2026-08-19 01:44 +08:00；消融结果来自论文实验 |\n| [Chain-of-Experience](https://arxiv.org/abs/2608.18027) | 研究模型在推理期积累自反馈或环境反馈轨迹，并跨轮次形成持续改进循环 | arXiv v1：2026-08-19 01:22 +08:00；收益与成本数字为作者实验 |\n| [Judge, Retrieve, or Abstain](https://arxiv.org/abs/2608.17994) | 以校准阈值让 LLM judge 在直接判断、检索增强与弃权之间路由，并控制已接受 verdict 的风险 | arXiv v1：2026-08-19 00:42 +08:00；理论保证依赖论文设定 |\n| [Agent Lightning v1.0](https://arxiv.org/abs/2608.17528) | 将 deploy-time harness 纳入 Agent RL 训练回路，并给出 coding-agent RL 的可复现 pipeline；SWE-bench 数字来自论文实验 | arXiv v1：2026-08-18 16:50 +08:00；HF Daily Papers 收录，结论待独立复核 |\n| [HarnessRisk](https://arxiv.org/abs/2608.17597) | 以配置、扩展、运行、状态、动作与恢复六阶段组织 128 个 sandboxed agent-harness 安全案例 | arXiv v1：2026-08-18 18:03 +08:00；攻击成功率等指标来自论文实验 |\n| [StartupBench](https://arxiv.org/abs/2608.17800) | 从有市场采用证据的 AI 产品工作流抽取端到端通用 Agent 任务，并用细粒度 rubric 评测交付物 | arXiv v1：2026-08-18 22:01 +08:00；约 30% 完成率为作者统一 harness 下的结果 |\n| [Agentic ESOpt](https://arxiv.org/abs/2608.17310) | 用 evolution strategies 做长时程 Agent 的全参数微调，强调 inference-level 显存与轨迹级奖励 | arXiv v1：2026-08-18 11:03 +08:00；WebArena-Lite 结果为论文实验 |\n| [Model Hypnosis](https://arxiv.org/abs/2608.16834) | 研究多个弱而不显眼的文本线索叠加后对模型行为的强控制及跨模型迁移 | arXiv v1：2026-08-18 01:20 +08:00；安全与可解释性结论待同行复核 |\n\n## 旧文 / 旧项目再浮现\n\n以下原始内容早于七天，或仓库已存在超过七天，但在最近 24 小时重新进入 HN；原始时间和当前讨论分开记录。\n\n- [mukundzha/avouch](https://github.com/mukundzha/avouch) 是只检查本次 Git diff 的 Python AST 静态审查 CLI，仓库创建于 2026-07-25；其 [HN 提交](https://news.ycombinator.com/item?id=49345154) 于 2026-08-18 21:13 +08:00 出现，采集快照为 22 points / 19 comments。\n- [pitiflautico/neobrowser](https://github.com/pitiflautico/neobrowser) 是驱动真实登录态 Chrome 的 Rust MCP server，仓库创建于 2026-03-13；其 [HN 讨论](https://news.ycombinator.com/item?id=49345320) 于 2026-08-18 21:25 +08:00 出现，采集快照为 32 points / 25 comments。\n- [AshwinUgale/tracelint](https://github.com/AshwinUgale/tracelint) 以确定性规则检查 Agent trace 中的 schema 违规、未处理错误和循环等结构问题，仓库创建于 2026-08-02；[HN 提交](https://news.ycombinator.com/item?id=49346452) 于 2026-08-18 22:49 +08:00 出现，采集快照为 3 points / 0 comments。README 明示启发式发现只是候选，不能等同于最终答案正确性。\n- [Why Open Source Matters for AI](https://oreillyradar.substack.com/p/why-open-source-matters-for-ai) 原文发布于 2026-08-10，是 Tim O'Reilly 的观点文章；[HN 讨论](https://news.ycombinator.com/item?id=49335468) 于 2026-08-18 02:25 +08:00 出现，采集快照为 23 points / 0 comments，不作技术发布。\n- [LLM-as-a-Verifier](https://github.com/llm-as-a-verifier/llm-as-a-verifier) 是已有的通用 Agent verifier 框架，仓库创建于 2026-04-10；[HN 提交](https://news.ycombinator.com/item?id=49348195) 于 2026-08-19 00:30 +08:00 出现，采集快照为 2 points / 0 comments。README 的 benchmark 领先说法属于项目方结果。\n- [vercel-labs/fx](https://github.com/vercel-labs/fx) 是用 Zig 编写、可构建为原生二进制或 WebAssembly 的实验性 coding-agent harness，仓库创建于 2026-08-11 16:57 +08:00，Apache-2.0；其 [HN 讨论](https://news.ycombinator.com/item?id=49353339) 于 2026-08-19 06:00 +08:00 出现，07:18 快照为 32 points / 6 comments。README 明示 experimental，热度不等于成熟度。\n- [Popcorn](https://blog.tilderesearch.com/blog/popcorn) 是 Tilde 开源的 ML kernel 验证、基准与按输入/硬件调度层，原文标注 2026-08-11，配套仓库为 Apache-2.0；其 [HN 提交](https://news.ycombinator.com/item?id=49353646) 于 2026-08-19 06:25 +08:00 出现，快照为 2 points / 0 comments。性能与正确性边界仍应以项目测试和独立复现判断。\n- [RyanCodrai/turbovec](https://github.com/RyanCodrai/turbovec) 是基于 Google TurboQuant 思路、带 Python bindings 的 Rust vector index，仓库创建于 2026-03-26、MIT；其 [HN 讨论](https://news.ycombinator.com/item?id=49349898) 于 2026-08-19 02:07 +08:00 出现，10:12 快照为 211 points / 27 comments。仓库热度与作者性能主张不替代独立 benchmark。\n- [MongLong0214/commitlore](https://github.com/MongLong0214/commitlore) 把仍有效的工程决策、被否决方案和限制保存在 Git 中，并在 Agent 编辑路径前提供上下文；仓库创建于 2026-07-26，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356637) 于 2026-08-19 12:05 +08:00 出现，13:12 快照为 1 point / 0 comments；README 同时明确默认 author string 并非强身份边界。\n- [moorcheh-ai/memanto](https://github.com/moorcheh-ai/memanto) 自述为管理其他 Agent memory 的伴随 Agent，处理提取、合并、冲突与过期；仓库创建于 2026-03-24，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356590) 于 2026-08-19 12:01 +08:00 出现，13:12 快照为 1 point / 0 comments；实际效果仍需独立评测。\n- [elin66alpha/Relay](https://github.com/elin66alpha/Relay) 是让 Claude Code、Codex、OpenCode 和 Hermes 保持运行在用户机器上的自托管远程控制台；仓库创建于 2026-05-22，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356310) 于 2026-08-19 11:26 +08:00 出现，13:12 快照为 5 points / 1 comment；远程文件和 PTY 能力需要按其安全文档评估。\n\n## 日期未确认\n\n- [Shoehorn](https://notactuallytreyanastasio.github.io/shoehorn/) 描述按精确 VRAM 预算为各 tensor 选择量化方式并交给 llama.cpp 运行；公开页未暴露可靠原始发布日期，因此不列入窗口内已核实发布。其 [HN 提交](https://news.ycombinator.com/item?id=49346135) 可确认于 2026-08-18 22:29 +08:00 被发现，采集快照为 20 points / 2 comments。\n- [How to Parallelize a Transformer for Training](https://ezyang.github.io/interactive-parallelize-transformer/) 是可交互的 DP、FSDP、TP、pipeline 与 expert parallelism 估算页面；页面可打开但未暴露可靠发布日期，其 [HN 提交](https://news.ycombinator.com/item?id=49351721) 于 2026-08-19 03:55 +08:00 被发现。\n- [My coding agent invented its own vision](https://nickbusey.com/article/2026-08-18-agent-invented-vision/) 在采集网络返回 403，无法核实正文与原始发布时间；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49351887) 于 2026-08-19 04:07 +08:00 出现。\n- [The Shapes of Agent Memory](https://www.pinglin.tw/blog/the-shapes-of-agent-memory/) 原文在采集网络无法打开，暂不转述技术结论；[HN 提交](https://news.ycombinator.com/item?id=49349906) 于 2026-08-19 02:07 +08:00 出现。\n- [Grader Labs computer-use 任务样例页](https://cua.graderlabs.com/) 在采集网络返回 403，无法核实数据集结构、许可证与原始发布日期；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49353985) 于 2026-08-19 06:55 +08:00 出现，07:18 快照为 10 points / 1 comment，因此不列为已核实数据集发布。\n- [Equivalence Checking of ML GPU Kernels](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels) 是 SPLASH/OOPSLA 2026 接收页，摘要称 Volta 可对手工、LLM 与编译器优化的卷积、矩阵乘和 attention kernel 做等价检查；页面未暴露首次公开日期，因此不列为窗口内发布。其 [HN 提交](https://news.ycombinator.com/item?id=49354321) 于 2026-08-19 07:23 +08:00 出现，10:12 快照为 3 points / 2 comments。\n- [Modelmap](https://modelmap.cc) 提供 Hugging Face 模型的交互式 architecture map，公开页仅能核到功能描述，未暴露原始发布日期、代码仓库或许可证；其 [HN 提交](https://news.ycombinator.com/item?id=49354664) 于 2026-08-19 07:57 +08:00 出现，10:12 快照为 34 points / 4 comments，暂不判断其开源状态。\n\n## 观察池\n\n- [alex-reysa/singular-lite](https://github.com/alex-reysa/singular-lite) 是带 lease、gate、audit 与 git-worktree 隔离的多 Agent 编排原型；仓库创建于 2026-06-11，[HN](https://news.ycombinator.com/item?id=49346988) 于 2026-08-18 23:20 +08:00 提交，采集快照为 7 points / 2 comments。项目仍属原型，未验证其自治安全性。\n- [sovantica/engrava](https://github.com/sovantica/engrava) 自述为 SQLite 上的 Agent graph memory、hybrid search 与 tamper-evident journal；仓库创建于 2026-06-02，[HN](https://news.ycombinator.com/item?id=49345004) 于 2026-08-18 21:01 +08:00 提交，采集快照为 4 points / 0 comments，采用和性能主张待外部验证。\n- [PrimeIntellect-ai/prime-agent](https://github.com/PrimeIntellect-ai/prime-agent) 自述为可自改进的 RLM coding Agent；仓库创建于 2026-05-08，[HN](https://news.ycombinator.com/item?id=49339427) 于 2026-08-18 08:05 +08:00 提交，采集快照为 4 points / 0 comments。仓库热度较高，但“自改进”效果仍应以可复现实验判断。\n- [SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/) 介绍 14 个模型、30 个 IT/安全 incident 场景及 coding-agent/general-purpose harness 对照；结构化时间为 2026-08-17 08:00 +08:00，早于本轮 48 小时高亮起点约 2 小时，故作为较旧邻近信号。其 [HN 提交](https://news.ycombinator.com/item?id=49354946) 于 2026-08-19 08:28 +08:00 出现，10:12 快照为 2 points / 0 comments；榜单结论属于厂商初始评测。\n- [wdhwg001/csift](https://github.com/wdhwg001/csift) 对 Claude Code 的 JSONL session 做正则搜索、文件恢复、图片提取和 subagent topology 检查；仓库创建于 2026-08-17 09:36 +08:00，略早于本轮高亮窗口，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356290) 于 2026-08-19 11:24 +08:00 出现，13:12 快照为 2 points / 0 comments。\n- [A2A 加入 AAIF](https://aaif.io/blog/a2a-joins-aaif) 表示 Agent2Agent 开放标准成为 Agentic AI Foundation 托管项目，并继续采用开放贡献与中立治理；页面正文只标注 2026-08-17、未给出时分，无法确认是否落入从 13:12 起算的 48 小时窗口，因此作为邻近信号。其 [HN](https://news.ycombinator.com/item?id=49356130) 发现证据见上。\n\n## 16:10 滚动补充\n\n### 已验证高亮\n\n| 项目 | 日期 / 状态 | 技术要点 |\n|---|---|---|\n| [Building Shared Memory for AI Agents in Notion](https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion) | 2026-08-18 20:00 +08:00；官方原文 | Notion 公开 MIT 项目 Lore，以五类结构化数据库、MCP、CLI 与 hooks 维护共享 Agent 记忆；SkillRet 与失败恢复数字均为项目方实验。对应 [HN 讨论](https://news.ycombinator.com/item?id=49357879)截至快照 2 分 / 0 评论。 |\n| [datasilhouette](https://github.com/ibrahemalbalkhi/datasilhouette) | 创建于 2026-08-19 15:16；MIT | 本地把 CSV/Excel/JSON/Parquet 转成不含单元格值的 schema、cardinality 与 missing-value 报告，供 LLM 生成分析代码。 |\n| [LLMBench](https://github.com/Nuyoahzhou/LLMBench) | 创建于 14:35；MIT | 不连接真实模型，模拟 OpenAI Chat Completions、Responses 与 Claude Messages 的流式/非流式响应、TTFT、token 速度和抖动。 |\n| [yoober](https://github.com/frgmt0/yoober) | 创建于 13:23；MIT | 为 Agent 生成视频 contact sheet、时间戳链接与可检索 transcript slices，减少整段转录占用上下文。 |\n| [evalkit](https://github.com/charlescoverdale/evalkit) | 创建于 15:59；README 标注 MIT | R 语言模型评测工具，支持 cluster-robust 标准误、配对比较、power analysis 与 prediction-powered inference；模拟结果为作者结果。 |\n\n### GitHub Trending\n\n- [munder-difflin](https://github.com/chaitanyagiri/munder-difflin)：日榜显示 306 stars today；Electron/React 多 Agent harness 以 PTY 包装多家 coding CLI，并用本地 Git 文件实现 mailbox、memory 与任务路由。README 自称 working prototype，热度不等于今日发布或成熟度。\n- [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)：日榜显示 730 stars today；社区仓库自述 817 个安全 skills，并明确与 Anthropic 无隶属关系，数量与框架映射均为项目方陈述。\n- [ai-job-search](https://github.com/MadsLorentzen/ai-job-search)：TypeScript 日榜显示 167 stars today；本地职位抓取、匹配与文书 drafter-reviewer 工作流，个人转化数据仅属作者案例。\n\n### 论文、旧项目回流与日期未确认\n\n- [StateM](https://arxiv.org/abs/2608.15089)于 2026-08-15 提交，以 durable states、checked transitions、recoverable runbooks 与版本化 practices 扩展 Agent harness；准确率和成本是论文作者报告。[HN](https://news.ycombinator.com/item?id=49357544)于 14:15 回流，列较旧研究。\n- [profile](https://github.com/jungledesh/profile)读取生产 vLLM metrics 并对照 GPU memory/FLOPs ceiling 诊断瓶颈；README 性能为项目方实验。[HN 回流](https://news.ycombinator.com/item?id=49357947)发生于 15:03。\n- [jax-realtime](https://github.com/sachinkesiraju/jax-realtime)组合 Whisper、Silero VAD、SmolLM2、Pocket TTS 与可选视觉模型，构建浏览器 WebGPU 全双工语音助手；[HN 回流](https://news.ycombinator.com/item?id=49357683)发生于 14:30。\n- [seahorse](https://github.com/ssanvi-builds/seahorse)是 local-first、MCP-native、Obsidian-readable 的双时态 Agent memory，效果主张待独立评估；[HN 回流](https://news.ycombinator.com/item?id=49357513)发生于 14:11。\n- [MoveChat](https://github.com/VC067/MoveChat)在浏览器本地存储中导出/迁移多家聊天会话；隐私与兼容性为项目方说明。[HN 回流](https://news.ycombinator.com/item?id=49358171)发生于 15:30。\n- [Bad benchmarks and evals](https://danluu.com/exercise-7/)原文日期为 2026-07-23，讨论 benchmark 代表性、单次运行、阈值不连续与 LLM grader 方差；作者复跑观察不可外推。[HN 回流](https://news.ycombinator.com/item?id=49358297)发生于 15:44。\n- [Vetted AI code is hard to justify](https://amoffat.github.io/blog/vetting-burnout.html)只标 2026-08-17、无时分，无法确认是否落入 48 小时窗口；作者讨论大 diff 审查成本与 burnout，列日期未确认。[HN](https://news.ycombinator.com/item?id=49358041)于 15:16 讨论。\n\n### 观察池\n\n- [checkpoint-run](https://github.com/agenticaotearoa/checkpoint-run)提供 checkpoint/resume、checksum、timeout、retry 与分步日志，只属 Agent/LLM 邻近开发工具；[HN](https://news.ycombinator.com/item?id=49357518)于 14:12 出现。\n- [veyra](https://github.com/iondodon/veyra)描述版本化 self-evolving local Agent 与 supervisor 回滚；仓库没有 LICENSE，不写成已确认开源许可证项目。[HN](https://news.ycombinator.com/item?id=49358474)于 16:02 出现。\n\n## 19:12 滚动补充\n\n### 已验证高亮\n\n| 项目 | 日期 / 状态 | 技术要点 |\n|---|---|---|\n| [LansCoder](https://github.com/Lanstzz/LansCoder) | 创建于 2026-08-19 18:17 +08:00；MIT | 约 3 万行 Python 的本地 coding-agent harness，公开工具、权限、会话、上下文压缩、MCP 与后台 subagent 模块；96.38% pass@1 为作者在 Harbor Aider Polyglot 上的结果，未作独立复现。 |\n| [WorldLedger](https://github.com/Asymptote14/Worldledger) | 创建于 2026-08-19 16:49 +08:00；MIT | 让 LLM 提议文字世界事件，再由确定性账本校验时间、引用、前置条件、角色知识与实体状态；README 明确定位为研究型 v0 原型。 |\n| [LocalBridge](https://github.com/zephyr7030/LocalBridge) | 创建于 2026-08-19 16:16 +08:00；MIT | Windows 本地 MCP 桥接器把普通用户工具限制在活动工作区，并把管理员操作拆到显式 UAC/Broker 路径；项目也明确普通子进程不等于额外 OS 级沙箱。 |\n| [SilverPilot](https://github.com/LeiQingliang/silverpilot) | 创建于 2026-08-19 17:53 +08:00；Apache-2.0 | 养老服务演示 Agent 把模型规划与后端事实/权限分离，五类写操作先生成待确认动作；测试、评测和扫描数字均是仓库保存的时间点证据，项目明确未在机构生产部署。 |\n| [Quipu](https://arxiv.org/abs/2608.16813) | arXiv v1：2026-08-18 01:04 +08:00 | 面向 Agent 写入知识图谱的嵌入式 bitemporal store，以 gate、authority/trust lattice 与可查询审计约束写入；512 项等数字为论文作者实验。其 [HN 讨论](https://news.ycombinator.com/item?id=49359849) 于 19:02 出现，快照 2 points / 0 comments。 |\n\n### 旧项目再浮现\n\n- [Cairn](https://github.com/cairnpm/cairn) 是把反馈去重、归纳并整理为 Shape Up roadmap 的自托管 PM Agent，仓库创建于 2026-07-01；许可证为 FSL-1.1-ALv2、限制竞争性用途，因此不写成 OSI 开源。[HN](https://news.ycombinator.com/item?id=49359513) 于 2026-08-19 18:24 +08:00 回流，快照 1 point / 0 comments。\n- [SIL](https://github.com/ais-space/sil) 为 Web 应用定义供 Agent 使用的结构化语义接口；规范采用 CC BY 4.0，配套代码采用 Apache-2.0，仓库创建于 2026-08-09。[HN](https://news.ycombinator.com/item?id=49359448) 于 18:17 回流，快照 1 point / 1 comment。\n- [Rune](https://github.com/thecolourfoundation/rune) 持续维护代码库理解图并通过 MCP 返回带文件/行号证据的结果，仓库创建于 2026-07-29、MIT；[HN](https://news.ycombinator.com/item?id=49359128) 于 17:32 回流，快照 2 points / 0 comments，效果主张待独立验证。\n- [pr-sage](https://github.com/Kyeom1997/pr-sage) 是支持增量审查、finding lifecycle 与本地 diff review 的 GitHub Action，仓库创建于 2026-07-21、MIT；[HN](https://news.ycombinator.com/item?id=49358609) 于 16:20 回流，快照 1 point / 0 comments，标题中的比例属于作者主张。\n\n### 日期未确认\n\n- [AI reverse-engineered my printer](https://www.panaxeo.com/blog/ai-reverse-engineered-my-printer-i-just-pressed-the-buttons) 原页可打开，但未暴露可核实的首发时间，因此不列为窗口内发布；[HN](https://news.ycombinator.com/item?id=49359452) 于 2026-08-19 18:17 +08:00 出现，快照 2 points / 0 comments。\n- [AeonBox: Logical Guardrails for Agents](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/) 讨论以 liquid types 表达 Agent 行为权限与 sandbox 约束；页面显示的日期元数据异常，不能作为首发证据。[HN](https://news.ycombinator.com/item?id=49359459) 于 18:19 出现，快照 1 point / 0 comments。\n- [The Equations of Reasoning](https://pathway.com/research/the-equations-of-reasoning) 页面以 attention、memory 与 reasoning 的局部规律为主题并链接既有论文，但未暴露可靠页面发布日期；[HN](https://news.ycombinator.com/item?id=49358735) 于 16:37 出现，快照 2 points / 0 comments。\n- [Common Mistakes I Have Seen That AI-Generated Apps Keep Making](https://daniel.reguero.dev/blogs/ten-common-security-mistakes-ai-generated-apps-make) 本轮返回 404，无法核实正文、日期与安全建议；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359856) 的 19:03 发现证据，快照 1 point / 0 comments。\n- [Orvena](https://orvena.app/) 本轮返回 403，无法核实所谓 4B 模型 agentic harness 的实现、许可证与发布时间；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359341) 的 18:03 发现证据，快照 3 points / 0 comments。\n- [Pander Score](https://sophronresearch.org/pander/) 本轮返回 403，无法核实评测集、方法与发布日期；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359125) 的 17:32 发现证据，快照 2 points / 0 comments。\n\n## 来源链接\n\n原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、[DFlash 2 工程原文](https://inco.ai/blog/dflash2/)、[SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/)、[Volta 的 OOPSLA 页面](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。\n\n## 采集状态\n\n- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组检索，本轮 16:10–19:12 增量 102 条、七组原始命中 652 条；GitHub Trending 全站/Python/TypeScript 共 40 行；GitHub Search 五组前 10 去重 49 个；Hugging Face Daily Papers 100 条、Blog 3 条与 Simon Willison feed 3 条；并打开 arXiv、GitHub README/许可证、独立工程原文与 HN 原帖核验。\n- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；arXiv submittedDate API 返回 429，改用 HF Daily Papers 并逐页打开候选 arXiv；Common Mistakes 原文返回 404，Orvena 与 Pander Score 返回 403，均只按 HN 发现证据列入日期未确认。当天前序扫描中的 Nick Busey、The Shapes of Agent Memory、Grader Labs CUA、Goat Squad Studios 与 exe.dev 原文仍不可访问。\n- 当日各轮粗筛候选累计 2,474（19:12 本轮复核 291 条原始记录）；累积保留 157 个唯一来源 URL；本轮有可靠来源增量，未触发二次补搜（secondPass=false）。",
+  "content": "## 概览\n\n高亮窗口为 2026-08-17 22:22 至 2026-08-19 22:22（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 22:22 至 2026-08-19 22:22。本轮在当天已有扫描上补查 HN 19:12–22:22 增量七组原始命中 132 条、GitHub 三类 Trending 共 47 行、五组新仓库检索前 10 去重 46 个、arXiv 48 小时四分类 346 条，并复核 Hugging Face、Simon Willison、Qwen Code 与 Transformers 官方主分支。与当天已有集合合并后保留 192 个唯一来源 URL；新增内容按窗口内原文、今日 Trending、近期 HN 发现、日期未确认与观察状态分层，仓库创建、提交、榜单和讨论时间不互相替代。\n\n## 已核实高亮\n\n| 项目 / 文章 | 是什么 | 为什么重要 | 日期 / 证据状态 |\n|---|---|---|---|\n| [DFlash 2: Keep Drafting Parallel](https://inco.ai/blog/dflash2/) | Inco AI 将 speculative decoding 的 draft block 保持一次并行生成，再以 candidate lists 重排提升命中 | 作者报告相对 DFlash 1 在其基准上再提升 16–25%，并给出 SGLang、vLLM、llama.cpp 与 oMLX 接入路径；性能与“输出不变”结论仍以项目方测试为准 | 原文标注 2026-08-18；页面与实现入口可打开 |\n| [Mojo🔥 is now open source](https://www.modular.com/blog/mojo-open-source) | Modular 将 Mojo 编译器、工具链和语言源码以 Apache-2.0（含 LLVM 例外）开放，并给出 Bazel 源码构建与测试命令 | 此前已开放标准库和部分 kernel；这次覆盖编译器与完整工具链。官方同时说明目前尚未接受编译器/工具链贡献，计划年内开放 | 官方结构化数据标注 2026-08-19 00:17 +08:00；原文与源码入口可打开 |\n| [Sentence Transformers：Multi-Vector Encoder](https://huggingface.co/blog/multi-vector-encoder) | Sentence Transformers v6 增加 ColBERT-style late interaction，可加载 PyLate、Stanford ColBERT 与 ColPali checkpoint | 把多向量训练、MaxSim、索引和评测纳入同一 API；原文也明确说明索引体积代价与 pooling/压缩路径 | HF RSS 标注 2026-08-18 08:00 +08:00；原文可打开 |\n| [Same Cluster, 33 Points More Utilization](https://huggingface.co/blog/Dharma-AI/gpu-management-pt2) | Dharma AI 描述一个约束感知 GPU 分配器，把训练、批推理、实时推理和量化统一进时域调度 | 同硬件、同负载七场景中作者报告最高利用率提升 33.4 个百分点；属于项目方实验，尚非独立复现 | HF RSS 标注 2026-08-18 03:46 +08:00；原文可打开 |\n| [janwilmake/agent-codemode](https://github.com/janwilmake/agent-codemode) | 让编码 Agent 写一段脚本批量调用已连接的 MCP server，而不是逐个工具往返 | README 给出单次真实任务的字符量和往返次数对照，但节省比例为作者个案；核心价值是把可重复工具链固化成脚本 | 仓库创建于 2026-08-18 18:08 +08:00；MIT，README 与元数据可核对 |\n| [yetone/cumora](https://github.com/yetone/cumora) | 人类与 Agent 共用私聊、群聊、看板和日历的跨端协作系统，可连接云端或本地 Claude Code/Codex daemon | 可读实现展示消息新鲜度门、任务认领和成本台账等多 Agent 协调边界 | 仓库创建于 2026-08-17 17:13 +08:00；MIT，截止前 API 快照 2,301 stars |\n| [browser-use/macos-harness](https://github.com/browser-use/macos-harness) | 以持久 Python 进程向模型暴露 see、key、type、click、Accessibility 与 AppleScript 等 macOS 原语 | 很薄的原语层便于审视桌面 Agent 的能力边界、权限与可观察性 | 仓库创建于 2026-08-17 08:22 +08:00；MIT，README 可打开 |\n| [jdshfhds/northcinder](https://github.com/jdshfhds/northcinder) | 买方运行的购物 Agent MCP，强调确定性排序、签名购买 mandate 与本地审计轨迹 | 把推荐、授权和购买动作拆开，为高风险 Agent 行为提供可审计设计样本；实际安全性仍需独立测试 | 仓库创建于 2026-08-17 19:42 +08:00；MIT，README 与元数据可核对 |\n| [SigmanticAI/apex-inference-chip](https://github.com/SigmanticAI/apex-inference-chip) | 在 FPGA 上以 RTL 实现 Qwen2.5-0.5B 的 transformer decoder layer，并与 golden model 做 bit-exact 对照 | 少见地公开硬件、验证路径和测量脚本；0.56 tok/s 与 140× 改进均为作者当前硬件结果，不外推 | 仓库创建于 2026-08-17 12:25 +08:00；Apache-2.0，README 可打开 |\n| [Yevanchen/reclaim-code-entropy](https://github.com/Yevanchen/reclaim-code-entropy) | 以证据排序可删除代码候选的 Agent Skill，区分只读审计与实际应用 | 把删代码变成带信心、风险、净减少量与验证步骤的工作流，避免把静态候选直接等同于安全删除 | 仓库创建于 2026-08-17 16:19 +08:00；MIT，README 可打开 |\n| [amitshekhariitbhu/llm-inference-engineering](https://github.com/amitshekhariitbhu/llm-inference-engineering) | 从生成循环、KV cache、PagedAttention 到 vLLM/SGLang serving 的持续更新教程与代码集合 | 适合按可运行的小步实验理解推理系统，而不是只看框架 API；内容仍在快速建设 | 仓库创建于 2026-08-18 11:10 +08:00；Apache-2.0，README 可打开 |\n| [Simon Willison：Qwen 3.8 27B scores 52](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) | 对 Qwen 3.8 27B 的第三方榜单位置与模型规模作简短技术评论 | 提醒把排行榜分数与参数规模、推理设置一起看；该条是评论，不代替模型卡或独立复现实验 | Atom feed 标注 2026-08-18 07:58 +08:00 |\n| [IBM Research：How Much Memory Does Your Agent Actually Need?](https://huggingface.co/blog/ibm-research/altk-evolve-hmm) | 用同一组自蒸馏 guidelines 比较无 memory、全量注入与检索子集，并覆盖八个模型 | 结果显示 memory 收益随模型能力、上下文和任务而变，重点是校准剂量；指标均为作者在 AppWorld 上的实验 | Hugging Face 结构化数据：2026-08-19 02:09 +08:00；原文可打开 |\n| [Miles v0.1: Production-level Post-training](https://www.lmsys.org/blog/2026-08-18-miles-v0-1/) | LMSYS/Miles 展示以 SGLang rollout、异步 RL、TITO、routing replay、低精度训练和 offload 组成的后训练系统 | 把 agentic rollout、训练—推理一致性和权重更新放进同一实现；性能数字属项目方结果 | 官方原文标注 2026-08-18；窗口内可打开 |\n| [githubnext/gh-aw-wizard](https://github.com/githubnext/gh-aw-wizard) | 从九类任务、触发器与上下文生成 GitHub Agentic Workflows，并公开模板数据与扫描脚本 | 把工作流能力、权限和触发方式显式化，便于审查生成结果 | 仓库创建于 2026-08-19 01:12 +08:00；MIT |\n| [GishReloaded/agent-mesh](https://github.com/GishReloaded/agent-mesh) | 为分布式编码 Agent 与开发者提供共享 session、顺序日志、版本化 context、任务与事件协议 | Agent token 限定到单 session，顺序日志支持断线续传；仍是低采用新项目 | 仓库创建于 2026-08-19 03:49 +08:00；Apache-2.0 |\n| [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) | 作者记录让多个 AI Agent 持续一个月反编译 MW2 的工程流程、成本与失败模式 | 长时程真实项目能暴露验证、并发和重复劳动问题；结论属于作者经验 | 原文结构化数据：2026-08-17 08:00 +08:00；处于 48 小时窗口内 |\n| [Building in the cloud with Codex, safely](https://www.ivan.codes/blog/building-in-the-cloud-with-codex) | 作者记录以 AGENTS.md、权限边界、可重复检查、trace 和独立 diff review 约束云端无人值守 Codex 的实践 | 重点不是“无人审核”，而是把资源声明、运行证据、预览环境和最终人工判断分层；属于单一工程案例，不外推为通用保证 | 原文 RSS 标注 2026-08-18 08:00 +08:00；正文可打开 |\n| [MazzaWill/code-agent-board](https://github.com/MazzaWill/code-agent-board) | 让两个不同厂商的 AI CLI 独立审查未提交 diff，再多轮对照阻塞项的 Agent skill | README 明确记录失败投票、超时和结构化空 verdict 不得默认为通过，也提醒跨厂商审查仍需人工核验 | 仓库创建于 2026-08-19 11:42 +08:00；MIT，README 与实现可打开 |\n| [liangyuan0219/session-migrator](https://github.com/liangyuan0219/session-migrator) | 按目标模型上下文容量迁移或压缩会话的 MCP server 与 Python 库 | 把跨 Agent 交接拆成容量判断、完整迁移或最新消息优先截断；静态模型容量表可能随厂商更新而过时 | 仓库创建于 2026-08-19 11:18 +08:00；MIT，README 与测试入口可打开 |\n| [gunwoo55/unlimited-agent](https://github.com/gunwoo55/unlimited-agent) | 通过私有 Secure MCP Tunnel 让 ChatGPT 控制 Windows 文件、PowerShell、桌面与浏览器的本地桥接 | README 将范围限制、危险动作本地审批和敏感读取审批显式化；完整远控风险高，安全性仍需独立审计 | 仓库创建于 2026-08-19 10:45 +08:00；MIT，README、SECURITY 与工具契约可打开 |\n| [celiumsai/celiums-bitnet](https://github.com/celiumsai/celiums-bitnet) | 面向 BitNet b1.58 的 correctness-first CPU inference fork，修复 I2_S packing、数值恢复、GGUF 转换与线程调度 | 公开严格数值契约、标量/SIMD 对照和多层测试，适合审视低比特推理中“能生成”与“计算等价”的差别；性能主张仍为项目方数据 | 仓库创建于 2026-08-19 12:23 +08:00；Apache-2.0，README 与变更文档可打开 |\n\n## GitHub Trending\n\n以下为截止时公开日榜快照；“stars today”只代表页面显示的当日新增，不是仓库创建量。总 stars 也不用于推断技术质量。\n\n| 仓库 | 技术定位 | 日榜证据 | 原始创建时间 |\n|---|---|---:|---|\n| [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 主题到短视频的自动化 AI 工作流 | 2,306 stars today | 2024-03-11 |\n| [akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) | 编码 Agent 的长期记忆与跨厂商交接层 | 730 stars today | 2026-05-22 +08:00 |\n| [volcengine/OpenViking](https://github.com/volcengine/OpenViking) | 统一 Agent memory、知识 RAG 与 skills 的上下文数据库 | 298 stars today | 2026-01-05 15:11 +08:00 |\n| [jundot/omlx](https://github.com/jundot/omlx) | Apple Silicon 上带连续批处理与 SSD cache 的 LLM 推理服务器 | 366 stars today | 2026-02-13 22:13 +08:00 |\n| [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book) | 《深入理解 AI Agent》正文、PDF 与配套代码 | 556 stars today | 2025-09-09 10:41 +08:00 |\n| [usestrix/strix](https://github.com/usestrix/strix) | 开源 AI 渗透测试与漏洞验证工具 | 1,218 stars today | 2025-08-06 05:28 +08:00 |\n| [unslothai/unsloth](https://github.com/unslothai/unsloth) | 本地运行和训练 LLM / diffusion model 的工具链 | 443 stars today | 2023-11-30 00:50 +08:00 |\n| [browser-use/video-use](https://github.com/browser-use/video-use) | 由 coding Agent 驱动 ffmpeg、字幕与动画子 Agent 的视频编辑 skill | 125 stars today | 2026-04-12 09:34 +08:00 |\n| [pipeshub-ai/pipeshub-ai](https://github.com/pipeshub-ai/pipeshub-ai) | 带权限感知检索、引用和连接器的自托管企业 AI context layer | 48 stars today | 2025-03-07 02:51 +08:00 |\n| [cactus-compute/needle](https://github.com/cactus-compute/needle) | 面向小型设备、带 schema 约束工具调用与有界 memory 的小模型运行时 | 364 stars today | 2026-02-24 12:50 +08:00 |\n| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 从多类公开平台检索并汇总近期信号的 Agent skill | 144 stars today | 2026-01-24 04:37 +08:00 |\n\n## HN 讨论\n\n- Mojo 官方公告在 [HN](https://news.ycombinator.com/item?id=49348079) 采集快照为 26 points / 4 comments；提交于 2026-08-19 00:23 +08:00，讨论热度不影响官方发布日期判定。\n- [DFlash 2](https://inco.ai/blog/dflash2/) 的 [HN 提交](https://news.ycombinator.com/item?id=49354885) 于 2026-08-19 08:20 +08:00 出现，10:12 快照为 4 points / 0 comments；技术结论依据原文，互动仅作发现证据。\n- agent-codemode 的 [HN 提交](https://news.ycombinator.com/item?id=49346900) 采集快照为 3 points / 0 comments；提交于 2026-08-18 23:15 +08:00，项目高亮依据是窗口内创建时间与公开实现。\n- [Artificial Analysis 的 Qwen 3.8 27B 条目](https://artificialanalysis.ai/models/qwen3-8-27b) 在 [HN](https://news.ycombinator.com/item?id=49334544) 采集快照为 366 points / 169 comments；这是第三方榜单及其讨论热度，不替代模型卡或可复现实验。\n- [200 Billion Tokens Later](https://momo5502.com/posts/2026-08-17-mw2-decompilation/) 的 [HN 提交](https://news.ycombinator.com/item?id=49351299) 于 2026-08-19 03:28 +08:00 出现，快照为 4 points / 1 comment；高亮依据是原文日期与工程内容。\n- [Building in the cloud with Codex, safely](https://www.ivan.codes/blog/building-in-the-cloud-with-codex) 的 [HN 提交](https://news.ycombinator.com/item?id=49354095) 于 2026-08-19 07:05 +08:00 出现，快照为 3 points / 0 comments；技术结论依据可打开的原文与 RSS 日期，而非讨论热度。\n- [A2A 加入 AAIF 的原文](https://aaif.io/blog/a2a-joins-aaif)在 [HN](https://news.ycombinator.com/item?id=49356130) 于 2026-08-19 11:05 +08:00 出现，13:12 快照为 1 point / 0 comments；原文页面可打开，但只标注 2026-08-17 而无时分。\n- [Model Hypnosis](https://arxiv.org/abs/2608.16834) 的 [HN 提交](https://news.ycombinator.com/item?id=49356648) 于 2026-08-19 12:07 +08:00 出现，13:12 快照为 1 point / 0 comments；论文日期依据 arXiv v1，而非讨论热度。\n\n## 论文 / 研究\n\n| 论文 | 核心方向 | 日期 / 限制 |\n|---|---|---|\n| [Don't Drop the BATON](https://arxiv.org/abs/2608.16889) | 以子任务探索和 transition-aware memory 处理长时程机器人操作 | arXiv v1：2026-08-18 01:59 +08:00；论文主张待同行复核 |\n| [When State Becomes an Attack Surface](https://arxiv.org/abs/2608.16806) | 研究 LLM 具身 Agent 的 state-semantic injection 攻击面 | arXiv v1：2026-08-18 01:02 +08:00；窗口内原始条目 |\n| [When Agents Coordinate](https://arxiv.org/abs/2608.16801) | 用时序网络测量多 Agent 编码团队的消息与文件协调 | arXiv v1：2026-08-18 00:57 +08:00；指标结论来自论文实验 |\n| [TDD-Agent](https://arxiv.org/abs/2608.16742) | 以测试先行与执行反馈联合迭代代码和测试 | arXiv v1：2026-08-17 23:52 +08:00；论文主张待复现 |\n| [The Working Set of a Coding Agent](https://arxiv.org/abs/2608.16630) | 研究仓库级任务中工作集与 coherence debt 的关系 | arXiv v1：2026-08-17 22:30 +08:00；窗口内原始条目 |\n| [DSPrompt](https://arxiv.org/abs/2608.16536) | 用动态 soft prompt 防御多源 RAG corruption | arXiv v1：2026-08-17 21:11 +08:00；论文主张待复现 |\n| [On the Fragility of Self-Improving Agents](https://arxiv.org/abs/2608.18066) | 以多次运行与任务顺序打乱重评 memory-based self-improving agents，指出方差、隐式 curriculum 与环境欠规范会放大脆弱性 | arXiv v1：2026-08-19 01:55 +08:00；论文结论待独立复核 |\n| [StagedWorkspace](https://arxiv.org/abs/2608.18050) | 将文档、表格、幻灯片等 knowledge-work Agent 的 parsed view、native file、diff 与提交物绑定到明确版本与内容哈希 | arXiv v1：2026-08-19 01:44 +08:00；消融结果来自论文实验 |\n| [Chain-of-Experience](https://arxiv.org/abs/2608.18027) | 研究模型在推理期积累自反馈或环境反馈轨迹，并跨轮次形成持续改进循环 | arXiv v1：2026-08-19 01:22 +08:00；收益与成本数字为作者实验 |\n| [Judge, Retrieve, or Abstain](https://arxiv.org/abs/2608.17994) | 以校准阈值让 LLM judge 在直接判断、检索增强与弃权之间路由，并控制已接受 verdict 的风险 | arXiv v1：2026-08-19 00:42 +08:00；理论保证依赖论文设定 |\n| [Agent Lightning v1.0](https://arxiv.org/abs/2608.17528) | 将 deploy-time harness 纳入 Agent RL 训练回路，并给出 coding-agent RL 的可复现 pipeline；SWE-bench 数字来自论文实验 | arXiv v1：2026-08-18 16:50 +08:00；HF Daily Papers 收录，结论待独立复核 |\n| [HarnessRisk](https://arxiv.org/abs/2608.17597) | 以配置、扩展、运行、状态、动作与恢复六阶段组织 128 个 sandboxed agent-harness 安全案例 | arXiv v1：2026-08-18 18:03 +08:00；攻击成功率等指标来自论文实验 |\n| [StartupBench](https://arxiv.org/abs/2608.17800) | 从有市场采用证据的 AI 产品工作流抽取端到端通用 Agent 任务，并用细粒度 rubric 评测交付物 | arXiv v1：2026-08-18 22:01 +08:00；约 30% 完成率为作者统一 harness 下的结果 |\n| [Agentic ESOpt](https://arxiv.org/abs/2608.17310) | 用 evolution strategies 做长时程 Agent 的全参数微调，强调 inference-level 显存与轨迹级奖励 | arXiv v1：2026-08-18 11:03 +08:00；WebArena-Lite 结果为论文实验 |\n| [Model Hypnosis](https://arxiv.org/abs/2608.16834) | 研究多个弱而不显眼的文本线索叠加后对模型行为的强控制及跨模型迁移 | arXiv v1：2026-08-18 01:20 +08:00；安全与可解释性结论待同行复核 |\n\n## 旧文 / 旧项目再浮现\n\n以下原始内容早于七天，或仓库已存在超过七天，但在最近 24 小时重新进入 HN；原始时间和当前讨论分开记录。\n\n- [mukundzha/avouch](https://github.com/mukundzha/avouch) 是只检查本次 Git diff 的 Python AST 静态审查 CLI，仓库创建于 2026-07-25；其 [HN 提交](https://news.ycombinator.com/item?id=49345154) 于 2026-08-18 21:13 +08:00 出现，采集快照为 22 points / 19 comments。\n- [pitiflautico/neobrowser](https://github.com/pitiflautico/neobrowser) 是驱动真实登录态 Chrome 的 Rust MCP server，仓库创建于 2026-03-13；其 [HN 讨论](https://news.ycombinator.com/item?id=49345320) 于 2026-08-18 21:25 +08:00 出现，采集快照为 32 points / 25 comments。\n- [AshwinUgale/tracelint](https://github.com/AshwinUgale/tracelint) 以确定性规则检查 Agent trace 中的 schema 违规、未处理错误和循环等结构问题，仓库创建于 2026-08-02；[HN 提交](https://news.ycombinator.com/item?id=49346452) 于 2026-08-18 22:49 +08:00 出现，采集快照为 3 points / 0 comments。README 明示启发式发现只是候选，不能等同于最终答案正确性。\n- [Why Open Source Matters for AI](https://oreillyradar.substack.com/p/why-open-source-matters-for-ai) 原文发布于 2026-08-10，是 Tim O'Reilly 的观点文章；[HN 讨论](https://news.ycombinator.com/item?id=49335468) 于 2026-08-18 02:25 +08:00 出现，采集快照为 23 points / 0 comments，不作技术发布。\n- [LLM-as-a-Verifier](https://github.com/llm-as-a-verifier/llm-as-a-verifier) 是已有的通用 Agent verifier 框架，仓库创建于 2026-04-10；[HN 提交](https://news.ycombinator.com/item?id=49348195) 于 2026-08-19 00:30 +08:00 出现，采集快照为 2 points / 0 comments。README 的 benchmark 领先说法属于项目方结果。\n- [vercel-labs/fx](https://github.com/vercel-labs/fx) 是用 Zig 编写、可构建为原生二进制或 WebAssembly 的实验性 coding-agent harness，仓库创建于 2026-08-11 16:57 +08:00，Apache-2.0；其 [HN 讨论](https://news.ycombinator.com/item?id=49353339) 于 2026-08-19 06:00 +08:00 出现，07:18 快照为 32 points / 6 comments。README 明示 experimental，热度不等于成熟度。\n- [Popcorn](https://blog.tilderesearch.com/blog/popcorn) 是 Tilde 开源的 ML kernel 验证、基准与按输入/硬件调度层，原文标注 2026-08-11，配套仓库为 Apache-2.0；其 [HN 提交](https://news.ycombinator.com/item?id=49353646) 于 2026-08-19 06:25 +08:00 出现，快照为 2 points / 0 comments。性能与正确性边界仍应以项目测试和独立复现判断。\n- [RyanCodrai/turbovec](https://github.com/RyanCodrai/turbovec) 是基于 Google TurboQuant 思路、带 Python bindings 的 Rust vector index，仓库创建于 2026-03-26、MIT；其 [HN 讨论](https://news.ycombinator.com/item?id=49349898) 于 2026-08-19 02:07 +08:00 出现，10:12 快照为 211 points / 27 comments。仓库热度与作者性能主张不替代独立 benchmark。\n- [MongLong0214/commitlore](https://github.com/MongLong0214/commitlore) 把仍有效的工程决策、被否决方案和限制保存在 Git 中，并在 Agent 编辑路径前提供上下文；仓库创建于 2026-07-26，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356637) 于 2026-08-19 12:05 +08:00 出现，13:12 快照为 1 point / 0 comments；README 同时明确默认 author string 并非强身份边界。\n- [moorcheh-ai/memanto](https://github.com/moorcheh-ai/memanto) 自述为管理其他 Agent memory 的伴随 Agent，处理提取、合并、冲突与过期；仓库创建于 2026-03-24，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356590) 于 2026-08-19 12:01 +08:00 出现，13:12 快照为 1 point / 0 comments；实际效果仍需独立评测。\n- [elin66alpha/Relay](https://github.com/elin66alpha/Relay) 是让 Claude Code、Codex、OpenCode 和 Hermes 保持运行在用户机器上的自托管远程控制台；仓库创建于 2026-05-22，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356310) 于 2026-08-19 11:26 +08:00 出现，13:12 快照为 5 points / 1 comment；远程文件和 PTY 能力需要按其安全文档评估。\n\n## 日期未确认\n\n- [Shoehorn](https://notactuallytreyanastasio.github.io/shoehorn/) 描述按精确 VRAM 预算为各 tensor 选择量化方式并交给 llama.cpp 运行；公开页未暴露可靠原始发布日期，因此不列入窗口内已核实发布。其 [HN 提交](https://news.ycombinator.com/item?id=49346135) 可确认于 2026-08-18 22:29 +08:00 被发现，采集快照为 20 points / 2 comments。\n- [How to Parallelize a Transformer for Training](https://ezyang.github.io/interactive-parallelize-transformer/) 是可交互的 DP、FSDP、TP、pipeline 与 expert parallelism 估算页面；页面可打开但未暴露可靠发布日期，其 [HN 提交](https://news.ycombinator.com/item?id=49351721) 于 2026-08-19 03:55 +08:00 被发现。\n- [My coding agent invented its own vision](https://nickbusey.com/article/2026-08-18-agent-invented-vision/) 在采集网络返回 403，无法核实正文与原始发布时间；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49351887) 于 2026-08-19 04:07 +08:00 出现。\n- [The Shapes of Agent Memory](https://www.pinglin.tw/blog/the-shapes-of-agent-memory/) 原文在采集网络无法打开，暂不转述技术结论；[HN 提交](https://news.ycombinator.com/item?id=49349906) 于 2026-08-19 02:07 +08:00 出现。\n- [Grader Labs computer-use 任务样例页](https://cua.graderlabs.com/) 在采集网络返回 403，无法核实数据集结构、许可证与原始发布日期；仅确认其 [HN 提交](https://news.ycombinator.com/item?id=49353985) 于 2026-08-19 06:55 +08:00 出现，07:18 快照为 10 points / 1 comment，因此不列为已核实数据集发布。\n- [Equivalence Checking of ML GPU Kernels](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels) 是 SPLASH/OOPSLA 2026 接收页，摘要称 Volta 可对手工、LLM 与编译器优化的卷积、矩阵乘和 attention kernel 做等价检查；页面未暴露首次公开日期，因此不列为窗口内发布。其 [HN 提交](https://news.ycombinator.com/item?id=49354321) 于 2026-08-19 07:23 +08:00 出现，10:12 快照为 3 points / 2 comments。\n- [Modelmap](https://modelmap.cc) 提供 Hugging Face 模型的交互式 architecture map，公开页仅能核到功能描述，未暴露原始发布日期、代码仓库或许可证；其 [HN 提交](https://news.ycombinator.com/item?id=49354664) 于 2026-08-19 07:57 +08:00 出现，10:12 快照为 34 points / 4 comments，暂不判断其开源状态。\n\n## 观察池\n\n- [alex-reysa/singular-lite](https://github.com/alex-reysa/singular-lite) 是带 lease、gate、audit 与 git-worktree 隔离的多 Agent 编排原型；仓库创建于 2026-06-11，[HN](https://news.ycombinator.com/item?id=49346988) 于 2026-08-18 23:20 +08:00 提交，采集快照为 7 points / 2 comments。项目仍属原型，未验证其自治安全性。\n- [sovantica/engrava](https://github.com/sovantica/engrava) 自述为 SQLite 上的 Agent graph memory、hybrid search 与 tamper-evident journal；仓库创建于 2026-06-02，[HN](https://news.ycombinator.com/item?id=49345004) 于 2026-08-18 21:01 +08:00 提交，采集快照为 4 points / 0 comments，采用和性能主张待外部验证。\n- [PrimeIntellect-ai/prime-agent](https://github.com/PrimeIntellect-ai/prime-agent) 自述为可自改进的 RLM coding Agent；仓库创建于 2026-05-08，[HN](https://news.ycombinator.com/item?id=49339427) 于 2026-08-18 08:05 +08:00 提交，采集快照为 4 points / 0 comments。仓库热度较高，但“自改进”效果仍应以可复现实验判断。\n- [SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/) 介绍 14 个模型、30 个 IT/安全 incident 场景及 coding-agent/general-purpose harness 对照；结构化时间为 2026-08-17 08:00 +08:00，早于本轮 48 小时高亮起点约 2 小时，故作为较旧邻近信号。其 [HN 提交](https://news.ycombinator.com/item?id=49354946) 于 2026-08-19 08:28 +08:00 出现，10:12 快照为 2 points / 0 comments；榜单结论属于厂商初始评测。\n- [wdhwg001/csift](https://github.com/wdhwg001/csift) 对 Claude Code 的 JSONL session 做正则搜索、文件恢复、图片提取和 subagent topology 检查；仓库创建于 2026-08-17 09:36 +08:00，略早于本轮高亮窗口，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356290) 于 2026-08-19 11:24 +08:00 出现，13:12 快照为 2 points / 0 comments。\n- [A2A 加入 AAIF](https://aaif.io/blog/a2a-joins-aaif) 表示 Agent2Agent 开放标准成为 Agentic AI Foundation 托管项目，并继续采用开放贡献与中立治理；页面正文只标注 2026-08-17、未给出时分，无法确认是否落入从 13:12 起算的 48 小时窗口，因此作为邻近信号。其 [HN](https://news.ycombinator.com/item?id=49356130) 发现证据见上。\n\n## 16:10 滚动补充\n\n### 已验证高亮\n\n| 项目 | 日期 / 状态 | 技术要点 |\n|---|---|---|\n| [Building Shared Memory for AI Agents in Notion](https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion) | 2026-08-18 20:00 +08:00；官方原文 | Notion 公开 MIT 项目 Lore，以五类结构化数据库、MCP、CLI 与 hooks 维护共享 Agent 记忆；SkillRet 与失败恢复数字均为项目方实验。对应 [HN 讨论](https://news.ycombinator.com/item?id=49357879)截至快照 2 分 / 0 评论。 |\n| [datasilhouette](https://github.com/ibrahemalbalkhi/datasilhouette) | 创建于 2026-08-19 15:16；MIT | 本地把 CSV/Excel/JSON/Parquet 转成不含单元格值的 schema、cardinality 与 missing-value 报告，供 LLM 生成分析代码。 |\n| [LLMBench](https://github.com/Nuyoahzhou/LLMBench) | 创建于 14:35；MIT | 不连接真实模型，模拟 OpenAI Chat Completions、Responses 与 Claude Messages 的流式/非流式响应、TTFT、token 速度和抖动。 |\n| [yoober](https://github.com/frgmt0/yoober) | 创建于 13:23；MIT | 为 Agent 生成视频 contact sheet、时间戳链接与可检索 transcript slices，减少整段转录占用上下文。 |\n| [evalkit](https://github.com/charlescoverdale/evalkit) | 创建于 15:59；README 标注 MIT | R 语言模型评测工具，支持 cluster-robust 标准误、配对比较、power analysis 与 prediction-powered inference；模拟结果为作者结果。 |\n\n### GitHub Trending\n\n- [munder-difflin](https://github.com/chaitanyagiri/munder-difflin)：日榜显示 306 stars today；Electron/React 多 Agent harness 以 PTY 包装多家 coding CLI，并用本地 Git 文件实现 mailbox、memory 与任务路由。README 自称 working prototype，热度不等于今日发布或成熟度。\n- [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)：日榜显示 730 stars today；社区仓库自述 817 个安全 skills，并明确与 Anthropic 无隶属关系，数量与框架映射均为项目方陈述。\n- [ai-job-search](https://github.com/MadsLorentzen/ai-job-search)：TypeScript 日榜显示 167 stars today；本地职位抓取、匹配与文书 drafter-reviewer 工作流，个人转化数据仅属作者案例。\n\n### 论文、旧项目回流与日期未确认\n\n- [StateM](https://arxiv.org/abs/2608.15089)于 2026-08-15 提交，以 durable states、checked transitions、recoverable runbooks 与版本化 practices 扩展 Agent harness；准确率和成本是论文作者报告。[HN](https://news.ycombinator.com/item?id=49357544)于 14:15 回流，列较旧研究。\n- [profile](https://github.com/jungledesh/profile)读取生产 vLLM metrics 并对照 GPU memory/FLOPs ceiling 诊断瓶颈；README 性能为项目方实验。[HN 回流](https://news.ycombinator.com/item?id=49357947)发生于 15:03。\n- [jax-realtime](https://github.com/sachinkesiraju/jax-realtime)组合 Whisper、Silero VAD、SmolLM2、Pocket TTS 与可选视觉模型，构建浏览器 WebGPU 全双工语音助手；[HN 回流](https://news.ycombinator.com/item?id=49357683)发生于 14:30。\n- [seahorse](https://github.com/ssanvi-builds/seahorse)是 local-first、MCP-native、Obsidian-readable 的双时态 Agent memory，效果主张待独立评估；[HN 回流](https://news.ycombinator.com/item?id=49357513)发生于 14:11。\n- [MoveChat](https://github.com/VC067/MoveChat)在浏览器本地存储中导出/迁移多家聊天会话；隐私与兼容性为项目方说明。[HN 回流](https://news.ycombinator.com/item?id=49358171)发生于 15:30。\n- [Bad benchmarks and evals](https://danluu.com/exercise-7/)原文日期为 2026-07-23，讨论 benchmark 代表性、单次运行、阈值不连续与 LLM grader 方差；作者复跑观察不可外推。[HN 回流](https://news.ycombinator.com/item?id=49358297)发生于 15:44。\n- [Vetted AI code is hard to justify](https://amoffat.github.io/blog/vetting-burnout.html)只标 2026-08-17、无时分，无法确认是否落入 48 小时窗口；作者讨论大 diff 审查成本与 burnout，列日期未确认。[HN](https://news.ycombinator.com/item?id=49358041)于 15:16 讨论。\n\n### 观察池\n\n- [checkpoint-run](https://github.com/agenticaotearoa/checkpoint-run)提供 checkpoint/resume、checksum、timeout、retry 与分步日志，只属 Agent/LLM 邻近开发工具；[HN](https://news.ycombinator.com/item?id=49357518)于 14:12 出现。\n- [veyra](https://github.com/iondodon/veyra)描述版本化 self-evolving local Agent 与 supervisor 回滚；仓库没有 LICENSE，不写成已确认开源许可证项目。[HN](https://news.ycombinator.com/item?id=49358474)于 16:02 出现。\n\n## 19:12 滚动补充\n\n### 已验证高亮\n\n| 项目 | 日期 / 状态 | 技术要点 |\n|---|---|---|\n| [LansCoder](https://github.com/Lanstzz/LansCoder) | 创建于 2026-08-19 18:17 +08:00；MIT | 约 3 万行 Python 的本地 coding-agent harness，公开工具、权限、会话、上下文压缩、MCP 与后台 subagent 模块；96.38% pass@1 为作者在 Harbor Aider Polyglot 上的结果，未作独立复现。 |\n| [WorldLedger](https://github.com/Asymptote14/Worldledger) | 创建于 2026-08-19 16:49 +08:00；MIT | 让 LLM 提议文字世界事件，再由确定性账本校验时间、引用、前置条件、角色知识与实体状态；README 明确定位为研究型 v0 原型。 |\n| [LocalBridge](https://github.com/zephyr7030/LocalBridge) | 创建于 2026-08-19 16:16 +08:00；MIT | Windows 本地 MCP 桥接器把普通用户工具限制在活动工作区，并把管理员操作拆到显式 UAC/Broker 路径；项目也明确普通子进程不等于额外 OS 级沙箱。 |\n| [SilverPilot](https://github.com/LeiQingliang/silverpilot) | 创建于 2026-08-19 17:53 +08:00；Apache-2.0 | 养老服务演示 Agent 把模型规划与后端事实/权限分离，五类写操作先生成待确认动作；测试、评测和扫描数字均是仓库保存的时间点证据，项目明确未在机构生产部署。 |\n| [Quipu](https://arxiv.org/abs/2608.16813) | arXiv v1：2026-08-18 01:04 +08:00 | 面向 Agent 写入知识图谱的嵌入式 bitemporal store，以 gate、authority/trust lattice 与可查询审计约束写入；512 项等数字为论文作者实验。其 [HN 讨论](https://news.ycombinator.com/item?id=49359849) 于 19:02 出现，快照 2 points / 0 comments。 |\n\n### 旧项目再浮现\n\n- [Cairn](https://github.com/cairnpm/cairn) 是把反馈去重、归纳并整理为 Shape Up roadmap 的自托管 PM Agent，仓库创建于 2026-07-01；许可证为 FSL-1.1-ALv2、限制竞争性用途，因此不写成 OSI 开源。[HN](https://news.ycombinator.com/item?id=49359513) 于 2026-08-19 18:24 +08:00 回流，快照 1 point / 0 comments。\n- [SIL](https://github.com/ais-space/sil) 为 Web 应用定义供 Agent 使用的结构化语义接口；规范采用 CC BY 4.0，配套代码采用 Apache-2.0，仓库创建于 2026-08-09。[HN](https://news.ycombinator.com/item?id=49359448) 于 18:17 回流，快照 1 point / 1 comment。\n- [Rune](https://github.com/thecolourfoundation/rune) 持续维护代码库理解图并通过 MCP 返回带文件/行号证据的结果，仓库创建于 2026-07-29、MIT；[HN](https://news.ycombinator.com/item?id=49359128) 于 17:32 回流，快照 2 points / 0 comments，效果主张待独立验证。\n- [pr-sage](https://github.com/Kyeom1997/pr-sage) 是支持增量审查、finding lifecycle 与本地 diff review 的 GitHub Action，仓库创建于 2026-07-21、MIT；[HN](https://news.ycombinator.com/item?id=49358609) 于 16:20 回流，快照 1 point / 0 comments，标题中的比例属于作者主张。\n\n### 日期未确认\n\n- [AI reverse-engineered my printer](https://www.panaxeo.com/blog/ai-reverse-engineered-my-printer-i-just-pressed-the-buttons) 原页可打开，但未暴露可核实的首发时间，因此不列为窗口内发布；[HN](https://news.ycombinator.com/item?id=49359452) 于 2026-08-19 18:17 +08:00 出现，快照 2 points / 0 comments。\n- [AeonBox: Logical Guardrails for Agents](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/) 讨论以 liquid types 表达 Agent 行为权限与 sandbox 约束；页面显示的日期元数据异常，不能作为首发证据。[HN](https://news.ycombinator.com/item?id=49359459) 于 18:19 出现，快照 1 point / 0 comments。\n- [The Equations of Reasoning](https://pathway.com/research/the-equations-of-reasoning) 页面以 attention、memory 与 reasoning 的局部规律为主题并链接既有论文，但未暴露可靠页面发布日期；[HN](https://news.ycombinator.com/item?id=49358735) 于 16:37 出现，快照 2 points / 0 comments。\n- [Common Mistakes I Have Seen That AI-Generated Apps Keep Making](https://daniel.reguero.dev/blogs/ten-common-security-mistakes-ai-generated-apps-make) 本轮返回 404，无法核实正文、日期与安全建议；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359856) 的 19:03 发现证据，快照 1 point / 0 comments。\n- [Orvena](https://orvena.app/) 本轮返回 403，无法核实所谓 4B 模型 agentic harness 的实现、许可证与发布时间；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359341) 的 18:03 发现证据，快照 3 points / 0 comments。\n- [Pander Score](https://sophronresearch.org/pander/) 本轮返回 403，无法核实评测集、方法与发布日期；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359125) 的 17:32 发现证据，快照 2 points / 0 comments。\n\n## 22:22 滚动补充\n\n### 已验证高亮\n\n| 项目 / 原文 | 日期 / 状态 | 技术要点 |\n|---|---|---|\n| [LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation](https://huggingface.co/blog/LiquidAI/qad) | HF RSS：2026-08-19 21:48 +08:00 | Liquid AI 发布四档 LFM2.5 QAD Q4_0 GGUF；作者以 BF16、PTQ 和多档量化对照，并报告五次重复的平均结果。精度恢复和端侧吞吐均为项目方实验，未作独立复现。 |\n| [Why LLMs can’t make your code simpler](https://www.answer.ai/posts/2026-08-19-llms-code-simpler.html) | 原页路径与正文标注 2026-08-19，时分未确认 | Answer.AI 以 Naur 的 theory-building 解释为何 LoC、圈复杂度等代码指标不能覆盖团队掌握的业务约束与设计判断；属于工程观点，不写成模型能力定论。[HN](https://news.ycombinator.com/item?id=49360447) 于 20:09 出现。 |\n| [How I run AI coding agents as a team with AI DevKit](https://codeaholicguy.com/2026/08/19/how-i-run-ai-coding-agents-as-a-team-with-ai-devkit/) | 原文元数据：2026-08-19 19:45 +08:00 | 作者记录以 manager/executor、共享上下文、Telegram 远程会话和人工 PR review 协调多家 coding harness；只是个人工作流证据。[HN](https://news.ycombinator.com/item?id=49360515) 于 20:17 出现。 |\n| [dotproject](https://github.com/jasonnam/dotproject) | 创建于 2026-08-18 21:30 +08:00；MIT | 以 write-once 定义和按 ULID/actor 命名的 append-only 事件避免 Agent 分支写同一字节，并把语义分歧显式报告；确定性合并结论限于 `.project/` 协议。[HN](https://news.ycombinator.com/item?id=49361544) 于 21:46 出现。 |\n| [tmux-agent-hub](https://github.com/mrybas/tmux-agent-hub) | 创建于 2026-08-19 19:12 +08:00；MIT | 通过 Claude Code/Codex lifecycle hooks 写入小型 JSON 状态，为多会话提供等待/完成状态、跳转、交叉 review 和 skills inspector；仓库刚创建，采用度很低。 |\n| [dsh-cost-meter](https://github.com/uruana33/dsh-cost-meter) | 创建于 2026-08-19 20:18 +08:00；MIT | 将 provider usage、缓存/输出 token 与版本化价格快照写入本地账本，并明确区分流式估算和最终结算；不是厂商官方账单，价格与金额仍需控制台核对。 |\n| [dsh-github](https://github.com/ChenYiming-aaa/dsh-github) | 创建于 2026-08-19 21:34 +08:00；MIT | 面向 DeepSeek Harness 的 GitHub 插件公开 45 个 REST 工具、持久凭据路径、输出脱敏和高风险操作审批门；安全性为 README/实现层证据，尚未独立审计。 |\n| [The Specification Is Not a Document](https://aicoding.leaflet.pub/3mtgs36dnq22o) | 页面元数据：2026-08-19 21:01 +08:00 | 文章主张将需求、事件、决策、实现和评测组织为可追溯关系图，再按问题生成视图；属于 generative software architecture 的设计论证。[HN](https://news.ycombinator.com/item?id=49361095) 于 21:04 出现。 |\n\n### 官方主分支工程信号\n\n- Qwen Code 在窗口内合入四项可读修复/能力：[隔离图像载荷 eviction 状态](https://github.com/QwenLM/qwen-code/commit/872dd614f79b2a15d5c41902eeb420a78b3ceae2)（19:33）、[仅在参数一致时把重复 provider tool-call id 判为 replay](https://github.com/QwenLM/qwen-code/commit/4b77a6e47201e21124171d66feadd5573f5c1509)（20:02）、[将 daemon HTTP span 关联到入站 W3C traceparent](https://github.com/QwenLM/qwen-code/commit/d96f264de76bc522ce0564fdd51d37b093dde9a6)（20:21）和 [web-shell transcript contract 预校验](https://github.com/QwenLM/qwen-code/commit/5003ab3c7f0d35ce00de61ed43a6698fcd2cc25f)（22:13）。它们是主分支提交，不等于 release。\n- Transformers 主分支合入 [CPM-Ant 依 vocab_size 构建 lm_head](https://github.com/huggingface/transformers/commit/e872ca25f3746721b900ddeafcd041b8466feb0d)（19:58）与 [ASR pipeline 对 channels-last 音频做单声道转换](https://github.com/huggingface/transformers/commit/bb8f235353fb7a29ef293c9925182c497cad4ba4)（20:00）两项修复；同样只视作提交信号。\n\n### GitHub Trending\n\n截止 22:22 的日榜新增相关项目包括：[mattpocock/skills](https://github.com/mattpocock/skills)（1,214 stars today）、[obra/superpowers](https://github.com/obra/superpowers)（514）、[Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify)（454）、[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)（563）和 [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)（63）。这些数字只是 GitHub 公共日榜快照，不代表今日创建、技术质量或独立采用验证。\n\n### 旧项目回流与观察池\n\n- [H2AI Chat](https://github.com/Tonterias/h2aichat) 创建于 2026-07-10 00:53 +08:00、AGPL-3.0，支持本地模型的轮流多模型讨论；[HN](https://news.ycombinator.com/item?id=49361964) 于 22:17 回流，快照 1 point / 0 comments，效果主张待独立评估。\n- [LLM-Shield-Proxy](https://github.com/ninadphalak/LLM-Shield-Proxy) 创建于 2026-08-02、Apache-2.0，以 OpenAI-compatible reverse proxy 做 PII/secret redaction 和 SSE rehydration；[HN](https://news.ycombinator.com/item?id=49360413) 于 20:06 回流。合规、延迟和召回数字均为项目方陈述。\n- [Fuji](https://github.com/paradise-runner/fuji) 创建于 2026-08-17 03:41 +08:00、仓库未标 LICENSE；Go 实现的 headless one-shot Agent runtime 提供内置文件/Git/bash 工具和 JSONL session。[HN](https://news.ycombinator.com/item?id=49361042) 于 21:00 出现，列观察池而非已确认开源项目。\n- [regent-httpsig](https://github.com/regent-protocol/regent-httpsig) 创建于 2026-08-17 13:33 +08:00、Apache-2.0，实现 RFC 9421 / Web Bot Auth 的 Python 签名验证与签名发送；[HN](https://news.ycombinator.com/item?id=49361754) 于 22:01 出现，互操作与上游协议细节仍以仓库测试为证据。\n\n### 日期未确认\n\n- [Langfuse v4](https://langfuse.com/changelog/2026-08-17-langfuse-v4) 原页只确认 2026-08-17、无可靠时分，因此不硬判是否落入 48 小时；文章描述 immutable ClickHouse observation table、去 join/dedup 的查询路径和迁移要求，性能倍数为项目方数据。[HN](https://news.ycombinator.com/item?id=49360858) 于 20:46 讨论。\n- [A merge gate for coding agents cannot be a boolean](https://gist.github.com/fskroes/9061fc1c4284146561b1ede1c1e7fea2) 主张把验证结果建模为 passed/failed/inconclusive，避免未运行检查被误显示为绿色；Gist 未暴露可靠首发时间，仅以 [HN](https://news.ycombinator.com/item?id=49361414) 21:35 的发现证据保留。\n\n## 来源链接\n\n原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、[DFlash 2 工程原文](https://inco.ai/blog/dflash2/)、[SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/)、[Volta 的 OOPSLA 页面](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。\n\n## 采集状态\n\n- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组检索，本轮 19:12–22:22 增量原始命中 132 条、去重 88 条，完整 24 小时原始命中 662 条、去重 447 条；GitHub Trending 全站/Python/TypeScript 47 行；GitHub Search 五组前 10 去重 46 个；arXiv 48 小时四分类 346 条并复核前 100；Hugging Face Daily Papers 100 条、Blog 4 条、Simon Willison 3 条；并核验 GitHub README/许可证与官方提交。\n- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；quaesitor.eu Silent Failures 与 karavox Agents as Subcontractors 原文返回域名拦截页，未收入 sources；Fuji 无 LICENSE，性能、合规和安全主张仅按项目方证据标注。当天前序扫描记录的 403/404/限流来源继续保留在 scan。\n- 当日各轮粗筛候选累计 2,762（22:22 本轮复核 288 条原始记录）；累积保留 192 个唯一来源 URL；本轮有实质来源增量，未触发二次补搜（secondPass=false）。",
   "sources": [
     {
       "title": "Mojo🔥 is now open source!",
@@ -1923,6 +1928,415 @@
         "Hacker News",
         "LLM",
         "Date Unconfirmed"
+      ]
+    },
+    {
+      "title": "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation",
+      "url": "https://huggingface.co/blog/LiquidAI/qad",
+      "source": "Liquid AI / Hugging Face",
+      "publishedAt": "2026-08-19 21:48 +08:00",
+      "summary": "Liquid AI 发布四档 QAD Q4_0 GGUF，并给出多精度与端侧吞吐对照。",
+      "tags": [
+        "LLM",
+        "Quantization",
+        "Inference"
+      ]
+    },
+    {
+      "title": "Why LLMs can’t make your code simpler",
+      "url": "https://www.answer.ai/posts/2026-08-19-llms-code-simpler.html",
+      "source": "Answer.AI",
+      "publishedAt": "2026-08-19",
+      "summary": "从 theory-building 讨论代码指标无法覆盖团队隐性约束。",
+      "tags": [
+        "Coding Agent",
+        "Software Engineering"
+      ]
+    },
+    {
+      "title": "Why LLMs can't make your code simpler on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49360447",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 20:09 +08:00",
+      "summary": "Answer.AI 工程观点文章的 HN 发现证据。",
+      "tags": [
+        "Coding Agent",
+        "HN"
+      ]
+    },
+    {
+      "title": "How I run AI coding agents as a team with AI DevKit",
+      "url": "https://codeaholicguy.com/2026/08/19/how-i-run-ai-coding-agents-as-a-team-with-ai-devkit/",
+      "source": "Codeaholicguy",
+      "publishedAt": "2026-08-19 19:45 +08:00",
+      "summary": "个人多 coding-agent manager/executor 工作流复盘。",
+      "tags": [
+        "Multi-Agent",
+        "Developer Tools"
+      ]
+    },
+    {
+      "title": "AI DevKit agent team workflow on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49360515",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 20:17 +08:00",
+      "summary": "多 coding-agent 工作流文章的 HN 发现证据。",
+      "tags": [
+        "Multi-Agent",
+        "HN"
+      ]
+    },
+    {
+      "title": "jasonnam/dotproject",
+      "url": "https://github.com/jasonnam/dotproject",
+      "source": "GitHub",
+      "publishedAt": "2026-08-18 21:30 +08:00",
+      "summary": "以 append-only 事件记录并行 Agent 项目状态。",
+      "tags": [
+        "Agent",
+        "Git",
+        "Coordination"
+      ]
+    },
+    {
+      "title": "dotproject on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49361544",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 21:46 +08:00",
+      "summary": "dotproject 的 HN 发现证据。",
+      "tags": [
+        "Agent",
+        "HN"
+      ]
+    },
+    {
+      "title": "mrybas/tmux-agent-hub",
+      "url": "https://github.com/mrybas/tmux-agent-hub",
+      "source": "GitHub",
+      "publishedAt": "2026-08-19 19:12 +08:00",
+      "summary": "通过 hooks 汇总 tmux 中 Claude Code/Codex 会话状态。",
+      "tags": [
+        "Coding Agent",
+        "tmux",
+        "Developer Tools"
+      ]
+    },
+    {
+      "title": "uruana33/dsh-cost-meter",
+      "url": "https://github.com/uruana33/dsh-cost-meter",
+      "source": "GitHub",
+      "publishedAt": "2026-08-19 20:18 +08:00",
+      "summary": "面向 DeepSeek Harness 的多厂商 token 成本本地账本。",
+      "tags": [
+        "LLM",
+        "Observability",
+        "Cost"
+      ]
+    },
+    {
+      "title": "ChenYiming-aaa/dsh-github",
+      "url": "https://github.com/ChenYiming-aaa/dsh-github",
+      "source": "GitHub",
+      "publishedAt": "2026-08-19 21:34 +08:00",
+      "summary": "面向 DeepSeek Harness 的 GitHub REST 工具插件与审批边界。",
+      "tags": [
+        "Agent",
+        "GitHub",
+        "Developer Tools"
+      ]
+    },
+    {
+      "title": "The Specification Is Not a Document",
+      "url": "https://aicoding.leaflet.pub/3mtgs36dnq22o",
+      "source": "The Phoenix Architecture",
+      "publishedAt": "2026-08-19 21:01 +08:00",
+      "summary": "以关系图和可追溯视图组织软件规格知识的设计论证。",
+      "tags": [
+        "Agent",
+        "Software Architecture"
+      ]
+    },
+    {
+      "title": "The Specification Is Not a Document on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49361095",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 21:04 +08:00",
+      "summary": "软件规格关系图文章的 HN 发现证据。",
+      "tags": [
+        "Software Architecture",
+        "HN"
+      ]
+    },
+    {
+      "title": "Qwen Code: isolate image payload eviction state",
+      "url": "https://github.com/QwenLM/qwen-code/commit/872dd614f79b2a15d5c41902eeb420a78b3ceae2",
+      "source": "Qwen Code GitHub",
+      "publishedAt": "2026-08-19 19:33 +08:00",
+      "summary": "隔离图像载荷 eviction 状态的主分支修复。",
+      "tags": [
+        "Coding Agent",
+        "Qwen Code",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Qwen Code: duplicate provider tool-call replay matching",
+      "url": "https://github.com/QwenLM/qwen-code/commit/4b77a6e47201e21124171d66feadd5573f5c1509",
+      "source": "Qwen Code GitHub",
+      "publishedAt": "2026-08-19 20:02 +08:00",
+      "summary": "只在参数一致时把重复 tool-call id 判为 replay。",
+      "tags": [
+        "Coding Agent",
+        "Tool Calling",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Qwen Code: W3C traceparent daemon span linking",
+      "url": "https://github.com/QwenLM/qwen-code/commit/d96f264de76bc522ce0564fdd51d37b093dde9a6",
+      "source": "Qwen Code GitHub",
+      "publishedAt": "2026-08-19 20:21 +08:00",
+      "summary": "把 daemon HTTP span 关联到入站 W3C traceparent。",
+      "tags": [
+        "Coding Agent",
+        "Telemetry",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Qwen Code: web-shell transcript contract prevalidation",
+      "url": "https://github.com/QwenLM/qwen-code/commit/5003ab3c7f0d35ce00de61ed43a6698fcd2cc25f",
+      "source": "Qwen Code GitHub",
+      "publishedAt": "2026-08-19 22:13 +08:00",
+      "summary": "为 web-shell transcript contract 增加预校验。",
+      "tags": [
+        "Coding Agent",
+        "Validation",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Transformers: fix CPM-Ant lm_head vocab sizing",
+      "url": "https://github.com/huggingface/transformers/commit/e872ca25f3746721b900ddeafcd041b8466feb0d",
+      "source": "Transformers GitHub",
+      "publishedAt": "2026-08-19 19:58 +08:00",
+      "summary": "依 vocab_size 构建 CPM-Ant lm_head 的主分支修复。",
+      "tags": [
+        "Transformers",
+        "Model Loading",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Transformers: fix ASR channels-last mono conversion",
+      "url": "https://github.com/huggingface/transformers/commit/bb8f235353fb7a29ef293c9925182c497cad4ba4",
+      "source": "Transformers GitHub",
+      "publishedAt": "2026-08-19 20:00 +08:00",
+      "summary": "修复 ASR pipeline 对 channels-last 音频的单声道转换。",
+      "tags": [
+        "Transformers",
+        "ASR",
+        "Commit"
+      ]
+    },
+    {
+      "title": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "source": "GitHub Trending",
+      "publishedAt": "2026-02-03 19:15 +08:00",
+      "summary": "工程 Agent skills 仓库，日榜快照 1,214 stars today。",
+      "tags": [
+        "Agent Skills",
+        "Trending"
+      ]
+    },
+    {
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "publishedAt": "2025-10-10 03:45 +08:00",
+      "summary": "Agent skill 框架与开发方法仓库，日榜快照 514 stars today。",
+      "tags": [
+        "Agent Skills",
+        "Trending"
+      ]
+    },
+    {
+      "title": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "source": "GitHub Trending",
+      "publishedAt": "2026-04-03 23:49 +08:00",
+      "summary": "将代码、文档与 schema 组织为可查询知识图，日榜快照 454 stars today。",
+      "tags": [
+        "Agent",
+        "Knowledge Graph",
+        "Trending"
+      ]
+    },
+    {
+      "title": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "source": "GitHub Trending",
+      "publishedAt": "2025-07-23 06:22 +08:00",
+      "summary": "带长期状态的 Agent 项目，日榜快照 563 stars today。",
+      "tags": [
+        "Agent",
+        "Memory",
+        "Trending"
+      ]
+    },
+    {
+      "title": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "source": "GitHub Trending",
+      "publishedAt": "2025-09-11 18:39 +08:00",
+      "summary": "面向 coding Agent 的 Chrome DevTools MCP，日榜快照 63 stars today。",
+      "tags": [
+        "MCP",
+        "Browser",
+        "Trending"
+      ]
+    },
+    {
+      "title": "Tonterias/h2aichat",
+      "url": "https://github.com/Tonterias/h2aichat",
+      "source": "GitHub",
+      "publishedAt": "2026-07-10 00:53 +08:00",
+      "summary": "支持本地模型的多模型轮流讨论系统。",
+      "tags": [
+        "Multi-Agent",
+        "Local Models",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "H2AI Chat on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49361964",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 22:17 +08:00",
+      "summary": "旧项目 H2AI Chat 的 HN 回流证据。",
+      "tags": [
+        "Multi-Agent",
+        "HN",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "ninadphalak/LLM-Shield-Proxy",
+      "url": "https://github.com/ninadphalak/LLM-Shield-Proxy",
+      "source": "GitHub",
+      "publishedAt": "2026-08-02 14:28 +08:00",
+      "summary": "对 LLM 流量做 PII/secret redaction 与 SSE rehydration。",
+      "tags": [
+        "LLM",
+        "Security",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "LLM-Shield-Proxy on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49360413",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 20:06 +08:00",
+      "summary": "旧项目 LLM-Shield-Proxy 的 HN 回流证据。",
+      "tags": [
+        "LLM",
+        "HN",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "paradise-runner/fuji",
+      "url": "https://github.com/paradise-runner/fuji",
+      "source": "GitHub",
+      "publishedAt": "2026-08-17 03:41 +08:00",
+      "summary": "Go 实现的 headless one-shot Agent runtime；许可证未标。",
+      "tags": [
+        "Agent",
+        "Runtime",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Fuji on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49361042",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 21:00 +08:00",
+      "summary": "Fuji Agent runtime 的 HN 发现证据。",
+      "tags": [
+        "Agent",
+        "HN",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "regent-protocol/regent-httpsig",
+      "url": "https://github.com/regent-protocol/regent-httpsig",
+      "source": "GitHub",
+      "publishedAt": "2026-08-17 13:33 +08:00",
+      "summary": "Python RFC 9421 / Web Bot Auth 签名验证与发送库。",
+      "tags": [
+        "Agent",
+        "HTTP Signatures",
+        "Security"
+      ]
+    },
+    {
+      "title": "regent-httpsig on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49361754",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 22:01 +08:00",
+      "summary": "regent-httpsig 的 HN 发现证据。",
+      "tags": [
+        "Agent",
+        "HN",
+        "Security"
+      ]
+    },
+    {
+      "title": "Langfuse v4",
+      "url": "https://langfuse.com/changelog/2026-08-17-langfuse-v4",
+      "source": "Langfuse",
+      "publishedAt": "2026-08-17",
+      "summary": "以 immutable observation table 简化 Agent trace 查询；时分未确认。",
+      "tags": [
+        "LLM",
+        "Observability",
+        "Unverified Date"
+      ]
+    },
+    {
+      "title": "Langfuse v4 on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49360858",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 20:46 +08:00",
+      "summary": "Langfuse v4 的 HN 发现证据。",
+      "tags": [
+        "LLM",
+        "HN"
+      ]
+    },
+    {
+      "title": "A merge gate for coding agents cannot be a boolean",
+      "url": "https://gist.github.com/fskroes/9061fc1c4284146561b1ede1c1e7fea2",
+      "source": "fskroes / GitHub Gist",
+      "publishedAt": "",
+      "summary": "讨论 coding-agent merge gate 的三态验证建模；日期未确认。",
+      "tags": [
+        "Coding Agent",
+        "Verification",
+        "Unverified Date"
+      ]
+    },
+    {
+      "title": "A merge gate for coding agents cannot be a boolean on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=49361414",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-19 21:35 +08:00",
+      "summary": "三态 merge gate 文章的 HN 发现证据。",
+      "tags": [
+        "Coding Agent",
+        "HN"
       ]
     }
   ]

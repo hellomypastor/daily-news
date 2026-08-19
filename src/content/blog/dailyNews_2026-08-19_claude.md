@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T19:12:00+08:00"
+updatedAt: "2026-08-19T22:22:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "How Claude is accelerating protein design and analytical chemistry"
 featuredUrl: "https://www.anthropic.com/research/Claude-accelerates-protein-design"
@@ -14,7 +14,12 @@ tags:
   - "Agent"
   - "Agent SDK"
   - "Anthropic"
+  - "Authentication"
+  - "AWS Bedrock"
+  - "Background Tasks"
+  - "Browser"
   - "Bug"
+  - "Cache"
   - "Chrome"
   - "Claude"
   - "Claude Code"
@@ -24,6 +29,8 @@ tags:
   - "Coding"
   - "Community"
   - "Comparison"
+  - "Context"
+  - "Cost"
   - "Cowork"
   - "Data Loss"
   - "Date Unconfirmed"
@@ -37,17 +44,21 @@ tags:
   - "Incident"
   - "Insights"
   - "Life Sciences"
+  - "Linux"
   - "Managed Agents"
   - "MCP"
   - "Memory"
+  - "Mobile"
   - "Model"
   - "Networking"
   - "Opus"
   - "Performance"
   - "Permissions"
   - "Plugins"
+  - "Regression"
   - "Remote"
   - "Remote Control"
+  - "Sandbox"
   - "Science"
   - "Security"
   - "Sentiment"
@@ -66,7 +77,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-18 19:12 至 2026-08-19 19:12（Asia/Shanghai）。当天累计确认 Claude Code v2.1.234 与 v2.1.235、Agent SDK TypeScript v0.3.234 与 v0.3.235、Agent SDK Python v0.2.140、Claude Code Action v1.0.194 与 v1.0.195、官方 Skills 提交和插件目录同步。17:42–19:02 又发生 Opus 5 与 Haiku 4.5 性能降级事故，官方状态页已标记解决；本轮还补入两篇只标注 8 月 18 日、无法确认时分的 Claude Tag CI/CD 值班案例与 Claude Science 产品指南，并将 9 条具备复现或明确技术证据的 Claude Code 用户报告留在观察池。没有新模型或新 GitHub release。
+扫描窗口：2026-08-18 22:22 至 2026-08-19 22:22（Asia/Shanghai）。当天累计确认 Claude Code v2.1.234 与 v2.1.235、Agent SDK TypeScript v0.3.234 与 v0.3.235、Agent SDK Python v0.2.140、Claude Code Action v1.0.194 与 v1.0.195、官方 Skills 提交和插件目录同步。17:42–19:02 的 Opus 5 / Haiku 4.5 性能事故已解决；19:12 后没有新模型、release 或状态事故，官方插件目录在 21:07–21:08 又同步 Sentry CLI、Appwrite 与 Wix 指针。本轮从 54 条新增 Claude Code Issue 中保留 11 条具备复现、回归或成体系日志的用户报告，并补入四条社区/生态观察候选；这些均不写成 Anthropic 已确认事实。
 
 ## Tier 1
 
@@ -87,7 +98,7 @@ tags:
 
 Chrome / 浏览器 Agent 随 Desktop / Cowork v1.32352.0 收紧全局浏览器授权；v1.32885.1 新增 Research 消息排队并修复跨会话消息、权限快捷键、MCP 启动与 Intel Mac Cowork 等问题，但官方只给日期，无法确认是否完全落在窗口内。[Desktop / Cowork 变更日志](https://claude.com/docs/cowork/changelog)
 
-[claude-plugins-official](https://github.com/anthropics/claude-plugins-official/commits/main/) 在窗口内合并 Claude Security 0.10.1 版本修正、目录校验和多项第三方插件指针，截至 11:30 继续同步 Datadog、AWS agents、Netlify、Together AI、Exa、Expo、Firecrawl 等条目；[Knowledge Work 目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)截至 09:11 同步 DataRobot、Datadog、Exa、TinyFish 与 Carta 等指针。这些是目录元数据变化，不等同于第三方产品能力发布。Chrome 另有 [v1.0.85 侧栏听写权限 Issue](https://github.com/anthropics/claude-code/issues/87905)，报告给出 iframe 权限策略复现，但未获 Anthropic 确认。Preview、创意/视频模型、Voice Mode、Microsoft 365 集成均无新官方公告。
+[claude-plugins-official](https://github.com/anthropics/claude-plugins-official/commits/main/) 在窗口内合并 Claude Security 0.10.1 版本修正、目录校验和多项第三方插件指针，21:07–21:08 又同步 Sentry CLI、Appwrite 与 Wix；[Knowledge Work 目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)同步 DataRobot、Datadog、Exa、TinyFish、Carta，并在 21:07 更新 Wix 指针。这些是目录元数据变化，不等同于第三方产品能力发布。Chrome 另有 [v1.0.85 侧栏听写权限 Issue](https://github.com/anthropics/claude-code/issues/87905)，报告给出 iframe 权限策略复现，但未获 Anthropic 确认。Preview、创意/视频模型、Voice Mode、Microsoft 365 集成均无新官方公告。
 
 ## Tier 3
 
@@ -121,6 +132,7 @@ Chrome / 浏览器 Agent 随 Desktop / Cowork v1.32352.0 收紧全局浏览器�
 - [视觉品味反馈工作流](https://www.reddit.com/r/ClaudeCode/comments/1vs5iqf/claude_has_a_passfail_signal_for_correctness_and/)作者详细介绍用 Markdown 记录人工视觉反馈、反向链接和“毕业”机制来约束 Claude Code，并同时推广自己的插件；RSS 可核实发布时间，方法与成效仍为单方自报。
 - [Claude Code 周度作品展示](https://www.reddit.com/r/ClaudeCode/comments/1vqpqot/weekly_showcase_thread_what_are_you_building_with/)出现跨仓库 Agent/MCP 工具等自报项目；原帖只确认 8 月 17 日，无法核实精确时间，且效果未独立验证。
 - [任务工期讨论](https://www.reddit.com/r/ClaudeCode/comments/1vscjcz/why_does_claude_code_say_things_like_thats_about/)中，多名用户称 Claude Code 将任务估为数日却在 20–30 分钟内完成；这是早期自选样本，同时说明模型的时间估计不可靠。
+- [周限额提升延期讨论](https://www.reddit.com/r/ClaudeCode/comments/1vrzm9h/50_increase_extended_to_end_of_the_month/)达到约 725 票，但回复同时包含欢迎延期、担忧额度计量和对品牌沟通的不满；这是高互动、强烈分化的自选样本，精确发布时间未稳定读取。
 - 本节不把官方发布说明计入正向口碑；新增样本来自高互动 HN 讨论和可核时 Reddit RSS，但仍存在选择偏差。
 
 ## Hate
@@ -135,6 +147,8 @@ Chrome / 浏览器 Agent 随 Desktop / Cowork v1.32352.0 收紧全局浏览器�
 - [Opus 5 指令遵循回归 Issue](https://github.com/anthropics/claude-code/issues/87491)称模型把直接指令当作协商并注入自指内容；有复现材料但样本单一。
 - [伪造用户与系统轮次 Issue](https://github.com/anthropics/claude-code/issues/87823)附会话 JSONL 链路，称模型把自行生成的伪造上下文当作输入并继续调用工具；仍是单一用户报告，未获 Anthropic 复现确认。
 - [Unicode 路径数据丢失 Issue](https://github.com/anthropics/claude-code/issues/87822)带 has repro 与 data-loss 标签，称重启后部分会话与文件不可见；路径规范化是报告者提出的可能原因，不是已证实根因。
+- [持续两周性能退化讨论](https://www.reddit.com/r/ClaudeCode/comments/1vshkrf/ive_never_felt_claude_been_degraded_for_so_long/)在检索快照中约 27 票，回复把中断、反复确认和执行退化归因于模型或 harness，但没有受控对照，故只作为负向口碑样本。
+- [Remote Control 断连讨论](https://www.reddit.com/r/ClaudeCode/comments/1vsmzlw/why_claude_codes_remotecontrol_is_so_bad/)只有低互动：有人报告 Desktop 会话外出后断连、更新重启后环境无法恢复，也有人称一直稳定；分歧本身说明不能外推总体可靠性。
 
 ## 情绪
 
@@ -148,7 +162,7 @@ Unblocked 的单方复盘称其生产 code review 盲测里 Opus 精度最好、
 
 - [Claude Tag CI/CD 值班案例](https://claude.com/blog/ai-ci-cd-on-call)和 [Claude Science 产品指南](https://claude.com/blog/the-claude-science-product-guide)均由 Claude Blog 标注 8 月 18 日，但没有时分；事实可由官方原文核实，不能确认是否严格落入 19:12 起算窗口。
 
-- 官方周限额帮助页只显示“Updated today”，未暴露精确更新时间；事实已由页面确认，[此前 HN / X 转发](https://news.ycombinator.com/item?id=49351995)继续保留作发现链路，但不再把延期本身列为未证实。
+- 官方周限额帮助页只显示“Updated today”，未暴露精确更新时间；事实已由页面确认，[此前 HN / X 转发](https://news.ycombinator.com/item?id=49351995)继续保留作发现链路，但不再把延期本身列为未证实。[高互动 Reddit 讨论](https://www.reddit.com/r/ClaudeCode/comments/1vrzm9h/50_increase_extended_to_end_of_the_month/)仅能确认 8 月 18 日日期，精确时分留空。
 - Adaptyv Bio 蛋白设计案例只标注 8 月 19 日，无时分；按日期相关候选保留，不宣称严格命中窗口。
 - Desktop / Cowork v1.32352.0、v1.32352.1 与 v1.32885.1 只标注 8 月 17 日、18 日，没有时分；相关功能与修复不写成已严格命中窗口。
 - Reddit 周度作品展示只确认 8 月 17 日；连续停机与沟通讨论只确认 8 月 19 日且页面显示相对时间；Reddit JSON API 403，两者 publishedAt 留空。
@@ -223,6 +237,38 @@ Unblocked 的单方复盘称其生产 code review 盲测里 Opus 精度最好、
 | [ralph-loop 插件含两份不一致 setup 脚本](https://github.com/anthropics/claude-code/issues/87913) | 18:35；has repro / plugins | 报告称旧脚本可创建难以停止的循环，等待维护方确认。 |
 | [新事故 Reddit 讨论](https://www.reddit.com/r/ClaudeAI/comments/1vshrj8/discussion_hub_for_new_claude_incident_degraded/) | 日期可确认、精确发帖时分未稳定读取；低互动 | 只作负向情绪旁证，官方事实以 Claude Status 为准。 |
 
+## 22:22 滚动补充
+
+### 官方状态与生态元数据
+
+- Claude Status、Claude Code、Agent SDK TypeScript/Python 与 Claude Code Action 在 19:12–22:22 均无新事故或 release；Claude / Anthropic 站点也未发现可核实的新产品发布。
+- [官方插件目录](https://github.com/anthropics/claude-plugins-official/commits/main/)在 21:07–21:08 同步 Sentry CLI、Appwrite 与 Wix 指针；[Knowledge Work 目录](https://github.com/anthropics/knowledge-work-plugins/commits/main/)在 21:07 同步 Wix。这些只证明目录引用更新，不证明对应插件新增能力。
+
+### 新增 Issue 观察池
+
+以下均是 GitHub 用户报告，不代表 Anthropic 已确认缺陷；仅保留带 has repro、reproduced、regression 或成体系日志的候选。
+
+| 候选 | 证据状态 | 处理 |
+|---|---|---|
+| [流中断后 Stop hook 不再触发](https://github.com/anthropics/claude-code/issues/87972) | 22:13；has repro / regression / hooks | 报告称 StopFailure 的 decision 不生效，破坏无人值守自动续跑；未获官方确认。 |
+| [长会话 prompt cache 间歇失配](https://github.com/anthropics/claude-code/issues/87966) | 21:57；has repro / cost，附 9 天请求数据 | 89 次与约 5,900 万额外 cache_creation token 均为报告者测量，不能外推。 |
+| [Remote Control 结束会话后遗留 worktree](https://github.com/anthropics/claude-code/issues/87963) | 21:49；has repro / self-hosted environments | 报告给出退出码和桥接状态链路；尚无官方修复。 |
+| [/cd 后会话仍归档在旧项目](https://github.com/anthropics/claude-code/issues/87958) | 21:37；has repro / core | 新 cwd 已写入 transcript，但 resume 列表仍按旧项目存放；属单一用户复现。 |
+| [Cowork 周期性要求整账号重登](https://github.com/anthropics/claude-code/issues/87950) | 21:12；has repro / Linux / auth | 报告称 24–48 小时出现 session_stale_relogin；周期与服务端原因尚未独立核验。 |
+| [run_in_background 任务约 17–20 秒被杀](https://github.com/anthropics/claude-code/issues/87948) | 21:09；has repro / Linux / Bash | 报告区分于 idle timeout，但只来自单一环境。 |
+| [VS Code 连续编辑使用陈旧 diff 基线](https://github.com/anthropics/claude-code/issues/87943) | 20:34；has repro / VS Code | 报告称 diff-editor 标签页未以最新内容为基线；尚无官方确认。 |
+| [浏览器预览启动 Vite 8 时触发 EPERM](https://github.com/anthropics/claude-code/issues/87939) | 20:24；has repro / macOS / sandbox | 报告定位到受限子进程加载 ad-hoc 签名原生二进制；根因仍待维护方确认。 |
+| [自动压缩把内部 text-only 指令写进历史](https://github.com/anthropics/claude-code/issues/87937) | 20:22；has repro / Agent SDK | 报告以 4 次 compact boundary 与长会话记录建立相关性；闭源内部步骤仍属推断。 |
+| [只读 cwd 令 sandboxed Bash 无法自救](https://github.com/anthropics/claude-code/issues/87935) | 20:07；has repro + reproduced / Linux | 报告提供 bubblewrap 最小复现；尚无修复发布。 |
+| [Bedrock 网关从 2.1.228 起静默回退非流式](https://github.com/anthropics/claude-code/issues/87930) | 19:56；has repro / regression / Bedrock | 报告跨版本二分并测得吞吐下降；仅覆盖其企业网关环境。 |
+
+### 社区与邻近信号
+
+- [周限额延期高互动讨论](https://www.reddit.com/r/ClaudeCode/comments/1vrzm9h/50_increase_extended_to_end_of_the_month/)约 725 票，欢迎与不满并存；页面只能稳定确认 8 月 18 日。
+- [性能退化讨论](https://www.reddit.com/r/ClaudeCode/comments/1vshkrf/ive_never_felt_claude_been_degraded_for_so_long/)约 27 票，属于自选负向样本，不能证明模型实际退化。
+- [Remote Control 体验讨论](https://www.reddit.com/r/ClaudeCode/comments/1vsmzlw/why_claude_codes_remotecontrol_is_so_bad/)同时出现断连/环境丢失与稳定使用的相反反馈，互动很低。
+- [Show HN: Yado](https://news.ycombinator.com/item?id=49361945)自称用独立 Fly.io Linux 环境把 Claude Code / Codex 带到 iPhone，月费 19 美元；发布时仅 1 票 1 条评论，商业信息未独立验证，只作生态观察。
+
 ## 来源
 
 - [Claude Code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)
@@ -258,11 +304,19 @@ Unblocked 的单方复盘称其生产 code review 盲测里 Opus 精度最好、
 - [VS Code 会话 mtime Issue](https://github.com/anthropics/claude-code/issues/87900)；[--continue 跨会话 Issue](https://github.com/anthropics/claude-code/issues/87902)
 - [RemoteTrigger routine Issue](https://github.com/anthropics/claude-code/issues/87904)；[Chrome 麦克风 Issue](https://github.com/anthropics/claude-code/issues/87905)；[/insights iOS 语言 Issue](https://github.com/anthropics/claude-code/issues/87906)
 - [全屏 TUI transcript Issue](https://github.com/anthropics/claude-code/issues/87912)；[ralph-loop 插件脚本 Issue](https://github.com/anthropics/claude-code/issues/87913)
+- [Stop hook 流中断回归 Issue](https://github.com/anthropics/claude-code/issues/87972)；[prompt cache 失配 Issue](https://github.com/anthropics/claude-code/issues/87966)
+- [Remote Control worktree 遗留 Issue](https://github.com/anthropics/claude-code/issues/87963)；[/cd 会话归档 Issue](https://github.com/anthropics/claude-code/issues/87958)
+- [Cowork 重登 Issue](https://github.com/anthropics/claude-code/issues/87950)；[后台任务被杀 Issue](https://github.com/anthropics/claude-code/issues/87948)
+- [VS Code 陈旧 diff Issue](https://github.com/anthropics/claude-code/issues/87943)；[浏览器预览 EPERM Issue](https://github.com/anthropics/claude-code/issues/87939)
+- [自动压缩伪造 override Issue](https://github.com/anthropics/claude-code/issues/87937)；[只读 cwd Bash Issue](https://github.com/anthropics/claude-code/issues/87935)；[Bedrock 流式回归 Issue](https://github.com/anthropics/claude-code/issues/87930)
+- [额度延期社区讨论](https://www.reddit.com/r/ClaudeCode/comments/1vrzm9h/50_increase_extended_to_end_of_the_month/)；[性能退化讨论](https://www.reddit.com/r/ClaudeCode/comments/1vshkrf/ive_never_felt_claude_been_degraded_for_so_long/)；[Remote Control 讨论](https://www.reddit.com/r/ClaudeCode/comments/1vsmzlw/why_claude_codes_remotecontrol_is_so_bad/)
+- [Show HN: Yado](https://news.ycombinator.com/item?id=49361945)
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Claude Blog、Help Center、Platform / Cowork 文档、Status API、Claude Code / Agent SDK / Code Action / Skills / 插件 GitHub、Reddit 五个社区（含 r/ClaudeCode RSS）、HN、YouTube、Adaptyv Bio 与可信开发者媒体；Tier 1–3 均逐项搜索。
 - 16:10 补查：核验官方蛋白设计研究、Desktop/Cowork v1.32885.1、Claude Code Issues 与 Reddit/HN 样本；插件目录游标推进至 11:30。
 - 19:12 补查：新增核验 Claude Blog 两篇 8 月 18 日原文、17:42–19:02 Claude Status 事故、44 条区间新增 Claude Code Issue、10 条 r/ClaudeCode RSS 候选、r/ClaudeAI 事故讨论；四个 release feed、六个官方仓库提交与 HN Algolia 均无区间新发布。
+- 22:22 补查：四个 release feed 与 Claude Status 无区间新项；七个官方仓库仅插件目录有 4 条指针提交；复核 54 条 Claude Code Issue、17 条 r/ClaudeCode RSS、6 条 HN 与四条官方目录提交，保留 15 个新来源。
 - 失败：X 原始帖公开页面仍无法稳定读取；Reddit JSON API 与 r/ClaudeAI/r/Anthropic RSS 返回 403/429，事故讨论改用公开 HTML；Kuber 驱动分享页返回空响应；YouTube 搜索缺少可稳定核验的精确发布时间与互动快照。
-- 初始候选：585 条原始记录；本轮增量复核 58 条明确记录（44 Issues、10 r/ClaudeCode RSS、2 Claude Blog、1 Status incident、1 r/ClaudeAI 事故讨论），保留来源：70 条；二次补搜：否（最终来源不为 0）。
+- 初始候选：666 条原始记录；22:22 本轮新增复核 81 条明确记录（54 Issues、17 r/ClaudeCode RSS、6 HN、4 官方插件目录提交），累计保留来源：85 条；二次补搜：否（最终来源不为 0）。
