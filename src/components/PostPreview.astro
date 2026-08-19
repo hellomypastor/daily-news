@@ -8,7 +8,7 @@ interface Props {
 }
 
 const {
-  post: { data: post, slug },
+  post: { data: post, id: slug },
   asCard = false,
 } = Astro.props;
 const { day, year } = getCalendarDateParts(post.date);

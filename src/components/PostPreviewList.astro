@@ -18,7 +18,7 @@ const topicRank = (slug: string) => {
 const sortedPosts = [...posts].sort(
   (a, b) =>
     calendarDate(b.data.date).localeCompare(calendarDate(a.data.date)) ||
-    topicRank(a.slug) - topicRank(b.slug) ||
+    topicRank(a.id) - topicRank(b.id) ||
     a.data.title.localeCompare(b.data.title)
 );
 ---

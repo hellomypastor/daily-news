@@ -21,7 +21,7 @@ const topicRank = (slug: string) => {
 
 const posts = (await getCollection("blog")).sort((a, b) =>
   calendarDate(b.data.date).localeCompare(calendarDate(a.data.date)) ||
-  topicRank(a.slug) - topicRank(b.slug) ||
+  topicRank(a.id) - topicRank(b.id) ||
   a.data.title.localeCompare(b.data.title)
 );
 
@@ -48,19 +48,19 @@ const content = {
       {todaysPosts.length > 0 ? todaysPosts.map((post) => (
         <article class="daily-entry">
           <p class="daily-entry__lead">
-            {postTopic(post.slug) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.slug) as keyof typeof TOPIC_LABELS]}</span>}
-            <strong><a href={post.data.featuredUrl || `/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
+            {postTopic(post.id) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.id) as keyof typeof TOPIC_LABELS]}</span>}
+            <strong><a href={post.data.featuredUrl || `/blog/${post.id}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
           </p>
           {post.data.featuredImage && (
             <figure class="daily-entry__figure">
-              <a href={post.data.featuredUrl || `/blog/${post.slug}`}>
+              <a href={post.data.featuredUrl || `/blog/${post.id}`}>
                 <img src={post.data.featuredImage} alt={post.data.featuredImageAlt || ""} loading="lazy" />
               </a>
               {post.data.featuredImageCaption && <figcaption>{post.data.featuredImageCaption}</figcaption>}
             </figure>
           )}
           <footer class="daily-entry__footer">
-            <a href={`/blog/${post.slug}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
+            <a href={`/blog/${post.id}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
             <span> / {(post.data.featuredTags.length ? post.data.featuredTags : post.data.tags).slice(0, 6).join(", ")}</span>
           </footer>
         </article>
@@ -72,7 +72,7 @@ const content = {
         <ul>
           {highlights.map((post) => (
             <li>
-              <a href={`/blog/${post.slug}`}>{post.data.featuredTitle || post.data.title}</a>
+              <a href={`/blog/${post.id}`}>{post.data.featuredTitle || post.data.title}</a>
               <span> — {calendarDate(post.data.date)}</span>
             </li>
           ))}
