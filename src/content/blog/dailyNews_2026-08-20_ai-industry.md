@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T04:15:40+08:00"
+updatedAt: "2026-08-20T07:11:12+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Microsoft Agent Framework removes AG-UI history special cases"
 featuredUrl: "https://github.com/microsoft/agent-framework/commit/e2938f4531fed8003ea118e9b49b4e3df7e43090"
@@ -18,15 +18,18 @@ tags:
   - "Agents SDK"
   - "AI"
   - "Anthropic"
+  - "Artifacts"
   - "Baidu"
   - "Claude Code"
   - "Cohere"
+  - "Compaction"
   - "Context"
   - "Date Unconfirmed"
   - "Deep Agents"
   - "Development Signal"
   - "Earnings"
   - "Edge AI"
+  - "Enterprise"
   - "Evaluation"
   - "Foundry"
   - "Google"
@@ -39,6 +42,7 @@ tags:
   - "MCP"
   - "Microsoft"
   - "Model Routing"
+  - "OAuth"
   - "Observability"
   - "OGX"
   - "OpenAI"
@@ -48,6 +52,7 @@ tags:
   - "Qwen"
   - "Qwen Code"
   - "Release"
+  - "Reliability"
   - "Reproducibility"
   - "Research"
   - "Runtime"
@@ -55,20 +60,25 @@ tags:
   - "SDK"
   - "Security"
   - "Spanner"
+  - "State"
   - "Telemetry"
   - "Transformers"
   - "Validation"
   - "Watchlist"
+  - "ZDR"
 ---
 
 ## 扫描结论
 
-主窗口：2026-08-19 04:12:00 至 2026-08-20 04:12:00（Asia/Shanghai）；近两日：2026-08-18 04:12:00 至 2026-08-19 04:12:00；近三日：2026-08-17 04:12:00 至 2026-08-18 04:12:00。本轮可核实信号集中在 Agent SDK、编码 Agent、治理钩子、可观测与推理工具链；主分支提交均标为开发信号，不等同正式上线。Anthropic/OpenAI 项目在本页保留行业意义，并注明详见专题页。
+主窗口：2026-08-19 07:11:12 至 2026-08-20 07:11:12（Asia/Shanghai）；近两日：2026-08-18 07:11:12 至 2026-08-19 07:11:12；近三日：2026-08-17 07:11:12 至 2026-08-18 07:11:12。本轮新增 Deep Agents Code 0.1.58 正式发布，以及 LangChain 企业托管配置、Google ADK 会话回收、压缩计数、OAuth 恢复和工件持久化等主分支信号；主分支提交均标为开发信号，不等同正式上线。Anthropic/OpenAI 项目在本页保留行业意义，并注明详见专题页。
 
 ## 优先动态
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| LangChain | [Deep Agents Code 0.1.58](https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.58) | 官方正式发布 | 2026-08-20 06:19 +08:00，已核实 | 要求 Python 3.12+，正式交付 MCP viewer 重新认证、GLM-5.3 路由、可中断 offload、MCP stderr 日志和多项终端交互修复。 | 把此前分散的开发信号收束为可安装版本，并明确了一项运行环境 breaking change。 |
+| LangChain | [Deep Agents Code 加入管理员托管配置](https://github.com/langchain-ai/deepagents/commit/d419122bfb748a823d1fa7cfd7207c428f4fbcab) | 官方主分支提交 | 2026-08-20 06:57 +08:00，已核实 | 固定 OS 路径的只读 `managed_config.toml` 可覆盖用户配置；安全边界键无法执行时 fail closed，尚未进入新 release。 | 编码 Agent 的企业治理从用户偏好推进到管理员强制策略与来源追踪。 |
+| Google | [ADK 恢复工作流节点认证时校验原始 OAuth 状态](https://github.com/google/adk-python/commit/5b59139e0ec944a8618d4a1df4182db464337566) | 官方主分支提交 | 2026-08-20 05:44 +08:00，已核实 | 恢复凭证使用节点自身 auth config，并要求 OAuth 响应回传请求生成的 state；尚未发布。 | 缩小 HITL 工作流恢复时被替换 token endpoint 或混淆授权响应的风险。 |
 | Google | [ADK 阻断 agent-config 中的 YAML / ruamel 反序列化](https://github.com/google/adk-python/commit/924d802f5bb232a294df8e5a5c036d000077e19a) | 官方主分支提交 | 2026-08-20 03:12 +08:00，已核实 | 配置代码引用检查扩大到阻断 YAML 与 ruamel 反序列化路径；仍是未发布主分支修复。 | 降低 Agent 配置加载不受信对象的风险。 |
 | Google | [ADK 校验 Spanner 搜索工具的 SQL 标识符](https://github.com/google/adk-python/commit/8d2f2779e6143aaa75460ca698476b4114759d5b) | 官方主分支提交 | 2026-08-20 03:52 +08:00，已核实 | 对表名、列名和附加过滤器引入标识符与操作符校验；提交包含对应测试。 | Agent 数据工具的输入边界开始显式收紧。 |
 | Microsoft | [Agent Framework 修复 A2A 流式 artifact 更新](https://github.com/microsoft/agent-framework/commit/d29e7be7fd7277f15e37ddda5b6bf154c9ef428b) | 官方主分支提交 | 2026-08-20 03:28 +08:00，已核实 | .NET A2A 路径修复流式 artifact 更新处理；不能外推为已发布版本。 | 提升跨 Agent 协议流式状态传递的可靠性。 |
@@ -85,6 +95,10 @@ tags:
 
 | 厂商 | 标题 | 日期 / 状态 | 摘要 |
 |---|---|---|---|
+| Google | [ADK 回收 MCP session pool 的空闲会话](https://github.com/google/adk-python/commit/69a3ca5e119a821bc375246f0bfa2e9e2cfefc79) | 2026-08-20 05:58 +08:00，主分支 | 为 MCP session pool 加入空闲回收，并保护执行中的调用不被 sweep 中途关闭；尚未发布。 |
+| Google | [ADK 压缩阈值计入工具调用与响应字符](https://github.com/google/adk-python/commit/66908e4c613ff3686e85374696640e84c4d0f20f) | 2026-08-20 06:20 +08:00，主分支 | token 阈值估算不再只看文本，也计入 function call 参数和 function response 内容。 |
+| Google | [ADK 原子发布文件工件版本](https://github.com/google/adk-python/commit/94475c9a76c7c71246d6f5e4b083b3c3ee6869c0) | 2026-08-20 05:33 +08:00，主分支 | 文件 artifact 版本分配与发布改为原子路径，降低并发写入的版本竞争。 |
+| Google | [ADK 写入 JSON 状态列前清洗 state delta](https://github.com/google/adk-python/commit/3f9e6bec37cd66315d619a2dbb339f545c86e09a) | 2026-08-20 05:37 +08:00，主分支 | 在持久化到 JSON state columns 前清洗状态增量，避免不可序列化值破坏写入。 |
 | Google | [ADK 修复异步 generator 的 contextvars 泄漏](https://github.com/google/adk-python/commit/bb86bdd737c1792d40e05c1d388d9ad4020aa702) | 2026-08-20 03:53 +08:00，主分支 | 在异步 Agent 运行和 live 路径中围绕每次 yield 恢复调用者 OpenTelemetry context，避免上下文跨任务泄漏。 |
 | Microsoft | [Agent Framework 在快照间保留 AG-UI tool message ID](https://github.com/microsoft/agent-framework/commit/26b9200c214f24526d94a8a2b90b8e255a2a48ef) | 2026-08-20 01:43 +08:00，主分支 | Python 路径修复快照恢复后 tool message ID 丢失。 |
 | LangChain | [Deep Agents 记录 stdio MCP server stderr](https://github.com/langchain-ai/deepagents/commit/a61bc6feeb6aefd780ad8435acc9ce2057fe9151) | 2026-08-20 03:18 +08:00，主分支 | 将 stdio MCP server 的 stderr 纳入 logger，改善失败诊断。 |
@@ -98,12 +112,14 @@ tags:
 
 ## Anthropic / OpenAI 行业信号
 
+- [Claude Code v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236) 增加跨会话 idle 通知，并修复 Remote Control、自托管 runner 交接和后台 session；详见 Claude 专题页。
+- [OpenAI 的 Zero Data Retention 与 Private Safety Processing 公告](https://openai.com/index/offering-zero-data-retention-for-frontier-models)确认符合条件的 API 客户继续可用 ZDR，新处理方案仍在早期客户测试；详见 OpenAI 专题页。
 - [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235) 更新权限对话框、subagent 提示与后台 cloud session 资源效率；详见 Claude 专题页。
 - [Sam Altman 关于暂停部分 frontier RL 训练的帖子](https://x.com/sama/status/2089787807611195475)只说明为满足 alignment、安全与监控标准而暂停部分训练，未披露模型、范围或期限；详见 OpenAI 专题页，不扩大为全面停训。
 
 ## 播客
 
-截止 04:12，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
+截止 07:11，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
 
 ## 近两日补充
 
@@ -121,13 +137,13 @@ tags:
 
 ## 来源链接
 
-正文已直接链接全部 26 个保留来源；同页 URL 已去重。
+正文已直接链接全部 35 个保留来源；同页 URL 已去重。
 
 ## 采集状态
 
 - 已检查：规范列出的国内外厂商、研究机构、Agent 平台、官方 GitHub feeds 与六类播客。
 - 失败来源：OpenAI News/xAI/部分中国厂商和播客入口存在 403、脚本依赖、索引滞后或精确时刻缺失；百度结果页尚未稳定显示。
-- 初始候选：316 条（在上一轮 236 个候选基础上，增量复核 80 个核心仓库 feed 条目与网页候选）；保留 26 个唯一来源。
+- 初始候选：338 条（在上一轮 316 个候选基础上，增量复核 22 个核心仓库 feed 条目）；保留 35 个唯一来源。
 - 二次补搜：未运行（最终 sources 非 0，secondPass=false）。
 
-一句话：本轮主轴是 Agent runtime 的输入防护、跨异步上下文隔离、协议流式状态与 MCP 认证/诊断继续下沉到 SDK 和主流编码工具链。
+一句话：本轮主轴是 Deep Agents Code 正式收束 MCP 与终端修复，同时企业托管策略、OAuth 恢复、会话回收和持久化一致性继续下沉到 Agent runtime。

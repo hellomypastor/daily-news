@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T04:24:01+08:00"
+updatedAt: "2026-08-20T07:11:12+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "How to Turn a Business Question Into a Strategy Deck With ChatGPT Work | Tutorial"
 featuredUrl: "https://www.youtube.com/watch?v=XjSJ6ybS9I8"
@@ -25,6 +25,7 @@ tags:
   - "Agents SDK"
   - "Analysis"
   - "API"
+  - "API Types"
   - "Apps SDK"
   - "Assistants API"
   - "Async"
@@ -49,14 +50,18 @@ tags:
   - "Community"
   - "Compaction"
   - "Compatibility"
+  - "Connectors"
   - "Cyber"
   - "Daybreak"
   - "Deprecation"
+  - "Diagnostics"
   - "Documentation"
+  - "Education"
   - "Enterprise"
   - "Exec"
   - "Files"
   - "Git"
+  - "Gmail"
   - "Gov"
   - "GPT Image"
   - "GPT-5.6"
@@ -65,6 +70,7 @@ tags:
   - "Java"
   - "Logging"
   - "Love"
+  - "MCP"
   - "Migration"
   - "Models"
   - "National Security"
@@ -74,12 +80,14 @@ tags:
   - "Oversight"
   - "Performance"
   - "Plugins"
+  - "Pre-release"
   - "Premium"
   - "Privacy"
   - "Publishing"
   - "Python"
   - "Realtime"
   - "Realtime API"
+  - "Redirects"
   - "Release"
   - "Release Notes"
   - "Reliability"
@@ -90,27 +98,31 @@ tags:
   - "Security"
   - "Shopify"
   - "Sites"
+  - "SSE"
   - "Streaming"
   - "Summary"
   - "Supply Chain"
+  - "Teens"
   - "Threads"
   - "Tutorial"
   - "TypeScript"
+  - "UI"
   - "Usage"
   - "Usage Limits"
   - "Voice"
   - "Web"
+  - "WebSocket"
   - "Windows"
   - "ZDR"
 ---
 
 ## 今日概览
 
-扫描窗口：2026-08-19 04:12:00 至 2026-08-20 04:12:00（Asia/Shanghai）。窗口内最明确的产品与开发者动态有三组：OpenAI 发布 [Replit × GPT-5.6 Luna 案例](https://openai.com/index/replit)，说明 Replit Free Mode 由 Luna 驱动、复杂任务可路由到 Sol；Python SDK 连续发布 [v3.3.0](https://github.com/openai/openai-python/releases/tag/v3.3.0) 与安全依赖修补版 [v3.3.1](https://github.com/openai/openai-python/releases/tag/v3.3.1)；Agents SDK 则分别交付 Python [v0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0) 和 TypeScript [v0.17.0](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)，重点都包含 guardrail、replay/session state 与 provider 配置的 fail-closed 行为。
+扫描窗口：2026-08-19 07:11:12 至 2026-08-20 07:11:12（Asia/Shanghai）。窗口内最明确的产品与开发者动态有三组：OpenAI 发布 [Replit × GPT-5.6 Luna 案例](https://openai.com/index/replit)，说明 Replit Free Mode 由 Luna 驱动、复杂任务可路由到 Sol；Python SDK 连续发布 [v3.3.0](https://github.com/openai/openai-python/releases/tag/v3.3.0) 与安全依赖修补版 [v3.3.1](https://github.com/openai/openai-python/releases/tag/v3.3.1)；Agents SDK 则分别交付 Python [v0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0) 和 TypeScript [v0.17.0](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)，重点都包含 guardrail、replay/session state 与 provider 配置的 fail-closed 行为。
 
-Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)，本轮后段只见主分支提交，不应写成已发布功能。ChatGPT / Codex、API 与 ChatGPT Release Notes 的官方更新页在截止时均没有 8 月 19 日新条目。社区侧出现两个相互呼应、但未获状态页确认的 Work Mode 故障样本；因此正文将其列入观察池，而不是宣称平台事故。
+Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)，本轮后段另有 [0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1) 与 [0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2)，但两者都是仅含版本说明的预发布，不能写成稳定交付。ChatGPT / Codex、API 与 ChatGPT Release Notes 的官方更新页在截止时均没有 8 月 19 日新条目。社区侧出现两个相互呼应、但未获状态页确认的 Work Mode 故障样本；因此正文将其列入观察池，而不是宣称平台事故。
 
-本轮新增最明确的官方事件是 OpenAI 发布 [Frontier Models 的 Zero Data Retention 公告](https://openai.com/index/offering-zero-data-retention-for-frontier-models)：符合条件的 API 客户继续可用 ZDR，Private Safety Processing 已进入早期客户测试；官方计划 9 月开始推出并发布技术白皮书。Codex、Node、Java 与 Ruby SDK 主分支亦新增安全和兼容性修补，但这些 commit 均不等于正式 release。
+此前本日最明确的官方事件是 OpenAI 发布 [Frontier Models 的 Zero Data Retention 公告](https://openai.com/index/offering-zero-data-retention-for-frontier-models)：符合条件的 API 客户继续可用 ZDR，Private Safety Processing 已进入早期客户测试；官方计划 9 月开始推出并发布技术白皮书。Codex、Node、Java 与 Ruby SDK 主分支亦新增安全和兼容性修补，但这些 commit 均不等于正式 release。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -220,9 +232,18 @@ Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/
 - [ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog)、[ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)和 [API changelog](https://developers.openai.com/api/docs/changelog)截止本轮均未列出 8 月 19 日新条目。
 - 官方模型命名以 [model guidance](https://developers.openai.com/api/docs/guides/latest-model)为准；搜索中出现的别名或未来版本若没有官方页面，均不作为事实。
 
+## 本轮 07:11 增补
+
+- Codex：完整窗口补录 [0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1)，04:12 后新增 [0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2)；两页均只有版本级说明，且都标为预发布，最新稳定版仍是 0.148.0。
+- Python SDK 主分支：06:38–04:37 依次出现 [ChatCompletionChunk obfuscation 字段同步](https://github.com/openai/openai-python/commit/c7d8e1d26be1f958e55c80f26b648f768afabdf2)、[Azure 认证模式消歧](https://github.com/openai/openai-python/commit/e3d06812535d7f2fe1bc6e57c12bd0ac0dd4acd1)、[SSE 增量解码](https://github.com/openai/openai-python/commit/2598d530cf682784465e9f82558a830ac5f94486)、[WebSocket send queue 字节计数修补](https://github.com/openai/openai-python/commit/96f966d77bddc7449ae23fda5b29ef44c3f98cc2)、[私有目录中的上传示例 fixtures](https://github.com/openai/openai-python/commit/f36e6f79662b22e9d8f1660d4576b4b15cd8ac76)、[metadata-only 诊断](https://github.com/openai/openai-python/commit/600aa8daade4c9df87deb76f6b8442ee828a7cbc)和 [Azure deployment name 一致编码](https://github.com/openai/openai-python/commit/689538d531692e30ac1928779e6f1b97cc95db45)；均尚非 release。
+- 其他 SDK 主分支：Node SDK [要求精确 SSE 完成哨兵](https://github.com/openai/openai-node/commit/a905bfbac5b535e015e90326a744cc193e5addf8)；Agents SDK Python [拒绝显式 client 下会被忽略的 voice provider 选项](https://github.com/openai/openai-agents-python/commit/7e55afc9500d12937687988f1e91e900dcb4ad09)；Ruby SDK 则[要求 origin authority](https://github.com/openai/openai-ruby/commit/35acd86f5f0d402bfe29167efd89bd49fc65c926)、[跨 redirect 保持请求边界](https://github.com/openai/openai-ruby/commit/48be3b5084eff7fe88db3022c154bb2fe8c929c5)并[把认证请求限制在配置 origin](https://github.com/openai/openai-ruby/commit/3978736b0e5b7fb9bae3d1a851d917ddf9589080)。这些都是 commit，不是正式版本。
+- 日期未确认：[ChatGPT for Teens 官方帮助页](https://help.openai.com/en/articles/20001421-chatgpt-for-teens)称从 8 月 18 日起向符合条件的 Free 与付费个人账户全球滚动推出，并列出学习引导、Study hours、休息提醒、敏感信息上传提醒与可选家长控制；页面精确发布时间未提供。
+- 较旧背景：OpenAI 8 月 17 日的 [The Defender’s Window](https://openai.com/index/the-defenders-window/)回顾 OpenAI–Hugging Face 事件，并列出 Codex Security、持续基础设施防御、攻击路径枚举与基础控制四类措施；本轮因 HN 再次浮现，仅作窗口外背景。
+- 观察池：一名开发者报告 [Apps SDK ui/message 会把 widget 控制文本显示成用户消息](https://community.openai.com/t/ui-message-is-rendered-as-a-visible-user-message-unlike-sendfollowupmessage-intended-behavior/1391362)；另一名用户提出[同一 ChatGPT 账户连接多个 Gmail / Google Workspace 账户并按 chat 或 Scheduled Task 选择](https://community.openai.com/t/feature-request-support-multiple-gmail-google-workspace-account-connections-in-chatgpt-with-per-chat-and-per-scheduled-task-account-selection/1391370)。前者是单用户复现，后者只是需求信号，均不代表官方功能或事故。
+
 ## 采集状态
 
-- 已检查来源：OpenAI News 原文 / RSS、API changelog、ChatGPT & Codex changelog、ChatGPT Release Notes、model guidance、Assistants 迁移、Status、Help Center、官方 YouTube / Academy、8 个官方 GitHub 仓库、Developer Community、Reddit、HN、X 与中英文可信二手检索。
-- 失败来源：OpenAI News 普通 curl 403（改用官方 RSS 与网页抓取器）；Reddit JSON / RSS 403 或结果不完整；X 正文提取不稳定；YouTube 频道页提取有限；Irish Independent 原页受抓取限制；CNBC 网页抓取器受 robots 限制（改用公开 HTML 元数据）；JetBrains 独立入口未见可核实新增。
-- 初始候选数：204；保留来源数：55。
+- 已检查来源：OpenAI News 原文 / RSS、API 与 ChatGPT / Codex changelog、ChatGPT Release Notes、model guidance、Assistants 迁移、Status、Help Center（含 ChatGPT for Teens）、官方 YouTube / Academy、8 个官方 GitHub 仓库、Developer Community、Reddit、HN Algolia、X 与中英文可信二手检索。
+- 失败来源：OpenAI News 普通 curl 403（改用官方 RSS 与网页抓取器）；Reddit JSON / RSS 403 或结果不完整；X 正文提取不稳定；YouTube 频道页提取有限；Irish Independent、Reuters、BBC 与 CNBC 部分原页受 robots / 抓取限制；GitHub 未认证 REST API 在全窗口批量复扫后触发 403 rate limit（新时段发布与提交已先取回，并用公开页面交叉核验）；JetBrains 独立入口未见可核实新增。
+- 初始候选数：256；保留来源数：73。
 - 二次补搜：否（最终来源不为 0）。

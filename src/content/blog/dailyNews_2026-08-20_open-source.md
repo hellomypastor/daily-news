@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T04:20:00+08:00"
+updatedAt: "2026-08-20T07:11:12+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation"
 featuredUrl: "https://huggingface.co/blog/LiquidAI/qad"
@@ -12,24 +12,31 @@ featuredImage: "https://cdn-uploads.huggingface.co/production/uploads/644249b084
 featuredImageAlt: "Liquid AI 的 LFM2.5 QAD 四比特量化模型文章配图"
 featuredImageCaption: "图片来源：Liquid AI / Hugging Face"
 tags:
+  - "A2A"
   - "AG-UI"
   - "Agent"
   - "Agent Evaluation"
   - "Agent Memory"
+  - "Agent Protocol"
   - "Agent Skills"
   - "AI"
+  - "AI Security"
   - "Android"
   - "ASR"
   - "Benchmark"
+  - "BI"
+  - "CLI"
   - "Code Generation"
   - "Coding Agent"
   - "Compiler"
   - "Date Unverified"
   - "DeepSeek Harness"
   - "Developer Tools"
+  - "Embeddings"
   - "Engineering"
   - "Essay"
   - "Evaluation"
+  - "Governance"
   - "GPU"
   - "Hardware"
   - "Hardware Agent"
@@ -39,17 +46,26 @@ tags:
   - "Interpretability"
   - "Knowledge Graph"
   - "LLM"
+  - "LLM Judge"
   - "Mathematics"
   - "MCP"
   - "Mechanistic Interpretability"
+  - "Memory"
+  - "MLX"
+  - "Mobile"
   - "Mojo"
+  - "Open Model"
   - "Open Source"
+  - "Open Source Governance"
   - "Open Weights"
+  - "Protocol"
   - "Quantization"
   - "RAG"
   - "Reinforcement Learning"
   - "Relational Learning"
   - "Research"
+  - "Resurfaced"
+  - "Robotics"
   - "Runtime"
   - "Rust"
   - "Safety"
@@ -59,6 +75,8 @@ tags:
   - "Sparse Autoencoder"
   - "Specification"
   - "Text Normalization"
+  - "Tokenizer"
+  - "Training"
   - "Trending"
   - "Video"
   - "Watchlist"
@@ -68,7 +86,7 @@ tags:
 
 ## 概览
 
-技术高亮窗口为 2026-08-18 04:12 至 2026-08-20 04:12，HN 讨论/发现窗口为 2026-08-19 04:12 至 2026-08-20 04:12（Asia/Shanghai）。本轮在既有集合上复扫 HN 七组检索 700 条，并逐条复核 01:12–04:12 newest 增量 300 条；同时检查 GitHub 三类 Trending 45 行、五组新仓库检索 50 条、arXiv 208 条、Hugging Face Daily Papers 100 条以及 Blog/模型卡/独立工程原文；原始候选计数（含入口间重叠）共 1,408 条，累计保留 55 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。
+技术高亮窗口为 2026-08-18 07:11:12 至 2026-08-20 07:11:12，HN 讨论/发现窗口为 2026-08-19 07:11:12 至 2026-08-20 07:11:12（Asia/Shanghai）。本轮在既有集合上复扫 HN 七组检索实际返回 425 条，并逐条复核 04:12–07:11 newest 增量 150 条；同时检查 GitHub 三类 Trending 48 行、五组新仓库检索 50 条、arXiv 215 条、Hugging Face Daily Papers 100 条、Blog RSS 10 条与 Simon Willison feed 15 条；原始候选计数（含入口间重叠）共 1,013 条，累计保留 100 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。
 
 ## 已核实高亮
 
@@ -90,7 +108,7 @@ tags:
 
 ## GitHub Trending
 
-04:14 的公开日榜相关项目包括：[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)（2,221 stars today）、[OpenViking](https://github.com/volcengine/OpenViking)（803）、[munder-difflin](https://github.com/chaitanyagiri/munder-difflin)（797）、[mattpocock/skills](https://github.com/mattpocock/skills)（1,214）、[Graphify](https://github.com/Graphify-Labs/graphify)（454）和 [Strix](https://github.com/usestrix/strix)（590）。这些数字只证明当天榜单热度，不代表今日创建、技术质量或独立采用；其中 munder-difflin 的仓库 API 未识别到许可证，因此不把它写成已确认许可证的开源项目。
+07:11 的公开日榜相关项目包括：[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)（2,221 stars today）、[OpenViking](https://github.com/volcengine/OpenViking)（803）、[munder-difflin](https://github.com/chaitanyagiri/munder-difflin)（797）、[mattpocock/skills](https://github.com/mattpocock/skills)（1,214）、[Graphify](https://github.com/Graphify-Labs/graphify)（454）和 [Strix](https://github.com/usestrix/strix)（590）；新增相关榜单项目见下方 07:11 增量。榜单数字只证明当前热度，不代表今日创建、技术质量或独立采用。
 
 ## HN 讨论
 
@@ -146,12 +164,41 @@ tags:
 - [Prefill and Decode Want Different Computers](https://hiraditya.github.io/posts/prefill-and-decode-want-different-computers/) 原日为 2026-08-17 11:00 +08:00，已在本轮 48 小时窗口之外；文章关于 prefill 更偏 compute-bound、decode 更偏 bandwidth-bound 以及分离式服务的论证仍有工程参考价值，故凭 [HN 发现](https://news.ycombinator.com/item?id=49365961) 留在观察池。
 - 新仓库搜索中出现规避订阅、游戏作弊和仅堆砌关键词的仓库；这些候选与本页技术选择无关或存在明显滥用风险，未作为来源。没有许可证、仅有营销页或只有项目方性能主张的候选，也没有被提升为已验证技术事实。
 
+## 07:11 增量
+
+### 已核实技术高亮
+
+- [Multi-Vector Embedding Models with Sentence Transformers](https://huggingface.co/blog/multi-vector-encoder)（HF RSS：2026-08-18 08:00 +08:00）说明 ColBERT-style late interaction 的 MaxSim、视觉文档检索与索引压缩；它保留 token 级匹配但增加索引和重排成本。
+- [Hacking SAML with Claude Code](https://oblique.security/blog/hacking-saml/)（页面元数据：2026-08-20 02:10 +08:00）公开用既有漏洞知识与 coding-agent harness 研究 SAML 库的流程、修复链接和限制；不把这组受控实验扩展成“模型可自动发现任意 0-day”。
+- [Conceptual integrity and counting lines of code](https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/)（2026-08-20 06:46 +08:00）讨论 Agent 提高产码速度后，团队认知容量和架构一致性成为新的工程瓶颈。
+- 新增论文：[TokEval](https://arxiv.org/abs/2608.18062)（2026-08-19 01:52 +08:00）评估 tokenizer 的结构性指标；[Chain-of-Experience](https://arxiv.org/abs/2608.18027)（01:22）研究推理时反馈循环；[Judge, Retrieve, or Abstain](https://arxiv.org/abs/2608.17994)（00:42）以校准阈值控制 LLM judge 已接受判决的风险。所有数字和保证边界以论文实验与假设为准。
+
+### GitHub Trending 增量
+
+07:11 日榜新出现的相关项目为 [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)（767 stars today）、[superpowers](https://github.com/obra/superpowers)（514）、[oMLX](https://github.com/jundot/omlx)（467）、[MTPLX](https://github.com/youssofal/MTPLX)（44）、[last30days-skill](https://github.com/mvanhorn/last30days-skill)（130）、[Hermes Agent](https://github.com/NousResearch/hermes-agent)（563）、[Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)（63）和 [GitNexus](https://github.com/abhigyanpatwari/GitNexus)（48）。这些只是日榜快照；性能、覆盖面、采用度与成熟度没有被 Trending 独立验证。
+
+### HN 讨论与旧项目回流
+
+- [DFlash 2 HN](https://news.ycombinator.com/item?id=49366792) 于 04:28 出现，快照 53 / 5；[原文](https://inco.ai/blog/dflash2/) 只给 2026-08-18 日号、无时分，无法严格判断是否晚于本轮 48 小时起点，16–25% 接受长度改善和吞吐数字均按 Inco AI 自报。
+- [only-cli/oc HN](https://news.ycombinator.com/item?id=49367419) 于 05:26 出现，3 / 2；[仓库](https://github.com/only-cli/oc) 创建于窗口内，把网站操作压成 Agent CLI，但 GitHub API 未识别许可证。
+- 旧项目回流包括 [Semantica](https://github.com/semantica-agi/semantica) / [HN](https://news.ycombinator.com/item?id=49367995)（06:28，2 / 0）、[CHAP](https://github.com/BrightbeamAI/chap) / [HN](https://news.ycombinator.com/item?id=49367836)（06:09，11 / 2）和 [ComputeFence](https://github.com/Francisco-Booth/ComputeFence) / [HN](https://news.ycombinator.com/item?id=49367187)（05:02，1 / 0）；仓库创建时间分别为 2025-06-25、2026-05-17、2026-08-04，不冒充今日发布。
+- [Node.js AI use policy](https://github.com/nodejs/node/blob/main/doc/contributing/ai-guidelines.md) 首次合入于 2026-08-13，经 [HN](https://news.ycombinator.com/item?id=49367779) 于 06:03 回流（2 / 0）；它是贡献治理指南，不是工具发布。
+- [NVIDIA Alpamayo 2 Super](https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available/) 原日为 2026-08-04、采用 OpenMDW-1.1，经 [HN](https://news.ycombinator.com/item?id=49367388) 于 05:23 回流（5 / 0）；能力与采用度按官方自报。
+- [Orion-app](https://github.com/nicolasakf/Orion-app) 经 [HN](https://news.ycombinator.com/item?id=49367844) 于 06:10 回流（2 / 0），未识别许可证；[Vibe-Kanban-Alternative](https://github.com/flashlan/vibe-kanban-alternative) 经 [HN](https://news.ycombinator.com/item?id=49367532) 于 05:38 发现（1 / 0），Apache-2.0、成熟度未知。
+
+### 日期未确认与观察池
+
+- Agent Swarms [原文](https://av.codes/blog/on-agent-swarms/)和“Half-Day” 0-Day [原文](https://margin.re/2026/08/introducing-the-half-day-0-day-in-the-age-of-ai/)在本环境被域名拦截；仅确认 [HN 发现](https://news.ycombinator.com/item?id=49368141)（06:45，1 / 0）与 [HN 发现](https://news.ycombinator.com/item?id=49368297)（07:03，1 / 0），不概括正文或推断发布日期。
+- [GEN-1.5](https://generalistai.com/blog/gen-1.5) 页面可读但未给可靠发布日期或开源权重；仅按厂商自报记录一次示范学习实验，并保留 [HN 发现](https://news.ycombinator.com/item?id=49367510)（05:36，2 / 0）。
+- [Qwen 3.8 27B scores 52](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) 发布于 2026-08-18 07:58 +08:00，位于窗口边缘，属于单人模型测试。
+- 新仓库搜索保留：[sprix-sage-router](https://github.com/wang2122/sprix-sage-router)（MIT，A2A 路由）、[herdrm](https://github.com/missuo/herdrm)（未识别许可证，coding-agent 终端控制台）、[Wake](https://github.com/iAmCorey/Wake)（MIT，会话检索恢复）、[omp-best-of](https://github.com/wolfiesch/omp-best-of)（MIT，Best-of-N verifier）、[PhoneBuddySDK](https://github.com/APUS-AI-Lab/PhoneBuddySDK)（Apache-2.0，移动 Agent runtime）和 [agent-codemode](https://github.com/janwilmake/agent-codemode)（MIT，脚本调用 MCP）；均只有 README/API 元数据，未做独立安全与性能复核。
+
 ## 来源链接
 
-来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 55 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
+来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 100 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组命中 700 条，并逐条复核 01:12–04:12 newest 增量 300 条；GitHub Trending 全站/Python/TypeScript 47 行；GitHub Search 五组 50 条；arXiv 48 小时四分类 208 条；Hugging Face Daily Papers 100 条、Blog 4 条、模型卡/讨论；Simon Willison feed 与重点原文、README、许可证和时间元数据。
-- 失败/受限：GitHub Trending 无结构化官方 API；Ornith 与 Baseten book 原文缺精确日期；S1-mini v1 未单列精确发布日期；宽口径 GitHub 搜索噪声较多；新项目性能、安全和成熟度多缺少独立验证，均已在条目中降级标注。
-- 原始候选计数 1,408 条（入口间有重叠），累计保留 55 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组实际返回 425 条，并逐条复核 04:12–07:11 newest 增量 150 条；GitHub Trending 全站/Python/TypeScript 48 行；GitHub Search 五组 50 条；arXiv 48 小时四分类 215 条；Hugging Face Daily Papers 100 条、Blog RSS 10 条；Simon Willison feed 15 条，以及重点原文、README、许可证、创建时间和提交元数据。
+- 失败/受限：GitHub Trending 无结构化官方 API；Agent Swarms 与“Half-Day”原文在本环境被域名拦截；DFlash 2 只给日号，GEN-1.5、Ornith 与 Baseten book 缺精确日期；only-cli、Orion 等仓库未识别许可证；宽口径 GitHub 搜索仍有噪声；项目方性能、安全和成熟度均按自报或观察状态处理。
+- 原始候选计数 1,013 条（入口间有重叠），累计保留 100 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
