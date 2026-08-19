@@ -1,8 +1,8 @@
 import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
+import { getBlogPosts } from "../lib/blog";
 import { SITE } from "../config";
 
-const blogs = await getCollection("blog");
+const blogs = getBlogPosts();
 const allPosts = [...blogs];
 const sortedPosts = Object.values(allPosts).sort(
   (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()

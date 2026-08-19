@@ -1,9 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { BlogPost } from "$/lib/blog";
 import { getCalendarDateParts, getMonthName } from "$/utils";
 
 interface Props {
-  post: CollectionEntry<"blog">;
+  post: BlogPost;
   asCard?: boolean;
 }
 

@@ -1,7 +1,7 @@
 ---
 export const prerender = true;
 
-import { getCollection } from "astro:content";
+import { getBlogPosts } from "$/lib/blog";
 import DefaultPageLayout from "$/layouts/default.astro";
 
 const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
@@ -19,7 +19,7 @@ const topicRank = (slug: string) => {
   return topic ? TOPIC_ORDER.indexOf(topic) : TOPIC_ORDER.length;
 };
 
-const posts = (await getCollection("blog")).sort((a, b) =>
+const posts = getBlogPosts().sort((a, b) =>
   calendarDate(b.data.date).localeCompare(calendarDate(a.data.date)) ||
   topicRank(a.id) - topicRank(b.id) ||
   a.data.title.localeCompare(b.data.title)

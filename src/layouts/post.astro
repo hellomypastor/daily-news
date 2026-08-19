@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { BlogData } from "$/lib/blog";
 import Icon from "astro-icon";
 import {
   SITE,
@@ -20,7 +20,7 @@ interface Props {
     slug: string;
     collection: string;
   };
-  content: CollectionEntry<"blog">["data"];
+  content: BlogData;
   stats?: {
     views: number;
   };

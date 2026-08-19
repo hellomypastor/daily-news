@@ -1,7 +1,7 @@
 ---
 export const prerender = true;
 
-import { getCollection } from "astro:content";
+import { getBlogPosts } from "$/lib/blog";
 import DefaultPageLayout from "$/layouts/default.astro";
 import PostPreviewList from "$/components/PostPreviewList.astro";
 import Paginator from "$/components/Paginator.astro";
@@ -11,7 +11,7 @@ let title = "Blog";
 let description = "All the articles posted so far...";
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await getCollection("blog");
+  const allPosts = getBlogPosts();
   const sortedPosts = allPosts.sort(
     (a, b) => new Date(b.data.date) - new Date(a.data.date)
   );

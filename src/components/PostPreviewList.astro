@@ -1,9 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { BlogPost } from "$/lib/blog";
 import PostPreview from "./PostPreview.astro";
 
 interface Props {
-  posts: CollectionEntry<"blog">[];
+  posts: BlogPost[];
   heading?: string;
   mode?: "row" | "col" | "signal";
 }
