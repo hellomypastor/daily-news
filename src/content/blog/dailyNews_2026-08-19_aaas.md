@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T16:10:37+08:00"
+updatedAt: "2026-08-19T19:12:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Building Shared Memory for AI Agents in Notion"
 featuredUrl: "https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"
@@ -26,6 +26,7 @@ tags:
   - "Agent OS"
   - "Agent Platform"
   - "Agent Runtime"
+  - "Agent Sandbox"
   - "Agent SDK"
   - "Agentforce"
   - "AgentKit"
@@ -42,6 +43,7 @@ tags:
   - "BYOA"
   - "ByteDance"
   - "ChatGPT Business"
+  - "Checkpoint"
   - "China Telecom Cloud"
   - "Claude"
   - "Claude Code"
@@ -66,6 +68,7 @@ tags:
   - "CrewAI"
   - "CubeSandbox"
   - "Cursor"
+  - "Data Lifecycle"
   - "Date Unconfirmed"
   - "Date Unverified"
   - "Deep Agents"
@@ -73,6 +76,7 @@ tags:
   - "DeepSeek Harness"
   - "Development Signal"
   - "Discovery"
+  - "Discovery Signal"
   - "Docker"
   - "Durable Job"
   - "Durable Workflow"
@@ -102,7 +106,10 @@ tags:
   - "Managed Agent"
   - "Marketplace"
   - "MCP"
+  - "Memory"
   - "Microsoft Agent Framework"
+  - "Migration"
+  - "Multi-tenant"
   - "Networking"
   - "Notion"
   - "OAuth"
@@ -166,6 +173,7 @@ tags:
   - "Vercel"
   - "Vercel AI SDK"
   - "Video"
+  - "VikingDB"
   - "Voice AI"
   - "Volcengine"
   - "Watchlist"
@@ -176,9 +184,9 @@ tags:
 
 ## 今日概览
 
-主窗口：2026-08-18 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 16:10:37 至 2026-08-18 16:10:37。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
+主窗口：2026-08-18 19:12 至 2026-08-19 19:12（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 19:12 至 2026-08-18 19:12。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
 
-主窗口内最明确的正式 AaaS 更新仍包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。10:12 后新增的 Codex 跨线程审批隔离、按名称排队到最近会话与 Bedrock 凭据刷新，以及 Microsoft 工作流恢复/会话历史修复，都只是主分支工程信号；字节 OpenViking/Coze Loop 的异步任务与评测可观测更新同样未证明 AgentKit 云端 rollout。OpenSandbox Helm Chart 0.2.2 已升级为正式 PaaS release，CubeSandbox 增量仍归入沙箱 PaaS 邻近信号；Claude、Codex 相关分别详见对应专题页。
+主窗口内最明确的正式 AaaS 更新仍包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。16:10 后没有新的正式托管服务 GA；新增证据主要是 Microsoft Agent Hooks 的 fail-closed 控制契约、Codex 异步消息去特性门、OpenAI Agents SDK checkpoint 用量隔离、OpenHands 会话成本指标恢复，以及字节 veADK/OpenViking 和腾讯 CubeSandbox 的记忆、账户、URI、沙箱生命周期开发信号。Codex 0.149.0-alpha.2 仍是无功能说明的预发布；Knownbase 作为日期未确认的托管 MCP 记忆服务保留，AeonBox 则严格归为自托管沙箱/PaaS 邻近候选。Claude、Codex 相关分别详见对应专题页。
 
 ## 重点动态
 
@@ -352,6 +360,33 @@ tags:
   <figcaption><a href="https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion">图片来源：Notion</a></figcaption>
 </figure>
 
+## 19:12 滚动补充
+
+### 远程 / 云端 Agent 执行与海外厂商
+
+- **Microsoft Agent Hooks 治理契约。** [.NET 主分支 commit](https://github.com/microsoft/agent-framework/commit/10bf8d7d9ef56304cb6936452e64c90c99850f6c)于 18:48 加入实验性 `Microsoft.Agents.AI.AgentHooks`，覆盖输入/输出、模型调用、工具调用和 Agent 启停八个拦截点，并把 streaming、host-owned session 与持久化写入纳入 fail-closed / verdict-before-durability 约束。它尚未进入新 release，但直接关联受管 Agent 的治理边界。
+- **Codex 异步用户消息从本地特性门转为模型能力控制。** [主分支 commit](https://github.com/openai/codex/commit/f5a3dc55404ddc066a4e4a65602fee166ecc46b3)于 17:01 移除 `send_user_message_async` 的本地 feature gate，只要所选模型声明支持且是根 Agent 就暴露工具；这是长任务不中断 turn 的用户可见进度通道开发信号，尚未证明 Codex cloud rollout，**详见 OpenAI 专题页**。[0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2)于 17:07 发布但没有功能说明，仅列邻近预发布信号。
+- **OpenAI Agents SDK checkpoint 与非流式结果边界。** [RunState 用量隔离](https://github.com/openai/openai-agents-python/commit/fb8fa1ba5c23f7ec61ca20c735999cf81e829a8e)深拷贝 independently resumable checkpoint 的 Usage，避免一个恢复分支的 token 写入其他 checkpoint；[terminal failed/incomplete response 拒绝](https://github.com/openai/openai-agents-python/commit/0486792662bd44791dfa5838425c54c52e971d08)收紧非流式 `get_response` 完成边界。两项均是 16:40–16:50 主分支修复、尚未发布，**详见 OpenAI 专题页**。
+- **OpenHands 云后端成本指标。** [主分支 commit](https://github.com/OpenHands/OpenHands/commit/38656283758344cead6497d225599740adfe40a0)于 18:36 在 conversation list/search 没有直接 metrics 时合并 `stats.usage_to_metrics`，保留 Agent 与 condenser 的成本、token 和预算快照；这是云后端可观测性修复，尚未进入新 release。
+
+### 中国厂商：字节与腾讯开发信号
+
+| 厂商 | 动态 | 时间 / 状态 | AaaS 含义 |
+|---|---|---|---|
+| 字节 / veADK | [Studio 结构化迁移活动](https://github.com/volcengine/veadk-python/commit/8a4ec66121642c858eae4dcbeffb2c6cf961702b) | 16:28；主分支 | 把 Codex migration activity 分块呈现并限制深度/数量、脱敏凭据；Codex 详见 OpenAI 专题页，未证明 AgentKit 云端 rollout。 |
+| 字节 / veADK | [沙箱 display metadata 字节上限](https://github.com/volcengine/veadk-python/commit/7a22ac0a0f06286a3c0e88c5d3bd5dab95c9256e) | 16:40；主分支 | 以 UTF-8 安全截断适配 VeFaaS metadata，属于沙箱会话兼容修复。 |
+| 字节 / veADK | [VikingDB 记忆库选择器](https://github.com/volcengine/veadk-python/commit/237510e53ab31edd8d6b71eaff3276038d3fa851) | 19:07；主分支 | Studio 可选择 VikingDB memory collection 并修复空索引草稿，尚无正式 release/AgentKit rollout。 |
+| 字节 / OpenViking | [删除账户实际清理 AGFS 数据](https://github.com/volcengine/OpenViking/commit/31bfdc1ad0c8a18e2584db9b5999a5cabffa6805) | 17:19；主分支 | 修复 metadata 删除但磁盘数据残留的生命周期缺口，属于记忆/文件 PaaS 数据治理。 |
+| 字节 / OpenViking | [入口 URI 规范化与用户归属](https://github.com/volcengine/OpenViking/commit/81eba498b4fd9df6b9cd658fb7cfbf7887bb442b) | 19:02；主分支 | API/MCP 入口补全并校验用户 URI，内部只传规范 URI；属于多租户记忆边界，未证明云端发布。 |
+| 腾讯 / CubeSandbox | [registry heartbeat 使用稳定 StatefulSet DNS](https://github.com/TencentCloud/CubeSandbox/commit/1d9967146a6328009f7a031ddee8c840bd0625e2) | 17:03；主分支 | Redis Pod 重启后重新解析，避免 proxy heartbeat 停止导致 auto_resume 不下发；严格归 PaaS 邻近信号。 |
+| 腾讯 / CubeSandbox | [localcache 数据竞争修复](https://github.com/TencentCloud/CubeSandbox/commit/4eb6232198cc183c682c59ad753db2106518254e) | 17:42；主分支 | 通过 immutable published entry、atomic 与 sync.Once 修复生产缓存并发风险；不是 ADP 托管层发布。 |
+
+### 日期未确认与邻近信号观察池
+
+- **Knownbase 托管 Agent 记忆。** [产品页](https://knownbase.dev/)提供带 OAuth/API key 的托管 MCP endpoint、workspace/project 隔离、版本化 notes、免费与付费计划，支持 Claude Code、Codex、Cursor 与 ChatGPT 跨会话共享记忆；页面未标发布日期。[HN 发现帖](https://news.ycombinator.com/item?id=49359680)于 18:43 出现且只有 1 分、0 评论，因此仅确认发现时间，不把采用规模写成事实。
+- **AeonBox 确定性沙箱。** [原始文章](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/)描述用 liquid types、线性 session 与受限 GitHub SDK 阻止从私有仓读取后向公开端写出的行为路径；[HN 发现帖](https://news.ycombinator.com/item?id=49359459)于 18:19 出现且只有 1 分、0 评论。它是研究原型/自托管 agent harness，不是 AaaS 服务，归 PaaS/安全邻近信号。
+- HN 还出现 Orvena 本地 iPhone 4B agent harness 与 Cairn 自托管 PM agent；前者产品页返回 403，后者明确自托管且不提供受管执行，故记录在扫描候选而不提升为 AaaS 动态。
+
 ## 来源链接
 
 1. [Microsoft Agent Framework .NET 1.18.0](https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0)
@@ -468,13 +503,31 @@ tags:
 112. [OpenSandbox HTTP request metrics via OTLP](https://github.com/opensandbox-group/OpenSandbox/commit/426300f86a9437fc5a3302f89956dc477595997e)
 113. [OpenSandbox chart 0.2.2 controller socket fix](https://github.com/opensandbox-group/OpenSandbox/commit/8f01e935c2cabba778cf37a152033fae062fa0f4)
 114. [Reject non-finite OpenSandbox CPU limits](https://github.com/opensandbox-group/OpenSandbox/pull/1568)
+115. [Remove the feature gate for async user messages](https://github.com/openai/codex/commit/f5a3dc55404ddc066a4e4a65602fee166ecc46b3)（详见 OpenAI 专题页）
+116. [Isolate usage between RunState checkpoints](https://github.com/openai/openai-agents-python/commit/fb8fa1ba5c23f7ec61ca20c735999cf81e829a8e)（详见 OpenAI 专题页）
+117. [Reject terminal failed/incomplete responses](https://github.com/openai/openai-agents-python/commit/0486792662bd44791dfa5838425c54c52e971d08)（详见 OpenAI 专题页）
+118. [.NET Agent Hooks interception contract](https://github.com/microsoft/agent-framework/commit/10bf8d7d9ef56304cb6936452e64c90c99850f6c)
+119. [OpenHands conversation usage metrics fallback](https://github.com/OpenHands/OpenHands/commit/38656283758344cead6497d225599740adfe40a0)
+120. [veADK sandbox display metadata byte bound](https://github.com/volcengine/veadk-python/commit/7a22ac0a0f06286a3c0e88c5d3bd5dab95c9256e)
+121. [veADK structured migration activity](https://github.com/volcengine/veadk-python/commit/8a4ec66121642c858eae4dcbeffb2c6cf961702b)
+122. [veADK VikingDB memory collection picker](https://github.com/volcengine/veadk-python/commit/237510e53ab31edd8d6b71eaff3276038d3fa851)
+123. [OpenViking normalize URI ownership](https://github.com/volcengine/OpenViking/commit/81eba498b4fd9df6b9cd658fb7cfbf7887bb442b)
+124. [OpenViking delete-account AGFS cleanup](https://github.com/volcengine/OpenViking/commit/31bfdc1ad0c8a18e2584db9b5999a5cabffa6805)
+125. [CubeSandbox localcache race fix](https://github.com/TencentCloud/CubeSandbox/commit/4eb6232198cc183c682c59ad753db2106518254e)
+126. [CubeSandbox stable registry heartbeat DNS](https://github.com/TencentCloud/CubeSandbox/commit/1d9967146a6328009f7a031ddee8c840bd0625e2)
+127. [Codex 0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2)（详见 OpenAI 专题页）
+128. [Knownbase](https://knownbase.dev/)
+129. [Knownbase HN 发现帖](https://news.ycombinator.com/item?id=49359680)
+130. [AeonBox 原始文章](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/)
+131. [AeonBox HN 发现帖](https://news.ycombinator.com/item?id=49359459)
 
 ## 采集状态
 
-- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并补查 GitHub Releases/commits、HN Algolia、可访问 Reddit，以及 10:12–13:12 的官方 commits/releases API 增量与海外/中国厂商官方网页入口，复核主 24 小时与 24–72 小时观察窗口。
+- 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并复核主 24 小时与 24–72 小时观察窗口。
 - 16:10 补查：GitHub commits/releases API 与 releases.atom 覆盖 OpenAI Agents SDK、Google ADK、Vercel AI SDK、CrewAI、veADK、OpenViking、CubeSandbox、OpenSandbox；另查 HN、Notion、Salesforce、OpenAI Help Center 与中外托管 Agent 官网。
-- 失败来源：Replit Blog RSS 404；LangChain changelog feed 403，改查 GitHub Releases；Sourcegraph/Amp 与部分猜测的公开 releases API 路径 404，改查可用官方入口；X 未登录无法稳定读取完整时间线；WorkToper 直连 403；serverlessagent.dev、context-engine.app、premissai.com 仍受本地网络策略限制；部分中国厂商静态页和本轮部分官方博客/产品页没有可核实更新时间；Octomind 页面只有日期没有时刻；GitHub 网页搜索增量索引滞后，本轮改用官方 API 并成功读取批量增量。
-- 累计候选审阅记录：324 条（16:10 本轮新增 50 条原始记录：39 个官方仓库 commit、1 个正式 release、7 个 HN 条目、2 个额外官方页面与 1 个截止后活动候选；口径包含重复与未采纳候选）；保留：133 个唯一来源、115 条动态；新增项按 AaaS 开发、日期未确认与 MaaS/PaaS 邻近信号分层。
+- 19:12 补查：GitHub REST 未认证额度耗尽后改用官方 commits.atom、releases.atom 与 commit patch，核到 31 条区间 commit 记录、2 条 release feed 记录；HN Algolia 对 Agent/AI/sandbox/Codex 等关键词去重 30 条；另查 Knownbase、AeonBox、Orvena、Cairn、Qoder、AWS AgentCore、Replit、Lindy 与中外厂商官方入口。
+- 失败来源：Replit Blog RSS 404；LangChain changelog feed 403；X 未登录无法稳定读取；WorkToper 403；serverlessagent.dev、context-engine.app、premissai.com 受本地网络策略限制；部分中国厂商静态页无可核更新时间；Orvena 产品页 403；GitHub REST API 额度耗尽但 Atom feed 与原始 commit patch 可访问。
+- 累计候选审阅记录：387 条（本轮新增 63 条明确记录：31 commits、2 release feed、30 HN 去重投稿；口径包含重复、低相关与未采纳候选）；保留：150 个唯一来源、130 条动态；新增项按主分支开发、日期未确认与 MaaS/PaaS 邻近信号分层。
 - 二次补搜：未运行（主窗口已有正式 AaaS release 且最终 sources 非 0，secondPass=false）。
 
-今日扫描完成，共 115 条动态，重点：OpenSandbox 0.2.2 已形成正式 PaaS release；16:10 增量还包括 Agents SDK replay 脱敏、Google ADK 编排/认证修复、字节 Studio 与 OpenViking 开发信号，CubeSandbox 仍严格归入 PaaS 邻近池。
+今日扫描完成，共 130 条动态，重点：Microsoft Agent Hooks 将 fail-closed 与 verdict-before-durability 下沉到 host-owned session；Codex/Agents SDK 改善异步进度与 checkpoint 用量边界；字节记忆/账户治理和腾讯沙箱修复仍是未发布开发信号，Knownbase 日期未确认，AeonBox 严格归邻近 PaaS。

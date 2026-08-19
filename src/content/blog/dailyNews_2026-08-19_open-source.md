@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T16:10:37+08:00"
+updatedAt: "2026-08-19T19:12:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Building Shared Memory for AI Agents in Notion"
 featuredUrl: "https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"
@@ -59,10 +59,12 @@ tags:
   - "Hacker News"
   - "Harness"
   - "HN"
+  - "Human in the Loop"
   - "Inference"
   - "Interpretability"
   - "Jobs"
   - "Kernel"
+  - "Knowledge Graph"
   - "Learning"
   - "LLM"
   - "LLM Judge"
@@ -80,11 +82,13 @@ tags:
   - "Open Source"
   - "Post-training"
   - "Privacy"
+  - "Product Management"
   - "Python"
   - "Quantization"
   - "Qwen"
   - "R"
   - "RAG"
+  - "Reasoning"
   - "Remote"
   - "Repository"
   - "Research"
@@ -94,12 +98,14 @@ tags:
   - "Robotics"
   - "Rust"
   - "Safety"
+  - "Sandbox"
   - "Scheduling"
   - "Security"
   - "Self Evolving"
   - "Session"
   - "Skills"
   - "Speculative Decoding"
+  - "State"
   - "Statistics"
   - "Training"
   - "Trending"
@@ -111,14 +117,16 @@ tags:
   - "vLLM"
   - "Voice"
   - "Watchlist"
+  - "Web"
   - "WebGPU"
+  - "Windows"
   - "Workspace"
   - "Zig"
 ---
 
 ## 概览
 
-高亮窗口为 2026-08-17 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 16:10:37 至 2026-08-19 16:10:37。本轮在当天已有扫描上继续补查 HN 10:12–13:12 新增 79 条、GitHub 三类 Trending 共 40 行、五组 GitHub 新仓库检索去重 45 个、arXiv 最近条目 100 条，并复核 Hugging Face、Simon Willison 与原始工程页面；与当天已有集合合并后保留 104 个唯一来源 URL。新增可核实信号包括四个截止前新建的 Agent/推理工程仓库、五篇窗口内 Agent/LLM 论文，以及四个新进入 GitHub 日榜的相关项目；A2A 加入 AAIF 的原文只标注日期未给出时分，且略邻近 48 小时边界，放入观察池。仓库创建时间、论文提交时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
+高亮窗口为 2026-08-17 19:12 至 2026-08-19 19:12（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 19:12 至 2026-08-19 19:12。本轮在当天已有扫描上补查 HN 16:10–19:12 增量 102 条、GitHub 三类 Trending 共 40 行、五组新仓库检索前 10 去重 49 个、Hugging Face Daily Papers 100 条，并复核 Hugging Face Blog、Simon Willison 与原始工程页面；与当天已有集合合并后保留 157 个唯一来源 URL。新增已核实信号包括四个窗口内创建的 Agent 工程仓库和一篇窗口内论文；四个较旧项目因最近 24 小时 HN 讨论而单列回流，六个发布日期或原文受限候选进入“日期未确认”。仓库创建时间、论文提交时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
 
 ## 已核实高亮
 
@@ -269,15 +277,40 @@ tags:
 - [checkpoint-run](https://github.com/agenticaotearoa/checkpoint-run)提供 checkpoint/resume、checksum、timeout、retry 与分步日志，只属 Agent/LLM 邻近开发工具；[HN](https://news.ycombinator.com/item?id=49357518)于 14:12 出现。
 - [veyra](https://github.com/iondodon/veyra)描述版本化 self-evolving local Agent 与 supervisor 回滚；仓库没有 LICENSE，不写成已确认开源许可证项目。[HN](https://news.ycombinator.com/item?id=49358474)于 16:02 出现。
 
+## 19:12 滚动补充
+
+### 已验证高亮
+
+| 项目 | 日期 / 状态 | 技术要点 |
+|---|---|---|
+| [LansCoder](https://github.com/Lanstzz/LansCoder) | 创建于 2026-08-19 18:17 +08:00；MIT | 约 3 万行 Python 的本地 coding-agent harness，公开工具、权限、会话、上下文压缩、MCP 与后台 subagent 模块；96.38% pass@1 为作者在 Harbor Aider Polyglot 上的结果，未作独立复现。 |
+| [WorldLedger](https://github.com/Asymptote14/Worldledger) | 创建于 2026-08-19 16:49 +08:00；MIT | 让 LLM 提议文字世界事件，再由确定性账本校验时间、引用、前置条件、角色知识与实体状态；README 明确定位为研究型 v0 原型。 |
+| [LocalBridge](https://github.com/zephyr7030/LocalBridge) | 创建于 2026-08-19 16:16 +08:00；MIT | Windows 本地 MCP 桥接器把普通用户工具限制在活动工作区，并把管理员操作拆到显式 UAC/Broker 路径；项目也明确普通子进程不等于额外 OS 级沙箱。 |
+| [SilverPilot](https://github.com/LeiQingliang/silverpilot) | 创建于 2026-08-19 17:53 +08:00；Apache-2.0 | 养老服务演示 Agent 把模型规划与后端事实/权限分离，五类写操作先生成待确认动作；测试、评测和扫描数字均是仓库保存的时间点证据，项目明确未在机构生产部署。 |
+| [Quipu](https://arxiv.org/abs/2608.16813) | arXiv v1：2026-08-18 01:04 +08:00 | 面向 Agent 写入知识图谱的嵌入式 bitemporal store，以 gate、authority/trust lattice 与可查询审计约束写入；512 项等数字为论文作者实验。其 [HN 讨论](https://news.ycombinator.com/item?id=49359849) 于 19:02 出现，快照 2 points / 0 comments。 |
+
+### 旧项目再浮现
+
+- [Cairn](https://github.com/cairnpm/cairn) 是把反馈去重、归纳并整理为 Shape Up roadmap 的自托管 PM Agent，仓库创建于 2026-07-01；许可证为 FSL-1.1-ALv2、限制竞争性用途，因此不写成 OSI 开源。[HN](https://news.ycombinator.com/item?id=49359513) 于 2026-08-19 18:24 +08:00 回流，快照 1 point / 0 comments。
+- [SIL](https://github.com/ais-space/sil) 为 Web 应用定义供 Agent 使用的结构化语义接口；规范采用 CC BY 4.0，配套代码采用 Apache-2.0，仓库创建于 2026-08-09。[HN](https://news.ycombinator.com/item?id=49359448) 于 18:17 回流，快照 1 point / 1 comment。
+- [Rune](https://github.com/thecolourfoundation/rune) 持续维护代码库理解图并通过 MCP 返回带文件/行号证据的结果，仓库创建于 2026-07-29、MIT；[HN](https://news.ycombinator.com/item?id=49359128) 于 17:32 回流，快照 2 points / 0 comments，效果主张待独立验证。
+- [pr-sage](https://github.com/Kyeom1997/pr-sage) 是支持增量审查、finding lifecycle 与本地 diff review 的 GitHub Action，仓库创建于 2026-07-21、MIT；[HN](https://news.ycombinator.com/item?id=49358609) 于 16:20 回流，快照 1 point / 0 comments，标题中的比例属于作者主张。
+
+### 日期未确认
+
+- [AI reverse-engineered my printer](https://www.panaxeo.com/blog/ai-reverse-engineered-my-printer-i-just-pressed-the-buttons) 原页可打开，但未暴露可核实的首发时间，因此不列为窗口内发布；[HN](https://news.ycombinator.com/item?id=49359452) 于 2026-08-19 18:17 +08:00 出现，快照 2 points / 0 comments。
+- [AeonBox: Logical Guardrails for Agents](https://wiki.alcidesfonseca.com/blog/aeonbox-logical-guardrails-for-agents/) 讨论以 liquid types 表达 Agent 行为权限与 sandbox 约束；页面显示的日期元数据异常，不能作为首发证据。[HN](https://news.ycombinator.com/item?id=49359459) 于 18:19 出现，快照 1 point / 0 comments。
+- [The Equations of Reasoning](https://pathway.com/research/the-equations-of-reasoning) 页面以 attention、memory 与 reasoning 的局部规律为主题并链接既有论文，但未暴露可靠页面发布日期；[HN](https://news.ycombinator.com/item?id=49358735) 于 16:37 出现，快照 2 points / 0 comments。
+- [Common Mistakes I Have Seen That AI-Generated Apps Keep Making](https://daniel.reguero.dev/blogs/ten-common-security-mistakes-ai-generated-apps-make) 本轮返回 404，无法核实正文、日期与安全建议；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359856) 的 19:03 发现证据，快照 1 point / 0 comments。
+- [Orvena](https://orvena.app/) 本轮返回 403，无法核实所谓 4B 模型 agentic harness 的实现、许可证与发布时间；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359341) 的 18:03 发现证据，快照 3 points / 0 comments。
+- [Pander Score](https://sophronresearch.org/pander/) 本轮返回 403，无法核实评测集、方法与发布日期；仅保留 [HN 提交](https://news.ycombinator.com/item?id=49359125) 的 17:32 发现证据，快照 2 points / 0 comments。
+
 ## 来源链接
 
 原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、[DFlash 2 工程原文](https://inco.ai/blog/dflash2/)、[SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/)、[Volta 的 OOPSLA 页面](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest/Algolia 最近 24 小时，本轮 10:12–13:12 共核 79 条新增；GitHub Trending 全站、Python、TypeScript 共 40 行；GitHub Search 五组截止前新建仓库去重 45 个；arXiv 48 小时查询前 100 条；Hugging Face Daily Papers 20 条、Blog 窗口内 3 条与 Simon Willison feed 窗口内 3 条；并打开 AAIF、论文、GitHub README 与 HN 原帖核验。
-- 16:10 补查：HN 增量 117 条、Trending 41 行、GitHub Search 去重 47 个、arXiv 48 小时 468 条并复核前 300、Hugging Face Daily Papers 100 条与 Blog/Simon Willison 增量。
-- 16:10 补查：HN 增量 117 条、Trending 41 行、GitHub Search 去重 47 个、arXiv 48 小时 468 条并复核前 300、Hugging Face Daily Papers 100 条与 Blog/Simon Willison 增量。
-- 16:10 补查：HN 增量 117 条、Trending 41 行、GitHub Search 去重 47 个、arXiv 48 小时 468 条并复核前 300、Hugging Face Daily Papers 100 条与 Blog/Simon Willison 增量。
-- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；Lalit 的 code-comments fingerprint 原文返回 403，仅核到 HN 标题，证据不足未收入 sources；当天前序扫描中的 Nick Busey、The Shapes of Agent Memory、Grader Labs CUA、Goat Squad Studios 与 exe.dev 原文仍不可访问。日期或原文受限候选继续按证据状态分栏。
-- 当日各轮粗筛候选累计 2,183（16:10 本轮新增审阅 611 条原始记录）；累积保留 131 个唯一来源 URL；本轮有可靠来源增量，未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组检索，本轮 16:10–19:12 增量 102 条、七组原始命中 652 条；GitHub Trending 全站/Python/TypeScript 共 40 行；GitHub Search 五组前 10 去重 49 个；Hugging Face Daily Papers 100 条、Blog 3 条与 Simon Willison feed 3 条；并打开 arXiv、GitHub README/许可证、独立工程原文与 HN 原帖核验。
+- 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；arXiv submittedDate API 返回 429，改用 HF Daily Papers 并逐页打开候选 arXiv；Common Mistakes 原文返回 404，Orvena 与 Pander Score 返回 403，均只按 HN 发现证据列入日期未确认。当天前序扫描中的 Nick Busey、The Shapes of Agent Memory、Grader Labs CUA、Goat Squad Studios 与 exe.dev 原文仍不可访问。
+- 当日各轮粗筛候选累计 2,474（19:12 本轮复核 291 条原始记录）；累积保留 157 个唯一来源 URL；本轮有可靠来源增量，未触发二次补搜（secondPass=false）。

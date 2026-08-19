@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T16:10:37+08:00"
+updatedAt: "2026-08-19T19:12:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -15,9 +15,11 @@ tags:
   - "Agent"
   - "Agent Framework"
   - "Agent SDK"
+  - "Agents SDK"
   - "AI"
   - "Anthropic"
   - "Approvals"
+  - "Async"
   - "Authentication"
   - "AWS Bedrock"
   - "Billing"
@@ -30,6 +32,7 @@ tags:
   - "Code Review"
   - "Codex"
   - "Coding Agent"
+  - "Cohere"
   - "Community"
   - "Copilot"
   - "Cowork"
@@ -43,16 +46,20 @@ tags:
   - "Education"
   - "Evaluation"
   - "Extensions"
+  - "Fail Closed"
   - "Foxglove"
   - "Gemini"
   - "Generation"
   - "GitHub Action"
   - "Google"
   - "Governance"
+  - "Graph"
   - "Guardian"
+  - "Handoff"
   - "Hooks"
   - "Hugging Face"
   - "Industry"
+  - "Instructions"
   - "Integration"
   - "LangChain"
   - "Linear"
@@ -65,6 +72,8 @@ tags:
   - "Microsoft"
   - "Middleware"
   - "Model"
+  - "Models"
+  - "Multi-agent"
   - "Multi-Agent"
   - "OAuth"
   - "Observability"
@@ -74,6 +83,7 @@ tags:
   - "Pagination"
   - "Performance"
   - "Permissions"
+  - "Plugin"
   - "Policy"
   - "PowerShell"
   - "Prerelease"
@@ -88,14 +98,17 @@ tags:
   - "Release"
   - "Reliability"
   - "Research"
+  - "Responses"
   - "Resume"
   - "Retrieval"
   - "Review"
   - "Robotics"
   - "Routing"
+  - "RunState"
   - "Safety"
   - "Sandbox"
   - "Schema"
+  - "SDK"
   - "Security"
   - "Sessions"
   - "Skills"
@@ -104,6 +117,8 @@ tags:
   - "Tools"
   - "Training"
   - "Transformers"
+  - "Usage"
+  - "Validation"
   - "Vision"
   - "VLM"
   - "Web Shell"
@@ -114,7 +129,7 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-18 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai）；近两日为 2026-08-17 16:10:37 至 2026-08-18 16:10:37，近三日为 2026-08-16 16:10:37 至 2026-08-17 16:10:37。本轮继续保留当天全部既有来源，并新增 Qwen Code 0.21.14 稳定版；其后主分支又推进 Web Shell 审批交互、后台 Agent 状态、会话活动游标和流式渲染。OpenAI Codex 新增 Bedrock 过期凭据刷新、旧版 Bubblewrap FD mount 兼容、线程级审批隔离与重名会话排队修复；Microsoft Agent Framework 修复 Python 历史记录超线性增长和 AG-UI JSON 恢复载荷类型转换。上述提交均标为主分支信号，不自动归入既有正式版本。
+主窗口：2026-08-18 19:12:00 至 2026-08-19 19:12:00（Asia/Shanghai）；近两日为 2026-08-17 19:12:00 至 2026-08-18 19:12:00，近三日为 2026-08-16 19:12:00 至 2026-08-17 19:12:00。本轮继续保留当天全部既有来源，并确认 Cohere Python 7.0.9、Transformers 5.15.1、Codex 0.149.0-alpha.2、Claude Agent SDK/Code Action、腾讯 BrowserSkill 插件等版本增量；Microsoft Agent Framework、Qwen Code、OpenAI Codex/Agents SDK 与 Transformers 另有可核验主分支工程信号。所有 OpenAI/Anthropic 条目均按专题分流注明，主分支提交不自动归入正式版本。
 
 ## 优先动态
 
@@ -172,13 +187,14 @@ tags:
 | Anthropic | [Claude Code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234) | 官方 GitHub 发布 | 2026-08-18 04:20 +08:00，已核实 | 覆盖 GitLab MR、用量重置续跑、Remote Control、安全与可靠性修复。详见 Claude 专题页。 | Claude 编码主工具获得正式更新。 |
 | Anthropic | [Agent SDK TypeScript v0.3.234](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.234) | 官方 GitHub 发布 | 2026-08-18 04:21 +08:00，已核实 | 同步 VCS、权限来源、effort 初始化与类型修正。详见 Claude 专题页。 | Agent 集成接口获得版本化更新。 |
 | Anthropic | [Claude Code Action v1.0.194](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.194) | 官方 GitHub 发布 | 2026-08-18 04:25 +08:00，已核实 | 加强路径与附件限制，修补依赖漏洞并改进 PR 上下文。详见 Claude 专题页。 | CI/评审 Agent 的安全边界和上下文处理同步更新。 |
-| OpenAI | [The Defender's Window](https://openai.com/index/the-defenders-window) | 官方安全文章 | 2026-08-17 13:30 +08:00，已核实 | OpenAI 说明其对 AI 网络安全攻防变化与防护实践的判断。详见 OpenAI 专题页。 | 提供厂商对 Agent 化安全能力和防御窗口的正式立场。 |
 | Anthropic | [claude-academy-guide Skill](https://github.com/anthropics/skills/commit/89dcaa3a283f79ed84fd8fe53e2208b9442a6427) | 官方仓库提交 | 2026-08-17 21:03 +08:00，已核实 | 新增按需读取 Claude Academy 实时目录的课程推荐 Skill。详见 Claude 专题页。 | 是官方 Skill 增量，但已不在主窗口。 |
 | OpenAI | [Codex 0.148.0-alpha.21](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21) | 官方 GitHub 预发布 | 2026-08-18 03:27 +08:00，已核实 | 发布页无变更说明，不推断具体功能。详见 OpenAI 专题页。 | 可确认版本存在，功能判断仍应等待 changelog 或稳定版。 |
 
 ## 近三日补充（48–72 小时）
 
-本轮未新增可同时核实原文、日期且足够相关的 48–72 小时条目。
+| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| OpenAI | [The Defender's Window](https://openai.com/index/the-defenders-window) | 官方安全文章 | 2026-08-17 13:30 +08:00，已核实 | OpenAI 说明其对 AI 网络安全攻防变化与防护实践的判断。详见 OpenAI 专题页。 | 提供厂商对 Agent 化安全能力和防御窗口的正式立场。 |
 
 ## 日期未确认
 
@@ -215,43 +231,75 @@ tags:
 | Google | [ParallelAgent 支持 sub-agent escalation event](https://github.com/google/adk-python/commit/0fd681e7d203d2bc7b86c72e4b539de6c735c889) | 14:52；主分支 | 允许并行子 Agent 升级事件进入恢复路径，是编排协议开发信号。 |
 | Hugging Face | [Whisper 长音频左填充 position IDs 修复](https://github.com/huggingface/transformers/commit/e12c79c582bc742029e5f12b538ec71391ace8b3) | 15:10；主分支 | 修复 left-padded batch 长音频生成中每项位置偏移被统一 past length 覆盖的问题；尚待稳定 release。 |
 
+## 19:12 滚动补充
+
+本轮新确认 6 个版本发布与 12 个官方主分支工程信号；版本页只提供 tag/时间而无 changelog 时，不外推功能。
+
+| 厂商 | 动态 | 日期 / 状态 | 摘要与意义 |
+|---|---|---|---|
+| Cohere | [Cohere Python 7.0.9](https://github.com/cohere-ai/cohere-python/releases/tag/7.0.9) | 18:59；正式发布 | 关闭流式 dataset 响应，并在 API key 为空时省略 Authorization header，改善连接清理与无密钥场景兼容。 |
+| Hugging Face | [Transformers 5.15.1](https://github.com/huggingface/transformers/releases/tag/v5.15.1) | 18:50；正式发布 | 修复 DFlash/device_map、CandidateGenerator logits、MTP 配置、CUDA 插值和 Gemma4 视频设备等问题。 |
+| OpenAI | [Codex 0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2) | 17:07；官方预发布 | 发布页确认版本与时间但未给 changelog，不把同期提交归因到该版本；详见 OpenAI 专题页。 |
+| Anthropic | [Agent SDK TypeScript 0.3.235](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235) 与 [Claude Code Action 1.0.195](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195) | 04:39–04:40；正式发布 | SDK 页说明同步 Claude Code 2.1.235；Action 页只确认版本与时间。详见 Claude 专题页。 |
+| 腾讯 | [BrowserSkill dsh-plugin 0.1.1](https://github.com/Tencent/BrowserSkill/releases/tag/dsh-plugin-v0.1.1) | 12:03；正式发布 | 官方页确认 dsh plugin 0.1.1，未提供更细变更说明，不外推能力范围。 |
+| Microsoft | Agent Framework interception 与状态保真 | 17:57–18:48；主分支，非正式发布 | [agent-hooks interception contract](https://github.com/microsoft/agent-framework/commit/10bf8d7d9ef56304cb6936452e64c90c99850f6c)引入 fail-closed、流式缓冲与 verdict-before-durability 边界；另修复[合并 chat options 时保留结构化 instructions](https://github.com/microsoft/agent-framework/commit/8be7c930632b981e01eb26412959f7e7fe62e5f4)及 [HandoffBuilder clone 保留 additional_properties](https://github.com/microsoft/agent-framework/commit/ec407cf56f1069421e978d0f0ff303184a15d6f)。 |
+| Qwen | Qwen Code 上游失败、扩展安装与评审边界 | 16:15–18:34；主分支，非正式发布 | [拒绝上游 fail-fast 占位响应](https://github.com/QwenLM/qwen-code/commit/bb45a09c0674cc68caecaad836d1ab597dbab7dd)、[Git 扩展安装使用认证 HTTPS](https://github.com/QwenLM/qwen-code/commit/e4f5504e9fc74d8794067bda43d9e0ba7261225d)、[限制 PR review 发帖量](https://github.com/QwenLM/qwen-code/commit/e352037078006ef04f0072423eadd2105f7b601d)，并[拒绝命名 teammate 使用 run_in_background:false](https://github.com/QwenLM/qwen-code/commit/6d06b2d11d95e8e77f79d12908d02e2f26d67eb)。 |
+| OpenAI | Codex 与 Agents SDK 运行边界 | 16:40–17:01；主分支，非正式发布 | Codex [移除异步用户消息旧 feature gate](https://github.com/openai/codex/commit/f5a3dc55404ddc066a4e4a65602fee166ecc46b3)并改按模型能力判定；Agents SDK 分别[隔离 RunState checkpoint usage](https://github.com/openai/openai-agents-python/commit/fb8fa1ba5c23f7ec61ca20c735999cf81e829a8e)、[扩展 agent graph handoff targets](https://github.com/openai/openai-agents-python/commit/9432f7ed30b9554ab5eaa84a4c0977059f96d5f0)和[拒绝失败/未完成终态响应](https://github.com/openai/openai-agents-python/commit/0486792662bd44791dfa5838425c54c52e971d08)。详见 OpenAI 专题页。 |
+| Hugging Face | [Qwen Omni generation 兼容 compilable cache](https://github.com/huggingface/transformers/commit/279dbcf4d66051c6e184d8d6960e96294d830f11) | 18:56；主分支，非正式发布 | 修复 Qwen2.5-Omni 与 Qwen3-Omni-MoE generation 在 compilable cache 路径的兼容问题，尚待后续 release 承载。 |
+
 ## 来源链接
 
 - [Sam Altman：暂停部分 frontier RL 训练](https://x.com/sama/status/2089787807611195475)
 - [Foxglove goes agentic](https://foxglove.dev/blog/foxglove-goes-agentic)
-- [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)
-- [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)
+- [Codex 0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)（详见 OpenAI 专题页）
+- [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)（详见 Claude 专题页）
 - [Agent Framework MiddlewareFailure](https://github.com/microsoft/agent-framework/commit/58da0cc2534b0e5350bd1a83d75f363a08c3103d)
 - [Microsoft Agent Framework .NET 1.18.0](https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0)
 - [Deep Agents 0.7.7](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.7)
 - [Transformers NVFP4](https://github.com/huggingface/transformers/commit/80c667443da1c5cfbd258f46ecceee09950f544a)
-- [Codex fail-closed PowerShell lowerer](https://github.com/openai/codex/commit/bb701f1e8c8db884fa0cdafff4b8dcb1604f2fdd)
+- [Codex fail-closed PowerShell lowerer](https://github.com/openai/codex/commit/bb701f1e8c8db884fa0cdafff4b8dcb1604f2fdd)（详见 OpenAI 专题页）
 - [Qwen Code flakiness gate](https://github.com/QwenLM/qwen-code/commit/f0dcdfc1570ed4e8852060ff55e8b37f61827240)
 - [LangChain strict nested tool schemas](https://github.com/langchain-ai/langchain/commit/65e5e3cfa36c6fff2897140a1bfb5fd35de1bdbd)
 - [Qwen Code 0.21.14-preview.0](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14-preview.0)
-- [Codex 0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1)
-- [Codex environment MCP policies](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)
+- [Codex 0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1)（详见 OpenAI 专题页）
+- [Codex environment MCP policies](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)（详见 OpenAI 专题页）
 - [Qwen Code review thread pagination](https://github.com/QwenLM/qwen-code/commit/b6e93d27adf9fb08959049843d43032144f2681b)
 - [Bedrock-RL 社区文章](https://huggingface.co/blog/Michael-E/bedrock-rl)
 - [Qwen Code 0.21.14](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14)
-- [Codex Bedrock expired credential refresh](https://github.com/openai/codex/commit/3929c99a97d1aa0fb8000903a4b57b24fbabe742)
-- [Codex older Bubblewrap FD mounts](https://github.com/openai/codex/commit/6cc2ba8a9567e3083531283f923127b86a6c5908)
-- [Codex thread-scoped approvals](https://github.com/openai/codex/commit/8843960ba06b1b2570e689f3fff354c324ab2417)
-- [Codex most-recent named session queueing](https://github.com/openai/codex/commit/14a8ac89af0a3c9033c1fa4d747ec5d6333e9890)
+- [Codex Bedrock expired credential refresh](https://github.com/openai/codex/commit/3929c99a97d1aa0fb8000903a4b57b24fbabe742)（详见 OpenAI 专题页）
+- [Codex older Bubblewrap FD mounts](https://github.com/openai/codex/commit/6cc2ba8a9567e3083531283f923127b86a6c5908)（详见 OpenAI 专题页）
+- [Codex thread-scoped approvals](https://github.com/openai/codex/commit/8843960ba06b1b2570e689f3fff354c324ab2417)（详见 OpenAI 专题页）
+- [Codex most-recent named session queueing](https://github.com/openai/codex/commit/14a8ac89af0a3c9033c1fa4d747ec5d6333e9890)（详见 OpenAI 专题页）
 - [Agent Framework message history deduplication](https://github.com/microsoft/agent-framework/commit/da11daebe51ef70a03908f610165714a17491da4)
 - [Agent Framework JSON workflow resume coercion](https://github.com/microsoft/agent-framework/commit/e74ac4613c2d7b8653457dd94c26a67f572c74d7)
 - [Qwen Code Web Shell in-flow approvals](https://github.com/QwenLM/qwen-code/commit/b04db26db8aca0b2698d3a33c3a2f4f295a51013)
 - [Qwen Code responsive streaming output](https://github.com/QwenLM/qwen-code/commit/3192323c1d9272577592434952f8fd2253f6d6d6)
 - [Qwen Code live-state activity watermark](https://github.com/QwenLM/qwen-code/commit/dd82ba404ea55e5b3c3bcee1a49151d3938a9392)
 - [Qwen Code ACP child heap measurement](https://github.com/QwenLM/qwen-code/commit/83fc634f616ac52f441bacd1e78da0f0d05af5e0)
+- [Cohere Python 7.0.9](https://github.com/cohere-ai/cohere-python/releases/tag/7.0.9)
+- [Transformers 5.15.1](https://github.com/huggingface/transformers/releases/tag/v5.15.1)
+- [Codex 0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2)（详见 OpenAI 专题页）
+- [Claude Agent SDK TypeScript 0.3.235](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.235)（详见 Claude 专题页）
+- [Claude Code Action 1.0.195](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.195)（详见 Claude 专题页）
+- [BrowserSkill dsh-plugin 0.1.1](https://github.com/Tencent/BrowserSkill/releases/tag/dsh-plugin-v0.1.1)
+- [Agent Framework agent-hooks interception contract](https://github.com/microsoft/agent-framework/commit/10bf8d7d9ef56304cb6936452e64c90c99850f6c)
+- [Agent Framework preserves structured instructions](https://github.com/microsoft/agent-framework/commit/8be7c930632b981e01eb26412959f7e7fe62e5f4)
+- [Agent Framework preserves handoff additional properties](https://github.com/microsoft/agent-framework/commit/ec407cf56f1069421e978d0f0ff303184a15d6f)
+- [Qwen Code rejects upstream fail-fast placeholders](https://github.com/QwenLM/qwen-code/commit/bb45a09c0674cc68caecaad836d1ab597dbab7dd)
+- [Qwen Code authenticated HTTPS extension installs](https://github.com/QwenLM/qwen-code/commit/e4f5504e9fc74d8794067bda43d9e0ba7261225d)
+- [Qwen Code clamps PR review posting volume](https://github.com/QwenLM/qwen-code/commit/e352037078006ef04f0072423eadd2105f7b601d)
+- [Qwen Code rejects foreground named teammates](https://github.com/QwenLM/qwen-code/commit/6d06b2d11d95e8e77f79d12908d02e2f26d67eb)
+- [Codex model-capability gating for async messages](https://github.com/openai/codex/commit/f5a3dc55404ddc066a4e4a65602fee166ecc46b3)（详见 OpenAI 专题页）
+- [Agents SDK isolates checkpoint usage](https://github.com/openai/openai-agents-python/commit/fb8fa1ba5c23f7ec61ca20c735999cf81e829a8e)（详见 OpenAI 专题页）
+- [Agents SDK expands graph handoff targets](https://github.com/openai/openai-agents-python/commit/9432f7ed30b9554ab5eaa84a4c0977059f96d5f0)（详见 OpenAI 专题页）
+- [Agents SDK rejects failed terminal responses](https://github.com/openai/openai-agents-python/commit/0486792662bd44791dfa5838425c54c52e971d08)（详见 OpenAI 专题页）
+- [Transformers Qwen Omni compilable cache fix](https://github.com/huggingface/transformers/commit/279dbcf4d66051c6e184d8d6960e96294d830f11)
 
-**一句话总结：当天最高优先级仍是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 机器人数据 Agent 发布；16:10 增量主要是 Qwen Code 会话/daemon/review 与 Google ADK 认证、恢复、安全方面的可核验主分支工程信号，尚无新的正式 release。**
+**一句话总结：19:12 增量以 Cohere Python 7.0.9、Transformers 5.15.1 和多项 Agent 工具版本为主；Microsoft、Qwen、OpenAI 与 Hugging Face 的新增提交集中在拦截契约、失败处理、状态保真与模型运行兼容，均未被误写为正式版本。**
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；13:12 补扫重点核验 15 个官方版本/提交候选，并逐项打开本轮保留的 11 个原始页面。
-- 16:10 补查：重开规范列出的厂商、研究机构与播客入口，并增量核验 Qwen Code、Google ADK、Transformers 等官方 commits/releases；本轮无新正式 release。
-- 16:10 补查：重开规范列出的厂商、研究机构与播客入口，并增量核验 Qwen Code、Google ADK、Transformers 等官方 commits/releases；本轮无新正式 release。
-- 16:10 补查：重开规范列出的厂商、研究机构与播客入口，并增量核验 Qwen Code、Google ADK、Transformers 等官方 commits/releases；本轮无新正式 release。
-- 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接访问返回 403、依赖脚本或缺少稳定时间；部分 GitHub 组织列表有频率限制，改用单仓库提交/发布 API 与原始 HTML；没有据搜索索引、活动日期或测试 release 单独确认发布。
-- 当日各轮粗筛候选累计 363（16:10 本轮新增粗筛 34 个）；累积保留 71 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
+- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节 Seed/豆包、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口；按主窗口、24–48h、48–72h 分档复核。
+- 19:12 补查：逐项打开 Anthropic Agent SDK/Code Action、Codex、Transformers、BrowserSkill、Cohere Python 的发布页，以及 Microsoft Agent Framework、Qwen Code、OpenAI Codex/Agents SDK、Transformers 的原始提交页；本轮保留 18 个唯一增量来源。
+- 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接入口仍有 403、脚本依赖或精确时间缺失；GitHub API 在首批查询后触发限流，改用官方 release.atom、发布 HTML 与原始 commit HTML 核验，未据搜索索引单独确认发布。
+- 当日各轮粗筛候选累计 420（19:12 本轮新增粗筛 57 个）；累积保留 89 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
