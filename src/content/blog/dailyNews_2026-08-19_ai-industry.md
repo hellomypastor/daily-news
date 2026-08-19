@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T10:31:00+08:00"
+updatedAt: "2026-08-19T13:12:08+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -9,6 +9,7 @@ featuredSummary: "Microsoft Agent Framework 正式发布 .NET 1.18.0。 主流 A
 featuredPublishedAt: "2026-08-18 22:30 +08:00"
 featuredTags: ["Microsoft","Agent Framework","Release"]
 tags:
+  - "ACP"
   - "AG-UI"
   - "Agent"
   - "Agent Framework"
@@ -17,6 +18,7 @@ tags:
   - "Anthropic"
   - "Approvals"
   - "Authentication"
+  - "AWS Bedrock"
   - "Billing"
   - "BrowserSkill"
   - "ChatGPT Business"
@@ -49,6 +51,7 @@ tags:
   - "Integration"
   - "LangChain"
   - "Linear"
+  - "Linux"
   - "LlamaIndex"
   - "MCP"
   - "Memory"
@@ -56,14 +59,18 @@ tags:
   - "Microsoft"
   - "Middleware"
   - "Multi-Agent"
+  - "Observability"
   - "Open Source"
   - "OpenAI"
+  - "Pagination"
+  - "Performance"
   - "Permissions"
   - "Policy"
   - "PowerShell"
   - "Prerelease"
   - "Protocol"
   - "Quantization"
+  - "Queue"
   - "QuickJS"
   - "Qwen"
   - "Qwen Code"
@@ -77,8 +84,10 @@ tags:
   - "Robotics"
   - "Routing"
   - "Safety"
+  - "Sandbox"
   - "Schema"
   - "Security"
+  - "Sessions"
   - "Skills"
   - "Tencent"
   - "Tools"
@@ -86,12 +95,14 @@ tags:
   - "Transformers"
   - "Vision"
   - "VLM"
+  - "Web Shell"
   - "Windows"
+  - "Workflow"
 ---
 
 ## 扫描结论
 
-主窗口：2026-08-18 10:12:17 至 2026-08-19 10:12:17（Asia/Shanghai）；近两日为 2026-08-17 10:12:17 至 2026-08-18 10:12:17，近三日为 2026-08-16 10:12:17 至 2026-08-17 10:12:17。本轮继续保留当天全部既有来源，并新增 Qwen Code 0.21.14-preview.0、Codex 0.149.0-alpha.1 以及 Codex 的环境 MCP、工作区认证、异步消息和 hook 环境边界更新；Qwen Code 还修复了长生命周期 PR 超过 100 条 review thread 时的分页缺口。Hugging Face 上新出现的 Bedrock-RL 属社区作者文章而非 Hugging Face 官方研究，保留在“观察池”；OpenAI Help Center 的 ChatGPT Business 加座计费变化可确认 8 月 19 日生效，但页面只显示相对更新时间，列入“日期未确认”。
+主窗口：2026-08-18 13:12:08 至 2026-08-19 13:12:08（Asia/Shanghai）；近两日为 2026-08-17 13:12:08 至 2026-08-18 13:12:08，近三日为 2026-08-16 13:12:08 至 2026-08-17 13:12:08。本轮继续保留当天全部既有来源，并新增 Qwen Code 0.21.14 稳定版；其后主分支又推进 Web Shell 审批交互、后台 Agent 状态、会话活动游标和流式渲染。OpenAI Codex 新增 Bedrock 过期凭据刷新、旧版 Bubblewrap FD mount 兼容、线程级审批隔离与重名会话排队修复；Microsoft Agent Framework 修复 Python 历史记录超线性增长和 AG-UI JSON 恢复载荷类型转换。上述提交均标为主分支信号，不自动归入既有正式版本。
 
 ## 优先动态
 
@@ -114,6 +125,11 @@ tags:
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| OpenAI | Codex Bedrock 认证与旧版 Linux 沙箱兼容 | 官方主分支提交组，非正式发布 | 2026-08-19 12:06 至 12:46 +08:00，已核实 | [Bedrock 过期凭据刷新](https://github.com/openai/codex/commit/3929c99a97d1aa0fb8000903a4b57b24fbabe742)可在可刷新认证失败后执行受配置命令、重载 SDK 凭据并重新签名重试；[旧版 Bubblewrap FD mount](https://github.com/openai/codex/commit/6cc2ba8a9567e3083531283f923127b86a6c5908)通过受校验的 /proc/self/fd 只读绑定兼容缺少 ro-bind-fd 的系统版本。详见 OpenAI 专题页。 | 分别改善长会话云端凭据恢复和旧 Linux 沙箱兼容，同时保留并发刷新合并、inode/符号链接校验等安全边界；尚待 release。 |
+| OpenAI | Codex 线程审批隔离与重名会话排队 | 官方主分支提交组，非正式发布 | 2026-08-19 10:28 至 10:45 +08:00，已核实 | [TUI 审批请求按 thread ID 与 approval ID 联合路由](https://github.com/openai/codex/commit/8843960ba06b1b2570e689f3fff354c324ab2417)，避免并发线程 ID 碰撞误批；[按名称排队时优先最近会话](https://github.com/openai/codex/commit/14a8ac89af0a3c9033c1fa4d747ec5d6333e9890)，并纳入非交互与自定义来源会话。详见 OpenAI 专题页。 | 收紧多线程审批归属并减少重名会话的歧义失败，但都是主分支证据。 |
+| Microsoft | Agent Framework Python 历史与恢复载荷修复 | 官方主分支提交组，非正式发布 | 2026-08-19 12:20 至 12:40 +08:00，已核实 | [save_messages 采用顺序感知去重](https://github.com/microsoft/agent-framework/commit/da11daebe51ef70a03908f610165714a17491da4)，避免历史记录超线性增长；[AG-UI workflow resume](https://github.com/microsoft/agent-framework/commit/e74ac4613c2d7b8653457dd94c26a67f572c74d7)递归按声明类型转换 JSON 载荷，无法满足类型时保留输入。 | 同时改善长会话存储复杂度与跨 JSON 边界恢复的类型可靠性；尚待正式版本。 |
+| Qwen | Qwen Code Web Shell 审批与后台 Agent 状态 | 官方主分支提交组，非正式发布 | 2026-08-19 10:49 至 11:54 +08:00，已核实 | [审批/提问改为不遮挡消息的内嵌 sheet](https://github.com/QwenLM/qwen-code/commit/b04db26db8aca0b2698d3a33c3a2f4f295a51013)，并避免启动审批待定时把后台 Agent 误判失败；[流式输出渲染保持响应](https://github.com/QwenLM/qwen-code/commit/3192323c1d9272577592434952f8fd2253f6d6d6)则重做增量 transcript 到 UI 的更新路径。 | 改善长输出和多 Agent 审批期间的交互正确性；两项都晚于 0.21.14 正式 tag，不能归入该版。 |
+| Qwen | Qwen Code 会话活动游标与 ACP 内存测量 | 官方主分支提交组，非正式发布 | 2026-08-19 11:31 至 13:00 +08:00，已核实 | [live-state activity watermark](https://github.com/QwenLM/qwen-code/commit/dd82ba404ea55e5b3c3bcee1a49151d3938a9392)合并内存与持久化时间并防止分页重复；[ACP 子进程 old-generation heap 峰值测量](https://github.com/QwenLM/qwen-code/commit/83fc634f616ac52f441bacd1e78da0f0d05af5e0)加入 serve 侧资源观测。 | 前者提升会话列表/等待游标一致性，后者是容量诊断信号；均为截止前主分支提交。 |
 | Qwen | [Qwen Code 0.21.14-preview.0](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14-preview.0) | 官方 GitHub 预发布 | 2026-08-19 08:52 +08:00，已核实 | 发布说明覆盖 live-session registry、会话状态、媒体引用、`/advisor`、可恢复 PR review、记忆召回与 fail-closed autofix。 | 是本轮功能面最完整的正式预览版本，但仍应按预发布质量看待。 |
 | OpenAI | [Codex 0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1) | 官方 GitHub 预发布 | 2026-08-19 08:54 +08:00，已核实 | tag 与发布时间可确认，发布页未给 changelog，不把同期提交自动归因到该版本。详见 OpenAI 专题页。 | 0.149 序列已启动，功能范围仍待正式说明。 |
 | OpenAI | Codex 环境、认证与异步消息边界 | 官方主分支提交组，非正式发布 | 2026-08-19 07:17 至 09:21 +08:00，已核实 | [hooks 使用捕获会话环境并清理凭据](https://github.com/openai/codex/commit/4d8c664a4976833b2142974bdba6e8d1a270d671)、[新增不中断 turn 的异步用户消息](https://github.com/openai/codex/commit/71dbf72b0576f9e7be1ef28d275bc79ece6d4b6c)、[对 header 认证执行工作区限制](https://github.com/openai/codex/commit/b537d5a0970f9d3153b1e647e2b42deed32555e0)，并[将环境 MCP 策略用于工具、OAuth、遥测与 skill 依赖](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)。详见 OpenAI 专题页。 | 同时收紧环境/身份策略并扩展后台沟通协议；均为主分支证据。 |
@@ -128,19 +144,19 @@ tags:
 | LangChain | [严格工具 schema 要求嵌套属性完整](https://github.com/langchain-ai/langchain/commit/65e5e3cfa36c6fff2897140a1bfb5fd35de1bdbd) | 官方主分支修复，非正式发布 | 2026-08-19 01:08 +08:00，已核实 | strict tool schema 会把所有嵌套 object 属性纳入 required，以保持递归严格性。 | 减少工具调用 schema 在深层对象处失去严格约束的风险。 |
 | LangChain | [保留 reasoning item 边界](https://github.com/langchain-ai/langchain/commit/32c15bbbd5538677a750229f4f732ad70b8903f4) | 官方主分支修复，后续已发布 | 2026-08-19 00:59 +08:00，已核实 | OpenAI 集成修复 reasoning item 边界保留，随后进入 langchain-openai 1.5.2。 | 有助于多段推理事件的结构一致性，不代表模型能力变化。 |
 | LlamaIndex | [Google GenAI 默认模型改为 Gemini 3.7 Flash](https://github.com/run-llama/llama_index/commit/30e759af1f0ff1f4c062bc13f90c7236fae06c65) | 官方项目主分支提交，非 Google 发布 | 2026-08-19 00:37 +08:00，已核实 | LlamaIndex 的 Google GenAI 集成与文档修改默认模型；这是 LlamaIndex 客户端选择，不能据此宣称 Google 发布新模型。 | 默认值变更可能影响新项目行为，需与 Google 官方文档单独核对。 |
-| LangChain | [Deep Agents CLI 0.1.57](https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.57) | 官方 GitHub 发布 | 2026-08-18 12:31 +08:00，已核实 | 增加冷缓存提示、可调整输入、多选提问、ACP 审批模式和模型选择，并修复恢复与转录问题。 | Agent CLI 的审批和交互能力获得正式更新。 |
 | Tencent | [EVIE-Preview-4.5B](https://github.com/Tencent/EVIE-Preview-4.5B) | 官方新公开模型仓库 | 2026-08-18，已核实 | 腾讯公开 4.54B 多语言视觉文档检索模型；仓库中的榜单数据仍属发布方自报。 | 为视觉文档检索提供公开权重和复现入口。 |
 | Tencent | [BrowserSkill 支持跨进程 iframe](https://github.com/Tencent/BrowserSkill/commit/c7252529f429e769302f060ba0168061a734f712) | 官方主分支提交，非正式发布 | 2026-08-18 21:16 +08:00，已核实 | 扩展 frame geometry、引用与交互路径，使浏览器 Agent 可观察和操作 OOPIF。 | 改善复杂 iframe 页面的 Agent 覆盖，仍待 release。 |
 | Hugging Face | [Transformers generation_config 优先级修复](https://github.com/huggingface/transformers/commit/bc7772617f789287d7b754478bab38799192765a) | 官方主分支修复，非正式发布 | 2026-08-18 22:02 +08:00，已核实 | 文本生成 pipeline 不再用 pipeline 默认值覆盖模型自身 generation_config。 | 避免部署时模型级生成参数被静默改写。 |
 
 ## 播客与访谈
 
-主窗口内，Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时确认原始页面和发布时间的新一期；Dwarkesh 入口直接抓取返回 403，搜索索引也未显示可核实的新节目。
+主窗口内，Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时确认原始页面和发布时间的新一期；13:12 复核时 Dwarkesh 入口仍直接返回 403，搜索索引也未显示可核实的新节目。
 
 ## 近两日补充（24–48 小时）
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| LangChain | [Deep Agents CLI 0.1.57](https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.57) | 官方 GitHub 发布 | 2026-08-18 12:31 +08:00，已核实 | 增加冷缓存提示、可调整输入、多选提问、ACP 审批模式和模型选择，并修复恢复与转录问题。 | Agent CLI 的审批和交互能力获得正式更新。 |
 | Anthropic | [Claude Code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234) | 官方 GitHub 发布 | 2026-08-18 04:20 +08:00，已核实 | 覆盖 GitLab MR、用量重置续跑、Remote Control、安全与可靠性修复。详见 Claude 专题页。 | Claude 编码主工具获得正式更新。 |
 | Anthropic | [Agent SDK TypeScript v0.3.234](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.234) | 官方 GitHub 发布 | 2026-08-18 04:21 +08:00，已核实 | 同步 VCS、权限来源、effort 初始化与类型修正。详见 Claude 专题页。 | Agent 集成接口获得版本化更新。 |
 | Anthropic | [Claude Code Action v1.0.194](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.194) | 官方 GitHub 发布 | 2026-08-18 04:25 +08:00，已核实 | 加强路径与附件限制，修补依赖漏洞并改进 PR 上下文。详见 Claude 专题页。 | CI/评审 Agent 的安全边界和上下文处理同步更新。 |
@@ -189,11 +205,22 @@ tags:
 - [Codex environment MCP policies](https://github.com/openai/codex/commit/fde2156057c38c0227ce94c8514d04c7498df60d)
 - [Qwen Code review thread pagination](https://github.com/QwenLM/qwen-code/commit/b6e93d27adf9fb08959049843d43032144f2681b)
 - [Bedrock-RL 社区文章](https://huggingface.co/blog/Michael-E/bedrock-rl)
+- [Qwen Code 0.21.14](https://github.com/QwenLM/qwen-code/releases/tag/v0.21.14)
+- [Codex Bedrock expired credential refresh](https://github.com/openai/codex/commit/3929c99a97d1aa0fb8000903a4b57b24fbabe742)
+- [Codex older Bubblewrap FD mounts](https://github.com/openai/codex/commit/6cc2ba8a9567e3083531283f923127b86a6c5908)
+- [Codex thread-scoped approvals](https://github.com/openai/codex/commit/8843960ba06b1b2570e689f3fff354c324ab2417)
+- [Codex most-recent named session queueing](https://github.com/openai/codex/commit/14a8ac89af0a3c9033c1fa4d747ec5d6333e9890)
+- [Agent Framework message history deduplication](https://github.com/microsoft/agent-framework/commit/da11daebe51ef70a03908f610165714a17491da4)
+- [Agent Framework JSON workflow resume coercion](https://github.com/microsoft/agent-framework/commit/e74ac4613c2d7b8653457dd94c26a67f572c74d7)
+- [Qwen Code Web Shell in-flow approvals](https://github.com/QwenLM/qwen-code/commit/b04db26db8aca0b2698d3a33c3a2f4f295a51013)
+- [Qwen Code responsive streaming output](https://github.com/QwenLM/qwen-code/commit/3192323c1d9272577592434952f8fd2253f6d6d6)
+- [Qwen Code live-state activity watermark](https://github.com/QwenLM/qwen-code/commit/dd82ba404ea55e5b3c3bcee1a49151d3938a9392)
+- [Qwen Code ACP child heap measurement](https://github.com/QwenLM/qwen-code/commit/83fc634f616ac52f441bacd1e78da0f0d05af5e0)
 
-**一句话总结：当天最高优先级仍是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 机器人数据 Agent 发布；最新一轮则由 Qwen Code 预览版、Codex 环境/认证策略及长 PR 自动评审可靠性修复补充工程进展。**
+**一句话总结：当天最高优先级仍是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 机器人数据 Agent 发布；本轮新增的 Qwen Code 0.21.14 稳定版，以及 Codex、Agent Framework、Qwen Code 在认证、审批路由、会话恢复和 Web Shell 可靠性上的连续修复，构成最新工程进展。**
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；10:12 补扫额外核验 18 个官方提交/版本，并复核 OpenAI Help Center、Hugging Face 社区文章与 MiniMax 新闻页。
-- 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接访问返回 403 或依赖脚本；GitHub 组织列表批量扫描曾触发限流，继续改用单项 API/HTML 与发布页；Linear 与 OpenAI Help 页面缺少稳定绝对更新时间；A2A/AAIF 新迁移说法仍仅见二手报道，未作确认。
-- 当日各轮粗筛候选累计 304（10:12 本轮新增粗筛 22 个）；累积保留 51 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
+- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；13:12 补扫重点核验 15 个官方版本/提交候选，并逐项打开本轮保留的 11 个原始页面。
+- 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接访问返回 403、依赖脚本或缺少稳定时间；部分 GitHub 组织列表有频率限制，改用单仓库提交/发布 API 与原始 HTML；没有据搜索索引、活动日期或测试 release 单独确认发布。
+- 当日各轮粗筛候选累计 329（13:12 本轮新增粗筛 25 个）；累积保留 62 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
