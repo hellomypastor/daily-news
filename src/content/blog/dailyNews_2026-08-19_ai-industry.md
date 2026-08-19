@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T13:12:08+08:00"
+updatedAt: "2026-08-19T16:10:37+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Agent Framework .NET 1.18.0"
 featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
@@ -10,6 +10,7 @@ featuredPublishedAt: "2026-08-18 22:30 +08:00"
 featuredTags: ["Microsoft","Agent Framework","Release"]
 tags:
   - "ACP"
+  - "ADK"
   - "AG-UI"
   - "Agent"
   - "Agent Framework"
@@ -32,12 +33,16 @@ tags:
   - "Community"
   - "Copilot"
   - "Cowork"
+  - "Daemon"
   - "Data"
   - "Date Unconfirmed"
   - "Deep Agents"
   - "Deep Research"
+  - "Development Signal"
+  - "Diagnostics"
   - "Education"
   - "Evaluation"
+  - "Extensions"
   - "Foxglove"
   - "Gemini"
   - "Generation"
@@ -53,15 +58,19 @@ tags:
   - "Linear"
   - "Linux"
   - "LlamaIndex"
+  - "Logging"
   - "MCP"
   - "Memory"
   - "Messaging"
   - "Microsoft"
   - "Middleware"
+  - "Model"
   - "Multi-Agent"
+  - "OAuth"
   - "Observability"
   - "Open Source"
   - "OpenAI"
+  - "Orchestration"
   - "Pagination"
   - "Performance"
   - "Permissions"
@@ -79,6 +88,7 @@ tags:
   - "Release"
   - "Reliability"
   - "Research"
+  - "Resume"
   - "Retrieval"
   - "Review"
   - "Robotics"
@@ -89,6 +99,7 @@ tags:
   - "Security"
   - "Sessions"
   - "Skills"
+  - "Subagents"
   - "Tencent"
   - "Tools"
   - "Training"
@@ -96,13 +107,14 @@ tags:
   - "Vision"
   - "VLM"
   - "Web Shell"
+  - "Whisper"
   - "Windows"
   - "Workflow"
 ---
 
 ## 扫描结论
 
-主窗口：2026-08-18 13:12:08 至 2026-08-19 13:12:08（Asia/Shanghai）；近两日为 2026-08-17 13:12:08 至 2026-08-18 13:12:08，近三日为 2026-08-16 13:12:08 至 2026-08-17 13:12:08。本轮继续保留当天全部既有来源，并新增 Qwen Code 0.21.14 稳定版；其后主分支又推进 Web Shell 审批交互、后台 Agent 状态、会话活动游标和流式渲染。OpenAI Codex 新增 Bedrock 过期凭据刷新、旧版 Bubblewrap FD mount 兼容、线程级审批隔离与重名会话排队修复；Microsoft Agent Framework 修复 Python 历史记录超线性增长和 AG-UI JSON 恢复载荷类型转换。上述提交均标为主分支信号，不自动归入既有正式版本。
+主窗口：2026-08-18 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai）；近两日为 2026-08-17 16:10:37 至 2026-08-18 16:10:37，近三日为 2026-08-16 16:10:37 至 2026-08-17 16:10:37。本轮继续保留当天全部既有来源，并新增 Qwen Code 0.21.14 稳定版；其后主分支又推进 Web Shell 审批交互、后台 Agent 状态、会话活动游标和流式渲染。OpenAI Codex 新增 Bedrock 过期凭据刷新、旧版 Bubblewrap FD mount 兼容、线程级审批隔离与重名会话排队修复；Microsoft Agent Framework 修复 Python 历史记录超线性增长和 AG-UI JSON 恢复载荷类型转换。上述提交均标为主分支信号，不自动归入既有正式版本。
 
 ## 优先动态
 
@@ -187,6 +199,22 @@ tags:
 | Google DeepMind、Microsoft、LangChain、Hugging Face、NVIDIA | 常规依赖、文档、测试与主分支提交 | 原始仓库信号 | 已检查；只保留有明确 Agent、模型接入或安全意义的提交，不因提交数量放大为重大动态。 |
 | 播客入口 | 时间不稳定的节目候选 | 日期证据不足 | 不写成窗口内事实，等待原始节目页提供可核实时间。 |
 
+## 16:10 滚动补充
+
+本轮未发现新的正式 release；以下均为官方仓库主分支信号，不自动归入 Qwen Code 0.21.14 或 Google ADK 既有版本。
+
+| 厂商 | 动态 | 日期 / 状态 | 摘要与意义 |
+|---|---|---|---|
+| Qwen | [compress-fast 后 rewind 保留历史](https://github.com/QwenLM/qwen-code/commit/aa0178df29ca596f534549c3af3809be590ddbcd) | 16:03；主分支 | 修复快速压缩后 /rewind 丢弃对话历史，涉及 transcript 与 microcompaction 状态一致性。 |
+| Qwen | [Token Plan 列表加入 qwen3.8-max](https://github.com/QwenLM/qwen-code/commit/ff5aa6be824a8979713c8e07bc90f10bc1020905) | 15:57；主分支 | 只证明 Qwen Code provider preset 出现该名称，不据此宣称模型正式发布或可用范围。 |
+| Qwen | [daemon 重复 tool-call breaker 显示 loop-detected](https://github.com/QwenLM/qwen-code/commit/577f719130f103d67ba879bd6e969240f1f28e65) | 15:14；主分支 | 将此前静默终止显式报告为循环检测停止，改善 Agent 可诊断性。 |
+| Qwen | [daemon 扩展批量启停 API](https://github.com/QwenLM/qwen-code/commit/daa7d619907f2f73038cb0b1132c6f6cbfde6431) | 14:42；主分支 | 增加 workspace 扩展批量激活、能力版本与 TypeScript daemon client 接口，尚待 release。 |
+| Qwen | [PR review resume 接入 CLI 与工作流](https://github.com/QwenLM/qwen-code/commit/1eb8a0c7f8126de179b4c80b932d915983ce51f1) | 13:13；主分支 | 将本地恢复功能接到 /review、review run 与 GitHub workflow 路径。 |
+| Google | [ADK debug log 脱敏 http_options 凭据](https://github.com/google/adk-python/commit/1cd6f464e5b8ececa957928ca67d65145be558ab) | 15:16；主分支 | 避免 generate_content_config.http_options 中的 credential 在 debug 日志暴露；尚非正式版本。 |
+| Google | [ADK 避免重复 OAuth 提示并修复工具恢复](https://github.com/google/adk-python/commit/eaad2f83b93d7e0c678336923ca5be7a3b9d1260) | 14:53；主分支 | 改善认证预处理和暂停工具恢复的一致性。 |
+| Google | [ParallelAgent 支持 sub-agent escalation event](https://github.com/google/adk-python/commit/0fd681e7d203d2bc7b86c72e4b539de6c735c889) | 14:52；主分支 | 允许并行子 Agent 升级事件进入恢复路径，是编排协议开发信号。 |
+| Hugging Face | [Whisper 长音频左填充 position IDs 修复](https://github.com/huggingface/transformers/commit/e12c79c582bc742029e5f12b538ec71391ace8b3) | 15:10；主分支 | 修复 left-padded batch 长音频生成中每项位置偏移被统一 past length 覆盖的问题；尚待稳定 release。 |
+
 ## 来源链接
 
 - [Sam Altman：暂停部分 frontier RL 训练](https://x.com/sama/status/2089787807611195475)
@@ -217,10 +245,13 @@ tags:
 - [Qwen Code live-state activity watermark](https://github.com/QwenLM/qwen-code/commit/dd82ba404ea55e5b3c3bcee1a49151d3938a9392)
 - [Qwen Code ACP child heap measurement](https://github.com/QwenLM/qwen-code/commit/83fc634f616ac52f441bacd1e78da0f0d05af5e0)
 
-**一句话总结：当天最高优先级仍是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 机器人数据 Agent 发布；本轮新增的 Qwen Code 0.21.14 稳定版，以及 Codex、Agent Framework、Qwen Code 在认证、审批路由、会话恢复和 Web Shell 可靠性上的连续修复，构成最新工程进展。**
+**一句话总结：当天最高优先级仍是 OpenAI 暂停部分 frontier RL 训练的治理信号与 Foxglove 机器人数据 Agent 发布；16:10 增量主要是 Qwen Code 会话/daemon/review 与 Google ADK 认证、恢复、安全方面的可核验主分支工程信号，尚无新的正式 release。**
 
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI、Mistral、Cohere、Qwen/阿里/DAMO、字节、百度、腾讯、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Foxglove、Linear，以及六类播客/访谈入口；13:12 补扫重点核验 15 个官方版本/提交候选，并逐项打开本轮保留的 11 个原始页面。
+- 16:10 补查：重开规范列出的厂商、研究机构与播客入口，并增量核验 Qwen Code、Google ADK、Transformers 等官方 commits/releases；本轮无新正式 release。
+- 16:10 补查：重开规范列出的厂商、研究机构与播客入口，并增量核验 Qwen Code、Google ADK、Transformers 等官方 commits/releases；本轮无新正式 release。
+- 16:10 补查：重开规范列出的厂商、研究机构与播客入口，并增量核验 Qwen Code、Google ADK、Transformers 等官方 commits/releases；本轮无新正式 release。
 - 失败来源：OpenAI News、xAI、智谱、Kimi、StepFun、Dwarkesh 与 No Priors 直接访问返回 403、依赖脚本或缺少稳定时间；部分 GitHub 组织列表有频率限制，改用单仓库提交/发布 API 与原始 HTML；没有据搜索索引、活动日期或测试 release 单独确认发布。
-- 当日各轮粗筛候选累计 329（13:12 本轮新增粗筛 25 个）；累积保留 62 个唯一来源 URL；二次补搜：否（最终来源不为 0）。
+- 当日各轮粗筛候选累计 363（16:10 本轮新增粗筛 34 个）；累积保留 71 个唯一来源 URL；二次补搜：否（最终来源不为 0）。

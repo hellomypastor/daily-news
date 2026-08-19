@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T13:24:00+08:00"
+updatedAt: "2026-08-19T16:10:37+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Introducing ChatGPT for Teens: Built for learning, backed by protections"
 featuredUrl: "https://openai.com/index/chatgpt-for-teens"
@@ -18,10 +18,12 @@ tags:
   - "主分支"
   - "Access"
   - "Account"
+  - "Ads"
   - "Agent"
   - "Agents"
   - "Agents SDK"
   - "API"
+  - "App Development"
   - "Approvals"
   - "Assistants API"
   - "Astra"
@@ -30,6 +32,7 @@ tags:
   - "Auto-review"
   - "Bedrock"
   - "Billing"
+  - "Bug"
   - "Bug Fix"
   - "Business"
   - "Cache"
@@ -42,13 +45,19 @@ tags:
   - "Cloud"
   - "Cloudflare"
   - "Codex"
+  - "Codex Remote"
   - "Community"
+  - "Compaction"
+  - "Compatibility"
+  - "Computer Use"
   - "Cursor"
   - "Customer Story"
   - "Cyber"
   - "Cybersecurity"
   - "Data Residency"
+  - "Date Unconfirmed"
   - "Deprecation"
+  - "Documentation"
   - "Edu"
   - "Education"
   - "Enterprise"
@@ -59,10 +68,12 @@ tags:
   - "Gov"
   - "GPT-6"
   - "Guardian"
+  - "Guardrails"
   - "Hate"
   - "Hooks"
   - "IDE"
   - "Infrastructure"
+  - "iOS"
   - "Java"
   - "Linux"
   - "Logging"
@@ -81,6 +92,7 @@ tags:
   - "Node.js"
   - "npm"
   - "OpenAI"
+  - "OpenAI API"
   - "Oversight"
   - "Partnership"
   - "Performance"
@@ -109,15 +121,20 @@ tags:
   - "Sora"
   - "Streaming"
   - "Structured Outputs"
+  - "Subagents"
   - "Teens"
   - "Temporary Chat"
+  - "Testing"
   - "Threads"
   - "TUI"
   - "Usage"
+  - "Usage Limits"
   - "Vercel"
   - "Video"
   - "Voice"
   - "VS Code"
+  - "Watchlist"
+  - "Web"
   - "WebRTC"
   - "WebSocket"
   - "Windows"
@@ -126,7 +143,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-18 13:12:08 至 2026-08-19 13:12:08（Asia/Shanghai）；同日此前已收录来源继续累积保留。窗口内最重要的新证据是 OpenAI 在 [Astra 网络安全能力说明](https://openai.com/index/pacing-model-development-cyber-capabilities)中确认 Astra 是即将推出的模型、初步证据显示它可能达到 Preparedness Framework 的 Critical cybersecurity capability 阈值，并说明部分前沿 RL 训练暂停；这使“Astra”名称本身从传闻升级为官方候选模型，但“GPT-6”别名和 8 月 23 日发布日期仍未获证实。OpenAI 还发布了[民主国家安全监督倡议](https://openai.com/index/strengthening-democratic-oversight-in-national-security)，并以 [Asana 案例](https://openai.com/index/asana)披露 Codex 迁移旧测试系统的项目数据。开发侧在 01:12 后继续合入 Codex 权限、安全、Realtime 与线程迁移，以及 Node / Go SDK 安全和 Responses API 相关提交；这些均是主分支动态，不等同于正式版本交付。
+扫描窗口：2026-08-18 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai）；同日此前已收录来源继续累积保留。窗口内最重要的新证据是 OpenAI 在 [Astra 网络安全能力说明](https://openai.com/index/pacing-model-development-cyber-capabilities)中确认 Astra 是即将推出的模型、初步证据显示它可能达到 Preparedness Framework 的 Critical cybersecurity capability 阈值，并说明部分前沿 RL 训练暂停；这使“Astra”名称本身从传闻升级为官方候选模型，但“GPT-6”别名和 8 月 23 日发布日期仍未获证实。OpenAI 还发布了[民主国家安全监督倡议](https://openai.com/index/strengthening-democratic-oversight-in-national-security)，并以 [Asana 案例](https://openai.com/index/asana)披露 Codex 迁移旧测试系统的项目数据。开发侧在 01:12 后继续合入 Codex 权限、安全、Realtime 与线程迁移，以及 Node / Go SDK 安全和 Responses API 相关提交；这些均是主分支动态，不等同于正式版本交付。
 
 此前 04:11–07:17 增量还包括 [Codex 0.148.0 稳定版](https://github.com/openai/codex/releases/tag/rust-v0.148.0)：官方 release notes 列出 TUI 对话导出、`codex exec fork`、会话归档/恢复、线程用量估算、内置 Amazon Bedrock Runtime provider、异步 hooks 与 MCP tool hooks，以及多项恢复与沙箱 fail-closed 修复；[0.148.0-alpha.23](https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.23)仅列版本号。Python SDK [v3.3.0](https://github.com/openai/openai-python/releases/tag/v3.3.0)正式交付 named data-residency endpoints，并要求已修补的可选网络依赖。OpenAI RSS 还补充发现 [NVIDIA 的 ChatGPT Work 案例](https://openai.com/index/nvidia/chatgpt-work)，Help Center 则确认 [ChatGPT Business 新增付费席位从 8 月 19 日起改为加入时立即按剩余周期比例收费](https://help.openai.com/en/articles/8792536-manage-billing-on-the-chatgpt-team-subscription-plan)。[Sites 部署错误](https://status.openai.com/incidents/01M0B4WSV41BCFZ9VDWKSMQVSP)于 03:17–03:37 发生并已解决。
 
@@ -299,6 +316,27 @@ tags:
 - 8 月 17 日发布的 [The Defender’s Window](https://openai.com/index/the-defenders-window)主张组织应加速采用 agent 辅助安全评估、修复与响应，并以 Greg Brockman 的个人站点测试说明 ChatGPT Work 的现有能力；官方 RSS 显示发布时间为 13:30 +08:00，早于本轮 24 小时窗口，仅作为 Astra / cyber 安全语境。
 - [Sora 2 视频模型与 Videos API 弃用](https://developers.openai.com/api/docs/deprecations#2026-03-24-sora-2-video-generation-models-and-videos-api)由官方标记为 2026-03-24 的既有事项，仅用于当前状态核对，不作为过去 24 小时新增。
 
+## 16:10 滚动补充
+
+### 官方发布与开发动态
+
+- [ChatGPT Ads expands across Europe](https://openai.com/index/chatgpt-ads-expands-across-europe)：官方 RSS 时间为 2026-08-19 06:00 +08:00。OpenAI 称下周扩展到 31 个欧洲市场，先经 Ads Solutions、代理与技术伙伴接入，Ads Manager 自助稍后开放；Free/Go 显示广告，Plus/Pro/Enterprise 保持无广告。转化优化、地域定向、custom audiences、Pixel/Conversions API 与第三方测量均为官方披露，不扩大为已全面自助开放。
+- [ChatGPT for iOS 1.2026.223](https://learn.chatgpt.com/docs/changelog)在官方 changelog 标注 2026-08-18，可设置启动时直接打开 Codex Remote；因没有时分，列入日期未确认。
+- Agents SDK Python 主分支在 [blocked tool output replay 脱敏](https://github.com/openai/openai-agents-python/commit/ed644fc7c3a8c013ded9e5cde7ff6a79d48c8b75)中修复 output guardrail 阻断后仍写入 replay/session state 的风险，并以 [testing resources 索引提交](https://github.com/openai/openai-agents-python/commit/36dbc36857f2097145018934e4d111612271f0b2)补充 Agent、Sandbox、Realtime 与 Voice 的测试文档入口；两者均为主分支提交，尚非 release。
+
+### Love / Hate 与观察池
+
+| 候选 | 证据状态 | 处理 |
+|---|---|---|
+| [Codex 0.148.0 prompt_cache_retention 失败](https://github.com/openai/codex/issues/39397) | Windows 单用户给出 0.147/0.148 对照与复现；Issue 仅显示日期 | 与下条构成两个独立样本，但无人指派、无修复关联，不能写成官方事故。 |
+| [Custom harness 随机 prompt_cache_retention 错误](https://community.openai.com/t/custom-harness-getting-random-prompt-cache-retention-errors/1391197) | 14:55；Developer Community 用户报告 | 与 Codex Issue 合并判断为待核实兼容性信号。 |
+| [Computer Use / Chrome browser control trusted RPC 错误](https://community.openai.com/t/affected-feature-computer-use-chrome-browser-control/1391209) | 16:04；第二个独立 Windows 样本 | 未获 OpenAI Status 确认，列 Hate/观察池。 |
+| [Codex Desktop 压缩后偏离验收目标并循环](https://community.openai.com/t/codex-desktop-repeatedly-loses-the-original-acceptance-goal-after-compaction-and-enters-endless-subagent-test-loops/1391211) | 16:08；单一详细报告 | 低置信度，不外推。 |
+| [含大量代码的长 ChatGPT Web 会话冻结](https://community.openai.com/t/web-ui-unresponsive-in-long-chats-the-include-code/1391189) | 13:27；单用户 | 无第二样本，低置信度。 |
+| [Codex 周额度感知下降争议](https://www.reddit.com/r/OpenaiCodex/comments/1vseh5u/lost_of_trust/) | 14:33；评论既有类似自报也有反例 | 只反映社区信任争议，不确认官方配额调整。 |
+| [用 Codex 完成教师效率应用](https://www.reddit.com/r/codex/comments/1vsfmsx/ive_finished_my_first_project_using_codex/) | 15:40；用户自报并列出局限 | 归入 Love，成果未独立验证。 |
+| [ChatGPT 长篇写作与语音体验改善讨论](https://www.reddit.com/r/ChatGPT/comments/1vs4z50/chatgpt_is_getting_scarily_good/) | 07:03；多条正反评论 | 主观口碑，中低置信度。 |
+
 ## 来源
 
 - 官方产品与安全：[民主国家安全监督倡议](https://openai.com/index/strengthening-democratic-oversight-in-national-security)、[Astra 网络安全能力说明](https://openai.com/index/pacing-model-development-cyber-capabilities)、[Asana Codex 案例](https://openai.com/index/asana)、[ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens)、[CodeAI 合作](https://openai.com/index/partnering-with-codeai)、[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)、[Model Spec 原始版本](https://model-spec.openai.com/2026-08-18.html)。
@@ -309,5 +347,8 @@ tags:
 ## 采集状态
 
 - 已检查来源：OpenAI News / RSS（含较旧的 The Defender’s Window）、ChatGPT 与 Model Release Notes、Model Spec、ChatGPT & Codex changelog、ChatGPT Business Help Center、OpenAI Status、API changelog / model catalog / migration / Realtime / deprecations、Codex / Agents SDK / 六种官方 SDK 的 GitHub releases 与截至 13:12 的提交、Reddit、Hacker News Algolia、X、YouTube、OpenAI Developer Community latest.json 与原帖、OpenAI Academy、NPR、WSJ、ABC、Guardian、Wired、TIME 与中英文可信二手搜索。
+- 16:10 补查：新增核验 ChatGPT Ads 欧洲扩展、iOS 1.2026.223、Agents SDK Python 两项主分支提交，并复核 Developer Community、Reddit、HN、Status 与八个官方 GitHub 仓库。
+- 16:10 补查：新增核验 ChatGPT Ads 欧洲扩展、iOS 1.2026.223、Agents SDK Python 两项主分支提交，并复核 Developer Community、Reddit、HN、Status 与八个官方 GitHub 仓库。
+- 16:10 补查：新增核验 ChatGPT Ads 欧洲扩展、iOS 1.2026.223、Agents SDK Python 两项主分支提交，并复核 Developer Community、Reddit、HN、Status 与八个官方 GitHub 仓库。
 - 失败来源：Reddit JSON / RSS 仍返回 403，old Reddit HTML 可打开但绝对时间与正文提取不稳定；X 正文提取不稳定；YouTube 频道页信息有限；OpenAI News 与 Help Center 的直接 curl 部分返回 403，已改用 RSS、公开页面与官方 GitHub API 交叉核实；WSJ 原文受付费墙限制，仅保留标题信号；NPR 与部分二手页面无法由通用提取器直接打开，改用公开原始 HTML 核验；JetBrains 未发现窗口内独立官方发布；OpenAI Academy 活动页未列页面发布时间，按日期未确认处理。
-- 初始候选数：159；累积保留来源数：137；二次补搜：否（首轮已获得非零来源）。
+- 初始候选数：175（16:10 本轮新增粗筛 16 个）；累积保留来源数：148；二次补搜：否（首轮已获得非零来源）。

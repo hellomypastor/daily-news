@@ -1,27 +1,32 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T13:12:08+08:00"
+updatedAt: "2026-08-19T16:10:37+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredTitle: "Mojo🔥 is now open source!"
-featuredUrl: "https://www.modular.com/blog/mojo-open-source"
-featuredSummary: "Mojo 编译器、工具链和语言源码以 Apache-2.0（含 LLVM 例外）开放。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredPublishedAt: "2026-08-19 00:17 +08:00"
-featuredTags: ["Mojo","Compiler","Open Source"]
-featuredImage: "https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a84597ae2a73bd4973f801f_Mojo-OSS-Blog-Compressed.jpeg"
-featuredImageAlt: "Mojo 开源公告的官方题图，展示 Mojo 标识与开源主题视觉"
-featuredImageCaption: "图片来源：Modular 官方博客"
+featuredTitle: "Building Shared Memory for AI Agents in Notion"
+featuredUrl: "https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"
+featuredSummary: "Notion 公开 MIT 项目 Lore，以结构化数据库、MCP、CLI 与 hooks 维护共享 Agent 记忆；实验指标为项目方结果。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-08-18 20:00 +08:00"
+featuredTags: ["Agent Memory","MCP","Open Source","Notion"]
+featuredImage: "https://images.ctfassets.net/spoqsaf9291f/3KcypMugRMDnYguXzeAcKm/da0e5d9d74872fbf0769a50432fe9e8e/Lore.jpg"
+featuredImageAlt: "Notion Lore 项目的共享 Agent 记忆示意图"
+featuredImageCaption: "图片来源：Notion"
 tags:
   - "A2A"
   - "Agent"
   - "Agent Memory"
   - "Agent Skill"
   - "AI"
+  - "API"
   - "Audit"
   - "Benchmark"
   - "BitNet"
   - "Browser"
   - "Case Study"
+  - "Chat Migration"
+  - "ChatGPT"
+  - "Checkpoint"
+  - "Claude"
   - "Code Generation"
   - "Code Quality"
   - "Code Review"
@@ -31,9 +36,14 @@ tags:
   - "Commentary"
   - "Compiler"
   - "Computer Use"
+  - "Context"
   - "Continual Learning"
+  - "Cybersecurity"
+  - "Data"
+  - "Date Unconfirmed"
   - "Date Unverified"
   - "Developer Tools"
+  - "Discussion"
   - "Edge"
   - "Education"
   - "Embeddings"
@@ -44,15 +54,19 @@ tags:
   - "Fine-tuning"
   - "FPGA"
   - "GitHub"
+  - "GitHub Trending"
   - "GPU"
+  - "Hacker News"
   - "Harness"
   - "HN"
   - "Inference"
   - "Interpretability"
+  - "Jobs"
   - "Kernel"
   - "Learning"
   - "LLM"
   - "LLM Judge"
+  - "Local First"
   - "macOS"
   - "MCP"
   - "Memory"
@@ -60,25 +74,33 @@ tags:
   - "Model Architecture"
   - "Mojo"
   - "Multi-Agent"
+  - "Notion"
+  - "Observability"
   - "Observation"
   - "Open Source"
   - "Post-training"
+  - "Privacy"
   - "Python"
   - "Quantization"
   - "Qwen"
+  - "R"
   - "RAG"
   - "Remote"
   - "Repository"
   - "Research"
   - "Resurfaced"
+  - "Review"
   - "RL"
   - "Robotics"
   - "Rust"
   - "Safety"
   - "Scheduling"
   - "Security"
+  - "Self Evolving"
   - "Session"
+  - "Skills"
   - "Speculative Decoding"
+  - "Statistics"
   - "Training"
   - "Trending"
   - "Vector Search"
@@ -86,13 +108,17 @@ tags:
   - "Verifier"
   - "Video"
   - "Visualization"
+  - "vLLM"
+  - "Voice"
+  - "Watchlist"
+  - "WebGPU"
   - "Workspace"
   - "Zig"
 ---
 
 ## 概览
 
-高亮窗口为 2026-08-17 13:12:08 至 2026-08-19 13:12:08（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 13:12:08 至 2026-08-19 13:12:08。本轮在当天已有扫描上继续补查 HN 10:12–13:12 新增 79 条、GitHub 三类 Trending 共 40 行、五组 GitHub 新仓库检索去重 45 个、arXiv 最近条目 100 条，并复核 Hugging Face、Simon Willison 与原始工程页面；与当天已有集合合并后保留 104 个唯一来源 URL。新增可核实信号包括四个截止前新建的 Agent/推理工程仓库、五篇窗口内 Agent/LLM 论文，以及四个新进入 GitHub 日榜的相关项目；A2A 加入 AAIF 的原文只标注日期未给出时分，且略邻近 48 小时边界，放入观察池。仓库创建时间、论文提交时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
+高亮窗口为 2026-08-17 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai），HN 讨论/发现证据窗口为 2026-08-18 16:10:37 至 2026-08-19 16:10:37。本轮在当天已有扫描上继续补查 HN 10:12–13:12 新增 79 条、GitHub 三类 Trending 共 40 行、五组 GitHub 新仓库检索去重 45 个、arXiv 最近条目 100 条，并复核 Hugging Face、Simon Willison 与原始工程页面；与当天已有集合合并后保留 104 个唯一来源 URL。新增可核实信号包括四个截止前新建的 Agent/推理工程仓库、五篇窗口内 Agent/LLM 论文，以及四个新进入 GitHub 日榜的相关项目；A2A 加入 AAIF 的原文只标注日期未给出时分，且略邻近 48 小时边界，放入观察池。仓库创建时间、论文提交时间、Trending 日榜和 HN 讨论时间分别作为不同证据，不互相替代。
 
 ## 已核实高亮
 
@@ -120,11 +146,6 @@ tags:
 | [liangyuan0219/session-migrator](https://github.com/liangyuan0219/session-migrator) | 按目标模型上下文容量迁移或压缩会话的 MCP server 与 Python 库 | 把跨 Agent 交接拆成容量判断、完整迁移或最新消息优先截断；静态模型容量表可能随厂商更新而过时 | 仓库创建于 2026-08-19 11:18 +08:00；MIT，README 与测试入口可打开 |
 | [gunwoo55/unlimited-agent](https://github.com/gunwoo55/unlimited-agent) | 通过私有 Secure MCP Tunnel 让 ChatGPT 控制 Windows 文件、PowerShell、桌面与浏览器的本地桥接 | README 将范围限制、危险动作本地审批和敏感读取审批显式化；完整远控风险高，安全性仍需独立审计 | 仓库创建于 2026-08-19 10:45 +08:00；MIT，README、SECURITY 与工具契约可打开 |
 | [celiumsai/celiums-bitnet](https://github.com/celiumsai/celiums-bitnet) | 面向 BitNet b1.58 的 correctness-first CPU inference fork，修复 I2_S packing、数值恢复、GGUF 转换与线程调度 | 公开严格数值契约、标量/SIMD 对照和多层测试，适合审视低比特推理中“能生成”与“计算等价”的差别；性能主张仍为项目方数据 | 仓库创建于 2026-08-19 12:23 +08:00；Apache-2.0，README 与变更文档可打开 |
-
-<figure class="source-image">
-  <a href="https://www.modular.com/blog/mojo-open-source"><img src="https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a84597ae2a73bd4973f801f_Mojo-OSS-Blog-Compressed.jpeg" alt="Mojo 开源公告的官方题图，展示 Mojo 标识与开源主题视觉" loading="lazy" /></a>
-  <figcaption><a href="https://www.modular.com/blog/mojo-open-source">图片来源：Modular 官方博客</a></figcaption>
-</figure>
 
 ## GitHub Trending
 
@@ -210,6 +231,44 @@ tags:
 - [wdhwg001/csift](https://github.com/wdhwg001/csift) 对 Claude Code 的 JSONL session 做正则搜索、文件恢复、图片提取和 subagent topology 检查；仓库创建于 2026-08-17 09:36 +08:00，略早于本轮高亮窗口，MIT。其 [HN 提交](https://news.ycombinator.com/item?id=49356290) 于 2026-08-19 11:24 +08:00 出现，13:12 快照为 2 points / 0 comments。
 - [A2A 加入 AAIF](https://aaif.io/blog/a2a-joins-aaif) 表示 Agent2Agent 开放标准成为 Agentic AI Foundation 托管项目，并继续采用开放贡献与中立治理；页面正文只标注 2026-08-17、未给出时分，无法确认是否落入从 13:12 起算的 48 小时窗口，因此作为邻近信号。其 [HN](https://news.ycombinator.com/item?id=49356130) 发现证据见上。
 
+## 16:10 滚动补充
+
+### 已验证高亮
+
+| 项目 | 日期 / 状态 | 技术要点 |
+|---|---|---|
+| [Building Shared Memory for AI Agents in Notion](https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion) | 2026-08-18 20:00 +08:00；官方原文 | Notion 公开 MIT 项目 Lore，以五类结构化数据库、MCP、CLI 与 hooks 维护共享 Agent 记忆；SkillRet 与失败恢复数字均为项目方实验。对应 [HN 讨论](https://news.ycombinator.com/item?id=49357879)截至快照 2 分 / 0 评论。 |
+| [datasilhouette](https://github.com/ibrahemalbalkhi/datasilhouette) | 创建于 2026-08-19 15:16；MIT | 本地把 CSV/Excel/JSON/Parquet 转成不含单元格值的 schema、cardinality 与 missing-value 报告，供 LLM 生成分析代码。 |
+| [LLMBench](https://github.com/Nuyoahzhou/LLMBench) | 创建于 14:35；MIT | 不连接真实模型，模拟 OpenAI Chat Completions、Responses 与 Claude Messages 的流式/非流式响应、TTFT、token 速度和抖动。 |
+| [yoober](https://github.com/frgmt0/yoober) | 创建于 13:23；MIT | 为 Agent 生成视频 contact sheet、时间戳链接与可检索 transcript slices，减少整段转录占用上下文。 |
+| [evalkit](https://github.com/charlescoverdale/evalkit) | 创建于 15:59；README 标注 MIT | R 语言模型评测工具，支持 cluster-robust 标准误、配对比较、power analysis 与 prediction-powered inference；模拟结果为作者结果。 |
+
+<figure class="source-image">
+  <a href="https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"><img src="https://images.ctfassets.net/spoqsaf9291f/3KcypMugRMDnYguXzeAcKm/da0e5d9d74872fbf0769a50432fe9e8e/Lore.jpg" alt="Notion Lore 项目的共享 Agent 记忆示意图" loading="lazy" /></a>
+  <figcaption><a href="https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion">图片来源：Notion</a></figcaption>
+</figure>
+
+### GitHub Trending
+
+- [munder-difflin](https://github.com/chaitanyagiri/munder-difflin)：日榜显示 306 stars today；Electron/React 多 Agent harness 以 PTY 包装多家 coding CLI，并用本地 Git 文件实现 mailbox、memory 与任务路由。README 自称 working prototype，热度不等于今日发布或成熟度。
+- [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)：日榜显示 730 stars today；社区仓库自述 817 个安全 skills，并明确与 Anthropic 无隶属关系，数量与框架映射均为项目方陈述。
+- [ai-job-search](https://github.com/MadsLorentzen/ai-job-search)：TypeScript 日榜显示 167 stars today；本地职位抓取、匹配与文书 drafter-reviewer 工作流，个人转化数据仅属作者案例。
+
+### 论文、旧项目回流与日期未确认
+
+- [StateM](https://arxiv.org/abs/2608.15089)于 2026-08-15 提交，以 durable states、checked transitions、recoverable runbooks 与版本化 practices 扩展 Agent harness；准确率和成本是论文作者报告。[HN](https://news.ycombinator.com/item?id=49357544)于 14:15 回流，列较旧研究。
+- [profile](https://github.com/jungledesh/profile)读取生产 vLLM metrics 并对照 GPU memory/FLOPs ceiling 诊断瓶颈；README 性能为项目方实验。[HN 回流](https://news.ycombinator.com/item?id=49357947)发生于 15:03。
+- [jax-realtime](https://github.com/sachinkesiraju/jax-realtime)组合 Whisper、Silero VAD、SmolLM2、Pocket TTS 与可选视觉模型，构建浏览器 WebGPU 全双工语音助手；[HN 回流](https://news.ycombinator.com/item?id=49357683)发生于 14:30。
+- [seahorse](https://github.com/ssanvi-builds/seahorse)是 local-first、MCP-native、Obsidian-readable 的双时态 Agent memory，效果主张待独立评估；[HN 回流](https://news.ycombinator.com/item?id=49357513)发生于 14:11。
+- [MoveChat](https://github.com/VC067/MoveChat)在浏览器本地存储中导出/迁移多家聊天会话；隐私与兼容性为项目方说明。[HN 回流](https://news.ycombinator.com/item?id=49358171)发生于 15:30。
+- [Bad benchmarks and evals](https://danluu.com/exercise-7/)原文日期为 2026-07-23，讨论 benchmark 代表性、单次运行、阈值不连续与 LLM grader 方差；作者复跑观察不可外推。[HN 回流](https://news.ycombinator.com/item?id=49358297)发生于 15:44。
+- [Vetted AI code is hard to justify](https://amoffat.github.io/blog/vetting-burnout.html)只标 2026-08-17、无时分，无法确认是否落入 48 小时窗口；作者讨论大 diff 审查成本与 burnout，列日期未确认。[HN](https://news.ycombinator.com/item?id=49358041)于 15:16 讨论。
+
+### 观察池
+
+- [checkpoint-run](https://github.com/agenticaotearoa/checkpoint-run)提供 checkpoint/resume、checksum、timeout、retry 与分步日志，只属 Agent/LLM 邻近开发工具；[HN](https://news.ycombinator.com/item?id=49357518)于 14:12 出现。
+- [veyra](https://github.com/iondodon/veyra)描述版本化 self-evolving local Agent 与 supervisor 回滚；仓库没有 LICENSE，不写成已确认开源许可证项目。[HN](https://news.ycombinator.com/item?id=49358474)于 16:02 出现。
+
 ## 来源链接
 
 原始入口已在各条目直接链接；本页优先使用 [Modular 官方公告](https://www.modular.com/blog/mojo-open-source)、[Hugging Face 工程博客](https://huggingface.co/blog/multi-vector-encoder)、[DFlash 2 工程原文](https://inco.ai/blog/dflash2/)、[SecIT-bench 官方文章](https://cribl.io/blog/introducing-secit-bench-cribls-ai-telemetry-benchmark-a-new-standard-for-evaluating-ai-models-in-it-and-security-workflows/)、[Volta 的 OOPSLA 页面](https://2026.splashcon.org/details/oopsla-2026/96/Equivalence-Checking-of-ML-GPU-Kernels)、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 sources URL 均在正文中出现，单页内未重复收录同一 URL。
@@ -217,5 +276,8 @@ tags:
 ## 采集状态
 
 - 已检查：HN 首页/newest/Algolia 最近 24 小时，本轮 10:12–13:12 共核 79 条新增；GitHub Trending 全站、Python、TypeScript 共 40 行；GitHub Search 五组截止前新建仓库去重 45 个；arXiv 48 小时查询前 100 条；Hugging Face Daily Papers 20 条、Blog 窗口内 3 条与 Simon Willison feed 窗口内 3 条；并打开 AAIF、论文、GitHub README 与 HN 原帖核验。
+- 16:10 补查：HN 增量 117 条、Trending 41 行、GitHub Search 去重 47 个、arXiv 48 小时 468 条并复核前 300、Hugging Face Daily Papers 100 条与 Blog/Simon Willison 增量。
+- 16:10 补查：HN 增量 117 条、Trending 41 行、GitHub Search 去重 47 个、arXiv 48 小时 468 条并复核前 300、Hugging Face Daily Papers 100 条与 Blog/Simon Willison 增量。
+- 16:10 补查：HN 增量 117 条、Trending 41 行、GitHub Search 去重 47 个、arXiv 48 小时 468 条并复核前 300、Hugging Face Daily Papers 100 条与 Blog/Simon Willison 增量。
 - 失败/受限：GitHub Trending 无结构化 API，改用公开 HTML；Lalit 的 code-comments fingerprint 原文返回 403，仅核到 HN 标题，证据不足未收入 sources；当天前序扫描中的 Nick Busey、The Shapes of Agent Memory、Grader Labs CUA、Goat Squad Studios 与 exe.dev 原文仍不可访问。日期或原文受限候选继续按证据状态分栏。
-- 当日各轮粗筛候选累计 1,572；累积保留 104 个唯一来源 URL；本轮有可靠来源增量，未触发二次补搜（secondPass=false）。
+- 当日各轮粗筛候选累计 2,183（16:10 本轮新增审阅 611 条原始记录）；累积保留 131 个唯一来源 URL；本轮有可靠来源增量，未触发二次补搜（secondPass=false）。

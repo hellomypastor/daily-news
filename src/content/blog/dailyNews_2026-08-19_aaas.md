@@ -1,16 +1,20 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-19T00:00:00+08:00"
-updatedAt: "2026-08-19T13:12:08+08:00"
+updatedAt: "2026-08-19T16:10:37+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredTitle: "Microsoft Agent Framework .NET 1.18.0"
-featuredUrl: "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0"
-featuredSummary: "正式 release 增加 Foundry hosted session 与用户身份透传，并允许 Agent 选择并发工具调用；直接涉及托管沙箱连续性和多用户隔离。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredPublishedAt: "2026-08-18 22:30 +08:00"
-featuredTags: ["Microsoft Agent Framework","Foundry","Hosted Session"]
+featuredTitle: "Building Shared Memory for AI Agents in Notion"
+featuredUrl: "https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"
+featuredSummary: "Notion 介绍 MIT 项目 Lore 的共享 Agent 记忆；属于开源记忆层，不是托管 Agent 发布。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-08-18 20:00 +08:00"
+featuredTags: ["Agent Memory","Notion","Adjacent Signal"]
+featuredImage: "https://images.ctfassets.net/spoqsaf9291f/3KcypMugRMDnYguXzeAcKm/da0e5d9d74872fbf0769a50432fe9e8e/Lore.jpg"
+featuredImageAlt: "Lore 将 Agent 对话、决策、任务和持久事实整理为 Notion 共享记忆的文章配图"
+featuredImageCaption: "图片来源：Notion"
 tags:
   - "AaaS"
   - "Adjacent Signal"
+  - "Adoption"
   - "ADP"
   - "AG-UI"
   - "Agent"
@@ -18,21 +22,26 @@ tags:
   - "Agent Commerce"
   - "Agent Governance"
   - "Agent Handoff"
+  - "Agent Memory"
   - "Agent OS"
   - "Agent Platform"
   - "Agent Runtime"
   - "Agent SDK"
+  - "Agentforce"
   - "AgentKit"
   - "Agents SDK"
   - "Approval"
   - "Async Agent"
   - "Async Task"
   - "Authentication"
+  - "Authorization"
   - "Automation"
   - "Baidu Cloud"
   - "Bedrock"
+  - "Billing"
   - "BYOA"
   - "ByteDance"
+  - "ChatGPT Business"
   - "China Telecom Cloud"
   - "Claude"
   - "Claude Code"
@@ -50,11 +59,14 @@ tags:
   - "Composio"
   - "Computer Use"
   - "Concurrency"
+  - "Configuration"
   - "Control Plane"
   - "Coze Loop"
   - "Credential Lifecycle"
+  - "CrewAI"
   - "CubeSandbox"
   - "Cursor"
+  - "Date Unconfirmed"
   - "Date Unverified"
   - "Deep Agents"
   - "Deep Agents Code"
@@ -69,30 +81,41 @@ tags:
   - "Evaluation"
   - "External Agent"
   - "FastPath"
+  - "Filesystem"
+  - "Flow"
   - "Foundry"
   - "Google ADK"
   - "Governance"
   - "Guardian"
   - "Guardrail"
+  - "Guardrails"
   - "Harness"
+  - "Helm"
   - "Hosted Session"
   - "Huawei Cloud"
   - "Kubernetes"
   - "LangSmith"
   - "Lifecycle"
+  - "Logging"
   - "Long-running Task"
   - "MaaS"
   - "Managed Agent"
   - "Marketplace"
   - "MCP"
   - "Microsoft Agent Framework"
+  - "Networking"
+  - "Notion"
+  - "OAuth"
   - "Observability"
   - "Octomind"
   - "Older Context"
   - "Open Source"
+  - "OpenAI"
   - "OpenHands"
   - "OpenSandbox"
   - "OpenViking"
+  - "Operations"
+  - "Orchestration"
   - "PaaS"
   - "Permission"
   - "PowerShell"
@@ -100,6 +123,7 @@ tags:
   - "Qoder"
   - "QuickJS"
   - "Red Hat"
+  - "Release"
   - "Reliability"
   - "Remote Agent"
   - "Remote Control"
@@ -108,10 +132,12 @@ tags:
   - "Remote Skills"
   - "Replit"
   - "Resource Limits"
+  - "Resume"
   - "Review"
   - "Risk Classification"
   - "Routing"
   - "Rumor"
+  - "Salesforce"
   - "Sample Signal"
   - "Sandbox"
   - "SDK"
@@ -127,6 +153,9 @@ tags:
   - "Snapshot Integrity"
   - "Stable Release"
   - "Startup"
+  - "Storage"
+  - "Studio"
+  - "Subagents"
   - "Template Lifecycle"
   - "Tencent Cloud"
   - "Tool Router"
@@ -134,6 +163,7 @@ tags:
   - "Tracing"
   - "Unverified"
   - "veADK"
+  - "Vercel"
   - "Vercel AI SDK"
   - "Video"
   - "Voice AI"
@@ -146,9 +176,9 @@ tags:
 
 ## 今日概览
 
-主窗口：2026-08-18 13:12:08 至 2026-08-19 13:12:08（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 13:12:08 至 2026-08-18 13:12:08。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
+主窗口：2026-08-18 16:10:37 至 2026-08-19 16:10:37（Asia/Shanghai）；24–72 小时观察窗：2026-08-16 16:10:37 至 2026-08-18 16:10:37。当天来源按累积规则全部保留；窗口仅用于发现与标注本轮候选，不用于删除此前来源。
 
-主窗口内最明确的正式 AaaS 更新仍包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。10:12 后新增的 Codex 跨线程审批隔离、按名称排队到最近会话与 Bedrock 凭据刷新，以及 Microsoft 工作流恢复/会话历史修复，都只是主分支工程信号；字节 OpenViking/Coze Loop 的异步任务与评测可观测更新同样未证明 AgentKit 云端 rollout。OpenSandbox/CubeSandbox 增量归入沙箱 PaaS 邻近信号；Claude、Codex 相关分别详见对应专题页。
+主窗口内最明确的正式 AaaS 更新仍包括 Microsoft Agent Framework .NET 1.18.0、Codex 0.148.0 稳定版、Claude Code v2.1.235、Claude Agent SDK Python v0.2.140 和 Composio Core 0.17.0。10:12 后新增的 Codex 跨线程审批隔离、按名称排队到最近会话与 Bedrock 凭据刷新，以及 Microsoft 工作流恢复/会话历史修复，都只是主分支工程信号；字节 OpenViking/Coze Loop 的异步任务与评测可观测更新同样未证明 AgentKit 云端 rollout。OpenSandbox Helm Chart 0.2.2 已升级为正式 PaaS release，CubeSandbox 增量仍归入沙箱 PaaS 邻近信号；Claude、Codex 相关分别详见对应专题页。
 
 ## 重点动态
 
@@ -289,6 +319,39 @@ tags:
 - **正式 release 与主分支开发信号必须分开。** Microsoft、Deep Agents、OpenHands、Cloudflare、Vercel 是 release；OpenAI Guardian、OpenViking 23:22/23:31 和 Cloudflare 23:19 仍只是 commits。
 - 样本包含 release、官方文章、主分支 commits、样例、静态产品页、社区发现和单源传闻；不据此推断市场份额、收入、采用规模或成熟度。
 
+## 16:10 滚动补充
+
+### 正式状态变化与远程 / 云端 Agent 执行
+
+- [OpenSandbox Helm Chart 0.2.2](https://github.com/opensandbox-group/OpenSandbox/releases/tag/helm%2Fopensandbox%2F0.2.2)于 13:59 正式发布，Chart/App 均为 0.2.2，提供 controller/server 一体化安装包。它把此前 controller socket 主分支修复升级为版本化交付，但仍属于沙箱 PaaS 邻近信号，不写成托管 Agent 服务发布。
+- OpenAI Agents SDK Python 的 [blocked tool output replay 脱敏](https://github.com/openai/openai-agents-python/commit/ed644fc7c3a8c013ded9e5cde7ff6a79d48c8b75)避免 Tool Guardrail 阻止的输出残留在 replay state；这是主分支信号、尚非发布，详见 OpenAI 专题页。
+- Vercel AI SDK 的 [Claude Code harness sandbox install 修复](https://github.com/vercel/ai/commit/54686d6d61887e7a268ffc593324ec6e698a26ed)为精确版本配置受审 postinstall，修复 pnpm 11 下沙箱 bootstrap 在模型执行前失败；属于 harness 工程信号，Claude Code 详见 Claude 专题页。
+
+### 海外厂商与中国厂商开发信号
+
+| 厂商 | 动态 | 日期 / 状态 | AaaS 含义 |
+|---|---|---|---|
+| Google | [ParallelAgent sub-agent escalation](https://github.com/google/adk-python/commit/0fd681e7d203d2bc7b86c72e4b539de6c735c889) | 14:52；主分支 | 增加升级事件与恢复测试，未证明 Vertex/Jules rollout。 |
+| Google | [避免重复 OAuth 提示并修复工具恢复](https://github.com/google/adk-python/commit/eaad2f83b93d7e0c678336923ca5be7a3b9d1260) | 14:53；主分支 | 改善授权与暂停任务恢复边界，尚非发布。 |
+| Google | [debug log 脱敏 HTTP options 凭据](https://github.com/google/adk-python/commit/1cd6f464e5b8ececa957928ca67d65145be558ab) | 15:16；主分支 | 托管/远程运行日志安全信号，尚非发布。 |
+| CrewAI | [失败重试关闭 Agent scope](https://github.com/crewAIInc/crewAI/commit/47fa48d787893d68bed0508e7ad757ea198c2c48) | 14:07；主分支 | 保持事件配对并保留 HITL 暂停状态。 |
+| CrewAI | [conversational flow 显式 opt-in](https://github.com/crewAIInc/crewAI/commit/f0e00df0360b8a1ec50261a0e8c952865d6ce6b9) | 15:09；主分支 | 自动启用明确配置并让错误配置 fail fast。 |
+| 字节 / veADK | [Codex sandbox 环境更新操作](https://github.com/volcengine/veadk-python/commit/7d62d12b85c75bfca1531eb73ab8228a350029d2) | 15:12；主分支 | Studio 增加环境更新动作，未证明 AgentKit 云端 rollout；Codex 详见 OpenAI 专题页。 |
+| 字节 / veADK | [AgentKit 侧栏快捷入口](https://github.com/volcengine/veadk-python/commit/6ad4756655e4c9488d6945fc89b6b3031c951871) | 15:32；主分支 | 产品整合开发信号，尚非服务发布。 |
+| 字节 / OpenViking | [排队上传资源统计](https://github.com/volcengine/OpenViking/commit/c4a76d90c18b1f158e0b5792e0cfc40e30b71008) | 15:39；主分支 | 异步任务可观测信号，未证明云端 rollout。 |
+
+### 日期未确认与邻近信号观察池
+
+- [ChatGPT Business General FAQ](https://help.openai.com/en/articles/8542115-chatgpt-business-general-faq)只显示相对更新时间，但确认 8 月 19 日起新增付费席位立即扣款并在付款后可用，涵盖 ChatGPT Agent/Codex 的 Business workspace；列日期未确认，详见 OpenAI 专题页。
+- [Salesforce Agentic Enterprise Index Second Edition](https://www.salesforce.com/agentforce/agentic-enterprise-index/)未标发布日期；其每组织 activated agents 从 5 到 13 的数字来自 Salesforce 自有生产客户 cohort、数据覆盖至 2026-04，不外推全行业。
+- [Building Shared Memory for AI Agents in Notion](https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion)于 2026-08-18 20:00 发布，介绍 MIT 项目 Lore 的 Agent 共享记忆；它是开源记忆层工程内容，不是托管 Agent 发布，详见开源专题页。
+- CubeSandbox 主分支新增 [用户范围文件系统视图](https://github.com/TencentCloud/CubeSandbox/commit/ddb9f527bd0c778509dc7762a08edfb292c55158)、[管理端口冲突检测](https://github.com/TencentCloud/CubeSandbox/commit/767f497473b8c49c2d37f0a6223b1d8f3a8934ac)、[高密度网络策略/TAP 加固](https://github.com/TencentCloud/CubeSandbox/commit/725b766028d79786fbbf1191e43f69c4bd601b8c)、[Node SDK volume 生命周期](https://github.com/TencentCloud/CubeSandbox/commit/f0e10b4f67b837ebee2ee4ddc02a7b9fbd63524a)与[跨 Container clone 日志转发序列化](https://github.com/TencentCloud/CubeSandbox/commit/1a3f9fefe08588a3fd52151a1a67434ad5e5ac8c)。这些改善沙箱授权、部署、网络、存储和 IO drain，但仍是 PaaS 主分支信号，不写成 AaaS 上线。
+
+<figure class="source-image">
+  <a href="https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion"><img src="https://images.ctfassets.net/spoqsaf9291f/3KcypMugRMDnYguXzeAcKm/da0e5d9d74872fbf0769a50432fe9e8e/Lore.jpg" alt="Lore 将 Agent 对话、决策、任务和持久事实整理为 Notion 共享记忆的文章配图" loading="lazy" /></a>
+  <figcaption><a href="https://www.notion.com/blog/building-shared-memory-for-ai-agents-in-notion">图片来源：Notion</a></figcaption>
+</figure>
+
 ## 来源链接
 
 1. [Microsoft Agent Framework .NET 1.18.0](https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0)
@@ -409,8 +472,9 @@ tags:
 ## 采集状态
 
 - 已检查来源：Microsoft Agent Framework/Semantic Kernel/Copilot/Azure Foundry，LangChain Deep Agents/LangGraph，Vercel AI SDK，OpenHands，Anthropic Claude Code，OpenAI Codex/Agents SDK，Google ADK/Jules/Vertex，Cloudflare Agents/Sandbox/Workers AI，AWS Bedrock/AgentCore，Replit、Cursor、Devin、Factory、Sourcegraph/Amp、CrewAI、Lindy、Harness、Docker、Red Hat、Composio、Octomind；以及字节 Coze/AgentKit/veADK/OpenViking/Trae/Seed、阿里百炼/Qoder、腾讯 ADP/CubeSandbox、百度、华为、天翼云、智谱、Moonshot/Kimi、MiniMax、DeepSeek；并补查 GitHub Releases/commits、HN Algolia、可访问 Reddit，以及 10:12–13:12 的官方 commits/releases API 增量与海外/中国厂商官方网页入口，复核主 24 小时与 24–72 小时观察窗口。
+- 16:10 补查：GitHub commits/releases API 与 releases.atom 覆盖 OpenAI Agents SDK、Google ADK、Vercel AI SDK、CrewAI、veADK、OpenViking、CubeSandbox、OpenSandbox；另查 HN、Notion、Salesforce、OpenAI Help Center 与中外托管 Agent 官网。
 - 失败来源：Replit Blog RSS 404；LangChain changelog feed 403，改查 GitHub Releases；Sourcegraph/Amp 与部分猜测的公开 releases API 路径 404，改查可用官方入口；X 未登录无法稳定读取完整时间线；WorkToper 直连 403；serverlessagent.dev、context-engine.app、premissai.com 仍受本地网络策略限制；部分中国厂商静态页和本轮部分官方博客/产品页没有可核实更新时间；Octomind 页面只有日期没有时刻；GitHub 网页搜索增量索引滞后，本轮改用官方 API 并成功读取批量增量。
-- 累计候选审阅记录：274 条（本轮新增 59 条原始记录：20 条官方仓库 commits、0 个新 release、39 条网页检索结果；加上既有累计 215 条审阅记录；该口径包含重复与未采纳候选）；保留：114 个唯一来源、96 条动态（16 组主窗口已核实 release/官方发布，39 组主分支或样例开发信号，5 组 24–72 小时观察，8 组较旧基线，9 组日期未确认候选，1 条未证实传闻，18 组 MaaS/PaaS/活动/预发布邻近信号）。
+- 累计候选审阅记录：324 条（16:10 本轮新增 50 条原始记录：39 个官方仓库 commit、1 个正式 release、7 个 HN 条目、2 个额外官方页面与 1 个截止后活动候选；口径包含重复与未采纳候选）；保留：133 个唯一来源、115 条动态；新增项按 AaaS 开发、日期未确认与 MaaS/PaaS 邻近信号分层。
 - 二次补搜：未运行（主窗口已有正式 AaaS release 且最终 sources 非 0，secondPass=false）。
 
-今日扫描完成，共 96 条动态，重点：正式发布主线不变；10:12–13:12 新增 Codex 并发线程审批/会话排队、Microsoft 工作流恢复与历史持久化，以及字节 OpenViking/Coze Loop 的异步任务和评测可观测工程信号；OpenSandbox/CubeSandbox 更新严格归入 PaaS 邻近池。
+今日扫描完成，共 115 条动态，重点：OpenSandbox 0.2.2 已形成正式 PaaS release；16:10 增量还包括 Agents SDK replay 脱敏、Google ADK 编排/认证修复、字节 Studio 与 OpenViking 开发信号，CubeSandbox 仍严格归入 PaaS 邻近池。
