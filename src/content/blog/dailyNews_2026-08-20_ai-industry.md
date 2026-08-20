@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T10:11:08+08:00"
+updatedAt: "2026-08-20T12:11:03+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Microsoft Agent Framework removes AG-UI history special cases"
 featuredUrl: "https://github.com/microsoft/agent-framework/commit/e2938f4531fed8003ea118e9b49b4e3df7e43090"
@@ -14,6 +14,7 @@ tags:
   - "AG-UI"
   - "Agent"
   - "Agent Framework"
+  - "Agent View"
   - "Agent.ai"
   - "Agents SDK"
   - "AI"
@@ -54,6 +55,8 @@ tags:
   - "Persistence"
   - "Planner"
   - "Privacy"
+  - "Provider"
+  - "PTY"
   - "Quantization"
   - "Qwen"
   - "Qwen Code"
@@ -61,6 +64,7 @@ tags:
   - "Reliability"
   - "Reproducibility"
   - "Research"
+  - "Responses"
   - "Runtime"
   - "Safety"
   - "SDK"
@@ -73,13 +77,15 @@ tags:
   - "Tool Execution"
   - "Transformers"
   - "Validation"
+  - "Voice"
   - "Watchlist"
+  - "Workflow"
   - "ZDR"
 ---
 
 ## 扫描结论
 
-主窗口：2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）；近两日：2026-08-18 10:11:08 至 2026-08-19 10:11:08；近三日：2026-08-17 10:11:08 至 2026-08-18 10:11:08。本轮在累计集合上新增 Google ADK 的 A2A 凭据隔离、函数调用一致性、本地执行器提速与 MCP 会话连续性修复，Microsoft Agent Framework 的 A2A 输入恢复，Deep Agents 的可恢复工具参数错误，以及 NVIDIA NeMo Guardrails 的默认日志副作用修复；这些主分支提交均标为开发信号，不等同正式上线。Anthropic 同期发布 Claude Code 2.1.237 与 Code Action 1.0.197，行业页保留其工程意义，并注明详见 Claude 专题页；OpenAI 项目同样保留专题页标注。
+主窗口：2026-08-19 12:11:03 至 2026-08-20 12:11:03（Asia/Shanghai）；近两日：2026-08-18 12:11:03 至 2026-08-19 12:11:03；近三日：2026-08-17 12:11:03 至 2026-08-18 12:11:03。本轮在累计集合上进一步新增 Google ADK 的 SQLite 状态浅合并修复、Qwen Code 的可持久化工作流执行状态与 Agent View PTY worker，以及 OpenAI Agents SDK 的失败终态/用量和 voice provider 修复；均为尚未发布的主分支信号。此前累计集合已新增 Google ADK 的 A2A 凭据隔离、函数调用一致性、本地执行器提速与 MCP 会话连续性修复，Microsoft Agent Framework 的 A2A 输入恢复，Deep Agents 的可恢复工具参数错误，以及 NVIDIA NeMo Guardrails 的默认日志副作用修复；这些主分支提交均标为开发信号，不等同正式上线。Anthropic 同期发布 Claude Code 2.1.237 与 Code Action 1.0.197，行业页保留其工程意义，并注明详见 Claude 专题页；OpenAI 项目同样保留专题页标注。
 
 ## 优先动态
 
@@ -108,6 +114,9 @@ tags:
 
 | 厂商 | 标题 | 日期 / 状态 | 摘要 |
 |---|---|---|---|
+| Google | [ADK 让 SQLite 状态合并遵循 `dict.update()` 语义](https://github.com/google/adk-python/commit/e4ba7040fb12f9a3ea468052567ec174dc31d443) | 2026-08-20 10:57 +08:00，主分支 | 避免 `json_patch` 深合并对象和把 null 当删除，令 app/user/session state delta 顶层键始终覆盖旧值；尚未发布。 |
+| Qwen | [Qwen Code 暴露并持久化工作流执行状态](https://github.com/QwenLM/qwen-code/commit/63fe7c174a6a5dc50d25f78c214fb671df5a3547) | 2026-08-20 11:41 +08:00，主分支 | 增加 workflow snapshot、事件边界、lineage 与 replay 校验，支持重启后保持执行投影；尚未发布。 |
+| Qwen | [Qwen Code 加入 Agent View PTY workers](https://github.com/QwenLM/qwen-code/commit/bba2e1a1845445d312b681a1cf3313dbe4d1591d) | 2026-08-20 11:11 +08:00，主分支 | 引入 supervisor/PTY worker、鉴权、socket ownership、流式 attach 与 backpressure 防护；尚未发布。 |
 | Google | [ADK 清理 PlanReActPlanner 内部标签](https://github.com/google/adk-python/commit/ac8dad258065ff58e91a1ca44afc72368250d241) | 2026-08-20 08:33 +08:00，主分支 | 从最终文本与 thought block 中移除 PLANNING、REASONING、ACTION、REPLANNING 等内部标记；尚未发布。 |
 | Google | [ADK 将异步函数响应配对到对应调用](https://github.com/google/adk-python/commit/deee6d2c474ccb9710e0b25a0b290bb76cc54c45) | 2026-08-20 07:49 +08:00，主分支 | 当 function-call ID 重用或长任务多次汇报进度时，把 response 归属到之前最近的同 ID call，并保留最终更新。 |
 | Google | [ADK 按连接维持 MCP Agent session](https://github.com/google/adk-python/commit/4e68bad19953a4b2cf5facca99108eb94f872663) | 2026-08-20 07:13 +08:00，主分支 | 兼容 MCP SDK 2.x 每次请求新建 ServerSession 的行为，改用底层 connection 作为会话键，避免工具每调用一次就丢失 Agent 对话。 |
@@ -130,6 +139,9 @@ tags:
 
 ## Anthropic / OpenAI 行业信号
 
+- [OpenAI Agents SDK JavaScript 拒绝不成功的 Responses 终态](https://github.com/openai/openai-agents-js/commit/c3bfb2c737569e34d64ffd45c72a8e839f8bd29c)并保留失败请求的已计费用量；主分支尚未发布，详见 OpenAI 专题页。
+- [OpenAI Agents SDK Python 让显式 provider 选项优先于默认 client](https://github.com/openai/openai-agents-python/commit/bfb981d63e10ab21adf1d2fa8e1df42379c8ecc8)，覆盖 core 与 voice 路径；主分支尚未发布，详见 OpenAI 专题页。
+- [OpenAI Agents SDK Python 补齐当前 TTS voice 类型](https://github.com/openai/openai-agents-python/commit/9fd6c81c597785500a4a7676ea7cffed47cbf333)，加入 ballad、verse、marin 与 cedar；主分支尚未发布，详见 OpenAI 专题页。
 - [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237) 修复 gateway / 自定义 base URL 的 prompt caching，并新增 Concise 输出风格；详见 Claude 专题页。
 - [Claude Code Action v1.0.197](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.197)中和 actions/checkout v6+ include 布局下的 checkout credential；详见 Claude 专题页。
 - [Claude Code v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236) 增加跨会话 idle 通知，并修复 Remote Control、自托管 runner 交接和后台 session；详见 Claude 专题页。
@@ -139,7 +151,7 @@ tags:
 
 ## 播客
 
-截止 10:11，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
+截止 12:11，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
 
 ## 近两日补充
 
@@ -148,7 +160,7 @@ tags:
 
 ## 近三日补充
 
-未发现可同时核实原始来源与时间、且落入 2026-08-17 10:11:08 至 2026-08-18 10:11:08 的新增条目；不以搜索索引日期代替发布时间。
+未发现可同时核实原始来源与时间、且落入 2026-08-17 12:11:03 至 2026-08-18 12:11:03 的新增条目；不以搜索索引日期代替发布时间。
 
 ## 日期未确认
 
@@ -161,13 +173,13 @@ tags:
 
 ## 来源链接
 
-正文已直接链接全部 46 个保留来源；同页 URL 已去重。
+正文已直接链接全部 52 个保留来源；同页 URL 已去重。
 
 ## 采集状态
 
 - 已检查：规范列出的国内外厂商、研究机构、Agent 平台、官方 GitHub feeds 与六类播客。
 - 失败来源：OpenAI News/xAI/部分中国厂商和播客入口存在 403、脚本依赖、索引滞后或精确时刻缺失；百度结果页尚未稳定显示；部分次级 GitHub 仓库的未认证 API 后段触发限流，核心新增改用官方 patch/HTML 复核。
-- 初始候选：363 条（在上一轮 338 个候选基础上，增量复核 25 个核心仓库 feed 与网页候选）；保留 46 个唯一来源。
+- 初始候选：375 条（在上一轮 363 个候选基础上，增量复核 12 个核心仓库与厂商/播客入口候选）；保留 52 个唯一来源。
 - 二次补搜：未运行（最终 sources 非 0，secondPass=false）。
 
-一句话：本轮主轴是 Agent runtime 继续收紧跨 Agent 凭据、函数调用与会话连续性边界，同时 Claude 发布链和 NeMo Guardrails 日志隔离补齐工程可用性。
+一句话：本轮增量主轴是 Agent runtime 的可恢复状态与失败语义继续收紧，Qwen 工作流/PTY 执行面和 OpenAI SDK provider 边界获得主分支加固。

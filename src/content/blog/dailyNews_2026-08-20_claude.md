@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T10:11:08+08:00"
+updatedAt: "2026-08-20T12:11:03+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.235"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.235"
@@ -15,6 +15,7 @@ tags:
   - "Agent SDK"
   - "Agents"
   - "Anthropic"
+  - "API"
   - "Auth"
   - "Auto Mode"
   - "Auto Update"
@@ -44,6 +45,8 @@ tags:
   - "macOS"
   - "Marketplace"
   - "MCP"
+  - "Memory"
+  - "Networking"
   - "Packaging"
   - "Permissions"
   - "Plugins"
@@ -54,9 +57,11 @@ tags:
   - "Research"
   - "Rewind"
   - "Sandbox"
+  - "Scheduled Tasks"
   - "Science"
   - "Security"
   - "Sessions"
+  - "Settings"
   - "Tools"
   - "TUI"
   - "TypeScript"
@@ -70,7 +75,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）。本轮在此前累计集合上新增核实 [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)：08:54 发布，修复经 LLM gateway / 自定义 base URL 会话的 prompt cache，并加入 Concise 输出风格；[TypeScript Agent SDK v0.3.237](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.237)、[Python Agent SDK v0.2.142](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.142)和 [Code Action v1.0.197](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.197)随后对齐或修复凭据处理。状态页未出现新事故。2.1.237 的部分 x64 原生包在截止前出现缺失报告，另有新增 Claude Code Issue 与社区样本；它们均按用户报告或日期未确认材料处理，不外推为普遍故障。
+扫描窗口：2026-08-19 12:11:03 至 2026-08-20 12:11:03（Asia/Shanghai）。本轮在此前累计集合上新增核实 [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)：08:54 发布，修复经 LLM gateway / 自定义 base URL 会话的 prompt cache，并加入 Concise 输出风格；[TypeScript Agent SDK v0.3.237](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.237)、[Python Agent SDK v0.2.142](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.142)和 [Code Action v1.0.197](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.197)随后对齐或修复凭据处理。状态页未出现新事故，官方发布列表仍停在 2.1.237。10:11 后新增 16 个 Claude Code Issue 候选，其中 5 个带 has repro，涉及非流式重试、hooks 配置写回、后台 worker 内存、Read hook 去重与 Cowork 定时任务恢复；它们均按用户报告处理，不外推为普遍故障。
 
 ## Tier 1
 
@@ -159,7 +164,7 @@ tags:
 
 ## 观察池
 
-- 累计 29 个 Claude Code Issue 带 has repro 或 reproduced 等标签，但仍属于用户提交；新增候选集中在 2.1.237 打包、VS Code hooks/UI、Desktop 对话框、自动更新、Windows TUI、Channels/MCP 与自定义 provider usage，等待维护方复现、关闭说明或 release note。
+- 累计 34 个 Claude Code Issue 带 has repro 或 reproduced 等标签，但仍属于用户提交；10:11 后新增的 [非流式重试收到 event-stream](https://github.com/anthropics/claude-code/issues/88110)、[settings.json 写回剥离 hook 自定义键](https://github.com/anthropics/claude-code/issues/88113)、[后台 worker 完成后不释放内存](https://github.com/anthropics/claude-code/issues/88116)、[Read 去重未考虑 PostToolUse 改写](https://github.com/anthropics/claude-code/issues/88118)与 [Cowork VM 重启终止定时任务](https://github.com/anthropics/claude-code/issues/88121)均带 has repro，等待维护方结论或 release note。
 - 周限额延期已获官方帮助页证实；关于永久化、统一降额或计量规则变化的社区猜测仍无官方依据。
 - Reddit 额度消耗帖正反样本并存且缺少统一上下文与精确时间，只作弱负向旁证。
 
@@ -220,9 +225,14 @@ tags:
 - [Claude Code 2.1.237 missing x64 native packages](https://github.com/anthropics/claude-code/issues/88103)
 - [Custom-provider subagent usage is empty](https://github.com/anthropics/claude-code/issues/88107)
 - [Claude Code burned through 5 hour limit in 20 minutes?](https://www.reddit.com/r/Anthropic/comments/1vssbrr/claude_code_burned_through_5_hour_limit_in_20/)
+- [Non-streaming retry receives event-stream response](https://github.com/anthropics/claude-code/issues/88110)
+- [settings.json writes strip unknown hook keys](https://github.com/anthropics/claude-code/issues/88113)
+- [Background workers retain memory after jobs complete](https://github.com/anthropics/claude-code/issues/88116)
+- [Read dedup ignores PostToolUse updatedToolOutput](https://github.com/anthropics/claude-code/issues/88118)
+- [Cowork VM restarts kill scheduled-task sessions](https://github.com/anthropics/claude-code/issues/88121)
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Research、Claude Blog、Help Center、Platform / Cowork 文档、Status API、Claude Code / Agent SDK / Code Action / Skills / 官方插件 GitHub、npm registry、Claude Code Issues、Reddit 三个社区、HN、X 与 YouTube；Tier 1–3 逐项搜索。
 - 失败：X 公开时间线无法稳定读取；Reddit JSON API 返回 403；YouTube 无可核时相关新视频；HN 候选为低互动转帖、既有/邻近内容或可回溯至已收官方发布，无独立新增。
-- 初始候选：97 条；保留来源：55 条；二次补搜：否（最终来源不为 0）。
+- 初始候选：113 条；保留来源：60 条；二次补搜：否（最终来源不为 0）。

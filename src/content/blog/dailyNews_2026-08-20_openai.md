@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T10:11:08+08:00"
+updatedAt: "2026-08-20T12:11:03+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "How to Turn a Business Question Into a Strategy Deck With ChatGPT Work | Tutorial"
 featuredUrl: "https://www.youtube.com/watch?v=XjSJ6ybS9I8"
@@ -40,6 +40,7 @@ tags:
   - "Business"
   - "Capacity"
   - "Changelog"
+  - "Chat Completions"
   - "ChatGPT"
   - "ChatGPT Ads"
   - "ChatGPT Business"
@@ -93,6 +94,8 @@ tags:
   - "Pre-release"
   - "Premium"
   - "Privacy"
+  - "Projects"
+  - "Provider"
   - "Publishing"
   - "Python"
   - "Realtime"
@@ -102,12 +105,14 @@ tags:
   - "Release Notes"
   - "Reliability"
   - "Replit"
+  - "Responses API"
   - "Ruby"
   - "Safety"
   - "SDK"
   - "Security"
   - "Shopify"
   - "Sites"
+  - "Sources"
   - "SSE"
   - "Streaming"
   - "Structured Outputs"
@@ -131,7 +136,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）。本日累积页面中最明确的产品与开发者动态有四组：OpenAI 发布 [Replit × GPT-5.6 Luna 案例](https://openai.com/index/replit)，说明 Replit Free Mode 由 Luna 驱动、复杂任务可路由到 Sol；Python SDK 连续发布 [v3.3.0](https://github.com/openai/openai-python/releases/tag/v3.3.0) 与安全依赖修补版 [v3.3.1](https://github.com/openai/openai-python/releases/tag/v3.3.1)；Agents SDK 则分别交付 Python [v0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0) 和 TypeScript [v0.17.0](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)，重点都包含 guardrail、replay/session state 与 provider 配置的 fail-closed 行为；官方状态页还记录了 [08:02–08:54 的 ChatGPT 登录与注册故障](https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39)，缓解后已确认恢复。
+扫描窗口：2026-08-19 12:11:03 至 2026-08-20 12:11:03（Asia/Shanghai）。本日累积页面中最明确的产品与开发者动态有四组：OpenAI 发布 [Replit × GPT-5.6 Luna 案例](https://openai.com/index/replit)，说明 Replit Free Mode 由 Luna 驱动、复杂任务可路由到 Sol；Python SDK 连续发布 [v3.3.0](https://github.com/openai/openai-python/releases/tag/v3.3.0) 与安全依赖修补版 [v3.3.1](https://github.com/openai/openai-python/releases/tag/v3.3.1)；Agents SDK 则分别交付 Python [v0.22.0](https://github.com/openai/openai-agents-python/releases/tag/v0.22.0) 和 TypeScript [v0.17.0](https://github.com/openai/openai-agents-js/releases/tag/v0.17.0)，重点都包含 guardrail、replay/session state 与 provider 配置的 fail-closed 行为；官方状态页还记录了 [08:02–08:54 的 ChatGPT 登录与注册故障](https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39)，缓解后已确认恢复。
 
 Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)，本轮后段另有 [0.149.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1) 与 [0.149.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2)，但两者都是仅含版本说明的预发布，不能写成稳定交付。ChatGPT / Codex、API 与 ChatGPT Release Notes 的官方更新页在截止时均没有 8 月 19 日新条目。此前两个 Work Mode 故障样本与本轮官方登录故障时间上并不重合，不能据此断言同一根因。
 
@@ -267,9 +272,9 @@ Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/
 - 社区观察：开发者论坛新增一条[编码成本与可靠性质疑](https://community.openai.com/t/the-models-are-getting-sick/1391379)，以及 [Atlas 离线数据导出](https://community.openai.com/t/feature-request-allow-offline-data-export-for-deprecated-chatgpt-atlas/1391381)、[视频生成](https://community.openai.com/t/feature-request-video-generation/1391383)、[spin-off chats 自动归组](https://community.openai.com/t/stop-spin-off-chats-from-cluttering-the-sidebar-automatic-grouping-subfolders/1391384)三项需求。全部保持单用户、未获官方确认标签。
 - 官方日程（日期未确认）：Academy 页面列出截止后举行的[政府行政支持岗位活动](https://academy.openai.com/public/events/ai-for-government-admin-executive-secretaries-and-critical-support-roles-qbp9hhuzkw)与 [ChatGPT Work 数据分析团队活动](https://academy.openai.com/public/clubs/work-users-ynjqu/events/chatgpt-work-for-data-analytics-teams-oknix1o7lq)；页面发布时间未列，不计作窗口内已发生事件。
 
-## 采集状态
+## 本轮 12:11 增补\n\n- SDK 主分支：Java SDK 新增 [ChatCompletionChunk obfuscation 字段](https://github.com/openai/openai-java/commit/9b1379bfe7049d1ab4a6497ef0326b359891e208)；Ruby SDK [改善 API 状态错误诊断](https://github.com/openai/openai-ruby/commit/eab2b2a0a42af10d1b83fd75bb3ef2c04ad4a137)。两项均是主分支提交，不是正式 release。\n- Agents SDK：Python 主分支[同步当前 OpenAI TTS voices](https://github.com/openai/openai-agents-python/commit/9fd6c81c597785500a4a7676ea7cffed47cbf333)并[让显式 OpenAI provider options 优先于默认 clients](https://github.com/openai/openai-agents-python/commit/bfb981d63e10ab21adf1d2fa8e1df42379c8ecc8)；TypeScript 主分支[拒绝不成功的 Responses 终态](https://github.com/openai/openai-agents-js/commit/c3bfb2c737569e34d64ffd45c72a8e839f8bd29c)。均尚未形成新 release。\n- 社区观察：一名用户报告[把对话移入 Project 后，既有与生成图片未进入 Project Sources](https://community.openai.com/t/project-sources-empty-after-moving-conversation-to-a-project/1391401)；仅有单用户复现，未见官方确认。\n\n## 采集状态
 
 - 已检查来源：OpenAI News 原文 / RSS、API 与 ChatGPT / Codex changelog、ChatGPT Release Notes、model guidance、Assistants 迁移、Status、Help Center（含 ChatGPT for Teens）、官方 YouTube / Academy、8 个官方 GitHub 仓库、Developer Community、Reddit、HN Algolia、X 与中英文可信二手检索。
 - 失败来源：OpenAI News 普通 curl 403（改用官方 RSS 与网页抓取器）；Reddit JSON / RSS 403 或结果不完整，公开搜索中的故障帖多已删除或信息量低；X 正文提取不稳定；YouTube 频道页提取有限；Irish Independent、Reuters、BBC 与 CNBC 部分原页受 robots / 抓取限制；GitHub 未认证 REST API 在早前全窗口批量复扫后触发 403 rate limit（10:11 增量改用可用的 GitHub API 会话核验）；JetBrains 独立入口未见可核实新增。
-- 初始候选数：275；保留来源数：84。
+- 初始候选数：288；保留来源数：90。
 - 二次补搜：否（最终来源不为 0）。

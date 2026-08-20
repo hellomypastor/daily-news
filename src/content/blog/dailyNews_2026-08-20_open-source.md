@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T10:11:08+08:00"
+updatedAt: "2026-08-20T12:11:03+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation"
 featuredUrl: "https://huggingface.co/blog/LiquidAI/qad"
@@ -22,6 +22,7 @@ tags:
   - "Agent Skills"
   - "AI"
   - "AI Engineering"
+  - "AI Safety"
   - "AI Security"
   - "Android"
   - "ASR"
@@ -38,6 +39,7 @@ tags:
   - "Developer Tools"
   - "Embeddings"
   - "Engineering"
+  - "Engineering Blog"
   - "Essay"
   - "Evaluation"
   - "Governance"
@@ -65,6 +67,7 @@ tags:
   - "Open Model"
   - "Open Source"
   - "Open Source Governance"
+  - "Open Weight"
   - "Open Weights"
   - "Post-Training"
   - "Protocol"
@@ -88,6 +91,7 @@ tags:
   - "Software Design"
   - "Sparse Autoencoder"
   - "Specification"
+  - "Synthetic Users"
   - "Test-Time Scaling"
   - "Testing Agent"
   - "Text Normalization"
@@ -97,13 +101,14 @@ tags:
   - "Verification"
   - "Video"
   - "Watchlist"
+  - "Watermark"
   - "Workflow"
   - "Workspace"
 ---
 
 ## 概览
 
-技术高亮窗口为 2026-08-18 10:11:08 至 2026-08-20 10:11:08，HN 讨论/发现窗口为 2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）。本轮在 100 个既有来源的不可删除基线上，复扫 HN 七组检索 708 条并逐条复核 07:11–10:11 newest 增量 82 条；同时检查 GitHub 三类 Trending 48 行、五组新仓库检索 50 条、arXiv 459 条、Hugging Face Daily Papers 100 条、Blog RSS 10 条与 Simon Willison feed 30 条。原始候选计数（含入口、关键词与增量重叠）共 1,487 条，累计保留 130 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。
+技术高亮窗口为 2026-08-18 10:11:08 至 2026-08-20 10:11:08，HN 讨论/发现窗口为 2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）。本轮在 100 个既有来源的不可删除基线上，复扫 HN 七组检索 708 条并逐条复核 07:11–10:11 newest 增量 82 条；同时检查 GitHub 三类 Trending 48 行、五组新仓库检索 50 条、arXiv 459 条、Hugging Face Daily Papers 100 条、Blog RSS 10 条与 Simon Willison feed 30 条。原始候选计数（含入口、关键词与增量重叠）共 1,487 条，累计保留 138 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。
 
 ## 已核实高亮
 
@@ -241,12 +246,19 @@ tags:
 - [Universality of Gradient Descent Neural Network Training](https://arxiv.org/abs/2007.13664) 是 2020-07-27 的理论论文；仅因 [HN](https://news.ycombinator.com/item?id=49368828) 于 08:05 回流（8 / 1）保留，不归入本日研究发布。
 - [Use the built-in GELU, don't roll your own](https://www.gilesthomas.com/2026/08/built-in-gelu) 本环境返回 HTTP 403，只能确认 [HN](https://news.ycombinator.com/item?id=49369247) 于 09:05 的发现（1 / 0）及标题，正文、精确日期和适用条件均未核实，列“日期未确认”。
 
+### 10:11–12:11 增量
+
+- [How Claude's watermark works](https://instavm.io/blog/how-claudes-watermark-works)（页面标示 2026-08-19）用可在浏览器运行的简化模型解释伪随机采样、n-gram key 和 z-score 检测；作者明确这只是 Claude 实际方案的简化直觉演示，不能据此反推生产实现。[HN](https://news.ycombinator.com/item?id=49369944) 于 11:10 发现，12:11 快照 3 / 0。
+- [MatrAIx](https://github.com/MatrAIx-ai/MatrAIx-Persona-8B) 仓库创建于 2026-07-31 14:40 +08:00、MIT，README 描述用 persona agents 在 Survey、Chat、Web 与 App 环境评估系统，并明确模拟不能替代真实用户证据；[HN](https://news.ycombinator.com/item?id=49370103) 于 11:34 回流，3 / 0，列旧项目回流。
+- [Fool's Gold](https://arxiv.org/abs/2608.17202) 提交于 2026-08-17，讨论开放权重模型面对 safety-removal attacks 的防御性欺骗；已早于 48 小时技术高亮窗口，仅因 [HN](https://news.ycombinator.com/item?id=49370276) 于 12:07 出现（1 / 0）列观察池，不写成今日论文。
+- [Scaling RAG: building an efficient pipeline for 500k chunks](https://www.rsolitario.com/scaling-rag-building-an-efficient-pipeline-for-500k-chunks-with-gemini-2-5-and-context-caching/) 在本环境被域名拦截，只能确认 [HN](https://news.ycombinator.com/item?id=49370221) 于 11:58 的标题与发现证据（1 / 0）；原文日期、500k chunks 的实现细节和性能主张均未核实，列“日期未确认”。
+
 ## 来源链接
 
-来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 130 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
+来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 138 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest 与 Algolia 固定 24 小时窗口七组实际返回 708 条，并逐条复核 07:11–10:11 newest 增量 82 条；GitHub Trending 全站/Python/TypeScript 48 行；GitHub Search 五组 50 条；arXiv 固定 48 小时四分类 459 条；Hugging Face Daily Papers 100 条、Blog RSS 10 条；Simon Willison feed 30 条，以及重点原文、README、许可证、创建时间和提交元数据。
-- 失败/受限：GitHub Trending 无结构化官方 API；GELU 原文返回 HTTP 403；Agent Swarms 与“Half-Day”原文仍被域名拦截；DFlash 2 只给日号，GEN-1.5、Ornith 与 Baseten book 缺精确日期；部分仓库无许可证或只有项目方证据；宽口径 GitHub 搜索仍含明显噪声。
-- 原始候选计数 1,487 条（入口、关键词与增量间有重叠），累计保留 130 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest 与 Algolia 固定 24 小时窗口七组实际返回 685 条，并逐条复核 10:11–12:11 newest 增量 59 条；GitHub Trending 全站/Python/TypeScript 48 行；GitHub Search 五组 50 条；arXiv 固定 48 小时四分类 459 条；Hugging Face Daily Papers 100 条、Blog RSS 10 条；Simon Willison feed 30 条，以及重点原文、README、许可证、创建时间和提交元数据。
+- 失败/受限：GitHub Trending 无结构化官方 API；GELU 原文返回 HTTP 403，RAG 500k 原文被域名拦截；Agent Swarms 与“Half-Day”原文仍被域名拦截；DFlash 2 只给日号，GEN-1.5、Ornith 与 Baseten book 缺精确日期；部分仓库无许可证或只有项目方证据；宽口径 GitHub 搜索仍含明显噪声。
+- 原始候选计数 1,441 条（入口、关键词与增量间有重叠），累计保留 138 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。

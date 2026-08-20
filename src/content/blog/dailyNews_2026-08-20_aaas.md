@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T10:11:08+08:00"
+updatedAt: "2026-08-20T12:11:03+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Microsoft Agent Framework removes AG-UI history special cases"
 featuredUrl: "https://github.com/microsoft/agent-framework/commit/e2938f4531fed8003ea118e9b49b4e3df7e43090"
@@ -14,6 +14,7 @@ tags:
   - "Adjacent Signal"
   - "AG-UI"
   - "Agent"
+  - "Agent Channel"
   - "Agent Payments"
   - "Agent Sandbox"
   - "Agent.ai"
@@ -25,6 +26,7 @@ tags:
   - "Alpha"
   - "Anthropic"
   - "Artifacts"
+  - "Attribution"
   - "Auditability"
   - "Authentication"
   - "Baidu"
@@ -48,12 +50,15 @@ tags:
   - "Deep Agents"
   - "Deep Agents Code"
   - "Development Signal"
+  - "DingTalk"
   - "DSW"
   - "Durable Recovery"
   - "EAS"
   - "Enterprise Policy"
   - "Event"
   - "Execution Policy"
+  - "Execution State"
+  - "Failure Handling"
   - "Foundry"
   - "Function Calling"
   - "Gateway"
@@ -78,6 +83,7 @@ tags:
   - "Persistence"
   - "Persistent Threads"
   - "Preview"
+  - "PTY Worker"
   - "Qoder"
   - "Qwen Code"
   - "Recovery"
@@ -104,12 +110,14 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）；24–72 小时观察窗口：2026-08-17 10:11:08 至 2026-08-19 10:11:08。本轮确认的 AaaS 重点继续从会话恢复、审批治理延伸到远程 A2A 凭据边界、MCP 连接级会话连续性、可恢复工具错误和 checkpoint 输入恢复；这些能力正在向客户端 SDK/运行时下沉，但不应等同各云平台的服务端 rollout。Claude/OpenAI 及开源/行业交叉链接允许重复，相关条目均标明详见对应专题页。
+主窗口：2026-08-19 12:11:03 至 2026-08-20 12:11:03（Asia/Shanghai）；24–72 小时观察窗口：2026-08-17 12:11:03 至 2026-08-19 12:11:03。本轮确认的 AaaS 重点继续从会话恢复、审批治理延伸到远程 A2A 凭据边界、MCP 连接级会话连续性、可恢复工具错误和 checkpoint 输入恢复；这些能力正在向客户端 SDK/运行时下沉，但不应等同各云平台的服务端 rollout。Claude/OpenAI 及开源/行业交叉链接允许重复，相关条目均标明详见对应专题页。
 
 ## 重点动态
 
 | 平台 | 动态 | 日期 / 状态 | AaaS 含义 |
 |---|---|---|---|
+| Qwen | [Qwen Code 公开工作流执行状态](https://github.com/QwenLM/qwen-code/commit/63fe7c174a6a5dc50d25f78c214fb671df5a3547)并[加入 Agent View PTY workers](https://github.com/QwenLM/qwen-code/commit/bba2e1a1845445d312b681a1cf3313dbe4d1591d) | 2026-08-20 11:11–11:41 +08:00，主分支 | 工作流快照/恢复和可重连 PTY worker 强化长任务观测与远程执行；尚非 Qoder Cloud Agents rollout。 |
+| Google | [ADK 修正 SQLite 会话状态合并](https://github.com/google/adk-python/commit/e4ba7040fb12f9a3ea468052567ec174dc31d443) | 2026-08-20 10:58 +08:00，主分支 | 避免重复事件增量更新时旧键残留，增强持久会话一致性；尚非 Vertex rollout。 |
 | Google | [ADK 阻止 RemoteA2aAgent 转发凭据请求](https://github.com/google/adk-python/commit/2aea8595fb1c5e0fddef7893a1985dc96dc82692)并[按 MCP 连接维持会话](https://github.com/google/adk-python/commit/4e68bad19953a4b2cf5facca99108eb94f872663) | 2026-08-20 07:14–07:50 +08:00，主分支 | 修补远程 peer 凭据外泄风险与 MCP SDK 2.x 下每次调用丢失对话的问题；尚非 Vertex 服务 rollout，详见开源专题页。 |
 | Microsoft | [Agent Framework A2A 输入恢复](https://github.com/microsoft/agent-framework/commit/435201b71b9685eef4379fd1b1eeea932684b9e8) | 2026-08-20 07:55 +08:00，主分支 | 让 INPUT_REQUIRED 暂停、相关性校验和 checkpoint 恢复沿既有 session 路径工作；尚非 Foundry rollout，详见开源专题页。 |
 | CrewAI | [CrewAI 1.15.17](https://github.com/crewAIInc/crewAI/releases/tag/1.15.17) | 2026-08-20 08:27 +08:00，正式发布 | 加入声明式 conversational flows，并修复 MCP server 命名、失败 scope 关闭、SSRF redirect-hop 校验及 Responses tool call；详见开源专题页。 |
@@ -134,6 +142,8 @@ tags:
 
 ## 远程 / 云端 Agent 执行
 
+- [Qwen Code Agent View PTY workers](https://github.com/QwenLM/qwen-code/commit/bba2e1a1845445d312b681a1cf3313dbe4d1591d)加入 supervisor、认证 sideband、可重连 attach lease、退出轮询和 socket 所有权保护；[工作流执行状态](https://github.com/QwenLM/qwen-code/commit/63fe7c174a6a5dc50d25f78c214fb671df5a3547)则公开快照、日志投影和依赖尾部并校验恢复 run ID。两项均在主分支，不能写成 Qoder Cloud Agents 服务端 rollout。
+- [Google ADK SQLite 状态合并修补](https://github.com/google/adk-python/commit/e4ba7040fb12f9a3ea468052567ec174dc31d443)让重复事件的增量状态按 `dict.update()` 语义更新，避免旧键残留；这是持久会话底座修补，尚非 Vertex Agent Engine rollout。
 - Google ADK 的 [RemoteA2aAgent 凭据请求清理](https://github.com/google/adk-python/commit/2aea8595fb1c5e0fddef7893a1985dc96dc82692)在消息重建和文本化前移除携带 OAuth client secret / service-account key 的 function call；[MCP agent-server 会话按连接键控](https://github.com/google/adk-python/commit/4e68bad19953a4b2cf5facca99108eb94f872663)兼容 MCP SDK 1.x/2.x，避免每次 tool call 重建会话。两项均是主分支工程修补，尚非 Vertex rollout，详见开源专题页。
 - Google ADK 还[把 function response 与原 call 配对](https://github.com/google/adk-python/commit/deee6d2c474ccb9710e0b25a0b290bb76cc54c45)，并[阻止 support_cfc 下重复工具执行](https://github.com/google/adk-python/commit/c986ff0fceedef2107485cf136dc3b70acec32d8)；[本地代码执行改用普通子解释器](https://github.com/google/adk-python/commit/c244a9c8330589d93046823ea21da80ae33a1406)，官方提交说明简单程序启动从约 2.3 秒降至约 35 毫秒。这些指标来自提交说明，未独立复测，且均不等同托管服务发布；详见开源专题页。
 - Microsoft Agent Framework [A2A 输入处理修补](https://github.com/microsoft/agent-framework/commit/435201b71b9685eef4379fd1b1eeea932684b9e8)明确拒绝空调用，把远程 INPUT_REQUIRED 映射到既有用户输入请求，并可从 checkpoint 恢复同一 task；仍是主分支，不能写成 Foundry 服务 rollout，详见开源专题页。
@@ -147,6 +157,8 @@ tags:
 
 ## 海外平台
 
+- [CrewAI project_id 遥测契约](https://github.com/crewAIInc/crewAI/commit/7c72d57b738e9caff24c7017a523a07189aec1b3)始终发出字段，用空值区分“当前客户端可上报但项目未声明”和旧客户端缺字段，改善托管观测归因；主分支尚未发布。
+- [OpenAI Agents SDK JavaScript 失败终态处理](https://github.com/openai/openai-agents-js/commit/c3bfb2c737569e34d64ffd45c72a8e839f8bd29c)拒绝 unsuccessful Responses terminal state，并补强重试和 usage tracking；属于未发布 SDK 工程信号，不等同托管服务 rollout，详见 OpenAI 专题页。
 - [CrewAI 1.15.17](https://github.com/crewAIInc/crewAI/releases/tag/1.15.17)正式发布声明式 conversational flows，并修复 MCP HTTP/SSE server_name、失败 scope、SSRF redirect-hop/peer-IP 校验和 Responses 原生 tool calls；这是框架发布，不自动证明 CrewAI Enterprise/托管控制面同步 rollout，详见开源专题页。
 - [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)修复经 LLM gateway 或 custom base URL 运行的会话 prompt caching，并新增 Concise 输出风格；属于客户端发布，详见 Claude 专题页。
 - [Deep Agents ask_user 错误恢复](https://github.com/langchain-ai/deepagents/commit/a7027edc6449e9a7dbf0e082b8747d0999125ca2)使模型可在错误 ToolMessage 后重试，但该提交尚未 release；详见开源专题页。
@@ -158,6 +170,8 @@ tags:
 - Langfuse [Turn scores into charts](https://langfuse.com/changelog/2026-08-19-turn-scores-into-charts)允许把 score table 转成时间图、异常 Pulse 与 dashboard widget，增强 Agent 评测/观测；官方仅标日期，精确时刻未确认。
 
 ## 中国平台（字节系优先）
+
+- [Qwen Code 钉钉引用媒体处理](https://github.com/QwenLM/qwen-code/commit/36c77ff803f54f93a5c93702baf3a243072a6fa7)让 Agent 接收被引用消息中的图片、音频、视频或文件，并在落盘失败时降级保留文本；属于企业消息渠道集成的主分支修补，尚非云服务发布。
 
 本轮对 Coze、AgentKit、veADK、OpenViking、Trae/Seed 做了官方入口与 GitHub feed 复核，主窗口未确认新的正式托管平台发布；不把普通主分支维护提交扩大为云端 rollout。日期未确认的官方资料仍确认：CozeLoop 可注册部署到 VeFaaS/AgentKit 的火山智能体并开展观测、调试和评测；Qoder 官网列出 Cloud Agents 为企业全托管平台；腾讯 Agent 沙箱为 Agent 提供托管 Code/Browser 隔离环境。它们都不是本轮新发布。阿里侧除 Qwen Code 的远程会话控制更新外，还出现 [DSW/EAS 全链路验证制品](https://github.com/QwenLM/qwen-code/releases/tag/dsw-eas-full-20260820-r1)（2026-08-20 01:13 +08:00），其说明仅确认基于 v0.21.14 完成 SWE-bench 与 Terminal-Bench 验证，不能据此推断 Qoder Cloud Agents、PAI DSW 或 EAS 服务端发布。百炼、腾讯、百度、智谱、Kimi、MiniMax 与 DeepSeek 未确认主窗口正式 AaaS 发布。
 
@@ -202,13 +216,13 @@ tags:
 
 ## 来源链接
 
-正文已直接链接全部 46 个保留来源；同页 URL 已去重。
+正文已直接链接全部 52 个保留来源；同页 URL 已去重。
 
 ## 采集状态
 
 - 已检查：Anthropic/OpenAI/Google/Microsoft、Cloudflare/LangChain/OpenHands/Replit/Devin/Cursor/Factory/Amp/CrewAI/Lindy，以及字节 Coze/AgentKit/veADK、阿里百炼/Qoder/Qwen Code、腾讯 ADP/Agent Sandbox、百度/智谱/Kimi/MiniMax/DeepSeek；同时复核 remote/session/sandbox/A2A/hosting/observability/pricing 关键词。
 - 失败来源：Replit RSS 404；部分 LangChain/xAI/中国厂商页面 403 或依赖脚本；X 互动量不可稳定复核；Agent.ai、Langfuse、SWIRL、Coze/Qoder 页面缺精确发布时间；百度结果页未稳定显示；GitHub compare 早前 403 后改用可用 API 会话；Cursor/Datadog 活动只检得二手转述且发生在截止后。
-- 初始候选：260 条（含官方 commits/releases、24–72 小时观察入口与网页检索结果）；保留 46 个唯一来源。
+- 初始候选：270 条（含官方 commits/releases、24–72 小时观察入口与网页检索结果）；保留 52 个唯一来源。
 - 二次补搜：未运行（最终 sources 非 0，secondPass=false）。
 
-今日扫描完成，共 46 条动态，重点：远程 A2A 凭据边界、MCP 连接级会话连续性、可恢复工具错误与 checkpoint 输入恢复正在成为托管运行时的共同控制面。
+今日扫描完成，共 52 条动态，重点：可重连 PTY worker、工作流快照恢复、持久会话状态一致性与失败终态治理正在向 Agent 运行时下沉。
