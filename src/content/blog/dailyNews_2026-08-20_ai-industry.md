@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T07:11:12+08:00"
+updatedAt: "2026-08-20T10:11:08+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Microsoft Agent Framework removes AG-UI history special cases"
 featuredUrl: "https://github.com/microsoft/agent-framework/commit/e2938f4531fed8003ea118e9b49b4e3df7e43090"
@@ -21,6 +21,8 @@ tags:
   - "Artifacts"
   - "Baidu"
   - "Claude Code"
+  - "Claude Code Action"
+  - "Code Execution"
   - "Cohere"
   - "Compaction"
   - "Context"
@@ -42,11 +44,15 @@ tags:
   - "MCP"
   - "Microsoft"
   - "Model Routing"
+  - "NeMo Guardrails"
+  - "NVIDIA"
   - "OAuth"
   - "Observability"
   - "OGX"
   - "OpenAI"
+  - "Performance"
   - "Persistence"
+  - "Planner"
   - "Privacy"
   - "Quantization"
   - "Qwen"
@@ -59,9 +65,12 @@ tags:
   - "Safety"
   - "SDK"
   - "Security"
+  - "Sessions"
   - "Spanner"
   - "State"
   - "Telemetry"
+  - "Tool Calling"
+  - "Tool Execution"
   - "Transformers"
   - "Validation"
   - "Watchlist"
@@ -70,12 +79,16 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-19 07:11:12 至 2026-08-20 07:11:12（Asia/Shanghai）；近两日：2026-08-18 07:11:12 至 2026-08-19 07:11:12；近三日：2026-08-17 07:11:12 至 2026-08-18 07:11:12。本轮新增 Deep Agents Code 0.1.58 正式发布，以及 LangChain 企业托管配置、Google ADK 会话回收、压缩计数、OAuth 恢复和工件持久化等主分支信号；主分支提交均标为开发信号，不等同正式上线。Anthropic/OpenAI 项目在本页保留行业意义，并注明详见专题页。
+主窗口：2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）；近两日：2026-08-18 10:11:08 至 2026-08-19 10:11:08；近三日：2026-08-17 10:11:08 至 2026-08-18 10:11:08。本轮在累计集合上新增 Google ADK 的 A2A 凭据隔离、函数调用一致性、本地执行器提速与 MCP 会话连续性修复，Microsoft Agent Framework 的 A2A 输入恢复，Deep Agents 的可恢复工具参数错误，以及 NVIDIA NeMo Guardrails 的默认日志副作用修复；这些主分支提交均标为开发信号，不等同正式上线。Anthropic 同期发布 Claude Code 2.1.237 与 Code Action 1.0.197，行业页保留其工程意义，并注明详见 Claude 专题页；OpenAI 项目同样保留专题页标注。
 
 ## 优先动态
 
 | 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
 |---|---|---|---|---|---|
+| Google | [ADK 阻止 RemoteA2aAgent 向远端转发凭据请求](https://github.com/google/adk-python/commit/2aea8595fb1c5e0fddef7893a1985dc96dc82692) | 官方主分支提交 | 2026-08-20 07:48 +08:00，已核实 | 同时清理含 AuthConfig 的 function call 与 response，避免 OAuth client secret 或 service-account key 被历史重放给远端 peer；尚未发布。 | 修补跨 Agent A2A 会话中的直接凭据泄漏路径。 |
+| Google | [ADK 本地代码执行改用普通子解释器](https://github.com/google/adk-python/commit/c244a9c8330589d93046823ea21da80ae33a1406) | 官方主分支提交 | 2026-08-20 08:38 +08:00，已核实 | UnsafeLocalCodeExecutor 从 multiprocessing spawn 改为普通子解释器；发布方测试把简单程序启动从约 2.3 秒降至约 35 毫秒，并避免子进程异常退出时永久等待。 | 显著降低本地代码工具的固定延迟，但数字仍是提交方测试。 |
+| Google | [ADK 修复 support_cfc 下函数重复执行](https://github.com/google/adk-python/commit/c986ff0fceedef2107485cf136dc3b70acec32d8) | 官方主分支提交 | 2026-08-20 09:04 +08:00，已核实 | support_cfc=True 时直接采用 live 路径已完成的后处理，避免同一工具再次进入普通 postprocess；尚未发布。 | 防止 Agent 因 runtime 路径重叠重复产生副作用。 |
+| Microsoft | [Agent Framework 修复编排中的 A2A 输入处理](https://github.com/microsoft/agent-framework/commit/435201b71b9685eef4379fd1b1eeea932684b9e8) | 官方主分支提交 | 2026-08-20 07:55 +08:00，已核实 | Python A2A 显式拒绝空 invocation，并让 group chat 的 INPUT_REQUIRED 可通过 checkpoint 恢复到同一 remote task；尚未发布。 | 补齐远端 Agent 暂停、用户补充输入与持久化恢复链路。 |
 | LangChain | [Deep Agents Code 0.1.58](https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.58) | 官方正式发布 | 2026-08-20 06:19 +08:00，已核实 | 要求 Python 3.12+，正式交付 MCP viewer 重新认证、GLM-5.3 路由、可中断 offload、MCP stderr 日志和多项终端交互修复。 | 把此前分散的开发信号收束为可安装版本，并明确了一项运行环境 breaking change。 |
 | LangChain | [Deep Agents Code 加入管理员托管配置](https://github.com/langchain-ai/deepagents/commit/d419122bfb748a823d1fa7cfd7207c428f4fbcab) | 官方主分支提交 | 2026-08-20 06:57 +08:00，已核实 | 固定 OS 路径的只读 `managed_config.toml` 可覆盖用户配置；安全边界键无法执行时 fail closed，尚未进入新 release。 | 编码 Agent 的企业治理从用户偏好推进到管理员强制策略与来源追踪。 |
 | Google | [ADK 恢复工作流节点认证时校验原始 OAuth 状态](https://github.com/google/adk-python/commit/5b59139e0ec944a8618d4a1df4182db464337566) | 官方主分支提交 | 2026-08-20 05:44 +08:00，已核实 | 恢复凭证使用节点自身 auth config，并要求 OAuth 响应回传请求生成的 state；尚未发布。 | 缩小 HITL 工作流恢复时被替换 token endpoint 或混淆授权响应的风险。 |
@@ -95,6 +108,11 @@ tags:
 
 | 厂商 | 标题 | 日期 / 状态 | 摘要 |
 |---|---|---|---|
+| Google | [ADK 清理 PlanReActPlanner 内部标签](https://github.com/google/adk-python/commit/ac8dad258065ff58e91a1ca44afc72368250d241) | 2026-08-20 08:33 +08:00，主分支 | 从最终文本与 thought block 中移除 PLANNING、REASONING、ACTION、REPLANNING 等内部标记；尚未发布。 |
+| Google | [ADK 将异步函数响应配对到对应调用](https://github.com/google/adk-python/commit/deee6d2c474ccb9710e0b25a0b290bb76cc54c45) | 2026-08-20 07:49 +08:00，主分支 | 当 function-call ID 重用或长任务多次汇报进度时，把 response 归属到之前最近的同 ID call，并保留最终更新。 |
+| Google | [ADK 按连接维持 MCP Agent session](https://github.com/google/adk-python/commit/4e68bad19953a4b2cf5facca99108eb94f872663) | 2026-08-20 07:13 +08:00，主分支 | 兼容 MCP SDK 2.x 每次请求新建 ServerSession 的行为，改用底层 connection 作为会话键，避免工具每调用一次就丢失 Agent 对话。 |
+| LangChain | [Deep Agents 让工具参数校验错误可恢复](https://github.com/langchain-ai/deepagents/commit/a7027edc6449e9a7dbf0e082b8747d0999125ca2) | 2026-08-20 08:27 +08:00，主分支 | ask_user 的模型生成参数不合法时改为错误 ToolMessage，让模型可修正重试；非预期异常仍 fail closed。 |
+| NVIDIA | [NeMo Guardrails 默认构造不再接管日志配置](https://github.com/NVIDIA-NeMo/Guardrails/commit/afe020ecdb6f9cdf9cc4e9b2f3d87ce145c023e7) | 2026-08-20 10:10 +08:00，主分支 | 默认 Guardrails 构造不再附加 handler 或关闭日志传播，只有 verbose=True 才显式配置 DEBUG；尚未发布。 |
 | Google | [ADK 回收 MCP session pool 的空闲会话](https://github.com/google/adk-python/commit/69a3ca5e119a821bc375246f0bfa2e9e2cfefc79) | 2026-08-20 05:58 +08:00，主分支 | 为 MCP session pool 加入空闲回收，并保护执行中的调用不被 sweep 中途关闭；尚未发布。 |
 | Google | [ADK 压缩阈值计入工具调用与响应字符](https://github.com/google/adk-python/commit/66908e4c613ff3686e85374696640e84c4d0f20f) | 2026-08-20 06:20 +08:00，主分支 | token 阈值估算不再只看文本，也计入 function call 参数和 function response 内容。 |
 | Google | [ADK 原子发布文件工件版本](https://github.com/google/adk-python/commit/94475c9a76c7c71246d6f5e4b083b3c3ee6869c0) | 2026-08-20 05:33 +08:00，主分支 | 文件 artifact 版本分配与发布改为原子路径，降低并发写入的版本竞争。 |
@@ -112,6 +130,8 @@ tags:
 
 ## Anthropic / OpenAI 行业信号
 
+- [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237) 修复 gateway / 自定义 base URL 的 prompt caching，并新增 Concise 输出风格；详见 Claude 专题页。
+- [Claude Code Action v1.0.197](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.197)中和 actions/checkout v6+ include 布局下的 checkout credential；详见 Claude 专题页。
 - [Claude Code v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236) 增加跨会话 idle 通知，并修复 Remote Control、自托管 runner 交接和后台 session；详见 Claude 专题页。
 - [OpenAI 的 Zero Data Retention 与 Private Safety Processing 公告](https://openai.com/index/offering-zero-data-retention-for-frontier-models)确认符合条件的 API 客户继续可用 ZDR，新处理方案仍在早期客户测试；详见 OpenAI 专题页。
 - [Claude Code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235) 更新权限对话框、subagent 提示与后台 cloud session 资源效率；详见 Claude 专题页。
@@ -119,12 +139,16 @@ tags:
 
 ## 播客
 
-截止 07:11，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
+截止 10:11，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
 
 ## 近两日补充
 
 - [Microsoft Agent Framework .NET 1.18.0](https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.18.0)（2026-08-18 22:30 +08:00）加入 Foundry hosted session、用户身份透传与 Agent 并发工具选择，是托管会话的重要补充。
 - [百度 Q2 2026 财报会](https://ir.baidu.com/events/event-details/q2-2026-baidu-earnings-conference-call)官方页面确认会议发生于 8 月 18 日；截止时结果页未稳定可访问，因此不采用网络二手流传的收入增速和金额。
+
+## 近三日补充
+
+未发现可同时核实原始来源与时间、且落入 2026-08-17 10:11:08 至 2026-08-18 10:11:08 的新增条目；不以搜索索引日期代替发布时间。
 
 ## 日期未确认
 
@@ -137,13 +161,13 @@ tags:
 
 ## 来源链接
 
-正文已直接链接全部 35 个保留来源；同页 URL 已去重。
+正文已直接链接全部 46 个保留来源；同页 URL 已去重。
 
 ## 采集状态
 
 - 已检查：规范列出的国内外厂商、研究机构、Agent 平台、官方 GitHub feeds 与六类播客。
-- 失败来源：OpenAI News/xAI/部分中国厂商和播客入口存在 403、脚本依赖、索引滞后或精确时刻缺失；百度结果页尚未稳定显示。
-- 初始候选：338 条（在上一轮 316 个候选基础上，增量复核 22 个核心仓库 feed 条目）；保留 35 个唯一来源。
+- 失败来源：OpenAI News/xAI/部分中国厂商和播客入口存在 403、脚本依赖、索引滞后或精确时刻缺失；百度结果页尚未稳定显示；部分次级 GitHub 仓库的未认证 API 后段触发限流，核心新增改用官方 patch/HTML 复核。
+- 初始候选：363 条（在上一轮 338 个候选基础上，增量复核 25 个核心仓库 feed 与网页候选）；保留 46 个唯一来源。
 - 二次补搜：未运行（最终 sources 非 0，secondPass=false）。
 
-一句话：本轮主轴是 Deep Agents Code 正式收束 MCP 与终端修复，同时企业托管策略、OAuth 恢复、会话回收和持久化一致性继续下沉到 Agent runtime。
+一句话：本轮主轴是 Agent runtime 继续收紧跨 Agent 凭据、函数调用与会话连续性边界，同时 Claude 发布链和 NeMo Guardrails 日志隔离补齐工程可用性。

@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T07:11:12+08:00"
+updatedAt: "2026-08-20T10:11:08+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation"
 featuredUrl: "https://huggingface.co/blog/LiquidAI/qad"
@@ -16,10 +16,12 @@ tags:
   - "AG-UI"
   - "Agent"
   - "Agent Evaluation"
+  - "Agent Harness"
   - "Agent Memory"
   - "Agent Protocol"
   - "Agent Skills"
   - "AI"
+  - "AI Engineering"
   - "AI Security"
   - "Android"
   - "ASR"
@@ -27,8 +29,10 @@ tags:
   - "BI"
   - "CLI"
   - "Code Generation"
+  - "Code Review"
   - "Coding Agent"
   - "Compiler"
+  - "Continual Learning"
   - "Date Unverified"
   - "DeepSeek Harness"
   - "Developer Tools"
@@ -45,39 +49,52 @@ tags:
   - "Inference"
   - "Interpretability"
   - "Knowledge Graph"
+  - "Leadership"
   - "LLM"
   - "LLM Judge"
+  - "Machine Learning"
   - "Mathematics"
   - "MCP"
   - "Mechanistic Interpretability"
   - "Memory"
+  - "ML Engineering"
   - "MLX"
   - "Mobile"
   - "Mojo"
+  - "Multi-Agent"
   - "Open Model"
   - "Open Source"
   - "Open Source Governance"
   - "Open Weights"
+  - "Post-Training"
   - "Protocol"
   - "Quantization"
   - "RAG"
+  - "Reasoning"
   - "Reinforcement Learning"
   - "Relational Learning"
   - "Research"
   - "Resurfaced"
+  - "Reverse Engineering"
   - "Robotics"
   - "Runtime"
   - "Rust"
   - "Safety"
   - "Sandbox"
+  - "Science"
   - "Security"
+  - "Self-Reflection"
+  - "Skills"
   - "Software Design"
   - "Sparse Autoencoder"
   - "Specification"
+  - "Test-Time Scaling"
+  - "Testing Agent"
   - "Text Normalization"
   - "Tokenizer"
   - "Training"
   - "Trending"
+  - "Verification"
   - "Video"
   - "Watchlist"
   - "Workflow"
@@ -86,7 +103,7 @@ tags:
 
 ## 概览
 
-技术高亮窗口为 2026-08-18 07:11:12 至 2026-08-20 07:11:12，HN 讨论/发现窗口为 2026-08-19 07:11:12 至 2026-08-20 07:11:12（Asia/Shanghai）。本轮在既有集合上复扫 HN 七组检索实际返回 425 条，并逐条复核 04:12–07:11 newest 增量 150 条；同时检查 GitHub 三类 Trending 48 行、五组新仓库检索 50 条、arXiv 215 条、Hugging Face Daily Papers 100 条、Blog RSS 10 条与 Simon Willison feed 15 条；原始候选计数（含入口间重叠）共 1,013 条，累计保留 100 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。
+技术高亮窗口为 2026-08-18 10:11:08 至 2026-08-20 10:11:08，HN 讨论/发现窗口为 2026-08-19 10:11:08 至 2026-08-20 10:11:08（Asia/Shanghai）。本轮在 100 个既有来源的不可删除基线上，复扫 HN 七组检索 708 条并逐条复核 07:11–10:11 newest 增量 82 条；同时检查 GitHub 三类 Trending 48 行、五组新仓库检索 50 条、arXiv 459 条、Hugging Face Daily Papers 100 条、Blog RSS 10 条与 Simon Willison feed 30 条。原始候选计数（含入口、关键词与增量重叠）共 1,487 条，累计保留 130 个唯一来源 URL。发布日期、仓库创建时间、GitHub 榜单快照与 HN 讨论时间分别记录，不互相替代。
 
 ## 已核实高亮
 
@@ -193,12 +210,43 @@ tags:
 - [Qwen 3.8 27B scores 52](https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/) 发布于 2026-08-18 07:58 +08:00，位于窗口边缘，属于单人模型测试。
 - 新仓库搜索保留：[sprix-sage-router](https://github.com/wang2122/sprix-sage-router)（MIT，A2A 路由）、[herdrm](https://github.com/missuo/herdrm)（未识别许可证，coding-agent 终端控制台）、[Wake](https://github.com/iAmCorey/Wake)（MIT，会话检索恢复）、[omp-best-of](https://github.com/wolfiesch/omp-best-of)（MIT，Best-of-N verifier）、[PhoneBuddySDK](https://github.com/APUS-AI-Lab/PhoneBuddySDK)（Apache-2.0，移动 Agent runtime）和 [agent-codemode](https://github.com/janwilmake/agent-codemode)（MIT，脚本调用 MCP）；均只有 README/API 元数据，未做独立安全与性能复核。
 
+## 10:11 增量
+
+### 已核实技术与工程高亮
+
+- [smolmachines / smolvm as a sandbox for untrusted Python & JavaScript](https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/)（Simon Willison feed：2026-08-20 07:16 +08:00）记录 Claude Code for web 因缺少 KVM 转而在 GitHub Actions 运行 smolvm 测试的过程；它是研究笔记和一次受控实测，不等同完整安全审计。
+- [What Is Reasoning](https://lucumr.pocoo.org/2026/8/19/what-is-reasoning/) 页面标示 2026-08-19，讨论在 Agent 系统里用可核查中间状态、工具与确定性组件界定 reasoning；[HN](https://news.ycombinator.com/item?id=49369498) 于 09:42 发现，10:17 快照 2 / 0。
+- [Raiders of the Lost Array](https://fetzu.ch/blog/20260819_claudevsdrobo/)（页面元数据：2026-08-19 23:00 +08:00）详述借助 coding agent 逆向与实现 macOS Drobo 驱动的过程、测试和失败边界；[HN](https://news.ycombinator.com/item?id=49368911) 于 08:18 出现，11 / 1。
+- [Technical leaders should have the largest AI exhaust](https://schipper.ai/posts/technical-leaders-should-have-the-largest-ai-exhaust/) 只标示 2026-08-19，主张技术负责人应亲自处在 AI 工具反馈循环中；这是工程管理观点，不作因果结论。[HN](https://news.ycombinator.com/item?id=49368389) 于 07:12 发现，8 / 4。
+
+### 论文 / 研究增量
+
+- [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](https://arxiv.org/abs/2608.19147)（v1：2026-08-20 01:33 +08:00）结合预编译 OpenVINO 分片、推测解码与微批处理；吞吐、广域延迟和 70B 演示结论均以作者代码与实验为准。
+- [What is Missing from AI Post-Training AI](https://arxiv.org/abs/2608.19072)（00:17）区分执行级迭代与策略级重估，并从公开轨迹中报告策略早期锁定；提升数字和解释仍受作者实验设计约束。
+- [Harness Continual Learning](https://arxiv.org/abs/2608.19013)（2026-08-19 23:12 +08:00）把 prompt、memory、tools、skills 和 routing 的演化视为模型参数之外的持续学习，并引入提交前 retention 检查。
+- [Grading the Graders](https://arxiv.org/abs/2608.19009)（23:10）按验证规范来源与保证边界提出 L0–L5 分类，明确 sampling 或 substitution 检查不能自动提供“没有遗漏”的完备性。
+- [SkillForge](https://arxiv.org/abs/2608.18933)（22:01）通过合成项目特定 issue 和自蒸馏提炼仓库 skills；[Test-Time Scaling in the Wild](https://arxiv.org/abs/2608.18931)（21:59）在开放生成任务上把瓶颈定位于候选利用/选择；二者性能结论均为论文实验。
+- [Training-Free Inference-Time Self-Reflection](https://arxiv.org/abs/2608.18884)（21:09）用 generate–critique–revise 与早停研究成本受限自验证，论文明确纯推理基准上没有超出置信区间的准确率提升；[SkillGate](https://arxiv.org/abs/2608.18852)（20:24）则把 skill 选择与后续执行拆成不同 credit channel。
+
+### GitHub Trending 与新仓库
+
+10:11 榜单新增相关项目为 [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)（92 stars today）、[ruflo](https://github.com/ruvnet/ruflo)（142）、[Sim](https://github.com/simstudioai/sim)（12）、[Letta Code](https://github.com/letta-ai/letta-code)（16）、[Desktop Commander MCP](https://github.com/wonderwhy-er/DesktopCommanderMCP)（5）和 [T3 Code](https://github.com/pingdotgg/t3code)（226）。这些数字只证明榜单热度；README 中的能力、用户量、安全和成熟度主张未获 Trending 独立验证。
+
+固定 48 小时 GitHub Search 还发现 [llm-inference-engineering](https://github.com/amitshekhariitbhu/llm-inference-engineering)（创建于 2026-08-18 11:10 +08:00、Apache-2.0），以 KV cache、PagedAttention、continuous batching、vLLM 和 SGLang 为学习主线；当前仍是新教育仓库，列观察状态。
+
+### 旧文回流、日期未确认与观察池
+
+- [Google styleguide code review skills](https://jeanbza.github.io/ai/claude/2026/08/08/google-codereview-skills.html) 原日为 2026-08-08 16:55 +08:00，把工程实践整理成 coding-agent 按需加载的评审 skills；[HN](https://news.ycombinator.com/item?id=49369606) 于 10:01 回流，1 / 0，不冒充今日发布。
+- [Blastproof](https://github.com/hamc/blastproof) 创建于 2026-07-25、MIT，README 描述按 diff 影响范围选择/生成测试的本地优先 PR Agent；[HN](https://news.ycombinator.com/item?id=49369345) 于 09:20 回流，1 / 1，测试覆盖和可靠性尚未独立复核。
+- [Universality of Gradient Descent Neural Network Training](https://arxiv.org/abs/2007.13664) 是 2020-07-27 的理论论文；仅因 [HN](https://news.ycombinator.com/item?id=49368828) 于 08:05 回流（8 / 1）保留，不归入本日研究发布。
+- [Use the built-in GELU, don't roll your own](https://www.gilesthomas.com/2026/08/built-in-gelu) 本环境返回 HTTP 403，只能确认 [HN](https://news.ycombinator.com/item?id=49369247) 于 09:05 的发现（1 / 0）及标题，正文、精确日期和适用条件均未核实，列“日期未确认”。
+
 ## 来源链接
 
-来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 100 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
+来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 130 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest 与 Algolia 最近 24 小时七组实际返回 425 条，并逐条复核 04:12–07:11 newest 增量 150 条；GitHub Trending 全站/Python/TypeScript 48 行；GitHub Search 五组 50 条；arXiv 48 小时四分类 215 条；Hugging Face Daily Papers 100 条、Blog RSS 10 条；Simon Willison feed 15 条，以及重点原文、README、许可证、创建时间和提交元数据。
-- 失败/受限：GitHub Trending 无结构化官方 API；Agent Swarms 与“Half-Day”原文在本环境被域名拦截；DFlash 2 只给日号，GEN-1.5、Ornith 与 Baseten book 缺精确日期；only-cli、Orion 等仓库未识别许可证；宽口径 GitHub 搜索仍有噪声；项目方性能、安全和成熟度均按自报或观察状态处理。
-- 原始候选计数 1,013 条（入口间有重叠），累计保留 100 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
+- 已检查：HN 首页/newest 与 Algolia 固定 24 小时窗口七组实际返回 708 条，并逐条复核 07:11–10:11 newest 增量 82 条；GitHub Trending 全站/Python/TypeScript 48 行；GitHub Search 五组 50 条；arXiv 固定 48 小时四分类 459 条；Hugging Face Daily Papers 100 条、Blog RSS 10 条；Simon Willison feed 30 条，以及重点原文、README、许可证、创建时间和提交元数据。
+- 失败/受限：GitHub Trending 无结构化官方 API；GELU 原文返回 HTTP 403；Agent Swarms 与“Half-Day”原文仍被域名拦截；DFlash 2 只给日号，GEN-1.5、Ornith 与 Baseten book 缺精确日期；部分仓库无许可证或只有项目方证据；宽口径 GitHub 搜索仍含明显噪声。
+- 原始候选计数 1,487 条（入口、关键词与增量间有重叠），累计保留 130 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
