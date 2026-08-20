@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T12:11:03+08:00"
+updatedAt: "2026-08-20T15:11:55+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation"
 featuredUrl: "https://huggingface.co/blog/LiquidAI/qad"
@@ -64,6 +64,7 @@ tags:
   - "Mobile"
   - "Mojo"
   - "Multi-Agent"
+  - "Observability"
   - "Open Model"
   - "Open Source"
   - "Open Source Governance"
@@ -253,12 +254,24 @@ tags:
 - [Fool's Gold](https://arxiv.org/abs/2608.17202) 提交于 2026-08-17，讨论开放权重模型面对 safety-removal attacks 的防御性欺骗；已早于 48 小时技术高亮窗口，仅因 [HN](https://news.ycombinator.com/item?id=49370276) 于 12:07 出现（1 / 0）列观察池，不写成今日论文。
 - [Scaling RAG: building an efficient pipeline for 500k chunks](https://www.rsolitario.com/scaling-rag-building-an-efficient-pipeline-for-500k-chunks-with-gemini-2-5-and-context-caching/) 在本环境被域名拦截，只能确认 [HN](https://news.ycombinator.com/item?id=49370221) 于 11:58 的标题与发现证据（1 / 0）；原文日期、500k chunks 的实现细节和性能主张均未核实，列“日期未确认”。
 
+## 12:11–15:11 增量
+
+### 已核实工程文章
+
+- [LLM Reasoning Traces Are Not Audit Records](https://rye.ai/blog/cot-faithfulness-reasoning-traces-not-audit-logs/)（页面元数据：2026-08-19）区分自然语言 reasoning trace 与实际 API/tool action 记录，指出 trace 可能是概括、选择性披露或事后合理化；文中引用的失真比例来自既有研究且不覆盖全部当前模型，不能外推为统一失真率。[HN](https://news.ycombinator.com/item?id=49371034) 于 14:20 +08:00 发现，15:11 快照 1 point / 1 comment。
+- [Designing Loops for Production-Grade Work](https://www.liquid.ai/blog/agent-loops)（官方元数据：2026-08-18）复盘让 coding agents 构建 BPE tokenizer trainer 的实验，重点是外部验证 harness、生产数据压力和多轮修复；“production-grade”与实验结果均按 Liquid AI 自述，不推广为通用自主能力结论。[HN](https://news.ycombinator.com/item?id=49370374) 于 12:25 +08:00 发现，15:11 快照 2 / 0。
+
+### 旧项目回流
+
+- [CaydenChik/doover](https://github.com/CaydenChik/doover) 创建于 2026-07-06、Apache-2.0；README 描述在 Agent 执行破坏性 shell 命令前快照文件并提供 journal/undo，覆盖范围与恢复可靠性仍以项目方测试为证据。[HN](https://news.ycombinator.com/item?id=49371211) 于 14:42 +08:00 回流，15:11 快照 2 / 1。
+- [Sma1lboy/rove](https://github.com/Sma1lboy/rove) 创建于 2026-05-09、MIT；它用 Git worktree、branch 与持久终端会话并行隔离 coding-agent 任务，跨 Agent 支持与稳定性按 README 记录。[HN](https://news.ycombinator.com/item?id=49370885) 于 13:58 +08:00 回流，15:11 快照 1 / 0。
+
 ## 来源链接
 
-来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 138 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
+来源均已在对应条目直接链接；本页优先使用官方工程文章、GitHub 原仓库、arXiv 原条目与 Hacker News 原帖。所有 146 个 sources URL 都在正文出现，同一 URL 在 sources 内唯一。
 
 ## 采集状态
 
-- 已检查：HN 首页/newest 与 Algolia 固定 24 小时窗口七组实际返回 685 条，并逐条复核 10:11–12:11 newest 增量 59 条；GitHub Trending 全站/Python/TypeScript 48 行；GitHub Search 五组 50 条；arXiv 固定 48 小时四分类 459 条；Hugging Face Daily Papers 100 条、Blog RSS 10 条；Simon Willison feed 30 条，以及重点原文、README、许可证、创建时间和提交元数据。
+- 已检查：HN 首页/newest 与 Algolia 固定 24 小时窗口七组实际返回 685 条，并逐条复核 12:11–15:11 newest 增量 66 条；GitHub Trending 全站/Python/TypeScript 日榜；GitHub Search 五组固定 48 小时检索；arXiv 四分类；Hugging Face Daily Papers、Blog RSS；Simon Willison feed，以及重点原文、README、许可证、创建时间和提交元数据。
 - 失败/受限：GitHub Trending 无结构化官方 API；GELU 原文返回 HTTP 403，RAG 500k 原文被域名拦截；Agent Swarms 与“Half-Day”原文仍被域名拦截；DFlash 2 只给日号，GEN-1.5、Ornith 与 Baseten book 缺精确日期；部分仓库无许可证或只有项目方证据；宽口径 GitHub 搜索仍含明显噪声。
-- 原始候选计数 1,441 条（入口、关键词与增量间有重叠），累计保留 138 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
+- 原始候选计数 1,507 条（入口、关键词与增量间有重叠），累计保留 146 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。

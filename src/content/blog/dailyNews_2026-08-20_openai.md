@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T12:11:03+08:00"
+updatedAt: "2026-08-20T15:11:48+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "How to Turn a Business Question Into a Strategy Deck With ChatGPT Work | Tutorial"
 featuredUrl: "https://www.youtube.com/watch?v=XjSJ6ybS9I8"
@@ -37,6 +37,8 @@ tags:
   - "Billing"
   - "Browser"
   - "Bug"
+  - "Bug Fix"
+  - "Bug Report"
   - "Business"
   - "Capacity"
   - "Changelog"
@@ -53,7 +55,9 @@ tags:
   - "Community"
   - "Compaction"
   - "Compatibility"
+  - "Connector"
   - "Connectors"
+  - "Conversation"
   - "Cost"
   - "Cyber"
   - "Data Analytics"
@@ -74,25 +78,30 @@ tags:
   - "Gov"
   - "GPT Image"
   - "GPT-5.6"
+  - "Guardian"
   - "Hate"
   - "IPO"
   - "Java"
   - "Logging"
   - "Login"
   - "Love"
+  - "macOS"
   - "MCP"
   - "Migration"
   - "Models"
   - "National Security"
   - "Next.js"
   - "Node.js"
+  - "OAuth"
   - "Official"
   - "OpenAI"
   - "Oversight"
   - "Performance"
+  - "Plugin"
   - "Plugins"
   - "Pre-release"
   - "Premium"
+  - "Prerelease"
   - "Privacy"
   - "Projects"
   - "Provider"
@@ -108,10 +117,14 @@ tags:
   - "Responses API"
   - "Ruby"
   - "Safety"
+  - "Sandbox"
   - "SDK"
   - "Security"
   - "Shopify"
+  - "Sidebar"
+  - "Signup"
   - "Sites"
+  - "Skills"
   - "Sources"
   - "SSE"
   - "Streaming"
@@ -120,17 +133,22 @@ tags:
   - "Supply Chain"
   - "Teens"
   - "Threads"
+  - "Tracing"
+  - "Trust"
   - "Tutorial"
   - "TypeScript"
   - "UI"
   - "Usage"
   - "Usage Limits"
   - "UX"
+  - "Verification"
   - "Video"
   - "Voice"
   - "Web"
   - "WebSocket"
   - "Windows"
+  - "Worktree"
+  - "YouTube Studio"
   - "ZDR"
 ---
 
@@ -272,9 +290,15 @@ Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/
 - 社区观察：开发者论坛新增一条[编码成本与可靠性质疑](https://community.openai.com/t/the-models-are-getting-sick/1391379)，以及 [Atlas 离线数据导出](https://community.openai.com/t/feature-request-allow-offline-data-export-for-deprecated-chatgpt-atlas/1391381)、[视频生成](https://community.openai.com/t/feature-request-video-generation/1391383)、[spin-off chats 自动归组](https://community.openai.com/t/stop-spin-off-chats-from-cluttering-the-sidebar-automatic-grouping-subfolders/1391384)三项需求。全部保持单用户、未获官方确认标签。
 - 官方日程（日期未确认）：Academy 页面列出截止后举行的[政府行政支持岗位活动](https://academy.openai.com/public/events/ai-for-government-admin-executive-secretaries-and-critical-support-roles-qbp9hhuzkw)与 [ChatGPT Work 数据分析团队活动](https://academy.openai.com/public/clubs/work-users-ynjqu/events/chatgpt-work-for-data-analytics-teams-oknix1o7lq)；页面发布时间未列，不计作窗口内已发生事件。
 
-## 本轮 12:11 增补\n\n- SDK 主分支：Java SDK 新增 [ChatCompletionChunk obfuscation 字段](https://github.com/openai/openai-java/commit/9b1379bfe7049d1ab4a6497ef0326b359891e208)；Ruby SDK [改善 API 状态错误诊断](https://github.com/openai/openai-ruby/commit/eab2b2a0a42af10d1b83fd75bb3ef2c04ad4a137)。两项均是主分支提交，不是正式 release。\n- Agents SDK：Python 主分支[同步当前 OpenAI TTS voices](https://github.com/openai/openai-agents-python/commit/9fd6c81c597785500a4a7676ea7cffed47cbf333)并[让显式 OpenAI provider options 优先于默认 clients](https://github.com/openai/openai-agents-python/commit/bfb981d63e10ab21adf1d2fa8e1df42379c8ecc8)；TypeScript 主分支[拒绝不成功的 Responses 终态](https://github.com/openai/openai-agents-js/commit/c3bfb2c737569e34d64ffd45c72a8e839f8bd29c)。均尚未形成新 release。\n- 社区观察：一名用户报告[把对话移入 Project 后，既有与生成图片未进入 Project Sources](https://community.openai.com/t/project-sources-empty-after-moving-conversation-to-a-project/1391401)；仅有单用户复现，未见官方确认。\n\n## 采集状态
+## 本轮 12:11 增补\n\n- SDK 主分支：Java SDK 新增 [ChatCompletionChunk obfuscation 字段](https://github.com/openai/openai-java/commit/9b1379bfe7049d1ab4a6497ef0326b359891e208)；Ruby SDK [改善 API 状态错误诊断](https://github.com/openai/openai-ruby/commit/eab2b2a0a42af10d1b83fd75bb3ef2c04ad4a137)。两项均是主分支提交，不是正式 release。\n- Agents SDK：Python 主分支[同步当前 OpenAI TTS voices](https://github.com/openai/openai-agents-python/commit/9fd6c81c597785500a4a7676ea7cffed47cbf333)并[让显式 OpenAI provider options 优先于默认 clients](https://github.com/openai/openai-agents-python/commit/bfb981d63e10ab21adf1d2fa8e1df42379c8ecc8)；TypeScript 主分支[拒绝不成功的 Responses 终态](https://github.com/openai/openai-agents-js/commit/c3bfb2c737569e34d64ffd45c72a8e839f8bd29c)。均尚未形成新 release。\n- 社区观察：一名用户报告[把对话移入 Project 后，既有与生成图片未进入 Project Sources](https://community.openai.com/t/project-sources-empty-after-moving-conversation-to-a-project/1391401)；仅有单用户复现，未见官方确认。\n\n## 本轮 15:11 增补
+
+- Codex：新增 [0.149.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.3)，仍是仅含版本号说明的预发布。主分支集中合入安全加固，包括 [MCP OAuth refresh token 绑定 issuer](https://github.com/openai/codex/commit/250b5ea2bff83edb151b29ca93248856c970126c)、[阻止 apply_patch 扩大写权限](https://github.com/openai/codex/commit/530c1aed58b88060cfe851005c9dae3a89f44ad0)、[加固 fallback credential 写入](https://github.com/openai/codex/commit/929e2b9c1d8a54c6409fada200440964e366ed39)、[防御 skill 安装符号链接](https://github.com/openai/codex/commit/5c305eb50b3ebd12476c4bec6dc3de3c596b29a2)、[校验 linked worktree 信任继承](https://github.com/openai/codex/commit/bc3545b805de6e91a11b88114fe1673b678633ca)、[修补 macOS Seatbelt rename 绕过](https://github.com/openai/codex/commit/52e387dacaf5375d9fe5a77f7fc5f6fe31d2f610)和 [Guardian v2 默认跳过已沙箱化命令](https://github.com/openai/codex/commit/910ecccf30ba051efe5e5060dc8ccc644c554c7c)。这些均为主分支提交，不是正式 release。
+- Agents SDK Python：主分支修复[返回缓存 MCP tools 前进行深拷贝](https://github.com/openai/openai-agents-python/commit/eb3a5d5b5d1539e304c452b207639a320d89ac6e)与[关闭 tracing 后 flush 缓冲数据](https://github.com/openai/openai-agents-python/commit/502bccddd3b68f4183f8679687ff3a340928b817)；均尚未形成新 release。
+- 社区观察：新增单用户报告包括[侧栏标题未采用首条 prompt 指定标题](https://community.openai.com/t/sidebar-chat-title-behavior-no-longer-uses-title-given-in-initial-prompt/1391403)、[plugin submission 验证同步阻塞](https://community.openai.com/t/plugin-submission-blocked-despite-approved-individual-verification/1391411)、[TAC 验证阻塞 Codex 项目](https://community.openai.com/t/tac-identity-verification-failure-is-blocking-my-project-work-with-codex/1391416)与[注册生日日期字段上限异常](https://community.openai.com/t/bug-report-signup-birthday-field-validation-caps-day-input-at-12/1391423)；需求信号则有[拆分既有长对话](https://community.openai.com/t/feature-request-move-part-of-an-existing-conversation-to-a-new-chat/1391406)和 [YouTube Studio connector](https://community.openai.com/t/chatgpt-youtube-studio-request/1391412)。全部未获官方确认，不代表普遍故障或功能承诺。
+
+## 采集状态
 
 - 已检查来源：OpenAI News 原文 / RSS、API 与 ChatGPT / Codex changelog、ChatGPT Release Notes、model guidance、Assistants 迁移、Status、Help Center（含 ChatGPT for Teens）、官方 YouTube / Academy、8 个官方 GitHub 仓库、Developer Community、Reddit、HN Algolia、X 与中英文可信二手检索。
 - 失败来源：OpenAI News 普通 curl 403（改用官方 RSS 与网页抓取器）；Reddit JSON / RSS 403 或结果不完整，公开搜索中的故障帖多已删除或信息量低；X 正文提取不稳定；YouTube 频道页提取有限；Irish Independent、Reuters、BBC 与 CNBC 部分原页受 robots / 抓取限制；GitHub 未认证 REST API 在早前全窗口批量复扫后触发 403 rate limit（10:11 增量改用可用的 GitHub API 会话核验）；JetBrains 独立入口未见可核实新增。
-- 初始候选数：288；保留来源数：90。
+- 初始候选数：304；保留来源数：106。
 - 二次补搜：否（最终来源不为 0）。

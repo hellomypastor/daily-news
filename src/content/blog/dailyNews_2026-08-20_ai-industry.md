@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T12:11:03+08:00"
+updatedAt: "2026-08-20T15:20:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Microsoft Agent Framework removes AG-UI history special cases"
 featuredUrl: "https://github.com/microsoft/agent-framework/commit/e2938f4531fed8003ea118e9b49b4e3df7e43090"
@@ -20,6 +20,7 @@ tags:
   - "AI"
   - "Anthropic"
   - "Artifacts"
+  - "Attachments"
   - "Baidu"
   - "Claude Code"
   - "Claude Code Action"
@@ -40,6 +41,7 @@ tags:
   - "HubSpot"
   - "Hugging Face"
   - "Industry"
+  - "Isolation"
   - "LangChain"
   - "Liquid AI"
   - "MCP"
@@ -75,10 +77,12 @@ tags:
   - "Telemetry"
   - "Tool Calling"
   - "Tool Execution"
+  - "Tracing"
   - "Transformers"
   - "Validation"
   - "Voice"
   - "Watchlist"
+  - "Web Shell"
   - "Workflow"
   - "ZDR"
 ---
@@ -114,6 +118,12 @@ tags:
 
 | 厂商 | 标题 | 日期 / 状态 | 摘要 |
 |---|---|---|---|
+| Google | [ADK 补录客户端工具执行结果](https://github.com/google/adk-python/commit/4599a52659f9c3655263b3aabd39a189c692c0d2) | 2026-08-20 13:42 +08:00，主分支 | 捕获客户端工具结果并转换为匹配的 function_response；提交说明 drain 尚未接线，只作开发信号。 |
+| Microsoft | [Agent Framework 避免无变化的 AG-UI 预测状态快照](https://github.com/microsoft/agent-framework/commit/26b28b43863feeeefc9ddc696f91d589e773bb89) | 2026-08-20 13:51 +08:00，主分支 | 仅在预测或确定性状态确有更新时发出合并快照，减少重复事件。 |
+| Qwen | [Qwen Code 加入独立会话隔离基础能力](https://github.com/QwenLM/qwen-code/commit/a659539bc7cbf34589cf7e583429060e4ae0d95a) | 2026-08-20 14:15 +08:00，主分支 | 引入私有目录、会话 ID 大小写冲突与恢复保护，对损坏元数据 fail-closed；尚未发布。 |
+| Qwen | [Qwen Code 统一文件上传与持久引用](https://github.com/QwenLM/qwen-code/commit/a41d5ec0588e52e49b4d5708ecbc4f8115a0ef24) | 2026-08-20 14:18 +08:00，主分支 | 文件写入会话附件目录，队列与 replay 只保留鉴权引用；单附件上限 8 MiB。 |
+| OpenAI | [Agents SDK Python 深拷贝 MCP 缓存工具](https://github.com/openai/openai-agents-python/commit/eb3a5d5b5d1539e304c452b207639a320d89ac6e) | 2026-08-20 14:13 +08:00，主分支 | 避免调用方修改嵌套 schema 后污染缓存；详见 OpenAI 专题页。 |
+| OpenAI | [Agents SDK Python 在 tracing 关闭后仍刷新缓冲区](https://github.com/openai/openai-agents-python/commit/502bccddd3b68f4183f8679687ff3a340928b817) | 2026-08-20 14:12 +08:00，主分支 | 确保禁用前已缓冲的数据仍可交给 processor；详见 OpenAI 专题页。 |
 | Google | [ADK 让 SQLite 状态合并遵循 `dict.update()` 语义](https://github.com/google/adk-python/commit/e4ba7040fb12f9a3ea468052567ec174dc31d443) | 2026-08-20 10:57 +08:00，主分支 | 避免 `json_patch` 深合并对象和把 null 当删除，令 app/user/session state delta 顶层键始终覆盖旧值；尚未发布。 |
 | Qwen | [Qwen Code 暴露并持久化工作流执行状态](https://github.com/QwenLM/qwen-code/commit/63fe7c174a6a5dc50d25f78c214fb671df5a3547) | 2026-08-20 11:41 +08:00，主分支 | 增加 workflow snapshot、事件边界、lineage 与 replay 校验，支持重启后保持执行投影；尚未发布。 |
 | Qwen | [Qwen Code 加入 Agent View PTY workers](https://github.com/QwenLM/qwen-code/commit/bba2e1a1845445d312b681a1cf3313dbe4d1591d) | 2026-08-20 11:11 +08:00，主分支 | 引入 supervisor/PTY worker、鉴权、socket ownership、流式 attach 与 backpressure 防护；尚未发布。 |
@@ -151,7 +161,7 @@ tags:
 
 ## 播客
 
-截止 12:11，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
+截止 15:20，Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口未发现可同时核实原始发布日期且落入主窗口的新一期；无法稳定取得精确时刻的候选未写成确认发布。
 
 ## 近两日补充
 
@@ -173,13 +183,13 @@ tags:
 
 ## 来源链接
 
-正文已直接链接全部 52 个保留来源；同页 URL 已去重。
+正文已直接链接全部 58 个保留来源；同页 URL 已去重。
 
 ## 采集状态
 
 - 已检查：规范列出的国内外厂商、研究机构、Agent 平台、官方 GitHub feeds 与六类播客。
 - 失败来源：OpenAI News/xAI/部分中国厂商和播客入口存在 403、脚本依赖、索引滞后或精确时刻缺失；百度结果页尚未稳定显示；部分次级 GitHub 仓库的未认证 API 后段触发限流，核心新增改用官方 patch/HTML 复核。
-- 初始候选：375 条（在上一轮 363 个候选基础上，增量复核 12 个核心仓库与厂商/播客入口候选）；保留 52 个唯一来源。
+- 初始候选：388 条（在上一轮 375 个候选基础上，增量复核 13 个核心仓库候选）；保留 58 个唯一来源。
 - 二次补搜：未运行（最终 sources 非 0，secondPass=false）。
 
-一句话：本轮增量主轴是 Agent runtime 的可恢复状态与失败语义继续收紧，Qwen 工作流/PTY 执行面和 OpenAI SDK provider 边界获得主分支加固。
+一句话：本轮增量主轴是 Agent 会话隔离、持久附件、状态快照与工具缓存边界继续收紧，均需等待正式版本确认。
