@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T15:11:38+08:00"
+updatedAt: "2026-08-20T22:58:37+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.235"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.235"
@@ -43,6 +43,7 @@ tags:
   - "Hooks"
   - "Incident"
   - "Installation"
+  - "iOS"
   - "Knowledge Work"
   - "Linux"
   - "macOS"
@@ -51,6 +52,7 @@ tags:
   - "Memory"
   - "Networking"
   - "Packaging"
+  - "Performance"
   - "Permissions"
   - "Plugins"
   - "Prompt Cache"
@@ -66,6 +68,7 @@ tags:
   - "Sessions"
   - "Settings"
   - "SSH"
+  - "Storage"
   - "Tools"
   - "TUI"
   - "TypeScript"
@@ -79,7 +82,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-19 15:11:38 至 2026-08-20 15:11:38（Asia/Shanghai）。本轮在此前累计集合上新增核实 [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)：08:54 发布，修复经 LLM gateway / 自定义 base URL 会话的 prompt cache，并加入 Concise 输出风格；[TypeScript Agent SDK v0.3.237](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.237)、[Python Agent SDK v0.2.142](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.142)和 [Code Action v1.0.197](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.197)随后对齐或修复凭据处理。状态页未出现新事故，官方发布列表仍停在 2.1.237。12:11 后未出现新正式版本或状态事故；新增 24 个 Claude Code Issue 候选，其中 4 个作为高信号观察样本保留，涉及 Agent 消息投递、会话丢失、MCP 新协议兼容与 Desktop SSH。它们均按用户报告处理，不外推为普遍故障。
+扫描窗口：2026-08-19 22:58:37 至 2026-08-20 22:58:37（Asia/Shanghai）。本轮在此前累计集合上新增核实 [Claude Code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)：08:54 发布，修复经 LLM gateway / 自定义 base URL 会话的 prompt cache，并加入 Concise 输出风格；[TypeScript Agent SDK v0.3.237](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.237)、[Python Agent SDK v0.2.142](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.142)和 [Code Action v1.0.197](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.197)随后对齐或修复凭据处理。状态页未出现新事故，官方发布列表仍停在 2.1.237。15:11 后至截止仍未出现新正式版本或状态事故；GitHub 检出 119 个新增 Issue 候选，其中 5 个高信号样本进入观察池，涉及运行中工作树被清理、跨会话消息、TUI 首次提示冻结、Desktop 未确认的大体积下载和插件依赖。它们均按用户报告处理，不外推为普遍故障。
 
 ## Tier 1
 
@@ -88,7 +91,7 @@ tags:
 | Claude Code CLI | [v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237) 于 08:54 发布，修复 LLM gateway / 自定义 base URL 会话的 prompt cache，并加入 Concise 输出风格；[v2.1.236](https://github.com/anthropics/claude-code/releases/tag/v2.1.236)与 [v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)作为累计来源保留。官方[周限额活动](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)延长至 8 月 31 日，5 小时限额不变。 |
 | VS Code 集成 | v2.1.236 加入 transcript 屏幕阅读器播报与按 turn 标题导航；新增的 [SessionStart 插件 additionalContext 未注入](https://github.com/anthropics/claude-code/issues/88086)与[空错误元素产生横向滚动条](https://github.com/anthropics/claude-code/issues/88095)，以及既有[连续编辑使用陈旧 diff 基线](https://github.com/anthropics/claude-code/issues/87943)，均是单用户 has repro 报告。 |
 | JetBrains 集成 | 无独立官方新增；只检出低信息量请求。 |
-| Managed Agents：sessions | v2.1.236 改进后台会话时序；[Agent 消息投递静默失效](https://github.com/anthropics/claude-code/issues/88125)、[会话无操作丢失](https://github.com/anthropics/claude-code/issues/88126)、[后台任务空闲后被终止](https://github.com/anthropics/claude-code/issues/88071)、[Remote Control 运行 24 小时后 OAuth 失效](https://github.com/anthropics/claude-code/issues/88054)与[工作树后 cwd 无法解析](https://github.com/anthropics/claude-code/issues/88082)均是带 has repro 的用户报告。 |
+| Managed Agents：sessions | v2.1.236 改进后台会话时序；[Agent 消息投递静默失效](https://github.com/anthropics/claude-code/issues/88125)、[会话无操作丢失](https://github.com/anthropics/claude-code/issues/88126)、[后台任务空闲后被终止](https://github.com/anthropics/claude-code/issues/88071)、[Remote Control 运行 24 小时后 OAuth 失效](https://github.com/anthropics/claude-code/issues/88054)与[工作树后 cwd 无法解析](https://github.com/anthropics/claude-code/issues/88082)均是带 has repro 的用户报告；新增的[运行中工作树被自动清理](https://github.com/anthropics/claude-code/issues/88255)带 data-loss 标签。 |
 | Managed Agents：webhooks | 无新增发布。 |
 | Managed Agents：environments | v2.1.236 修复云环境列表异常时的提示；无独立环境 API 发布。 |
 | Managed Agents：memory stores | 无新增发布。 |
@@ -108,8 +111,8 @@ tags:
 | 组合产品 | 状态 |
 |---|---|
 | Chrome / 浏览器 Agent | 无官方发布；[select_browser 影响其他会话浏览器](https://github.com/anthropics/claude-code/issues/88057)是旧版本单用户 has repro 报告，尚未在 2.1.236 重测。 |
-| Desktop / Preview | Desktop/Cowork 变更日志仅有日期；[macOS Desktop 局域网 SSH 失败](https://github.com/anthropics/claude-code/issues/88146)是带 has repro 的单用户报告；[AskUserQuestion 在 macOS Desktop 中被取消](https://github.com/anthropics/claude-code/issues/88087)、[恢复 transcript 后侧栏无会话](https://github.com/anthropics/claude-code/issues/88065)与[会话历史数日不刷新](https://github.com/anthropics/claude-code/issues/88076)是单用户报告。Preview 无新增。 |
-| Marketplace / Connectors / Plugins | 官方目录继续同步版本指针；submodule 安装问题仅作观察候选。 |
+| Desktop / Preview | Desktop/Cowork 变更日志仅有日期；[macOS Desktop 局域网 SSH 失败](https://github.com/anthropics/claude-code/issues/88146)是带 has repro 的单用户报告；[AskUserQuestion 在 macOS Desktop 中被取消](https://github.com/anthropics/claude-code/issues/88087)、[恢复 transcript 后侧栏无会话](https://github.com/anthropics/claude-code/issues/88065)与[会话历史数日不刷新](https://github.com/anthropics/claude-code/issues/88076)是单用户报告。另有[Desktop 本地 Agent 未经存储确认下载 8.5 GB iOS Simulator runtime](https://github.com/anthropics/claude-code/issues/88234)的带复现用户报告；数字仅代表报告者环境。Preview 无新增。 |
+| Marketplace / Connectors / Plugins | 官方目录继续同步版本指针；submodule 安装问题与[依赖版本约束被忽略、prune 删除在用依赖](https://github.com/anthropics/claude-code/issues/88170)均只作用户报告观察候选。 |
 | 当前官方创意 / 视频模型 | 无窗口内新公告；不根据社区昵称或猜测补造型号。 |
 | Voice Mode | 无新增。 |
 | Microsoft 365 集成 | 无新增。 |
@@ -168,6 +171,7 @@ tags:
 
 ## 观察池
 
+- 15:11 后新增高信号用户报告包括：[自动清理仍被运行会话使用的工作树](https://github.com/anthropics/claude-code/issues/88255)带 has repro / data-loss；[Desktop 跨会话消息送达但不处理](https://github.com/anthropics/claude-code/issues/88252)、[首次提示冻结 40–60 秒且内存升高](https://github.com/anthropics/claude-code/issues/88257)、[本地 Agent 下载 8.5 GB iOS Simulator runtime](https://github.com/anthropics/claude-code/issues/88234)与[插件依赖约束被忽略](https://github.com/anthropics/claude-code/issues/88170)均带 has repro。时长、容量与影响仅代表报告者环境，等待维护方确认。
 - 累计观察样本仍属于用户提交；12:11 后新增的 [Agent 消息投递静默失效](https://github.com/anthropics/claude-code/issues/88125)与 [MCP 缓存提示字段被误判必填](https://github.com/anthropics/claude-code/issues/88128)带 has repro，[会话无操作丢失](https://github.com/anthropics/claude-code/issues/88126)带 data-loss 标签，[macOS Desktop 局域网 SSH 失败](https://github.com/anthropics/claude-code/issues/88146)带 has repro，均等待维护方结论。此前 10:11 后新增的 [非流式重试收到 event-stream](https://github.com/anthropics/claude-code/issues/88110)、[settings.json 写回剥离 hook 自定义键](https://github.com/anthropics/claude-code/issues/88113)、[后台 worker 完成后不释放内存](https://github.com/anthropics/claude-code/issues/88116)、[Read 去重未考虑 PostToolUse 改写](https://github.com/anthropics/claude-code/issues/88118)与 [Cowork VM 重启终止定时任务](https://github.com/anthropics/claude-code/issues/88121)均带 has repro，等待维护方结论或 release note。
 - 周限额延期已获官方帮助页证实；关于永久化、统一降额或计量规则变化的社区猜测仍无官方依据。
 - Reddit 额度消耗帖正反样本并存且缺少统一上下文与精确时间，只作弱负向旁证。
@@ -238,9 +242,14 @@ tags:
 - [Sessions silently deleted without user action](https://github.com/anthropics/claude-code/issues/88126)
 - [MCP cache hints treated as required](https://github.com/anthropics/claude-code/issues/88128)
 - [Desktop SSH fails for local-subnet hosts](https://github.com/anthropics/claude-code/issues/88146)
+- [Automatic worktree cleanup deletes directories actively in use](https://github.com/anthropics/claude-code/issues/88255)
+- [Desktop inter-session messages delivered but never processed](https://github.com/anthropics/claude-code/issues/88252)
+- [First prompt freezes TUI for 40–60 seconds](https://github.com/anthropics/claude-code/issues/88257)
+- [Desktop local agent downloads an 8.5 GB iOS Simulator runtime](https://github.com/anthropics/claude-code/issues/88234)
+- [Marketplace dependency constraints ignored](https://github.com/anthropics/claude-code/issues/88170)
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Research、Claude Blog、Help Center、Platform / Cowork 文档、Status API、Claude Code / Agent SDK / Code Action / Skills / 官方插件 GitHub、npm registry、Claude Code Issues、Reddit 三个社区、HN、X 与 YouTube；Tier 1–3 逐项搜索。
 - 失败：X 公开时间线无法稳定读取；Reddit JSON API 返回 403；YouTube 无可核时相关新视频；HN 候选为低互动转帖、既有/邻近内容或可回溯至已收官方发布，无独立新增。
-- 初始候选：137 条；保留来源：64 条；二次补搜：否（最终来源不为 0）。
+- 初始候选：256 条；保留来源：69 条；二次补搜：否（最终来源不为 0）。

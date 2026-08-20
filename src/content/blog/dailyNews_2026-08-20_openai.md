@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T15:11:48+08:00"
+updatedAt: "2026-08-20T22:58:37+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "How to Turn a Business Question Into a Strategy Deck With ChatGPT Work | Tutorial"
 featuredUrl: "https://www.youtube.com/watch?v=XjSJ6ybS9I8"
@@ -25,6 +25,7 @@ tags:
   - "Agent"
   - "Agents SDK"
   - "Analysis"
+  - "Analytics"
   - "API"
   - "API Types"
   - "Apps SDK"
@@ -89,6 +90,7 @@ tags:
   - "MCP"
   - "Migration"
   - "Models"
+  - "Multi-agent"
   - "National Security"
   - "Next.js"
   - "Node.js"
@@ -295,6 +297,12 @@ Codex CLI 的正式稳定增量仍是 [0.148.0](https://github.com/openai/codex/
 - Codex：新增 [0.149.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.3)，仍是仅含版本号说明的预发布。主分支集中合入安全加固，包括 [MCP OAuth refresh token 绑定 issuer](https://github.com/openai/codex/commit/250b5ea2bff83edb151b29ca93248856c970126c)、[阻止 apply_patch 扩大写权限](https://github.com/openai/codex/commit/530c1aed58b88060cfe851005c9dae3a89f44ad0)、[加固 fallback credential 写入](https://github.com/openai/codex/commit/929e2b9c1d8a54c6409fada200440964e366ed39)、[防御 skill 安装符号链接](https://github.com/openai/codex/commit/5c305eb50b3ebd12476c4bec6dc3de3c596b29a2)、[校验 linked worktree 信任继承](https://github.com/openai/codex/commit/bc3545b805de6e91a11b88114fe1673b678633ca)、[修补 macOS Seatbelt rename 绕过](https://github.com/openai/codex/commit/52e387dacaf5375d9fe5a77f7fc5f6fe31d2f610)和 [Guardian v2 默认跳过已沙箱化命令](https://github.com/openai/codex/commit/910ecccf30ba051efe5e5060dc8ccc644c554c7c)。这些均为主分支提交，不是正式 release。
 - Agents SDK Python：主分支修复[返回缓存 MCP tools 前进行深拷贝](https://github.com/openai/openai-agents-python/commit/eb3a5d5b5d1539e304c452b207639a320d89ac6e)与[关闭 tracing 后 flush 缓冲数据](https://github.com/openai/openai-agents-python/commit/502bccddd3b68f4183f8679687ff3a340928b817)；均尚未形成新 release。
 - 社区观察：新增单用户报告包括[侧栏标题未采用首条 prompt 指定标题](https://community.openai.com/t/sidebar-chat-title-behavior-no-longer-uses-title-given-in-initial-prompt/1391403)、[plugin submission 验证同步阻塞](https://community.openai.com/t/plugin-submission-blocked-despite-approved-individual-verification/1391411)、[TAC 验证阻塞 Codex 项目](https://community.openai.com/t/tac-identity-verification-failure-is-blocking-my-project-work-with-codex/1391416)与[注册生日日期字段上限异常](https://community.openai.com/t/bug-report-signup-birthday-field-validation-caps-day-input-at-12/1391423)；需求信号则有[拆分既有长对话](https://community.openai.com/t/feature-request-move-part-of-an-existing-conversation-to-a-new-chat/1391406)和 [YouTube Studio connector](https://community.openai.com/t/chatgpt-youtube-studio-request/1391412)。全部未获官方确认，不代表普遍故障或功能承诺。
+
+## 本轮 22:58 增补
+
+- Codex：新增 [0.149.0-alpha.4](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4)、[alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.5)与 [alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.6)，三者均标为预发布且只有版本级说明，不能写成稳定版。主分支新增[停止在 V8 workflows 持久化 checkout credentials](https://github.com/openai/codex/commit/6d020311f0f883ddf8c4622d36533527800ee905)、[公开 browser settings imports 的 managed policy](https://github.com/openai/codex/commit/1674b0a130987522de3f34d080b793585a355da1)与[记录 multi-agent v2 spawn analytics](https://github.com/openai/codex/commit/9894a14c81e50bbd845a337e4f77293f1cbc2633)；均为主分支提交，不是正式交付。
+- SDK：Python SDK 主分支[保持 Azure 认证跨 transport 边界](https://github.com/openai/openai-python/commit/06ef57caafe73d625ad4458ab5d29241e30c44bc)；Agents SDK Python [支持自定义 OpenAI TTS voice ID](https://github.com/openai/openai-agents-python/commit/f73e747530d898328ba56eaf45c6f6d1ec806cc8)，Agents SDK TypeScript [隔离缓存 MCP tool definitions](https://github.com/openai/openai-agents-js/commit/6721ccd2f87b26072c6f8bf3e2edf17ba425979b)。这些都是 commit，尚未形成新 release。
+- 社区观察：开发者论坛新增单用户报告 [Windows 桌面端卡在 Thinking、移动端仍可用](https://community.openai.com/t/windows-desktop-app-stuck-on-thinking-while-mobile-chat-worked/1391493)，以及请求 ChatGPT Developer Mode [支持 MCP Tasks Extension](https://community.openai.com/t/feature-request-support-mcp-tasks-extension-sep-2663-mcp-2026-07-28-in-chatgpt-developer-mode/1391486)；前者无官方事故确认，后者只是需求信号。
 
 ## 采集状态
 

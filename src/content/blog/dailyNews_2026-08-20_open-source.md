@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-20T00:00:00+08:00"
-updatedAt: "2026-08-20T15:11:55+08:00"
+updatedAt: "2026-08-20T22:58:37+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation"
 featuredUrl: "https://huggingface.co/blog/LiquidAI/qad"
