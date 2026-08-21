@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T04:01:00+08:00"
+updatedAt: "2026-08-22T07:02:39+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -16,11 +16,14 @@ tags:
   - "Anthropic"
   - "Claude"
   - "Claude Code"
+  - "Claude Security"
   - "Community"
   - "Comparison"
   - "Enterprise"
   - "Hate"
   - "Love"
+  - "Mythos 5"
+  - "Open Source"
   - "Plugins"
   - "Quality"
   - "Security"
@@ -29,7 +32,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-21 04:01 至 2026-08-22 04:01（Asia/Shanghai）**。本轮累计确认 2 条官方更新：Claude Code v2.1.239 与 v2.1.238；其中 v2.1.239 在截止前约 7 分钟发布。社区样本则明显分化：有人仍认可 Claude 在编码与长上下文上的能力，也有多条低样本帖子集中抱怨配额消耗、规划稳定性和过度设计。社区体验均只代表发帖者自述，不能据此推断平台已调整配额或模型。
+采集窗口：**2026-08-21 07:02 至 2026-08-22 07:02（Asia/Shanghai）**。当天累计保留 2 条 Claude Code 官方版本更新，其中 v2.1.239 落入本轮窗口，v2.1.238 已滑出本轮窗口但按同日累积规则继续保留。另发现 1 条仅标注 8 月 21 日、缺少精确时分的 Anthropic 官方 Claude Security 更新，列入“日期未确认”，不将其断言为窗口内发布。社区样本则明显分化：有人仍认可 Claude 在编码与长上下文上的能力，也有多条低样本帖子集中抱怨配额消耗、规划稳定性和过度设计。社区体验均只代表发帖者自述，不能据此推断平台已调整配额或模型。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -65,7 +68,7 @@ tags:
 
 ## Tier 3：垂直领域
 
-Security 有可验证的邻近更新：v2.1.238 收紧了项目级 MCP/plugin/agent 文件中的 `headersHelper` 凭据环境继承和信任要求；这属于 Claude Code 版本内的安全改动。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客服方向在本窗口未找到新的官方发布。
+Security 新增一条日期层面可验证、精确时分未确认的官方更新：[Anthropic 宣布 Claude Security 扫描已可使用 Claude Mythos 5](https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders)，面向 Claude Enterprise 客户保持 public beta；扫描会给出 CWE 分类、置信度、严重性与建议修复，并要求人工审批后实施。Anthropic 同时宣布 3500 万美元 Claude credits 的 Defender Advantage Fund，用于开源漏洞修补、自动化扫描/修补和新的防御方法。由于页面只标注 2026-08-21，无法确认是否落在本轮 07:02 截点之后，故不计作已确认的 24 小时发布。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客服方向在本窗口未找到新的官方发布。
 
 ## 官方更新（由新到旧）
 
@@ -100,6 +103,8 @@ Security 有可验证的邻近更新：v2.1.238 收紧了项目级 MCP/plugin/ag
 
 ## 日期未确认
 
+[Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders](https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders) 是 Anthropic 官方页面，可确认日期为 2026-08-21，但页面没有精确时分；因此无法判断其是否晚于本轮窗口起点 07:02 +08:00。本页保留其产品事实，但不把它写成已确认落入窗口的发布。
+
 上述 Reddit 页面可确认显示为 2026-08-20 或 2026-08-21 发布/活跃，但搜索结果没有稳定提供精确时分。它们均落在日期层面的采集窗口内；精确发布时间与截点关系未能进一步核实，故 `publishedAt` 仅记录日期并明确限制。
 
 ## 观察池
@@ -116,5 +121,5 @@ Security 有可验证的邻近更新：v2.1.238 收紧了项目级 MCP/plugin/ag
 
 - 已检查：Anthropic Newsroom、Developer Documentation、Claude Code GitHub Releases/CHANGELOG、Anthropic Status、Reddit r/ClaudeCode/r/ClaudeAI/r/Anthropic、Hacker News、YouTube 与公开网页检索。
 - 失败来源：X 未登录结果不稳定，无法可靠核对原帖时间和互动量；部分 Anthropic 文档页不提供可独立核验的更新时间；Hacker News 未找到窗口内可确认条目。
-- 初始候选数：13；保留来源数：7。
+- 初始候选数：14；保留来源数：8。
 - 二次补搜：否（最终来源不为 0）。

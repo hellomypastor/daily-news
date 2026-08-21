@@ -9,7 +9,7 @@
     "LLM"
   ],
   "order": 30,
-  "updatedAt": "2026-08-22T04:01:00+08:00",
+  "updatedAt": "2026-08-22T07:08:00+08:00",
   "image": {
     "url": "https://opengraph.githubassets.com/1/alibaba/anolisa",
     "alt": "ANOLISA GitHub 项目的公开社交预览图，展示项目名称与仓库摘要",
@@ -28,7 +28,8 @@
       "Simon Willison Weblog",
       "NVIDIA Developer Blog",
       "Cloudflare Blog",
-      "Dibs、Lore MCP 与 Traccia 原始项目页面"
+      "Dibs、Lore MCP 与 Traccia 原始项目页面",
+      "FreeToken、Taskuary 与 AgentCheck 官方仓库及 README（截止 2026-08-22 07:08:00 +08:00）"
     ],
     "failedSources": [
       "Hugging Face Papers 当日搜索：搜索索引未返回截止时间内可独立核验的新条目",
@@ -36,10 +37,10 @@
       "GitHub Trending Python/TypeScript：页面内容与 overall 高度重叠，未增加独立候选",
       "Traccia 官网：可核验产品定位，但未提供可确认的首次发布日期或公开代码仓库"
     ],
-    "candidateCount": 31,
+    "candidateCount": 39,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n本轮精选窗口为 **2026-08-20 04:01:00 至 2026-08-22 04:01:00（Asia/Shanghai）**。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱和多代理开发工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。\n\n## 已验证精选\n\n### AI4AI-Bench：让 Agent 直接改写训练算法\n\n[arXiv 原文](https://arxiv.org/abs/2608.20318)于 **2026-08-21 01:56 +08:00** 提交。论文给出 10 个冻结研究仓库组成的评测，要求 agent 在固定算力与时间预算下修改训练算法，再由隐藏评估器重跑；作者同时声明发布任务、评估器与已评分提交。它把“递归自我改进”落到可复现的算法设计任务，而不是只看超参调优或数据搜集。\n\n### Break It Down, Pass It On：技能怎么归纳决定能否迁移\n\n[arXiv 原文](https://arxiv.org/abs/2608.20274)于 **2026-08-21 01:12 +08:00** 提交。作者对 task-level / subtask-level 与文本 / 代码两条轴做受控比较，报告子任务级、文本形式的技能平均迁移更好，并提出无需执行新任务即可计算的 skill utility 诊断分数。对构建长期记忆或技能库的 agent 来说，这比单纯“存下成功轨迹”更接近可操作的设计准则。\n\n### Task-CoEvolve：用自适应验证任务优化 Agent Harness\n\n[arXiv 原文](https://arxiv.org/abs/2608.20169)于 **2026-08-20 23:24 +08:00** 提交，处于 48 小时窗口内。论文关注 harness 优化时验证成本过高的问题，以自适应选择验证任务来减少无效评估；目前属于新预印本，结论仍需后续复现。\n\n### AgentSight：不改代码的 eBPF Agent 可观测性\n\n[ANOLISA / AgentSight 官方仓库](https://github.com/alibaba/anolisa)展示了通过 eBPF 观测 agent 运行的方案，仓库采用 Apache-2.0；对应 [HN 讨论](https://news.ycombinator.com/item?id=49389493)提交于 **2026-08-21 23:21 +08:00**，截止时为 14 points、0 comments。价值在于把模型调用、工具执行等链路观测下沉到运行时层；互动量只记录截止快照，不作为成熟度证明。\n\n### Parselbox：把工具调用装进可嵌入 Python 沙箱\n\n[Parselbox 官方仓库](https://github.com/thesanjeetc/Parselbox)描述其用 Deno 与 Pyodide 提供“以代码调用工具”的嵌入式 Python 沙箱，采用 MIT 许可；[HN 讨论](https://news.ycombinator.com/item?id=49388608)提交于 **2026-08-21 22:23 +08:00**，截止时为 2 points、0 comments。它触及 agent 工具执行的隔离与可移植性，但项目关注度尚低，应先评估边界与逃逸风险。\n\n## GitHub Trending\n\n以下数据来自 GitHub daily Trending 截止时快照，仅代表当日榜单热度：\n\n| 项目 | 榜单快照 | 技术定位 |\n|---|---:|---|\n| [ai-memory](https://github.com/akitaonrails/ai-memory) | 3,898 stars；468 stars today | 为多种 coding agent CLI 保存长期记忆并支持跨工具交接；MIT。 |\n| [OpenViking](https://github.com/volcengine/OpenViking) | 31,526 stars；659 stars today | 面向 agent 的上下文数据库，统一记忆、知识 RAG 与 skills；AGPL-3.0。 |\n| [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) | 5,269 stars；435 stars today | 覆盖 Agent、Skill、MCP、AI 基础设施扫描与越狱评估的红队平台；Apache-2.0。 |\n\n这些数字会持续变化；这里不把 Trending 上榜时间当作项目发布日期，也不据此验证 README 中的性能或效果主张。\n\n## HN 讨论\n\n- [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)定位为可并行运行多种 coding agent 的开源 IDE，AGPL-3.0；[HN 提交](https://news.ycombinator.com/item?id=49390739)于 **2026-08-22 00:47 +08:00** 出现，截止时 2 points、0 comments。项目本身早于窗口创建，因此这里只确认本轮讨论信号。\n- [Caspian SDK 官方仓库](https://github.com/TryCaspian/caspian-sdk)提供 Python / TypeScript 的 agent 通信层，覆盖 email、WhatsApp、Slack 等通道，AGPL-3.0；[HN 提交](https://news.ycombinator.com/item?id=49390329)于 **2026-08-22 00:17 +08:00** 出现，截止时 3 points、0 comments。通道覆盖来自项目自述，未在本轮逐项集成测试。\n\n## 论文与研究\n\n除前三篇精选外，本轮 arXiv 还出现 agent 安全、规则落地与环境构造方向的新稿；为避免把刚提交的预印本结论写成定论，暂不扩展为独立来源。后续若出现代码、作者项目页或复现实验，再升级收录。\n\n## 旧文重新升温\n\n- [Cloudflare《The Agent Access Model》](https://blog.cloudflare.com/the-agent-access-model/)原文发布于 **2026-08-05**，提出把 agent 身份与代表用户的授权分离，并用短期、最小权限凭据约束工具访问；[HN 讨论](https://news.ycombinator.com/item?id=49392727)于 **2026-08-22 03:22 +08:00** 重新出现，截止时 2 points、0 comments。这里记录的是复热信号，不把旧文写成今日发布。\n- [Dibs 官方仓库](https://github.com/Agenxy/dibs)创建于 **2026-08-11 02:02 +08:00**，Apache-2.0，提供 agent 间状态可见性、消息、文件传递与建议性资源声明；[HN 讨论](https://news.ycombinator.com/item?id=49393131)于 **2026-08-22 04:00 +08:00** 出现，截止时 1 point、1 comment。仓库早于 7 天，本轮只确认 HN 复热及官方项目定位。\n\n## 日期未确认\n\n- [Traccia 官网](https://traccia.ai/)自述提供 agent 可观测、评估、治理与运行时策略控制；[HN 提交](https://news.ycombinator.com/item?id=49391995)于 **2026-08-22 02:20 +08:00** 出现，截止时 1 point、0 comments。官网未给出可确认的首次发布日期或公开代码仓库，因此仅保留为日期未确认的产品信号，未验证其功能实现。\n\n## 观察池\n\n- **低互动 / 个人上下文项目**：[Lore MCP 官方仓库](https://github.com/dipakkrishnan/lore-mcp)创建于 **2026-07-17 01:06 +08:00**，MIT，自述为 personal agent 提供可携带、默认私有的上下文层；[HN 提交](https://news.ycombinator.com/item?id=49392057)于 **2026-08-22 02:25 +08:00** 出现，截止时 1 point、0 comments。只确认仓库定位与讨论信号，未验证其商业化或隐私承诺。\n- **低互动 / 早期项目**：Proliferate、Caspian SDK 与 Parselbox 的 HN 讨论量很小，技术定位已由官方仓库确认，但社区验证强度不足。\n- **榜单热度而非发布事件**：ai-memory、OpenViking、AI-Infra-Guard 只确认当日 Trending 状态；功能成熟度、性能与增长持续性未验证。\n- **新预印本**：AI4AI-Bench、技能迁移研究与 Task-CoEvolve 均处于预印本阶段，实验数字应以论文原文和后续复现为准。\n\n## 来源链接\n\n正文中的论文、官方仓库与 HN 讨论链接即为本页完整来源；同一页面内已按 URL 去重。\n\n## 采集状态\n\n- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia 原始页面。\n- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison 未发现窗口内直接相关新文；GitHub 语言榜单与 overall 重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库。\n- 初始候选：31；最终保留来源：22（14 个独立事件 / 项目，其中 8 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。\n- 截止时间：2026-08-22 04:01:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。",
+  "content": "## 今日概览\n\n本轮精选窗口为 **2026-08-20 07:08:00 至 2026-08-22 07:08:00（Asia/Shanghai）**。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试和本地推理工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。\n\n## 已验证精选\n\n### AI4AI-Bench：让 Agent 直接改写训练算法\n\n[arXiv 原文](https://arxiv.org/abs/2608.20318)于 **2026-08-21 01:56 +08:00** 提交。论文给出 10 个冻结研究仓库组成的评测，要求 agent 在固定算力与时间预算下修改训练算法，再由隐藏评估器重跑；作者同时声明发布任务、评估器与已评分提交。它把“递归自我改进”落到可复现的算法设计任务，而不是只看超参调优或数据搜集。\n\n### Break It Down, Pass It On：技能怎么归纳决定能否迁移\n\n[arXiv 原文](https://arxiv.org/abs/2608.20274)于 **2026-08-21 01:12 +08:00** 提交。作者对 task-level / subtask-level 与文本 / 代码两条轴做受控比较，报告子任务级、文本形式的技能平均迁移更好，并提出无需执行新任务即可计算的 skill utility 诊断分数。对构建长期记忆或技能库的 agent 来说，这比单纯“存下成功轨迹”更接近可操作的设计准则。\n\n### Task-CoEvolve：用自适应验证任务优化 Agent Harness\n\n[arXiv 原文](https://arxiv.org/abs/2608.20169)于 **2026-08-20 23:24 +08:00** 提交，处于 48 小时窗口内。论文关注 harness 优化时验证成本过高的问题，以自适应选择验证任务来减少无效评估；目前属于新预印本，结论仍需后续复现。\n\n### AgentSight：不改代码的 eBPF Agent 可观测性\n\n[ANOLISA / AgentSight 官方仓库](https://github.com/alibaba/anolisa)展示了通过 eBPF 观测 agent 运行的方案，仓库采用 Apache-2.0；对应 [HN 讨论](https://news.ycombinator.com/item?id=49389493)提交于 **2026-08-21 23:21 +08:00**，截止时为 14 points、0 comments。价值在于把模型调用、工具执行等链路观测下沉到运行时层；互动量只记录截止快照，不作为成熟度证明。\n\n### Parselbox：把工具调用装进可嵌入 Python 沙箱\n\n[Parselbox 官方仓库](https://github.com/thesanjeetc/Parselbox)描述其用 Deno 与 Pyodide 提供“以代码调用工具”的嵌入式 Python 沙箱，采用 MIT 许可；[HN 讨论](https://news.ycombinator.com/item?id=49388608)提交于 **2026-08-21 22:23 +08:00**，截止时为 2 points、0 comments。它触及 agent 工具执行的隔离与可移植性，但项目关注度尚低，应先评估边界与逃逸风险。\n\n## GitHub Trending\n\n以下数据来自 GitHub daily Trending 截止时快照，仅代表当日榜单热度：\n\n| 项目 | 榜单快照 | 技术定位 |\n|---|---:|---|\n| [ai-memory](https://github.com/akitaonrails/ai-memory) | 3,898 stars；468 stars today | 为多种 coding agent CLI 保存长期记忆并支持跨工具交接；MIT。 |\n| [OpenViking](https://github.com/volcengine/OpenViking) | 31,526 stars；659 stars today | 面向 agent 的上下文数据库，统一记忆、知识 RAG 与 skills；AGPL-3.0。 |\n| [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) | 5,269 stars；435 stars today | 覆盖 Agent、Skill、MCP、AI 基础设施扫描与越狱评估的红队平台；Apache-2.0。 |\n\n这些数字会持续变化；这里不把 Trending 上榜时间当作项目发布日期，也不据此验证 README 中的性能或效果主张。\n\n## HN 讨论\n\n- [FreeToken 官方仓库](https://github.com/FlashML-org/FreeToken)采用 Apache-2.0，README 将其描述为面向消费级异构硬件的 MoE 推理引擎，并列出 CPU–GPU 协同、专家缓存与动态显存分配等机制；[HN 提交](https://news.ycombinator.com/item?id=49394148)于 **2026-08-22 05:47 +08:00** 出现，截止时 3 points、0 comments。仓库创建于 7 月，性能与模型兼容性主张未在本轮复测。\n- [Taskuary 官方仓库](https://github.com/ldbumble/taskuary)采用 MIT，描述一个本地优先的任务工作台，把邮件、Teams、Slack 等输入经 AI 分流后交给 coding agent，并保留人工批准环节；[HN 提交](https://news.ycombinator.com/item?id=49393717)于 **2026-08-22 04:59 +08:00** 出现，截止时 3 points、1 comment。连接器与学习机制来自项目自述，未逐项验证。\n- [AgentCheck 官方仓库](https://github.com/rez-99/agentcheck)采用 MIT，以 YAML 用例、LLM judge 和基线差异报告为 agent 提供 CI 回归检查；[HN 提交](https://news.ycombinator.com/item?id=49393322)于 **2026-08-22 04:21 +08:00** 出现，截止时 1 point、0 comments。仓库于 **2026-08-21 08:23 +08:00** 创建，仍属极早期项目。\n- [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)定位为可并行运行多种 coding agent 的开源 IDE，AGPL-3.0；[HN 提交](https://news.ycombinator.com/item?id=49390739)于 **2026-08-22 00:47 +08:00** 出现，截止时 2 points、0 comments。项目本身早于窗口创建，因此这里只确认本轮讨论信号。\n- [Caspian SDK 官方仓库](https://github.com/TryCaspian/caspian-sdk)提供 Python / TypeScript 的 agent 通信层，覆盖 email、WhatsApp、Slack 等通道，AGPL-3.0；[HN 提交](https://news.ycombinator.com/item?id=49390329)于 **2026-08-22 00:17 +08:00** 出现，截止时 3 points、0 comments。通道覆盖来自项目自述，未在本轮逐项集成测试。\n\n## 论文与研究\n\n除前三篇精选外，本轮 arXiv 还出现 agent 安全、规则落地与环境构造方向的新稿；为避免把刚提交的预印本结论写成定论，暂不扩展为独立来源。后续若出现代码、作者项目页或复现实验，再升级收录。\n\n## 旧文重新升温\n\n- [Cloudflare《The Agent Access Model》](https://blog.cloudflare.com/the-agent-access-model/)原文发布于 **2026-08-05**，提出把 agent 身份与代表用户的授权分离，并用短期、最小权限凭据约束工具访问；[HN 讨论](https://news.ycombinator.com/item?id=49392727)于 **2026-08-22 03:22 +08:00** 重新出现，截止时 2 points、0 comments。这里记录的是复热信号，不把旧文写成今日发布。\n- [Dibs 官方仓库](https://github.com/Agenxy/dibs)创建于 **2026-08-11 02:02 +08:00**，Apache-2.0，提供 agent 间状态可见性、消息、文件传递与建议性资源声明；[HN 讨论](https://news.ycombinator.com/item?id=49393131)于 **2026-08-22 04:00 +08:00** 出现，截止时 1 point、1 comment。仓库早于 7 天，本轮只确认 HN 复热及官方项目定位。\n\n## 日期未确认\n\n- [Traccia 官网](https://traccia.ai/)自述提供 agent 可观测、评估、治理与运行时策略控制；[HN 提交](https://news.ycombinator.com/item?id=49391995)于 **2026-08-22 02:20 +08:00** 出现，截止时 1 point、0 comments。官网未给出可确认的首次发布日期或公开代码仓库，因此仅保留为日期未确认的产品信号，未验证其功能实现。\n\n## 观察池\n\n- **低互动 / 个人上下文项目**：[Lore MCP 官方仓库](https://github.com/dipakkrishnan/lore-mcp)创建于 **2026-07-17 01:06 +08:00**，MIT，自述为 personal agent 提供可携带、默认私有的上下文层；[HN 提交](https://news.ycombinator.com/item?id=49392057)于 **2026-08-22 02:25 +08:00** 出现，截止时 1 point、0 comments。只确认仓库定位与讨论信号，未验证其商业化或隐私承诺。\n- **低互动 / 早期项目**：FreeToken、Taskuary、AgentCheck、Proliferate、Caspian SDK 与 Parselbox 的 HN 讨论量很小，技术定位已由官方仓库确认，但社区验证强度不足。\n- **榜单热度而非发布事件**：ai-memory、OpenViking、AI-Infra-Guard 只确认当日 Trending 状态；功能成熟度、性能与增长持续性未验证。\n- **新预印本**：AI4AI-Bench、技能迁移研究与 Task-CoEvolve 均处于预印本阶段，实验数字应以论文原文和后续复现为准。\n\n## 来源链接\n\n正文中的论文、官方仓库与 HN 讨论链接即为本页完整来源；同一页面内已按 URL 去重。\n\n## 采集状态\n\n- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck 原始页面。\n- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison 未发现窗口内直接相关新文；GitHub 语言榜单与 overall 重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库。\n- 初始候选：39；最终保留来源：28（17 个独立事件 / 项目，其中 11 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。\n- 截止时间：2026-08-22 07:08:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。",
   "sources": [
     {
       "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
@@ -299,6 +300,81 @@
         "HN",
         "Date Unverified",
         "Observability"
+      ]
+    },
+    {
+      "title": "FreeToken",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "Apache-2.0 的消费级异构硬件 MoE 推理引擎；性能与兼容性主张未在本轮复测。",
+      "tags": [
+        "LLM",
+        "Inference",
+        "MoE",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Run 290B+ frontier MoE models locally on your gaming PC",
+      "url": "https://news.ycombinator.com/item?id=49394148",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 05:47 +08:00",
+      "summary": "FreeToken 的窗口内低互动 HN 信号，截止时 3 points、0 comments。",
+      "tags": [
+        "HN",
+        "Inference",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Taskuary",
+      "url": "https://github.com/ldbumble/taskuary",
+      "source": "GitHub",
+      "publishedAt": "2026-08-17 20:53 +08:00",
+      "summary": "MIT 本地优先任务工作台，把多通道输入经 AI 分流后交给 coding agent，并保留人工批准。",
+      "tags": [
+        "Agent",
+        "Coding Agent",
+        "Workflow",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Taskuary – Your inbox becomes tasks, your coding CLI works them",
+      "url": "https://news.ycombinator.com/item?id=49393717",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 04:59 +08:00",
+      "summary": "Taskuary 的窗口内低互动 HN 信号，截止时 3 points、1 comment。",
+      "tags": [
+        "HN",
+        "Coding Agent",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "AgentCheck",
+      "url": "https://github.com/rez-99/agentcheck",
+      "source": "GitHub",
+      "publishedAt": "2026-08-21 08:23 +08:00",
+      "summary": "MIT agent 回归测试工具，提供 YAML 用例、LLM judge 与基线差异 CI 报告。",
+      "tags": [
+        "Agent",
+        "Evaluation",
+        "CI",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "AgentCheck – regression testing for AI agents, with diff-aware CI reports",
+      "url": "https://news.ycombinator.com/item?id=49393322",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 04:21 +08:00",
+      "summary": "AgentCheck 的窗口内低互动 HN 信号，截止时 1 point、0 comments。",
+      "tags": [
+        "HN",
+        "Evaluation",
+        "Watchlist"
       ]
     }
   ]

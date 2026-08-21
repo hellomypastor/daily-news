@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T04:01:00+08:00"
+updatedAt: "2026-08-22T07:09:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore"
 featuredUrl: "https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/"
@@ -28,9 +28,11 @@ tags:
   - "Codex"
   - "Cursor"
   - "Gemini CLI"
+  - "GitHub Copilot"
   - "Lifecycle"
   - "Managed Agent"
   - "Multi-Agent"
+  - "Qoder"
   - "Reliability"
   - "Remote Agent"
   - "Remote Control"
@@ -38,7 +40,7 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-21 04:01 至 2026-08-22 04:01（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 04:01 至 2026-08-21 04:01。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、self-hosted runner / Remote Control、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制：竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
+本轮主发现窗口：2026-08-21 07:09 至 2026-08-22 07:09（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 07:09 至 2026-08-21 07:09。当天页面按累积规则保留早前已收录来源，其中 Claude Code/Agent SDK 2.1.238/0.3.238、Codex 0.149.0 与 Anthropic 状态事件已滑出本轮 24 小时窗口，不再声称为本轮主窗口发现。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、self-hosted runner / Remote Control、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制：竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
 
 ## 今日重点
 
@@ -62,12 +64,13 @@ tags:
 
 ## 海外厂商
 
-- Anthropic 在截止前新增云会话与后台任务重连更新，OpenAI 在主窗口有直接远程任务/会话控制更新；Google、Microsoft/GitHub、Replit、Devin、Lindy、Factory、Sourcegraph/Amp 和 Cloudflare 未检出截止前可核验的同窗托管服务发布。
+- Anthropic 在截止前新增云会话与后台任务重连更新，OpenAI 在主窗口有直接远程任务/会话控制更新；Google、Replit、Devin、Lindy、Factory、Sourcegraph/Amp 和 Cloudflare 未检出截止前可核验的同窗托管服务发布。
+- [GitHub Copilot CLI v1.0.81-7](https://github.com/github/copilot-cli/releases/tag/v1.0.81-7)是预发布版本：启动时可恢复 CLI 异常退出后仍开放的会话，并让强制远程策略刷新在拉取失败时采用限制性姿态。它改善 Agent 会话连续性和企业策略控制，但仍是 CLI/harness 预发布，不等同 GitHub coding agent 托管服务更新。
 - [Gemini CLI nightly 20260821](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260821.g30573d2e4)只有 ignore path 的 symlink 修复与 shell execution service 重构，属于 Agent harness 邻近信号，不能写成 Vertex Agent Engine 或 Jules 的托管能力更新。
 
 ## 中国厂商（字节重点）
 
-字节跳动 Coze、火山引擎、Doubao、Trae 与 Seed 的公开入口未检出主窗口内可核验的新托管 Agent 发布。阿里百炼/Qoder、腾讯 ADP/元宝/混元、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax 与 DeepSeek 同样未发现精确到本窗口的官方 AaaS 新增。此结论只代表本轮可公开复核的入口，不排除灰度、地区限定或登录态内更新。
+字节跳动 Coze、火山引擎、Doubao、Trae 与 Seed 的公开入口未检出主窗口内可核验的新托管 Agent 发布。阿里百炼/Qoder、腾讯 ADP/元宝/混元、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax 与 DeepSeek 同样未发现精确到本窗口的官方 AaaS 新增。Qoder 官方主页目前明确列出 Cloud Agents，但页面没有可核验发布日期，已放入“日期未确认”，不写成今日发布。此结论只代表本轮可公开复核的入口，不排除灰度、地区限定或登录态内更新。
 
 ## 24–72 小时观察池
 
@@ -87,6 +90,7 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 ## 日期未确认
 
 - [Cursor Cloud Agents changelog](https://cursor.com/changelog/08-19-26)称 Cloud Agents 可订阅 PR、Slack thread 或定时事件、持有 goal 并持续处理长会话；页面仅给 8 月 19 日，无精确时分，无法稳定划入 24–72 小时的具体位置。
+- [Qoder 官方主页](https://qoder.cn/)列出面向企业的“Cloud Agents”，并描述云端全托管、多智能体协同与长时委派执行；页面未提供该模块的发布日期或变更日志，因此仅确认当前公开能力描述，不推断为本轮新增。
 - [华为云 AgentArts 2026 年 8 月动态](https://support.huaweicloud.com/wtsnew-agentarts/index.html)列出智能体卫士、运行时灰度、网关会话保持及第三方托管智能体日志统一观测；官方只标月份，不能推断为今日更新。
 
 ## 未证实传闻
@@ -95,6 +99,7 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 
 ## 邻近信号观察池
 
+- GitHub Copilot CLI 预发布：会话恢复和企业远程策略 fail-closed 与托管 Agent 的连续性、安全边界相关，但不代表 GitHub coding agent 服务端 rollout。
 - Gemini CLI nightly：开源 CLI/harness 修复，不代表 Vertex 或 Jules 服务端 rollout。
 - AWS AgentCore 迁移案例：证明已有托管组件的组合用法，不代表 8 月 20 日新 GA。
 - 华为云 AgentArts 月度页：有托管日志、灰度与会话治理信号，但发布时间只能确认到月份。
@@ -111,8 +116,8 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 
 - 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、OpenHands、Factory、Sourcegraph/Amp、Lindy，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek、华为云公开入口；并做中英文网页、官方 release/changelog/status 与可信二手交叉检索。
 - 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Cursor/AWS/中国厂商部分页面无精确时分；GitHub Status 搜索缓存与历史页抓取不一致；Slack Code 未找到同窗官方原文。
-- 候选数量：44。
-- 最终保留：12 个独立来源 URL；主窗口 7 个（其中 Gemini CLI 为邻近信号）、24–72 小时/观察 3 个、日期未确认 2 个。
+- 候选数量：46。
+- 最终保留：14 个独立来源 URL；本轮主发现窗口 4 个（其中 GitHub Copilot CLI 与 Gemini CLI 为邻近信号）、当天累计保留但已滑出本轮 24 小时 4 个、24–72 小时/观察 3 个、日期未确认 3 个。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 12 条动态，重点：Claude 云会话与 SDK 后台任务重连、self-hosted runner/Remote Control 及 Codex 远程任务控制继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。
+今日扫描完成，共 14 条动态，重点：Claude 云会话与 SDK 后台任务重连、self-hosted runner/Remote Control 及 Codex 远程任务控制继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。
