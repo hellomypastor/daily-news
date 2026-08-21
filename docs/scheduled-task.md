@@ -48,6 +48,8 @@ Today 首页会像 weblog 一样显示当天五条紧凑精选：每个主题取
 
 当仓库中存在早于当天的日报时，Today 右侧自动显示 `Highlights`，按日期倒序列出最多 10 条历史精选；仅有当天内容时隐藏右栏并保持单栏。
 
+构建会自动为每个日期生成 `/daily/YYYY-MM-DD` 精选归档页，内容与该日期当天的 Today 五条精选一致。它由已有五篇页面派生，不新增第六份 JSON 或 Markdown；Today 日期标题和 Highlights 日期均链接到对应归档。
+
 五个主题检查完后，先运行 `git status --porcelain -- data/daily/YYYY-MM-DD`。如果当天五份 JSON 均已存在且没有实质变化，停止后续发布，不运行 publish/build，不创建空提交；最终明确报告“本轮无实质更新”。
 
 五份数据完成后执行：

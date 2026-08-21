@@ -1,0 +1,38 @@
+---
+export const prerender = true;
+
+import { getBlogPosts } from "$/lib/blog";
+import DailyEdition from "$/components/DailyEdition.astro";
+import DefaultPageLayout from "$/layouts/default.astro";
+
+export function getStaticPaths() {
+  const topicOrder = ["claude", "openai", "open-source", "ai-industry", "aaas"];
+  const calendarDate = (date: string) => date.slice(0, 10);
+  const topicRank = (id: string) => {
+    const topic = topicOrder.find((candidate) => id.endsWith(`_${candidate}`));
+    return topic ? topicOrder.indexOf(topic) : topicOrder.length;
+  };
+  const posts = getBlogPosts();
+  const dates = [...new Set(posts.map((post) => calendarDate(post.data.date)))];
+  return dates.map((date) => ({
+    params: { date },
+    props: {
+      posts: posts
+        .filter((post) => calendarDate(post.data.date) === date)
+        .sort((a, b) => topicRank(a.id) - topicRank(b.id) || a.data.title.localeCompare(b.data.title))
+        .slice(0, 5),
+    },
+  }));
+}
+
+const date = Astro.params.date!;
+const { posts } = Astro.props;
+const content = {
+  title: `Daily News — ${date}`,
+  description: `${date} 的五条 AI 与 Agent 精选归档。`,
+};
+---
+
+<DefaultPageLayout {content} showPageHeader={false}>
+  <DailyEdition {date} {posts} />
+</DefaultPageLayout>

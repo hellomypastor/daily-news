@@ -1,0 +1,96 @@
+---
+import type { BlogPost } from "$/lib/blog";
+
+interface Props {
+  date: string;
+  posts: BlogPost[];
+  dateHref?: string;
+}
+
+const { date, posts, dateHref } = Astro.props;
+const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
+const TOPIC_LABELS = {
+  claude: "Claude",
+  openai: "OpenAI",
+  "open-source": "Open source",
+  "ai-industry": "Industry",
+  aaas: "AaaS",
+} as const;
+const postTopic = (id: string) => TOPIC_ORDER.find((candidate) => id.endsWith(`_${candidate}`));
+---
+
+<main class="today-stream">
+  <h1 class="edition-date">
+    {dateHref ? <a href={dateHref}>{date}</a> : date}
+  </h1>
+  {posts.length > 0 ? posts.map((post) => (
+    <article class="daily-entry">
+      <p class="daily-entry__lead">
+        {postTopic(post.id) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.id) as keyof typeof TOPIC_LABELS]}</span>}
+        <strong><a href={post.data.featuredUrl || `/blog/${post.id}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
+      </p>
+      {post.data.featuredImage && (
+        <figure class="daily-entry__figure">
+          <a href={post.data.featuredUrl || `/blog/${post.id}`}>
+            <img src={post.data.featuredImage} alt={post.data.featuredImageAlt || ""} loading="lazy" />
+          </a>
+          {post.data.featuredImageCaption && <figcaption>{post.data.featuredImageCaption}</figcaption>}
+        </figure>
+      )}
+      <footer class="daily-entry__footer">
+        <a href={`/blog/${post.id}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
+        <span> / {(post.data.featuredTags.length ? post.data.featuredTags : post.data.tags).slice(0, 6).join(", ")}</span>
+      </footer>
+    </article>
+  )) : <p>No briefings were published for this date.</p>}
+</main>
+
+<style>
+  .edition-date {
+    margin: 0 0 11.52px;
+    padding: 0 0 7px;
+    font-size: 18px;
+    line-height: 26.1px;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid #ccc;
+  }
+  .edition-date a { color: inherit; text-decoration: none; }
+  .edition-date a:hover { text-decoration: underline; }
+  .today-stream {
+    width: 560px;
+    max-width: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .daily-entry {
+    margin: 0 0 10.8px;
+    padding: 0 0 10.8px;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    font-size: 14.4px;
+    line-height: 20.88px;
+  }
+  .daily-entry__lead { margin: 0 0 11.52px; }
+  .daily-entry__category {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 0 5px;
+    border: 1px solid #cfc4d4;
+    border-radius: 3px;
+    background: #f2edf4;
+    color: #4e315d;
+    font-size: 11.52px;
+    font-weight: 700;
+    line-height: 18px;
+    vertical-align: 1px;
+  }
+  .daily-entry__lead strong { font-weight: 700; }
+  .daily-entry__lead a { color: #0000ee; text-decoration: underline; }
+  .daily-entry__figure { margin: 0 0 11.52px; }
+  .daily-entry__figure img { display: block; width: 100%; height: auto; }
+  .daily-entry__figure figcaption { margin-top: 2px; color: #000; font-size: 12.24px; line-height: 17.75px; }
+  .daily-entry__footer { margin: 0 0 10.88px; color: #000; font-size: 13.6px; line-height: 19.72px; }
+  .daily-entry__footer a { color: #0000ee; text-decoration: underline; }
+  .daily-entry__footer span { color: #0000ee; }
+  @media (max-width: 760px) { .today-stream { width: 100%; } }
+</style>

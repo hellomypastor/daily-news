@@ -2,20 +2,13 @@
 export const prerender = true;
 
 import { getBlogPosts } from "$/lib/blog";
+import DailyEdition from "$/components/DailyEdition.astro";
 import DefaultPageLayout from "$/layouts/default.astro";
 
 const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
-const TOPIC_LABELS = {
-  claude: "Claude",
-  openai: "OpenAI",
-  "open-source": "Open source",
-  "ai-industry": "Industry",
-  aaas: "AaaS",
-} as const;
 const calendarDate = (date: string) => date.slice(0, 10);
-const postTopic = (slug: string) => TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));
 const topicRank = (slug: string) => {
-  const topic = postTopic(slug);
+  const topic = TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));
   return topic ? TOPIC_ORDER.indexOf(topic) : TOPIC_ORDER.length;
 };
 
@@ -43,29 +36,7 @@ const content = {
 
 <DefaultPageLayout {content} showPageHeader={false}>
   <div class:list={["home-columns", highlights.length === 0 && "home-columns--single"]}>
-    <main class="today-stream">
-      <h1 class="edition-date">{latestDate}</h1>
-      {todaysPosts.length > 0 ? todaysPosts.map((post) => (
-        <article class="daily-entry">
-          <p class="daily-entry__lead">
-            {postTopic(post.id) && <span class="daily-entry__category">{TOPIC_LABELS[postTopic(post.id) as keyof typeof TOPIC_LABELS]}</span>}
-            <strong><a href={post.data.featuredUrl || `/blog/${post.id}`}>{post.data.featuredTitle || post.data.title}</a></strong>. {post.data.featuredSummary || post.data.description}
-          </p>
-          {post.data.featuredImage && (
-            <figure class="daily-entry__figure">
-              <a href={post.data.featuredUrl || `/blog/${post.id}`}>
-                <img src={post.data.featuredImage} alt={post.data.featuredImageAlt || ""} loading="lazy" />
-              </a>
-              {post.data.featuredImageCaption && <figcaption>{post.data.featuredImageCaption}</figcaption>}
-            </figure>
-          )}
-          <footer class="daily-entry__footer">
-            <a href={`/blog/${post.id}`}># {post.data.featuredPublishedAt || "read briefing"}</a>
-            <span> / {(post.data.featuredTags.length ? post.data.featuredTags : post.data.tags).slice(0, 6).join(", ")}</span>
-          </footer>
-        </article>
-      )) : <p>No briefings have been published yet.</p>}
-    </main>
+    {latestDate ? <DailyEdition date={latestDate} posts={todaysPosts} dateHref={`/daily/${latestDate}`} /> : <p>No briefings have been published yet.</p>}
     {highlights.length > 0 && (
       <aside class="highlights" aria-labelledby="highlights-title">
         <h2 id="highlights-title">Highlights</h2>
@@ -73,7 +44,7 @@ const content = {
           {highlights.map((post) => (
             <li>
               <a href={`/blog/${post.id}`}>{post.data.featuredTitle || post.data.title}</a>
-              <span> — {calendarDate(post.data.date)}</span>
+              <span> — <a class="highlight-date" href={`/daily/${calendarDate(post.data.date)}`}>{calendarDate(post.data.date)}</a></span>
             </li>
           ))}
         </ul>
@@ -83,20 +54,6 @@ const content = {
 </DefaultPageLayout>
 
 <style>
-  .edition-date {
-    margin: 0 0 11.52px;
-    padding: 0 0 7px;
-    font-size: 18px;
-    line-height: 26.1px;
-    font-weight: 700;
-    color: var(--ink);
-    border-bottom: 1px solid #ccc;
-  }
-  .today-stream {
-    width: 560px;
-    max-width: 100%;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-  }
   .home-columns {
     display: grid;
     grid-template-columns: 560px minmax(240px, 1fr);
@@ -120,53 +77,9 @@ const content = {
   }
   .highlights a { color: #0000ee; text-decoration: underline; }
   .highlights span { color: #000; }
-  .daily-entry {
-    margin: 0 0 10.8px;
-    padding: 0 0 10.8px;
-    border-bottom: 1px solid #ccc;
-    color: #000;
-    font-size: 14.4px;
-    line-height: 20.88px;
-  }
-  .daily-entry__lead { margin: 0 0 11.52px; }
-  .daily-entry__category {
-    display: inline-block;
-    margin-right: 6px;
-    padding: 0 5px;
-    border: 1px solid #cfc4d4;
-    border-radius: 3px;
-    background: #f2edf4;
-    color: #4e315d;
-    font-size: 11.52px;
-    font-weight: 700;
-    line-height: 18px;
-    vertical-align: 1px;
-  }
-  .daily-entry__lead strong { font-weight: 700; }
-  .daily-entry__lead a { color: #0000ee; text-decoration: underline; }
-  .daily-entry__figure { margin: 0 0 11.52px; }
-  .daily-entry__figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .daily-entry__figure figcaption {
-    margin-top: 2px;
-    color: #000;
-    font-size: 12.24px;
-    line-height: 17.75px;
-  }
-  .daily-entry__footer {
-    margin: 0 0 10.88px;
-    color: #000;
-    font-size: 13.6px;
-    line-height: 19.72px;
-  }
-  .daily-entry__footer a { color: #0000ee; text-decoration: underline; }
-  .daily-entry__footer span { color: #0000ee; }
+  .highlights .highlight-date { color: #000; }
   @media (max-width: 760px) {
     .home-columns,
     .home-columns--single { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-    .today-stream { width: 100%; }
   }
 </style>
