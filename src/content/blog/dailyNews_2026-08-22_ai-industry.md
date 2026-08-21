@@ -1,14 +1,15 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T01:02:24+08:00"
+updatedAt: "2026-08-22T04:05:14+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "Audio Speech Benchmark"
-featuredUrl: "https://huggingface.co/blog/audiospeechbenchmark"
-featuredSummary: "社区技术文章讨论语音识别基准优化；不代表 Hugging Face 官方产品发布。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredPublishedAt: "2026-08-21"
+featuredTitle: "Measuring benchmark optimization in speech recognition"
+featuredUrl: "https://huggingface.co/blog/asr-benchmark-optimization"
+featuredSummary: "社区文章讨论语音识别基准优化；不代表 Hugging Face 官方产品发布。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-08-21 08:00 +08:00"
 featuredTags: ["Speech","Benchmark","Hugging Face"]
 tags:
+  - "24–48h"
   - "日期未确认"
   - "Agent"
   - "AI"
@@ -16,19 +17,24 @@ tags:
   - "Google DeepMind"
   - "Hugging Face"
   - "Industry"
+  - "Inference"
+  - "Liquid AI"
+  - "Microsoft Research"
   - "Research"
+  - "Science AI"
   - "Speech"
 ---
 
 ## 今日概览
 
-扫描窗口：2026-08-21 01:02 至 2026-08-22 01:02（Asia/Shanghai）。本轮未核实到可明确落在最近 24 小时内的主流厂商官方重大更新；保留 1 条日期明确的 Hugging Face 社区技术文章，以及 2 条官方列表仅标注月份、无法确认具体日的 Google DeepMind 候选。
+扫描窗口：2026-08-21 04:01 至 2026-08-22 04:01（Asia/Shanghai）。本轮核实到 1 条最近 24 小时的 Hugging Face 社区技术文章；24–48 小时补入 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。另保留 2 条官方列表仅标注月份、无法确认具体日的 Google DeepMind 候选。
 
 ## 优先动态
 
 | 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |
 |---|---|---|---|---|---|
-| Hugging Face 社区 | Audio Speech Benchmark | 技术文章/评测 | 2026-08-21；窗口内 | 公开文章讨论语音识别基准优化；属于社区文章而非 Hugging Face 官方产品发布，适合作为评测方法信号，不应外推为厂商能力声明。 | [原文](https://huggingface.co/blog/audiospeechbenchmark) |
+| Hugging Face 社区 | Measuring benchmark optimization in speech recognition | 技术文章/评测 | 2026-08-21 08:00；窗口内 | 文章系统讨论语音识别基准优化；属于社区文章而非 Hugging Face 官方产品发布，适合作为评测方法信号，不应外推为厂商能力声明。 | [RSS 对应原文](https://huggingface.co/blog/asr-benchmark-optimization) |
+| Hugging Face 社区 | Audio Speech Benchmark | 既有候选/失效链接 | 2026-08-21；当天累积保留 | 既有 URL 当前返回 404；为遵守当天累积不删除来源，保留记录，以可访问的 RSS 对应原文为事实依据。 | [既有链接](https://huggingface.co/blog/audiospeechbenchmark) |
 
 ## 常规厂商扫描
 
@@ -40,7 +46,10 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂�
 
 ## 近两日补充
 
-未发现可以同时确认原文与 24–48 小时日期的新增候选。
+| 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |
+|---|---|---|---|---|---|
+| Liquid AI / Hugging Face 社区 | Up to 3.2x Faster Inference with LFM2.5-DSpark | 技术文章/推理优化 | 2026-08-21 00:52；24–48h | 原文报告针对特定硬件与工作负载的最高 3.2 倍推理加速；这是厂商社区文章中的条件性结果，不外推为通用性能。 | [原文](https://huggingface.co/blog/LiquidAI/lfm25-dspark) |
+| Microsoft Research | Broadening access to Skala creates a faster path to predictive DFT | 研究/开源 | 2026-08-21 00:00；24–48h | Microsoft Research 介绍扩大 Skala 访问范围，以加速预测性密度泛函理论研究；属于科学 AI 工具链更新。 | [原文](https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/) |
 
 ## 近三日补充
 
@@ -60,14 +69,17 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂�
 
 ## 来源链接
 
-- [Hugging Face：Audio Speech Benchmark](https://huggingface.co/blog/audiospeechbenchmark)
+- [Hugging Face：RSS 对应 ASR benchmark optimization 原文](https://huggingface.co/blog/asr-benchmark-optimization)
+- [Hugging Face：当天累积保留的失效链接](https://huggingface.co/blog/audiospeechbenchmark)
+- [Liquid AI / Hugging Face：LFM2.5-DSpark](https://huggingface.co/blog/LiquidAI/lfm25-dspark)
+- [Microsoft Research：Skala](https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/)
 - [Google DeepMind News](https://deepmind.google/blog/)
 
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及指定播客入口。
 - 失败来源：Alibaba Cloud News 抓取返回内部错误；部分动态页依赖 JavaScript；播客检索噪声较高。
-- 初始候选：6 条；最终保留：3 条（1 条日期明确、2 条日期未确认）。
+- 初始候选：12 条；最终保留：6 条（3 条日期明确、1 条当天累积失效链接、2 条日期未确认）。
 - 二次补搜：否（最终来源不为 0）。
 
-一句话总结：本轮厂商官方发布面较安静，唯一日期明确的新信号来自 Hugging Face 社区评测文章，Google DeepMind 两项 8 月候选仍待确认具体日期。
+一句话总结：最近 24 小时以 Hugging Face 社区 ASR 评测方法为主，近两日补入 Liquid AI 推理优化与 Microsoft Research 科学 AI 更新，Google DeepMind 两项 8 月候选仍待确认具体日期。

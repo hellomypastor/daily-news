@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T01:02:24+08:00"
+updatedAt: "2026-08-22T04:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "ANOLISA / AgentSight"
 featuredUrl: "https://github.com/alibaba/anolisa"
@@ -12,31 +12,39 @@ featuredImageAlt: "ANOLISA GitHub 项目的公开社交预览图，展示项目�
 featuredImageCaption: "图片来源：ANOLISA 官方 GitHub 仓库"
 tags:
   - "Agent"
+  - "Agent Security"
   - "AI"
+  - "Authorization"
   - "Coding Agent"
   - "Communication"
+  - "Context"
+  - "Coordination"
+  - "Date Unverified"
   - "eBPF"
   - "Evaluation"
   - "Harness"
   - "HN"
   - "IDE"
   - "LLM"
+  - "MCP"
   - "Memory"
   - "Observability"
   - "Open Source"
   - "Python"
   - "RAG"
   - "Research"
+  - "Resurfaced"
   - "Sandbox"
   - "SDK"
   - "Security"
   - "Skills"
   - "Trending"
+  - "Watchlist"
 ---
 
 ## 今日概览
 
-本轮精选窗口为 **2026-08-20 01:02:24 至 2026-08-22 01:02:24（Asia/Shanghai）**。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱和多代理开发工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
+本轮精选窗口为 **2026-08-20 04:01:00 至 2026-08-22 04:01:00（Asia/Shanghai）**。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱和多代理开发工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
 
 ## 已验证精选
 
@@ -88,14 +96,16 @@ tags:
 
 ## 旧文重新升温
 
-最近 24 小时的 HN 检索中，未找到同时满足“原文早于 7 天、讨论发生在窗口内、且具有足够技术信息”的复热条目。
+- [Cloudflare《The Agent Access Model》](https://blog.cloudflare.com/the-agent-access-model/)原文发布于 **2026-08-05**，提出把 agent 身份与代表用户的授权分离，并用短期、最小权限凭据约束工具访问；[HN 讨论](https://news.ycombinator.com/item?id=49392727)于 **2026-08-22 03:22 +08:00** 重新出现，截止时 2 points、0 comments。这里记录的是复热信号，不把旧文写成今日发布。
+- [Dibs 官方仓库](https://github.com/Agenxy/dibs)创建于 **2026-08-11 02:02 +08:00**，Apache-2.0，提供 agent 间状态可见性、消息、文件传递与建议性资源声明；[HN 讨论](https://news.ycombinator.com/item?id=49393131)于 **2026-08-22 04:00 +08:00** 出现，截止时 1 point、1 comment。仓库早于 7 天，本轮只确认 HN 复热及官方项目定位。
 
 ## 日期未确认
 
-本轮保留候选均能由 arXiv 提交时间、GitHub Trending 截图式快照或 HN 提交时间定位；没有需要以未知日期进入正文的独立来源。
+- [Traccia 官网](https://traccia.ai/)自述提供 agent 可观测、评估、治理与运行时策略控制；[HN 提交](https://news.ycombinator.com/item?id=49391995)于 **2026-08-22 02:20 +08:00** 出现，截止时 1 point、0 comments。官网未给出可确认的首次发布日期或公开代码仓库，因此仅保留为日期未确认的产品信号，未验证其功能实现。
 
 ## 观察池
 
+- **低互动 / 个人上下文项目**：[Lore MCP 官方仓库](https://github.com/dipakkrishnan/lore-mcp)创建于 **2026-07-17 01:06 +08:00**，MIT，自述为 personal agent 提供可携带、默认私有的上下文层；[HN 提交](https://news.ycombinator.com/item?id=49392057)于 **2026-08-22 02:25 +08:00** 出现，截止时 1 point、0 comments。只确认仓库定位与讨论信号，未验证其商业化或隐私承诺。
 - **低互动 / 早期项目**：Proliferate、Caspian SDK 与 Parselbox 的 HN 讨论量很小，技术定位已由官方仓库确认，但社区验证强度不足。
 - **榜单热度而非发布事件**：ai-memory、OpenViking、AI-Infra-Guard 只确认当日 Trending 状态；功能成熟度、性能与增长持续性未验证。
 - **新预印本**：AI4AI-Bench、技能迁移研究与 Task-CoEvolve 均处于预印本阶段，实验数字应以论文原文和后续复现为准。
@@ -106,7 +116,7 @@ tags:
 
 ## 采集状态
 
-- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog。
-- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison 未发现窗口内直接相关新文；GitHub 语言榜单与 overall 重叠。
-- 初始候选：25；最终保留来源：14（10 个独立事件 / 项目，其中 4 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-22 01:02:24 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。
+- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia 原始页面。
+- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison 未发现窗口内直接相关新文；GitHub 语言榜单与 overall 重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库。
+- 初始候选：31；最终保留来源：22（14 个独立事件 / 项目，其中 8 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-22 04:01:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。

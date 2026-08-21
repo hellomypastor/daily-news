@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T01:02:24+08:00"
+updatedAt: "2026-08-22T04:01:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore"
 featuredUrl: "https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/"
@@ -20,9 +20,11 @@ tags:
   - "Agent SDK"
   - "AgentArts"
   - "AgentCore"
+  - "Background Tasks"
   - "Claude"
   - "Claude Code"
   - "Cloud Agent"
+  - "Cloud Session"
   - "Codex"
   - "Cursor"
   - "Gemini CLI"
@@ -36,12 +38,14 @@ tags:
 
 ## 扫描结论
 
-主窗口：2026-08-21 01:02:24 至 2026-08-22 01:02:24（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 01:02:24 至 2026-08-21 01:02:24。主窗口内最明确的 AaaS 信号来自 Claude Code self-hosted runner / Remote Control 与 Codex 本地、远程任务控制：竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
+主窗口：2026-08-21 04:01 至 2026-08-22 04:01（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 04:01 至 2026-08-21 04:01。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、self-hosted runner / Remote Control、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制：竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
 
 ## 今日重点
 
 | 厂商 / 平台 | 动态 | AaaS 意义 | 状态 |
 |---|---|---|---|
+| Anthropic | [Claude Code v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239)增加云端同步插件管理、跨机器会话消息、远程会话 keep-alive，并修复云会话 plan mode、远程 MCP 重连与 Remote Control | 强化托管会话的插件隔离、跨端协作、长任务存活与故障恢复 | 2026-08-22 03:54 +08:00；已验证，详见 Claude 专题页 |
+| Anthropic | [Claude Agent SDK TypeScript v0.3.239](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.239)让重复 initialize 后返回仍在运行的后台任务快照，并校正后台子 Agent 结果的成本与耗时 | 让重连宿主重新发现存活任务，并改善异步任务结算可观测性 | 2026-08-22 03:55 +08:00；已验证，详见 Claude 专题页 |
 | Anthropic | [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)加强 self-hosted runner 延迟关停、每连接代理鉴权、Remote Control 重连与跨会话消息 | 直接覆盖远程执行器、会话接管、生命周期和消息可靠性 | 2026-08-21 04:33 +08:00；已验证，详见 Claude 专题页 |
 | Anthropic | [Claude Agent SDK TypeScript v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238)增加后台/嵌套任务事件元数据和跨会话拒收生命周期 | 让托管任务的层级、状态和失败边界更可观测 | 2026-08-21 04:33 +08:00；已验证，详见 Claude 专题页 |
 | OpenAI | [Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)加入 `codex agents` 任务面板与 `codex queue`，覆盖本地和远程 session | 把远程任务发现、控制和异步 steer 收敛到统一 CLI | 2026-08-21 05:04 +08:00；已验证，详见 OpenAI 专题页 |
@@ -49,6 +53,8 @@ tags:
 
 ## 远程 / 云 Agent 执行
 
+- [Claude Code 2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239)让远程会话在长时间 SessionStart/Setup hook 中持续发送 keep-alive，并修复云会话闲置 worker 重启后脱离 plan mode、远程 MCP 瞬时 5xx 后无法恢复、Remote Control 状态与跨机器会话消息；详见 Claude 专题页。
+- [Claude Agent SDK 0.3.239](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.239)在运行中进程重复 initialize 后返回 live background task 快照，让重连宿主可重新发现仍在执行的任务，并把后台子 Agent 延后返回结果的成本、API 耗时和模型用量更新到释放时刻；详见 Claude 专题页。
 - Claude Code 2.1.238 为 self-hosted runner 增加延迟关停能力：收到终止信号后可继续服务已连接会话，并能为每次代理连接签发鉴权；Remote Control 同时修复重连、会话复用、跨会话 ListAgents/SendMessage 和消息丢失反馈。以上均来自[官方 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)，详见 Claude 专题页。
 - Claude Agent SDK 的[同版本 release](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238)补充后台与嵌套任务事件元数据，使宿主更容易表达任务树和拒收状态；它是 SDK 能力，不自动等同 Anthropic 托管服务单独 rollout，详见 Claude 专题页。
 - [Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)把本地与远程 session 纳入同一任务面板，并允许向会话排队消息；这是 Agent 控制面与异步任务体验的实质变化，详见 OpenAI 专题页。
@@ -56,7 +62,7 @@ tags:
 
 ## 海外厂商
 
-- Anthropic 与 OpenAI 在主窗口有直接远程任务/会话控制更新；Google、Microsoft/GitHub、Replit、Devin、Lindy、Factory、Sourcegraph/Amp 和 Cloudflare 未检出截止前可核验的同窗托管服务发布。
+- Anthropic 在截止前新增云会话与后台任务重连更新，OpenAI 在主窗口有直接远程任务/会话控制更新；Google、Microsoft/GitHub、Replit、Devin、Lindy、Factory、Sourcegraph/Amp 和 Cloudflare 未检出截止前可核验的同窗托管服务发布。
 - [Gemini CLI nightly 20260821](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260821.g30573d2e4)只有 ignore path 的 symlink 修复与 shell execution service 重构，属于 Agent harness 邻近信号，不能写成 Vertex Agent Engine 或 Jules 的托管能力更新。
 
 ## 中国厂商（字节重点）
@@ -105,8 +111,8 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 
 - 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、OpenHands、Factory、Sourcegraph/Amp、Lindy，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek、华为云公开入口；并做中英文网页、官方 release/changelog/status 与可信二手交叉检索。
 - 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Cursor/AWS/中国厂商部分页面无精确时分；GitHub Status 搜索缓存与历史页抓取不一致；Slack Code 未找到同窗官方原文。
-- 候选数量：42。
-- 最终保留：10 个独立来源 URL；主窗口 5 个（其中 Gemini CLI 为邻近信号）、24–72 小时/观察 3 个、日期未确认 2 个。
+- 候选数量：44。
+- 最终保留：12 个独立来源 URL；主窗口 7 个（其中 Gemini CLI 为邻近信号）、24–72 小时/观察 3 个、日期未确认 2 个。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 10 条动态，重点：Claude self-hosted runner/Remote Control 与 Codex 远程任务控制继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。
+今日扫描完成，共 12 条动态，重点：Claude 云会话与 SDK 后台任务重连、self-hosted runner/Remote Control 及 Codex 远程任务控制继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。

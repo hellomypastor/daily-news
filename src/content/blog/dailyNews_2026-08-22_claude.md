@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T01:02:24+08:00"
+updatedAt: "2026-08-22T04:01:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -18,8 +18,10 @@ tags:
   - "Claude Code"
   - "Community"
   - "Comparison"
+  - "Enterprise"
   - "Hate"
   - "Love"
+  - "Plugins"
   - "Quality"
   - "Security"
   - "Usage"
@@ -27,22 +29,22 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-21 01:02:24 至 2026-08-22 01:02:24（Asia/Shanghai）**。本轮确认 1 条官方更新：Claude Code v2.1.238。社区样本则明显分化：有人仍认可 Claude 在编码与长上下文上的能力，也有多条低样本帖子集中抱怨配额消耗、规划稳定性和过度设计。社区体验均只代表发帖者自述，不能据此推断平台已调整配额或模型。
+采集窗口：**2026-08-21 04:01 至 2026-08-22 04:01（Asia/Shanghai）**。本轮累计确认 2 条官方更新：Claude Code v2.1.239 与 v2.1.238；其中 v2.1.239 在截止前约 7 分钟发布。社区样本则明显分化：有人仍认可 Claude 在编码与长上下文上的能力，也有多条低样本帖子集中抱怨配额消耗、规划稳定性和过度设计。社区体验均只代表发帖者自述，不能据此推断平台已调整配额或模型。
 
 ## Tier 1：编码与 Agent 主轴
 
 | 产品/能力 | 24 小时状态 | 证据与判断 |
 |---|---|---|
-| Claude Code CLI | **有新增** | [v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238) 于 2026-08-21 04:33 +08:00 发布，新增 readline 风格键位、插件市场 `headersHelper`、自托管 runner 延迟关停和代理授权能力，并集中修复内存、Remote Control、MCP 与终端问题。 |
-| VS Code 集成 | 无独立新增 | 本次版本未列 VS Code 专属新功能；已检索官方 release/changelog。 |
-| JetBrains 集成 | 无新增 | 官方来源窗口内未见独立更新。 |
+| Claude Code CLI | **有新增** | [v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) 于 2026-08-22 03:54 +08:00 发布，增加 `/claude-api upgrade`、跨机器会话消息、云端插件同步标识，并集中修复 Bedrock、Remote Control、MCP、恢复会话与终端问题；此前 [v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238) 于 2026-08-21 04:33 +08:00 发布。 |
+| VS Code 集成 | **有修复** | v2.1.239 调整 usage-limit 横幅中的 “View usage” 布局。 |
+| JetBrains 集成 | **有修复** | v2.1.239 修复插件连接时 Edit/Write 调用约暂停 5 秒的问题。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | 邻近信号 | v2.1.238 说明其内置 `claude-api` skill 已适配 8 月 19 日 Managed Agents 更新，但该基础事件在窗口外，本页不把它计为 24 小时新发布。 |
 | Skills 与 marketplaces | **有新增** | v2.1.238 增加 URL marketplace/catalog 的 `headersHelper`，安装或更新前展示命令并默认要求确认；这是同一版本事件，不重复列来源。 |
 | Claude Developer Platform | 无独立新增 | 官方新闻与开发文档窗口内未见独立公告。 |
-| Agent SDK | 无新增 | 官方文档、GitHub 与新闻检索未见窗口内更新。 |
+| Agent SDK | **有修复** | v2.1.239 修复通过 SDK `setMcpServers()` 中途重连时，远程 MCP 遇到瞬时 5xx 后持续失败的问题。 |
 | Cowork | 无新增 | 官方来源窗口内未见新公告。 |
 | Design | 未确认 | 将名称作为搜索词检查，但未找到可由 Anthropic 官方确认的独立产品更新。 |
-| Tag / @Claude sessions | 无独立新增 | v2.1.238 有跨会话消息修复，但没有新的 Tag/@Claude 产品公告。 |
+| Tag / @Claude sessions | 邻近更新 | v2.1.239 为 Windows 增加跨机器会话消息，并让 `ListAgents` 能列出 live teammates；没有独立 Tag/@Claude 产品公告。 |
 | 当前官方 Sonnet 编码模型 | 无新增 | 官方新闻页窗口内未见新模型发布。 |
 | 当前官方 Opus 编码模型 | 无新增 | 官方新闻页窗口内未见新模型发布。 |
 | 当前官方 Haiku 编码模型 | 无新增 | 官方新闻页窗口内未见新模型发布。 |
@@ -56,8 +58,8 @@ tags:
 
 | 合并检查项 | 24 小时状态 | 说明 |
 |---|---|---|
-| Chrome / browser agent；Desktop / Preview | 无新增 | 官方新闻、文档与变更记录未见窗口内独立更新。 |
-| Marketplace / Connectors / Plugins | **有新增** | Marketplace 的认证辅助能力随 v2.1.238 更新；未发现 Connectors/Plugins 的另一项独立公告。 |
+| Chrome / browser agent；Desktop / Preview | **有修复** | v2.1.239 让 Claude in Chrome 的 `/clear` 关闭标签组，并修复云会话闲置重启后退出 plan mode；未见独立产品公告。 |
+| Marketplace / Connectors / Plugins | **有新增** | v2.1.239 为从 claude.ai 同步的插件增加 `name@synced` 标识及启停能力，且不会覆盖同名本地插件；v2.1.238 另含 Marketplace 认证辅助能力。 |
 | 创意/视频模型；Voice Mode | 未确认 / 无新增 | 未确认 Anthropic 在窗口内发布新的官方创意或视频模型；Voice Mode 无新公告。 |
 | Microsoft 365 集成 | 无新增 | 官方来源窗口内未见更新。 |
 
@@ -66,6 +68,10 @@ tags:
 Security 有可验证的邻近更新：v2.1.238 收紧了项目级 MCP/plugin/agent 文件中的 `headersHelper` 凭据环境继承和信任要求；这属于 Claude Code 版本内的安全改动。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客服方向在本窗口未找到新的官方发布。
 
 ## 官方更新（由新到旧）
+
+### Claude Code v2.1.239：云会话、插件同步与企业运行环境修复
+
+[v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) 的官方发布时间为 2026-08-21 19:54:23 UTC（上海时间 8 月 22 日 03:54:23），落在本轮截止前约 7 分钟。新增项包括 `/claude-api upgrade`、云端同步插件的 `name@synced` 管理、Windows 跨机器会话消息，以及数据驻留 workspace 成本估算计入 1.1 倍 US-only inference premium。修复覆盖 Bedrock 代理导致重复计费/API 调用、JetBrains 延迟、云会话 plan mode、远程 MCP 重连、Remote Control、会话恢复、Chrome 标签组与终端交互等。
 
 ### Claude Code v2.1.238：插件认证、自托管 runner 与稳定性
 
@@ -110,5 +116,5 @@ Security 有可验证的邻近更新：v2.1.238 收紧了项目级 MCP/plugin/ag
 
 - 已检查：Anthropic Newsroom、Developer Documentation、Claude Code GitHub Releases/CHANGELOG、Anthropic Status、Reddit r/ClaudeCode/r/ClaudeAI/r/Anthropic、Hacker News、YouTube 与公开网页检索。
 - 失败来源：X 未登录结果不稳定，无法可靠核对原帖时间和互动量；部分 Anthropic 文档页不提供可独立核验的更新时间；Hacker News 未找到窗口内可确认条目。
-- 初始候选数：12；保留来源数：6。
+- 初始候选数：13；保留来源数：7。
 - 二次补搜：否（最终来源不为 0）。
