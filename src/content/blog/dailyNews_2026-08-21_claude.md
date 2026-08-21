@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T15:19:43+08:00"
+updatedAt: "2026-08-21T16:02:14+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -18,6 +18,7 @@ tags:
   - "Agent View"
   - "Agents"
   - "Anthropic"
+  - "Auto Mode"
   - "Chrome"
   - "Claude"
   - "Claude API"
@@ -28,8 +29,10 @@ tags:
   - "Connectors"
   - "Cost"
   - "Cowork"
+  - "Data Loss"
   - "Desktop"
   - "Docs"
+  - "Focus"
   - "GitHub"
   - "GitHub Actions"
   - "Google"
@@ -38,6 +41,7 @@ tags:
   - "Python"
   - "Rate Limit"
   - "Regression"
+  - "Sandbox"
   - "Scheduled Tasks"
   - "Sessions"
   - "Skills"
@@ -62,13 +66,13 @@ tags:
 | 产品 | 状态 |
 |---|---|
 | Claude Code CLI | v2.1.238 于 04:33 发布；除新设置与 runner 能力外，官方说明还称已释放离开近期显示窗口的 subagent tool results，以修复长交互会话内存无界增长，并把自动更新检查延后到启动约 10 秒后。 |
-| VS Code 集成 | 无独立官方版本；[v2.1.238 中 `/compact` 无效](https://github.com/anthropics/claude-code/issues/88446)被标记为 regression，但目前只是 Linux 单用户报告。 |
+| VS Code 集成 | 无独立官方版本；[v2.1.238 中 `/compact` 无效](https://github.com/anthropics/claude-code/issues/88446)被标记为 regression；[agent 文件预览抢走键盘焦点](https://github.com/anthropics/claude-code/issues/88465)提供了扩展代码路径与 UIA 轨迹，但两者目前都只是单用户报告。 |
 | JetBrains 集成 | 无新增。 |
-| Managed Agents：sessions | v2.1.238 修复 Remote Control 中途消息从 transcript 消失、短暂登录续期失败导致断开、跨会话拒收或丢队列却静默成功，以及 ListAgents/SendMessage 暴露预热 worker 等问题；[恢复 fork 后 prompt cache 丢失](https://github.com/anthropics/claude-code/issues/88444)与 [FleetView 归档列表不渲染](https://github.com/anthropics/claude-code/issues/88447)是增量观察项。 |
+| Managed Agents：sessions | v2.1.238 修复 Remote Control 中途消息从 transcript 消失、短暂登录续期失败导致断开、跨会话拒收或丢队列却静默成功，以及 ListAgents/SendMessage 暴露预热 worker 等问题；[恢复 fork 后 prompt cache 丢失](https://github.com/anthropics/claude-code/issues/88444)与 [FleetView 归档列表不渲染](https://github.com/anthropics/claude-code/issues/88447)是增量观察项；[auto mode 间接删除用户主目录](https://github.com/anthropics/claude-code/issues/88462)被标记 high-priority/data-loss，但仍是尚无维护方结论的单用户报告。 |
 | Managed Agents：webhooks | 无新增。 |
 | Managed Agents：environments | v2.1.238 新增 self-hosted runner 的延迟关停上限与逐连接代理鉴权命令/文件；慢轮询不再轻易导致健康 runner 被移除。 |
 | Managed Agents：memory stores | v2.1.238 更新内置 `claude-api` skill，以覆盖 8 月 19 日 Managed Agents 发布中的 self-hosted sandbox memory stores；本轮没有独立 memory store 版本。 |
-| Skills | 内置 `claude-api` skill 已更新；[嵌套 SKILL.md 自动发现与文档不一致](https://github.com/anthropics/claude-code/issues/88400)是带 has repro 的单用户报告，仅列观察池。 |
+| Skills | [后台 `context: fork` skill 静默失去 Agent/Task 工具](https://github.com/anthropics/claude-code/issues/88453)是有两次复现的单用户报告，仅列观察池；内置 `claude-api` skill 已更新；[嵌套 SKILL.md 自动发现与文档不一致](https://github.com/anthropics/claude-code/issues/88400)是带 has repro 的单用户报告，仅列观察池。 |
 | marketplaces | v2.1.238 为 URL marketplace/catalog entry 新增 `headersHelper`，安装或更新前会展示命令并要求确认；官方插件目录本轮也有版本指针同步，但不等同于第三方能力发布。 |
 | Claude Developer Platform | 状态页确认 API 受多模型错误事件影响后恢复；无独立 API 发布说明。 |
 | Agent SDK | TypeScript v0.3.238 新增 task_started 的 `is_backgrounded`/`spawn_depth`、UserPromptExpansion 的 `suppressOriginalPrompt` 和跨会话拒收生命周期；Python v0.2.143 仅把内置 CLI 更新至 2.1.238。 |
@@ -137,6 +141,9 @@ tags:
 - **Agents / 成本**：fork 恢复后的 prompt-cache 报告带 has repro 和请求级数据，但尚无维护方确认，不把报告者成本数字外推。
 - **VS Code**：`/compact` 在 2.1.238 失效被标记 regression，目前缺少独立复现与修复结论。
 - **FleetView**：归档会话仍存在但侧栏不渲染的报告带 has repro，尚待确认影响范围。
+- **Skills / Agents**：后台 `context: fork` skill 静默失去 Agent/Task 工具的报告给出两次复现，但尚无维护方确认。
+- **Auto mode / 数据安全**：脚本内延迟展开的清理 trap 间接删除 WSL 主目录的报告已被标记 high-priority/data-loss；影响数字仅来自报告者，根因与修复均未获确认。
+- **VS Code**：agent 只读文件预览可能因未设置 `preserveFocus` 而抢走其他输入框焦点；报告含代码路径与 UIA 轨迹，尚待维护方确认。
 
 ## 来源链接
 
@@ -146,6 +153,6 @@ tags:
 
 - 已检查：Anthropic Newsroom/Research/Blog、Help Center、Developer Platform release notes、Cowork/Desktop changelog、Status API、Claude Code/Agent SDK/Code Action releases、官方插件目录、Claude Code Issues，以及 Reddit、Hacker News、X、YouTube 公开入口。
 - 失败来源：GitHub API 在首轮分页与统计后触发匿名限流；Reddit JSON 不稳定；X 未登录时间线、YouTube 与 Hacker News 未提供可稳定核验的窗口内独立增量。
-- 初始候选：375（早间 Claude Code Issue 查询 317 条；07:51–13:02 增量 40 条；另含官方 releases、状态事件、目录变更与社区搜索候选）。
-- 最终保留：14 个独立来源 URL。
+- 初始候选：392（早间 Claude Code Issue 查询 317 条；07:51–13:02 增量 40 条；13:02–16:01 增量 17 条；另含官方 releases、状态事件、目录变更与社区搜索候选）。
+- 最终保留：17 个独立来源 URL。
 - 二次补搜：否；最终来源不为 0。

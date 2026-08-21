@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T15:19:43+08:00"
+updatedAt: "2026-08-21T16:04:49+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Google ADK adds configurable maximum LLM calls"
 featuredUrl: "https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090"
@@ -28,6 +28,10 @@ tags:
   - "Codex"
   - "Deep Agents"
   - "DeepSeek"
+  - "DevUI"
+  - "Evaluation"
+  - "ExecuTorch"
+  - "Export"
   - "Gemini"
   - "Google ADK"
   - "Guardrails"
@@ -43,6 +47,7 @@ tags:
   - "Multimodal"
   - "NVIDIA"
   - "OpenTelemetry"
+  - "Parallel Agents"
   - "Performance"
   - "Persistence"
   - "Qwen Code"
@@ -53,6 +58,8 @@ tags:
   - "Security"
   - "Session"
   - "Skills"
+  - "Supply Chain"
+  - "Tool"
   - "Tool Calling"
   - "Transformers"
   - "Web Shell"
@@ -61,7 +68,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-20 13:02 至 2026-08-21 13:02（Asia/Shanghai）。窗口内可核实的技术动态主要来自官方发布与代码提交：Claude Code 与 Codex 均有版本更新；Google ADK 增加 LLM 调用上限配置、回滚破坏 HITL 确认的 A2A guard，并补强 RemoteA2aAgent 认证；Microsoft Agent Framework 增加托管 Agent 与 Azure Blob 会话持久化，并迁移至新版 MCP 长任务扩展；LangChain、Qwen Code、Hugging Face Transformers 与 NVIDIA NeMo Guardrails 也有明确工程变更。提交事实可核实，但尚不能等同 GA 发布、广泛采用或已完成生产验证。13:02 滚动轮进一步检出 ADK、Microsoft Agent Framework、Qwen Code 与 NeMo Guardrails 的工程增量。
+扫描窗口：2026-08-20 16:01 至 2026-08-21 16:01（Asia/Shanghai）。窗口内可核实的技术动态主要来自官方发布与代码提交：Claude Code 与 Codex 均有版本更新；Google ADK 增加 LLM 调用上限配置、回滚破坏 HITL 确认的 A2A guard，并补强 RemoteA2aAgent 认证；Microsoft Agent Framework 增加托管 Agent 与 Azure Blob 会话持久化，并迁移至新版 MCP 长任务扩展；LangChain、Qwen Code、Hugging Face Transformers 与 NVIDIA NeMo Guardrails 也有明确工程变更。提交事实可核实，但尚不能等同 GA 发布、广泛采用或已完成生产验证。16:01 滚动轮进一步检出 ADK、Microsoft Agent Framework、Qwen Code 与 NeMo Guardrails 的工程增量。
 
 ## 优先动态
 
@@ -92,6 +99,15 @@ tags:
 | Qwen Code | [Autofix 超预算后审计方案](https://github.com/QwenLM/qwen-code/commit/2c64ebe980e7d0d9d7a97cf1de6dc47014bc3449) 与 [后台 shell 期间保持 turn 展开](https://github.com/QwenLM/qwen-code/commit/e443f26bfc8db038ca655a1f5f8589a9d8d2dded) | 增强自动修复的恢复策略和后台任务可见性；尚未据此推断已进入稳定版。 |
 | Qwen Code | [限制 daemon transcript 防止 renderer OOM](https://github.com/QwenLM/qwen-code/commit/54a3a7f6693b0ac50c6459e91cc2cac32983d393) 与 [加固 release CI](https://github.com/QwenLM/qwen-code/commit/a074d3b0423b8c99ea272b598602d7cf0c24b15c) | 分别处理 Web Shell 内存边界与供应链执行面；影响版本待发布说明确认。 |
 | NVIDIA | [NeMo Guardrails 支持 reasoning-only 非流式响应](https://github.com/NVIDIA-NeMo/Guardrails/commit/c9d10d7041d2016aa53a5fa0a74d81ff860c1a55) | 与早间 think-tag 修复共同表明 reasoning 输出兼容仍在收敛。 |
+
+## 16:01 滚动增量
+
+| 厂商 / 项目 | 动态 | 状态与意义 |
+|---|---|---|
+| Microsoft | [FoundryEvals 补齐工具调用 arguments](https://github.com/microsoft/agent-framework/commit/007a2d7a055273fac000cc9c9f9b859b0c851c35) 与 [DevUI 透传 function invocation kwargs](https://github.com/microsoft/agent-framework/commit/24a383613bc38b70c9de809b8d07fc942b9dd51c) | 官方提交；分别改善评测记录一致性和 DevUI 调用参数传递，尚未据此推断托管服务已 GA。 |
+| Qwen Code | [list_directory 改为显式启用](https://github.com/QwenLM/qwen-code/commit/e09399e0fbcf48d04a9f96a23db690b969ad8d35)、[加固高危 CVE 门禁](https://github.com/QwenLM/qwen-code/commit/e40263ee554f2db7247c6cf0b515aa025d3c3a7d) 与 [Autofix 镜像绑定 digest](https://github.com/QwenLM/qwen-code/commit/575e62ee4657a41acccb918a8766847a1280ff85) | 工具暴露面、依赖安全和供应链复现性均有收紧；均为主分支提交，进入稳定版的时间待确认。 |
+| Qwen Code | [统一并行 Agent 详情 transcript](https://github.com/QwenLM/qwen-code/commit/ef86d1f3c876026fb9ee8ac4811381b74ebb78ac) | 修复并行 Agent 折叠状态并统一详情记录，属于多 Agent 操作可见性改进。 |
+| Hugging Face | [修复 ExecuTorch 导出时的 DynamicCache 重建](https://github.com/huggingface/transformers/commit/3cd1a2307acd8e9262917ee85fda8333af4fb5fc) | 官方提交；改善模型导出兼容性，影响版本待发布说明确认。 |
 
 ## 常规工程更新
 
@@ -137,4 +153,4 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与可�
 
 - 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及六组播客入口；并复核十个核心官方 GitHub 仓库。
 - 失败/受限：部分入口返回 403、依赖脚本或无精确时间；部分播客和中国厂商集合页无法稳定核验新一期；社交互动量未登录不可稳定复核。
-- 初始候选 114 条，保留 30 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。
+- 初始候选 134 条，保留 37 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T15:19:43+08:00"
+updatedAt: "2026-08-21T16:02:55+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.149.0"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
@@ -15,6 +15,7 @@ tags:
   - "未证实"
   - "主分支"
   - "Agent"
+  - "Agents"
   - "API"
   - "Apple Messages"
   - "Assistants API"
@@ -44,6 +45,7 @@ tags:
   - "Prerelease"
   - "Projects"
   - "Python"
+  - "Realtime"
   - "Release"
   - "Responses"
   - "SDK"
@@ -51,6 +53,7 @@ tags:
   - "Sentiment"
   - "Sharing"
   - "Thinking"
+  - "TUI"
   - "Usage"
   - "Webhooks"
   - "Workflow"
@@ -58,7 +61,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-20 13:02:00 至 2026-08-21 13:02:00（Asia/Shanghai；同日累积保留早轮来源）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
+扫描窗口：2026-08-20 16:01:00 至 2026-08-21 16:01:00（Asia/Shanghai；同日累积保留早轮来源）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
 
 <figure class="source-image">
   <a href="https://github.com/openai/codex/releases/tag/rust-v0.149.0"><img src="https://opengraph.githubassets.com/5562d06e5b3963ee0c2b84864989d7f42fd8aaa33991e8b3c164e0eaca0ae2d7/openai/codex/releases/tag/rust-v0.149.0" alt="OpenAI Codex 0.149.0 GitHub release preview" loading="lazy" /></a>
@@ -104,7 +107,8 @@ tags:
 
 ## 官方与原始更新（由新到旧）
 
-1. 12:24，Codex 发布 [0.150.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.2)，标为预发布，release 页面仅有版本级说明。
+1. 13:21，Codex 发布 [0.149.0-alpha.7.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7.1)，这是 alpha.7 的补丁预发布，不能视作新的稳定版。
+2. 12:24，Codex 发布 [0.150.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.2)，标为预发布，release 页面仅有版本级说明。
 2. 10:28，Codex 发布 [0.149.0-alpha.4.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.1)，这是发布时间晚于稳定版的补丁预发布，不能解读为稳定版回退。
 3. 06:06，Codex 发布 [0.150.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.1)，标为预发布，不能写成稳定版。
 4. 05:04，Codex [0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 发布为稳定版；release 页面只有版本级说明。
@@ -145,6 +149,7 @@ tags:
 ## 观察池
 
 - Codex 额度消耗投诉形成同日聚集信号，但官方状态页只确认 API authentication errors，没有确认额度下调、计费异常或与 auto-review 的统一关联。后续应继续观察官方定价 / usage 文档、状态页与可复现 telemetry。
+- 截止 16:01，Codex 主分支新增[既有 realtime call 附着支持](https://github.com/openai/codex/commit/536f86e5cc9ec1ff38457d099bf320b9d08eeeba)、[codex agents 会话配置](https://github.com/openai/codex/commit/44e95c857f37f81a5731eab72c32a3d334d0e2c4)与[TUI 权限模式循环快捷键](https://github.com/openai/codex/commit/2aaefa32b0762491d1340675a6082fad26bbb57f)，均只是主分支提交，尚不能视为正式交付。
 - Codex 主分支还出现 app signature 校验、unified exec、MCP event streaming、managed developer instructions 和 sandbox policy 等大量提交；由于 0.149.0 release 页面未列明对应关系，本文没有把它们归入稳定版功能。
 - [ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog)与 API changelog 在截止时未列出可与上述 release notes 分离的 8 月 20 日新增。
 
@@ -156,5 +161,5 @@ tags:
 
 - 已检查来源：OpenAI Release Notes / Help / Learn、ChatGPT & Codex changelog、API changelog、model guidance、Assistants migration、Status、Newsroom、8 个官方 GitHub 仓库、Developer Community、Reddit、HN、X 与中英文新闻检索。
 - 失败来源：OpenAI News 普通 curl 403；GitHub 未认证 API 批量扫描后 403 rate limit；Reddit JSON / RSS 与 X 正文提取不稳定；JetBrains 与 YouTube 未见可核实新增。均已改用可访问官方原页、网页索引或公开帖子，并降低社区证据等级。
-- 初始候选数：96；保留来源数：26。
+- 初始候选数：100；保留来源数：30。
 - 二次补搜：否（最终来源不为 0）。

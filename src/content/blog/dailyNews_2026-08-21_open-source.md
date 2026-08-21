@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T15:19:43+08:00"
+updatedAt: "2026-08-21T16:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Open Source Is Not a Virtue: It’s an Ownership Model"
 featuredUrl: "https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/"
@@ -46,12 +46,13 @@ tags:
   - "Security"
   - "Training"
   - "Trending"
+  - "Video"
   - "Watchlist"
 ---
 
 ## 概览
 
-技术高亮窗口滚动至 2026-08-21 13:02:00，HN 讨论与旧文回流窗口滚动至 2026-08-21 13:02:00（Asia/Shanghai）。在 07:51 已完成的 HN 七组关键词 307 条、GitHub 三类日榜 45 行、arXiv 最新 100 条、Hugging Face Blog RSS 与 Simon Willison feed 基础上，本轮增量复核 HN newest/Algolia 123 条并刷新三类 GitHub 日榜；累计原始候选计数（含入口间重叠）为 665，最终保留 43 个唯一来源 URL。发布日期、HN 发现时间与 GitHub 榜单热度分别记录，不互相替代。
+技术高亮窗口滚动至 2026-08-21 16:01:00，HN 讨论与旧文回流窗口滚动至 2026-08-21 16:01:00（Asia/Shanghai）。在 07:51 已完成的 HN 七组关键词 307 条、GitHub 三类日榜 45 行、arXiv 最新 100 条、Hugging Face Blog RSS 与 Simon Willison feed 基础上，累计增量复核 HN newest/Algolia 192 条并刷新三类 GitHub 日榜；累计原始候选计数（含入口间重叠）为 734，最终保留 47 个唯一来源 URL。发布日期、HN 发现时间与 GitHub 榜单热度分别记录，不互相替代。
 
 ## 已核实高亮
 
@@ -93,6 +94,9 @@ tags:
 | [DeepSeek Harness](https://news.ycombinator.com/item?id=49382410) | 2026-08-21 09:06 +08:00；3 / 1 | 讨论指向官方仓库；README 明确项目仍处 developer preview |
 | [ANOLISA](https://news.ycombinator.com/item?id=49383466) | 2026-08-21 11:36 +08:00；4 / 0 | 讨论指向阿里官方仓库；组件边界与许可证已按仓库核验 |
 
+| [Seed：最小自修改 Agent harness](https://news.ycombinator.com/item?id=49384113) | 2026-08-21 13:20 +08:00；13 / 1 | 指向 [vivekhaldar/seed](https://github.com/vivekhaldar/seed)；README 可核验其核心是带 bash exec 工具、可改写自身提示的 Python loop；仓库未声明许可证，不能推定复用授权 |
+| [Donkey Cut：LLM 控制的视频编辑器](https://news.ycombinator.com/item?id=49384105) | 2026-08-21 13:19 +08:00；3 / 0 | 指向 [DonkeyCut/Donkey](https://github.com/DonkeyCut/Donkey)；README 可核验多轨时间线、AI 助手及本地/云端项目模式，仓库为 Apache-2.0；生成能力依赖外部模型或服务 |
+
 ## 论文 / 研究
 
 - [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](https://arxiv.org/abs/2608.19147)（arXiv v1：2026-08-20 01:33 +08:00）研究预编译 OpenVINO 分片、推测解码与微批处理在多台 AI PC 上进行分布式 LLM 推理；性能结论以作者硬件和实验配置为限。
@@ -124,5 +128,5 @@ tags:
 
 - 已检查来源：HN front/newest 与 Algolia 七组关键词，并在 13:02 增量检查 07:51–13:02 的 123 条 newest；GitHub Trending 全站、Python、TypeScript 两次快照；GitHub 项目页；arXiv cs.AI/cs.CL/cs.LG/cs.SE；Hugging Face Blog / Papers；Simon Willison；Shopify Engineering、DeepSeek、ANOLISA 等工程原文。
 - 失败来源：Hugging Face Daily Papers RSS 返回 401；ONNX.css、Autolith 与 The Sloppiest Thing About AI 返回 403；部分新仓库结构化 API 元数据不可用；失败项均已说明证据限制。
-- 累计候选数量：665；最终保留来源：43 个唯一 URL。
+- 累计候选数量：734；最终保留来源：47 个唯一 URL。13:02–16:01 增量检查 69 条，新增 Seed 与 Donkey Cut 的仓库及 HN 发现证据。
 - 二次补搜：否（最终来源不为 0）。
