@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T16:01:00+08:00"
+updatedAt: "2026-08-21T20:10:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Cloudflare Agents 0.21.0"
 featuredUrl: "https://github.com/cloudflare/agents/releases/tag/agents%400.21.0"
@@ -23,6 +23,7 @@ tags:
   - "Agent Runtime"
   - "Agent SDK"
   - "Agent Workflow"
+  - "AgentArts"
   - "Async Tasks"
   - "Browser Agent"
   - "China"
@@ -39,6 +40,8 @@ tags:
   - "Lifecycle"
   - "Managed Agent"
   - "MCP"
+  - "Microsoft Foundry"
+  - "Migration"
   - "Multi-Agent Workspace"
   - "Official Product"
   - "Reliability"
@@ -51,7 +54,7 @@ tags:
 
 ## 今日概览
 
-主扫描窗口滚动至 2026-08-20 16:01:00 至 2026-08-21 16:01:00（Asia/Shanghai）；另检查 24–72 小时信号至 2026-08-18 16:01:00。窗口内最明确的 AaaS 变化来自 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)、[Claude Agent SDK TypeScript v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238) 与 [OpenAI Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)：前者加强 self-hosted runner、Remote Control 和跨会话消息，后者加入 Agent 任务面板及向本地/远程会话排队消息的命令。它们共同指向托管 Agent 的核心竞争点——长任务生命周期、会话恢复、消息可靠性、运行环境与安全策略，而不是单纯模型 API。Claude 事件详见 Claude 专题页，Codex 事件详见 OpenAI 专题页。13:02 增量还确认了 OpenAI 将 Codex CLI、SDK 与 app-server 定位为可嵌入产品和工作流的开放 Agent harness，以及阿里 ANOLISA 的自托管 Agent 运行层；两者分别归入 24–72 小时观察与邻近信号。16:01 增量补入 Zephyr 的 The AI Platform 正式可用公告：它提供共享频道中的 AI specialists、可复用 workflow/mini-app 与远程运行，属于团队级托管 Agent 工作面；证据来自公司提供的新闻稿，并由官方产品站交叉验证产品定位。
+主扫描窗口滚动至 2026-08-20 20:10:00 至 2026-08-21 20:10:00（Asia/Shanghai）；另检查 24–72 小时信号至 2026-08-18 20:10:00。窗口内最明确的 AaaS 变化来自 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)、[Claude Agent SDK TypeScript v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238) 与 [OpenAI Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)：前者加强 self-hosted runner、Remote Control 和跨会话消息，后者加入 Agent 任务面板及向本地/远程会话排队消息的命令。它们共同指向托管 Agent 的核心竞争点——长任务生命周期、会话恢复、消息可靠性、运行环境与安全策略，而不是单纯模型 API。Claude 事件详见 Claude 专题页，Codex 事件详见 OpenAI 专题页。13:02 增量还确认了 OpenAI 将 Codex CLI、SDK 与 app-server 定位为可嵌入产品和工作流的开放 Agent harness，以及阿里 ANOLISA 的自托管 Agent 运行层；两者分别归入 24–72 小时观察与邻近信号。16:01 增量补入 Zephyr 的 The AI Platform 正式可用公告：它提供共享频道中的 AI specialists、可复用 workflow/mini-app 与远程运行，属于团队级托管 Agent 工作面；证据来自公司提供的新闻稿，并由官方产品站交叉验证产品定位。20:10 增量确认华为云 AgentArts 的 2026 年 8 月官方动态包含第三方托管智能体日志汇聚、运行时灰度策略和网关会话保持；因页面只给月份，归入日期未确认。Microsoft Foundry Hosted Agents 的旧预览后端支持于 8 月 20 日截止，则作为较早发布的迁移截止上下文保留。
 
 ## 今日重点
 
@@ -75,7 +78,7 @@ tags:
 | Anthropic | 主窗口内有 self-hosted runner、Remote Control 与 Agent SDK 更新。 |
 | OpenAI | 主窗口内 Codex 任务面板与远程消息队列属于直接 AaaS 增量。 |
 | Google / Gemini / Jules | Gemini CLI nightly 有 harness 修复；未发现窗口内 Vertex Agent Engine 或 Jules 托管能力公告。 |
-| Microsoft / GitHub | 未发现窗口内 Copilot Studio、Azure Agent 服务或 GitHub coding agent 的可核实新增。 |
+| Microsoft / GitHub | 未发现窗口内新发布；Hosted Agents 旧预览后端迁移截止属于较早发布的运维信号，见观察池。 |
 | Replit / Devin / Lindy / Factory / Sourcegraph Amp | 未发现窗口内官方发布。 |
 | Cursor | 有 24–72 小时且缺精确时分的 Cloud Agents 更新，见日期未确认。 |
 | CrewAI / LangGraph | 有 24–72 小时 SDK/框架更新，见观察池；不把开源框架版本自动等同于托管服务发布。 |
@@ -89,7 +92,7 @@ tags:
 
 ## 中国厂商
 
-**字节跳动重点**：Coze、火山引擎、Doubao、Trae 与 Seed 的公开入口未检出主窗口内可核验的新托管 Agent 发布。阿里云百炼/Qoder、腾讯元宝/混元/腾讯云、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax 与 DeepSeek 同样未发现窗口内可核验的 AaaS 新增。此处只说明本轮公开扫描结果，不代表厂商没有灰度、地区限定或登录态内更新。
+**字节跳动重点**：Coze、火山引擎、Doubao、Trae 与 Seed 的公开入口未检出主窗口内可核验的新托管 Agent 发布。阿里云百炼/Qoder、腾讯元宝/混元/腾讯云、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax 与 DeepSeek 同样未发现窗口内可核验的 AaaS 新增。华为云 AgentArts 有只标注到月份的官方更新，见日期未确认。此处只说明本轮公开扫描结果，不代表厂商没有灰度、地区限定或登录态内更新。
 
 ## 24–72 小时观察池
 
@@ -111,6 +114,7 @@ Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备
 ## 日期未确认
 
 - **Cursor Cloud Agents**：[8 月 19 日 changelog](https://cursor.com/changelog/08-19-26)称 cloud agents 可订阅 PR、Slack thread 或 scheduled task 事件，持有 goal，并在长会话中持续运行；页面未给精确时分，无法判断是否处于本轮 24–48 小时的具体位置。作为日期已知但时分未确认的 AaaS 候选保留。
+- **华为云 AgentArts**：[2026 年 8 月最新动态](https://support.huaweicloud.com/wtsnew-agentarts/index.html)列出智能体卫士、运行时灰度策略、网关会话保持及第三方托管智能体日志统一观测等公测能力，符合托管运行、安全和可观测控制面；页面只标注月份，不能断言在本轮窗口发布。
 
 ## 未证实传闻
 
@@ -122,11 +126,12 @@ Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备
 - CrewAI 1.15.17：框架 conversational flow 与安全修复，托管部署状态未由该 release 证明。
 - LangGraph SDK 0.4.3：SDK 生命周期接口信号，未单独证明 LangGraph Platform 商业服务变更。
 - Cloudflare Agents 0.21.0：与 Durable Objects、Workflows、Browser Tools 紧密相关，但发布时间已略超 72 小时。
+- [Microsoft Foundry Hosted Agents 迁移说明](https://github.com/MicrosoftDocs/azure-ai-docs/blob/main/articles/foundry/agents/how-to/migrate-hosted-agent-preview.md)：文档 8 月 6 日更新，要求旧预览部署在 8 月 20 日支持截止前迁移到 session sandbox、每 Agent 独立身份和新协议/API；这是运维截止上下文，不是本轮新发布。
 - [Alibaba ANOLISA](https://github.com/alibaba/anolisa)：Apache-2.0 的 Agent 工作负载运行层，README 覆盖终端入口、Agent memory、可观测、安全沙箱与 checkpoint；属于中国厂商的自托管 runtime 信号，未证明已提供托管 AaaS。
 
 ## 趋势判断
 
-本轮高信号不在“更多 Agent 名称”，而在执行控制面成熟：Codex SDK/app-server 的可嵌入接口进一步把 Agent 生命周期开放给第三方产品；任务面板、消息队列、runner 延迟关停、代理鉴权、重连与丢消息可见性逐步成为托管 Agent 的标准组件。Zephyr 的团队共享 Agent 工作面则说明 AaaS 正向多人协作与可复用业务流程扩展；但其采用成效仍只有公司自述。中国厂商公开面本轮无可核验同窗发布，不能据此推断竞争放缓。
+本轮高信号不在“更多 Agent 名称”，而在执行控制面成熟：Codex SDK/app-server 的可嵌入接口进一步把 Agent 生命周期开放给第三方产品；任务面板、消息队列、runner 延迟关停、代理鉴权、重连与丢消息可见性逐步成为托管 Agent 的标准组件。Zephyr 的团队共享 Agent 工作面则说明 AaaS 正向多人协作与可复用业务流程扩展；但其采用成效仍只有公司自述。中国厂商公开面本轮无精确到日时的可核验同窗发布；AgentArts 的月度更新显示托管日志、灰度和会话治理仍在推进，但不能据此推断为今日发布或竞争节奏变化。
 
 ## 来源链接
 
@@ -134,10 +139,10 @@ Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、Factory、Sourcegraph/Amp，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 的公开入口；13:02 增量复核七个核心 release feed、OpenAI Developers、HN 与 ANOLISA 官方仓库；16:01 增量复核 AaaS 厂商发布搜索、Zephyr 公司新闻稿与官方产品站。
+- 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、Factory、Sourcegraph/Amp，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 的公开入口；13:02 增量复核七个核心 release feed、OpenAI Developers、HN 与 ANOLISA 官方仓库；16:01 增量复核 AaaS 厂商发布搜索、Zephyr 公司新闻稿与官方产品站；20:10 增量复核华为云 AgentArts、Microsoft Foundry Hosted Agents 迁移文档及中英文发布搜索。
 - 失败来源：部分官网缺精确时分或需客户端渲染；GitHub 匿名 API 后段限流；X/登录态社交入口无法稳定核验；Codex 0.150.0 alpha release 只有版本占位说明，未作为实质动态收录。
-- 累计候选：127（首轮 93；13:02 增量 31；16:01 增量 3）。
-- 最终保留：13 个独立来源 URL，其中主窗口 7 个、日期未确认 1 个、24–72 小时 3 个、邻近/较旧上下文 2 个。
+- 累计候选：137（首轮 93；13:02 增量 31；16:01 增量 3；20:10 增量 10）。
+- 最终保留：15 个独立来源 URL，其中主窗口 7 个、日期未确认 2 个、24–72 小时 3 个、邻近/较旧上下文 3 个。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 13 条动态，重点：Claude 与 Codex 都在加强长任务、远程会话和异步消息的执行控制面，Codex 进一步开放可嵌入的 SDK/app-server，ANOLISA 提供中国厂商自托管 Agent runtime 邻近信号，Zephyr TAP 增加团队共享的托管 workflow/mini-app 工作面。
+今日扫描完成，共 15 条动态，重点：Claude 与 Codex 都在加强长任务、远程会话和异步消息的执行控制面，Codex 进一步开放可嵌入的 SDK/app-server，华为云 AgentArts 的月度动态补充托管日志、灰度与会话治理信号，Zephyr TAP 增加团队共享的托管 workflow/mini-app 工作面。

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T16:02:55+08:00"
+updatedAt: "2026-08-21T20:10:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.149.0"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
@@ -16,6 +16,7 @@ tags:
   - "主分支"
   - "Agent"
   - "Agents"
+  - "Agents SDK"
   - "API"
   - "Apple Messages"
   - "Assistants API"
@@ -27,7 +28,9 @@ tags:
   - "Computer History"
   - "Deprecation"
   - "Desktop"
+  - "Exec Server"
   - "Go"
+  - "Handoff"
   - "Hate"
   - "Hotfix"
   - "Image"
@@ -54,6 +57,7 @@ tags:
   - "Sharing"
   - "Thinking"
   - "TUI"
+  - "TypeScript"
   - "Usage"
   - "Webhooks"
   - "Workflow"
@@ -61,7 +65,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-20 16:01:00 至 2026-08-21 16:01:00（Asia/Shanghai；同日累积保留早轮来源）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
+扫描窗口：2026-08-20 20:10:00 至 2026-08-21 20:10:00（Asia/Shanghai；同日累积保留早轮来源）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
 
 <figure class="source-image">
   <a href="https://github.com/openai/codex/releases/tag/rust-v0.149.0"><img src="https://opengraph.githubassets.com/5562d06e5b3963ee0c2b84864989d7f42fd8aaa33991e8b3c164e0eaca0ae2d7/openai/codex/releases/tag/rust-v0.149.0" alt="OpenAI Codex 0.149.0 GitHub release preview" loading="lazy" /></a>
@@ -80,7 +84,7 @@ tags:
 | ChatGPT agentic / Work Mode | Apple Messages plugin 可在 Apple silicon Mac 上读取、搜索并准备或发送 Messages 内容，发送前默认要求确认收件人和消息；详见[插件文档](https://learn.chatgpt.com/docs/plugins?surface=app)。 | 官方功能更新 |
 | 当前官方 agent-building 产品 | 未发现 Agent Builder、Apps SDK 或现行 agent-building 产品的新版本公告。 | 无新增 |
 | Responses API | [API changelog](https://developers.openai.com/api/docs/changelog)未列窗口内平台级条目；Node 主分支仅出现长文本累积性能与大流式响应修补，尚非 release。 | 无平台级新增 |
-| Agents SDK Python / TypeScript | 未核实到窗口内正式 release；GitHub 批量复扫后触发限流，已在失败来源中记录。 | 无确认新增 |
+| Agents SDK Python / TypeScript | 未核实到窗口内正式 release；TypeScript 主分支新增[保留 handoff callback 错误的修复](https://github.com/openai/openai-agents-js/commit/cd5a2c8fc163d02129163319d5b8e214c70fa978)，尚非 release。 | 无正式版本新增；主分支修复待发布 |
 | Assistants API | 官方 [deep dive](https://platform.openai.com/docs/assistants/deep-dive/run-lifecycle)仍标注 2026-08-26 shutdown；窗口内未发现新的迁移公告。 | 既有期限，非 24 小时新增 |
 | Realtime API | 未见官方 changelog 或 SDK 正式版本新增。 | 无新增 |
 | 当前 GPT / reasoning / Codex 模型家族 | [官方 model guidance](https://developers.openai.com/api/docs/guides/latest-model)仍是命名与可用性基准；本窗口未发现新模型 release。 | 无新增 |
@@ -117,7 +121,8 @@ tags:
 7. 17:52，官方确认 [Codex API 鉴权错误](https://status.openai.com/incidents/01M0G1RZER839AZXWMYKSZF3GR)完全恢复；事件 16:58 被识别，17:15 进入监控。
 8. 16:51，官方确认 [ChatGPT Thinking mode 与图像生成错误](https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC)完全恢复；事件 13:56 起调查，14:53 已实施缓解。
 9. 00:54，官方确认 [ChatGPT 登录与注册故障](https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39)恢复；该事件开始于 00:02，属于本窗口早段。
-10. SDK 主分支出现多项尚未 release 的修补：Python [保持自定义 TLS hostname](https://github.com/openai/openai-python/commit/aa5fbc401f179fc515905d84623718c2b66ec653)；Node [限制事件流并校验 streamed item identity](https://github.com/openai/openai-node/commit/7df29a98c69f1dd14300737e42cc6f22965b6b73)与[避免长文本累积出现二次复杂度](https://github.com/openai/openai-node/commit/95628cee9b4d6869f1b0b54e323248eed5bd59c5)；Go [校验带前缀 webhook signing secret](https://github.com/openai/openai-go/commit/c88e19a1c266ef8fbc140969c862c1eb635142d8)。这些提交均不能视为已交付版本。
+10. Agents SDK TypeScript 主分支新增[保留 handoff callback 错误的修复](https://github.com/openai/openai-agents-js/commit/cd5a2c8fc163d02129163319d5b8e214c70fa978)，避免 callback 抛出的原始错误被后续流程覆盖；尚非 release。
+11. SDK 主分支出现多项尚未 release 的修补：Python [保持自定义 TLS hostname](https://github.com/openai/openai-python/commit/aa5fbc401f179fc515905d84623718c2b66ec653)；Node [限制事件流并校验 streamed item identity](https://github.com/openai/openai-node/commit/7df29a98c69f1dd14300737e42cc6f22965b6b73)与[避免长文本累积出现二次复杂度](https://github.com/openai/openai-node/commit/95628cee9b4d6869f1b0b54e323248eed5bd59c5)；Go [校验带前缀 webhook signing secret](https://github.com/openai/openai-go/commit/c88e19a1c266ef8fbc140969c862c1eb635142d8)。这些提交均不能视为已交付版本。
 
 ## Love
 
@@ -149,7 +154,7 @@ tags:
 ## 观察池
 
 - Codex 额度消耗投诉形成同日聚集信号，但官方状态页只确认 API authentication errors，没有确认额度下调、计费异常或与 auto-review 的统一关联。后续应继续观察官方定价 / usage 文档、状态页与可复现 telemetry。
-- 截止 16:01，Codex 主分支新增[既有 realtime call 附着支持](https://github.com/openai/codex/commit/536f86e5cc9ec1ff38457d099bf320b9d08eeeba)、[codex agents 会话配置](https://github.com/openai/codex/commit/44e95c857f37f81a5731eab72c32a3d334d0e2c4)与[TUI 权限模式循环快捷键](https://github.com/openai/codex/commit/2aaefa32b0762491d1340675a6082fad26bbb57f)，均只是主分支提交，尚不能视为正式交付。
+- 截止 20:10，Codex 主分支新增[遵循请求 PATH 的 exec-server shell snapshot 修复](https://github.com/openai/codex/commit/ff0e95007cca1edfc0877bbbbfaeb9eb77ed92b3)、[既有 realtime call 附着支持](https://github.com/openai/codex/commit/536f86e5cc9ec1ff38457d099bf320b9d08eeeba)、[codex agents 会话配置](https://github.com/openai/codex/commit/44e95c857f37f81a5731eab72c32a3d334d0e2c4)与[TUI 权限模式循环快捷键](https://github.com/openai/codex/commit/2aaefa32b0762491d1340675a6082fad26bbb57f)，均只是主分支提交，尚不能视为正式交付。
 - Codex 主分支还出现 app signature 校验、unified exec、MCP event streaming、managed developer instructions 和 sandbox policy 等大量提交；由于 0.149.0 release 页面未列明对应关系，本文没有把它们归入稳定版功能。
 - [ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog)与 API changelog 在截止时未列出可与上述 release notes 分离的 8 月 20 日新增。
 
@@ -161,5 +166,5 @@ tags:
 
 - 已检查来源：OpenAI Release Notes / Help / Learn、ChatGPT & Codex changelog、API changelog、model guidance、Assistants migration、Status、Newsroom、8 个官方 GitHub 仓库、Developer Community、Reddit、HN、X 与中英文新闻检索。
 - 失败来源：OpenAI News 普通 curl 403；GitHub 未认证 API 批量扫描后 403 rate limit；Reddit JSON / RSS 与 X 正文提取不稳定；JetBrains 与 YouTube 未见可核实新增。均已改用可访问官方原页、网页索引或公开帖子，并降低社区证据等级。
-- 初始候选数：100；保留来源数：30。
+- 初始候选数：102；保留来源数：32。
 - 二次补搜：否（最终来源不为 0）。

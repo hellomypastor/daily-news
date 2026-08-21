@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T16:02:14+08:00"
+updatedAt: "2026-08-21T20:10:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -18,7 +18,9 @@ tags:
   - "Agent View"
   - "Agents"
   - "Anthropic"
+  - "Auth"
   - "Auto Mode"
+  - "Bash"
   - "Chrome"
   - "Claude"
   - "Claude API"
@@ -36,11 +38,16 @@ tags:
   - "GitHub"
   - "GitHub Actions"
   - "Google"
+  - "IDE"
+  - "JetBrains"
   - "Managed Agents"
+  - "Memory"
+  - "Permissions"
   - "Prompt Cache"
   - "Python"
   - "Rate Limit"
   - "Regression"
+  - "Remote Control"
   - "Sandbox"
   - "Scheduled Tasks"
   - "Sessions"
@@ -54,7 +61,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-20 07:51:03 至 2026-08-21 07:51:03（Asia/Shanghai）。窗口内的主线是 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)：新增 readline 键位风格、带动态请求头的插件 marketplace、self-hosted runner 延迟关停与代理鉴权能力，并集中修复长会话内存增长、Remote Control 消息与重连、MCP 初始化和终端交互问题。[TypeScript Agent SDK v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238)、[Python Agent SDK v0.2.143](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.143)与 [Claude Code Action v1.0.198](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.198)随后对齐。状态页另记录 Google connectors 与多模型请求错误两起事件，均已在约半小时内恢复。
+扫描窗口：2026-08-20 20:10:00 至 2026-08-21 20:10:00（Asia/Shanghai）。窗口内的主线是 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)：新增 readline 键位风格、带动态请求头的插件 marketplace、self-hosted runner 延迟关停与代理鉴权能力，并集中修复长会话内存增长、Remote Control 消息与重连、MCP 初始化和终端交互问题。[TypeScript Agent SDK v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238)、[Python Agent SDK v0.2.143](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.143)与 [Claude Code Action v1.0.198](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.198)随后对齐。状态页另记录 Google connectors 与多模型请求错误两起事件，均已在约半小时内恢复。
 
 <figure class="source-image">
   <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.238"><img src="https://opengraph.githubassets.com/c1b70fcba682c9d26d1cba228e500aad3e6cb9048b842fa8c253bfd80a6bc227/anthropics/claude-code/releases/tag/v2.1.238" alt="Claude Code v2.1.238 GitHub release preview" loading="lazy" /></a>
@@ -67,7 +74,7 @@ tags:
 |---|---|
 | Claude Code CLI | v2.1.238 于 04:33 发布；除新设置与 runner 能力外，官方说明还称已释放离开近期显示窗口的 subagent tool results，以修复长交互会话内存无界增长，并把自动更新检查延后到启动约 10 秒后。 |
 | VS Code 集成 | 无独立官方版本；[v2.1.238 中 `/compact` 无效](https://github.com/anthropics/claude-code/issues/88446)被标记为 regression；[agent 文件预览抢走键盘焦点](https://github.com/anthropics/claude-code/issues/88465)提供了扩展代码路径与 UIA 轨迹，但两者目前都只是单用户报告。 |
-| JetBrains 集成 | 无新增。 |
+| JetBrains 集成 | 无官方版本；[空 diff 的批准操作被误判为拒绝](https://github.com/anthropics/claude-code/issues/88468)是 macOS 单用户报告，尚无复现标签或维护方结论。 |
 | Managed Agents：sessions | v2.1.238 修复 Remote Control 中途消息从 transcript 消失、短暂登录续期失败导致断开、跨会话拒收或丢队列却静默成功，以及 ListAgents/SendMessage 暴露预热 worker 等问题；[恢复 fork 后 prompt cache 丢失](https://github.com/anthropics/claude-code/issues/88444)与 [FleetView 归档列表不渲染](https://github.com/anthropics/claude-code/issues/88447)是增量观察项；[auto mode 间接删除用户主目录](https://github.com/anthropics/claude-code/issues/88462)被标记 high-priority/data-loss，但仍是尚无维护方结论的单用户报告。 |
 | Managed Agents：webhooks | 无新增。 |
 | Managed Agents：environments | v2.1.238 新增 self-hosted runner 的延迟关停上限与逐连接代理鉴权命令/文件；慢轮询不再轻易导致健康 runner 被移除。 |
@@ -113,6 +120,11 @@ tags:
 
 ## Hate
 
+- [bypass permissions 模式偏向组合 shell 命令](https://github.com/anthropics/claude-code/issues/88475)：带 has repro 的 Linux 单用户报告，尚无维护方结论。
+- [Desktop 更新后凭据字段丢失](https://github.com/anthropics/claude-code/issues/88487)：带 has repro 的 Windows 单用户报告称会中断 Remote Control。
+- [Remote Control 跨设备重复执行](https://github.com/anthropics/claude-code/issues/88493)：带 has repro 的 Windows 单用户报告称可能产生重复副作用。
+- [CLI 启动失败路径内存泄漏](https://github.com/anthropics/claude-code/issues/88515)：带 has repro 的 macOS 单用户报告，量化值不外推。
+- [Desktop 加载大型 subagent 历史时崩溃](https://github.com/anthropics/claude-code/issues/88517)：带 has repro 的 Windows 单用户报告，量化值不外推。
 - [Desktop 的 GitHub GraphQL 请求消耗异常](https://github.com/anthropics/claude-code/issues/88320)：带 has repro 的单用户报告给出其环境中的请求点数；尚无维护方结论，量化值不外推。
 - [跨会话消息在忙碌会话中被丢弃](https://github.com/anthropics/claude-code/issues/88357)：用户报告已关闭，但 v2.1.238 发布说明确认补上拒收/队列丢弃反馈，说明这一类静默失败获得了对应产品修复。
 - [原生 scheduled task 在外部重启后立即补跑](https://github.com/anthropics/claude-code/issues/88408)：带 has repro 的 Windows 单用户报告称恢复时忽略配置 cadence；尚无官方修复确认。
@@ -144,6 +156,10 @@ tags:
 - **Skills / Agents**：后台 `context: fork` skill 静默失去 Agent/Task 工具的报告给出两次复现，但尚无维护方确认。
 - **Auto mode / 数据安全**：脚本内延迟展开的清理 trap 间接删除 WSL 主目录的报告已被标记 high-priority/data-loss；影响数字仅来自报告者，根因与修复均未获确认。
 - **VS Code**：agent 只读文件预览可能因未设置 `preserveFocus` 而抢走其他输入框焦点；报告含代码路径与 UIA 轨迹，尚待维护方确认。
+- **Skills / VS Code**：[长参数 skill 消息无法折叠](https://github.com/anthropics/claude-code/issues/88512)的 UI 报告带 has repro。
+- **JetBrains**：空 diff 的批准可能被插件误判为拒绝。
+- **Remote Control / Auth**：Desktop 更新清除 OAuth 字段与跨设备重复执行均为 Windows 用户报告。
+- **内存 / Agents**：CLI 启动失败路径与 Desktop 大型 subagent 历史各有带 has repro 的高内存报告。
 
 ## 来源链接
 
@@ -153,6 +169,6 @@ tags:
 
 - 已检查：Anthropic Newsroom/Research/Blog、Help Center、Developer Platform release notes、Cowork/Desktop changelog、Status API、Claude Code/Agent SDK/Code Action releases、官方插件目录、Claude Code Issues，以及 Reddit、Hacker News、X、YouTube 公开入口。
 - 失败来源：GitHub API 在首轮分页与统计后触发匿名限流；Reddit JSON 不稳定；X 未登录时间线、YouTube 与 Hacker News 未提供可稳定核验的窗口内独立增量。
-- 初始候选：392（早间 Claude Code Issue 查询 317 条；07:51–13:02 增量 40 条；13:02–16:01 增量 17 条；另含官方 releases、状态事件、目录变更与社区搜索候选）。
-- 最终保留：17 个独立来源 URL。
+- 初始候选：445（早间 Claude Code Issue 查询 317 条；07:51–13:02 增量 40 条；13:02–16:01 增量 17 条；16:01–20:10 增量 53 条；另含官方 releases、状态事件、目录变更与社区搜索候选）。
+- 最终保留：24 个独立来源 URL。
 - 二次补搜：否；最终来源不为 0。

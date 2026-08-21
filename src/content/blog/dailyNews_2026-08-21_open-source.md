@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T16:01:00+08:00"
+updatedAt: "2026-08-21T20:10:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Open Source Is Not a Virtue: It’s an Ownership Model"
 featuredUrl: "https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/"
@@ -16,6 +16,7 @@ tags:
   - "Agent Harness"
   - "Agent Memory"
   - "Agent Runtime"
+  - "Agent Safety"
   - "Agent Skills"
   - "Agent Workspace"
   - "AI"
@@ -32,6 +33,7 @@ tags:
   - "Interpretability"
   - "LLM"
   - "LLM Inference"
+  - "LLM Safety"
   - "LoRA"
   - "MCP"
   - "Multi-Agent"
@@ -52,7 +54,7 @@ tags:
 
 ## 概览
 
-技术高亮窗口滚动至 2026-08-21 16:01:00，HN 讨论与旧文回流窗口滚动至 2026-08-21 16:01:00（Asia/Shanghai）。在 07:51 已完成的 HN 七组关键词 307 条、GitHub 三类日榜 45 行、arXiv 最新 100 条、Hugging Face Blog RSS 与 Simon Willison feed 基础上，累计增量复核 HN newest/Algolia 192 条并刷新三类 GitHub 日榜；累计原始候选计数（含入口间重叠）为 734，最终保留 47 个唯一来源 URL。发布日期、HN 发现时间与 GitHub 榜单热度分别记录，不互相替代。
+技术高亮窗口滚动至 2026-08-21 20:10:00，HN 讨论与旧文回流窗口滚动至 2026-08-21 20:10:00（Asia/Shanghai）。在 07:51 已完成的 HN 七组关键词 307 条、GitHub 三类日榜 45 行、arXiv 最新 100 条、Hugging Face Blog RSS 与 Simon Willison feed 基础上，累计增量复核 HN newest/Algolia 368 条并刷新三类 GitHub 日榜；累计原始候选计数（含入口间重叠）为 910，最终保留 56 个唯一来源 URL。发布日期、HN 发现时间与 GitHub 榜单热度分别记录，不互相替代。
 
 ## 已核实高亮
 
@@ -65,6 +67,9 @@ tags:
 | [Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication](https://arxiv.org/abs/2608.19161) | 研究多 Agent 潜在通信中的隐蔽协同行为检测 | 说明只审计自然语言 transcript 可能漏掉潜变量通道；威胁模型和检测效果以论文设定为限 | arXiv v1：2026-08-20 01:43 +08:00 |
 | [Grouping the Stochastic Machine](https://arxiv.org/abs/2608.19140) | 讨论用精度而非笼统能力衡量随机 AI 系统前沿 | 将评估重点放到可重复性、分组表现与系统精度；属于论文提出的评价框架 | arXiv v1：2026-08-20 01:29 +08:00 |
 | [SPK: Eliciting Structured Prior Knowledge](https://arxiv.org/abs/2608.19080) | 为实时目标检测引出结构化先验，以解释分布外判断 | 把先验结构与 OOD 检测关联，适合作为可解释推理组件观察；有效性以论文数据集为限 | arXiv v1：2026-08-20 00:30 +08:00 |
+| [Up to 3.2x Faster Inference with LFM2.5-DSpark](https://huggingface.co/blog/LiquidAI/lfm25-dspark) | Liquid AI 在 Hugging Face 发布 LFM2.5-DSpark 推理说明 | 介绍置信度调度的推测解码及部署路径；3.2 倍为发布方测试上限，不外推为通用收益 | RSS 时间：2026-08-21 00:52 +08:00 |
+| [Phantom Gains](https://arxiv.org/abs/2608.20290) | 审计语言模型自我改进评估中的测量伪影 | 用冻结控制组与逐题检验说明单次解码和批处理可制造表观能力变化；结论限于论文实验 | arXiv v1：2026-08-21 |
+| [Inadvertent Context Leakage in Language Models](https://arxiv.org/abs/2608.19857) | 研究敏感上下文是否会通过看似无害输出泄漏 | 将 Agent 持有日历、凭据等上下文时的隐蔽泄漏建模为黑盒攻击面；效果以论文威胁模型为限 | arXiv v1：2026-08-21 |
 
 <figure class="source-image">
   <a href="https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/"><img src="https://storage.ghost.io/c/68/76/6876f0af-8955-4de4-a637-a5e7cc399136/content/images/size/w1200/2026/08/mozilla-otari-why-open-source-matters-blog-header.png" alt="Mozilla.ai article illustration about open-source ownership" loading="lazy" /></a>
@@ -96,6 +101,9 @@ tags:
 
 | [Seed：最小自修改 Agent harness](https://news.ycombinator.com/item?id=49384113) | 2026-08-21 13:20 +08:00；13 / 1 | 指向 [vivekhaldar/seed](https://github.com/vivekhaldar/seed)；README 可核验其核心是带 bash exec 工具、可改写自身提示的 Python loop；仓库未声明许可证，不能推定复用授权 |
 | [Donkey Cut：LLM 控制的视频编辑器](https://news.ycombinator.com/item?id=49384105) | 2026-08-21 13:19 +08:00；3 / 0 | 指向 [DonkeyCut/Donkey](https://github.com/DonkeyCut/Donkey)；README 可核验多轨时间线、AI 助手及本地/云端项目模式，仓库为 Apache-2.0；生成能力依赖外部模型或服务 |
+| [Lunar：Lua 可扩展 coding harness](https://news.ycombinator.com/item?id=49386386) | 2026-08-21 19:07 +08:00；5 / 2 | 指向 [gszr/lunar](https://github.com/gszr/lunar)；README 可核验其终端 harness 提供四类基础工具并以 Lua 扩展，仓库含许可证文件 |
+| [Voro：Agentic coding 注意力管理器](https://news.ycombinator.com/item?id=49386001) | 2026-08-21 18:07 +08:00；3 / 2 | 指向 [ClachDev/Voro](https://github.com/ClachDev/Voro)；项目定位可由 README 核验，采用效果与成熟度尚无独立验证 |
+| [Bulwark Gateway：LLM Agent 安全代理](https://news.ycombinator.com/item?id=49385285) | 2026-08-21 16:18 +08:00；2 / 0 | 指向 [red-orbita/bulwark-gateway](https://github.com/red-orbita/bulwark-gateway)；仓库将其定位为 fail-closed gateway，安全保证仍需按具体部署与测试验证 |
 
 ## 论文 / 研究
 
@@ -128,5 +136,5 @@ tags:
 
 - 已检查来源：HN front/newest 与 Algolia 七组关键词，并在 13:02 增量检查 07:51–13:02 的 123 条 newest；GitHub Trending 全站、Python、TypeScript 两次快照；GitHub 项目页；arXiv cs.AI/cs.CL/cs.LG/cs.SE；Hugging Face Blog / Papers；Simon Willison；Shopify Engineering、DeepSeek、ANOLISA 等工程原文。
 - 失败来源：Hugging Face Daily Papers RSS 返回 401；ONNX.css、Autolith 与 The Sloppiest Thing About AI 返回 403；部分新仓库结构化 API 元数据不可用；失败项均已说明证据限制。
-- 累计候选数量：734；最终保留来源：47 个唯一 URL。13:02–16:01 增量检查 69 条，新增 Seed 与 Donkey Cut 的仓库及 HN 发现证据。
+- 累计候选数量：910；最终保留来源：56 个唯一 URL。16:01–20:10 增量检查 176 条，新增 Hugging Face 推理文章、两篇 arXiv 论文，以及 Lunar、Voro、Bulwark Gateway 的仓库与 HN 发现证据。
 - 二次补搜：否（最终来源不为 0）。

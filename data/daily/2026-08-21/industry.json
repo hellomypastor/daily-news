@@ -9,7 +9,7 @@
     "Research"
   ],
   "order": 40,
-  "updatedAt": "2026-08-21T16:04:49+08:00",
+  "updatedAt": "2026-08-21T20:10:00+08:00",
   "image": {
     "url": "https://opengraph.githubassets.com/760ce0d5f9f73952b7ab41f5f92f078e3e356972eafe9e5fd6fa170e9dc889d2/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090",
     "alt": "Google ADK Python GitHub commit preview",
@@ -23,17 +23,17 @@
       "xAI、Mistral、Cohere、Qwen/Alibaba/DAMO、ByteDance Seed/豆包、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun、MiniMax 官方入口",
       "NVIDIA Developer/Research、Hugging Face/Transformers、LangChain/Deep Agents、LlamaIndex 官方仓库与发布入口",
       "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口",
-      "十个核心官方 GitHub 仓库在 2026-08-20 08:01Z 至 2026-08-21 08:01Z 的提交窗口；16:01 滚动轮复核新增提交候选"
+      "十个核心官方 GitHub 仓库在 2026-08-20 12:10Z 至 2026-08-21 12:10Z 的提交窗口；20:10 滚动轮重点复核 16:01 后新增提交候选"
     ],
     "failedSources": [
       "部分厂商新闻列表依赖脚本、返回 403 或缺少结构化精确时分；改查官方仓库、文档与可访问原文",
       "部分中国厂商与播客集合页未提供可稳定核验的发布时间；未据搜索摘要确认新发布",
       "社交平台未登录状态无法稳定核验互动量；未把聚合摘要或传闻写成事实"
     ],
-    "candidateCount": 134,
+    "candidateCount": 153,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n扫描窗口：2026-08-20 16:01 至 2026-08-21 16:01（Asia/Shanghai）。窗口内可核实的技术动态主要来自官方发布与代码提交：Claude Code 与 Codex 均有版本更新；Google ADK 增加 LLM 调用上限配置、回滚破坏 HITL 确认的 A2A guard，并补强 RemoteA2aAgent 认证；Microsoft Agent Framework 增加托管 Agent 与 Azure Blob 会话持久化，并迁移至新版 MCP 长任务扩展；LangChain、Qwen Code、Hugging Face Transformers 与 NVIDIA NeMo Guardrails 也有明确工程变更。提交事实可核实，但尚不能等同 GA 发布、广泛采用或已完成生产验证。16:01 滚动轮进一步检出 ADK、Microsoft Agent Framework、Qwen Code 与 NeMo Guardrails 的工程增量。\n\n## 优先动态\n\n| 厂商 | 动态 | 类型 / 时间 | 摘要与意义 |\n|---|---|---|---|\n| Anthropic | [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238) | 官方发布，04:33 | 加入 GitHub PR 状态展示并修复多项会话与交互问题；详见 Claude 专题页。 |\n| OpenAI | [Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) | 官方发布，05:04 | 稳定版本包含会话与工具链变更；完整版本上下文和口碑详见 OpenAI 专题页。 |\n| Google | [ADK_MAX_LLM_CALLS](https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090) | 官方提交，07:13 | 为单次运行增加可配置的最大 LLM 调用数，有助于限制失控循环；默认值与生产策略仍应以正式文档为准。 |\n| Google | [回滚破坏 HITL tool confirmation 的 A2A guard](https://github.com/google/adk-python/commit/9a32eba1e271981fd079bdee489b9159c6ecc72a) | 官方提交，06:57 | 提交信息明确说明前一 guard 影响所有 HITL 工具确认；这是代码修复证据，不据此推断所有已发布版本均受影响。 |\n| Google | [RemoteA2aAgent 认证支持](https://github.com/google/adk-python/commit/d42c634bd6ef4041440d833327d63969a39315be) 与 [AgentRegistry 认证解析](https://github.com/google/adk-python/commit/d6954946df8b156ab27554ca02d2d6234c8595a1) | 官方提交，03:37 / 06:03 | 补充远程 A2A Agent 的 auth scheme、credential 与注册表解析，是跨 Agent 调用安全边界的重要工程信号。 |\n| Microsoft | [Foundry 托管 Agent 状态持久化](https://github.com/microsoft/agent-framework/commit/ab0f7d5d08ce753e17559a0bee94e8b77fa68fa2) | 官方提交，04:38 | 为托管 Agent 补充状态持久化；具体服务可用性和 SLA 仍需看 Foundry 正式文档。 |\n| Microsoft | [Azure Blob Storage 会话持久化](https://github.com/microsoft/agent-framework/commit/e6617c407a1d94a9eb8421e1fd3f385ee6da7e13) | 官方提交，02:30 | 增加基于 Blob Storage 的会话保存路径，利于长任务恢复和外部化状态。 |\n| Microsoft | [迁移 MCP 2026-07-28 Tasks 扩展](https://github.com/microsoft/agent-framework/commit/96560bbf65973d098e09f38cc69f45826845d08e) | 官方提交，07:26 | .NET 路径的破坏性变更，说明长任务接口跟进新版扩展；升级方需关注兼容性。 |\n\n## 13:02 滚动增量\n\n| 厂商 / 项目 | 动态 | 状态与意义 |\n|---|---|---|\n| Google ADK | [多模态工具结果可选会话保留](https://github.com/google/adk-python/commit/775c1bd36e205eec65e207ad29fdc4cf2184e47e) 与 [简化默认 LLM 调用上限](https://github.com/google/adk-python/commit/77cfe4349d2c8fba095d39b87048883efd1fd629) | 官方提交；前者提供 opt-in retention，后者延续早间运行上限配置，具体稳定包版本待确认。 |\n| Google ADK | [跳过 frontmatter 无效的 Skill 搜索结果](https://github.com/google/adk-python/commit/3c977bc2ef31cf0fd7d94592f660cec5fc68b722)、[Workflow 遵循 before_run_callback 提前退出](https://github.com/google/adk-python/commit/dac18699b9ce423f7e98d1cb245cfdde20b18147) | 分别补强 Skills 输入校验与工作流控制流；均为主分支提交。 |\n| Google ADK | [Gemini 与 AnthropicLlm 可注入自定义客户端](https://github.com/google/adk-python/commit/a01d516a6bcf93f12d26a083af587455d0bb2592) | 为代理、传输与测试定制提供接口；涉及 Anthropic 的完整生态动态详见 Claude 专题页。 |\n| Microsoft | [统一 OTel GenAI 语义约定版本](https://github.com/microsoft/agent-framework/commit/4e754a636d6d688b35027de4070d64d4f1566d15) 与 [修复 MCP 参数遮蔽远程工具名](https://github.com/microsoft/agent-framework/commit/aeaabe5abf67d1dc36d017118d2c4af2d6b66eef) | 前者明确标记为 Python 破坏性变更，升级方需复核 telemetry；后者修正远程工具调用绑定。 |\n| Qwen Code | [Autofix 超预算后审计方案](https://github.com/QwenLM/qwen-code/commit/2c64ebe980e7d0d9d7a97cf1de6dc47014bc3449) 与 [后台 shell 期间保持 turn 展开](https://github.com/QwenLM/qwen-code/commit/e443f26bfc8db038ca655a1f5f8589a9d8d2dded) | 增强自动修复的恢复策略和后台任务可见性；尚未据此推断已进入稳定版。 |\n| Qwen Code | [限制 daemon transcript 防止 renderer OOM](https://github.com/QwenLM/qwen-code/commit/54a3a7f6693b0ac50c6459e91cc2cac32983d393) 与 [加固 release CI](https://github.com/QwenLM/qwen-code/commit/a074d3b0423b8c99ea272b598602d7cf0c24b15c) | 分别处理 Web Shell 内存边界与供应链执行面；影响版本待发布说明确认。 |\n| NVIDIA | [NeMo Guardrails 支持 reasoning-only 非流式响应](https://github.com/NVIDIA-NeMo/Guardrails/commit/c9d10d7041d2016aa53a5fa0a74d81ff860c1a55) | 与早间 think-tag 修复共同表明 reasoning 输出兼容仍在收敛。 |\n\n## 16:01 滚动增量\n\n| 厂商 / 项目 | 动态 | 状态与意义 |\n|---|---|---|\n| Microsoft | [FoundryEvals 补齐工具调用 arguments](https://github.com/microsoft/agent-framework/commit/007a2d7a055273fac000cc9c9f9b859b0c851c35) 与 [DevUI 透传 function invocation kwargs](https://github.com/microsoft/agent-framework/commit/24a383613bc38b70c9de809b8d07fc942b9dd51c) | 官方提交；分别改善评测记录一致性和 DevUI 调用参数传递，尚未据此推断托管服务已 GA。 |\n| Qwen Code | [list_directory 改为显式启用](https://github.com/QwenLM/qwen-code/commit/e09399e0fbcf48d04a9f96a23db690b969ad8d35)、[加固高危 CVE 门禁](https://github.com/QwenLM/qwen-code/commit/e40263ee554f2db7247c6cf0b515aa025d3c3a7d) 与 [Autofix 镜像绑定 digest](https://github.com/QwenLM/qwen-code/commit/575e62ee4657a41acccb918a8766847a1280ff85) | 工具暴露面、依赖安全和供应链复现性均有收紧；均为主分支提交，进入稳定版的时间待确认。 |\n| Qwen Code | [统一并行 Agent 详情 transcript](https://github.com/QwenLM/qwen-code/commit/ef86d1f3c876026fb9ee8ac4811381b74ebb78ac) | 修复并行 Agent 折叠状态并统一详情记录，属于多 Agent 操作可见性改进。 |\n| Hugging Face | [修复 ExecuTorch 导出时的 DynamicCache 重建](https://github.com/huggingface/transformers/commit/3cd1a2307acd8e9262917ee85fda8333af4fb5fc) | 官方提交；改善模型导出兼容性，影响版本待发布说明确认。 |\n\n## 常规工程更新\n\n| 厂商 / 项目 | 动态 | 状态 |\n|---|---|---|\n| LangChain | [Fireworks document reranking](https://github.com/langchain-ai/langchain/commit/b8d1ab5946cdb306fa01e0117dbf151f9cd2d308) 与 [1.6.0 release commit](https://github.com/langchain-ai/langchain/commit/ca3acde9b461b74601ec964cae6e31e0abda7990) | 官方仓库已合入；能力范围以对应集成文档为准。 |\n| Deep Agents | [deepagents-code 0.1.59 release commit](https://github.com/langchain-ai/deepagents/commit/b650b412988ba53c59830b4207fcdb63c45a9a3c) 与 [tool-call args 线性流式处理](https://github.com/langchain-ai/deepagents/commit/57bfa6bdc57056265047744dc32f3337a964ddc8) | 版本与性能修复信号均来自官方提交，未独立基准测试。 |\n| Qwen | [Qwen Code v0.21.14 release commit](https://github.com/QwenLM/qwen-code/commit/808c9c9f3d64bb54d5ee0265658c48bf4826ceda) 与 [Aone Code review 支持](https://github.com/QwenLM/qwen-code/commit/5715782279938080ee664004db4b93ae19231384) | 版本提交可核实；后者通过 a1 CLI 向 Aone Code 发表评论，适用范围以仓库文档为准。 |\n| Hugging Face | [Transformers 接入 ESMC 与 ESMFold2](https://github.com/huggingface/transformers/commit/c8df3fc99546229bf4c7ab7d188973af1a64fc2e) | 官方提交；是模型实现接入，不等同模型今日首次发布。 |\n| Hugging Face | [修复 DeepSeek V2 默认词表大小](https://github.com/huggingface/transformers/commit/e4dd56a373b51a2ed2a6330b64f9d44c51260d5c) | 兼容性修复；影响范围未作独立复测。 |\n| NVIDIA | [NeMo Guardrails 处理 reasoning content 的 think tags](https://github.com/NVIDIA-NeMo/Guardrails/commit/d49ff4125271fbc6fba809b9acfb86b28a8dd388) | 官方提交；服务端输出兼容性修复。 |\n\n## 厂商覆盖与无新增\n\nAnthropic 与 OpenAI 的窗口内版本已在优先动态交叉引用，并分别注明详见专题页。Meta AI、xAI、Mistral、Cohere、ByteDance Seed/豆包、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun 与 MiniMax 未发现能够同时打开原文并核实落入 24 小时窗口的新公告。厂商名仅是扫描范围，不据此推断产品更新。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与可访问厂商播客入口均已检查；截至截止时间没有找到可稳定核验为窗口内发布的新一期。集合页缺精确时分的候选没有被提升为今日事实。\n\n## 近两日补充\n\n本次新日期页不以窗口外内容充数；后续滚动扫描若发现 24–48 小时内漏项，将保留在本节并标明原始日期。\n\n## 近三日补充\n\n暂无新增。\n\n## 日期未确认\n\n部分中国厂商和播客集合页存在更新提示但缺少稳定原文日期或精确时分，暂不形成独立事实条目；后续若原始页面补齐日期再转入相应分区。\n\n## 观察池\n\n- Google、Microsoft、LangChain、Qwen、Hugging Face 与 NVIDIA 的条目主要是主分支提交；是否已经进入稳定包、托管服务或默认部署需继续观察。\n- 搜索摘要中出现的新型号、融资与发布日期说法没有可打开的一手证据，因此未写成已确认动态，也不据此推断厂商路线。\n\n## 今日结论\n\n窗口内最明确的方向是 Agent 运行控制、远程认证、持久化与长任务协议继续工程化；本轮证据更接近代码落地而非大规模产品发布。\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及六组播客入口；并复核十个核心官方 GitHub 仓库。\n- 失败/受限：部分入口返回 403、依赖脚本或无精确时间；部分播客和中国厂商集合页无法稳定核验新一期；社交互动量未登录不可稳定复核。\n- 初始候选 134 条，保留 37 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。",
+  "content": "## 今日概览\n\n扫描窗口：2026-08-20 20:10 至 2026-08-21 20:10（Asia/Shanghai）。窗口内可核实的技术动态主要来自官方发布与代码提交：Claude Code 与 Codex 均有版本更新；Google ADK 增加 LLM 调用上限配置、回滚破坏 HITL 确认的 A2A guard，并补强 RemoteA2aAgent 认证；Microsoft Agent Framework 增加托管 Agent 与 Azure Blob 会话持久化，并迁移至新版 MCP 长任务扩展；LangChain、Qwen Code、Hugging Face Transformers 与 NVIDIA NeMo Guardrails 也有明确工程变更。提交事实可核实，但尚不能等同 GA 发布、广泛采用或已完成生产验证。16:01 滚动轮进一步检出 ADK、Microsoft Agent Framework、Qwen Code 与 NeMo Guardrails 的工程增量；20:10 滚动轮又核实 Microsoft A2UI 与 Copilot 恢复配置、Qwen Code 评审缓存、Transformers 硬件兼容、NeMo Guardrails 文档及 Codex 执行环境修复。\n\n## 优先动态\n\n| 厂商 | 动态 | 类型 / 时间 | 摘要与意义 |\n|---|---|---|---|\n| Anthropic | [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238) | 官方发布，04:33 | 加入 GitHub PR 状态展示并修复多项会话与交互问题；详见 Claude 专题页。 |\n| OpenAI | [Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) | 官方发布，05:04 | 稳定版本包含会话与工具链变更；完整版本上下文和口碑详见 OpenAI 专题页。 |\n| Google | [ADK_MAX_LLM_CALLS](https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090) | 官方提交，07:13 | 为单次运行增加可配置的最大 LLM 调用数，有助于限制失控循环；默认值与生产策略仍应以正式文档为准。 |\n| Google | [回滚破坏 HITL tool confirmation 的 A2A guard](https://github.com/google/adk-python/commit/9a32eba1e271981fd079bdee489b9159c6ecc72a) | 官方提交，06:57 | 提交信息明确说明前一 guard 影响所有 HITL 工具确认；这是代码修复证据，不据此推断所有已发布版本均受影响。 |\n| Google | [RemoteA2aAgent 认证支持](https://github.com/google/adk-python/commit/d42c634bd6ef4041440d833327d63969a39315be) 与 [AgentRegistry 认证解析](https://github.com/google/adk-python/commit/d6954946df8b156ab27554ca02d2d6234c8595a1) | 官方提交，03:37 / 06:03 | 补充远程 A2A Agent 的 auth scheme、credential 与注册表解析，是跨 Agent 调用安全边界的重要工程信号。 |\n| Microsoft | [Foundry 托管 Agent 状态持久化](https://github.com/microsoft/agent-framework/commit/ab0f7d5d08ce753e17559a0bee94e8b77fa68fa2) | 官方提交，04:38 | 为托管 Agent 补充状态持久化；具体服务可用性和 SLA 仍需看 Foundry 正式文档。 |\n| Microsoft | [Azure Blob Storage 会话持久化](https://github.com/microsoft/agent-framework/commit/e6617c407a1d94a9eb8421e1fd3f385ee6da7e13) | 官方提交，02:30 | 增加基于 Blob Storage 的会话保存路径，利于长任务恢复和外部化状态。 |\n| Microsoft | [迁移 MCP 2026-07-28 Tasks 扩展](https://github.com/microsoft/agent-framework/commit/96560bbf65973d098e09f38cc69f45826845d08e) | 官方提交，07:26 | .NET 路径的破坏性变更，说明长任务接口跟进新版扩展；升级方需关注兼容性。 |\n\n## 13:02 滚动增量\n\n| 厂商 / 项目 | 动态 | 状态与意义 |\n|---|---|---|\n| Google ADK | [多模态工具结果可选会话保留](https://github.com/google/adk-python/commit/775c1bd36e205eec65e207ad29fdc4cf2184e47e) 与 [简化默认 LLM 调用上限](https://github.com/google/adk-python/commit/77cfe4349d2c8fba095d39b87048883efd1fd629) | 官方提交；前者提供 opt-in retention，后者延续早间运行上限配置，具体稳定包版本待确认。 |\n| Google ADK | [跳过 frontmatter 无效的 Skill 搜索结果](https://github.com/google/adk-python/commit/3c977bc2ef31cf0fd7d94592f660cec5fc68b722)、[Workflow 遵循 before_run_callback 提前退出](https://github.com/google/adk-python/commit/dac18699b9ce423f7e98d1cb245cfdde20b18147) | 分别补强 Skills 输入校验与工作流控制流；均为主分支提交。 |\n| Google ADK | [Gemini 与 AnthropicLlm 可注入自定义客户端](https://github.com/google/adk-python/commit/a01d516a6bcf93f12d26a083af587455d0bb2592) | 为代理、传输与测试定制提供接口；涉及 Anthropic 的完整生态动态详见 Claude 专题页。 |\n| Microsoft | [统一 OTel GenAI 语义约定版本](https://github.com/microsoft/agent-framework/commit/4e754a636d6d688b35027de4070d64d4f1566d15) 与 [修复 MCP 参数遮蔽远程工具名](https://github.com/microsoft/agent-framework/commit/aeaabe5abf67d1dc36d017118d2c4af2d6b66eef) | 前者明确标记为 Python 破坏性变更，升级方需复核 telemetry；后者修正远程工具调用绑定。 |\n| Qwen Code | [Autofix 超预算后审计方案](https://github.com/QwenLM/qwen-code/commit/2c64ebe980e7d0d9d7a97cf1de6dc47014bc3449) 与 [后台 shell 期间保持 turn 展开](https://github.com/QwenLM/qwen-code/commit/e443f26bfc8db038ca655a1f5f8589a9d8d2dded) | 增强自动修复的恢复策略和后台任务可见性；尚未据此推断已进入稳定版。 |\n| Qwen Code | [限制 daemon transcript 防止 renderer OOM](https://github.com/QwenLM/qwen-code/commit/54a3a7f6693b0ac50c6459e91cc2cac32983d393) 与 [加固 release CI](https://github.com/QwenLM/qwen-code/commit/a074d3b0423b8c99ea272b598602d7cf0c24b15c) | 分别处理 Web Shell 内存边界与供应链执行面；影响版本待发布说明确认。 |\n| NVIDIA | [NeMo Guardrails 支持 reasoning-only 非流式响应](https://github.com/NVIDIA-NeMo/Guardrails/commit/c9d10d7041d2016aa53a5fa0a74d81ff860c1a55) | 与早间 think-tag 修复共同表明 reasoning 输出兼容仍在收敛。 |\n\n## 16:01 滚动增量\n\n| 厂商 / 项目 | 动态 | 状态与意义 |\n|---|---|---|\n| Microsoft | [FoundryEvals 补齐工具调用 arguments](https://github.com/microsoft/agent-framework/commit/007a2d7a055273fac000cc9c9f9b859b0c851c35) 与 [DevUI 透传 function invocation kwargs](https://github.com/microsoft/agent-framework/commit/24a383613bc38b70c9de809b8d07fc942b9dd51c) | 官方提交；分别改善评测记录一致性和 DevUI 调用参数传递，尚未据此推断托管服务已 GA。 |\n| Qwen Code | [list_directory 改为显式启用](https://github.com/QwenLM/qwen-code/commit/e09399e0fbcf48d04a9f96a23db690b969ad8d35)、[加固高危 CVE 门禁](https://github.com/QwenLM/qwen-code/commit/e40263ee554f2db7247c6cf0b515aa025d3c3a7d) 与 [Autofix 镜像绑定 digest](https://github.com/QwenLM/qwen-code/commit/575e62ee4657a41acccb918a8766847a1280ff85) | 工具暴露面、依赖安全和供应链复现性均有收紧；均为主分支提交，进入稳定版的时间待确认。 |\n| Qwen Code | [统一并行 Agent 详情 transcript](https://github.com/QwenLM/qwen-code/commit/ef86d1f3c876026fb9ee8ac4811381b74ebb78ac) | 修复并行 Agent 折叠状态并统一详情记录，属于多 Agent 操作可见性改进。 |\n| Hugging Face | [修复 ExecuTorch 导出时的 DynamicCache 重建](https://github.com/huggingface/transformers/commit/3cd1a2307acd8e9262917ee85fda8333af4fb5fc) | 官方提交；改善模型导出兼容性，影响版本待发布说明确认。 |\n\n## 20:10 滚动增量\n\n| 厂商 / 项目 | 动态 | 状态与意义 |\n|---|---|---|\n| Microsoft | [AG-UI adapter 增加 A2UI 支持](https://github.com/microsoft/agent-framework/commit/59ecceba03ba6dac860dea8e51505d09e686dfa4) 与 [修复 Copilot 恢复配置中的 ReasoningSummary 透传](https://github.com/microsoft/agent-framework/commit/eccf47154f7b7172c616f8f45e4d60e00a01f077) | 官方主分支提交；前者扩展 Agent-to-UI 消息适配，后者修正恢复会话的推理摘要配置传递，进入稳定包时间待确认。 |\n| Qwen Code | [修复 Aone AGit-Flow CR 的增量评审缓存](https://github.com/QwenLM/qwen-code/commit/04886c4354f008eb612ee034153b3aefaac0ad86) 与 [明确 Aone 评论只加入 discussion gate](https://github.com/QwenLM/qwen-code/commit/0dd518f950bbd9b2379fafb2dfee48341196bd00) | 官方提交；分别修复增量评审复用并收紧评审评论语义，尚未据此推断已进入稳定版。 |\n| Hugging Face | [修复 EsmFold2 过期的 distogram 预期值](https://github.com/huggingface/transformers/commit/d4c297d1b014a780e9c196d6c91502a94461287b)、[修复 RDNA 上的 ROCm SDPA-flash guard](https://github.com/huggingface/transformers/commit/3cb4f80fe3534ea17e00aabc691e140728a5acb9) | 官方提交；分别修正模型测试基准与会导致 RDNA GPU 崩溃的兼容检查，影响版本待发布说明确认。 |\n| NVIDIA | [记录 canonical outbound HTTP clients](https://github.com/NVIDIA-NeMo/Guardrails/commit/8a83dc573088de933fc606cdc954075e355fa83e) | 官方文档提交；补充 Guardrails 出站 HTTP 客户端的规范入口，不代表新的稳定版本发布。 |\n| OpenAI | [Codex exec-server shell snapshot 遵循请求 PATH](https://github.com/openai/codex/commit/ff0e95007cca1edfc0877bbbbfaeb9eb77ed92b3) | 官方主分支修复；改善执行服务器环境一致性，完整版本上下文详见 OpenAI 专题页。 |\n\n## 常规工程更新\n\n| 厂商 / 项目 | 动态 | 状态 |\n|---|---|---|\n| LangChain | [Fireworks document reranking](https://github.com/langchain-ai/langchain/commit/b8d1ab5946cdb306fa01e0117dbf151f9cd2d308) 与 [1.6.0 release commit](https://github.com/langchain-ai/langchain/commit/ca3acde9b461b74601ec964cae6e31e0abda7990) | 官方仓库已合入；能力范围以对应集成文档为准。 |\n| Deep Agents | [deepagents-code 0.1.59 release commit](https://github.com/langchain-ai/deepagents/commit/b650b412988ba53c59830b4207fcdb63c45a9a3c) 与 [tool-call args 线性流式处理](https://github.com/langchain-ai/deepagents/commit/57bfa6bdc57056265047744dc32f3337a964ddc8) | 版本与性能修复信号均来自官方提交，未独立基准测试。 |\n| Qwen | [Qwen Code v0.21.14 release commit](https://github.com/QwenLM/qwen-code/commit/808c9c9f3d64bb54d5ee0265658c48bf4826ceda) 与 [Aone Code review 支持](https://github.com/QwenLM/qwen-code/commit/5715782279938080ee664004db4b93ae19231384) | 版本提交可核实；后者通过 a1 CLI 向 Aone Code 发表评论，适用范围以仓库文档为准。 |\n| Hugging Face | [Transformers 接入 ESMC 与 ESMFold2](https://github.com/huggingface/transformers/commit/c8df3fc99546229bf4c7ab7d188973af1a64fc2e) | 官方提交；是模型实现接入，不等同模型今日首次发布。 |\n| Hugging Face | [修复 DeepSeek V2 默认词表大小](https://github.com/huggingface/transformers/commit/e4dd56a373b51a2ed2a6330b64f9d44c51260d5c) | 兼容性修复；影响范围未作独立复测。 |\n| NVIDIA | [NeMo Guardrails 处理 reasoning content 的 think tags](https://github.com/NVIDIA-NeMo/Guardrails/commit/d49ff4125271fbc6fba809b9acfb86b28a8dd388) | 官方提交；服务端输出兼容性修复。 |\n\n## 厂商覆盖与无新增\n\nAnthropic 与 OpenAI 的窗口内版本已在优先动态交叉引用，并分别注明详见专题页。Meta AI、xAI、Mistral、Cohere、ByteDance Seed/豆包、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun 与 MiniMax 未发现能够同时打开原文并核实落入 24 小时窗口的新公告。厂商名仅是扫描范围，不据此推断产品更新。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与可访问厂商播客入口均已检查；截至截止时间没有找到可稳定核验为窗口内发布的新一期。集合页缺精确时分的候选没有被提升为今日事实。\n\n## 近两日补充\n\n本次新日期页不以窗口外内容充数；后续滚动扫描若发现 24–48 小时内漏项，将保留在本节并标明原始日期。\n\n## 近三日补充\n\n暂无新增。\n\n## 日期未确认\n\n部分中国厂商和播客集合页存在更新提示但缺少稳定原文日期或精确时分，暂不形成独立事实条目；后续若原始页面补齐日期再转入相应分区。\n\n## 观察池\n\n- Google、Microsoft、LangChain、Qwen、Hugging Face 与 NVIDIA 的条目主要是主分支提交；是否已经进入稳定包、托管服务或默认部署需继续观察。\n- 搜索摘要中出现的新型号、融资与发布日期说法没有可打开的一手证据，因此未写成已确认动态，也不据此推断厂商路线。\n\n## 今日结论\n\n窗口内最明确的方向是 Agent 运行控制、远程认证、持久化与长任务协议继续工程化；本轮证据更接近代码落地而非大规模产品发布。\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及六组播客入口；并复核十个核心官方 GitHub 仓库。\n- 失败/受限：部分入口返回 403、依赖脚本或无精确时间；部分播客和中国厂商集合页无法稳定核验新一期；社交互动量未登录不可稳定复核。\n- 初始候选 153 条，保留 45 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。",
   "sources": [
     {
       "title": "Claude Code v2.1.238",
@@ -458,6 +458,102 @@
         "Transformers",
         "ExecuTorch",
         "Export"
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework adds A2UI support to AG-UI adapter",
+      "url": "https://github.com/microsoft/agent-framework/commit/59ecceba03ba6dac860dea8e51505d09e686dfa4",
+      "source": "Microsoft / GitHub",
+      "publishedAt": "2026-08-21 17:29 +08:00",
+      "summary": "Python AG-UI adapter 增加 A2UI（Agent-to-UI）支持。",
+      "tags": [
+        "Microsoft",
+        "A2UI",
+        "AG-UI"
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework fixes ReasoningSummary passthrough in Copilot resume config",
+      "url": "https://github.com/microsoft/agent-framework/commit/eccf47154f7b7172c616f8f45e4d60e00a01f077",
+      "source": "Microsoft / GitHub",
+      "publishedAt": "2026-08-21 18:25 +08:00",
+      "summary": "修复 GitHub Copilot 恢复配置中的 ReasoningSummary 透传。",
+      "tags": [
+        "Microsoft",
+        "GitHub Copilot",
+        "Reasoning"
+      ]
+    },
+    {
+      "title": "Qwen Code fixes incremental cache for Aone AGit-Flow CRs",
+      "url": "https://github.com/QwenLM/qwen-code/commit/04886c4354f008eb612ee034153b3aefaac0ad86",
+      "source": "Qwen / GitHub",
+      "publishedAt": "2026-08-21 19:06 +08:00",
+      "summary": "修复 Aone AGit-Flow CR 的增量评审缓存。",
+      "tags": [
+        "Qwen Code",
+        "Code Review",
+        "Cache"
+      ]
+    },
+    {
+      "title": "Qwen Code clarifies Aone posts join the discussion gate only",
+      "url": "https://github.com/QwenLM/qwen-code/commit/0dd518f950bbd9b2379fafb2dfee48341196bd00",
+      "source": "Qwen / GitHub",
+      "publishedAt": "2026-08-21 16:17 +08:00",
+      "summary": "明确 Aone 评论只加入 discussion gate。",
+      "tags": [
+        "Qwen Code",
+        "Aone",
+        "Code Review"
+      ]
+    },
+    {
+      "title": "Transformers fixes stale EsmFold2 expected distogram values",
+      "url": "https://github.com/huggingface/transformers/commit/d4c297d1b014a780e9c196d6c91502a94461287b",
+      "source": "Hugging Face / GitHub",
+      "publishedAt": "2026-08-21 19:49 +08:00",
+      "summary": "修复 EsmFold2 过期的 distogram logit 预期值。",
+      "tags": [
+        "Transformers",
+        "EsmFold2",
+        "Testing"
+      ]
+    },
+    {
+      "title": "Transformers fixes ROCm SDPA-flash guard on RDNA GPUs",
+      "url": "https://github.com/huggingface/transformers/commit/3cb4f80fe3534ea17e00aabc691e140728a5acb9",
+      "source": "Hugging Face / GitHub",
+      "publishedAt": "2026-08-21 17:23 +08:00",
+      "summary": "修复会在 RDNA GPU 上崩溃的 ROCm SDPA-flash skip guard。",
+      "tags": [
+        "Transformers",
+        "ROCm",
+        "RDNA"
+      ]
+    },
+    {
+      "title": "NeMo Guardrails documents canonical outbound HTTP clients",
+      "url": "https://github.com/NVIDIA-NeMo/Guardrails/commit/8a83dc573088de933fc606cdc954075e355fa83e",
+      "source": "NVIDIA / GitHub",
+      "publishedAt": "2026-08-21 17:04 +08:00",
+      "summary": "记录 Guardrails 规范的出站 HTTP 客户端。",
+      "tags": [
+        "NVIDIA",
+        "Guardrails",
+        "HTTP"
+      ]
+    },
+    {
+      "title": "Codex exec-server shell snapshots honor request PATH",
+      "url": "https://github.com/openai/codex/commit/ff0e95007cca1edfc0877bbbbfaeb9eb77ed92b3",
+      "source": "OpenAI / GitHub",
+      "publishedAt": "2026-08-21 20:01 +08:00",
+      "summary": "exec-server shell snapshot 现在遵循请求中的 PATH。",
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "Exec Server"
       ]
     }
   ]
