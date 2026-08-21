@@ -1,0 +1,127 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-08-22T00:00:00+08:00"
+updatedAt: "2026-08-22T01:02:24+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Codex 0.150.0-alpha.3"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3"
+featuredSummary: "Codex 0.150.0 的第三个预发布版本；页面仅有版本级说明。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-22 00:43 +08:00"
+featuredTags: ["Codex","Prerelease"]
+featuredImage: "https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.3"
+featuredImageAlt: "OpenAI Codex 0.150.0-alpha.3 GitHub release preview"
+featuredImageCaption: "图片来源：OpenAI / GitHub"
+tags:
+  - "Agent"
+  - "Agents SDK"
+  - "ChatGPT"
+  - "Codex"
+  - "Community"
+  - "Guardian"
+  - "Hate"
+  - "MCP"
+  - "No Update"
+  - "OpenAI"
+  - "Prerelease"
+  - "Python"
+  - "Rumor"
+  - "Sandbox"
+  - "Security"
+  - "Status"
+  - "TypeScript"
+  - "Usage"
+  - "Windows"
+---
+
+## 今日概览
+
+采集窗口为 **2026-08-21 01:02:24 至 2026-08-22 01:02:24（Asia/Shanghai）**。窗口内唯一可确认的版本发布是 Codex 0.150.0-alpha.3；它是预发布版本，release 页面未列功能明细，不能写成稳定交付。官方 API、模型与 ChatGPT / Codex changelog 未见窗口内独立条目，OpenAI Status history 也未列 8 月 21 日新事故。
+
+Codex 与 SDK 主分支仍有密集修补，重点涉及 Windows sandbox、Guardian 与 MCP 隔离、MCP OAuth issuer 绑定、流式边界和 Agents SDK 错误保留；这些都是源码提交，尚不能等同正式 release。社区侧出现 ChatGPT 回归与 Codex 额度消耗的用户自报，但官方未确认统一变更或根因。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 方向 | 过去 24 小时状态 | 证据判断 |
+|---|---|---|
+| Codex CLI | [0.150.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3) 于 8 月 22 日 00:43 发布。 | 官方预发布；不是稳定版，且页面无功能明细 |
+| VS Code / JetBrains | 未发现窗口内独立正式发布。 | 无新增 |
+| Codex cloud / remote / PR agents | 主分支出现 Guardian 与 executor MCP server 隔离修复，见下文观察池。 | 待后续 release |
+| ChatGPT agentic / Work Mode | 未发现窗口内官方发布或 changelog 条目。 | 无新增 |
+| 当前官方 agent-building 产品 | Agents SDK 没有窗口内正式 release；主分支有错误处理修复。 | 无正式新增 |
+| Responses API | API changelog未列窗口内平台条目；Node SDK 主分支继续处理流式响应边界。 | 无平台级新增 |
+| Agents SDK Python / TypeScript | Python 主分支让空工具参数 fail closed；TypeScript 主分支保留 handoff callback 原始错误，均未 release。 | 源码修复待发布 |
+| Assistants API | 官方既有迁移 / 关闭安排无窗口内新公告。 | 无新增 |
+| Realtime API | 未发现窗口内官方 changelog 或 SDK release。 | 无新增 |
+| 当前 GPT / reasoning / Codex 模型家族 | 官方 model guidance 未显示窗口内新模型 release。 | 无新增 |
+
+<figure class="source-image">
+  <a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3"><img src="https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.3" alt="OpenAI Codex 0.150.0-alpha.3 GitHub release preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3">图片来源：OpenAI / GitHub</a></figcaption>
+</figure>
+
+## Tier 2：消费端与多模态
+
+| 方向 | 状态 |
+|---|---|
+| Browser / Operator 类能力 | 无正式新增。 |
+| Desktop apps | 无正式新增。 |
+| GPTs / GPT Store / Canvas | 无正式新增。 |
+| Sora / video | 无正式新增。 |
+| GPT Image / DALL·E | 无正式新增。 |
+| Voice | Codex 主分支出现 voice-aware configuration，但尚非 release。 |
+| Connectors / MCP | Codex 主分支有 MCP OAuth、bearer token 与 executor discovery 修复；均在观察池。 |
+
+## Tier 3：企业、教育、政府、安全与行业
+
+Enterprise、Business、Edu、Gov、Science 与独立安全产品未发现窗口内官方公告。与安全相关的源码信号集中在 sandbox、MCP OAuth 和 Guardian 隔离；由于尚未随正式版本发布，仅列入观察池，不据此推断已部署范围。
+
+## 官方与原始更新
+
+1. Codex [0.150.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3) 于 2026-08-22 00:43（上海时间）发布，明确标为 pre-release；页面只有版本级说明。
+2. Codex 主分支修复 [Windows sandbox setup activation](https://github.com/openai/codex/commit/41ab01a2eaff4d4c0fc88d56a0027d1244c33e82)，提交于 8 月 22 日 00:41；尚未证实已进入 alpha.3。
+3. Codex 主分支将 [Guardian review 与 executor MCP servers 隔离](https://github.com/openai/codex/commit/e482cc66aeeedcb9f333a1f5a0a554eb5aea4b36)，降低 review 流程继承执行器 MCP 的耦合；尚未 release。
+4. Codex 主分支新增 [MCP OAuth issuer binding](https://github.com/openai/codex/commit/7f9832d0d08c0e2fd56a02421477756474fec95d)，属于安全边界修复；尚未 release。
+5. Agents SDK TypeScript 主分支修复 [handoff callback 错误被覆盖](https://github.com/openai/openai-agents-js/commit/cd5a2c8fc163d02129163319d5b8e214c70fa978)；没有窗口内正式版本。
+6. Agents SDK Python 主分支对 [空工具参数采用 fail-closed](https://github.com/openai/openai-agents-python/commit/1b7eb28f2543150a65fc27d7f0c7ae77b3c91880)；没有窗口内正式版本。
+7. OpenAI [Status history](https://status.openai.com/history) 截止扫描时未列 8 月 21 日新事故；这只能说明官方历史页暂无条目，不代表个别用户没有故障。
+
+## Love
+
+本窗口没有找到证据充分、可与具体版本或能力对应的新增正向社区口碑。官方发布不计入 Love。
+
+## Hate
+
+- 一则 r/ChatGPT 帖子报告 [过去约 12 小时出现语义漂移、过度反驳和较少工具使用](https://www.reddit.com/r/ChatGPT/comments/1vugd62/has_chatgpt_changed_noticeably_in_the_last_12/)。这是单帖主观体验，没有模型版本、A/B 分组或可复现实验，不能确认服务端回归。
+- 一则已删除标题的 r/codex 帖仍留下 [额度减少约 5% 的个人叙述](https://www.reddit.com/r/codex/comments/1vu7nwk/removed/)。正文证据残缺，且没有套餐、模型、reasoning effort 与上下文基线，只能作为低置信度邻近信号。
+
+## 口碑判断
+
+- Codex：**中性偏负，低置信度**。官方有持续预发布与修复活动；负向仅来自证据不完整的额度自报，无法确认政策或计量变化。
+- ChatGPT：**负向，低置信度**。窗口内检索到一则较具体的质量回归叙述，但缺少对照与官方确认。
+- API / SDK：**中性，置信度中等**。没有平台级正式更新；源码层持续修复安全和错误传播边界。
+
+## 比较与迁移提示
+
+- 0.150.0-alpha.3 是预发布，不应替代生产环境固定的稳定通道；其 release 页面未提供功能清单，也不能把时间接近的主分支提交自动归入该版本。
+- Assistants API 的迁移应继续以官方文档为准；本窗口没有新期限或迁移政策。
+- 讨论 Codex 配额时至少同时记录套餐、模型、reasoning effort、上下文长度、工具调用和 review 行为，单次百分比变化不足以证明配额下调。
+
+## 日期未确认
+
+本轮没有纳入日期无法确认但足以单列的官方产品发布。部分官方 changelog 页面只显示现行内容而无本轮更新时间，因此仅用于“未发现新增”的扫描判断，不作为 24 小时新闻事实。
+
+## 观察池
+
+- Windows sandbox、Guardian / MCP 隔离、MCP OAuth issuer binding、Agents SDK 错误处理均为窗口内主分支提交；等待正式 release notes 确认交付版本与用户影响。
+- ChatGPT 质量回归与 Codex 额度消耗目前均为用户自报。后续需观察官方状态页、release notes、usage 文档及更多可复现样本。
+
+## 来源链接
+
+正文已直接链接官方 release、GitHub commit、OpenAI Status 与社区原帖；同页 URL 已去重。官方原页用于事实，社区帖子只用于口碑与低置信度观察。
+
+## 采集状态
+
+- 已检查来源：OpenAI Developers / API / model / migration docs，ChatGPT & Codex changelog、Release Notes、Newsroom、Status，Codex 与四个 SDK 仓库，以及 Reddit、HN、中英文新闻和 IDE / Desktop / Enterprise 关键词。
+- 失败来源：X 无法稳定取得公开正文与精确时间；Reddit JSON / RSS 不稳定；JetBrains 与 YouTube 未见可核实官方新增。已改用公开原页与搜索索引，并降低社区证据等级。
+- 初始候选数：48；保留来源数：9。
+- 二次补搜：否（最终来源不为 0）。
