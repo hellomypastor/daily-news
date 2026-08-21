@@ -6,6 +6,10 @@ import { outputFiles, outputPath, readSources, ROOT, shanghaiDate } from "./lib.
 const date = process.argv[2] ?? shanghaiDate();
 const sources = readSources(date);
 
+if (sources.some((source) => source.sources.length > 0) && sources.every((source) => !source.image)) {
+	throw new Error(`${date}: 五篇页面均未配置来源图片；至少为一条精选补充可核验的官方配图，避免 Today 退化为纯文字列表`);
+}
+
 if (process.env.ALLOW_DAILY_SOURCE_REMOVAL !== "1") {
 	for (const source of sources) {
 		const relativeSource = path.posix.join("data", "daily", date, source.name);

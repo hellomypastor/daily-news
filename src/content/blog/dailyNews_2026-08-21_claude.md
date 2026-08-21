@@ -1,13 +1,16 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T13:02:00+08:00"
+updatedAt: "2026-08-21T15:19:43+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
 featuredSummary: "新增 readline 键位、动态 marketplace 请求头和 self-hosted runner 能力，并集中修复内存、Remote Control、MCP 与终端问题。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredPublishedAt: "2026-08-21 04:33 +08:00"
 featuredTags: ["Claude Code","CLI","Managed Agents"]
+featuredImage: "https://opengraph.githubassets.com/c1b70fcba682c9d26d1cba228e500aad3e6cb9048b842fa8c253bfd80a6bc227/anthropics/claude-code/releases/tag/v2.1.238"
+featuredImageAlt: "Claude Code v2.1.238 GitHub release preview"
+featuredImageCaption: "图片来源：Anthropic / GitHub"
 tags:
   - "观察池"
   - "Agent"
@@ -48,6 +51,11 @@ tags:
 ## 今日概览
 
 扫描窗口：2026-08-20 07:51:03 至 2026-08-21 07:51:03（Asia/Shanghai）。窗口内的主线是 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)：新增 readline 键位风格、带动态请求头的插件 marketplace、self-hosted runner 延迟关停与代理鉴权能力，并集中修复长会话内存增长、Remote Control 消息与重连、MCP 初始化和终端交互问题。[TypeScript Agent SDK v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238)、[Python Agent SDK v0.2.143](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.143)与 [Claude Code Action v1.0.198](https://github.com/anthropics/claude-code-action/releases/tag/v1.0.198)随后对齐。状态页另记录 Google connectors 与多模型请求错误两起事件，均已在约半小时内恢复。
+
+<figure class="source-image">
+  <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.238"><img src="https://opengraph.githubassets.com/c1b70fcba682c9d26d1cba228e500aad3e6cb9048b842fa8c253bfd80a6bc227/anthropics/claude-code/releases/tag/v2.1.238" alt="Claude Code v2.1.238 GitHub release preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.238">图片来源：Anthropic / GitHub</a></figcaption>
+</figure>
 
 ## Tier 1
 

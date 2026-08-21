@@ -1,13 +1,16 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T13:02:00+08:00"
+updatedAt: "2026-08-21T15:19:43+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "Claude Code v2.1.238"
-featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
-featuredSummary: "Claude Code 发布 v2.1.238。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredPublishedAt: "2026-08-21 04:33 +08:00"
-featuredTags: ["Claude Code","Release"]
+featuredTitle: "Google ADK adds configurable maximum LLM calls"
+featuredUrl: "https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090"
+featuredSummary: "ADK 增加可配置的最大 LLM 调用数。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-08-21 07:13 +08:00"
+featuredTags: ["Google ADK","Agent"]
+featuredImage: "https://opengraph.githubassets.com/760ce0d5f9f73952b7ab41f5f92f078e3e356972eafe9e5fd6fa170e9dc889d2/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090"
+featuredImageAlt: "Google ADK Python GitHub commit preview"
+featuredImageCaption: "图片来源：Google ADK / GitHub"
 tags:
   - "A2A"
   - "Agent"
@@ -72,6 +75,11 @@ tags:
 | Microsoft | [Foundry 托管 Agent 状态持久化](https://github.com/microsoft/agent-framework/commit/ab0f7d5d08ce753e17559a0bee94e8b77fa68fa2) | 官方提交，04:38 | 为托管 Agent 补充状态持久化；具体服务可用性和 SLA 仍需看 Foundry 正式文档。 |
 | Microsoft | [Azure Blob Storage 会话持久化](https://github.com/microsoft/agent-framework/commit/e6617c407a1d94a9eb8421e1fd3f385ee6da7e13) | 官方提交，02:30 | 增加基于 Blob Storage 的会话保存路径，利于长任务恢复和外部化状态。 |
 | Microsoft | [迁移 MCP 2026-07-28 Tasks 扩展](https://github.com/microsoft/agent-framework/commit/96560bbf65973d098e09f38cc69f45826845d08e) | 官方提交，07:26 | .NET 路径的破坏性变更，说明长任务接口跟进新版扩展；升级方需关注兼容性。 |
+
+<figure class="source-image">
+  <a href="https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090"><img src="https://opengraph.githubassets.com/760ce0d5f9f73952b7ab41f5f92f078e3e356972eafe9e5fd6fa170e9dc889d2/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090" alt="Google ADK Python GitHub commit preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090">图片来源：Google ADK / GitHub</a></figcaption>
+</figure>
 
 ## 13:02 滚动增量
 

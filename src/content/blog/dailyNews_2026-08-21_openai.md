@@ -1,13 +1,16 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T13:02:00+08:00"
+updatedAt: "2026-08-21T15:19:43+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "ChatGPT — Release Notes: August 20, 2026"
-featuredUrl: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-featuredSummary: "官方集中发布 Sites URL、Apple Messages、Computer History、Codex chat sharing 与 pinned chats 更新。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-08-20（精确时间未列）"
-featuredTags: ["ChatGPT","Codex","Official"]
+featuredTitle: "Codex 0.149.0"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+featuredSummary: "Codex 0.149.0 正式稳定版；页面仅含版本级说明。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-21 05:04 +08:00"
+featuredTags: ["Codex","CLI","Release"]
+featuredImage: "https://opengraph.githubassets.com/5562d06e5b3963ee0c2b84864989d7f42fd8aaa33991e8b3c164e0eaca0ae2d7/openai/codex/releases/tag/rust-v0.149.0"
+featuredImageAlt: "OpenAI Codex 0.149.0 GitHub release preview"
+featuredImageCaption: "图片来源：OpenAI / GitHub"
 tags:
   - "未证实"
   - "主分支"
@@ -56,6 +59,11 @@ tags:
 ## 今日概览
 
 扫描窗口：2026-08-20 13:02:00 至 2026-08-21 13:02:00（Asia/Shanghai；同日累积保留早轮来源）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
+
+<figure class="source-image">
+  <a href="https://github.com/openai/codex/releases/tag/rust-v0.149.0"><img src="https://opengraph.githubassets.com/5562d06e5b3963ee0c2b84864989d7f42fd8aaa33991e8b3c164e0eaca0ae2d7/openai/codex/releases/tag/rust-v0.149.0" alt="OpenAI Codex 0.149.0 GitHub release preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.149.0">图片来源：OpenAI / GitHub</a></figcaption>
+</figure>
 
 可靠性方面，OpenAI 状态页记录了三起已恢复事件：登录与注册故障、ChatGPT Thinking / 图像生成错误，以及 Codex API 鉴权错误。社区口碑的主要负向信号是多帖集中声称 Codex 周额度消耗明显加快；这些帖子有截图或自测叙述，但官方尚未确认额度政策变化或统一根因。
 

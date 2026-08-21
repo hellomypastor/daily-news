@@ -1,13 +1,16 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T13:02:00+08:00"
+updatedAt: "2026-08-21T15:19:43+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredTitle: "Claude Code v2.1.238"
-featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
-featuredSummary: "新增 self-hosted runner 延迟关停与代理鉴权，并集中修复 Remote Control、跨会话消息和 runner 生命周期。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredPublishedAt: "2026-08-21 04:33 +08:00"
-featuredTags: ["AaaS","Claude Code","Self-hosted Runner","Remote Control"]
+featuredTitle: "Cloudflare Agents 0.21.0"
+featuredUrl: "https://github.com/cloudflare/agents/releases/tag/agents%400.21.0"
+featuredSummary: "新增 Workflow retention 透传、子 Agent canonical URL、请求流式转发、Browser Tools 与 observability 变化；略超 72 小时边界。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-08-18 17:08 +08:00"
+featuredTags: ["Cloudflare Agents","Workflow","Browser Agent","较旧上下文"]
+featuredImage: "https://opengraph.githubassets.com/d59a679de616df830145e5c84121ca1c0005bdfb8d41f0400999d84e7e5958a3/cloudflare/agents/releases/tag/agents%400.21.0"
+featuredImageAlt: "Cloudflare Agents 0.21.0 GitHub release preview"
+featuredImageCaption: "图片来源：Cloudflare Agents / GitHub"
 tags:
   - "24-72h"
   - "较旧上下文"
@@ -85,6 +88,11 @@ tags:
 - **CrewAI 1.15.17（约 25.5 小时）**：[发布说明](https://github.com/crewAIInc/crewAI/releases/tag/1.15.17)增加声明式 conversational flows，并修复 MCP HTTP/SSE server name、失败尝试的 agent scope 清理、逐跳 SSRF 检查与 Responses API native tool calls。它是 Agent 框架能力信号，不能单凭 release 认定托管平台上线。
 - **LangGraph SDK 0.4.3（约 31.9 小时）**：[发布说明](https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.3)包含 decrypt replacement result 与清空 cron `end_time` 的支持；因 SDK 与 LangGraph Platform 生命周期接口相关，保留为平台邻近信号。
 - **Cloudflare Agents 0.21.0（约 72.8 小时）**：[发布说明](https://github.com/cloudflare/agents/releases/tag/agents%400.21.0)略超 72 小时边界，包含 Workflow retention 透传、子 Agent canonical URL、请求体流式转发、Browser Tools、observability 与 Kitesurf 支持；作为边界外较旧上下文保留，不计入 24–72 小时统计。
+
+<figure class="source-image">
+  <a href="https://github.com/cloudflare/agents/releases/tag/agents%400.21.0"><img src="https://opengraph.githubassets.com/d59a679de616df830145e5c84121ca1c0005bdfb8d41f0400999d84e7e5958a3/cloudflare/agents/releases/tag/agents%400.21.0" alt="Cloudflare Agents 0.21.0 GitHub release preview" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/cloudflare/agents/releases/tag/agents%400.21.0">图片来源：Cloudflare Agents / GitHub</a></figcaption>
+</figure>
 
 ## AaaS 与 MaaS / PaaS 边界
 

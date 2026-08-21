@@ -1,13 +1,16 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T13:02:00+08:00"
+updatedAt: "2026-08-21T15:19:43+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Open Source Is Not a Virtue: It’s an Ownership Model"
 featuredUrl: "https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/"
 featuredSummary: "从所有权与可替换性讨论 AI 基础设施开源。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredPublishedAt: "2026-08-20 18:12 +08:00"
 featuredTags: ["Open Source","AI Infrastructure"]
+featuredImage: "https://storage.ghost.io/c/68/76/6876f0af-8955-4de4-a637-a5e7cc399136/content/images/size/w1200/2026/08/mozilla-otari-why-open-source-matters-blog-header.png"
+featuredImageAlt: "Mozilla.ai article illustration about open-source ownership"
+featuredImageCaption: "图片来源：Mozilla.ai"
 tags:
   - "Agent"
   - "Agent Harness"
@@ -61,6 +64,11 @@ tags:
 | [Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication](https://arxiv.org/abs/2608.19161) | 研究多 Agent 潜在通信中的隐蔽协同行为检测 | 说明只审计自然语言 transcript 可能漏掉潜变量通道；威胁模型和检测效果以论文设定为限 | arXiv v1：2026-08-20 01:43 +08:00 |
 | [Grouping the Stochastic Machine](https://arxiv.org/abs/2608.19140) | 讨论用精度而非笼统能力衡量随机 AI 系统前沿 | 将评估重点放到可重复性、分组表现与系统精度；属于论文提出的评价框架 | arXiv v1：2026-08-20 01:29 +08:00 |
 | [SPK: Eliciting Structured Prior Knowledge](https://arxiv.org/abs/2608.19080) | 为实时目标检测引出结构化先验，以解释分布外判断 | 把先验结构与 OOD 检测关联，适合作为可解释推理组件观察；有效性以论文数据集为限 | arXiv v1：2026-08-20 00:30 +08:00 |
+
+<figure class="source-image">
+  <a href="https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/"><img src="https://storage.ghost.io/c/68/76/6876f0af-8955-4de4-a637-a5e7cc399136/content/images/size/w1200/2026/08/mozilla-otari-why-open-source-matters-blog-header.png" alt="Mozilla.ai article illustration about open-source ownership" loading="lazy" /></a>
+  <figcaption><a href="https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/">图片来源：Mozilla.ai</a></figcaption>
+</figure>
 
 | [Gisting: Compressing LLM Agent context](https://shopify.engineering/gisting) | Shopify 将长系统提示蒸馏成一组可学习 gist token | 文章给出训练、部署及与 prefix caching 的关系；延迟、吞吐和 GPU 节省数字均为 Shopify 自有负载测试，不外推为通用结论 | 原文日期：2026-08-19 |
 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 开源的插件化 Agent harness | README 明确标为 developer preview，并警告可能有破坏性兼容变更；仓库为 MIT 许可证 | GitHub 创建：2026-08-13；本轮 HN 发现：2026-08-21 |

@@ -9,7 +9,13 @@
     "Agent"
   ],
   "order": 20,
-  "updatedAt": "2026-08-21T13:02:00+08:00",
+  "updatedAt": "2026-08-21T15:19:43+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/5562d06e5b3963ee0c2b84864989d7f42fd8aaa33991e8b3c164e0eaca0ae2d7/openai/codex/releases/tag/rust-v0.149.0",
+    "alt": "OpenAI Codex 0.149.0 GitHub release preview",
+    "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+    "caption": "图片来源：OpenAI / GitHub"
+  },
   "scan": {
     "checkedSources": [
       "OpenAI ChatGPT Release Notes、ChatGPT / Codex changelog、API changelog、model guidance 与 Assistants API 迁移文档",

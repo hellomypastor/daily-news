@@ -9,7 +9,13 @@
     "LLM"
   ],
   "order": 30,
-  "updatedAt": "2026-08-21T13:02:00+08:00",
+  "updatedAt": "2026-08-21T15:19:43+08:00",
+  "image": {
+    "url": "https://storage.ghost.io/c/68/76/6876f0af-8955-4de4-a637-a5e7cc399136/content/images/size/w1200/2026/08/mozilla-otari-why-open-source-matters-blog-header.png",
+    "alt": "Mozilla.ai article illustration about open-source ownership",
+    "sourceUrl": "https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/",
+    "caption": "图片来源：Mozilla.ai"
+  },
   "scan": {
     "checkedSources": [
       "Hacker News Algolia：AI、LLM、agent、MCP、RAG、inference、open source 七组检索，固定 24 小时窗口合并去重后 307 条",

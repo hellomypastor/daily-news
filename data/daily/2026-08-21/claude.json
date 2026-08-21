@@ -9,7 +9,13 @@
     "Agent"
   ],
   "order": 10,
-  "updatedAt": "2026-08-21T13:02:00+08:00",
+  "updatedAt": "2026-08-21T15:19:43+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/c1b70fcba682c9d26d1cba228e500aad3e6cb9048b842fa8c253bfd80a6bc227/anthropics/claude-code/releases/tag/v2.1.238",
+    "alt": "Claude Code v2.1.238 GitHub release preview",
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+    "caption": "图片来源：Anthropic / GitHub"
+  },
   "scan": {
     "checkedSources": [
       "Anthropic Newsroom、Research、Claude Blog 与产品文档",

@@ -9,7 +9,13 @@
     "Managed Agent"
   ],
   "order": 50,
-  "updatedAt": "2026-08-21T13:02:00+08:00",
+  "updatedAt": "2026-08-21T15:19:43+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/d59a679de616df830145e5c84121ca1c0005bdfb8d41f0400999d84e7e5958a3/cloudflare/agents/releases/tag/agents%400.21.0",
+    "alt": "Cloudflare Agents 0.21.0 GitHub release preview",
+    "sourceUrl": "https://github.com/cloudflare/agents/releases/tag/agents%400.21.0",
+    "caption": "图片来源：Cloudflare Agents / GitHub"
+  },
   "scan": {
     "checkedSources": [
       "Anthropic Claude Code 与 Agent SDK GitHub Releases、Anthropic Status",

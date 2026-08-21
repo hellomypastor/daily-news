@@ -9,7 +9,13 @@
     "Research"
   ],
   "order": 40,
-  "updatedAt": "2026-08-21T13:02:00+08:00",
+  "updatedAt": "2026-08-21T15:19:43+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/760ce0d5f9f73952b7ab41f5f92f078e3e356972eafe9e5fd6fa170e9dc889d2/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090",
+    "alt": "Google ADK Python GitHub commit preview",
+    "sourceUrl": "https://github.com/google/adk-python/commit/75679db3fa42521a9316d1f8325225e51f5e9090",
+    "caption": "图片来源：Google ADK / GitHub"
+  },
   "scan": {
     "checkedSources": [
       "Anthropic News、Claude/Agent SDK 官方仓库与状态入口；OpenAI News、开发者文档和官方仓库",
