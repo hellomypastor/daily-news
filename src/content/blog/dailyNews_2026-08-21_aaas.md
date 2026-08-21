@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T09:57:27+08:00"
+updatedAt: "2026-08-21T13:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -17,9 +17,11 @@ tags:
   - "Agent"
   - "Agent Framework"
   - "Agent Harness"
+  - "Agent Runtime"
   - "Agent SDK"
   - "Async Tasks"
   - "Browser Agent"
+  - "China"
   - "Claude Code"
   - "Cloud Agent"
   - "Cloudflare Agents"
@@ -41,7 +43,7 @@ tags:
 
 ## 今日概览
 
-主扫描窗口：2026-08-20 09:57:27 至 2026-08-21 09:57:27（Asia/Shanghai）；另检查 24–72 小时信号至 2026-08-18 09:57:27。窗口内最明确的 AaaS 变化来自 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)、[Claude Agent SDK TypeScript v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238) 与 [OpenAI Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)：前者加强 self-hosted runner、Remote Control 和跨会话消息，后者加入 Agent 任务面板及向本地/远程会话排队消息的命令。它们共同指向托管 Agent 的核心竞争点——长任务生命周期、会话恢复、消息可靠性、运行环境与安全策略，而不是单纯模型 API。Claude 事件详见 Claude 专题页，Codex 事件详见 OpenAI 专题页。
+主扫描窗口滚动至 2026-08-20 13:02:00 至 2026-08-21 13:02:00（Asia/Shanghai）；另检查 24–72 小时信号至 2026-08-18 13:02:00。窗口内最明确的 AaaS 变化来自 [Claude Code v2.1.238](https://github.com/anthropics/claude-code/releases/tag/v2.1.238)、[Claude Agent SDK TypeScript v0.3.238](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.238) 与 [OpenAI Codex v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)：前者加强 self-hosted runner、Remote Control 和跨会话消息，后者加入 Agent 任务面板及向本地/远程会话排队消息的命令。它们共同指向托管 Agent 的核心竞争点——长任务生命周期、会话恢复、消息可靠性、运行环境与安全策略，而不是单纯模型 API。Claude 事件详见 Claude 专题页，Codex 事件详见 OpenAI 专题页。13:02 增量还确认了 OpenAI 将 Codex CLI、SDK 与 app-server 定位为可嵌入产品和工作流的开放 Agent harness，以及阿里 ANOLISA 的自托管 Agent 运行层；两者分别归入 24–72 小时观察与邻近信号。
 
 ## 今日重点
 
@@ -78,13 +80,15 @@ tags:
 
 ## 24–72 小时观察池
 
+- **Codex as a platform（约 42 小时）**：[OpenAI Developers 原文](https://developers.openai.com/blog/codex-as-a-platform)说明 Codex CLI、SDK 和 app-server 的集成边界：SDK 可启动、恢复和流式传输任务，app-server 可维持会话、流事件、中断工作并处理审批。这是把 Agent harness 嵌入第三方产品的直接平台信号，但文章日期为 8 月 19 日，归入 24–72 小时；详见 OpenAI 专题页。
+
 - **CrewAI 1.15.17（约 25.5 小时）**：[发布说明](https://github.com/crewAIInc/crewAI/releases/tag/1.15.17)增加声明式 conversational flows，并修复 MCP HTTP/SSE server name、失败尝试的 agent scope 清理、逐跳 SSRF 检查与 Responses API native tool calls。它是 Agent 框架能力信号，不能单凭 release 认定托管平台上线。
 - **LangGraph SDK 0.4.3（约 31.9 小时）**：[发布说明](https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.3)包含 decrypt replacement result 与清空 cron `end_time` 的支持；因 SDK 与 LangGraph Platform 生命周期接口相关，保留为平台邻近信号。
 - **Cloudflare Agents 0.21.0（约 72.8 小时）**：[发布说明](https://github.com/cloudflare/agents/releases/tag/agents%400.21.0)略超 72 小时边界，包含 Workflow retention 透传、子 Agent canonical URL、请求体流式转发、Browser Tools、observability 与 Kitesurf 支持；作为边界外较旧上下文保留，不计入 24–72 小时统计。
 
 ## AaaS 与 MaaS / PaaS 边界
 
-Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备执行环境、异步会话、生命周期和消息管理，属于 AaaS。Gemini CLI nightly、CrewAI 和 Cloudflare Agents SDK 本身主要是 harness / SDK / PaaS 工具，只有与托管 runtime、workflow 或远程 session 结合时才构成 AaaS；因此它们放在邻近信号而非宣称为新托管服务。单纯模型版本、推理 API 或模型可用区变化属于 MaaS，本轮没有拿它们填充 AaaS 正文。
+Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备执行环境、异步会话、生命周期和消息管理，属于 AaaS。Gemini CLI nightly、CrewAI 和 Cloudflare Agents SDK 本身主要是 harness / SDK / PaaS 工具，只有与托管 runtime、workflow 或远程 session 结合时才构成 AaaS；因此它们放在邻近信号而非宣称为新托管服务。单纯模型版本、推理 API 或模型可用区变化属于 MaaS，本轮没有拿它们填充 AaaS 正文。ANOLISA 提供运行时、安全、可观测和上下文效率组件，但官方仓库本身证明的是可自托管运行层，不是托管商业服务，因此只列邻近信号。
 
 ## 日期未确认
 
@@ -100,10 +104,11 @@ Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备
 - CrewAI 1.15.17：框架 conversational flow 与安全修复，托管部署状态未由该 release 证明。
 - LangGraph SDK 0.4.3：SDK 生命周期接口信号，未单独证明 LangGraph Platform 商业服务变更。
 - Cloudflare Agents 0.21.0：与 Durable Objects、Workflows、Browser Tools 紧密相关，但发布时间已略超 72 小时。
+- [Alibaba ANOLISA](https://github.com/alibaba/anolisa)：Apache-2.0 的 Agent 工作负载运行层，README 覆盖终端入口、Agent memory、可观测、安全沙箱与 checkpoint；属于中国厂商的自托管 runtime 信号，未证明已提供托管 AaaS。
 
 ## 趋势判断
 
-本轮高信号不在“更多 Agent 名称”，而在执行控制面成熟：任务面板、消息队列、runner 延迟关停、代理鉴权、重连与丢消息可见性逐步成为托管 Agent 的标准组件。中国厂商公开面本轮无可核验同窗发布，不能据此推断竞争放缓。
+本轮高信号不在“更多 Agent 名称”，而在执行控制面成熟：Codex SDK/app-server 的可嵌入接口进一步把 Agent 生命周期开放给第三方产品；任务面板、消息队列、runner 延迟关停、代理鉴权、重连与丢消息可见性逐步成为托管 Agent 的标准组件。中国厂商公开面本轮无可核验同窗发布，不能据此推断竞争放缓。
 
 ## 来源链接
 
@@ -111,10 +116,10 @@ Claude self-hosted runner、Remote Control 与 Codex remote session 控制具备
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、Factory、Sourcegraph/Amp，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 的公开入口。
-- 失败来源：部分官网缺精确时分或需客户端渲染；GitHub 匿名 API 后段限流；X/登录态社交入口无法稳定核验。
-- 初始候选：93（9 个 GitHub 仓库各取最近 8 个 release，共 72；Anthropic 状态事件 3；公开 Web 搜索结果 18）。
-- 最终保留：9 个独立来源 URL，其中主窗口 5 个、日期未确认 1 个、24–72 小时 2 个、72 小时边界外上下文 1 个。
+- 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、Factory、Sourcegraph/Amp，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 的公开入口；13:02 增量复核七个核心 release feed、OpenAI Developers、HN 与 ANOLISA 官方仓库。
+- 失败来源：部分官网缺精确时分或需客户端渲染；GitHub 匿名 API 后段限流；X/登录态社交入口无法稳定核验；Codex 0.150.0 alpha release 只有版本占位说明，未作为实质动态收录。
+- 累计候选：124（首轮 93；13:02 增量 release feed、HN、厂商原文与仓库候选 31）。
+- 最终保留：11 个独立来源 URL，其中主窗口 5 个、日期未确认 1 个、24–72 小时 3 个、邻近/较旧上下文 2 个。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 9 条动态，重点：Claude 与 Codex 都在加强长任务、远程会话和异步消息的执行控制面。
+今日扫描完成，共 11 条动态，重点：Claude 与 Codex 都在加强长任务、远程会话和异步消息的执行控制面，Codex 进一步开放可嵌入的 SDK/app-server，ANOLISA 提供中国厂商自托管 Agent runtime 邻近信号。

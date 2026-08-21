@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T07:51:05+08:00"
+updatedAt: "2026-08-21T13:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "ChatGPT — Release Notes: August 20, 2026"
 featuredUrl: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
@@ -25,6 +25,7 @@ tags:
   - "Desktop"
   - "Go"
   - "Hate"
+  - "Hotfix"
   - "Image"
   - "Incident"
   - "Login"
@@ -54,7 +55,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-20 07:51:05 至 2026-08-21 07:51:05（Asia/Shanghai）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
+扫描窗口：2026-08-20 13:02:00 至 2026-08-21 13:02:00（Asia/Shanghai；同日累积保留早轮来源）。本轮最重要的产品变化来自 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：Plus / Pro 的 ChatGPT Sites 可更换托管 URL，Apple silicon Mac 上的 ChatGPT 桌面端新增 Apple Messages plugin，Computer History 扩展至 EEA、瑞士和英国，Codex chat 可生成只读快照链接，桌面端与 iOS 的 pinned chats 开始同步。编码侧，[Codex 0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 已由预发布序列转为稳定版；其 release 页面仅给出版本级说明，因此本文不推断未列出的功能归属。
 
 可靠性方面，OpenAI 状态页记录了三起已恢复事件：登录与注册故障、ChatGPT Thinking / 图像生成错误，以及 Codex API 鉴权错误。社区口碑的主要负向信号是多帖集中声称 Codex 周额度消耗明显加快；这些帖子有截图或自测叙述，但官方尚未确认额度政策变化或统一根因。
 
@@ -62,7 +63,7 @@ tags:
 
 | 方向 | 过去 24 小时状态 | 证据判断 |
 |---|---|---|
-| Codex CLI | [0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 于 05:04 发布为稳定版；[0.149.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7) 与 [0.150.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.1) 分别是此前及后续预发布。 | 稳定版确认；预发布不等于正式交付 |
+| Codex CLI | [0.150.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.2) 是最新预发布；[0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 于 05:04 发布为稳定版；[0.149.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7) 与 [0.150.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.1) 分别是此前及后续预发布。 | 稳定版确认；预发布不等于正式交付 |
 | VS Code / JetBrains | 未发现独立正式发布；Codex chat sharing 与 pinned chats 同步属于跨桌面端能力。 | 无 IDE 专项新增 |
 | Codex cloud / remote / PR agents | [只读 Codex chat 快照](https://learn.chatgpt.com/docs/use-chatgpt)允许任何持链接者查看静态快照；不包含 tool calls 或 shell 输入输出，但官方提醒仍需人工检查路径、diff、图片等敏感信息。 | 官方功能更新 |
 | ChatGPT agentic / Work Mode | Apple Messages plugin 可在 Apple silicon Mac 上读取、搜索并准备或发送 Messages 内容，发送前默认要求确认收件人和消息；详见[插件文档](https://learn.chatgpt.com/docs/plugins?surface=app)。 | 官方功能更新 |
@@ -95,14 +96,16 @@ tags:
 
 ## 官方与原始更新（由新到旧）
 
-1. 06:06，Codex 发布 [0.150.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.1)，标为预发布，不能写成稳定版。
-2. 05:04，Codex [0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 发布为稳定版；release 页面只有版本级说明。
-3. 02:29，Codex [0.149.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7) 发布，随后已被稳定版取代。
-4. 8 月 20 日，OpenAI [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)集中公布 Sites URL 更换、Apple Messages plugin、Computer History 区域扩展、Codex chat 快照与 pinned chats 同步。
-5. 17:52，官方确认 [Codex API 鉴权错误](https://status.openai.com/incidents/01M0G1RZER839AZXWMYKSZF3GR)完全恢复；事件 16:58 被识别，17:15 进入监控。
-6. 16:51，官方确认 [ChatGPT Thinking mode 与图像生成错误](https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC)完全恢复；事件 13:56 起调查，14:53 已实施缓解。
-7. 00:54，官方确认 [ChatGPT 登录与注册故障](https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39)恢复；该事件开始于 00:02，属于本窗口早段。
-8. SDK 主分支出现多项尚未 release 的修补：Python [保持自定义 TLS hostname](https://github.com/openai/openai-python/commit/aa5fbc401f179fc515905d84623718c2b66ec653)；Node [限制事件流并校验 streamed item identity](https://github.com/openai/openai-node/commit/7df29a98c69f1dd14300737e42cc6f22965b6b73)与[避免长文本累积出现二次复杂度](https://github.com/openai/openai-node/commit/95628cee9b4d6869f1b0b54e323248eed5bd59c5)；Go [校验带前缀 webhook signing secret](https://github.com/openai/openai-go/commit/c88e19a1c266ef8fbc140969c862c1eb635142d8)。这些提交均不能视为已交付版本。
+1. 12:24，Codex 发布 [0.150.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.2)，标为预发布，release 页面仅有版本级说明。
+2. 10:28，Codex 发布 [0.149.0-alpha.4.1](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.1)，这是发布时间晚于稳定版的补丁预发布，不能解读为稳定版回退。
+3. 06:06，Codex 发布 [0.150.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.1)，标为预发布，不能写成稳定版。
+4. 05:04，Codex [0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0) 发布为稳定版；release 页面只有版本级说明。
+5. 02:29，Codex [0.149.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7) 发布，随后已被稳定版取代。
+6. 8 月 20 日，OpenAI [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)集中公布 Sites URL 更换、Apple Messages plugin、Computer History 区域扩展、Codex chat 快照与 pinned chats 同步。
+7. 17:52，官方确认 [Codex API 鉴权错误](https://status.openai.com/incidents/01M0G1RZER839AZXWMYKSZF3GR)完全恢复；事件 16:58 被识别，17:15 进入监控。
+8. 16:51，官方确认 [ChatGPT Thinking mode 与图像生成错误](https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC)完全恢复；事件 13:56 起调查，14:53 已实施缓解。
+9. 00:54，官方确认 [ChatGPT 登录与注册故障](https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39)恢复；该事件开始于 00:02，属于本窗口早段。
+10. SDK 主分支出现多项尚未 release 的修补：Python [保持自定义 TLS hostname](https://github.com/openai/openai-python/commit/aa5fbc401f179fc515905d84623718c2b66ec653)；Node [限制事件流并校验 streamed item identity](https://github.com/openai/openai-node/commit/7df29a98c69f1dd14300737e42cc6f22965b6b73)与[避免长文本累积出现二次复杂度](https://github.com/openai/openai-node/commit/95628cee9b4d6869f1b0b54e323248eed5bd59c5)；Go [校验带前缀 webhook signing secret](https://github.com/openai/openai-go/commit/c88e19a1c266ef8fbc140969c862c1eb635142d8)。这些提交均不能视为已交付版本。
 
 ## Love
 
@@ -145,5 +148,5 @@ tags:
 
 - 已检查来源：OpenAI Release Notes / Help / Learn、ChatGPT & Codex changelog、API changelog、model guidance、Assistants migration、Status、Newsroom、8 个官方 GitHub 仓库、Developer Community、Reddit、HN、X 与中英文新闻检索。
 - 失败来源：OpenAI News 普通 curl 403；GitHub 未认证 API 批量扫描后 403 rate limit；Reddit JSON / RSS 与 X 正文提取不稳定；JetBrains 与 YouTube 未见可核实新增。均已改用可访问官方原页、网页索引或公开帖子，并降低社区证据等级。
-- 初始候选数：86；保留来源数：24。
+- 初始候选数：96；保留来源数：26。
 - 二次补搜：否（最终来源不为 0）。

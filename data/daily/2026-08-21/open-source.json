@@ -2,9 +2,14 @@
   "slug": "open-source",
   "title": "今日 AI / Agent 开源项目与技术博客精选",
   "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
-  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "tags": [
+    "AI",
+    "Agent",
+    "Open Source",
+    "LLM"
+  ],
   "order": 30,
-  "updatedAt": "2026-08-21T07:51:18+08:00",
+  "updatedAt": "2026-08-21T13:02:00+08:00",
   "scan": {
     "checkedSources": [
       "Hacker News Algolia：AI、LLM、agent、MCP、RAG、inference、open source 七组检索，固定 24 小时窗口合并去重后 307 条",
@@ -14,6 +19,7 @@
       "arXiv submittedDate API：cs.AI、cs.CL、cs.LG、cs.SE 最新 100 条，固定 48 小时窗口",
       "Hugging Face Blog RSS（可用）与 Daily Papers RSS（返回 HTTP 401）",
       "Simon Willison Atom feed 最新条目",
+      "13:02 增量：HN newest/Algolia 07:51–13:02 共 123 条，复核 Shopify Engineering、DeepSeek 与 ANOLISA 原文",
       "Mozilla.ai、Pamela Fox、EARENDIL、Daniel Vaughn、Osmosis 等工程博客原文"
     ],
     "failedSources": [
@@ -21,48 +27,498 @@
       "ONNX.css 与 Autolith 原文在本环境返回 HTTP 403；仅按 HN 发现证据列入日期未确认",
       "部分窗口内 GitHub 新仓库的 REST API 元数据返回不可用；只记录公开仓库页与 HN 发现，不猜测创建时间或许可证",
       "GitHub Trending 没有结构化官方 API；公开 HTML 中的 stars today 仅为 07:51 快照",
-      "Huzzah 页面只显示 2026 年 8 月，未给出精确日；不把 HN 提交时间当作原文发布日期"
+      "Huzzah 页面只显示 2026 年 8 月，未给出精确日；不把 HN 提交时间当作原文发布日期",
+      "The Sloppiest Thing About AI 原文返回 HTTP 403；本轮未收录，留待后续复核"
     ],
-    "candidateCount": 497,
+    "candidateCount": 665,
     "secondPass": false
   },
-  "content": "## 概览\n\n技术高亮窗口为 2026-08-19 07:51:18 至 2026-08-21 07:51:18，HN 讨论与旧文回流窗口为 2026-08-20 07:51:18 至 2026-08-21 07:51:18（Asia/Shanghai）。本轮合并去重检查 HN 七组关键词 307 条、GitHub 三类日榜 45 行、arXiv 最新 100 条、Hugging Face Blog RSS 与 Simon Willison feed；原始候选计数（含入口间重叠）为 497，最终保留 36 个唯一来源 URL。发布日期、HN 发现时间与 GitHub 榜单热度分别记录，不互相替代。\n\n## 已核实高亮\n\n| 项目 / 文章 | 是什么 | 为什么重要 | 日期 / 证据状态 |\n|---|---|---|---|\n| [Open Source Is Not a Virtue: It’s an Ownership Model](https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/) | Mozilla.ai 从所有权和可替换性讨论 AI 基础设施开源 | 把模型、编排层和数据路径的控制权分开分析；这是立场型工程文章，不把其“避免锁定”论断写成实证结论 | 页面结构化时间：2026-08-20 18:12 +08:00 |\n| [Browser automation with Pydantic AI + Playwright](http://blog.pamelafox.org/2026/08/browser-automation-with-pydantic-ai.html) | Pamela Fox 展示 Pydantic AI Harness 与 Playwright 的浏览器 Agent 组合 | 示例包含模型配置、浏览器工具接入和程序化导航，适合观察类型化 Agent 框架如何约束 browser-use 流程 | 原文日期：2026-08-20 |\n| [What Is a Harness?](https://earendil.com/posts/what-is-a-harness/) | EARENDIL 区分模型、Agent harness 与运行环境 | 文章把上下文管理、工具、循环、权限和状态归到 harness 层，有助于避免把系统能力全部归因于底层模型 | 页面时间：2026-08-20 |\n| [SPADE: Self-Play in Adaptive Synthetic Executable Environments](https://arxiv.org/abs/2608.19197) | 让 Agent 在可执行的合成环境中自博弈并适应任务分布 | 关注环境生成与可执行反馈如何共同支持训练；结果仍以论文实验为准 | arXiv v1：2026-08-20 01:58 +08:00 |\n| [Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication](https://arxiv.org/abs/2608.19161) | 研究多 Agent 潜在通信中的隐蔽协同行为检测 | 说明只审计自然语言 transcript 可能漏掉潜变量通道；威胁模型和检测效果以论文设定为限 | arXiv v1：2026-08-20 01:43 +08:00 |\n| [Grouping the Stochastic Machine](https://arxiv.org/abs/2608.19140) | 讨论用精度而非笼统能力衡量随机 AI 系统前沿 | 将评估重点放到可重复性、分组表现与系统精度；属于论文提出的评价框架 | arXiv v1：2026-08-20 01:29 +08:00 |\n| [SPK: Eliciting Structured Prior Knowledge](https://arxiv.org/abs/2608.19080) | 为实时目标检测引出结构化先验，以解释分布外判断 | 把先验结构与 OOD 检测关联，适合作为可解释推理组件观察；有效性以论文数据集为限 | arXiv v1：2026-08-20 00:30 +08:00 |\n\n## GitHub Trending\n\n07:51 的公开日榜中，AI / Agent 相关项目包括 [modular/modular](https://github.com/modular/modular)（340 stars today）、[mattpocock/skills](https://github.com/mattpocock/skills)（2,267）、[obra/superpowers](https://github.com/obra/superpowers)（749）、[cursor/plugins](https://github.com/cursor/plugins)（473）、[agent-substrate/substrate](https://github.com/agent-substrate/substrate)（66）、[volcengine/OpenViking](https://github.com/volcengine/OpenViking)（955）、[jundot/omlx](https://github.com/jundot/omlx)（350）和 [apache/maka](https://github.com/apache/maka)（364）。这些数字只代表抓取时公开榜单所显示的当日增长，不代表项目今日创建、质量已经独立验证或存在稳定采用。\n\n## HN 讨论\n\n| 讨论 | HN 时间与快照 | 证据解读 |\n|---|---|---|\n| [Huzzah：一种更直接的 AI 编程交互](https://news.ycombinator.com/item?id=49378768) | 2026-08-21 03:05 +08:00；193 points / 108 comments | 指向 [Huzzah 原文](https://www.danielvaughn.dev/posts/huzzah/)；作者主张用 live runtime 和结构化操作减少长篇自然语言指令，但页面只显示月份，故精确原文日期未确认 |\n| [TrueForge：开源 Agent harness](https://news.ycombinator.com/item?id=49378419) | 2026-08-21 02:36 +08:00；11 / 2 | 指向 [truefoundry/trueforge](https://github.com/truefoundry/trueforge)；仓库页将其描述为把 LLM 变成可运行 Agent 的 runtime layer，成熟度、许可证与创建时间本轮未获结构化核验 |\n| [Vomit：用另一模型清理模型输出](https://news.ycombinator.com/item?id=49375996) | 2026-08-20 23:26 +08:00；166 / 182 | 指向 [zachahn/vomit](https://github.com/zachahn/vomit)；高讨论度反映对模型输出冗余的争议，不等同项目方法有效或节省 token 已被独立验证 |\n| [Open Source Is Not a Virtue](https://news.ycombinator.com/item?id=49375568) | 2026-08-20 22:58 +08:00；4 / 0 | 讨论发生在窗口内，发布日期仍以 Mozilla.ai 原文元数据为准 |\n\n## 论文 / 研究\n\n- [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](https://arxiv.org/abs/2608.19147)（arXiv v1：2026-08-20 01:33 +08:00）研究预编译 OpenVINO 分片、推测解码与微批处理在多台 AI PC 上进行分布式 LLM 推理；性能结论以作者硬件和实验配置为限。\n- [Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery](https://arxiv.org/abs/2608.19047)（arXiv v1：2026-08-19 23:40 +08:00）提出按任务条件编排科学发现 Agent；只记录论文方法，不把 benchmark 外推为通用科研自治能力。\n- [Self-prompting and cross-model consensus enable reproducible data extraction](https://arxiv.org/abs/2608.19025)（arXiv v1：2026-08-19 23:20 +08:00）用自提示和跨模型共识抽取科学文献数据，重点是可复现性与一致性检查。\n\n## 旧文回流\n\n- [Training Thousands of LoRA Adapters at Once](https://osmosis.ai/blogs/training-thousands-of-lora-adapters-at-once) 原文发表于 2026-06-02，介绍在共享 base model 上批量训练多组 LoRA adapter；本轮由 [HN 讨论](https://news.ycombinator.com/item?id=49380737) 于 2026-08-21 05:49 +08:00 回流（1 point / 0 comments）。1,536 adapter 等数字为项目方压力测试，不作独立性能结论。\n- [Building safe MCP servers for your PostgreSQL database](http://blog.pamelafox.org/2026/08/building-safe-mcp-servers-for-your.html) 原文发表于 2026-08-12，本轮由 [HN 讨论](https://news.ycombinator.com/item?id=49380868) 于 2026-08-21 06:04 +08:00 回流（1 / 0）；文章用只读工具、参数化查询和授权边界解释数据库 MCP 的安全设计。\n\n## 日期未确认\n\n- [ONNX.css](https://onnx.css.evanking.io/)：HN 标题称其在 CSS 中运行神经网络推理；本环境访问原文返回 HTTP 403，仅保留 [HN 发现证据](https://news.ycombinator.com/item?id=49375033)（2026-08-20 22:26 +08:00，3 / 0），实现细节和发布日期均未核实。\n- [Autolith](https://www.lambda-symbolics.com/autolith)：HN 称其为带 live runtime 的 programming agent；原文返回 HTTP 403，仅保留 [HN 讨论](https://news.ycombinator.com/item?id=49376197)（2026-08-20 23:41 +08:00，20 / 0），不把标题描述写成已验证能力。\n\n## 观察池\n\n- [Internal Agents Map](https://github.com/steel-experiments/internal-agents-map)：窗口内 HN 提交指向企业内部 Agent 案例索引；仓库范围与条目质量未逐项核验，作为邻近资料保留。\n- [vLLM on Windows with ROCm for AMD RDNA2](https://github.com/sebastianmechno-sys/vllm-rocm-windows-rdna2)：项目页声称提供 RDNA2 Windows 原生运行路径；本轮无法取得结构化创建时间与独立性能验证，保留为兼容性信号。\n- [Molecule](https://github.com/molecule-dev/molecule)：项目方把它描述为 AI-first composable package ecosystem；目前 HN 快照仅 2 points / 1 comment，定位和成熟度待后续观察。\n\n## 来源链接\n\n以上表格与条目均直接链接原文、仓库、论文或相应 HN 讨论页；GitHub Trending 数字为 2026-08-21 07:51（Asia/Shanghai）的公开页面快照。\n\n## 采集状态\n\n- 已检查来源：HN front/newest 与 Algolia 七组关键词；GitHub Trending 全站、Python、TypeScript；GitHub 项目页；arXiv cs.AI/cs.CL/cs.LG/cs.SE；Hugging Face Blog / Papers；Simon Willison；相关工程博客原文。\n- 失败来源：Hugging Face Daily Papers RSS 返回 401；ONNX.css 与 Autolith 返回 403；部分新仓库结构化 API 元数据不可用；失败项均已说明证据限制。\n- 初始候选数量：497；最终保留来源：36 个唯一 URL。\n- 二次补搜：否（最终来源不为 0）。",
+  "content": "## 概览\n\n技术高亮窗口滚动至 2026-08-21 13:02:00，HN 讨论与旧文回流窗口滚动至 2026-08-21 13:02:00（Asia/Shanghai）。在 07:51 已完成的 HN 七组关键词 307 条、GitHub 三类日榜 45 行、arXiv 最新 100 条、Hugging Face Blog RSS 与 Simon Willison feed 基础上，本轮增量复核 HN newest/Algolia 123 条并刷新三类 GitHub 日榜；累计原始候选计数（含入口间重叠）为 665，最终保留 43 个唯一来源 URL。发布日期、HN 发现时间与 GitHub 榜单热度分别记录，不互相替代。\n\n## 已核实高亮\n\n| 项目 / 文章 | 是什么 | 为什么重要 | 日期 / 证据状态 |\n|---|---|---|---|\n| [Open Source Is Not a Virtue: It’s an Ownership Model](https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/) | Mozilla.ai 从所有权和可替换性讨论 AI 基础设施开源 | 把模型、编排层和数据路径的控制权分开分析；这是立场型工程文章，不把其“避免锁定”论断写成实证结论 | 页面结构化时间：2026-08-20 18:12 +08:00 |\n| [Browser automation with Pydantic AI + Playwright](http://blog.pamelafox.org/2026/08/browser-automation-with-pydantic-ai.html) | Pamela Fox 展示 Pydantic AI Harness 与 Playwright 的浏览器 Agent 组合 | 示例包含模型配置、浏览器工具接入和程序化导航，适合观察类型化 Agent 框架如何约束 browser-use 流程 | 原文日期：2026-08-20 |\n| [What Is a Harness?](https://earendil.com/posts/what-is-a-harness/) | EARENDIL 区分模型、Agent harness 与运行环境 | 文章把上下文管理、工具、循环、权限和状态归到 harness 层，有助于避免把系统能力全部归因于底层模型 | 页面时间：2026-08-20 |\n| [SPADE: Self-Play in Adaptive Synthetic Executable Environments](https://arxiv.org/abs/2608.19197) | 让 Agent 在可执行的合成环境中自博弈并适应任务分布 | 关注环境生成与可执行反馈如何共同支持训练；结果仍以论文实验为准 | arXiv v1：2026-08-20 01:58 +08:00 |\n| [Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication](https://arxiv.org/abs/2608.19161) | 研究多 Agent 潜在通信中的隐蔽协同行为检测 | 说明只审计自然语言 transcript 可能漏掉潜变量通道；威胁模型和检测效果以论文设定为限 | arXiv v1：2026-08-20 01:43 +08:00 |\n| [Grouping the Stochastic Machine](https://arxiv.org/abs/2608.19140) | 讨论用精度而非笼统能力衡量随机 AI 系统前沿 | 将评估重点放到可重复性、分组表现与系统精度；属于论文提出的评价框架 | arXiv v1：2026-08-20 01:29 +08:00 |\n| [SPK: Eliciting Structured Prior Knowledge](https://arxiv.org/abs/2608.19080) | 为实时目标检测引出结构化先验，以解释分布外判断 | 把先验结构与 OOD 检测关联，适合作为可解释推理组件观察；有效性以论文数据集为限 | arXiv v1：2026-08-20 00:30 +08:00 |\n\n| [Gisting: Compressing LLM Agent context](https://shopify.engineering/gisting) | Shopify 将长系统提示蒸馏成一组可学习 gist token | 文章给出训练、部署及与 prefix caching 的关系；延迟、吞吐和 GPU 节省数字均为 Shopify 自有负载测试，不外推为通用结论 | 原文日期：2026-08-19 |\n| [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 开源的插件化 Agent harness | README 明确标为 developer preview，并警告可能有破坏性兼容变更；仓库为 MIT 许可证 | GitHub 创建：2026-08-13；本轮 HN 发现：2026-08-21 |\n| [alibaba/anolisa](https://github.com/alibaba/anolisa) | 面向 Agent 工作负载的运行层，覆盖终端入口、上下文效率、运行时与安全组件 | README 可核验其组件边界和 Apache-2.0 许可证；token 节省等效果仍是项目方描述 | GitHub 创建：2026-03-30；本轮 HN 发现：2026-08-21 |\n\n## GitHub Trending\n\n07:51 的公开日榜中，AI / Agent 相关项目包括 [modular/modular](https://github.com/modular/modular)（340 stars today）、[mattpocock/skills](https://github.com/mattpocock/skills)（2,267）、[obra/superpowers](https://github.com/obra/superpowers)（749）、[cursor/plugins](https://github.com/cursor/plugins)（473）、[agent-substrate/substrate](https://github.com/agent-substrate/substrate)（66）、[volcengine/OpenViking](https://github.com/volcengine/OpenViking)（955）、[jundot/omlx](https://github.com/jundot/omlx)（350）和 [apache/maka](https://github.com/apache/maka)（364）。这些数字只代表抓取时公开榜单所显示的当日增长，不代表项目今日创建、质量已经独立验证或存在稳定采用。\n\n13:02 刷新时，[akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory) 进入全站日榜（332 stars today）；仓库将其定位为编码 Agent CLI 的长期记忆和跨供应商交接工具，MIT 许可证。榜单数值仍只作 13:02 快照。\n\n## HN 讨论\n\n| 讨论 | HN 时间与快照 | 证据解读 |\n|---|---|---|\n| [Huzzah：一种更直接的 AI 编程交互](https://news.ycombinator.com/item?id=49378768) | 2026-08-21 03:05 +08:00；193 points / 108 comments | 指向 [Huzzah 原文](https://www.danielvaughn.dev/posts/huzzah/)；作者主张用 live runtime 和结构化操作减少长篇自然语言指令，但页面只显示月份，故精确原文日期未确认 |\n| [TrueForge：开源 Agent harness](https://news.ycombinator.com/item?id=49378419) | 2026-08-21 02:36 +08:00；11 / 2 | 指向 [truefoundry/trueforge](https://github.com/truefoundry/trueforge)；仓库页将其描述为把 LLM 变成可运行 Agent 的 runtime layer，成熟度、许可证与创建时间本轮未获结构化核验 |\n| [Vomit：用另一模型清理模型输出](https://news.ycombinator.com/item?id=49375996) | 2026-08-20 23:26 +08:00；166 / 182 | 指向 [zachahn/vomit](https://github.com/zachahn/vomit)；高讨论度反映对模型输出冗余的争议，不等同项目方法有效或节省 token 已被独立验证 |\n| [Open Source Is Not a Virtue](https://news.ycombinator.com/item?id=49375568) | 2026-08-20 22:58 +08:00；4 / 0 | 讨论发生在窗口内，发布日期仍以 Mozilla.ai 原文元数据为准 |\n\n| [Gisting：压缩 LLM Agent 上下文](https://news.ycombinator.com/item?id=49382646) | 2026-08-21 09:42 +08:00；2 / 0 | 指向 Shopify 工程原文；互动量较低，但原文日期和技术细节可独立核验 |\n| [DeepSeek Harness](https://news.ycombinator.com/item?id=49382410) | 2026-08-21 09:06 +08:00；3 / 1 | 讨论指向官方仓库；README 明确项目仍处 developer preview |\n| [ANOLISA](https://news.ycombinator.com/item?id=49383466) | 2026-08-21 11:36 +08:00；4 / 0 | 讨论指向阿里官方仓库；组件边界与许可证已按仓库核验 |\n\n## 论文 / 研究\n\n- [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](https://arxiv.org/abs/2608.19147)（arXiv v1：2026-08-20 01:33 +08:00）研究预编译 OpenVINO 分片、推测解码与微批处理在多台 AI PC 上进行分布式 LLM 推理；性能结论以作者硬件和实验配置为限。\n- [Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery](https://arxiv.org/abs/2608.19047)（arXiv v1：2026-08-19 23:40 +08:00）提出按任务条件编排科学发现 Agent；只记录论文方法，不把 benchmark 外推为通用科研自治能力。\n- [Self-prompting and cross-model consensus enable reproducible data extraction](https://arxiv.org/abs/2608.19025)（arXiv v1：2026-08-19 23:20 +08:00）用自提示和跨模型共识抽取科学文献数据，重点是可复现性与一致性检查。\n\n## 旧文回流\n\n- [Training Thousands of LoRA Adapters at Once](https://osmosis.ai/blogs/training-thousands-of-lora-adapters-at-once) 原文发表于 2026-06-02，介绍在共享 base model 上批量训练多组 LoRA adapter；本轮由 [HN 讨论](https://news.ycombinator.com/item?id=49380737) 于 2026-08-21 05:49 +08:00 回流（1 point / 0 comments）。1,536 adapter 等数字为项目方压力测试，不作独立性能结论。\n- [Building safe MCP servers for your PostgreSQL database](http://blog.pamelafox.org/2026/08/building-safe-mcp-servers-for-your.html) 原文发表于 2026-08-12，本轮由 [HN 讨论](https://news.ycombinator.com/item?id=49380868) 于 2026-08-21 06:04 +08:00 回流（1 / 0）；文章用只读工具、参数化查询和授权边界解释数据库 MCP 的安全设计。\n\n## 日期未确认\n\n- [ONNX.css](https://onnx.css.evanking.io/)：HN 标题称其在 CSS 中运行神经网络推理；本环境访问原文返回 HTTP 403，仅保留 [HN 发现证据](https://news.ycombinator.com/item?id=49375033)（2026-08-20 22:26 +08:00，3 / 0），实现细节和发布日期均未核实。\n- [Autolith](https://www.lambda-symbolics.com/autolith)：HN 称其为带 live runtime 的 programming agent；原文返回 HTTP 403，仅保留 [HN 讨论](https://news.ycombinator.com/item?id=49376197)（2026-08-20 23:41 +08:00，20 / 0），不把标题描述写成已验证能力。\n\n## 观察池\n\n- [Internal Agents Map](https://github.com/steel-experiments/internal-agents-map)：窗口内 HN 提交指向企业内部 Agent 案例索引；仓库范围与条目质量未逐项核验，作为邻近资料保留。\n- [vLLM on Windows with ROCm for AMD RDNA2](https://github.com/sebastianmechno-sys/vllm-rocm-windows-rdna2)：项目页声称提供 RDNA2 Windows 原生运行路径；本轮无法取得结构化创建时间与独立性能验证，保留为兼容性信号。\n- [Molecule](https://github.com/molecule-dev/molecule)：项目方把它描述为 AI-first composable package ecosystem；目前 HN 快照仅 2 points / 1 comment，定位和成熟度待后续观察。\n- The Sloppiest Thing About AI：13:02 增量 HN 提交指向该文，但原文在本环境返回 HTTP 403，日期和论证均未核实，暂不加入来源清单。\n\n## 来源链接\n\n以上表格与条目均直接链接原文、仓库、论文或相应 HN 讨论页；GitHub Trending 数字分别标注为 2026-08-21 07:51 或 13:02（Asia/Shanghai）的公开页面快照。\n\n## 采集状态\n\n- 已检查来源：HN front/newest 与 Algolia 七组关键词，并在 13:02 增量检查 07:51–13:02 的 123 条 newest；GitHub Trending 全站、Python、TypeScript 两次快照；GitHub 项目页；arXiv cs.AI/cs.CL/cs.LG/cs.SE；Hugging Face Blog / Papers；Simon Willison；Shopify Engineering、DeepSeek、ANOLISA 等工程原文。\n- 失败来源：Hugging Face Daily Papers RSS 返回 401；ONNX.css、Autolith 与 The Sloppiest Thing About AI 返回 403；部分新仓库结构化 API 元数据不可用；失败项均已说明证据限制。\n- 累计候选数量：665；最终保留来源：43 个唯一 URL。\n- 二次补搜：否（最终来源不为 0）。",
   "sources": [
-    {"title":"Open Source Is Not a Virtue: It’s an Ownership Model","url":"https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/","source":"Mozilla.ai","publishedAt":"2026-08-20 18:12 +08:00","summary":"从所有权与可替换性讨论 AI 基础设施开源。","tags":["Open Source","AI Infrastructure"]},
-    {"title":"Browser automation with Pydantic AI + Playwright","url":"http://blog.pamelafox.org/2026/08/browser-automation-with-pydantic-ai.html","source":"Pamela Fox","publishedAt":"2026-08-20","summary":"展示 Pydantic AI Harness 与 Playwright 的浏览器 Agent 组合。","tags":["Agent","Browser Automation"]},
-    {"title":"What Is a Harness?","url":"https://earendil.com/posts/what-is-a-harness/","source":"EARENDIL","publishedAt":"2026-08-20","summary":"区分模型、Agent harness 与运行环境。","tags":["Agent Harness","Engineering"]},
-    {"title":"SPADE: Self-Play in Adaptive Synthetic Executable Environments","url":"https://arxiv.org/abs/2608.19197","source":"arXiv","publishedAt":"2026-08-20 01:58 +08:00","summary":"研究 Agent 在可执行合成环境中的自博弈与适应。","tags":["Agent","Research"]},
-    {"title":"Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication","url":"https://arxiv.org/abs/2608.19161","source":"arXiv","publishedAt":"2026-08-20 01:43 +08:00","summary":"研究多 Agent 潜在通信中的隐蔽协调检测。","tags":["Multi-Agent","Safety","Research"]},
-    {"title":"Grouping the Stochastic Machine","url":"https://arxiv.org/abs/2608.19140","source":"arXiv","publishedAt":"2026-08-20 01:29 +08:00","summary":"提出以精度和可重复性刻画随机 AI 系统。","tags":["Evaluation","Research"]},
-    {"title":"SPK: Eliciting Structured Prior Knowledge","url":"https://arxiv.org/abs/2608.19080","source":"arXiv","publishedAt":"2026-08-20 00:30 +08:00","summary":"以结构化先验支持可解释的分布外检测。","tags":["OOD","Interpretability","Research"]},
-    {"title":"modular/modular","url":"https://github.com/modular/modular","source":"GitHub Trending","publishedAt":"","summary":"Modular 平台项目；07:51 日榜显示 340 stars today。","tags":["Trending","AI Infrastructure"]},
-    {"title":"mattpocock/skills","url":"https://github.com/mattpocock/skills","source":"GitHub Trending","publishedAt":"","summary":"工程 Agent skills 集合；07:51 日榜显示 2,267 stars today。","tags":["Trending","Agent Skills"]},
-    {"title":"obra/superpowers","url":"https://github.com/obra/superpowers","source":"GitHub Trending","publishedAt":"","summary":"Agent skills 框架；07:51 日榜显示 749 stars today。","tags":["Trending","Agent Skills"]},
-    {"title":"cursor/plugins","url":"https://github.com/cursor/plugins","source":"GitHub Trending","publishedAt":"","summary":"Cursor plugin 规范与官方插件；07:51 日榜显示 473 stars today。","tags":["Trending","Developer Tools"]},
-    {"title":"agent-substrate/substrate","url":"https://github.com/agent-substrate/substrate","source":"GitHub Trending","publishedAt":"","summary":"Agent substrate 项目；07:51 日榜显示 66 stars today。","tags":["Trending","Agent"]},
-    {"title":"volcengine/OpenViking","url":"https://github.com/volcengine/OpenViking","source":"GitHub Trending","publishedAt":"","summary":"面向 Agent memory、RAG 与 skills 的上下文数据库；07:51 日榜显示 955。","tags":["Trending","Agent Memory","RAG"]},
-    {"title":"jundot/omlx","url":"https://github.com/jundot/omlx","source":"GitHub Trending","publishedAt":"","summary":"Apple Silicon LLM inference server；07:51 Python 日榜显示 350。","tags":["Trending","LLM Inference"]},
-    {"title":"apache/maka","url":"https://github.com/apache/maka","source":"GitHub Trending","publishedAt":"","summary":"记录 Agent 事件的本地优先工作区；07:51 TypeScript 日榜显示 364。","tags":["Trending","Agent Workspace"]},
-    {"title":"HN: Huzzah","url":"https://news.ycombinator.com/item?id=49378768","source":"Hacker News","publishedAt":"2026-08-21 03:05 +08:00","summary":"Huzzah 的窗口内 HN 讨论，07:51 快照 193 points / 108 comments。","tags":["HN","Coding Agent"]},
-    {"title":"Huzzah","url":"https://www.danielvaughn.dev/posts/huzzah/","source":"Daniel Vaughn","publishedAt":"","summary":"提出一种减少长篇自然语言指令的 AI 编程交互；页面只显示 2026 年 8 月。","tags":["Coding Agent","Date Unverified"]},
-    {"title":"HN: TrueForge","url":"https://news.ycombinator.com/item?id=49378419","source":"Hacker News","publishedAt":"2026-08-21 02:36 +08:00","summary":"TrueForge 的窗口内 HN 讨论，07:51 快照 11 / 2。","tags":["HN","Agent Harness"]},
-    {"title":"truefoundry/trueforge","url":"https://github.com/truefoundry/trueforge","source":"GitHub","publishedAt":"","summary":"项目方描述为把 LLM 变成可运行 Agent 的开源 runtime layer。","tags":["Agent Harness","Date Unverified"]},
-    {"title":"HN: Vomit","url":"https://news.ycombinator.com/item?id=49375996","source":"Hacker News","publishedAt":"2026-08-20 23:26 +08:00","summary":"Vomit 的窗口内 HN 讨论，07:51 快照 166 / 182。","tags":["HN","LLM"]},
-    {"title":"zachahn/vomit","url":"https://github.com/zachahn/vomit","source":"GitHub","publishedAt":"","summary":"用另一模型整理模型输出的实验项目；效果未独立验证。","tags":["LLM","Watchlist"]},
-    {"title":"HN: Open Source Is Not a Virtue","url":"https://news.ycombinator.com/item?id=49375568","source":"Hacker News","publishedAt":"2026-08-20 22:58 +08:00","summary":"Mozilla.ai 文章的窗口内 HN 讨论，07:51 快照 4 / 0。","tags":["HN","Open Source"]},
-    {"title":"Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets","url":"https://arxiv.org/abs/2608.19147","source":"arXiv","publishedAt":"2026-08-20 01:33 +08:00","summary":"研究多台 AI PC 上的预编译分片与分布式 LLM 推理。","tags":["LLM","Inference","Research"]},
-    {"title":"Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery","url":"https://arxiv.org/abs/2608.19047","source":"arXiv","publishedAt":"2026-08-19 23:40 +08:00","summary":"提出按任务条件编排科学发现 Meta-Agent。","tags":["Agent","Science","Research"]},
-    {"title":"Self-prompting and cross-model consensus enable reproducible data extraction","url":"https://arxiv.org/abs/2608.19025","source":"arXiv","publishedAt":"2026-08-19 23:20 +08:00","summary":"以自提示和跨模型共识提升科学文献数据抽取的可复现性。","tags":["LLM","Data Extraction","Research"]},
-    {"title":"Training Thousands of LoRA Adapters at Once","url":"https://osmosis.ai/blogs/training-thousands-of-lora-adapters-at-once","source":"Osmosis","publishedAt":"2026-06-02","summary":"共享 base model 批量训练多组 LoRA adapter 的项目方工程文章。","tags":["LoRA","Training","Resurfaced"]},
-    {"title":"HN: Training Thousands of LoRA Adapters at Once","url":"https://news.ycombinator.com/item?id=49380737","source":"Hacker News","publishedAt":"2026-08-21 05:49 +08:00","summary":"6 月 LoRA 工程文章的窗口内回流证据，07:51 快照 1 / 0。","tags":["HN","LoRA","Resurfaced"]},
-    {"title":"Building safe MCP servers for your PostgreSQL database","url":"http://blog.pamelafox.org/2026/08/building-safe-mcp-servers-for-your.html","source":"Pamela Fox","publishedAt":"2026-08-12","summary":"以只读工具、参数化查询和权限边界讲解数据库 MCP 安全。","tags":["MCP","Security","Resurfaced"]},
-    {"title":"HN: Building safe MCP servers for PostgreSQL","url":"https://news.ycombinator.com/item?id=49380868","source":"Hacker News","publishedAt":"2026-08-21 06:04 +08:00","summary":"8 月 12 日 MCP 工程文章的窗口内回流证据，07:51 快照 1 / 0。","tags":["HN","MCP","Resurfaced"]},
-    {"title":"ONNX.css","url":"https://onnx.css.evanking.io/","source":"ONNX.css","publishedAt":"","summary":"HN 标题称在 CSS 中运行神经网络推理；原文 403，日期和实现未核实。","tags":["Inference","Date Unverified"]},
-    {"title":"HN: ONNX.css","url":"https://news.ycombinator.com/item?id=49375033","source":"Hacker News","publishedAt":"2026-08-20 22:26 +08:00","summary":"ONNX.css 的窗口内 HN 发现证据，07:51 快照 3 / 0。","tags":["HN","Inference"]},
-    {"title":"Autolith","url":"https://www.lambda-symbolics.com/autolith","source":"Lambda Symbolics","publishedAt":"","summary":"HN 称其为带 live runtime 的 programming agent；原文 403，日期和能力未核实。","tags":["Coding Agent","Date Unverified"]},
-    {"title":"HN: Autolith","url":"https://news.ycombinator.com/item?id=49376197","source":"Hacker News","publishedAt":"2026-08-20 23:41 +08:00","summary":"Autolith 的窗口内 HN 讨论，07:51 快照 20 / 0。","tags":["HN","Coding Agent"]},
-    {"title":"Internal Agents Map","url":"https://github.com/steel-experiments/internal-agents-map","source":"GitHub","publishedAt":"","summary":"企业内部 Agent 案例索引；范围与条目质量未逐项核验。","tags":["Agent","Watchlist"]},
-    {"title":"vLLM on Windows with ROCm for AMD RDNA2","url":"https://github.com/sebastianmechno-sys/vllm-rocm-windows-rdna2","source":"GitHub","publishedAt":"","summary":"项目方声称提供 RDNA2 Windows 原生 vLLM 路径，待结构化元数据与独立验证。","tags":["LLM Inference","ROCm","Watchlist"]},
-    {"title":"Molecule","url":"https://github.com/molecule-dev/molecule","source":"GitHub","publishedAt":"","summary":"AI-first composable package ecosystem 的早期项目方定位，成熟度待观察。","tags":["Developer Tools","Watchlist"]}
+    {
+      "title": "Open Source Is Not a Virtue: It’s an Ownership Model",
+      "url": "https://blog.mozilla.ai/open-source-is-not-a-virtue-its-an-ownership-model/",
+      "source": "Mozilla.ai",
+      "publishedAt": "2026-08-20 18:12 +08:00",
+      "summary": "从所有权与可替换性讨论 AI 基础设施开源。",
+      "tags": [
+        "Open Source",
+        "AI Infrastructure"
+      ]
+    },
+    {
+      "title": "Browser automation with Pydantic AI + Playwright",
+      "url": "http://blog.pamelafox.org/2026/08/browser-automation-with-pydantic-ai.html",
+      "source": "Pamela Fox",
+      "publishedAt": "2026-08-20",
+      "summary": "展示 Pydantic AI Harness 与 Playwright 的浏览器 Agent 组合。",
+      "tags": [
+        "Agent",
+        "Browser Automation"
+      ]
+    },
+    {
+      "title": "What Is a Harness?",
+      "url": "https://earendil.com/posts/what-is-a-harness/",
+      "source": "EARENDIL",
+      "publishedAt": "2026-08-20",
+      "summary": "区分模型、Agent harness 与运行环境。",
+      "tags": [
+        "Agent Harness",
+        "Engineering"
+      ]
+    },
+    {
+      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+      "url": "https://arxiv.org/abs/2608.19197",
+      "source": "arXiv",
+      "publishedAt": "2026-08-20 01:58 +08:00",
+      "summary": "研究 Agent 在可执行合成环境中的自博弈与适应。",
+      "tags": [
+        "Agent",
+        "Research"
+      ]
+    },
+    {
+      "title": "Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication",
+      "url": "https://arxiv.org/abs/2608.19161",
+      "source": "arXiv",
+      "publishedAt": "2026-08-20 01:43 +08:00",
+      "summary": "研究多 Agent 潜在通信中的隐蔽协调检测。",
+      "tags": [
+        "Multi-Agent",
+        "Safety",
+        "Research"
+      ]
+    },
+    {
+      "title": "Grouping the Stochastic Machine",
+      "url": "https://arxiv.org/abs/2608.19140",
+      "source": "arXiv",
+      "publishedAt": "2026-08-20 01:29 +08:00",
+      "summary": "提出以精度和可重复性刻画随机 AI 系统。",
+      "tags": [
+        "Evaluation",
+        "Research"
+      ]
+    },
+    {
+      "title": "SPK: Eliciting Structured Prior Knowledge",
+      "url": "https://arxiv.org/abs/2608.19080",
+      "source": "arXiv",
+      "publishedAt": "2026-08-20 00:30 +08:00",
+      "summary": "以结构化先验支持可解释的分布外检测。",
+      "tags": [
+        "OOD",
+        "Interpretability",
+        "Research"
+      ]
+    },
+    {
+      "title": "modular/modular",
+      "url": "https://github.com/modular/modular",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "Modular 平台项目；07:51 日榜显示 340 stars today。",
+      "tags": [
+        "Trending",
+        "AI Infrastructure"
+      ]
+    },
+    {
+      "title": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "工程 Agent skills 集合；07:51 日榜显示 2,267 stars today。",
+      "tags": [
+        "Trending",
+        "Agent Skills"
+      ]
+    },
+    {
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "Agent skills 框架；07:51 日榜显示 749 stars today。",
+      "tags": [
+        "Trending",
+        "Agent Skills"
+      ]
+    },
+    {
+      "title": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "Cursor plugin 规范与官方插件；07:51 日榜显示 473 stars today。",
+      "tags": [
+        "Trending",
+        "Developer Tools"
+      ]
+    },
+    {
+      "title": "agent-substrate/substrate",
+      "url": "https://github.com/agent-substrate/substrate",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "Agent substrate 项目；07:51 日榜显示 66 stars today。",
+      "tags": [
+        "Trending",
+        "Agent"
+      ]
+    },
+    {
+      "title": "volcengine/OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "面向 Agent memory、RAG 与 skills 的上下文数据库；07:51 日榜显示 955。",
+      "tags": [
+        "Trending",
+        "Agent Memory",
+        "RAG"
+      ]
+    },
+    {
+      "title": "jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "Apple Silicon LLM inference server；07:51 Python 日榜显示 350。",
+      "tags": [
+        "Trending",
+        "LLM Inference"
+      ]
+    },
+    {
+      "title": "apache/maka",
+      "url": "https://github.com/apache/maka",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "记录 Agent 事件的本地优先工作区；07:51 TypeScript 日榜显示 364。",
+      "tags": [
+        "Trending",
+        "Agent Workspace"
+      ]
+    },
+    {
+      "title": "HN: Huzzah",
+      "url": "https://news.ycombinator.com/item?id=49378768",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 03:05 +08:00",
+      "summary": "Huzzah 的窗口内 HN 讨论，07:51 快照 193 points / 108 comments。",
+      "tags": [
+        "HN",
+        "Coding Agent"
+      ]
+    },
+    {
+      "title": "Huzzah",
+      "url": "https://www.danielvaughn.dev/posts/huzzah/",
+      "source": "Daniel Vaughn",
+      "publishedAt": "",
+      "summary": "提出一种减少长篇自然语言指令的 AI 编程交互；页面只显示 2026 年 8 月。",
+      "tags": [
+        "Coding Agent",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "HN: TrueForge",
+      "url": "https://news.ycombinator.com/item?id=49378419",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 02:36 +08:00",
+      "summary": "TrueForge 的窗口内 HN 讨论，07:51 快照 11 / 2。",
+      "tags": [
+        "HN",
+        "Agent Harness"
+      ]
+    },
+    {
+      "title": "truefoundry/trueforge",
+      "url": "https://github.com/truefoundry/trueforge",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "项目方描述为把 LLM 变成可运行 Agent 的开源 runtime layer。",
+      "tags": [
+        "Agent Harness",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "HN: Vomit",
+      "url": "https://news.ycombinator.com/item?id=49375996",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 23:26 +08:00",
+      "summary": "Vomit 的窗口内 HN 讨论，07:51 快照 166 / 182。",
+      "tags": [
+        "HN",
+        "LLM"
+      ]
+    },
+    {
+      "title": "zachahn/vomit",
+      "url": "https://github.com/zachahn/vomit",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "用另一模型整理模型输出的实验项目；效果未独立验证。",
+      "tags": [
+        "LLM",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "HN: Open Source Is Not a Virtue",
+      "url": "https://news.ycombinator.com/item?id=49375568",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 22:58 +08:00",
+      "summary": "Mozilla.ai 文章的窗口内 HN 讨论，07:51 快照 4 / 0。",
+      "tags": [
+        "HN",
+        "Open Source"
+      ]
+    },
+    {
+      "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+      "url": "https://arxiv.org/abs/2608.19147",
+      "source": "arXiv",
+      "publishedAt": "2026-08-20 01:33 +08:00",
+      "summary": "研究多台 AI PC 上的预编译分片与分布式 LLM 推理。",
+      "tags": [
+        "LLM",
+        "Inference",
+        "Research"
+      ]
+    },
+    {
+      "title": "Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery",
+      "url": "https://arxiv.org/abs/2608.19047",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 23:40 +08:00",
+      "summary": "提出按任务条件编排科学发现 Meta-Agent。",
+      "tags": [
+        "Agent",
+        "Science",
+        "Research"
+      ]
+    },
+    {
+      "title": "Self-prompting and cross-model consensus enable reproducible data extraction",
+      "url": "https://arxiv.org/abs/2608.19025",
+      "source": "arXiv",
+      "publishedAt": "2026-08-19 23:20 +08:00",
+      "summary": "以自提示和跨模型共识提升科学文献数据抽取的可复现性。",
+      "tags": [
+        "LLM",
+        "Data Extraction",
+        "Research"
+      ]
+    },
+    {
+      "title": "Training Thousands of LoRA Adapters at Once",
+      "url": "https://osmosis.ai/blogs/training-thousands-of-lora-adapters-at-once",
+      "source": "Osmosis",
+      "publishedAt": "2026-06-02",
+      "summary": "共享 base model 批量训练多组 LoRA adapter 的项目方工程文章。",
+      "tags": [
+        "LoRA",
+        "Training",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "HN: Training Thousands of LoRA Adapters at Once",
+      "url": "https://news.ycombinator.com/item?id=49380737",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 05:49 +08:00",
+      "summary": "6 月 LoRA 工程文章的窗口内回流证据，07:51 快照 1 / 0。",
+      "tags": [
+        "HN",
+        "LoRA",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "Building safe MCP servers for your PostgreSQL database",
+      "url": "http://blog.pamelafox.org/2026/08/building-safe-mcp-servers-for-your.html",
+      "source": "Pamela Fox",
+      "publishedAt": "2026-08-12",
+      "summary": "以只读工具、参数化查询和权限边界讲解数据库 MCP 安全。",
+      "tags": [
+        "MCP",
+        "Security",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "HN: Building safe MCP servers for PostgreSQL",
+      "url": "https://news.ycombinator.com/item?id=49380868",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 06:04 +08:00",
+      "summary": "8 月 12 日 MCP 工程文章的窗口内回流证据，07:51 快照 1 / 0。",
+      "tags": [
+        "HN",
+        "MCP",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "ONNX.css",
+      "url": "https://onnx.css.evanking.io/",
+      "source": "ONNX.css",
+      "publishedAt": "",
+      "summary": "HN 标题称在 CSS 中运行神经网络推理；原文 403，日期和实现未核实。",
+      "tags": [
+        "Inference",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "HN: ONNX.css",
+      "url": "https://news.ycombinator.com/item?id=49375033",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 22:26 +08:00",
+      "summary": "ONNX.css 的窗口内 HN 发现证据，07:51 快照 3 / 0。",
+      "tags": [
+        "HN",
+        "Inference"
+      ]
+    },
+    {
+      "title": "Autolith",
+      "url": "https://www.lambda-symbolics.com/autolith",
+      "source": "Lambda Symbolics",
+      "publishedAt": "",
+      "summary": "HN 称其为带 live runtime 的 programming agent；原文 403，日期和能力未核实。",
+      "tags": [
+        "Coding Agent",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "HN: Autolith",
+      "url": "https://news.ycombinator.com/item?id=49376197",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-20 23:41 +08:00",
+      "summary": "Autolith 的窗口内 HN 讨论，07:51 快照 20 / 0。",
+      "tags": [
+        "HN",
+        "Coding Agent"
+      ]
+    },
+    {
+      "title": "Internal Agents Map",
+      "url": "https://github.com/steel-experiments/internal-agents-map",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "企业内部 Agent 案例索引；范围与条目质量未逐项核验。",
+      "tags": [
+        "Agent",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "vLLM on Windows with ROCm for AMD RDNA2",
+      "url": "https://github.com/sebastianmechno-sys/vllm-rocm-windows-rdna2",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "项目方声称提供 RDNA2 Windows 原生 vLLM 路径，待结构化元数据与独立验证。",
+      "tags": [
+        "LLM Inference",
+        "ROCm",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Molecule",
+      "url": "https://github.com/molecule-dev/molecule",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "AI-first composable package ecosystem 的早期项目方定位，成熟度待观察。",
+      "tags": [
+        "Developer Tools",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost",
+      "url": "https://shopify.engineering/gisting",
+      "source": "Shopify Engineering",
+      "publishedAt": "2026-08-19",
+      "summary": "将长系统提示蒸馏成可学习 gist token；性能数字为 Shopify 自有负载测试。",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Inference"
+      ]
+    },
+    {
+      "title": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "source": "GitHub",
+      "publishedAt": "2026-08-13",
+      "summary": "DeepSeek 的插件化开源 Agent harness，当前为 developer preview，MIT 许可证。",
+      "tags": [
+        "Agent Harness",
+        "Open Source"
+      ]
+    },
+    {
+      "title": "alibaba/anolisa",
+      "url": "https://github.com/alibaba/anolisa",
+      "source": "GitHub",
+      "publishedAt": "2026-03-30",
+      "summary": "面向 Agent 工作负载的运行层，覆盖终端、上下文效率、运行时和安全组件。",
+      "tags": [
+        "Agent Runtime",
+        "Open Source"
+      ]
+    },
+    {
+      "title": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "编码 Agent CLI 长期记忆和跨供应商交接工具；13:02 日榜显示 332 stars today。",
+      "tags": [
+        "Trending",
+        "Agent Memory"
+      ]
+    },
+    {
+      "title": "HN: Gisting",
+      "url": "https://news.ycombinator.com/item?id=49382646",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 09:42 +08:00",
+      "summary": "Shopify Gisting 的窗口内 HN 发现证据，13:02 快照 2 / 0。",
+      "tags": [
+        "HN",
+        "LLM"
+      ]
+    },
+    {
+      "title": "HN: DeepSeek Harness",
+      "url": "https://news.ycombinator.com/item?id=49382410",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 09:06 +08:00",
+      "summary": "DeepSeek Harness 的窗口内 HN 讨论，13:02 快照 3 / 1。",
+      "tags": [
+        "HN",
+        "Agent Harness"
+      ]
+    },
+    {
+      "title": "HN: ANOLISA",
+      "url": "https://news.ycombinator.com/item?id=49383466",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 11:36 +08:00",
+      "summary": "ANOLISA 的窗口内 HN 发现证据，13:02 快照 4 / 0。",
+      "tags": [
+        "HN",
+        "Agent Runtime"
+      ]
+    }
   ]
 }

@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-21T00:00:00+08:00"
-updatedAt: "2026-08-21T07:51:03+08:00"
+updatedAt: "2026-08-21T13:02:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -12,6 +12,7 @@ tags:
   - "观察池"
   - "Agent"
   - "Agent SDK"
+  - "Agent View"
   - "Agents"
   - "Anthropic"
   - "Chrome"
@@ -22,6 +23,7 @@ tags:
   - "Claude Desktop"
   - "CLI"
   - "Connectors"
+  - "Cost"
   - "Cowork"
   - "Desktop"
   - "Docs"
@@ -29,13 +31,17 @@ tags:
   - "GitHub Actions"
   - "Google"
   - "Managed Agents"
+  - "Prompt Cache"
   - "Python"
   - "Rate Limit"
+  - "Regression"
   - "Scheduled Tasks"
   - "Sessions"
   - "Skills"
   - "Status"
   - "TypeScript"
+  - "UI"
+  - "VS Code"
   - "Windows"
 ---
 
@@ -48,9 +54,9 @@ tags:
 | 产品 | 状态 |
 |---|---|
 | Claude Code CLI | v2.1.238 于 04:33 发布；除新设置与 runner 能力外，官方说明还称已释放离开近期显示窗口的 subagent tool results，以修复长交互会话内存无界增长，并把自动更新检查延后到启动约 10 秒后。 |
-| VS Code 集成 | 无独立官方版本；本轮未把低证据个案升级为产品结论。 |
+| VS Code 集成 | 无独立官方版本；[v2.1.238 中 `/compact` 无效](https://github.com/anthropics/claude-code/issues/88446)被标记为 regression，但目前只是 Linux 单用户报告。 |
 | JetBrains 集成 | 无新增。 |
-| Managed Agents：sessions | v2.1.238 修复 Remote Control 中途消息从 transcript 消失、短暂登录续期失败导致断开、跨会话拒收或丢队列却静默成功，以及 ListAgents/SendMessage 暴露预热 worker 等问题。 |
+| Managed Agents：sessions | v2.1.238 修复 Remote Control 中途消息从 transcript 消失、短暂登录续期失败导致断开、跨会话拒收或丢队列却静默成功，以及 ListAgents/SendMessage 暴露预热 worker 等问题；[恢复 fork 后 prompt cache 丢失](https://github.com/anthropics/claude-code/issues/88444)与 [FleetView 归档列表不渲染](https://github.com/anthropics/claude-code/issues/88447)是增量观察项。 |
 | Managed Agents：webhooks | 无新增。 |
 | Managed Agents：environments | v2.1.238 新增 self-hosted runner 的延迟关停上限与逐连接代理鉴权命令/文件；慢轮询不再轻易导致健康 runner 被移除。 |
 | Managed Agents：memory stores | v2.1.238 更新内置 `claude-api` skill，以覆盖 8 月 19 日 Managed Agents 发布中的 self-hosted sandbox memory stores；本轮没有独立 memory store 版本。 |
@@ -98,10 +104,13 @@ tags:
 - [Desktop 的 GitHub GraphQL 请求消耗异常](https://github.com/anthropics/claude-code/issues/88320)：带 has repro 的单用户报告给出其环境中的请求点数；尚无维护方结论，量化值不外推。
 - [跨会话消息在忙碌会话中被丢弃](https://github.com/anthropics/claude-code/issues/88357)：用户报告已关闭，但 v2.1.238 发布说明确认补上拒收/队列丢弃反馈，说明这一类静默失败获得了对应产品修复。
 - [原生 scheduled task 在外部重启后立即补跑](https://github.com/anthropics/claude-code/issues/88408)：带 has repro 的 Windows 单用户报告称恢复时忽略配置 cadence；尚无官方修复确认。
+- [恢复 fork 后 prompt cache 丢失](https://github.com/anthropics/claude-code/issues/88444)：带 has repro 的用户报告给出多组请求级缓存读写数据，称工具循环后的下一次唤醒可能重写大量上下文；数字仅代表报告者环境，机制与影响范围尚无维护方确认。
+- [VS Code v2.1.238 中 `/compact` 无效](https://github.com/anthropics/claude-code/issues/88446)：Linux 单用户报告称升级后命令会被忽略或当成普通消息，仓库已标记 regression，但尚无复现标签或官方修复。
+- [FleetView 归档列表不渲染](https://github.com/anthropics/claude-code/issues/88447)：带 has repro 的单用户报告称后端仍返回已归档会话，而侧栏显示空列表；尚无维护方结论。
 
 ## 口碑判断
 
-**谨慎偏负，低到中等置信度。** 证据来自 317 个窗口内新增 GitHub Issue 候选中的少量高信号、带复现标签样本；这类仓库天然偏向报错，不能代表总体用户群。v2.1.238 对 Remote Control、内存与跨会话消息进行了大批修复，但发布行为本身不是正向社区口碑。Reddit、X 与 YouTube 没有取得时间和互动量都可靠的新样本。
+**谨慎偏负，低到中等置信度。** 证据来自早间 317 个 GitHub Issue 候选及后续 40 个增量候选中的少量高信号样本；这类仓库天然偏向报错，不能代表总体用户群。v2.1.238 对 Remote Control、内存与跨会话消息进行了大批修复，但增量报告又涉及 fork 缓存、VS Code compact 与归档列表；它们仍是单用户报告，发布行为本身也不是正向社区口碑。Reddit、X 与 YouTube 没有取得时间和互动量都可靠的新样本。
 
 ## 对比观察
 
@@ -117,6 +126,9 @@ tags:
 - **Chrome / Desktop**：native host 竞争导致扩展连接失败的报告带 has repro，只代表报告者环境。
 - **Desktop / GitHub**：GraphQL 用量报告带 has repro，数字仅代表报告者环境。
 - **Scheduled tasks**：外部重启后补跑报告带 has repro，接近本轮截止才出现，尚待维护方响应。
+- **Agents / 成本**：fork 恢复后的 prompt-cache 报告带 has repro 和请求级数据，但尚无维护方确认，不把报告者成本数字外推。
+- **VS Code**：`/compact` 在 2.1.238 失效被标记 regression，目前缺少独立复现与修复结论。
+- **FleetView**：归档会话仍存在但侧栏不渲染的报告带 has repro，尚待确认影响范围。
 
 ## 来源链接
 
@@ -126,6 +138,6 @@ tags:
 
 - 已检查：Anthropic Newsroom/Research/Blog、Help Center、Developer Platform release notes、Cowork/Desktop changelog、Status API、Claude Code/Agent SDK/Code Action releases、官方插件目录、Claude Code Issues，以及 Reddit、Hacker News、X、YouTube 公开入口。
 - 失败来源：GitHub API 在首轮分页与统计后触发匿名限流；Reddit JSON 不稳定；X 未登录时间线、YouTube 与 Hacker News 未提供可稳定核验的窗口内独立增量。
-- 初始候选：335（其中 Claude Code 新增 Issue 查询返回 317 条；另含官方 releases、状态事件、目录变更与社区搜索候选）。
-- 最终保留：11 个独立来源 URL。
+- 初始候选：375（早间 Claude Code Issue 查询 317 条；07:51–13:02 增量 40 条；另含官方 releases、状态事件、目录变更与社区搜索候选）。
+- 最终保留：14 个独立来源 URL。
 - 二次补搜：否；最终来源不为 0。
