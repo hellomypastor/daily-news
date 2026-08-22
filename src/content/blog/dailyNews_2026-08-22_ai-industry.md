@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T16:02:00+08:00"
+updatedAt: "2026-08-22T22:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Measuring benchmark optimization in speech recognition"
 featuredUrl: "https://huggingface.co/blog/asr-benchmark-optimization"
@@ -13,6 +13,7 @@ tags:
   - "48–72h"
   - "日期未确认"
   - "Agent"
+  - "Agent Security"
   - "AI"
   - "Benchmark"
   - "Google DeepMind"
@@ -22,6 +23,7 @@ tags:
   - "Liquid AI"
   - "Microsoft Research"
   - "NVIDIA"
+  - "OpenShell"
   - "Podcast"
   - "Quantization"
   - "Research"
@@ -32,7 +34,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-21 16:02 至 2026-08-22 16:02（Asia/Shanghai）。累计保留 Latent Space 的新播客与 Hugging Face 社区技术文章；24–48 小时保留 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。本轮另核实 3 条 48–72 小时技术信号：Liquid AI 的量化感知蒸馏权重、BaseCompute 的 Agent 驱动端侧推理优化栈，以及 Metric-AI 的亚美尼亚语 ASR 基准。另新增 NVIDIA Dynamo Agent 优化 skillpack，但官方只标注 8 月 21 日、未给具体时刻，故列入日期未确认；同时保留 4 条仅标注月份的 Google DeepMind 候选。当天累积来源不因滚动窗口前移而删除。
+扫描窗口：2026-08-21 22:02 至 2026-08-22 22:02（Asia/Shanghai）。累计保留 Latent Space 的新播客与 Hugging Face 社区技术文章；24–48 小时保留 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。本轮另核实 3 条 48–72 小时技术信号：Liquid AI 的量化感知蒸馏权重、BaseCompute 的 Agent 驱动端侧推理优化栈，以及 Metric-AI 的亚美尼亚语 ASR 基准。另新增 NVIDIA Dynamo Agent 优化 skillpack，并补入 NVIDIA AVO 长时程 Agent 架构与 Agent 安全栈两篇官方技术文章；三者都只标注 8 月 21 日、未给具体时刻，故列入日期未确认；同时保留 4 条仅标注月份的 Google DeepMind 候选。当天累积来源不因滚动窗口前移而删除。
 
 ## 优先动态
 
@@ -77,6 +79,8 @@ Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已�
 | Google DeepMind | Putting sign language AI into users’ hands | 官方列表仅标注 2026 年 8 月，具体日期未展示 | 官方列表支持该模型应用候选，但尚不能确认是否落入最近 72 小时。 | [官方新闻列表](https://deepmind.google/blog/) |
 | Google DeepMind | WeatherNext: AI model achieves breakthrough in forecasting cyclones | 官方列表仅标注 2026 年 8 月，具体日期未展示 | 官方列表支持该科学 AI 候选；具体发布日期未确认，因此不作为窗口内事实。 | [官方新闻列表](https://deepmind.google/blog/) |
 | NVIDIA Dynamo | Dynamo Agent Optimization Skills | 官方原文标注 2026-08-21，但未给具体时刻 | NVIDIA 将面向 Dynamo 部署调优的 repo-native skillpack 合入项目，涵盖目标函数、实验纪律和领域优化知识；原文给出的 15%–77% 吞吐提升来自 NVIDIA 内部 A/B 测试，尚不能外推为通用结果。因缺少时刻，不能确认是否落入本轮 24 小时窗口。 | [官方原文](https://docs.nvidia.com/dynamo/dev/digest/agent-optimization-skills) |
+| NVIDIA | AVO 长时程 Agent 架构 | 官方原文标注 2026-08-21，但未给具体时刻 | 官方文章介绍 AVO 通过持久记忆、监督与工具执行维持长时程任务，并报告 ARC-AGI-3 公共集与 GPU 内核优化结果；所有指标均为厂商给定设置，不外推为通用能力。 | [官方原文](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/) |
+| NVIDIA | Where Security Fits in an AI Agent Stack | 官方原文标注 2026-08-21，但未给具体时刻 | 文章区分模型/Agent/harness 的行为控制与安全运行时/基础设施的强制边界，强调最小权限、隔离、即时访问和可审计性；属于架构建议而非产品发布。 | [官方原文](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/) |
 
 ## 观察池
 
@@ -91,6 +95,8 @@ Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已�
 - [Microsoft Research：Skala](https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/)
 - [Google DeepMind News](https://deepmind.google/blog/)
 - [NVIDIA Dynamo：Agent Optimization Skills](https://docs.nvidia.com/dynamo/dev/digest/agent-optimization-skills)
+- [NVIDIA：AVO 长时程 Agent 架构](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)
+- [NVIDIA：Agent 安全栈](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)
 - [Liquid AI：LFM2.5 QAD Q4_0](https://huggingface.co/blog/LiquidAI/qad)
 - [BaseCompute：Base Optimization Stack](https://huggingface.co/blog/basecompute/base-optimization-stack)
 - [Metric-AI：ArmBench-ASR](https://huggingface.co/blog/Metric-AI/armbench-asr)
@@ -99,7 +105,7 @@ Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已�
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及指定播客入口。
 - 失败来源：Alibaba Cloud News 抓取返回内部错误；部分动态页依赖 JavaScript；No Priors 官方域名连接失败；LlamaIndex 既有 RSS 地址返回 404，已改查公开入口。
-- 初始候选：19 条；最终保留：13 条（7 条日期明确、1 条当天累积失效链接、5 条日期未确认）。
+- 初始候选：21 条；最终保留：15 条（7 条日期明确、1 条当天累积失效链接、7 条日期未确认）。
 - 二次补搜：否（最终来源不为 0）。
 
-一句话总结：最近 24 小时保留 Latent Space 对人类行为模拟与数字孪生的技术访谈；近三日延续量化权重、Agent 驱动推理优化与低资源语音基准信号，NVIDIA Dynamo skillpack 与 Google DeepMind 四项候选仍待确认具体发布时间。
+一句话总结：最近 24 小时保留 Latent Space 对人类行为模拟与数字孪生的技术访谈；近三日延续量化权重、Agent 驱动推理优化与低资源语音基准信号，NVIDIA Dynamo skillpack、AVO 与安全栈文章，以及 Google DeepMind 四项候选仍待确认具体发布时间。

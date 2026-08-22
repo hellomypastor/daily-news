@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T13:01:00+08:00"
+updatedAt: "2026-08-22T22:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore"
 featuredUrl: "https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/"
@@ -12,6 +12,7 @@ featuredImageAlt: "AWS 多智能体迁移框架架构示意图"
 featuredImageCaption: "图片来源：AWS Machine Learning Blog"
 tags:
   - "24-72h"
+  - "较旧背景"
   - "可信二手"
   - "邻近信号"
   - "日期未确认"
@@ -28,8 +29,11 @@ tags:
   - "Cloud Session"
   - "Codex"
   - "Cursor"
+  - "Devin"
+  - "Enterprise"
   - "Gemini CLI"
   - "GitHub Copilot"
+  - "Grok Bot"
   - "Lifecycle"
   - "Managed Agent"
   - "Memory"
@@ -45,7 +49,7 @@ tags:
 
 ## 扫描结论
 
-本轮主发现窗口：2026-08-21 13:01 至 2026-08-22 13:01（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 13:01 至 2026-08-21 13:01。当天页面按累积规则保留早前已收录来源，其中 Claude Code/Agent SDK 2.1.238/0.3.238、Codex 0.149.0 与 Anthropic 状态事件已滑出本轮 24 小时窗口，不再声称为本轮主窗口发现。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制；Gemini CLI nightly 对 macOS 沙箱隔离的修复属于执行安全邻近信号，不代表 Google 托管 Agent 服务端更新。本轮增量保留 VentureBeat 对 Slack Code 的报道作为 24–72 小时可信二手观察：其协作频道、运行状态、停止控制与审计轨迹具备 AaaS 控制面意义，但因未找到同窗官方原文，不列为已验证发布。竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
+本轮主发现窗口：2026-08-21 22:02 至 2026-08-22 22:02（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 22:02 至 2026-08-21 22:02。当天页面按累积规则保留早前已收录来源，其中 Claude Code/Agent SDK 2.1.238/0.3.238、Codex 0.149.0 与 Anthropic 状态事件已滑出本轮 24 小时窗口，不再声称为本轮主窗口发现。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制；Gemini CLI nightly 对 macOS 沙箱隔离的修复属于执行安全邻近信号，不代表 Google 托管 Agent 服务端更新。本轮新增保留 Cognition 8 月 21 日 Devin release notes（页面未给时分）与 xAI 8 月 11 日 Grok Bot 官方发布：前者覆盖会话订阅、Bearer webhook、企业级 MCP 与私网接入，后者明确提供云端独立电脑和持续执行，均符合 AaaS 定义；因发布时间精度或已较旧，分别放入“日期未确认”和“观察池”，不写成本轮主窗口发布。竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
 
 ## 今日重点
 
@@ -70,6 +74,8 @@ tags:
 
 ## 海外厂商
 
+- [Cognition Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)的 8 月 21 日条目新增会话订阅、Automation webhook Bearer secret、企业级 MCP 统一配置，以及 Dedicated Deployment 私网 MCP 与私有 CA 支持；这些更新覆盖会话协作、异步触发、企业治理和私网工具接入，但官方只给日期、没有时分，无法确认是否落入主窗口。
+- [xAI Grok Bot](https://x.ai/news/introducing-grok-bot)于 8 月 11 日发布 beta：Agent 拥有云端独立电脑，可登录应用和网站并在用户离开后继续完成任务，企业用户目前需加入候补名单。它明确符合托管远程执行定义，但已超出 72 小时，仅作为较旧官方背景保留；普通 Grok 4.6 模型更新未误作 AaaS。
 - Anthropic 在截止前新增云会话与后台任务重连更新，OpenAI 在主窗口有直接远程任务/会话控制更新；Google 新增的 [Gemini CLI nightly 20260822](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260822.g5411f113c)仅修复 macOS Seatbelt 对 Docker/容器运行时 socket 与二进制的隔离，属于执行安全邻近信号；Replit、Devin、Lindy、Factory、Sourcegraph/Amp 和 Cloudflare 未检出截止前可核验的同窗托管服务发布。
 - [GitHub Copilot CLI v1.0.81-7](https://github.com/github/copilot-cli/releases/tag/v1.0.81-7)是预发布版本：启动时可恢复 CLI 异常退出后仍开放的会话，并让强制远程策略刷新在拉取失败时采用限制性姿态。它改善 Agent 会话连续性和企业策略控制，但仍是 CLI/harness 预发布，不等同 GitHub coding agent 托管服务更新。
 - [Gemini CLI nightly 20260821](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260821.g30573d2e4)只有 ignore path 的 symlink 修复与 shell execution service 重构，属于 Agent harness 邻近信号，不能写成 Vertex Agent Engine 或 Jules 的托管能力更新。
@@ -96,6 +102,7 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 
 ## 日期未确认
 
+- [Devin 8 月 21 日 release notes](https://docs.devin.ai/release-notes/2026)包含会话订阅、Automation webhook Bearer 鉴权、企业 MCP 分发及 Dedicated Deployment 私网 MCP；官方未给精确时分，故不判定它属于 24 小时还是 24–72 小时窗口。
 - [Cursor Cloud Agents changelog](https://cursor.com/changelog/08-19-26)称 Cloud Agents 可订阅 PR、Slack thread 或定时事件、持有 goal 并持续处理长会话；页面仅给 8 月 19 日，无精确时分，无法稳定划入 24–72 小时的具体位置。
 - [Qoder 官方主页](https://qoder.cn/)列出面向企业的“Cloud Agents”，并描述云端全托管、多智能体协同与长时委派执行；页面未提供该模块的发布日期或变更日志，因此仅确认当前公开能力描述，不推断为本轮新增。
 - [华为云 AgentArts 2026 年 8 月动态](https://support.huaweicloud.com/wtsnew-agentarts/index.html)列出智能体卫士、运行时灰度、网关会话保持及第三方托管智能体日志统一观测；官方只标月份，不能推断为今日更新。
@@ -122,10 +129,10 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、OpenHands、Factory、Sourcegraph/Amp、Lindy、UiPath Agents，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek、华为云公开入口；并做中英文网页、官方 release/changelog/status 与可信二手交叉检索。
+- 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit；强制核查 Devin 官方 release notes、环境、并发、定价、企业接入与集成；强制核查 xAI/Grok Bot、Automations、Build、Agent Tools 的托管执行、异步任务、工具与远程执行；另查 CrewAI、LangGraph、Cloudflare、OpenHands、Factory、Sourcegraph/Amp、Lindy、UiPath Agents，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek、华为云公开入口；并做中英文网页、官方 release/changelog/status 与可信二手交叉检索。
 - 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Cursor/AWS/中国厂商部分页面无精确时分；GitHub Status 搜索缓存与历史页抓取不一致；Slack Code 未找到同窗官方原文，已降级保留可信二手报道。
-- 候选数量：49。
-- 最终保留：17 个独立来源 URL；本轮主发现窗口 4 个（其中 GitHub Copilot CLI 与 Gemini CLI 20260822 为邻近信号）、当天累计保留但已滑出本轮 24 小时 5 个、24–72 小时/观察 4 个、日期未确认 4 个。
+- 候选数量：51。
+- 最终保留：19 个独立来源 URL；本轮主窗口没有新增精确时分的正式发布；当天累计来源全部保留，并新增 1 个日期未确认的 Devin 官方更新与 1 个较旧的 Grok Bot 官方背景。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 17 条动态，重点：Claude 云会话与 SDK 后台任务重连、Codex 远程任务控制及 Gemini CLI 沙箱隔离继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。
+今日扫描完成，共 19 条动态，重点：Devin 企业 MCP/私网接入与 Grok Bot 云端持续执行补齐托管 Agent 观察；Claude 云会话与 SDK 后台任务重连、Codex 远程任务控制及 Gemini CLI 沙箱隔离继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。

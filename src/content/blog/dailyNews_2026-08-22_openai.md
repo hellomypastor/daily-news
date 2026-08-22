@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T19:00:00+08:00"
+updatedAt: "2026-08-22T22:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.150.0-alpha.3"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3"
@@ -39,12 +39,13 @@ tags:
   - "TypeScript"
   - "Usage"
   - "Voice"
+  - "Watchlist"
   - "Windows"
 ---
 
 ## 今日概览
 
-采集窗口滚动至 **2026-08-21 16:02 至 2026-08-22 16:02（Asia/Shanghai）**。当天累积收录的 Codex 预发布已推进到 0.150.0-alpha.6；它仍是预发布版本，release 页面未列功能明细，不能写成稳定交付。官方 API、模型与 ChatGPT / Codex changelog 未见窗口内独立条目。OpenAI Status 的 ChatGPT 网页意外登出事故已于 07:15（上海时间）标记解决。
+采集窗口滚动至 **2026-08-21 22:02 至 2026-08-22 22:02（Asia/Shanghai）**。当天累积收录的 Codex 预发布已推进到 0.150.0-alpha.6；它仍是预发布版本，release 页面未列功能明细，不能写成稳定交付。官方 API、模型与 ChatGPT / Codex changelog 未见窗口内独立条目。OpenAI Status 的 ChatGPT 网页意外登出事故已于 07:15（上海时间）标记解决。
 
 Codex 与 SDK 主分支仍有密集修补，重点涉及未完成根任务挂起与恢复、严格 MCP 自动评审结果保留、Windows sandbox、远程执行网络策略、日志凭据保护、Guardian 与 MCP 隔离、browser / computer-use 要求、MCP OAuth issuer 绑定、MCP 运行时连接状态，以及 Agents SDK 的流式语音配置、截断空响应防护与多语言文档锚点保留；这些都是源码提交，尚不能等同正式 release。社区侧出现 ChatGPT 回归与 Codex 额度消耗的用户自报，但官方未确认统一变更或根因。
 
@@ -148,3 +149,10 @@ Enterprise、Business、Edu、Gov、Science 与独立安全产品未发现窗口
 - 失败来源：X 无法稳定取得公开正文与精确时间；Reddit JSON / RSS 不稳定；JetBrains 与 YouTube 未见可核实官方新增。已改用公开原页与搜索索引，并降低社区证据等级。
 - 初始候选数：110；保留来源数：23。
 - 二次补搜：否（最终来源不为 0）。
+
+### 22:02 增量
+
+- Agents SDK Python 主分支修复 [cleanup 后仍保留 active MCP servers](https://github.com/openai/openai-agents-python/commit/3e6715573d9cb3d3a55c10620bdb0409c182a9cf)，并继续 [维护翻译文档锚点](https://github.com/openai/openai-agents-python/commit/7f7a44f8dc0650296bd5ab6c745c9bcbaa6ac3b7)；TypeScript 主分支 [修复 Windows 测试脚本](https://github.com/openai/openai-agents-js/commit/6d0c61a5f62a5ed8142996a25b33446c810f84b3)，均为官方主分支提交、尚未 release。
+- 社区新增 [桌面聊天冻结、Remote 与移动端不稳定](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/) 的集中叙述，以及 [Codex Remote 间歇性无法连接](https://www.reddit.com/r/codex/comments/1vue13m/codex_remote_wont_connect/) 的多用户报告；官方状态页未列对应事故、发布时间精度不足且存在反例，只作为负向观察，不写成平台级故障。
+
+本轮初始候选数更新为 126；保留来源数 28；二次补搜为否。

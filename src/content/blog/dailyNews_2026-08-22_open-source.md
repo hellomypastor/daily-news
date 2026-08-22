@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T19:00:00+08:00"
+updatedAt: "2026-08-22T22:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "ANOLISA / AgentSight"
 featuredUrl: "https://github.com/alibaba/anolisa"
@@ -18,6 +18,7 @@ tags:
   - "Apple Silicon"
   - "Authorization"
   - "CI"
+  - "Cloudflare"
   - "Coding Agent"
   - "Communication"
   - "Context"
@@ -30,6 +31,7 @@ tags:
   - "Engineering"
   - "Environment"
   - "Evaluation"
+  - "Governance"
   - "Harness"
   - "HN"
   - "IDE"
@@ -47,11 +49,13 @@ tags:
   - "RAG"
   - "Research"
   - "Resurfaced"
+  - "Roadmap"
   - "Runtime"
   - "Sandbox"
   - "SDK"
   - "Security"
   - "Skills"
+  - "Standards"
   - "Tools"
   - "Trending"
   - "Watchlist"
@@ -60,7 +64,7 @@ tags:
 
 ## 今日概览
 
-本轮精选窗口更新为 **2026-08-20 16:02:00 至 2026-08-22 16:02:00（Asia/Shanghai）**；当天累积内容仍完整保留早前已收录来源。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试、本地推理和持久化子代理协作工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
+本轮精选窗口更新为 **2026-08-20 22:02:00 至 2026-08-22 22:02:00（Asia/Shanghai）**；当天累积内容仍完整保留早前已收录来源。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试、本地推理和持久化子代理协作工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
 
 ## 已验证精选
 
@@ -141,6 +145,12 @@ tags:
 - [CyberStrike](https://github.com/CyberStrikeus/CyberStrike)是双用途安全 harness；[HN 讨论](https://news.ycombinator.com/item?id=49398125)于 17:44 提交，能力为项目自述。
 - Simon Willison 发布 [llm 0.32.1](https://simonwillison.net/2026/Aug/21/llm/) 与 [llm-openrouter 0.7](https://simonwillison.net/2026/Aug/21/llm-openrouter/)，分别处理 OpenAI Python 3.0 兼容和服务端工具。
 
+### 22:02 增量
+
+- [MCP 官方新版路线图](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/)于 **2026-08-22 17:00 +08:00** 发布，说明下一阶段规范发布及工作组的重点方向；[HN 讨论](https://news.ycombinator.com/item?id=49399591)于 **2026-08-22 21:31 +08:00** 出现，截止时 4 points、0 comments。路线图表达的是维护者规划，不代表所列能力已经进入稳定规范。
+- **低互动 / agent 交付治理**：[Conveyor 官方仓库](https://github.com/kidus-tiliksew/conveyor)采用 MIT，README 描述以需求、系统设计和决策文档排队 agent 工作，并在人工确认点保留可追溯记录；[HN 讨论](https://news.ycombinator.com/item?id=49399837)于 **2026-08-22 22:01 +08:00** 提交，截止时 1 point、0 comments。仓库创建于 7 月，本轮只确认复热和项目自述。
+- **低互动 / 边缘运行时**：[dsh-edge 官方仓库](https://github.com/pawaca/dsh-edge)创建于 **2026-08-20 23:16 +08:00**、采用 MIT，README 描述把 DeepSeek Harness Web 运行在 Cloudflare Workers / Durable Objects 上，并明确是非官方社区项目；[HN 讨论](https://news.ycombinator.com/item?id=49399811)于 **2026-08-22 21:58 +08:00** 提交，截止时 1 point、0 comments。持久化、隔离和部署体验未在本轮独立测试。
+
 ## 观察池
 
 - **低互动 / 持久开发环境**：[Reachpad MCP 官方仓库](https://github.com/Reachpad/reachpad-mcp)采用 MIT，README 描述为 coding agent 提供可暂停、恢复与分叉的持久云开发环境，并明确进程不会随快照保留；[HN 提交](https://news.ycombinator.com/item?id=49397326)于 **2026-08-22 15:02 +08:00** 出现，截止时 2 points、0 comments。仓库创建于 8 月 12 日，凭据隔离等安全主张未在本轮独立测试。
@@ -159,6 +169,6 @@ tags:
 ## 采集状态
 
 - 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck、Oh My Subagents、Heimdall、Linux、agent-ready-checkout、EchoCoT、DeepSQL、EnvHarness、Reachpad MCP、Setoku 与 VPIPE 原始页面。
-- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 增量复查无直接相关新文；GitHub 语言榜单与 overall 高度重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库；DeepSQL 原文未提供可独立核验的发布日期。
-- 初始候选：63；最终保留来源：52（28 个独立事件 / 项目，其中 18 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-22 16:02:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。
+- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 等技术博客增量复查除 MCP 官方路线图外无直接相关新文；GitHub 语言榜单与 overall 高度重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库；DeepSQL 原文未提供可独立核验的发布日期。
+- 初始候选：63；累计候选：91；最终保留来源：58（31 个独立事件 / 项目，其中 21 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-22 22:02:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。
