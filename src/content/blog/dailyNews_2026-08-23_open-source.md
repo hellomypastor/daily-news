@@ -1,0 +1,108 @@
+---
+title: "今日 AI / Agent 开源项目与技术博客精选"
+date: "2026-08-23T00:00:00+08:00"
+updatedAt: "2026-08-23T01:01:00+08:00"
+description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredTitle: "Myli"
+featuredUrl: "https://github.com/EightPotions/Myli"
+featuredSummary: "MIT 许可的视觉设计多 Agent harness。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-08-21 21:47 +08:00"
+featuredTags: ["Agent","Design","Open Source"]
+tags:
+  - "Agent"
+  - "AI"
+  - "Apple Silicon"
+  - "Autocomplete"
+  - "Date Unverified"
+  - "Design"
+  - "Evaluation"
+  - "Git"
+  - "HN"
+  - "Inference"
+  - "iOS"
+  - "LLM"
+  - "MCP"
+  - "Memory"
+  - "Observability"
+  - "On-device"
+  - "Open Source"
+  - "Research"
+  - "Resurfaced"
+  - "Sandbox"
+  - "Shell"
+  - "Skill"
+  - "Skills"
+  - "State"
+  - "TTS"
+  - "Watchlist"
+---
+
+## 今日概览
+
+本页研究窗口为 **2026-08-21 01:01 至 2026-08-23 01:01（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理与 GenAI 可观测性。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
+
+## 已验证精选
+
+### Myli：面向视觉设计的多 Agent Harness
+
+[Myli 官方仓库](https://github.com/EightPotions/Myli)于 **2026-08-21 21:47 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49400662)于 **2026-08-22 23:19 +08:00** 提交，截止时 1 point、0 comments。README 将设计流程拆为研究、批评、生成与整合等角色；这是刚创建的工程原型，效果尚未由本轮独立复测。
+
+### TT-AMX：Apple Silicon 上的 Tensor-Train 推理实验
+
+[TT-AMX 官方仓库](https://github.com/ansarzeinulla/tensor-train-amx)于 **2026-08-22 17:09 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49400420)于 **2026-08-22 22:55 +08:00** 提交，截止时 1 point、0 comments。项目探索以 AMX 和零拷贝路径执行 Tensor-Train 推理；性能与兼容范围均以作者说明为准。
+
+### 本地 iOS Agent：端侧模型、工具与语音流水线
+
+[官方仓库](https://github.com/hsandhu/agent)于 **2026-08-21 05:58 +08:00** 创建；[HN 讨论](https://news.ycombinator.com/item?id=49401506)于 **2026-08-23 00:52 +08:00** 提交，截止时 1 point、0 comments。项目把本地推理、工具调用和语音管线放进 iOS 应用，展示端侧 agent 的集成方向；仓库未声明许可证，因此不能据公开可读性推断可自由复用。
+
+### GenAI OpenTelemetry sketches：有界指标而非保存原始提示词
+
+[官方仓库](https://github.com/llm-measurement/otelcol-genai-sketches)采用 Apache-2.0，提供从 OpenTelemetry traces 生成有界 GenAI 指标与 keyed summaries 的 collector 组件；[HN 讨论](https://news.ycombinator.com/item?id=49389744)于 **2026-08-21 23:37 +08:00** 提交，截止时 4 points、2 comments。它为高基数提示词观测提供一种隐私和成本折中，但边界与匿名化效果仍需按部署配置评估。
+
+### MCP 新路线图：维护者明确下一阶段规范重点
+
+[MCP 官方路线图](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/)于 **2026-08-22 17:00 +08:00** 发布；[HN 讨论](https://news.ycombinator.com/item?id=49399591)于 **2026-08-22 21:31 +08:00** 提交，截止时 102 points、78 comments。路线图是维护者对下一阶段规范与工作组重点的公开说明，不代表规划能力已经进入稳定版本。
+
+### 低延迟 TTS 工程：把首包响应压到交互级
+
+[Nari Labs 工程文章](https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/)介绍 Qwen3-TTS 推理链路的缓存、并行与流式优化；[HN 讨论](https://news.ycombinator.com/item?id=49389952)于 **2026-08-21 23:51 +08:00** 提交，截止时 163 points、40 comments。文中的延迟数字是作者测量，本轮未在同等硬件与负载下复现。
+
+## GitHub Trending
+
+本轮检查了 overall、Python 与 TypeScript daily 页面，但动态页面未稳定返回可复核的榜单项目与 `stars today` 文本，因此不填入可能过时的数字，也不把仓库更新误写成今日上榜。
+
+## HN 讨论
+
+- [StateM 官方仓库](https://github.com/henryqin1997/statem)采用 Apache-2.0，提供面向长任务 agent 的状态化 runbook CLI；[HN 讨论](https://news.ycombinator.com/item?id=49399887)于 **2026-08-22 22:07 +08:00** 提交，截止时 1 point、1 comment。仓库早于窗口创建，本轮确认的是讨论信号。
+- [Knowl 官方仓库](https://github.com/dat999zx/knowl)采用 Apache-2.0，README 描述会压缩和淘汰旧知识的 agent 记忆层；[HN 讨论](https://news.ycombinator.com/item?id=49399942)于 **2026-08-22 22:13 +08:00** 提交，截止时 1 point、1 comment。所谓自维护效果尚未独立验证。
+- [GitX Skill 官方仓库](https://github.com/musoyangrigor/gitx-skill)采用 MIT，提供跨多种 coding agent 的 Git 工作流 skill；[HN 讨论](https://news.ycombinator.com/item?id=49401487)于 **2026-08-23 00:50 +08:00** 提交，截止时 1 point、0 comments。仓库创建早于七天，只记录当前复热。
+
+## 论文与研究
+
+- [AI4AI-Bench](https://arxiv.org/abs/2608.20318)于 **2026-08-21 01:56 +08:00** 提交，以冻结研究仓库和隐藏评估器衡量 agent 修改训练算法的能力；它是新预印本，作者报告仍需复现。
+- [Break It Down, Pass It On](https://arxiv.org/abs/2608.20274)于 **2026-08-21 01:12 +08:00** 提交，比较 task/subtask 粒度与文本/代码形式对技能跨任务迁移的影响；结论暂按论文证据记录。
+
+## 旧文重新升温
+
+- [自托管、沙箱化 agent 软件工厂工程文](https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/)原文早于本轮七日阈值；[HN 讨论](https://news.ycombinator.com/item?id=49390463)于 **2026-08-22 00:27 +08:00** 重新出现，截止时 112 points、59 comments。这里记录复热，不把旧文标成今日发布。
+
+## 日期未确认
+
+- [Model Genome / Model DNA](https://huggingface.co/blog/mayafree/model-dna)讨论如何判断模型是从头训练还是由其他模型派生；[HN 讨论](https://news.ycombinator.com/item?id=49400676)于 **2026-08-22 23:20 +08:00** 提交，截止时 1 point、0 comments。页面在本轮抓取中未提供可独立复核的精确发布时间，因此保留为日期未确认。
+
+## 观察池
+
+- **低互动 / Shell 辅助**：[Namo Complete](https://github.com/namo-robotics/namo_complete)采用 MIT，提供 Bash 本地补全；[HN 讨论](https://news.ycombinator.com/item?id=49401434)于 **2026-08-23 00:44 +08:00** 提交，截止时 1 point、0 comments。项目早期且未复测补全质量。
+- **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。
+- **新预印本**：AI4AI-Bench 与技能迁移论文均不把作者实验结果写成已复现事实。
+
+## 来源链接
+
+正文中的官方仓库、论文、工程博客及 HN 讨论即为本页完整来源；页面内 URL 已去重。
+
+## 采集状态
+
+- 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。
+- 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号。
+- 初始候选：114；最终保留来源：26（13 个事件 / 项目，其中 11 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-23 01:01:00 +08:00；互动量均为截止快照。

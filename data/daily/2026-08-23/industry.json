@@ -1,0 +1,36 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-08-23T01:01:45+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News/Research", "OpenAI News/Research", "Google DeepMind News", "Google Research Blog",
+      "Meta AI Blog", "Microsoft Research Blog", "xAI News/API docs/Grok Build changelog", "Mistral News",
+      "Cohere Blog", "Qwen/Alibaba/DAMO", "ByteDance Seed", "Baidu Research", "Tencent Hunyuan",
+      "DeepSeek", "Zhipu/GLM", "Moonshot/Kimi", "StepFun", "MiniMax", "NVIDIA Developer/Research",
+      "Hugging Face Blog", "LangChain Blog", "LlamaIndex Blog", "Latent Space", "Dwarkesh",
+      "No Priors", "The Cognitive Revolution", "a16z AI"
+    ],
+    "failedSources": [
+      "部分厂商动态页依赖 JavaScript，只能核对公开列表与搜索摘要",
+      "部分中文厂商官网未提供可稳定抓取、带精确时间的统一更新流",
+      "社交平台入口需要登录，未把其摘要当作已核实事实"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n扫描窗口：2026-08-22 01:01 至 2026-08-23 01:01（Asia/Shanghai）。本轮确认 1 条窗口内社区技术文章：FINAL-Bench 用药物性质预测基准展示数据切分方式可造成显著分数差异，并公开讨论标签噪声与简单基线。它是 Hugging Face 社区文章，不代表 Hugging Face 官方产品发布。其余厂商官方入口在截止时间前未发现可核实的新条目。\n\n## 优先动态\n\n| 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |\n|---|---|---|---|---|---|\n| FINAL-Bench / Hugging Face 社区 | We changed one line and the benchmark score moved 0.21 AUROC | 技术文章/基准 | 2026-08-22；窗口内，具体时刻未展示 | 作者在同一 hERG 数据上比较时间切分与随机切分，报告 AUROC 相差 0.211，并用跨论文重复测量估计标签噪声。意义在于提醒模型排行榜必须同时披露切分策略、简单基线与测量精度；数字仅适用于作者给定数据与实验。 | [原文](https://huggingface.co/blog/FINAL-Bench/leadboard-drug) |\n\n## 常规厂商扫描\n\nAnthropic 与 OpenAI 官方入口已检查；相关动态分别详见 Claude 专题页与 OpenAI 专题页。Google DeepMind/Research、Meta、Microsoft、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、LangChain 与 LlamaIndex 的公开入口，在截止时间前未找到可确认落入最近 24 小时的新条目。\n\n### xAI / Grok 强制检查\n\n已显式检查 xAI News、API 文档与 Grok Build changelog，覆盖模型/API、DeepSearch、语音、编码、工具调用和 Agent 动态；公开新闻列表截至抓取时的最新可见发布早于本轮窗口，因此不硬凑条目。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客入口已检索，未确认窗口内新集。\n\n## 近两日补充\n\n未发现需要从 24–48 小时区间补入且尚未由前一日页面覆盖的新候选。\n\n## 近三日补充\n\n未发现需要从 48–72 小时区间补入的新候选。\n\n## 日期未确认\n\n- 部分厂商列表仅显示月份或相对时间，无法证明候选落入本轮窗口，因此未写成最近发布事实。\n\n## 观察池\n\n- Hugging Face 社区列表还有若干旧于窗口或偏开源项目的文章，交由开源专题按其时效规则处理。\n- 厂商社交账号的搜索摘要因登录限制未能打开原帖，仅作为后续轮次线索，不作为本页事实。\n\n## 来源链接\n\n- [FINAL-Bench：We changed one line and the benchmark score moved 0.21 AUROC](https://huggingface.co/blog/FINAL-Bench/leadboard-drug)\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 与指定播客入口。\n- 失败来源：部分页面依赖 JavaScript；部分中文厂商缺少稳定的带时刻更新流；社交入口需要登录。\n- 初始候选：6 条；最终保留：1 条。\n- 二次补搜：否（最终来源不为 0）。\n\n一句话总结：最近 24 小时厂商发布面较安静，最明确的技术信号来自 FINAL-Bench 对药物预测基准切分、标签噪声和简单基线的可复核分析。",
+  "sources": [
+    {
+      "title": "We changed one line and the benchmark score moved 0.21 AUROC",
+      "url": "https://huggingface.co/blog/FINAL-Bench/leadboard-drug",
+      "source": "FINAL-Bench / Hugging Face Community",
+      "publishedAt": "2026-08-22",
+      "summary": "社区文章用药物性质预测基准说明数据切分、标签噪声和简单基线会显著影响排行榜解读。",
+      "tags": ["Benchmark", "Science AI", "Hugging Face"]
+    }
+  ]
+}

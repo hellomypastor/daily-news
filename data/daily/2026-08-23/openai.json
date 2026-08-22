@@ -1,0 +1,75 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-08-23T01:02:41+08:00",
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Index",
+      "OpenAI Help Center：ChatGPT Release Notes、Codex rate card",
+      "OpenAI Developers 文档与 changelog",
+      "GitHub Releases：openai/codex、openai-agents-python、openai-agents-js",
+      "Reddit：r/codex、r/ChatGPT、r/OpenAI、r/ChatGPTCoding、r/singularity",
+      "Hacker News 与公开网页搜索"
+    ],
+    "failedSources": [
+      "X：未登录环境无法稳定核验完整帖文与精确发布时间",
+      "YouTube：搜索结果未发现窗口内可由官方页面交叉核验的新增"
+    ],
+    "candidateCount": 8,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-08-22 01:01 至 2026-08-23 01:01（Asia/Shanghai）**。窗口内核验到 Codex CLI 两个官方 alpha 构建；OpenAI 新闻页、ChatGPT 发布说明及 Agents SDK 两个仓库未见窗口内正式更新。社区侧则继续集中反馈 Codex 用量消耗、桌面端卡顿与 Remote 可用性，均为用户自述，尚无官方事故确认。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品线 | 过去 24 小时状态 | 证据 |\n|---|---|---|\n| Codex CLI | **新增两个预发布构建**：0.150.0-alpha.5 与 0.150.0-alpha.6；发布页仅给出版本号，未附变更清单，不据此推断功能变化 | [alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.5)、[alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6) |\n| VS Code / JetBrains 集成 | 无新增 | 已检查官方 Codex 仓库与文档 |\n| Codex cloud / remote tasks / PR agents | 无官方新增；社区有 Remote 异常反馈，见 Hate | 官方入口与社区抽样 |\n| ChatGPT agentic mode / Work | 无新增 | ChatGPT Release Notes |\n| Responses API | 无新增 | 开发者文档与 changelog |\n| Agents SDK Python / TypeScript | 无新增；最近版本均早于窗口 | GitHub Releases |\n| Assistants API 迁移 / 弃用 | 无新增 | 官方文档 |\n| Realtime API | 无新增 | 官方文档与 changelog |\n| GPT / reasoning / Codex 模型家族 | 无经官方确认的窗口内新增 | 官方模型文档与发布页 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品面 | 过去 24 小时状态 |\n|---|---|\n| 浏览器 / Operator 能力 | 无新增 |\n| macOS / Windows / 移动端 | 无官方新增；有桌面端加载与冻结投诉 |\n| GPTs / GPT Store / Canvas | 无新增 |\n| Sora / 视频 | 无新增 |\n| GPT Image / DALL·E | 无新增 |\n| Voice | 无新增 |\n| Connectors / MCP | 无新增 |\n\n## Tier 3：企业、安全与行业方案\n\nEnterprise、Business、Edu、Gov、Science、安全与行业方案在窗口内未发现经核验的新公告。官方新闻首页最新可见条目早于本窗口，本轮不把旧闻包装为当日更新。\n\n## 官方更新（新到旧）\n\n### Codex CLI 0.150.0-alpha.6\n\nGitHub 官方发布页显示该预发布构建于 **2026-08-22 06:42 +08:00** 发布；页面只有版本标识，未给出 release notes，因此仅确认构建发布，不延伸解读功能。[查看官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6)\n\n### Codex CLI 0.150.0-alpha.5\n\nGitHub 官方发布页显示该预发布构建于 **2026-08-22 02:12 +08:00** 发布；同样没有变更清单。[查看官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.5)\n\n## Love\n\n本窗口抽样未获得足够新的、可独立引用的明确正向体验帖。官方发布不计入正向口碑。\n\n## Hate\n\n- 一则 r/codex 用户帖集中抱怨 ChatGPT 桌面端会话加载、桌面网页冻结，以及 Codex Remote 在更新后不可用；这是单个用户的体验陈述，不能等同于已确认的全局故障。[查看社区帖](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)\n- r/codex 的滚动讨论中，多名用户在 8 月 22 日继续反馈相似工作负载下周额度消耗异常快；也有人称 CLI 消耗正常而 App 更快。样本自选择且缺乏可复现实验，证据强度有限。[查看滚动讨论](https://www.reddit.com/r/codex/comments/1vqwcbs/codex_usage_and_operation_discussion_updated/)\n\n## 情绪判断\n\n**偏负面，置信度中低。** 依据是两个社区入口中出现多条同方向的额度消耗与可用性投诉；但样本主要来自故障/用量讨论帖，天然放大负面体验，且未见 OpenAI 状态页或正式公告在窗口内确认事故。\n\n## 比较信号\n\n社区评论偶有将 Codex 与 Claude、Grok 等工具的额度和执行速度作比较，但缺少同任务、同配置、同计费周期的可复现实测，本页不据此给出产品优劣结论。\n\n## 日期未确认\n\n- 社区流传“Sol 降价/优惠”的说法，但搜索结果未能定位窗口内对应的 OpenAI 官方公告或完整条款，暂不写成事实。[查看讨论](https://www.reddit.com/r/ChatGPT/comments/1vv5qcr/sol_is_20_cheaper_for_next_3_months/)\n\n## 观察池\n\n- Reddit 用户称在 Codex 中看到“GPT-Reserve”名称；目前没有找到官方模型文档或发布说明佐证，可能是界面实验、内部标识或误读，状态为 **未确认**。[查看原帖](https://www.reddit.com/r/ChatGPT/comments/1vtz90w/i_think_i_accidentally_found_a_hidden_gptreserve/)\n\n## 未证实传闻\n\n除上述“GPT-Reserve”与价格讨论外，本轮未保留其他有足够可追溯链接的传闻。\n\n## 来源链接\n\n1. [Codex CLI 0.150.0-alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6)\n2. [Codex CLI 0.150.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.5)\n3. [桌面端与 Remote 体验投诉](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)\n4. [Codex 用量滚动讨论](https://www.reddit.com/r/codex/comments/1vqwcbs/codex_usage_and_operation_discussion_updated/)\n5. [Sol 优惠讨论（日期/条款未确认）](https://www.reddit.com/r/ChatGPT/comments/1vv5qcr/sol_is_20_cheaper_for_next_3_months/)\n6. [“GPT-Reserve”观察信号（未确认）](https://www.reddit.com/r/ChatGPT/comments/1vtz90w/i_think_i_accidentally_found_a_hidden_gptreserve/)\n\n## 采集状态\n\n- 已检查：OpenAI News / Index、OpenAI Help Center、开发者文档与 changelog、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开网页搜索。\n- 失败来源：X（未登录环境无法稳定核验完整帖文与时间）；YouTube（未发现可交叉核验的窗口内新增）。\n- 初始候选：8；最终保留来源：6。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Codex CLI 0.150.0-alpha.6",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6",
+      "source": "OpenAI / GitHub",
+      "publishedAt": "2026-08-22 06:42 +08:00",
+      "summary": "Codex 官方仓库发布 0.150.0-alpha.6 预发布构建，页面未附变更清单。",
+      "tags": ["Codex", "CLI", "Release"]
+    },
+    {
+      "title": "Codex CLI 0.150.0-alpha.5",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.5",
+      "source": "OpenAI / GitHub",
+      "publishedAt": "2026-08-22 02:12 +08:00",
+      "summary": "Codex 官方仓库发布 0.150.0-alpha.5 预发布构建，页面未附变更清单。",
+      "tags": ["Codex", "CLI", "Release"]
+    },
+    {
+      "title": "I'm absolutely speechless",
+      "url": "https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/",
+      "source": "Reddit r/codex",
+      "publishedAt": "2026-08-22 00:00 +08:00",
+      "summary": "用户报告桌面端会话加载、网页冻结及 Codex Remote 异常；属单一社区自述。",
+      "tags": ["Codex", "Remote", "Community", "Hate"]
+    },
+    {
+      "title": "Codex Usage and Operation Discussion - updated every 7 days",
+      "url": "https://www.reddit.com/r/codex/comments/1vqwcbs/codex_usage_and_operation_discussion_updated/",
+      "source": "Reddit r/codex",
+      "publishedAt": "",
+      "summary": "滚动讨论在 8 月 22 日出现多条额度快速消耗反馈，也包含 CLI 与 App 表现不同的用户观察。",
+      "tags": ["Codex", "Usage", "Community", "Hate"]
+    },
+    {
+      "title": "Sol is 20%+ cheaper for next 3 months!",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1vv5qcr/sol_is_20_cheaper_for_next_3_months/",
+      "source": "Reddit r/ChatGPT",
+      "publishedAt": "",
+      "summary": "用户讨论 Sol 价格优惠，但未能核验对应官方公告、发布时间和完整条款。",
+      "tags": ["Codex", "Pricing", "日期未确认"]
+    },
+    {
+      "title": "I think I accidentally found a hidden GPT-Reserve model in Codex",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1vtz90w/i_think_i_accidentally_found_a_hidden_gptreserve/",
+      "source": "Reddit r/ChatGPT",
+      "publishedAt": "2026-08-22 00:00 +08:00",
+      "summary": "用户称看到 GPT-Reserve 标识，官方文档未见佐证，作为未确认观察信号保留。",
+      "tags": ["Codex", "Model", "观察池", "未确认"]
+    }
+  ]
+}
