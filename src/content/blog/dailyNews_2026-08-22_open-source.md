@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T11:22:00+08:00"
+updatedAt: "2026-08-22T13:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "ANOLISA / AgentSight"
 featuredUrl: "https://github.com/alibaba/anolisa"
@@ -21,7 +21,9 @@ tags:
   - "Communication"
   - "Context"
   - "Coordination"
+  - "Database"
   - "Date Unverified"
+  - "E-commerce"
   - "eBPF"
   - "Engineering"
   - "Evaluation"
@@ -54,7 +56,7 @@ tags:
 
 ## 今日概览
 
-本轮精选窗口更新为 **2026-08-20 11:22:00 至 2026-08-22 11:22:00（Asia/Shanghai）**；当天累积内容仍完整保留早前已收录来源。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试、本地推理和持久化子代理协作工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
+本轮精选窗口更新为 **2026-08-20 13:01:00 至 2026-08-22 13:01:00（Asia/Shanghai）**；当天累积内容仍完整保留早前已收录来源。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试、本地推理和持久化子代理协作工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
 
 ## 已验证精选
 
@@ -114,6 +116,8 @@ tags:
 
 ## 论文与研究
 
+- [EchoCoT 原文](https://arxiv.org/abs/2608.20055)于 **2026-08-20 21:52 +08:00** 提交，研究从黑盒推理模型的工具调用边界提取隐藏思维链，并报告在受测模型上的攻击结果。该稿属于安全方向预印本，成功率等数字均为作者报告，本轮未独立复现。
+
 除前三篇精选外，本轮 arXiv 还出现 agent 安全、规则落地与环境构造方向的新稿；为避免把刚提交的预印本结论写成定论，暂不扩展为独立来源。后续若出现代码、作者项目页或复现实验，再升级收录。另补充 [FreeToken 论文原文](https://arxiv.org/abs/2608.16157)：论文提交于 **2026-08-17 14:22 +08:00**，早于 48 小时高亮窗口，支持其面向异构个人硬件的 MoE serving 技术定位；论文中的模型规模、性能和兼容范围仍是作者报告，本轮未复现。
 
 ## 旧文重新升温
@@ -123,14 +127,16 @@ tags:
 
 ## 日期未确认
 
+- [DeepSQL 工程文章](https://deepsql.ai/blog/giving-an-llm-your-database-is-easy-taking-access-away-is-hard)讨论 LLM 访问生产数据库时，撤权、会话状态与每次查询授权的工程难题；页面未提供可独立核验的发布日期，仅确认其在 **2026-08-22 11:33 +08:00** 出现在 HN，因此保留为日期未确认的邻近信号。
 - [Traccia 官网](https://traccia.ai/)自述提供 agent 可观测、评估、治理与运行时策略控制；[HN 提交](https://news.ycombinator.com/item?id=49391995)于 **2026-08-22 02:20 +08:00** 出现，截止时 1 point、0 comments。官网未给出可确认的首次发布日期或公开代码仓库，因此仅保留为日期未确认的产品信号，未验证其功能实现。
 
 ## 观察池
 
 - **低互动 / 个人上下文项目**：[Lore MCP 官方仓库](https://github.com/dipakkrishnan/lore-mcp)创建于 **2026-07-17 01:06 +08:00**，MIT，自述为 personal agent 提供可携带、默认私有的上下文层；[HN 提交](https://news.ycombinator.com/item?id=49392057)于 **2026-08-22 02:25 +08:00** 出现，截止时 1 point、0 comments。只确认仓库定位与讨论信号，未验证其商业化或隐私承诺。
+- **低互动 / 早期项目**：[agent-ready-checkout 官方仓库](https://github.com/MythrilS/agent-ready-checkout)创建于 **2026-08-22 08:04 +08:00**，公开了针对 20 个自称支持 agent 的 Shopify 商店的浏览器测试脚本与结果；README 报告的通过率与失败比例来自作者的小样本测试，且仓库未声明许可证，本轮未复跑，故仅列观察池。
 - **低互动 / 早期项目**：FreeToken、Taskuary、AgentCheck、Proliferate、Caspian SDK、Parselbox、Oh My Subagents 与 Heimdall 的 HN 讨论量很小，技术定位已由官方仓库确认，但社区验证强度不足。
 - **榜单热度而非发布事件**：ai-memory、OpenViking、AI-Infra-Guard 只确认当日 Trending 状态；功能成熟度、性能与增长持续性未验证。
-- **新预印本**：AI4AI-Bench、技能迁移研究与 Task-CoEvolve 均处于预印本阶段，实验数字应以论文原文和后续复现为准。
+- **新预印本**：AI4AI-Bench、技能迁移研究、Task-CoEvolve 与 EchoCoT 均处于预印本阶段，实验数字应以论文原文和后续复现为准。
 
 ## 来源链接
 
@@ -138,7 +144,7 @@ tags:
 
 ## 采集状态
 
-- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck、Oh My Subagents、Heimdall 与 Linux 原始页面。
-- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 增量复查无直接相关新文；GitHub 语言榜单与 overall 高度重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库。
-- 初始候选：46；最终保留来源：35（21 个独立事件 / 项目，其中 14 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-22 11:22:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。
+- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck、Oh My Subagents、Heimdall、Linux、agent-ready-checkout、EchoCoT 与 DeepSQL 原始页面。
+- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 增量复查无直接相关新文；GitHub 语言榜单与 overall 高度重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库；DeepSQL 原文未提供可独立核验的发布日期。
+- 初始候选：49；最终保留来源：38（24 个独立事件 / 项目，其中 14 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-22 13:01:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。

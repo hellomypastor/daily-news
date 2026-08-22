@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T11:27:00+08:00"
+updatedAt: "2026-08-22T13:01:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore"
 featuredUrl: "https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/"
@@ -12,6 +12,7 @@ featuredImageAlt: "AWS 多智能体迁移框架架构示意图"
 featuredImageCaption: "图片来源：AWS Machine Learning Blog"
 tags:
   - "24-72h"
+  - "可信二手"
   - "邻近信号"
   - "日期未确认"
   - "中国"
@@ -38,12 +39,13 @@ tags:
   - "Remote Agent"
   - "Remote Control"
   - "Sandbox"
+  - "Slack Code"
   - "UiPath"
 ---
 
 ## 扫描结论
 
-本轮主发现窗口：2026-08-21 11:27 至 2026-08-22 11:27（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 11:27 至 2026-08-21 11:27。当天页面按累积规则保留早前已收录来源，其中 Claude Code/Agent SDK 2.1.238/0.3.238、Codex 0.149.0 与 Anthropic 状态事件已滑出本轮 24 小时窗口，不再声称为本轮主窗口发现。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制；本轮增量检得 Gemini CLI nightly 对 macOS 沙箱隔离的修复，属于执行安全邻近信号，不代表 Google 托管 Agent 服务端更新。竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
+本轮主发现窗口：2026-08-21 13:01 至 2026-08-22 13:01（Asia/Shanghai）；24–72 小时观察窗口：2026-08-19 13:01 至 2026-08-21 13:01。当天页面按累积规则保留早前已收录来源，其中 Claude Code/Agent SDK 2.1.238/0.3.238、Codex 0.149.0 与 Anthropic 状态事件已滑出本轮 24 小时窗口，不再声称为本轮主窗口发现。主窗口内最明确的 AaaS 信号来自 Claude Code 云会话、Claude Agent SDK 后台任务重连与 Codex 本地、远程任务控制；Gemini CLI nightly 对 macOS 沙箱隔离的修复属于执行安全邻近信号，不代表 Google 托管 Agent 服务端更新。本轮增量保留 VentureBeat 对 Slack Code 的报道作为 24–72 小时可信二手观察：其协作频道、运行状态、停止控制与审计轨迹具备 AaaS 控制面意义，但因未找到同窗官方原文，不列为已验证发布。竞争焦点继续落在长任务生命周期、会话恢复、消息可靠性和远程执行边界，而不是单纯模型 API。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
 
 ## 今日重点
 
@@ -80,6 +82,7 @@ tags:
 
 - [Codex as a platform](https://developers.openai.com/blog/codex-as-a-platform)说明 Codex CLI、SDK 与 app-server 的嵌入边界，包括启动、恢复、事件流、持久会话和审批；文章日期为 8 月 19 日，作为平台化信号保留，详见 OpenAI 专题页。
 - [AWS Bedrock AgentCore 多智能体迁移案例](https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/)展示 serverless runtime、session isolation、Gateway、Identity、Memory、Policy 和 Observability 如何承载四类迁移 Agent。官方页面标注 8 月 20 日但无时分，无法精确判定与 24 小时边界的关系；其中效率数字来自 AWS Professional Services 内部项目跟踪，未独立复测。
+- [Slack Code 二手报道](https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat)于 8 月 21 日 08:00 +08:00 报道代码 Agent 可在专用 Slack 频道中运行，团队可查看计划与差异、引导或停止会话，并留下可搜索审计轨迹；未找到同窗 Slack 官方原文，因此仅作为可信二手观察，不写成官方已核验发布。
 - [Zephyr The AI Platform 发布新闻稿](https://www.prnewswire.com/news-releases/zephyr-launches-the-ai-platform-a-multi-agent-workspace-where-teams-work-alongside-ai-specialists-302855949.html)于 8 月 20 日 21:00 +08:00 宣布团队多 Agent 工作面正式可用；证据是公司提供的新闻稿，采用与成效数据未获独立验证。
 
 <figure class="source-image">
@@ -100,7 +103,7 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 
 ## 未证实传闻
 
-本轮未保留可达到最低证据门槛的单源泄露。搜索中出现的 Slack Code 等候选仅有二手报道且缺同窗官方原文，未呈现为产品发布事实。
+本轮未保留可达到最低证据门槛的单源泄露。搜索中出现的 Slack Code 仅有可信二手报道且缺同窗官方原文，已放入 24–72 小时观察池并明确限制；未呈现为官方已核验发布事实。
 
 ## 邻近信号观察池
 
@@ -120,9 +123,9 @@ Claude runner/Remote Control 与 Codex remote session 控制具备执行环境�
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cursor、Replit、Devin、CrewAI、LangGraph、Cloudflare、OpenHands、Factory、Sourcegraph/Amp、Lindy、UiPath Agents，以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek、华为云公开入口；并做中英文网页、官方 release/changelog/status 与可信二手交叉检索。
-- 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Cursor/AWS/中国厂商部分页面无精确时分；GitHub Status 搜索缓存与历史页抓取不一致；Slack Code 未找到同窗官方原文。
-- 候选数量：48。
-- 最终保留：16 个独立来源 URL；本轮主发现窗口 4 个（其中 GitHub Copilot CLI 与 Gemini CLI 20260822 为邻近信号）、当天累计保留但已滑出本轮 24 小时 5 个、24–72 小时/观察 3 个、日期未确认 4 个。
+- 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Cursor/AWS/中国厂商部分页面无精确时分；GitHub Status 搜索缓存与历史页抓取不一致；Slack Code 未找到同窗官方原文，已降级保留可信二手报道。
+- 候选数量：49。
+- 最终保留：17 个独立来源 URL；本轮主发现窗口 4 个（其中 GitHub Copilot CLI 与 Gemini CLI 20260822 为邻近信号）、当天累计保留但已滑出本轮 24 小时 5 个、24–72 小时/观察 4 个、日期未确认 4 个。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 16 条动态，重点：Claude 云会话与 SDK 后台任务重连、Codex 远程任务控制及 Gemini CLI 沙箱隔离继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。
+今日扫描完成，共 17 条动态，重点：Claude 云会话与 SDK 后台任务重连、Codex 远程任务控制及 Gemini CLI 沙箱隔离继续把竞争推向长任务生命周期、会话恢复、消息可靠性和安全执行边界。

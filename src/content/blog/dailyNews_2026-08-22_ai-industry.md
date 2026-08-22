@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T11:22:00+08:00"
+updatedAt: "2026-08-22T13:01:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Measuring benchmark optimization in speech recognition"
 featuredUrl: "https://huggingface.co/blog/asr-benchmark-optimization"
@@ -10,6 +10,7 @@ featuredPublishedAt: "2026-08-21 08:00 +08:00"
 featuredTags: ["Speech","Benchmark","Hugging Face"]
 tags:
   - "24–48h"
+  - "48–72h"
   - "日期未确认"
   - "Agent"
   - "AI"
@@ -21,6 +22,7 @@ tags:
   - "Liquid AI"
   - "Microsoft Research"
   - "Podcast"
+  - "Quantization"
   - "Research"
   - "Science AI"
   - "Simulation"
@@ -29,7 +31,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-21 11:22 至 2026-08-22 11:22（Asia/Shanghai）。累计核实到 Latent Space 在上一轮截止后发布的 1 集新播客，并保留 Hugging Face 社区技术文章；24–48 小时保留 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。另保留 4 条官方列表仅标注月份、无法确认具体日的 Google DeepMind 候选。当天累积来源不因滚动窗口前移而删除。
+扫描窗口：2026-08-21 13:01 至 2026-08-22 13:01（Asia/Shanghai）。累计保留 Latent Space 的新播客与 Hugging Face 社区技术文章；24–48 小时保留 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。本轮另核实 3 条 48–72 小时技术信号：Liquid AI 的量化感知蒸馏权重、BaseCompute 的 Agent 驱动端侧推理优化栈，以及 Metric-AI 的亚美尼亚语 ASR 基准。另保留 4 条官方列表仅标注月份、无法确认具体日的 Google DeepMind 候选。当天累积来源不因滚动窗口前移而删除。
 
 ## 优先动态
 
@@ -59,7 +61,11 @@ Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已�
 
 ## 近三日补充
 
-未发现可以同时确认原文与 48–72 小时日期的新增候选。
+| 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |
+|---|---|---|---|---|---|
+| Liquid AI / Hugging Face 社区 | LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation | 模型权重/量化 | 2026-08-19；48–72h | Liquid AI 发布 4 个 LFM2.5 尺寸的 QAD Q4_0 GGUF；原文称在其评测组合中恢复约 96.5%–97.4% 的 BF16 基线表现，数字仅代表作者给定基准与硬件设置。 | [原文](https://huggingface.co/blog/LiquidAI/qad) |
+| BaseCompute / Hugging Face 社区 | Base Optimization Stack: From Open Weights to Frontier On-Device Inference Speed | Agent 工程/端侧推理 | 2026-08-20；48–72h | 作者展示由研究 Agent 执行移植与调优、由固定门槛验收的流水线，并在 Apple Silicon 上测试 Nemotron 3 Nano；性能与成本数据均为作者实验，尚非独立复现。 | [原文](https://huggingface.co/blog/basecompute/base-optimization-stack) |
+| Metric-AI / Hugging Face 社区 | ArmBench-ASR: A Benchmark for Armenian ASR | 语音基准 | 2026-08-20；48–72h | v0.1 在 5 个亚美尼亚语语音数据集、10,113 段音频上比较近 30 个模型；3 个领域数据集未开源，作者也明确提醒 API 与托管模型可能变化。 | [原文](https://huggingface.co/blog/Metric-AI/armbench-asr) |
 
 ## 日期未确认
 
@@ -82,12 +88,15 @@ Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已�
 - [Liquid AI / Hugging Face：LFM2.5-DSpark](https://huggingface.co/blog/LiquidAI/lfm25-dspark)
 - [Microsoft Research：Skala](https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft/)
 - [Google DeepMind News](https://deepmind.google/blog/)
+- [Liquid AI：LFM2.5 QAD Q4_0](https://huggingface.co/blog/LiquidAI/qad)
+- [BaseCompute：Base Optimization Stack](https://huggingface.co/blog/basecompute/base-optimization-stack)
+- [Metric-AI：ArmBench-ASR](https://huggingface.co/blog/Metric-AI/armbench-asr)
 
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及指定播客入口。
 - 失败来源：Alibaba Cloud News 抓取返回内部错误；部分动态页依赖 JavaScript；No Priors 官方域名连接失败；LlamaIndex 既有 RSS 地址返回 404，已改查公开入口。
-- 初始候选：15 条；最终保留：9 条（4 条日期明确、1 条当天累积失效链接、4 条日期未确认）。
+- 初始候选：18 条；最终保留：12 条（7 条日期明确、1 条当天累积失效链接、4 条日期未确认）。
 - 二次补搜：否（最终来源不为 0）。
 
-一句话总结：最近 24 小时新增 Latent Space 对人类行为模拟与数字孪生的技术访谈，并保留 Hugging Face 社区 ASR 评测方法；Google DeepMind 四项 8 月候选仍待确认具体日期。
+一句话总结：最近 24 小时保留 Latent Space 对人类行为模拟与数字孪生的技术访谈；近三日新增量化权重、Agent 驱动推理优化与低资源语音基准信号，Google DeepMind 四项 8 月候选仍待确认具体日期。
