@@ -9,17 +9,58 @@ import Comment from "$/components/Comment.svelte";
 
 <style>
   .prose {
-    @apply max-w-4xl
-        /* Size Modifiers: https://github.com/tailwindlabs/tailwindcss-typography#size-modifiers */
-        /* Color Themes: https://github.com/tailwindlabs/tailwindcss-typography#color-modifiers */;
+    max-width: 46rem;
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14.4px;
+    line-height: 20.88px;
+  }
+  .prose :global(h1),
+  .prose :global(h2),
+  .prose :global(h3),
+  .prose :global(h4) {
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+  }
+  .prose :global(h1) { margin: 0 0 0.65rem; font-size: 1.65rem; }
+  .prose :global(h2) { margin: 1.35rem 0 0.45rem; font-size: 1.25rem; }
+  .prose :global(h3) { margin: 1.05rem 0 0.35rem; font-size: 1.05rem; }
+  .prose :global(h4) { margin: 0.9rem 0 0.3rem; font-size: 0.95rem; }
+  .prose :global(p) { margin: 0 0 0.72rem; }
+  .prose :global(ul),
+  .prose :global(ol) { margin: 0.45rem 0 0.8rem; padding-left: 1.35rem; }
+  .prose :global(li) { margin: 0.12rem 0; padding-left: 0.1rem; }
+  .prose :global(li > p) { margin: 0.18rem 0; }
+  .prose :global(blockquote) {
+    margin: 0.8rem 0;
+    padding: 0.15rem 0 0.15rem 0.85rem;
+    border-left: 0.28rem solid #ece5ef;
+    color: var(--ink);
   }
   .prose :global(table) {
     display: block;
     max-width: 100%;
+    margin: 0.65rem 0 1rem;
     overflow-x: auto;
+    font-size: 12.8px;
+    line-height: 1.38;
+  }
+  .prose :global(th),
+  .prose :global(td) {
+    padding: 0.32rem 0.45rem;
+    vertical-align: top;
+  }
+  .prose :global(hr) { margin: 1.15rem 0; }
+  .prose :global(pre) { margin: 0.7rem 0 1rem; font-size: 12.8px; }
+  .prose :global(code) { font-size: 0.9em; }
+  .prose :global(a) {
+    color: var(--link);
+    text-decoration: underline;
   }
   .prose :global(figure.source-image) {
-    margin: 1.5rem 0 2rem;
+    margin: 0.8rem 0 1.15rem;
   }
   .prose :global(figure.source-image img) {
     display: block;
@@ -29,12 +70,17 @@ import Comment from "$/components/Comment.svelte";
     border: 1px solid var(--line-strong);
   }
   .prose :global(figure.source-image figcaption) {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     color: var(--muted);
     font-size: 0.75rem;
   }
   .prose :global(figure.source-image figcaption a) {
     color: var(--link);
     text-decoration: underline;
+  }
+  @media (max-width: 760px) {
+    .prose { max-width: 100%; font-size: 14px; line-height: 20.3px; }
+    .prose :global(h1) { font-size: 1.5rem; }
+    .prose :global(h2) { font-size: 1.18rem; }
   }
 </style>
