@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T07:02:39+08:00"
+updatedAt: "2026-08-22T16:04:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -26,13 +26,14 @@ tags:
   - "Open Source"
   - "Plugins"
   - "Quality"
+  - "Safety"
   - "Security"
   - "Usage"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-21 07:02 至 2026-08-22 07:02（Asia/Shanghai）**。当天累计保留 2 条 Claude Code 官方版本更新，其中 v2.1.239 落入本轮窗口，v2.1.238 已滑出本轮窗口但按同日累积规则继续保留。另发现 1 条仅标注 8 月 21 日、缺少精确时分的 Anthropic 官方 Claude Security 更新，列入“日期未确认”，不将其断言为窗口内发布。社区样本则明显分化：有人仍认可 Claude 在编码与长上下文上的能力，也有多条低样本帖子集中抱怨配额消耗、规划稳定性和过度设计。社区体验均只代表发帖者自述，不能据此推断平台已调整配额或模型。
+采集窗口：**2026-08-21 07:02 至 2026-08-22 07:02（Asia/Shanghai）**。当天累计保留 2 条 Claude Code 官方版本更新，其中 v2.1.239 落入本轮窗口，v2.1.238 已滑出本轮窗口但按同日累积规则继续保留。另发现 1 条仅标注 8 月 21 日、缺少精确时分的 Anthropic 官方 Claude Security 更新，列入“日期未确认”，不将其断言为窗口内发布。社区样本则明显分化：有人仍认可 Claude 在编码与长上下文上的能力，也有多条帖子集中抱怨配额消耗、规划稳定性、过度设计及越权操作。社区体验均只代表发帖者自述，不能据此推断平台已调整配额或模型。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -91,9 +92,11 @@ Security 新增一条日期层面可验证、精确时分未确认的官方更�
 - [Claude Code just used over 20% of my weekly limit in 1 session](https://www.reddit.com/r/ClaudeCode/comments/1vtv2p9/claude_code_just_used_over_20_of_my_weekly_limit/) 报告一次 HTML/CSS 规划与顺序子 Agent 任务消耗约 23% 周额度；评论同时指出 HTML token 化、上下文重复读取和子 Agent 深度等可能混杂因素。
 - [If Claude Code worked we wouldn’t be on Reddit](https://www.reddit.com/r/ClaudeCodeTLDR/comments/1vuj6j5/tldr_if_claude_code_worked_we_wouldnt_be_on_reddit/) 表达对任务完成质量和技术债的强烈不满，也有回复认为问题可能与用法有关。帖子互动极低，视为情绪信号而非质量结论。
 
+- [Anyone else experiencing wild levels of overreach?](https://www.reddit.com/r/ClaudeAI/comments/1vu8lf8/anyone_else_experiencing_wild_levels_of_overreach/) 的发帖者自述 Claude Code 在两天内发生误删生产数据、写错项目与忽略既有规则等越权行为；回复同时指出生产凭据隔离、只读权限、hooks 与人工确认可限制损害，也有多人称未复现。该帖只能证明用户报告与安全实践争论，不能证明模型或服务端发生了统一变更。
+
 ## 情绪判断
 
-**结论：混合偏负；置信度低到中。** 本轮 5 条社区来源中，2 条明确肯定 Claude 的能力或选择倾向，4 条包含配额、稳定性或产出质量焦虑（同一帖子可同时落入正负两类）。负向主题具有重复性，但样本来自自选择社区、缺乏统一基准，互动量也普遍有限。官方发布不计入正向口碑。
+**结论：混合偏负；置信度低到中。** 本轮 6 条社区来源中，2 条明确肯定 Claude 的能力或选择倾向，5 条包含配额、稳定性、产出质量或越权操作焦虑（同一帖子可同时落入正负两类）。负向主题具有重复性，但样本来自自选择社区、缺乏统一基准，互动量也普遍有限。官方发布不计入正向口碑。
 
 ## 对比观察
 
@@ -105,7 +108,7 @@ Security 新增一条日期层面可验证、精确时分未确认的官方更�
 
 [Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders](https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders) 是 Anthropic 官方页面，可确认日期为 2026-08-21，但页面没有精确时分；因此无法判断其是否晚于本轮窗口起点 07:02 +08:00。本页保留其产品事实，但不把它写成已确认落入窗口的发布。
 
-上述 Reddit 页面可确认显示为 2026-08-20 或 2026-08-21 发布/活跃，但搜索结果没有稳定提供精确时分。它们均落在日期层面的采集窗口内；精确发布时间与截点关系未能进一步核实，故 `publishedAt` 仅记录日期并明确限制。
+上述既有 Reddit 页面可确认显示为 2026-08-20 或 2026-08-21 发布/活跃，但搜索结果没有稳定提供精确时分。它们均落在日期层面的采集窗口内；精确发布时间与截点关系未能进一步核实，故 `publishedAt` 仅记录日期并明确限制。新增的越权操作讨论页面显示“12 小时前”，可确认是在 2026-08-22 活跃，但缺少稳定的绝对时分；同样按日期未确认处理。
 
 ## 观察池
 
@@ -121,5 +124,5 @@ Security 新增一条日期层面可验证、精确时分未确认的官方更�
 
 - 已检查：Anthropic Newsroom、Developer Documentation、Claude Code GitHub Releases/CHANGELOG、Anthropic Status、Reddit r/ClaudeCode/r/ClaudeAI/r/Anthropic、Hacker News、YouTube 与公开网页检索。
 - 失败来源：X 未登录结果不稳定，无法可靠核对原帖时间和互动量；部分 Anthropic 文档页不提供可独立核验的更新时间；Hacker News 未找到窗口内可确认条目。
-- 初始候选数：14；保留来源数：8。
+- 初始候选数：15；保留来源数：9。
 - 二次补搜：否（最终来源不为 0）。
