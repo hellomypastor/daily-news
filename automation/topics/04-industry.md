@@ -6,6 +6,8 @@ Write `industry.json` with order `40`, slug `ai-industry`, title `主流 AI / Ag
 
 Check current official feeds/list pages for Anthropic, OpenAI, Google DeepMind/Research, Meta AI, Microsoft Research/AI, xAI, Mistral, Cohere, Qwen/Alibaba/DAMO, ByteDance Doubao/Seed, Baidu, Tencent Hunyuan, DeepSeek, Zhipu/GLM, Moonshot/Kimi, StepFun, MiniMax, NVIDIA Developer/Research, Hugging Face, LangChain and LlamaIndex. Also check new episodes from Latent Space, Dwarkesh, No Priors, The Cognitive Revolution, a16z AI and official vendor podcasts. Discover a current official URL if a listed entry moved.
 
+xAI / Grok is mandatory on every run rather than incidental coverage. Search xAI's official news, documentation, API/model changelog and official repositories for Grok model/API releases, DeepSearch, voice, coding, tool-use and Agent capabilities. Record the checked xAI/Grok channels in `scan.checkedSources`; if nothing relevant is found, do not invent or pad an item.
+
 Anthropic and OpenAI must be checked and relevant items may be repeated here with `详见 Claude 专题页` or `详见 OpenAI 专题页`. Moonshot/Kimi and MiniMax are separate vendors.
 
 ## Time and output

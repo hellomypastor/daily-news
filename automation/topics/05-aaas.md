@@ -8,10 +8,12 @@ AaaS here means a service that hosts or manages Agent execution, asynchronous ta
 
 ## Coverage
 
-- Overseas: Anthropic managed/hosted Agents, Agent SDK/Skills/Claude Code; OpenAI agent-building products, ChatGPT agents and Codex remote/cloud; Google Vertex Agent products and Gemini/Jules; Microsoft Copilot Studio/Azure Agent services; Replit Agent, Devin, Cursor, Lindy, CrewAI, LangGraph Platform, GitHub coding agent, Amazon Q Developer; Cloudflare Agents/Sandboxes/Computer/Workers; Factory and Sourcegraph/Amp.
+- Overseas: Anthropic managed/hosted Agents, Agent SDK/Skills/Claude Code; OpenAI agent-building products, ChatGPT agents and Codex remote/cloud; Google Vertex Agent products and Gemini/Jules; Microsoft Copilot Studio/Azure Agent services; Replit Agent; Cognition Devin; xAI/Grok Agent capabilities; Cursor, Lindy, CrewAI, LangGraph Platform, GitHub coding agent, Amazon Q Developer; Cloudflare Agents/Sandboxes/Computer/Workers; Factory and Sourcegraph/Amp.
 - Remote/cloud execution: hosted async tasks, background agents, PR agents, environment/runtime isolation, concurrency, pricing and enterprise integration.
 - China: ByteDance Coze/Volcano/Doubao/Trae/Seed; Alibaba Bailian/Qoder/Tongyi/Quark; Tencent Yuanbao/Hunyuan/Cloud; Baidu AgentBuilder/Comate; Zhipu, Moonshot/Kimi, MiniMax, DeepSeek and credible startups.
 - Events: launches, beta/GA, hosted runtime, SDK/skills, pricing, quotas, enterprise adoption, revenue, funding/M&A and meaningful open-source/engineering updates.
+
+Cognition Devin and xAI/Grok are mandatory checks on every run. For Devin, inspect official product news/changelog/docs for hosted or asynchronous execution, environments, concurrency, pricing, enterprise access and integrations. For Grok, look specifically for hosted Agent execution, asynchronous tasks, tool use, coding/remote execution and enterprise/API Agent capabilities; ordinary Grok model/API news belongs in the industry page and is only an AaaS item when it satisfies the definition above. Record both checks in `scan.checkedSources`, even when no reportable development is found.
 
 Use a primary 24h window and include all relevant 24–72h items in a watchlist. Keep older or undated candidates in `日期未确认` or `观察池`. Product names are search terms until confirmed. One-source leaks/rumors may appear only in `未证实传闻`, labeled with source count and never presented as product launches.
 
