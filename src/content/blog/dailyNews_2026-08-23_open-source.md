@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T01:01:00+08:00"
+updatedAt: "2026-08-23T04:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Myli"
 featuredUrl: "https://github.com/EightPotions/Myli"
@@ -13,8 +13,11 @@ tags:
   - "AI"
   - "Apple Silicon"
   - "Autocomplete"
+  - "Claude Code"
+  - "Coding"
   - "Date Unverified"
   - "Design"
+  - "Developer Tool"
   - "Evaluation"
   - "Git"
   - "HN"
@@ -28,6 +31,7 @@ tags:
   - "Open Source"
   - "Research"
   - "Resurfaced"
+  - "Safety"
   - "Sandbox"
   - "Shell"
   - "Skill"
@@ -39,7 +43,7 @@ tags:
 
 ## 今日概览
 
-本页研究窗口为 **2026-08-21 01:01 至 2026-08-23 01:01（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理与 GenAI 可观测性。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
+本页研究窗口为 **2026-08-21 04:01 至 2026-08-23 04:01（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理与 GenAI 可观测性。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
 
 ## 已验证精选
 
@@ -73,6 +77,7 @@ tags:
 
 ## HN 讨论
 
+- [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)采用 AGPL-3.0，支持在本地或云端并行运行多种 coding agent 并保存可复用工作流；[HN 讨论](https://news.ycombinator.com/item?id=49390739)于 **2026-08-22 00:47 +08:00** 提交，截止时 42 points、15 comments。仓库早于窗口创建，本轮确认的是讨论热度；产品定位与能力来自 README，未在本轮独立压测。
 - [StateM 官方仓库](https://github.com/henryqin1997/statem)采用 Apache-2.0，提供面向长任务 agent 的状态化 runbook CLI；[HN 讨论](https://news.ycombinator.com/item?id=49399887)于 **2026-08-22 22:07 +08:00** 提交，截止时 1 point、1 comment。仓库早于窗口创建，本轮确认的是讨论信号。
 - [Knowl 官方仓库](https://github.com/dat999zx/knowl)采用 Apache-2.0，README 描述会压缩和淘汰旧知识的 agent 记忆层；[HN 讨论](https://news.ycombinator.com/item?id=49399942)于 **2026-08-22 22:13 +08:00** 提交，截止时 1 point、1 comment。所谓自维护效果尚未独立验证。
 - [GitX Skill 官方仓库](https://github.com/musoyangrigor/gitx-skill)采用 MIT，提供跨多种 coding agent 的 Git 工作流 skill；[HN 讨论](https://news.ycombinator.com/item?id=49401487)于 **2026-08-23 00:50 +08:00** 提交，截止时 1 point、0 comments。仓库创建早于七天，只记录当前复热。
@@ -84,6 +89,7 @@ tags:
 
 ## 旧文重新升温
 
+- [Practice Makes Unsafe](https://arxiv.org/abs/2608.12851)原始提交于 **2026-08-13 13:47 +08:00**，研究自改进 agent 把不安全轨迹固化为可复用技能的风险；[HN 讨论](https://news.ycombinator.com/item?id=49391398)于 **2026-08-22 01:34 +08:00** 重新出现，截止时 2 points、0 comments。论文实验与 SafeEvolve 改进幅度均按作者报告记录，本轮未复现。
 - [自托管、沙箱化 agent 软件工厂工程文](https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/)原文早于本轮七日阈值；[HN 讨论](https://news.ycombinator.com/item?id=49390463)于 **2026-08-22 00:27 +08:00** 重新出现，截止时 112 points、59 comments。这里记录复热，不把旧文标成今日发布。
 
 ## 日期未确认
@@ -92,6 +98,7 @@ tags:
 
 ## 观察池
 
+- **低互动 / Agent 工具**：[TechSkills](https://github.com/debabratasaha-dev/techskills)采用 MIT，提供 coding-agent 技能模块；[HN 讨论](https://news.ycombinator.com/item?id=49401893)于 **2026-08-23 01:37 +08:00** 提交，截止时 2 points、0 comments。[Terminito](https://github.com/arturlimaaa/terminito)采用 MIT，提供 Claude Code 状态栏；[HN 讨论](https://news.ycombinator.com/item?id=49403092)于 **2026-08-23 03:40 +08:00** 提交，截止时 1 point、1 comment。两者均属早期低互动信号，未复测 README 所述效果。
 - **低互动 / Shell 辅助**：[Namo Complete](https://github.com/namo-robotics/namo_complete)采用 MIT，提供 Bash 本地补全；[HN 讨论](https://news.ycombinator.com/item?id=49401434)于 **2026-08-23 00:44 +08:00** 提交，截止时 1 point、0 comments。项目早期且未复测补全质量。
 - **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。
 - **新预印本**：AI4AI-Bench 与技能迁移论文均不把作者实验结果写成已复现事实。
@@ -104,5 +111,5 @@ tags:
 
 - 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。
 - 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号。
-- 初始候选：114；最终保留来源：26（13 个事件 / 项目，其中 11 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-23 01:01:00 +08:00；互动量均为截止快照。
+- 初始候选：1873；最终保留来源：34（17 个事件 / 项目，其中 15 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-23 04:01:00 +08:00；互动量均为截止快照。
