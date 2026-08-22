@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T16:02:00+08:00"
+updatedAt: "2026-08-22T19:00:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.150.0-alpha.3"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3"
@@ -24,6 +24,7 @@ tags:
   - "Guardian"
   - "Hate"
   - "Incident"
+  - "Investigation"
   - "MCP"
   - "No Update"
   - "OpenAI"
@@ -126,6 +127,11 @@ Enterprise、Business、Edu、Gov、Science 与独立安全产品未发现窗口
 
 本轮没有纳入日期无法确认但足以单列的官方产品发布。部分官方 changelog 页面只显示现行内容而无本轮更新时间，因此仅用于“未发现新增”的扫描判断，不作为 24 小时新闻事实。
 
+### 19:00 增量
+
+- Codex 负责人 Tibo Sottiaux [公开确认](https://x.com/thsottiaux/status/2091033630147854385)部分用户本周 cache hit rate 低于此前水平，可能解释用量消耗加快；影响范围、根因和额度政策变化仍未确认。
+- Agents SDK Python 主分支新增[公开 Voice API contract 回归检查](https://github.com/openai/openai-agents-python/commit/5b8f6c71747e5feef143c7047a165ebadf0a021d)，尚未 release。
+
 ## 观察池
 
 - MCP 运行时连接状态、未完成根任务挂起、严格 MCP 审核结果保留、Windows sandbox、Guardian / MCP 隔离、MCP OAuth issuer binding、Agents SDK 语音、错误处理与多语言文档锚点保留均为窗口内主分支提交；等待正式 release notes 确认交付版本与用户影响。
@@ -140,5 +146,5 @@ Enterprise、Business、Edu、Gov、Science 与独立安全产品未发现窗口
 
 - 已检查来源：OpenAI Developers / API / model / migration docs，ChatGPT & Codex changelog、Release Notes、Newsroom、Status，Codex 与四个 SDK 仓库，以及 Reddit、HN、中英文新闻和 IDE / Desktop / Enterprise 关键词。
 - 失败来源：X 无法稳定取得公开正文与精确时间；Reddit JSON / RSS 不稳定；JetBrains 与 YouTube 未见可核实官方新增。已改用公开原页与搜索索引，并降低社区证据等级。
-- 初始候选数：99；保留来源数：21。
+- 初始候选数：110；保留来源数：23。
 - 二次补搜：否（最终来源不为 0）。

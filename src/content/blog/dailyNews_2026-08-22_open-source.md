@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T16:02:00+08:00"
+updatedAt: "2026-08-22T19:00:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "ANOLISA / AgentSight"
 featuredUrl: "https://github.com/alibaba/anolisa"
@@ -52,6 +52,7 @@ tags:
   - "SDK"
   - "Security"
   - "Skills"
+  - "Tools"
   - "Trending"
   - "Watchlist"
   - "Workflow"
@@ -134,6 +135,12 @@ tags:
 - [DeepSQL 工程文章](https://deepsql.ai/blog/giving-an-llm-your-database-is-easy-taking-access-away-is-hard)讨论 LLM 访问生产数据库时，撤权、会话状态与每次查询授权的工程难题；页面未提供可独立核验的发布日期，仅确认其在 **2026-08-22 11:33 +08:00** 出现在 HN，因此保留为日期未确认的邻近信号。
 - [Traccia 官网](https://traccia.ai/)自述提供 agent 可观测、评估、治理与运行时策略控制；[HN 提交](https://news.ycombinator.com/item?id=49391995)于 **2026-08-22 02:20 +08:00** 出现，截止时 1 point、0 comments。官网未给出可确认的首次发布日期或公开代码仓库，因此仅保留为日期未确认的产品信号，未验证其功能实现。
 
+### 19:00 增量
+
+- [Munder Difflin](https://github.com/chaitanyagiri/munder-difflin)是本地 multi-agent harness；[HN 讨论](https://news.ycombinator.com/item?id=49398152)于 17:49 提交，属于旧项目复热。
+- [CyberStrike](https://github.com/CyberStrikeus/CyberStrike)是双用途安全 harness；[HN 讨论](https://news.ycombinator.com/item?id=49398125)于 17:44 提交，能力为项目自述。
+- Simon Willison 发布 [llm 0.32.1](https://simonwillison.net/2026/Aug/21/llm/) 与 [llm-openrouter 0.7](https://simonwillison.net/2026/Aug/21/llm-openrouter/)，分别处理 OpenAI Python 3.0 兼容和服务端工具。
+
 ## 观察池
 
 - **低互动 / 持久开发环境**：[Reachpad MCP 官方仓库](https://github.com/Reachpad/reachpad-mcp)采用 MIT，README 描述为 coding agent 提供可暂停、恢复与分叉的持久云开发环境，并明确进程不会随快照保留；[HN 提交](https://news.ycombinator.com/item?id=49397326)于 **2026-08-22 15:02 +08:00** 出现，截止时 2 points、0 comments。仓库创建于 8 月 12 日，凭据隔离等安全主张未在本轮独立测试。
@@ -153,5 +160,5 @@ tags:
 
 - 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck、Oh My Subagents、Heimdall、Linux、agent-ready-checkout、EchoCoT、DeepSQL、EnvHarness、Reachpad MCP、Setoku 与 VPIPE 原始页面。
 - 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 增量复查无直接相关新文；GitHub 语言榜单与 overall 高度重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库；DeepSQL 原文未提供可独立核验的发布日期。
-- 初始候选：63；最终保留来源：46（28 个独立事件 / 项目，其中 18 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 初始候选：63；最终保留来源：52（28 个独立事件 / 项目，其中 18 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
 - 截止时间：2026-08-22 16:02:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。

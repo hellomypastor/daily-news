@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T16:04:00+08:00"
+updatedAt: "2026-08-22T19:00:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.238"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
@@ -28,6 +28,8 @@ tags:
   - "Quality"
   - "Safety"
   - "Security"
+  - "Sentiment"
+  - "Unverified"
   - "Usage"
 ---
 
@@ -110,6 +112,12 @@ Security 新增一条日期层面可验证、精确时分未确认的官方更�
 
 上述既有 Reddit 页面可确认显示为 2026-08-20 或 2026-08-21 发布/活跃，但搜索结果没有稳定提供精确时分。它们均落在日期层面的采集窗口内；精确发布时间与截点关系未能进一步核实，故 `publishedAt` 仅记录日期并明确限制。新增的越权操作讨论页面显示“12 小时前”，可确认是在 2026-08-22 活跃，但缺少稳定的绝对时分；同样按日期未确认处理。
 
+### 19:00 增量社区样本
+
+- [Opus 4.6 上下文 200k 用户报告](https://www.reddit.com/r/Claude_reports/comments/1vv48rk/rclaudeai_opus_46_got_capped_at_200k_context_over/)来自已删除原帖镜像，无官方确认。
+- [输出难以跟随的讨论](https://www.reddit.com/r/ClaudeAI/comments/1vv47ox/is_anyone_else_finding_claude_really_hard_to/)是低置信度情绪样本，精确时分未确认。
+- [Claude 自主运营站点案例](https://www.reddit.com/r/ClaudeAI/comments/1vuhvta/two_weeks_ago_i_gave_claude_a_domain_and_told_it/)中的流量与成本均为作者自报、未经审计。
+
 ## 观察池
 
 - v2.1.238 提到已更新内置 `claude-api` skill 以适配 8 月 19 日 Managed Agents 的 web search/fetch domain settings 与 self-hosted sandbox memory stores。基础更新早于本轮 24 小时窗口，保留为后续文档核验信号。
@@ -124,5 +132,5 @@ Security 新增一条日期层面可验证、精确时分未确认的官方更�
 
 - 已检查：Anthropic Newsroom、Developer Documentation、Claude Code GitHub Releases/CHANGELOG、Anthropic Status、Reddit r/ClaudeCode/r/ClaudeAI/r/Anthropic、Hacker News、YouTube 与公开网页检索。
 - 失败来源：X 未登录结果不稳定，无法可靠核对原帖时间和互动量；部分 Anthropic 文档页不提供可独立核验的更新时间；Hacker News 未找到窗口内可确认条目。
-- 初始候选数：15；保留来源数：9。
+- 初始候选数：20；保留来源数：12。
 - 二次补搜：否（最终来源不为 0）。
