@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T07:03:00+08:00"
+updatedAt: "2026-08-22T11:22:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Measuring benchmark optimization in speech recognition"
 featuredUrl: "https://huggingface.co/blog/asr-benchmark-optimization"
@@ -20,14 +20,16 @@ tags:
   - "Inference"
   - "Liquid AI"
   - "Microsoft Research"
+  - "Podcast"
   - "Research"
   - "Science AI"
+  - "Simulation"
   - "Speech"
 ---
 
 ## 今日概览
 
-扫描窗口：2026-08-21 07:03 至 2026-08-22 07:03（Asia/Shanghai）。累计核实到 1 条最近 24 小时的 Hugging Face 社区技术文章；24–48 小时保留 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。另保留 4 条官方列表仅标注月份、无法确认具体日的 Google DeepMind 候选。参照 07:03 截止点，ASR 条目已接近 24 小时边界，仍按当天累积保留。
+扫描窗口：2026-08-21 11:22 至 2026-08-22 11:22（Asia/Shanghai）。累计核实到 Latent Space 在上一轮截止后发布的 1 集新播客，并保留 Hugging Face 社区技术文章；24–48 小时保留 Liquid AI 推理优化文章与 Microsoft Research 的 Skala 开源研究更新。另保留 4 条官方列表仅标注月份、无法确认具体日的 Google DeepMind 候选。当天累积来源不因滚动窗口前移而删除。
 
 ## 优先动态
 
@@ -42,7 +44,11 @@ Anthropic 与 OpenAI 官方入口已检查；本页未重复专题页候选，�
 
 ## 播客
 
-Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已检索；未确认窗口内新集。
+| 节目 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |
+|---|---|---|---|---|---|
+| Latent Space | Simulation: the new Scaling Law — Joon Sung Park, Simile AI | 播客/访谈 | 2026-08-22 07:37；窗口内 | 节目访谈 Simile 联合创始人 Joon Sung Park，讨论从生成式 Agent 到数字孪生、人类行为基础模型、多 Agent 社会模拟及其评估；节目中的准确率和商业规模均属受访方陈述，需按原始研究或独立证据复核。 | [官方节目页](https://www.latent.space/p/simile) |
+
+Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已检索；未确认其他窗口内新集。
 
 ## 近两日补充
 
@@ -80,8 +86,8 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂�
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及指定播客入口。
-- 失败来源：Alibaba Cloud News 抓取返回内部错误；部分动态页依赖 JavaScript；播客检索噪声较高。
-- 初始候选：14 条；最终保留：8 条（3 条日期明确、1 条当天累积失效链接、4 条日期未确认）。
+- 失败来源：Alibaba Cloud News 抓取返回内部错误；部分动态页依赖 JavaScript；No Priors 官方域名连接失败；LlamaIndex 既有 RSS 地址返回 404，已改查公开入口。
+- 初始候选：15 条；最终保留：9 条（4 条日期明确、1 条当天累积失效链接、4 条日期未确认）。
 - 二次补搜：否（最终来源不为 0）。
 
-一句话总结：最近 24 小时以 Hugging Face 社区 ASR 评测方法为主，近两日补入 Liquid AI 推理优化与 Microsoft Research 科学 AI 更新，Google DeepMind 四项 8 月候选仍待确认具体日期。
+一句话总结：最近 24 小时新增 Latent Space 对人类行为模拟与数字孪生的技术访谈，并保留 Hugging Face 社区 ASR 评测方法；Google DeepMind 四项 8 月候选仍待确认具体日期。

@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-22T00:00:00+08:00"
-updatedAt: "2026-08-22T07:08:00+08:00"
+updatedAt: "2026-08-22T11:22:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "ANOLISA / AgentSight"
 featuredUrl: "https://github.com/alibaba/anolisa"
@@ -14,6 +14,7 @@ tags:
   - "Agent"
   - "Agent Security"
   - "AI"
+  - "AI Coding"
   - "Authorization"
   - "CI"
   - "Coding Agent"
@@ -22,21 +23,26 @@ tags:
   - "Coordination"
   - "Date Unverified"
   - "eBPF"
+  - "Engineering"
   - "Evaluation"
   - "Harness"
   - "HN"
   - "IDE"
   - "Inference"
+  - "Knowledge"
+  - "Linux"
   - "LLM"
   - "MCP"
   - "Memory"
   - "MoE"
+  - "Multi-Agent"
   - "Observability"
   - "Open Source"
   - "Python"
   - "RAG"
   - "Research"
   - "Resurfaced"
+  - "Runtime"
   - "Sandbox"
   - "SDK"
   - "Security"
@@ -48,7 +54,7 @@ tags:
 
 ## 今日概览
 
-本轮精选窗口为 **2026-08-20 07:08:00 至 2026-08-22 07:08:00（Asia/Shanghai）**。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试和本地推理工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
+本轮精选窗口更新为 **2026-08-20 11:22:00 至 2026-08-22 11:22:00（Asia/Shanghai）**；当天累积内容仍完整保留早前已收录来源。窗口内最明确的新信号来自 agent 评测与技能迁移研究，以及 HN 上集中出现的 agent 可观测性、沙箱、回归测试、本地推理和持久化子代理协作工具。GitHub Trending 仅证明项目在当日榜单上的热度，不代表仓库或功能在今日发布。
 
 ## 已验证精选
 
@@ -77,6 +83,14 @@ tags:
 
 [Parselbox 官方仓库](https://github.com/thesanjeetc/Parselbox)描述其用 Deno 与 Pyodide 提供“以代码调用工具”的嵌入式 Python 沙箱，采用 MIT 许可；[HN 讨论](https://news.ycombinator.com/item?id=49388608)提交于 **2026-08-21 22:23 +08:00**，截止时为 2 points、0 comments。它触及 agent 工具执行的隔离与可移植性，但项目关注度尚低，应先评估边界与逃逸风险。
 
+### Oh My Subagents：持久化、可监督的子代理运行时
+
+[官方仓库](https://github.com/ringlochid/oh-my-subagents)采用 MIT（其中可视化 Console 另有 Sustainable Use License），README 描述其为 Codex 与 Claude 提供持久化父子委派、wave 汇合、恢复和责任归属记录；[HN 讨论](https://news.ycombinator.com/item?id=49396071)提交于 **2026-08-22 10:33 +08:00**，截止时为 3 points、2 comments。仓库创建于 7 月，当前信号是新讨论而非今日首次发布；功能边界以项目自述为准。
+
+### Heimdall：带信任状态的 coding-agent 知识层
+
+[官方仓库](https://github.com/ArihantDeva/heimdall)创建于 **2026-08-21 00:22 +08:00**、采用 MIT，README 描述跨项目语义记忆、文件状态校验和 STRONG / WEAK / STALE / REBUILT 等检索判定；[HN 讨论](https://news.ycombinator.com/item?id=49395883)提交于 **2026-08-22 10:02 +08:00**，截止时为 2 points、0 comments。项目仍很早期，所谓自愈与一致性保证尚未由本轮独立压力测试验证。
+
 ## GitHub Trending
 
 以下数据来自 GitHub daily Trending 截止时快照，仅代表当日榜单热度：
@@ -96,10 +110,11 @@ tags:
 - [AgentCheck 官方仓库](https://github.com/rez-99/agentcheck)采用 MIT，以 YAML 用例、LLM judge 和基线差异报告为 agent 提供 CI 回归检查；[HN 提交](https://news.ycombinator.com/item?id=49393322)于 **2026-08-22 04:21 +08:00** 出现，截止时 1 point、0 comments。仓库于 **2026-08-21 08:23 +08:00** 创建，仍属极早期项目。
 - [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)定位为可并行运行多种 coding agent 的开源 IDE，AGPL-3.0；[HN 提交](https://news.ycombinator.com/item?id=49390739)于 **2026-08-22 00:47 +08:00** 出现，截止时 2 points、0 comments。项目本身早于窗口创建，因此这里只确认本轮讨论信号。
 - [Caspian SDK 官方仓库](https://github.com/TryCaspian/caspian-sdk)提供 Python / TypeScript 的 agent 通信层，覆盖 email、WhatsApp、Slack 等通道，AGPL-3.0；[HN 提交](https://news.ycombinator.com/item?id=49390329)于 **2026-08-22 00:17 +08:00** 出现，截止时 3 points、0 comments。通道覆盖来自项目自述，未在本轮逐项集成测试。
+- **工程实践信号**：[Linux 官方提交](https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c)记录一次调试修复，并在提交说明中明确致谢 AI 对定位问题的帮助；[HN 讨论](https://news.ycombinator.com/item?id=49395262)提交于 **2026-08-22 08:08 +08:00**，截止时为 4 points、1 comment。这里只确认原始提交中的使用记录，不由此推断 Linux 项目形成了新的 AI 开发政策。
 
 ## 论文与研究
 
-除前三篇精选外，本轮 arXiv 还出现 agent 安全、规则落地与环境构造方向的新稿；为避免把刚提交的预印本结论写成定论，暂不扩展为独立来源。后续若出现代码、作者项目页或复现实验，再升级收录。
+除前三篇精选外，本轮 arXiv 还出现 agent 安全、规则落地与环境构造方向的新稿；为避免把刚提交的预印本结论写成定论，暂不扩展为独立来源。后续若出现代码、作者项目页或复现实验，再升级收录。另补充 [FreeToken 论文原文](https://arxiv.org/abs/2608.16157)：论文提交于 **2026-08-17 14:22 +08:00**，早于 48 小时高亮窗口，支持其面向异构个人硬件的 MoE serving 技术定位；论文中的模型规模、性能和兼容范围仍是作者报告，本轮未复现。
 
 ## 旧文重新升温
 
@@ -113,7 +128,7 @@ tags:
 ## 观察池
 
 - **低互动 / 个人上下文项目**：[Lore MCP 官方仓库](https://github.com/dipakkrishnan/lore-mcp)创建于 **2026-07-17 01:06 +08:00**，MIT，自述为 personal agent 提供可携带、默认私有的上下文层；[HN 提交](https://news.ycombinator.com/item?id=49392057)于 **2026-08-22 02:25 +08:00** 出现，截止时 1 point、0 comments。只确认仓库定位与讨论信号，未验证其商业化或隐私承诺。
-- **低互动 / 早期项目**：FreeToken、Taskuary、AgentCheck、Proliferate、Caspian SDK 与 Parselbox 的 HN 讨论量很小，技术定位已由官方仓库确认，但社区验证强度不足。
+- **低互动 / 早期项目**：FreeToken、Taskuary、AgentCheck、Proliferate、Caspian SDK、Parselbox、Oh My Subagents 与 Heimdall 的 HN 讨论量很小，技术定位已由官方仓库确认，但社区验证强度不足。
 - **榜单热度而非发布事件**：ai-memory、OpenViking、AI-Infra-Guard 只确认当日 Trending 状态；功能成熟度、性能与增长持续性未验证。
 - **新预印本**：AI4AI-Bench、技能迁移研究与 Task-CoEvolve 均处于预印本阶段，实验数字应以论文原文和后续复现为准。
 
@@ -123,7 +138,7 @@ tags:
 
 ## 采集状态
 
-- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck 原始页面。
-- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison 未发现窗口内直接相关新文；GitHub 语言榜单与 overall 重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库。
-- 初始候选：39；最终保留来源：28（17 个独立事件 / 项目，其中 11 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-22 07:08:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。
+- 已检查：HN newest / Algolia、GitHub Trending overall / Python / TypeScript、GitHub 官方仓库与 API、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA Developer Blog、Cloudflare Blog，以及 Dibs、Lore MCP、Traccia、FreeToken、Taskuary、AgentCheck、Oh My Subagents、Heimdall 与 Linux 原始页面。
+- 失败或无新增：Hugging Face 当日索引未给出截止内可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 增量复查无直接相关新文；GitHub 语言榜单与 overall 高度重叠；Traccia 官网缺少可确认的发布日期和公开代码仓库。
+- 初始候选：46；最终保留来源：35（21 个独立事件 / 项目，其中 14 个附带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-22 11:22:00 +08:00；HN points/comments 与 Trending stars today 均为截止快照，后续变化不追写为事实。
