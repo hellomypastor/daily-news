@@ -1,13 +1,16 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T04:01:00+08:00"
+updatedAt: "2026-08-23T07:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredTitle: "Myli"
-featuredUrl: "https://github.com/EightPotions/Myli"
-featuredSummary: "MIT 许可的视觉设计多 Agent harness。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredPublishedAt: "2026-08-21 21:47 +08:00"
-featuredTags: ["Agent","Design","Open Source"]
+featuredTitle: "The New MCP Roadmap"
+featuredUrl: "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
+featuredSummary: "MCP 维护者公开下一阶段规范与工作组重点。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-08-22 17:00 +08:00"
+featuredTags: ["MCP","Agent"]
+featuredImage: "https://blog.modelcontextprotocol.io/og-image.png"
+featuredImageAlt: "Model Context Protocol 官方博客的 MCP 标识题图"
+featuredImageCaption: "图片来源：Model Context Protocol 官方博客"
 tags:
   - "Agent"
   - "AI"
@@ -15,15 +18,18 @@ tags:
   - "Autocomplete"
   - "Claude Code"
   - "Coding"
+  - "Computer Vision"
   - "Date Unverified"
   - "Design"
   - "Developer Tool"
+  - "Engineering"
   - "Evaluation"
   - "Git"
   - "HN"
   - "Inference"
   - "iOS"
   - "LLM"
+  - "macOS"
   - "MCP"
   - "Memory"
   - "Observability"
@@ -33,6 +39,7 @@ tags:
   - "Resurfaced"
   - "Safety"
   - "Sandbox"
+  - "Security"
   - "Shell"
   - "Skill"
   - "Skills"
@@ -43,7 +50,7 @@ tags:
 
 ## 今日概览
 
-本页研究窗口为 **2026-08-21 04:01 至 2026-08-23 04:01（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理与 GenAI 可观测性。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
+本页研究窗口为 **2026-08-21 07:02 至 2026-08-23 07:02（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
 
 ## 已验证精选
 
@@ -67,9 +74,22 @@ tags:
 
 [MCP 官方路线图](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/)于 **2026-08-22 17:00 +08:00** 发布；[HN 讨论](https://news.ycombinator.com/item?id=49399591)于 **2026-08-22 21:31 +08:00** 提交，截止时 102 points、78 comments。路线图是维护者对下一阶段规范与工作组重点的公开说明，不代表规划能力已经进入稳定版本。
 
+<figure class="source-image">
+  <a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"><img src="https://blog.modelcontextprotocol.io/og-image.png" alt="Model Context Protocol 官方博客的 MCP 标识题图" loading="lazy" /></a>
+  <figcaption><a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/">图片来源：Model Context Protocol 官方博客</a></figcaption>
+</figure>
+
 ### 低延迟 TTS 工程：把首包响应压到交互级
 
 [Nari Labs 工程文章](https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/)介绍 Qwen3-TTS 推理链路的缓存、并行与流式优化；[HN 讨论](https://news.ycombinator.com/item?id=49389952)于 **2026-08-21 23:51 +08:00** 提交，截止时 163 points、40 comments。文中的延迟数字是作者测量，本轮未在同等硬件与负载下复现。
+
+### Shadow delegation：普通工具调用也可能形成隐式多 Agent 链
+
+[原始工程文章](https://niyikiza.com/posts/agents-to-agents/)于 **2026-08-22** 发布，分析 agent 工具调用在服务端继续触发其他 agent 时产生的不可见委派链、审计与权限问题；[HN 讨论](https://news.ycombinator.com/item?id=49404443)于 **2026-08-23 06:24 +08:00** 提交，截止时 2 points、0 comments。文章提出的风险模型属于作者分析，本轮未对具体平台做渗透验证。
+
+### Locum：把 Grok Bot 编码任务委派给本机 CLI
+
+[Locum 官方仓库](https://github.com/HarjjotSinghh/locum)于 **2026-08-22 05:35 +08:00** 创建，采用 Apache-2.0 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49403691)于 **2026-08-23 04:41 +08:00** 提交，截止时 1 point、0 comments。README 描述其通过自定义 MCP connector 将 Grok Bot 任务转交本机 Claude Code / Codex CLI；这是低互动早期项目，未独立验证端到端安全边界。
 
 ## GitHub Trending
 
@@ -95,6 +115,8 @@ tags:
 ## 日期未确认
 
 - [Model Genome / Model DNA](https://huggingface.co/blog/mayafree/model-dna)讨论如何判断模型是从头训练还是由其他模型派生；[HN 讨论](https://news.ycombinator.com/item?id=49400676)于 **2026-08-22 23:20 +08:00** 提交，截止时 1 point、0 comments。页面在本轮抓取中未提供可独立复核的精确发布时间，因此保留为日期未确认。
+- [NanoGPT Speedrun Frontier](https://www.primeintellect.ai/research/nanogpt-speedrun)公开 153 次自主优化运行与可查看的轨迹，但页面未显示可独立核验的精确发布日期；[HN 讨论](https://news.ycombinator.com/item?id=49404380)于 **2026-08-23 06:14 +08:00** 提交，截止时 3 points、0 comments。榜单结果按发布方页面记录，未独立复跑。
+- [How LLM Serves a Request](https://mapathak-commits.github.io/inference-wall/articles/primer/)以工程图解说明请求从分词、调度到推理服务的路径，但页面未提供精确发布日期；[HN 讨论](https://news.ycombinator.com/item?id=49404153)于 **2026-08-23 05:41 +08:00** 提交，截止时 1 point、1 comment，因此保留为日期未确认的学习资料。
 
 ## 观察池
 
@@ -102,6 +124,7 @@ tags:
 - **低互动 / Shell 辅助**：[Namo Complete](https://github.com/namo-robotics/namo_complete)采用 MIT，提供 Bash 本地补全；[HN 讨论](https://news.ycombinator.com/item?id=49401434)于 **2026-08-23 00:44 +08:00** 提交，截止时 1 point、0 comments。项目早期且未复测补全质量。
 - **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。
 - **新预印本**：AI4AI-Bench 与技能迁移论文均不把作者实验结果写成已复现事实。
+- **低互动 / 本地交互**：[Pawvis](https://github.com/alexandriax/pawvis)是 MIT 许可的 macOS 摄像头手势与语音控制项目；[HN 讨论](https://news.ycombinator.com/item?id=49402530)于 **2026-08-23 02:44 +08:00** 提交，截止时 1 point、1 comment。仓库创建于 2026-08-07，属于较旧项目的邻近信号，不作为本轮新发布。
 
 ## 来源链接
 
@@ -110,6 +133,6 @@ tags:
 ## 采集状态
 
 - 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。
-- 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号。
-- 初始候选：1873；最终保留来源：34（17 个事件 / 项目，其中 15 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-23 04:01:00 +08:00；互动量均为截止快照。
+- 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号；Prime Intellect 与推理图解页未提供精确发布日期。
+- 初始候选：1835；最终保留来源：44（22 个事件 / 项目，其中 20 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-23 07:02:00 +08:00；互动量均为截止快照。

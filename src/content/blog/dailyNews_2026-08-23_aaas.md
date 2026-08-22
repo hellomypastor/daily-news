@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T01:01:00+08:00"
+updatedAt: "2026-08-23T07:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Introducing Grok Bot"
 featuredUrl: "https://x.ai/news/introducing-grok-bot"
@@ -26,6 +26,7 @@ tags:
   - "Claude Code"
   - "Cloud Agent"
   - "Cloud Session"
+  - "Codex"
   - "Devin"
   - "Enterprise"
   - "Gemini CLI"
@@ -42,7 +43,7 @@ tags:
 
 ## 扫描结论
 
-主发现窗口：2026-08-22 01:01 至 2026-08-23 01:01（Asia/Shanghai）；24–72 小时观察窗口：2026-08-20 01:01 至 2026-08-22 01:01。本窗口可核验的 AaaS 变化主要来自 Anthropic：Claude Code 2.1.239 强化云会话、Remote Control、远程 MCP 重连和跨机器消息，Agent SDK 0.3.239让重连宿主重新发现仍在运行的后台任务；截止前发布的 2.1.240/0.3.240 只有可靠性修复与版本同步说明，不扩写未知细节。Google 与 GitHub 的同窗更新偏执行安全、会话恢复和企业策略，属于 Agent harness 邻近信号。Devin 8 月 21 日更新覆盖会话订阅、Automation webhook、企业 MCP 和私网接入，但无时分，放入日期未确认。xAI/Grok 本轮未发现新的托管 Agent 发布；8 月 11 日 Grok Bot 因具有云端独立电脑、持续执行和多 Bot 并发而作为较旧官方背景保留。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
+主发现窗口：2026-08-22 07:02 至 2026-08-23 07:02（Asia/Shanghai）；24–72 小时观察窗口：2026-08-20 07:02 至 2026-08-22 07:02。本窗口可核验的 AaaS 变化主要来自 Anthropic：Claude Code 2.1.239 强化云会话、Remote Control、远程 MCP 重连和跨机器消息，Agent SDK 0.3.239让重连宿主重新发现仍在运行的后台任务；截止前发布的 2.1.240/0.3.240 只有可靠性修复与版本同步说明，不扩写未知细节。Google 与 GitHub 的同窗更新偏执行安全、会话恢复和企业策略，属于 Agent harness 邻近信号。Devin 8 月 21 日更新覆盖会话订阅、Automation webhook、企业 MCP 和私网接入，但无时分，放入日期未确认。xAI/Grok 本轮未发现新的托管 Agent 发布；8 月 11 日 Grok Bot 因具有云端独立电脑、持续执行和多 Bot 并发而作为较旧官方背景保留。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
 
 ## 今日重点
 
@@ -98,7 +99,7 @@ Claude 云会话、Remote Control 与后台任务恢复具备执行环境、异�
 
 - Gemini CLI nightly：macOS 容器运行时隔离属于执行安全信号，不代表 Google 托管 Agent 服务端更新。
 - GitHub Copilot CLI 预发布：会话恢复和远程策略 fail-closed 与托管 Agent 连续性、安全边界相关，但不代表服务端 rollout。
-- Codex 0.150.0 alpha 在窗口内出现多个版本，但官方 release 只有版本号或占位说明，未据此推断远程 Agent 能力；详见 OpenAI 专题页。
+- [Codex 0.150.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7) 于 2026-08-23 05:26 +08:00 发布，但官方仅有版本号和占位说明，未据此推断远程 Agent 能力；详见 OpenAI 专题页。
 - AWS AgentCore 迁移案例证明已有托管组件的组合用法，不代表 8 月 20 日新 GA。
 
 ## 趋势判断
@@ -113,8 +114,8 @@ Claude 云会话、Remote Control 与后台任务恢复具备执行环境、异�
 
 - 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cloudflare、Cursor、Replit、CrewAI、LangGraph、Lindy、Factory、Sourcegraph/Amp；强制核查 Cognition Devin release notes、环境、并发、定价、企业接入和集成；强制核查 xAI/Grok Bot、Build、开发者更新的托管执行、异步任务、工具和远程执行；另查字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek公开入口，并做中英文网页与 GitHub release API 交叉检索。
 - 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Devin、Qoder 与 UiPath 页面无精确时分；Claude Code 2.1.240、Codex alpha 说明过短，未扩写未知细节。
-- 候选数量：43。
-- 最终保留：12 个独立来源 URL。
+- 候选数量：45。
+- 最终保留：13 个独立来源 URL。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 12 条动态，重点：Claude 云会话与后台任务恢复是主窗口最明确的 AaaS 变化；Devin 企业 MCP/私网接入日期待确认，Grok 本轮无新托管发布，执行可靠性、恢复与安全边界仍是竞争焦点。
+今日扫描完成，共 13 条动态，重点：Claude 云会话与后台任务恢复是主窗口最明确的 AaaS 变化；Devin 企业 MCP/私网接入日期待确认，Grok 本轮无新托管发布，执行可靠性、恢复与安全边界仍是竞争焦点。

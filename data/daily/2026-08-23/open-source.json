@@ -2,13 +2,24 @@
   "slug": "open-source",
   "title": "今日 AI / Agent 开源项目与技术博客精选",
   "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
-  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "tags": [
+    "AI",
+    "Agent",
+    "Open Source",
+    "LLM"
+  ],
   "order": 30,
-  "updatedAt": "2026-08-23T04:01:00+08:00",
+  "updatedAt": "2026-08-23T07:02:00+08:00",
+  "image": {
+    "url": "https://blog.modelcontextprotocol.io/og-image.png",
+    "alt": "Model Context Protocol 官方博客的 MCP 标识题图",
+    "sourceUrl": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+    "caption": "图片来源：Model Context Protocol 官方博客"
+  },
   "scan": {
     "checkedSources": [
-      "Hacker News newest 与 Algolia submissions（2026-08-21 04:01 至 2026-08-23 04:01 +08:00）",
-      "Hacker News Algolia 最近 24 小时 resurfacing（截止 2026-08-23 04:01 +08:00）",
+      "Hacker News newest 与 Algolia submissions（2026-08-21 07:02 至 2026-08-23 07:02 +08:00）",
+      "Hacker News Algolia 最近 24 小时 resurfacing（2026-08-22 07:02 至 2026-08-23 07:02 +08:00）",
       "GitHub Trending overall / Python / TypeScript daily 页面",
       "GitHub Repository API、Release 与项目 README",
       "arXiv API（agent / LLM，按 submittedDate 倒序）",
@@ -16,7 +27,8 @@
       "Simon Willison Weblog",
       "NVIDIA Developer Blog 与 Cloudflare Blog",
       "MCP 官方博客、Nari Labs 与独立工程博客",
-      "Proliferate、TechSkills 与 Terminito 的 GitHub API、许可证和 README"
+      "Proliferate、TechSkills、Terminito、Locum 与 Pawvis 的 GitHub API、许可证和 README",
+      "Prime Intellect NanoGPT Speedrun Frontier 与独立 Agent 工程博客"
     ],
     "failedSources": [
       "GitHub Trending overall / Python / TypeScript：动态页面未稳定返回可复核的项目榜单条目，未记录 stars today",
@@ -24,46 +36,518 @@
       "Simon Willison、NVIDIA 与 Cloudflare 技术博客：窗口内未发现比已收录候选更直接的新开源工程条目",
       "hsandhu/agent：GitHub API 可确认仓库创建时间，但仓库元数据未声明许可证",
       "部分 HN 新项目互动量极低：仅按截止快照列入观察池，不视为成熟度证据",
-      "arXiv 2608.12851：论文原始发布日期为 2026-08-13，仅按近 24 小时 HN 复热记录"
+      "arXiv 2608.12851：论文原始发布日期为 2026-08-13，仅按近 24 小时 HN 复热记录",
+      "Prime Intellect NanoGPT Speedrun Frontier：页面未提供可独立复核的精确发布日期",
+      "How LLM Serves a Request：页面未提供可独立复核的精确发布日期"
     ],
-    "candidateCount": 1873,
+    "candidateCount": 1835,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n本页研究窗口为 **2026-08-21 04:01 至 2026-08-23 04:01（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理与 GenAI 可观测性。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。\n\n## 已验证精选\n\n### Myli：面向视觉设计的多 Agent Harness\n\n[Myli 官方仓库](https://github.com/EightPotions/Myli)于 **2026-08-21 21:47 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49400662)于 **2026-08-22 23:19 +08:00** 提交，截止时 1 point、0 comments。README 将设计流程拆为研究、批评、生成与整合等角色；这是刚创建的工程原型，效果尚未由本轮独立复测。\n\n### TT-AMX：Apple Silicon 上的 Tensor-Train 推理实验\n\n[TT-AMX 官方仓库](https://github.com/ansarzeinulla/tensor-train-amx)于 **2026-08-22 17:09 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49400420)于 **2026-08-22 22:55 +08:00** 提交，截止时 1 point、0 comments。项目探索以 AMX 和零拷贝路径执行 Tensor-Train 推理；性能与兼容范围均以作者说明为准。\n\n### 本地 iOS Agent：端侧模型、工具与语音流水线\n\n[官方仓库](https://github.com/hsandhu/agent)于 **2026-08-21 05:58 +08:00** 创建；[HN 讨论](https://news.ycombinator.com/item?id=49401506)于 **2026-08-23 00:52 +08:00** 提交，截止时 1 point、0 comments。项目把本地推理、工具调用和语音管线放进 iOS 应用，展示端侧 agent 的集成方向；仓库未声明许可证，因此不能据公开可读性推断可自由复用。\n\n### GenAI OpenTelemetry sketches：有界指标而非保存原始提示词\n\n[官方仓库](https://github.com/llm-measurement/otelcol-genai-sketches)采用 Apache-2.0，提供从 OpenTelemetry traces 生成有界 GenAI 指标与 keyed summaries 的 collector 组件；[HN 讨论](https://news.ycombinator.com/item?id=49389744)于 **2026-08-21 23:37 +08:00** 提交，截止时 4 points、2 comments。它为高基数提示词观测提供一种隐私和成本折中，但边界与匿名化效果仍需按部署配置评估。\n\n### MCP 新路线图：维护者明确下一阶段规范重点\n\n[MCP 官方路线图](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/)于 **2026-08-22 17:00 +08:00** 发布；[HN 讨论](https://news.ycombinator.com/item?id=49399591)于 **2026-08-22 21:31 +08:00** 提交，截止时 102 points、78 comments。路线图是维护者对下一阶段规范与工作组重点的公开说明，不代表规划能力已经进入稳定版本。\n\n### 低延迟 TTS 工程：把首包响应压到交互级\n\n[Nari Labs 工程文章](https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/)介绍 Qwen3-TTS 推理链路的缓存、并行与流式优化；[HN 讨论](https://news.ycombinator.com/item?id=49389952)于 **2026-08-21 23:51 +08:00** 提交，截止时 163 points、40 comments。文中的延迟数字是作者测量，本轮未在同等硬件与负载下复现。\n\n## GitHub Trending\n\n本轮检查了 overall、Python 与 TypeScript daily 页面，但动态页面未稳定返回可复核的榜单项目与 `stars today` 文本，因此不填入可能过时的数字，也不把仓库更新误写成今日上榜。\n\n## HN 讨论\n\n- [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)采用 AGPL-3.0，支持在本地或云端并行运行多种 coding agent 并保存可复用工作流；[HN 讨论](https://news.ycombinator.com/item?id=49390739)于 **2026-08-22 00:47 +08:00** 提交，截止时 42 points、15 comments。仓库早于窗口创建，本轮确认的是讨论热度；产品定位与能力来自 README，未在本轮独立压测。\n- [StateM 官方仓库](https://github.com/henryqin1997/statem)采用 Apache-2.0，提供面向长任务 agent 的状态化 runbook CLI；[HN 讨论](https://news.ycombinator.com/item?id=49399887)于 **2026-08-22 22:07 +08:00** 提交，截止时 1 point、1 comment。仓库早于窗口创建，本轮确认的是讨论信号。\n- [Knowl 官方仓库](https://github.com/dat999zx/knowl)采用 Apache-2.0，README 描述会压缩和淘汰旧知识的 agent 记忆层；[HN 讨论](https://news.ycombinator.com/item?id=49399942)于 **2026-08-22 22:13 +08:00** 提交，截止时 1 point、1 comment。所谓自维护效果尚未独立验证。\n- [GitX Skill 官方仓库](https://github.com/musoyangrigor/gitx-skill)采用 MIT，提供跨多种 coding agent 的 Git 工作流 skill；[HN 讨论](https://news.ycombinator.com/item?id=49401487)于 **2026-08-23 00:50 +08:00** 提交，截止时 1 point、0 comments。仓库创建早于七天，只记录当前复热。\n\n## 论文与研究\n\n- [AI4AI-Bench](https://arxiv.org/abs/2608.20318)于 **2026-08-21 01:56 +08:00** 提交，以冻结研究仓库和隐藏评估器衡量 agent 修改训练算法的能力；它是新预印本，作者报告仍需复现。\n- [Break It Down, Pass It On](https://arxiv.org/abs/2608.20274)于 **2026-08-21 01:12 +08:00** 提交，比较 task/subtask 粒度与文本/代码形式对技能跨任务迁移的影响；结论暂按论文证据记录。\n\n## 旧文重新升温\n\n- [Practice Makes Unsafe](https://arxiv.org/abs/2608.12851)原始提交于 **2026-08-13 13:47 +08:00**，研究自改进 agent 把不安全轨迹固化为可复用技能的风险；[HN 讨论](https://news.ycombinator.com/item?id=49391398)于 **2026-08-22 01:34 +08:00** 重新出现，截止时 2 points、0 comments。论文实验与 SafeEvolve 改进幅度均按作者报告记录，本轮未复现。\n- [自托管、沙箱化 agent 软件工厂工程文](https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/)原文早于本轮七日阈值；[HN 讨论](https://news.ycombinator.com/item?id=49390463)于 **2026-08-22 00:27 +08:00** 重新出现，截止时 112 points、59 comments。这里记录复热，不把旧文标成今日发布。\n\n## 日期未确认\n\n- [Model Genome / Model DNA](https://huggingface.co/blog/mayafree/model-dna)讨论如何判断模型是从头训练还是由其他模型派生；[HN 讨论](https://news.ycombinator.com/item?id=49400676)于 **2026-08-22 23:20 +08:00** 提交，截止时 1 point、0 comments。页面在本轮抓取中未提供可独立复核的精确发布时间，因此保留为日期未确认。\n\n## 观察池\n\n- **低互动 / Agent 工具**：[TechSkills](https://github.com/debabratasaha-dev/techskills)采用 MIT，提供 coding-agent 技能模块；[HN 讨论](https://news.ycombinator.com/item?id=49401893)于 **2026-08-23 01:37 +08:00** 提交，截止时 2 points、0 comments。[Terminito](https://github.com/arturlimaaa/terminito)采用 MIT，提供 Claude Code 状态栏；[HN 讨论](https://news.ycombinator.com/item?id=49403092)于 **2026-08-23 03:40 +08:00** 提交，截止时 1 point、1 comment。两者均属早期低互动信号，未复测 README 所述效果。\n- **低互动 / Shell 辅助**：[Namo Complete](https://github.com/namo-robotics/namo_complete)采用 MIT，提供 Bash 本地补全；[HN 讨论](https://news.ycombinator.com/item?id=49401434)于 **2026-08-23 00:44 +08:00** 提交，截止时 1 point、0 comments。项目早期且未复测补全质量。\n- **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。\n- **新预印本**：AI4AI-Bench 与技能迁移论文均不把作者实验结果写成已复现事实。\n\n## 来源链接\n\n正文中的官方仓库、论文、工程博客及 HN 讨论即为本页完整来源；页面内 URL 已去重。\n\n## 采集状态\n\n- 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。\n- 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号。\n- 初始候选：1873；最终保留来源：34（17 个事件 / 项目，其中 15 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。\n- 截止时间：2026-08-23 04:01:00 +08:00；互动量均为截止快照。",
+  "content": "## 今日概览\n\n本页研究窗口为 **2026-08-21 07:02 至 2026-08-23 07:02（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。\n\n## 已验证精选\n\n### Myli：面向视觉设计的多 Agent Harness\n\n[Myli 官方仓库](https://github.com/EightPotions/Myli)于 **2026-08-21 21:47 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49400662)于 **2026-08-22 23:19 +08:00** 提交，截止时 1 point、0 comments。README 将设计流程拆为研究、批评、生成与整合等角色；这是刚创建的工程原型，效果尚未由本轮独立复测。\n\n### TT-AMX：Apple Silicon 上的 Tensor-Train 推理实验\n\n[TT-AMX 官方仓库](https://github.com/ansarzeinulla/tensor-train-amx)于 **2026-08-22 17:09 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49400420)于 **2026-08-22 22:55 +08:00** 提交，截止时 1 point、0 comments。项目探索以 AMX 和零拷贝路径执行 Tensor-Train 推理；性能与兼容范围均以作者说明为准。\n\n### 本地 iOS Agent：端侧模型、工具与语音流水线\n\n[官方仓库](https://github.com/hsandhu/agent)于 **2026-08-21 05:58 +08:00** 创建；[HN 讨论](https://news.ycombinator.com/item?id=49401506)于 **2026-08-23 00:52 +08:00** 提交，截止时 1 point、0 comments。项目把本地推理、工具调用和语音管线放进 iOS 应用，展示端侧 agent 的集成方向；仓库未声明许可证，因此不能据公开可读性推断可自由复用。\n\n### GenAI OpenTelemetry sketches：有界指标而非保存原始提示词\n\n[官方仓库](https://github.com/llm-measurement/otelcol-genai-sketches)采用 Apache-2.0，提供从 OpenTelemetry traces 生成有界 GenAI 指标与 keyed summaries 的 collector 组件；[HN 讨论](https://news.ycombinator.com/item?id=49389744)于 **2026-08-21 23:37 +08:00** 提交，截止时 4 points、2 comments。它为高基数提示词观测提供一种隐私和成本折中，但边界与匿名化效果仍需按部署配置评估。\n\n### MCP 新路线图：维护者明确下一阶段规范重点\n\n[MCP 官方路线图](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/)于 **2026-08-22 17:00 +08:00** 发布；[HN 讨论](https://news.ycombinator.com/item?id=49399591)于 **2026-08-22 21:31 +08:00** 提交，截止时 102 points、78 comments。路线图是维护者对下一阶段规范与工作组重点的公开说明，不代表规划能力已经进入稳定版本。\n\n### 低延迟 TTS 工程：把首包响应压到交互级\n\n[Nari Labs 工程文章](https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/)介绍 Qwen3-TTS 推理链路的缓存、并行与流式优化；[HN 讨论](https://news.ycombinator.com/item?id=49389952)于 **2026-08-21 23:51 +08:00** 提交，截止时 163 points、40 comments。文中的延迟数字是作者测量，本轮未在同等硬件与负载下复现。\n\n### Shadow delegation：普通工具调用也可能形成隐式多 Agent 链\n\n[原始工程文章](https://niyikiza.com/posts/agents-to-agents/)于 **2026-08-22** 发布，分析 agent 工具调用在服务端继续触发其他 agent 时产生的不可见委派链、审计与权限问题；[HN 讨论](https://news.ycombinator.com/item?id=49404443)于 **2026-08-23 06:24 +08:00** 提交，截止时 2 points、0 comments。文章提出的风险模型属于作者分析，本轮未对具体平台做渗透验证。\n\n### Locum：把 Grok Bot 编码任务委派给本机 CLI\n\n[Locum 官方仓库](https://github.com/HarjjotSinghh/locum)于 **2026-08-22 05:35 +08:00** 创建，采用 Apache-2.0 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49403691)于 **2026-08-23 04:41 +08:00** 提交，截止时 1 point、0 comments。README 描述其通过自定义 MCP connector 将 Grok Bot 任务转交本机 Claude Code / Codex CLI；这是低互动早期项目，未独立验证端到端安全边界。\n\n## GitHub Trending\n\n本轮检查了 overall、Python 与 TypeScript daily 页面，但动态页面未稳定返回可复核的榜单项目与 `stars today` 文本，因此不填入可能过时的数字，也不把仓库更新误写成今日上榜。\n\n## HN 讨论\n\n- [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)采用 AGPL-3.0，支持在本地或云端并行运行多种 coding agent 并保存可复用工作流；[HN 讨论](https://news.ycombinator.com/item?id=49390739)于 **2026-08-22 00:47 +08:00** 提交，截止时 42 points、15 comments。仓库早于窗口创建，本轮确认的是讨论热度；产品定位与能力来自 README，未在本轮独立压测。\n- [StateM 官方仓库](https://github.com/henryqin1997/statem)采用 Apache-2.0，提供面向长任务 agent 的状态化 runbook CLI；[HN 讨论](https://news.ycombinator.com/item?id=49399887)于 **2026-08-22 22:07 +08:00** 提交，截止时 1 point、1 comment。仓库早于窗口创建，本轮确认的是讨论信号。\n- [Knowl 官方仓库](https://github.com/dat999zx/knowl)采用 Apache-2.0，README 描述会压缩和淘汰旧知识的 agent 记忆层；[HN 讨论](https://news.ycombinator.com/item?id=49399942)于 **2026-08-22 22:13 +08:00** 提交，截止时 1 point、1 comment。所谓自维护效果尚未独立验证。\n- [GitX Skill 官方仓库](https://github.com/musoyangrigor/gitx-skill)采用 MIT，提供跨多种 coding agent 的 Git 工作流 skill；[HN 讨论](https://news.ycombinator.com/item?id=49401487)于 **2026-08-23 00:50 +08:00** 提交，截止时 1 point、0 comments。仓库创建早于七天，只记录当前复热。\n\n## 论文与研究\n\n- [AI4AI-Bench](https://arxiv.org/abs/2608.20318)于 **2026-08-21 01:56 +08:00** 提交，以冻结研究仓库和隐藏评估器衡量 agent 修改训练算法的能力；它是新预印本，作者报告仍需复现。\n- [Break It Down, Pass It On](https://arxiv.org/abs/2608.20274)于 **2026-08-21 01:12 +08:00** 提交，比较 task/subtask 粒度与文本/代码形式对技能跨任务迁移的影响；结论暂按论文证据记录。\n\n## 旧文重新升温\n\n- [Practice Makes Unsafe](https://arxiv.org/abs/2608.12851)原始提交于 **2026-08-13 13:47 +08:00**，研究自改进 agent 把不安全轨迹固化为可复用技能的风险；[HN 讨论](https://news.ycombinator.com/item?id=49391398)于 **2026-08-22 01:34 +08:00** 重新出现，截止时 2 points、0 comments。论文实验与 SafeEvolve 改进幅度均按作者报告记录，本轮未复现。\n- [自托管、沙箱化 agent 软件工厂工程文](https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/)原文早于本轮七日阈值；[HN 讨论](https://news.ycombinator.com/item?id=49390463)于 **2026-08-22 00:27 +08:00** 重新出现，截止时 112 points、59 comments。这里记录复热，不把旧文标成今日发布。\n\n## 日期未确认\n\n- [Model Genome / Model DNA](https://huggingface.co/blog/mayafree/model-dna)讨论如何判断模型是从头训练还是由其他模型派生；[HN 讨论](https://news.ycombinator.com/item?id=49400676)于 **2026-08-22 23:20 +08:00** 提交，截止时 1 point、0 comments。页面在本轮抓取中未提供可独立复核的精确发布时间，因此保留为日期未确认。\n- [NanoGPT Speedrun Frontier](https://www.primeintellect.ai/research/nanogpt-speedrun)公开 153 次自主优化运行与可查看的轨迹，但页面未显示可独立核验的精确发布日期；[HN 讨论](https://news.ycombinator.com/item?id=49404380)于 **2026-08-23 06:14 +08:00** 提交，截止时 3 points、0 comments。榜单结果按发布方页面记录，未独立复跑。\n- [How LLM Serves a Request](https://mapathak-commits.github.io/inference-wall/articles/primer/)以工程图解说明请求从分词、调度到推理服务的路径，但页面未提供精确发布日期；[HN 讨论](https://news.ycombinator.com/item?id=49404153)于 **2026-08-23 05:41 +08:00** 提交，截止时 1 point、1 comment，因此保留为日期未确认的学习资料。\n\n## 观察池\n\n- **低互动 / Agent 工具**：[TechSkills](https://github.com/debabratasaha-dev/techskills)采用 MIT，提供 coding-agent 技能模块；[HN 讨论](https://news.ycombinator.com/item?id=49401893)于 **2026-08-23 01:37 +08:00** 提交，截止时 2 points、0 comments。[Terminito](https://github.com/arturlimaaa/terminito)采用 MIT，提供 Claude Code 状态栏；[HN 讨论](https://news.ycombinator.com/item?id=49403092)于 **2026-08-23 03:40 +08:00** 提交，截止时 1 point、1 comment。两者均属早期低互动信号，未复测 README 所述效果。\n- **低互动 / Shell 辅助**：[Namo Complete](https://github.com/namo-robotics/namo_complete)采用 MIT，提供 Bash 本地补全；[HN 讨论](https://news.ycombinator.com/item?id=49401434)于 **2026-08-23 00:44 +08:00** 提交，截止时 1 point、0 comments。项目早期且未复测补全质量。\n- **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。\n- **新预印本**：AI4AI-Bench 与技能迁移论文均不把作者实验结果写成已复现事实。\n- **低互动 / 本地交互**：[Pawvis](https://github.com/alexandriax/pawvis)是 MIT 许可的 macOS 摄像头手势与语音控制项目；[HN 讨论](https://news.ycombinator.com/item?id=49402530)于 **2026-08-23 02:44 +08:00** 提交，截止时 1 point、1 comment。仓库创建于 2026-08-07，属于较旧项目的邻近信号，不作为本轮新发布。\n\n## 来源链接\n\n正文中的官方仓库、论文、工程博客及 HN 讨论即为本页完整来源；页面内 URL 已去重。\n\n## 采集状态\n\n- 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。\n- 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号；Prime Intellect 与推理图解页未提供精确发布日期。\n- 初始候选：1835；最终保留来源：44（22 个事件 / 项目，其中 20 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。\n- 截止时间：2026-08-23 07:02:00 +08:00；互动量均为截止快照。",
   "sources": [
-    {"title":"Myli","url":"https://github.com/EightPotions/Myli","source":"GitHub","publishedAt":"2026-08-21 21:47 +08:00","summary":"MIT 许可的视觉设计多 Agent harness。","tags":["Agent","Design","Open Source"]},
-    {"title":"Multi-Agent Harness for Visual Design","url":"https://news.ycombinator.com/item?id=49400662","source":"Hacker News","publishedAt":"2026-08-22 23:19 +08:00","summary":"Myli 的窗口内 HN 发现证据。","tags":["HN","Agent"]},
-    {"title":"TT-AMX","url":"https://github.com/ansarzeinulla/tensor-train-amx","source":"GitHub","publishedAt":"2026-08-22 17:09 +08:00","summary":"面向 Apple Silicon 的 Tensor-Train AMX 推理实验。","tags":["Inference","Apple Silicon"]},
-    {"title":"TT-AMX, a zero-copy Tensor-Train inference engine for Apple Silicon","url":"https://news.ycombinator.com/item?id=49400420","source":"Hacker News","publishedAt":"2026-08-22 22:55 +08:00","summary":"TT-AMX 的窗口内 HN 发现证据。","tags":["HN","Inference"]},
-    {"title":"agent for iOS","url":"https://github.com/hsandhu/agent","source":"GitHub","publishedAt":"2026-08-21 05:58 +08:00","summary":"端侧运行 agent 与语音流水线的 iOS 工程；许可证未声明。","tags":["Agent","On-device","iOS"]},
-    {"title":"An iOS app that runs AI agents and a complete voice pipeline on the device","url":"https://news.ycombinator.com/item?id=49401506","source":"Hacker News","publishedAt":"2026-08-23 00:52 +08:00","summary":"端侧 iOS agent 的窗口内 HN 发现证据。","tags":["HN","Agent"]},
-    {"title":"otelcol-genai-sketches","url":"https://github.com/llm-measurement/otelcol-genai-sketches","source":"GitHub","publishedAt":"","summary":"从 OpenTelemetry traces 生成有界 GenAI 指标的 Apache-2.0 组件。","tags":["Observability","LLM"]},
-    {"title":"Bounded GenAI metrics from Otel traces with 0 raw prompts","url":"https://news.ycombinator.com/item?id=49389744","source":"Hacker News","publishedAt":"2026-08-21 23:37 +08:00","summary":"GenAI sketches 项目的窗口内 HN 讨论。","tags":["HN","Observability"]},
-    {"title":"The New MCP Roadmap","url":"https://blog.modelcontextprotocol.io/posts/mcp-roadmap/","source":"Model Context Protocol","publishedAt":"2026-08-22 17:00 +08:00","summary":"MCP 维护者公开下一阶段规范与工作组重点。","tags":["MCP","Agent"]},
-    {"title":"The New MCP Roadmap (HN discussion)","url":"https://news.ycombinator.com/item?id=49399591","source":"Hacker News","publishedAt":"2026-08-22 21:31 +08:00","summary":"MCP 路线图的 HN 讨论，截止时 102 points、78 comments。","tags":["HN","MCP"]},
-    {"title":"How we made a text-to-speech model respond in sub-50 ms","url":"https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/","source":"Nari Labs","publishedAt":"","summary":"介绍 Qwen3-TTS 的缓存、并行与流式推理优化。","tags":["TTS","Inference"]},
-    {"title":"How we made a text-to-speech model respond in sub-50 ms (HN discussion)","url":"https://news.ycombinator.com/item?id=49389952","source":"Hacker News","publishedAt":"2026-08-21 23:51 +08:00","summary":"Nari Labs TTS 工程文章的 HN 讨论。","tags":["HN","TTS"]},
-    {"title":"StateM","url":"https://github.com/henryqin1997/statem","source":"GitHub","publishedAt":"","summary":"Apache-2.0 的长任务 agent 状态化 runbook CLI。","tags":["Agent","State"]},
-    {"title":"StateM: Stateful control for long-horizon agents","url":"https://news.ycombinator.com/item?id=49399887","source":"Hacker News","publishedAt":"2026-08-22 22:07 +08:00","summary":"StateM 的窗口内 HN 讨论证据。","tags":["HN","Agent"]},
-    {"title":"Knowl","url":"https://github.com/dat999zx/knowl","source":"GitHub","publishedAt":"","summary":"Apache-2.0 的 agent 知识维护与压缩层。","tags":["Agent","Memory"]},
-    {"title":"Knowl – CLAUDE.md hit 1000 lines, so I built memory that prunes itself","url":"https://news.ycombinator.com/item?id=49399942","source":"Hacker News","publishedAt":"2026-08-22 22:13 +08:00","summary":"Knowl 的窗口内 HN 讨论证据。","tags":["HN","Memory"]},
-    {"title":"GitX Skill","url":"https://github.com/musoyangrigor/gitx-skill","source":"GitHub","publishedAt":"","summary":"跨 coding agent 的 MIT Git 工作流 skill。","tags":["Agent","Git","Skill"]},
-    {"title":"Git workflow as an AI-agent skill","url":"https://news.ycombinator.com/item?id=49401487","source":"Hacker News","publishedAt":"2026-08-23 00:50 +08:00","summary":"GitX Skill 的近 24 小时 HN 复热证据。","tags":["HN","Resurfaced"]},
-    {"title":"AI4AI-Bench","url":"https://arxiv.org/abs/2608.20318","source":"arXiv","publishedAt":"2026-08-21 01:56 +08:00","summary":"评测 agent 在冻结研究仓库中修改训练算法的能力。","tags":["Agent","Evaluation","Research"]},
-    {"title":"Break It Down, Pass It On","url":"https://arxiv.org/abs/2608.20274","source":"arXiv","publishedAt":"2026-08-21 01:12 +08:00","summary":"研究 agent 技能表示形式和粒度对跨任务迁移的影响。","tags":["Agent","Skills","Research"]},
-    {"title":"Building an almost fully self-hosted, sandboxed, agentic software factory","url":"https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/","source":"Jake Saunders","publishedAt":"","summary":"自托管、沙箱化 agent 软件工厂的旧工程文章。","tags":["Agent","Sandbox","Resurfaced"]},
-    {"title":"Building an almost fully self-hosted agentic software factory (HN discussion)","url":"https://news.ycombinator.com/item?id=49390463","source":"Hacker News","publishedAt":"2026-08-22 00:27 +08:00","summary":"旧工程文近 24 小时复热证据。","tags":["HN","Resurfaced"]},
-    {"title":"Model Genome: Fingerprinting Whether an LLM Was Trained from Scratch or Derived","url":"https://huggingface.co/blog/mayafree/model-dna","source":"Hugging Face","publishedAt":"","summary":"讨论模型来源指纹；精确发布日期未确认。","tags":["LLM","Date Unverified"]},
-    {"title":"Model Genome (HN discussion)","url":"https://news.ycombinator.com/item?id=49400676","source":"Hacker News","publishedAt":"2026-08-22 23:20 +08:00","summary":"Model Genome 的窗口内 HN 发现证据。","tags":["HN","Date Unverified"]},
-    {"title":"Namo Complete","url":"https://github.com/namo-robotics/namo_complete","source":"GitHub","publishedAt":"2026-08-18 00:45 +08:00","summary":"MIT 的 Bash AI 自动补全项目。","tags":["Shell","Autocomplete","Watchlist"]},
-    {"title":"Namo_complete HN discussion","url":"https://news.ycombinator.com/item?id=49401434","source":"Hacker News","publishedAt":"2026-08-23 00:44 +08:00","summary":"Namo Complete 的低互动 HN 信号。","tags":["HN","Watchlist"]},
-    {"title":"Proliferate","url":"https://github.com/proliferate-ai/proliferate","source":"GitHub","publishedAt":"","summary":"AGPL-3.0 的自托管并行 coding-agent 工作台。","tags":["Agent","Coding","Open Source"]},
-    {"title":"Proliferate HN discussion","url":"https://news.ycombinator.com/item?id=49390739","source":"Hacker News","publishedAt":"2026-08-22 00:47 +08:00","summary":"Proliferate 的窗口内 HN 讨论，截止时 42 points、15 comments。","tags":["HN","Agent"]},
-    {"title":"Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents","url":"https://arxiv.org/abs/2608.12851","source":"arXiv","publishedAt":"2026-08-13 13:47 +08:00","summary":"研究自改进 agent 将不安全轨迹固化为可复用技能的风险。","tags":["Agent","Safety","Resurfaced"]},
-    {"title":"Every skill-evolution method authored unsafe skills across four agent harnesses","url":"https://news.ycombinator.com/item?id=49391398","source":"Hacker News","publishedAt":"2026-08-22 01:34 +08:00","summary":"旧研究近 24 小时 HN 复热证据。","tags":["HN","Safety","Resurfaced"]},
-    {"title":"TechSkills","url":"https://github.com/debabratasaha-dev/techskills","source":"GitHub","publishedAt":"","summary":"MIT 的 coding-agent 技能模块集合。","tags":["Agent","Skills","Watchlist"]},
-    {"title":"TechSkills HN discussion","url":"https://news.ycombinator.com/item?id=49401893","source":"Hacker News","publishedAt":"2026-08-23 01:37 +08:00","summary":"TechSkills 的低互动 HN 发现信号。","tags":["HN","Watchlist"]},
-    {"title":"Terminito","url":"https://github.com/arturlimaaa/terminito","source":"GitHub","publishedAt":"2026-08-11 08:28 +08:00","summary":"MIT 的 Claude Code 状态栏工具。","tags":["Claude Code","Developer Tool","Watchlist"]},
-    {"title":"Terminito HN discussion","url":"https://news.ycombinator.com/item?id=49403092","source":"Hacker News","publishedAt":"2026-08-23 03:40 +08:00","summary":"Terminito 的低互动 HN 发现信号。","tags":["HN","Watchlist"]}
+    {
+      "title": "Myli",
+      "url": "https://github.com/EightPotions/Myli",
+      "source": "GitHub",
+      "publishedAt": "2026-08-21 21:47 +08:00",
+      "summary": "MIT 许可的视觉设计多 Agent harness。",
+      "tags": [
+        "Agent",
+        "Design",
+        "Open Source"
+      ]
+    },
+    {
+      "title": "Multi-Agent Harness for Visual Design",
+      "url": "https://news.ycombinator.com/item?id=49400662",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 23:19 +08:00",
+      "summary": "Myli 的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Agent"
+      ]
+    },
+    {
+      "title": "TT-AMX",
+      "url": "https://github.com/ansarzeinulla/tensor-train-amx",
+      "source": "GitHub",
+      "publishedAt": "2026-08-22 17:09 +08:00",
+      "summary": "面向 Apple Silicon 的 Tensor-Train AMX 推理实验。",
+      "tags": [
+        "Inference",
+        "Apple Silicon"
+      ]
+    },
+    {
+      "title": "TT-AMX, a zero-copy Tensor-Train inference engine for Apple Silicon",
+      "url": "https://news.ycombinator.com/item?id=49400420",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 22:55 +08:00",
+      "summary": "TT-AMX 的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Inference"
+      ]
+    },
+    {
+      "title": "agent for iOS",
+      "url": "https://github.com/hsandhu/agent",
+      "source": "GitHub",
+      "publishedAt": "2026-08-21 05:58 +08:00",
+      "summary": "端侧运行 agent 与语音流水线的 iOS 工程；许可证未声明。",
+      "tags": [
+        "Agent",
+        "On-device",
+        "iOS"
+      ]
+    },
+    {
+      "title": "An iOS app that runs AI agents and a complete voice pipeline on the device",
+      "url": "https://news.ycombinator.com/item?id=49401506",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 00:52 +08:00",
+      "summary": "端侧 iOS agent 的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Agent"
+      ]
+    },
+    {
+      "title": "otelcol-genai-sketches",
+      "url": "https://github.com/llm-measurement/otelcol-genai-sketches",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "从 OpenTelemetry traces 生成有界 GenAI 指标的 Apache-2.0 组件。",
+      "tags": [
+        "Observability",
+        "LLM"
+      ]
+    },
+    {
+      "title": "Bounded GenAI metrics from Otel traces with 0 raw prompts",
+      "url": "https://news.ycombinator.com/item?id=49389744",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 23:37 +08:00",
+      "summary": "GenAI sketches 项目的窗口内 HN 讨论。",
+      "tags": [
+        "HN",
+        "Observability"
+      ]
+    },
+    {
+      "title": "The New MCP Roadmap",
+      "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+      "source": "Model Context Protocol",
+      "publishedAt": "2026-08-22 17:00 +08:00",
+      "summary": "MCP 维护者公开下一阶段规范与工作组重点。",
+      "tags": [
+        "MCP",
+        "Agent"
+      ]
+    },
+    {
+      "title": "The New MCP Roadmap (HN discussion)",
+      "url": "https://news.ycombinator.com/item?id=49399591",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 21:31 +08:00",
+      "summary": "MCP 路线图的 HN 讨论，截止时 102 points、78 comments。",
+      "tags": [
+        "HN",
+        "MCP"
+      ]
+    },
+    {
+      "title": "How we made a text-to-speech model respond in sub-50 ms",
+      "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+      "source": "Nari Labs",
+      "publishedAt": "",
+      "summary": "介绍 Qwen3-TTS 的缓存、并行与流式推理优化。",
+      "tags": [
+        "TTS",
+        "Inference"
+      ]
+    },
+    {
+      "title": "How we made a text-to-speech model respond in sub-50 ms (HN discussion)",
+      "url": "https://news.ycombinator.com/item?id=49389952",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-21 23:51 +08:00",
+      "summary": "Nari Labs TTS 工程文章的 HN 讨论。",
+      "tags": [
+        "HN",
+        "TTS"
+      ]
+    },
+    {
+      "title": "StateM",
+      "url": "https://github.com/henryqin1997/statem",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "Apache-2.0 的长任务 agent 状态化 runbook CLI。",
+      "tags": [
+        "Agent",
+        "State"
+      ]
+    },
+    {
+      "title": "StateM: Stateful control for long-horizon agents",
+      "url": "https://news.ycombinator.com/item?id=49399887",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 22:07 +08:00",
+      "summary": "StateM 的窗口内 HN 讨论证据。",
+      "tags": [
+        "HN",
+        "Agent"
+      ]
+    },
+    {
+      "title": "Knowl",
+      "url": "https://github.com/dat999zx/knowl",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "Apache-2.0 的 agent 知识维护与压缩层。",
+      "tags": [
+        "Agent",
+        "Memory"
+      ]
+    },
+    {
+      "title": "Knowl – CLAUDE.md hit 1000 lines, so I built memory that prunes itself",
+      "url": "https://news.ycombinator.com/item?id=49399942",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 22:13 +08:00",
+      "summary": "Knowl 的窗口内 HN 讨论证据。",
+      "tags": [
+        "HN",
+        "Memory"
+      ]
+    },
+    {
+      "title": "GitX Skill",
+      "url": "https://github.com/musoyangrigor/gitx-skill",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "跨 coding agent 的 MIT Git 工作流 skill。",
+      "tags": [
+        "Agent",
+        "Git",
+        "Skill"
+      ]
+    },
+    {
+      "title": "Git workflow as an AI-agent skill",
+      "url": "https://news.ycombinator.com/item?id=49401487",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 00:50 +08:00",
+      "summary": "GitX Skill 的近 24 小时 HN 复热证据。",
+      "tags": [
+        "HN",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "AI4AI-Bench",
+      "url": "https://arxiv.org/abs/2608.20318",
+      "source": "arXiv",
+      "publishedAt": "2026-08-21 01:56 +08:00",
+      "summary": "评测 agent 在冻结研究仓库中修改训练算法的能力。",
+      "tags": [
+        "Agent",
+        "Evaluation",
+        "Research"
+      ]
+    },
+    {
+      "title": "Break It Down, Pass It On",
+      "url": "https://arxiv.org/abs/2608.20274",
+      "source": "arXiv",
+      "publishedAt": "2026-08-21 01:12 +08:00",
+      "summary": "研究 agent 技能表示形式和粒度对跨任务迁移的影响。",
+      "tags": [
+        "Agent",
+        "Skills",
+        "Research"
+      ]
+    },
+    {
+      "title": "Building an almost fully self-hosted, sandboxed, agentic software factory",
+      "url": "https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/",
+      "source": "Jake Saunders",
+      "publishedAt": "",
+      "summary": "自托管、沙箱化 agent 软件工厂的旧工程文章。",
+      "tags": [
+        "Agent",
+        "Sandbox",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "Building an almost fully self-hosted agentic software factory (HN discussion)",
+      "url": "https://news.ycombinator.com/item?id=49390463",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 00:27 +08:00",
+      "summary": "旧工程文近 24 小时复热证据。",
+      "tags": [
+        "HN",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "Model Genome: Fingerprinting Whether an LLM Was Trained from Scratch or Derived",
+      "url": "https://huggingface.co/blog/mayafree/model-dna",
+      "source": "Hugging Face",
+      "publishedAt": "",
+      "summary": "讨论模型来源指纹；精确发布日期未确认。",
+      "tags": [
+        "LLM",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "Model Genome (HN discussion)",
+      "url": "https://news.ycombinator.com/item?id=49400676",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 23:20 +08:00",
+      "summary": "Model Genome 的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "Namo Complete",
+      "url": "https://github.com/namo-robotics/namo_complete",
+      "source": "GitHub",
+      "publishedAt": "2026-08-18 00:45 +08:00",
+      "summary": "MIT 的 Bash AI 自动补全项目。",
+      "tags": [
+        "Shell",
+        "Autocomplete",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Namo_complete HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49401434",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 00:44 +08:00",
+      "summary": "Namo Complete 的低互动 HN 信号。",
+      "tags": [
+        "HN",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Proliferate",
+      "url": "https://github.com/proliferate-ai/proliferate",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "AGPL-3.0 的自托管并行 coding-agent 工作台。",
+      "tags": [
+        "Agent",
+        "Coding",
+        "Open Source"
+      ]
+    },
+    {
+      "title": "Proliferate HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49390739",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 00:47 +08:00",
+      "summary": "Proliferate 的窗口内 HN 讨论，截止时 42 points、15 comments。",
+      "tags": [
+        "HN",
+        "Agent"
+      ]
+    },
+    {
+      "title": "Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents",
+      "url": "https://arxiv.org/abs/2608.12851",
+      "source": "arXiv",
+      "publishedAt": "2026-08-13 13:47 +08:00",
+      "summary": "研究自改进 agent 将不安全轨迹固化为可复用技能的风险。",
+      "tags": [
+        "Agent",
+        "Safety",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "Every skill-evolution method authored unsafe skills across four agent harnesses",
+      "url": "https://news.ycombinator.com/item?id=49391398",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-22 01:34 +08:00",
+      "summary": "旧研究近 24 小时 HN 复热证据。",
+      "tags": [
+        "HN",
+        "Safety",
+        "Resurfaced"
+      ]
+    },
+    {
+      "title": "TechSkills",
+      "url": "https://github.com/debabratasaha-dev/techskills",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "MIT 的 coding-agent 技能模块集合。",
+      "tags": [
+        "Agent",
+        "Skills",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "TechSkills HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49401893",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 01:37 +08:00",
+      "summary": "TechSkills 的低互动 HN 发现信号。",
+      "tags": [
+        "HN",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Terminito",
+      "url": "https://github.com/arturlimaaa/terminito",
+      "source": "GitHub",
+      "publishedAt": "2026-08-11 08:28 +08:00",
+      "summary": "MIT 的 Claude Code 状态栏工具。",
+      "tags": [
+        "Claude Code",
+        "Developer Tool",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Terminito HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49403092",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 03:40 +08:00",
+      "summary": "Terminito 的低互动 HN 发现信号。",
+      "tags": [
+        "HN",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Ordinary agent tool calls can create shadow delegation",
+      "url": "https://niyikiza.com/posts/agents-to-agents/",
+      "source": "Niki A. Niyikiza",
+      "publishedAt": "2026-08-22 00:00 +08:00",
+      "summary": "分析普通工具调用形成不可见多 Agent 委派链的审计与权限风险。",
+      "tags": [
+        "Agent",
+        "Security",
+        "Engineering"
+      ]
+    },
+    {
+      "title": "Ordinary agent tool calls can create shadow delegation (HN discussion)",
+      "url": "https://news.ycombinator.com/item?id=49404443",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 06:24 +08:00",
+      "summary": "Shadow delegation 工程文的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Agent",
+        "Security"
+      ]
+    },
+    {
+      "title": "Locum",
+      "url": "https://github.com/HarjjotSinghh/locum",
+      "source": "GitHub",
+      "publishedAt": "2026-08-22 05:35 +08:00",
+      "summary": "Apache-2.0 的 MCP connector，将 Grok Bot 编码任务委派给本机 CLI。",
+      "tags": [
+        "Agent",
+        "MCP",
+        "Open Source"
+      ]
+    },
+    {
+      "title": "Locum HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49403691",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 04:41 +08:00",
+      "summary": "Locum 的低互动 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Agent",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "NanoGPT Speedrun Frontier",
+      "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+      "source": "Prime Intellect",
+      "publishedAt": "",
+      "summary": "展示 153 次自主 nanoGPT 优化运行及轨迹；精确发布日期未确认。",
+      "tags": [
+        "Agent",
+        "Evaluation",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "NanoGPT Speedrun Frontier HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49404380",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 06:14 +08:00",
+      "summary": "NanoGPT Speedrun Frontier 的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Evaluation"
+      ]
+    },
+    {
+      "title": "How LLM Serves a Request",
+      "url": "https://mapathak-commits.github.io/inference-wall/articles/primer/",
+      "source": "Inference Wall",
+      "publishedAt": "",
+      "summary": "图解 LLM 请求从分词、调度到推理服务的路径；精确发布日期未确认。",
+      "tags": [
+        "LLM",
+        "Inference",
+        "Date Unverified"
+      ]
+    },
+    {
+      "title": "How LLM Serves a Request (HN discussion)",
+      "url": "https://news.ycombinator.com/item?id=49404153",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 05:41 +08:00",
+      "summary": "LLM 推理图解的窗口内 HN 发现证据。",
+      "tags": [
+        "HN",
+        "Inference"
+      ]
+    },
+    {
+      "title": "Pawvis",
+      "url": "https://github.com/alexandriax/pawvis",
+      "source": "GitHub",
+      "publishedAt": "2026-08-07 18:31 +08:00",
+      "summary": "MIT 许可的 macOS 摄像头手势与语音控制项目。",
+      "tags": [
+        "Computer Vision",
+        "macOS",
+        "Watchlist"
+      ]
+    },
+    {
+      "title": "Pawvis HN discussion",
+      "url": "https://news.ycombinator.com/item?id=49402530",
+      "source": "Hacker News",
+      "publishedAt": "2026-08-23 02:44 +08:00",
+      "summary": "Pawvis 的近 24 小时低互动 HN 复热信号。",
+      "tags": [
+        "HN",
+        "Resurfaced",
+        "Watchlist"
+      ]
+    }
   ]
 }

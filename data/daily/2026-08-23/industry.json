@@ -2,35 +2,82 @@
   "slug": "ai-industry",
   "title": "主流 AI / Agent 厂商技术动态日报",
   "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
-  "tags": ["AI", "Agent", "Industry", "Research"],
+  "tags": [
+    "AI",
+    "Agent",
+    "Industry",
+    "Research"
+  ],
   "order": 40,
-  "updatedAt": "2026-08-23T04:03:00+08:00",
+  "updatedAt": "2026-08-23T07:02:00+08:00",
   "scan": {
     "checkedSources": [
-      "Anthropic News/Research", "OpenAI News/Research", "Google DeepMind News", "Google Research Blog",
-      "Meta AI Blog", "Microsoft Research Blog", "xAI News", "xAI API/模型文档与 changelog", "Grok Build changelog 与 xai-org GitHub", "Grok DeepSearch/语音/编码/工具调用/Agent 官方入口", "Mistral News",
-      "Cohere Blog", "Qwen/Alibaba/DAMO", "ByteDance Seed", "Baidu Research", "Tencent Hunyuan",
-      "DeepSeek", "Zhipu/GLM", "Moonshot/Kimi", "StepFun", "MiniMax", "NVIDIA Developer/Research",
-      "Hugging Face Blog", "LangChain Blog", "LlamaIndex Blog", "Latent Space", "Dwarkesh",
-      "No Priors", "The Cognitive Revolution", "a16z AI"
+      "Anthropic News/Research",
+      "OpenAI News/Research",
+      "Google DeepMind News",
+      "Google Research Blog",
+      "Meta AI Blog",
+      "Microsoft Research Blog",
+      "xAI News",
+      "xAI API/模型文档与 changelog",
+      "Grok Build changelog 与 xai-org GitHub",
+      "Grok DeepSearch/语音/编码/工具调用/Agent 官方入口",
+      "Mistral News",
+      "Cohere Blog",
+      "Qwen/Alibaba/DAMO",
+      "ByteDance Seed",
+      "Baidu Research",
+      "Tencent Hunyuan",
+      "DeepSeek",
+      "Zhipu/GLM",
+      "Moonshot/Kimi",
+      "StepFun",
+      "MiniMax",
+      "NVIDIA Developer/Research",
+      "Hugging Face Blog",
+      "LangChain Blog",
+      "LlamaIndex Blog",
+      "Latent Space",
+      "Dwarkesh",
+      "No Priors",
+      "The Cognitive Revolution",
+      "a16z AI"
     ],
     "failedSources": [
       "部分厂商动态页依赖 JavaScript，只能核对公开列表与搜索摘要",
       "部分中文厂商官网未提供可稳定抓取、带精确时间的统一更新流",
       "社交平台入口需要登录，未把其摘要当作已核实事实"
     ],
-    "candidateCount": 9,
+    "candidateCount": 10,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n扫描窗口：2026-08-22 04:01 至 2026-08-23 04:01（Asia/Shanghai）。本轮保留 1 条窗口内社区技术文章，并补入 2 条 NVIDIA 官方 Agent 技术文章。两篇 NVIDIA 原文只标注 2026-08-21、没有时刻，因此仅作为近两至三日且时刻未确认的补充，不写成最近 24 小时事实。\n\n## 优先动态\n\n| 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |\n|---|---|---|---|---|---|\n| FINAL-Bench / Hugging Face 社区 | We changed one line and the benchmark score moved 0.21 AUROC | 技术文章/基准 | 2026-08-22；窗口内，具体时刻未展示 | 作者在同一 hERG 数据上比较时间切分与随机切分，报告 AUROC 相差 0.211，并用跨论文重复测量估计标签噪声。意义在于提醒模型排行榜必须披露切分策略、简单基线与测量精度；数字仅适用于作者给定数据与实验。 | [原文](https://huggingface.co/blog/FINAL-Bench/leadboard-drug) |\n\n## 常规厂商扫描\n\nAnthropic 与 OpenAI 官方入口已检查；相关动态分别详见 Claude 专题页与 OpenAI 专题页。Google DeepMind/Research、Meta、Microsoft、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、LangChain 与 LlamaIndex 的公开入口，在截止时间前未找到可确认落入最近 24 小时的新条目。\n\n### xAI / Grok 强制检查\n\n已显式检查 xAI News、API/模型文档、Grok Build changelog 与 xai-org GitHub，覆盖模型/API、DeepSearch、语音、编码、工具调用和 Agent 动态；最新官方新闻仍早于本轮窗口，因此不硬凑条目。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客入口已检索，未确认窗口内新集。\n\n## 近两日补充\n\n- [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)（2026-08-21，时刻未确认）：NVIDIA 介绍带持久记忆、监督器和工具反馈的长程 Agent 架构，并报告完成 ARC-AGI-3 公共集 25 个环境、183 个关卡；该结果不外推至半私有或私有集。\n- [Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)（2026-08-21，时刻未确认）：文章区分 harness 层的行为引导与运行时、基础设施层的强制授权，强调最小权限、隔离、即时访问与审计。\n\n## 近三日补充\n\n上述两篇 NVIDIA 原文均缺少时刻，按本轮 04:01 截止点可能落在 24–48 小时或 48–72 小时范围，故同时保留“近两至三日、时刻未确认”限制。\n\n## 日期未确认\n\n- 部分厂商列表仅显示日期或相对时间，无法证明候选落入最近 24 小时；NVIDIA 两篇补充已按日期明确、时刻未确认处理。\n\n## 观察池\n\n- NVIDIA NGC 的 aiq-agent 2.2.1 页面显示 8 月 22 日更新，但未找到对应可核实的变更说明，因此不把版本号扩写为发布事实。\n- 厂商社交账号的搜索摘要因登录限制未能打开原帖，仅作为后续轮次线索。\n\n## 来源链接\n\n- [FINAL-Bench：We changed one line and the benchmark score moved 0.21 AUROC](https://huggingface.co/blog/FINAL-Bench/leadboard-drug)\n- [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)\n- [NVIDIA：Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI/Grok 全部强制入口、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 与指定播客入口。\n- 失败来源：部分页面依赖 JavaScript；部分中文厂商缺少稳定的带时刻更新流；社交入口需要登录；NGC 镜像未提供对应变更说明。\n- 初始候选：9 条；最终保留：3 条。\n- 二次补搜：否（最终来源不为 0）。\n\n一句话总结：最近 24 小时厂商发布面较安静；补充信号集中在 NVIDIA 对长程 Agent 架构与 Agent 栈安全边界的技术说明。",
+  "content": "## 今日概览\n\n扫描窗口：2026-08-22 07:02 至 2026-08-23 07:02（Asia/Shanghai）；同时覆盖 24–48 小时与 48–72 小时候选。本页累计保留 1 条窗口内社区技术文章，并补入 2 条 NVIDIA 与 1 条 Google DeepMind 官方 Agent/研究文章。后三篇原文只标注 2026-08-21、没有时刻，因此仅作为近两至三日且时刻未确认的补充，不写成最近 24 小时事实。\n\n## 优先动态\n\n| 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |\n|---|---|---|---|---|---|\n| FINAL-Bench / Hugging Face 社区 | We changed one line and the benchmark score moved 0.21 AUROC | 技术文章/基准 | 2026-08-22；窗口内，具体时刻未展示 | 作者在同一 hERG 数据上比较时间切分与随机切分，报告 AUROC 相差 0.211，并用跨论文重复测量估计标签噪声。意义在于提醒模型排行榜必须披露切分策略、简单基线与测量精度；数字仅适用于作者给定数据与实验。 | [原文](https://huggingface.co/blog/FINAL-Bench/leadboard-drug) |\n\n## 常规厂商扫描\n\nAnthropic 与 OpenAI 官方入口已检查；相关动态分别详见 Claude 专题页与 OpenAI 专题页。Google DeepMind/Research、Meta、Microsoft、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、LangChain 与 LlamaIndex 的公开入口，在截止时间前未找到可确认落入最近 24 小时的新条目。\n\n### xAI / Grok 强制检查\n\n已显式检查 xAI News、API/模型文档、Grok Build changelog 与 xai-org GitHub，覆盖模型/API、DeepSearch、语音、编码、工具调用和 Agent 动态；最新官方新闻仍早于本轮窗口，因此不硬凑条目。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客入口已检索，未确认窗口内新集。\n\n## 近两日补充\n\n- [Google DeepMind：From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)（2026-08-21，时刻未确认）：文章回顾 DQN、AlphaGo、SIMA 2 等游戏 AI 路线，并介绍与 Fenris Creations/EVE Universe 的研究合作；其长期目标是研究能在持续变化环境中学习、适应和记忆的 Agent，当前先从与在线玩家隔离的离线环境推进。\n- [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)（2026-08-21，时刻未确认）：NVIDIA 介绍带持久记忆、监督器和工具反馈的长程 Agent 架构，并报告完成 ARC-AGI-3 公共集 25 个环境、183 个关卡；该结果不外推至半私有或私有集。\n- [Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)（2026-08-21，时刻未确认）：文章区分 harness 层的行为引导与运行时、基础设施层的强制授权，强调最小权限、隔离、即时访问与审计。\n\n## 近三日补充\n\nGoogle DeepMind 与两篇 NVIDIA 原文均缺少时刻，按本轮 07:02 截止点可能落在 24–48 小时或 48–72 小时范围，故统一保留“近两至三日、时刻未确认”限制。\n\n## 日期未确认\n\n- 部分厂商列表仅显示日期或相对时间，无法证明候选落入最近 24 小时；Google DeepMind 与 NVIDIA 三篇补充已按日期明确、时刻未确认处理。\n\n## 观察池\n\n- NVIDIA NGC 的 aiq-agent 2.2.1 页面显示 8 月 22 日更新，但未找到对应可核实的变更说明，因此不把版本号扩写为发布事实。\n- 厂商社交账号的搜索摘要因登录限制未能打开原帖，仅作为后续轮次线索。\n\n## 来源链接\n\n- [Google DeepMind：From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)\n- [FINAL-Bench：We changed one line and the benchmark score moved 0.21 AUROC](https://huggingface.co/blog/FINAL-Bench/leadboard-drug)\n- [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)\n- [NVIDIA：Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI/Grok 全部强制入口、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 与指定播客入口。\n- 失败来源：部分页面依赖 JavaScript；部分中文厂商缺少稳定的带时刻更新流；社交入口需要登录；NGC 镜像未提供对应变更说明。\n- 初始候选：10 条；最终保留：4 条。\n- 二次补搜：否（最终来源不为 0）。\n\n一句话总结：最近 24 小时厂商发布面较安静；近三日补充集中在持续学习游戏 Agent、长程 Agent 架构与 Agent 栈安全边界。",
   "sources": [
+    {
+      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-08-21",
+      "summary": "近两至三日、时刻未确认：Google DeepMind 回顾游戏 AI 路线，并介绍以 EVE 持续世界研究 Agent 长期学习、适应与记忆的合作计划。",
+      "tags": [
+        "Agent",
+        "Research",
+        "Games",
+        "Google DeepMind",
+        "Watchlist"
+      ]
+    },
     {
       "title": "We changed one line and the benchmark score moved 0.21 AUROC",
       "url": "https://huggingface.co/blog/FINAL-Bench/leadboard-drug",
       "source": "FINAL-Bench / Hugging Face Community",
       "publishedAt": "2026-08-22",
       "summary": "社区文章用药物性质预测基准说明数据切分、标签噪声和简单基线会显著影响排行榜解读。",
-      "tags": ["Benchmark", "Science AI", "Hugging Face"]
+      "tags": [
+        "Benchmark",
+        "Science AI",
+        "Hugging Face"
+      ]
     },
     {
       "title": "NVIDIA AVO Reaches 100% on ARC-AGI-3, Demonstrating a Frontier-Level General-Purpose Architecture for Long-Horizon Autonomous Agents",
@@ -38,7 +85,13 @@
       "source": "NVIDIA Technical Blog",
       "publishedAt": "2026-08-21",
       "summary": "近两至三日、时刻未确认：NVIDIA 介绍以持久记忆、监督器和工具反馈支撑长程任务的 AVO Agent 架构，并报告其完成 ARC-AGI-3 公共集；不外推至非公开集。",
-      "tags": ["Agent", "Research", "Benchmark", "NVIDIA", "Watchlist"]
+      "tags": [
+        "Agent",
+        "Research",
+        "Benchmark",
+        "NVIDIA",
+        "Watchlist"
+      ]
     },
     {
       "title": "Where Security Fits in an AI Agent Stack",
@@ -46,7 +99,13 @@
       "source": "NVIDIA Technical Blog",
       "publishedAt": "2026-08-21",
       "summary": "近两至三日、时刻未确认：NVIDIA 将 Agent 行为引导与基础设施强制控制分层，强调最小权限、隔离、即时授权和可审计运行时边界。",
-      "tags": ["Agent", "Security", "Runtime", "NVIDIA", "Watchlist"]
+      "tags": [
+        "Agent",
+        "Security",
+        "Runtime",
+        "NVIDIA",
+        "Watchlist"
+      ]
     }
   ]
 }

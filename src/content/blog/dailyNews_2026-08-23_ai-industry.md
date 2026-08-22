@@ -1,17 +1,19 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T04:03:00+08:00"
+updatedAt: "2026-08-23T07:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "We changed one line and the benchmark score moved 0.21 AUROC"
-featuredUrl: "https://huggingface.co/blog/FINAL-Bench/leadboard-drug"
-featuredSummary: "社区文章用药物性质预测基准说明数据切分、标签噪声和简单基线会显著影响排行榜解读。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredPublishedAt: "2026-08-22"
-featuredTags: ["Benchmark","Science AI","Hugging Face"]
+featuredTitle: "From Atari to EVE Online: Building on 15 Years of AI Research in Games"
+featuredUrl: "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
+featuredSummary: "近两至三日、时刻未确认：Google DeepMind 回顾游戏 AI 路线，并介绍以 EVE 持续世界研究 Agent 长期学习、适应与记忆的合作计划。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-08-21"
+featuredTags: ["Agent","Research","Games","Google DeepMind","Watchlist"]
 tags:
   - "Agent"
   - "AI"
   - "Benchmark"
+  - "Games"
+  - "Google DeepMind"
   - "Hugging Face"
   - "Industry"
   - "NVIDIA"
@@ -24,7 +26,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：2026-08-22 04:01 至 2026-08-23 04:01（Asia/Shanghai）。本轮保留 1 条窗口内社区技术文章，并补入 2 条 NVIDIA 官方 Agent 技术文章。两篇 NVIDIA 原文只标注 2026-08-21、没有时刻，因此仅作为近两至三日且时刻未确认的补充，不写成最近 24 小时事实。
+扫描窗口：2026-08-22 07:02 至 2026-08-23 07:02（Asia/Shanghai）；同时覆盖 24–48 小时与 48–72 小时候选。本页累计保留 1 条窗口内社区技术文章，并补入 2 条 NVIDIA 与 1 条 Google DeepMind 官方 Agent/研究文章。后三篇原文只标注 2026-08-21、没有时刻，因此仅作为近两至三日且时刻未确认的补充，不写成最近 24 小时事实。
 
 ## 优先动态
 
@@ -46,16 +48,17 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 近两日补充
 
+- [Google DeepMind：From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)（2026-08-21，时刻未确认）：文章回顾 DQN、AlphaGo、SIMA 2 等游戏 AI 路线，并介绍与 Fenris Creations/EVE Universe 的研究合作；其长期目标是研究能在持续变化环境中学习、适应和记忆的 Agent，当前先从与在线玩家隔离的离线环境推进。
 - [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)（2026-08-21，时刻未确认）：NVIDIA 介绍带持久记忆、监督器和工具反馈的长程 Agent 架构，并报告完成 ARC-AGI-3 公共集 25 个环境、183 个关卡；该结果不外推至半私有或私有集。
 - [Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)（2026-08-21，时刻未确认）：文章区分 harness 层的行为引导与运行时、基础设施层的强制授权，强调最小权限、隔离、即时访问与审计。
 
 ## 近三日补充
 
-上述两篇 NVIDIA 原文均缺少时刻，按本轮 04:01 截止点可能落在 24–48 小时或 48–72 小时范围，故同时保留“近两至三日、时刻未确认”限制。
+Google DeepMind 与两篇 NVIDIA 原文均缺少时刻，按本轮 07:02 截止点可能落在 24–48 小时或 48–72 小时范围，故统一保留“近两至三日、时刻未确认”限制。
 
 ## 日期未确认
 
-- 部分厂商列表仅显示日期或相对时间，无法证明候选落入最近 24 小时；NVIDIA 两篇补充已按日期明确、时刻未确认处理。
+- 部分厂商列表仅显示日期或相对时间，无法证明候选落入最近 24 小时；Google DeepMind 与 NVIDIA 三篇补充已按日期明确、时刻未确认处理。
 
 ## 观察池
 
@@ -64,6 +67,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 来源链接
 
+- [Google DeepMind：From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)
 - [FINAL-Bench：We changed one line and the benchmark score moved 0.21 AUROC](https://huggingface.co/blog/FINAL-Bench/leadboard-drug)
 - [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)
 - [NVIDIA：Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/)
@@ -72,7 +76,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI/Grok 全部强制入口、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 与指定播客入口。
 - 失败来源：部分页面依赖 JavaScript；部分中文厂商缺少稳定的带时刻更新流；社交入口需要登录；NGC 镜像未提供对应变更说明。
-- 初始候选：9 条；最终保留：3 条。
+- 初始候选：10 条；最终保留：4 条。
 - 二次补搜：否（最终来源不为 0）。
 
-一句话总结：最近 24 小时厂商发布面较安静；补充信号集中在 NVIDIA 对长程 Agent 架构与 Agent 栈安全边界的技术说明。
+一句话总结：最近 24 小时厂商发布面较安静；近三日补充集中在持续学习游戏 Agent、长程 Agent 架构与 Agent 栈安全边界。
