@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { posts, heading, isWeekly, mode = "col" } = Astro.props;
-const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas"];
+const TOPIC_ORDER = ["claude", "openai", "open-source", "ai-industry", "aaas", "daily-edition"];
 const calendarDate = (date: string) => date.slice(0, 10);
 const topicRank = (slug: string) => {
   const topic = TOPIC_ORDER.find((candidate) => slug.endsWith(`_${candidate}`));

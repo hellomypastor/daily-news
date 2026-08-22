@@ -1,6 +1,6 @@
 # Codex Scheduled Task
 
-Use one local-project task to refresh five topics every three hours, accumulate five daily pages, and publish only substantive changes in one commit.
+Use one local-project task to refresh five topics every three hours, accumulate them, and publish five topic pages plus one generated daily edition in one commit.
 
 ## Configuration
 
@@ -13,7 +13,7 @@ Use one local-project task to refresh five topics every three hours, accumulate 
 ## Prompt to paste
 
 ```text
-在当前 daily-news 仓库执行每 3 小时一次的当天累积新闻更新。使用 Asia/Shanghai 时区计算运行日期 YYYY-MM-DD、当前时间和每个主题的采集窗口。当天始终维护 5 篇页面，不为每轮运行新增页面；跨日后创建新日期目录，历史日期不再改写。
+在当前 daily-news 仓库执行每 3 小时一次的当天累积新闻更新。使用 Asia/Shanghai 时区计算运行日期 YYYY-MM-DD、当前时间和每个主题的采集窗口。当天维护 5 篇主题页，并由发布器自动生成 1 篇独立的每日精选文章，共 6 篇；不为每轮运行新增页面，跨日后创建新日期目录，历史日期不再改写。
 
 开始前：
 1. 阅读 AGENTS.md、data/daily/README.md、automation/topics/README.md，以及 automation/topics/ 下 01 到 05 的全部主题规范。
@@ -44,11 +44,11 @@ Use one local-project task to refresh five topics every three hours, accumulate 
 
 每个主题都应主动检查本页已引用的官方原文、论文或项目页面是否有公开可访问的配图/OpenGraph 图，并按 data/daily/README.md 填写 image.url、alt、sourceUrl 和 caption，确保 sourceUrl 出现在正文对应新闻条目中。图片会紧跟该条目的说明段落或表格展示；不要把图片当作页面题图，也不要放到首页列表右侧。优先官方发布配图、项目截图和视频封面；禁止生成图片、使用搜索结果缩略图、头像、图库水印图或无法确认出处的图片。单个主题没有可靠图片可以省略，但当天五篇不得全部无图；提交前必须检查至少一篇配置了可访问且来源明确的 image，目标是有可靠素材的主题都配置。
 
-Today 首页会像 weblog 一样显示当天五条紧凑精选：每个主题取 `image.sourceUrl` 对应来源（无图时取第一条来源）的标题、2–3 句摘要、配图、时间和标签；不得展开完整日报。五篇完整独立详情页与永久链接仍需保留。
+Today 首页会像 weblog 一样显示当天五条紧凑精选：每个主题取 `image.sourceUrl` 对应来源（无图时取第一条来源）的标题、2–3 句摘要、配图、时间和标签；不得展开完整日报。五篇专题详情页以及由发布器生成的第六篇 `dailyNews_YYYY-MM-DD_daily-edition.md` 均需保留独立永久链接。
 
 当仓库中存在早于当天的日报时，Today 右侧自动显示 `Highlights`，按日期倒序列出最多 10 条历史精选；仅有当天内容时隐藏右栏并保持单栏。
 
-构建会自动为每个日期生成 `/daily/YYYY-MM-DD` 精选归档页，内容与该日期当天的 Today 五条精选一致。它由已有五篇页面派生，不新增第六份 JSON 或 Markdown；Today 日期标题和 Highlights 日期均链接到对应归档。
+构建会为每个日期生成 `/daily/YYYY-MM-DD` 精选展示页，内容与当天 Today 五条精选一致；发布器同时生成第六篇正式 Markdown 文章 `dailyNews_YYYY-MM-DD_daily-edition.md`。两者都由五份主题 JSON 派生，不新增第六份 JSON；Today 日期标题和 Highlights 日期均链接到精选展示页。
 
 五个主题检查完后，先运行 `git status --porcelain -- data/daily/YYYY-MM-DD`。如果当天五份 JSON 均已存在且没有实质变化，停止后续发布，不运行 publish/build，不创建空提交；最终明确报告“本轮无实质更新”。
 
@@ -59,7 +59,7 @@ yarn build
 
 只有三条命令全部成功才允许发布。提交前检查 git status 和 diff，变更范围只允许包括：
 - 当天五个 data/daily JSON
-- 当天五个 src/content/blog Markdown
+- 当天六个 src/content/blog Markdown（含自动生成的 daily-edition）
 - public/search-index.json
 
 如果出现其他改动、少于五份数据、页面内重复 URL、0 来源但未二次补搜、校验失败或构建失败，停止且不要提交。
@@ -71,7 +71,7 @@ git push origin main
 
 禁止 force push，禁止输出凭据、Token 或环境变量。
 
-最终报告五篇页面标题、每篇来源数、生成路径、校验结果、构建结果、commit hash 和 push 结果。任何步骤失败时停止后续操作并明确报告原因。
+最终报告六篇页面标题、五篇专题的来源数、生成路径、校验结果、构建结果、commit hash 和 push 结果。任何步骤失败时停止后续操作并明确报告原因。
 ```
 
 Pushing `main` triggers repository CI. The existing Vercel Git integration performs deployment after the push.

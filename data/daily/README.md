@@ -1,6 +1,6 @@
 # Daily source data
 
-一个 Codex Scheduled Task 每天生成五份主题数据：
+一个 Codex Scheduled Task 每天生成五份主题数据，发布器再自动生成第六篇每日精选文章：
 
 | order | file | slug |
 |---:|---|---|
@@ -10,7 +10,7 @@
 | 40 | `industry.json` | `ai-industry` |
 | 50 | `aaas.json` | `aaas` |
 
-路径为 `data/daily/YYYY-MM-DD/<file>`。每份 JSON 对应一篇独立页面，当天必须恰好五份。
+路径为 `data/daily/YYYY-MM-DD/<file>`。每份 JSON 对应一篇独立主题页，当天必须恰好五份；`yarn news:publish` 额外生成 `dailyNews_YYYY-MM-DD_daily-edition.md`，无需也不得创建 `daily-edition.json`。
 
 ## Schema
 

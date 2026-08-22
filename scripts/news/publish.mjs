@@ -4,7 +4,11 @@ import { outputFiles, outputPath, readSources, ROOT, shanghaiDate } from "./lib.
 
 const date = process.argv[2] ?? shanghaiDate();
 const sources = readSources(date);
-const expectedFiles = sources.map((source) => path.basename(outputPath(date, source.slug))).sort();
+const editionSlug = "daily-edition";
+const expectedFiles = [
+	...sources.map((source) => path.basename(outputPath(date, source.slug))),
+	path.basename(outputPath(date, editionSlug)),
+].sort();
 const staleFiles = outputFiles(date).filter((file) => !expectedFiles.includes(file));
 if (staleFiles.length) {
 	throw new Error(`发现当天不属于本次数据的旧页面，请人工确认后处理：${staleFiles.join(", ")}`);
@@ -64,4 +68,44 @@ for (const source of sources) {
 	console.log(`已生成 ${path.relative(ROOT, target)}（${source.sources.length} 个来源）`);
 }
 
-console.log(`发布完成：${date} 共 5 篇页面`);
+const editionTitle = `Daily News 精选日报 · ${date}`;
+const editionDescription = `${date} 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。`;
+const editionTags = ["Daily Edition", "AI", "Agent", "每日精选"];
+const editionSections = sources.map((source) => {
+	const featured = source.sources.find((item) => item.url === source.image?.sourceUrl) ?? source.sources[0];
+	const lines = [
+		`## ${source.title}`,
+		"",
+		featured ? `**[${featured.title}](${featured.url})**。${featured.summary} ${source.description}` : source.description,
+	];
+	if (source.image) {
+		lines.push(
+			"",
+			'<figure class="source-image">',
+			`  <a href="${escapeHtml(source.image.sourceUrl)}"><img src="${escapeHtml(source.image.url)}" alt="${escapeHtml(source.image.alt)}" loading="lazy" /></a>`,
+			`  <figcaption><a href="${escapeHtml(source.image.sourceUrl)}">${escapeHtml(source.image.caption)}</a></figcaption>`,
+			"</figure>",
+		);
+	}
+	lines.push("", `[阅读完整专题日报](/blog/dailynews_${date}_${source.slug})`);
+	return lines.join("\n");
+});
+const editionFrontmatter = [
+	"---",
+	`title: ${JSON.stringify(editionTitle)}`,
+	`date: ${JSON.stringify(`${date}T00:00:00+08:00`)}`,
+	`updatedAt: ${JSON.stringify(sources.map((source) => source.updatedAt).filter(Boolean).sort().at(-1) || `${date}T11:00:00+08:00`)}`,
+	`description: ${JSON.stringify(editionDescription)}`,
+	`featuredTitle: ${JSON.stringify(editionTitle)}`,
+	`featuredUrl: ${JSON.stringify(sources.flatMap((source) => source.sources)[0]?.url ?? "https://github.com/hellomypastor/daily-news")}`,
+	`featuredSummary: ${JSON.stringify(editionDescription)}`,
+	`featuredTags: ${JSON.stringify(editionTags)}`,
+	"tags:",
+	...editionTags.map((tag) => `  - ${quote(tag)}`),
+	"---",
+].join("\n");
+const editionTarget = outputPath(date, editionSlug);
+fs.writeFileSync(editionTarget, `${editionFrontmatter}\n\n# ${editionTitle}\n\n${editionDescription}\n\n${editionSections.join("\n\n")}\n`);
+console.log(`已生成 ${path.relative(ROOT, editionTarget)}（每日精选归档）`);
+
+console.log(`发布完成：${date} 共 6 篇页面`);

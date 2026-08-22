@@ -33,7 +33,11 @@ if (process.env.ALLOW_DAILY_SOURCE_REMOVAL !== "1") {
 	}
 }
 
-const expectedFiles = sources.map(({ slug }) => path.basename(outputPath(date, slug))).sort();
+const editionSlug = "daily-edition";
+const expectedFiles = [
+	...sources.map(({ slug }) => path.basename(outputPath(date, slug))),
+	path.basename(outputPath(date, editionSlug)),
+].sort();
 const actualFiles = outputFiles(date);
 if (JSON.stringify(actualFiles) !== JSON.stringify(expectedFiles)) {
 	throw new Error(`${date} 的页面集合不匹配；期望 ${expectedFiles.join(", ")}，实际 ${actualFiles.join(", ")}`);
@@ -62,4 +66,12 @@ for (const { slug, title, updatedAt, sources: references } of sources) {
 	console.log(`校验通过：${path.relative(ROOT, target)}`);
 }
 
-console.log(`校验通过：${date} 共 5 篇页面`);
+const editionTarget = outputPath(date, editionSlug);
+const editionContent = fs.readFileSync(editionTarget, "utf8");
+for (const { slug, title } of sources) {
+	if (!editionContent.includes(title) || !editionContent.includes(`/blog/dailynews_${date}_${slug}`)) {
+		throw new Error(`${path.relative(ROOT, editionTarget)} 缺少主题精选或详情链接：${title}`);
+	}
+}
+console.log(`校验通过：${path.relative(ROOT, editionTarget)}`);
+console.log(`校验通过：${date} 共 6 篇页面`);

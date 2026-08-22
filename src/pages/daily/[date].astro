@@ -12,7 +12,7 @@ export function getStaticPaths() {
     const topic = topicOrder.find((candidate) => id.endsWith(`_${candidate}`));
     return topic ? topicOrder.indexOf(topic) : topicOrder.length;
   };
-  const posts = getBlogPosts();
+  const posts = getBlogPosts().filter((post) => !post.id.endsWith("_daily-edition"));
   const dates = [...new Set(posts.map((post) => calendarDate(post.data.date)))];
   return dates.map((date) => ({
     params: { date },

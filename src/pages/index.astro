@@ -17,13 +17,14 @@ const posts = getBlogPosts().sort((a, b) =>
   topicRank(a.id) - topicRank(b.id) ||
   a.data.title.localeCompare(b.data.title)
 );
+const topicPosts = posts.filter((post) => !post.id.endsWith("_daily-edition"));
 
-const latestDate = posts[0] ? calendarDate(posts[0].data.date) : undefined;
+const latestDate = topicPosts[0] ? calendarDate(topicPosts[0].data.date) : undefined;
 const todaysPosts = latestDate
-  ? posts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
+  ? topicPosts.filter((post) => calendarDate(post.data.date) === latestDate).slice(0, 5)
   : [];
 const highlights = latestDate
-  ? posts.filter((post) => calendarDate(post.data.date) < latestDate).slice(0, 10)
+  ? topicPosts.filter((post) => calendarDate(post.data.date) < latestDate).slice(0, 10)
   : [];
 
 const content = {
