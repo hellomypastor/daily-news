@@ -13,12 +13,12 @@ const {
 } = Astro.props;
 const { day, year } = getCalendarDateParts(post.date);
 const topics = [
-  { key: "claude", label: "Claude", index: "01" },
-  { key: "openai", label: "OpenAI", index: "02" },
-  { key: "open-source", label: "Open source", index: "03" },
-  { key: "ai-industry", label: "Industry", index: "04" },
-  { key: "aaas", label: "AaaS", index: "05" },
-  { key: "daily-edition", label: "Daily edition", index: "06" },
+  { key: "daily-edition", label: "Daily edition", index: "01" },
+  { key: "claude", label: "Claude", index: "02" },
+  { key: "openai", label: "OpenAI", index: "03" },
+  { key: "open-source", label: "Open source", index: "04" },
+  { key: "ai-industry", label: "Industry", index: "05" },
+  { key: "aaas", label: "AaaS", index: "06" },
 ];
 const topic = topics.find(({ key }) => slug.endsWith(`_${key}`));
 ---
