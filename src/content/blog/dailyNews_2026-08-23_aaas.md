@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T07:02:00+08:00"
+updatedAt: "2026-08-23T10:00:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Introducing Grok Bot"
 featuredUrl: "https://x.ai/news/introducing-grok-bot"
@@ -43,12 +43,13 @@ tags:
 
 ## 扫描结论
 
-主发现窗口：2026-08-22 07:02 至 2026-08-23 07:02（Asia/Shanghai）；24–72 小时观察窗口：2026-08-20 07:02 至 2026-08-22 07:02。本窗口可核验的 AaaS 变化主要来自 Anthropic：Claude Code 2.1.239 强化云会话、Remote Control、远程 MCP 重连和跨机器消息，Agent SDK 0.3.239让重连宿主重新发现仍在运行的后台任务；截止前发布的 2.1.240/0.3.240 只有可靠性修复与版本同步说明，不扩写未知细节。Google 与 GitHub 的同窗更新偏执行安全、会话恢复和企业策略，属于 Agent harness 邻近信号。Devin 8 月 21 日更新覆盖会话订阅、Automation webhook、企业 MCP 和私网接入，但无时分，放入日期未确认。xAI/Grok 本轮未发现新的托管 Agent 发布；8 月 11 日 Grok Bot 因具有云端独立电脑、持续执行和多 Bot 并发而作为较旧官方背景保留。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
+主发现窗口：2026-08-22 10:00 至 2026-08-23 10:00（Asia/Shanghai）；24–72 小时观察窗口：2026-08-20 10:00 至 2026-08-22 10:00。本窗口可核验的 AaaS 变化主要来自 Anthropic：Claude Code 2.1.239 强化云会话、Remote Control、远程 MCP 重连和跨机器消息，Agent SDK 0.3.239让重连宿主重新发现仍在运行的后台任务；后续发布的 2.1.240/0.3.240 与 2.1.241/0.3.241 只有可靠性修复与版本同步说明，不扩写未知细节。Google 与 GitHub 的同窗更新偏执行安全、会话恢复和企业策略，属于 Agent harness 邻近信号；Gemini CLI 8 月 23 日 nightly 的比较记录只有发布提交，未据此推断新能力。Devin 8 月 21 日更新覆盖会话订阅、Automation webhook、企业 MCP 和私网接入，但无时分，放入日期未确认。xAI/Grok 本轮未发现新的托管 Agent 发布；8 月 11 日 Grok Bot 因具有云端独立电脑、持续执行和多 Bot 并发而作为较旧官方背景保留。Claude 相关条目详见 Claude 专题页，OpenAI/Codex 相关条目详见 OpenAI 专题页。
 
 ## 今日重点
 
 | 厂商 / 平台 | 动态 | AaaS 意义 | 证据状态 |
 |---|---|---|---|
+| Anthropic | [Claude Code v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241)仅披露 bug fixes and reliability improvements；[Claude Agent SDK v0.3.241](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.241)同步该版本 | 托管/远程执行可靠性相关版本，但不能从简短说明推断具体能力 | 2026-08-23 08:52 +08:00；已验证，详见 Claude 专题页 |
 | Anthropic | [Claude Code v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240)仅披露 bug fixes and reliability improvements | 托管/远程执行可靠性相关版本，但不能从简短说明推断具体能力 | 2026-08-22 22:45 +08:00；已验证，详见 Claude 专题页 |
 | Anthropic | [Claude Agent SDK v0.3.240](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.240)同步 Claude Code 2.1.240 | SDK 与执行器保持版本一致；官方未列额外功能 | 2026-08-22 22:45 +08:00；已验证，详见 Claude 专题页 |
 | Anthropic | [Claude Code v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239)增加云端同步插件、跨机器会话消息、远程会话 keep-alive，并修复云会话 plan mode 与远程 MCP 重连 | 强化云会话隔离、跨端协作、长任务存活和故障恢复 | 2026-08-22 03:54 +08:00；已验证，详见 Claude 专题页 |
@@ -56,6 +57,7 @@ tags:
 
 ## 远程 / 云 Agent 执行
 
+- [Claude Code 2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241)和[Agent SDK 0.3.241](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.241)在 08:52 +08:00 发布；前者仅注明可靠性改进，后者仅注明与 Claude Code 同步，因此只记录版本事实，不臆测具体托管能力。详见 Claude 专题页。
 - [Claude Code 2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239)覆盖云端同步插件管理、跨机器会话消息、远程会话 keep-alive、云会话 plan mode、远程 MCP 瞬时失败后的恢复与 Remote Control；这些变化直接作用于托管会话生命周期和远程控制面，详见 Claude 专题页。
 - [Claude Agent SDK 0.3.239](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.239)在运行中进程重复 initialize 后返回存活后台任务快照，并校正后台子 Agent 延后结果的成本和耗时；它让异步任务恢复与结算更可观测，详见 Claude 专题页。
 - [Claude Code 2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240)和[Agent SDK 0.3.240](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.240)均在截止前发布；前者仅注明可靠性改进，后者仅注明与 Claude Code 同步，因此只记录版本事实，不臆测具体托管能力。详见 Claude 专题页。
@@ -113,9 +115,9 @@ Claude 云会话、Remote Control 与后台任务恢复具备执行环境、异�
 ## 采集状态
 
 - 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cloudflare、Cursor、Replit、CrewAI、LangGraph、Lindy、Factory、Sourcegraph/Amp；强制核查 Cognition Devin release notes、环境、并发、定价、企业接入和集成；强制核查 xAI/Grok Bot、Build、开发者更新的托管执行、异步任务、工具和远程执行；另查字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek公开入口，并做中英文网页与 GitHub release API 交叉检索。
-- 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Devin、Qoder 与 UiPath 页面无精确时分；Claude Code 2.1.240、Codex alpha 说明过短，未扩写未知细节。
-- 候选数量：45。
-- 最终保留：13 个独立来源 URL。
+- 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Devin、Qoder 与 UiPath 页面无精确时分；Claude Code 2.1.240/2.1.241、Codex alpha 说明过短，未扩写未知细节。
+- 候选数量：48。
+- 最终保留：15 个独立来源 URL。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 13 条动态，重点：Claude 云会话与后台任务恢复是主窗口最明确的 AaaS 变化；Devin 企业 MCP/私网接入日期待确认，Grok 本轮无新托管发布，执行可靠性、恢复与安全边界仍是竞争焦点。
+今日扫描完成，共 15 条动态，重点：Claude 云会话与后台任务恢复是主窗口最明确的 AaaS 变化；Devin 企业 MCP/私网接入日期待确认，Grok 本轮无新托管发布，执行可靠性、恢复与安全边界仍是竞争焦点。

@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T07:02:00+08:00"
+updatedAt: "2026-08-23T10:00:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "The New MCP Roadmap"
 featuredUrl: "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
@@ -22,6 +22,7 @@ tags:
   - "Date Unverified"
   - "Design"
   - "Developer Tool"
+  - "Developer Tools"
   - "Engineering"
   - "Evaluation"
   - "Git"
@@ -44,13 +45,14 @@ tags:
   - "Skill"
   - "Skills"
   - "State"
+  - "Training"
   - "TTS"
   - "Watchlist"
 ---
 
 ## 今日概览
 
-本页研究窗口为 **2026-08-21 07:02 至 2026-08-23 07:02（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
+本页研究窗口为 **2026-08-21 10:00 至 2026-08-23 10:00（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
 
 ## 已验证精选
 
@@ -111,6 +113,8 @@ tags:
 
 - [Practice Makes Unsafe](https://arxiv.org/abs/2608.12851)原始提交于 **2026-08-13 13:47 +08:00**，研究自改进 agent 把不安全轨迹固化为可复用技能的风险；[HN 讨论](https://news.ycombinator.com/item?id=49391398)于 **2026-08-22 01:34 +08:00** 重新出现，截止时 2 points、0 comments。论文实验与 SafeEvolve 改进幅度均按作者报告记录，本轮未复现。
 - [自托管、沙箱化 agent 软件工厂工程文](https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/)原文早于本轮七日阈值；[HN 讨论](https://news.ycombinator.com/item?id=49390463)于 **2026-08-22 00:27 +08:00** 重新出现，截止时 112 points、59 comments。这里记录复热，不把旧文标成今日发布。
+- [Software Engineering in the Agentic Era](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)原文发表于 **2026-02-23**；[HN 讨论](https://news.ycombinator.com/item?id=49405117)于 **2026-08-23 08:20 +08:00** 重新出现，截止时 5 points、2 comments。这里只确认旧文复热，不将其观点当作新发布。
+- [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt)是 2024 年创建的 MIT 许可训练优化仓库；[HN 讨论](https://news.ycombinator.com/item?id=49405157)于 **2026-08-23 08:25 +08:00** 重新出现，截止时 3 points、0 comments。仓库目标来自 GitHub 元数据，不把本次提交视为代码今日发布。
 
 ## 日期未确认
 
@@ -125,6 +129,7 @@ tags:
 - **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。
 - **新预印本**：AI4AI-Bench 与技能迁移论文均不把作者实验结果写成已复现事实。
 - **低互动 / 本地交互**：[Pawvis](https://github.com/alexandriax/pawvis)是 MIT 许可的 macOS 摄像头手势与语音控制项目；[HN 讨论](https://news.ycombinator.com/item?id=49402530)于 **2026-08-23 02:44 +08:00** 提交，截止时 1 point、1 comment。仓库创建于 2026-08-07，属于较旧项目的邻近信号，不作为本轮新发布。
+- **低互动 / 凭据监控**：[GSPOT](https://github.com/Somnora/GSPOT)是 **2026-08-20 15:19 +08:00** 创建的 MIT 许可工具，README 将其定位为长时间 coding agent 的 Google Cloud 凭据监控辅助；[HN 讨论](https://news.ycombinator.com/item?id=49405176)于 **2026-08-23 08:28 +08:00** 提交，截止时 1 point、0 comments。项目早期，未独立验证其监控覆盖与安全边界。
 
 ## 来源链接
 
@@ -134,5 +139,5 @@ tags:
 
 - 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。
 - 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号；Prime Intellect 与推理图解页未提供精确发布日期。
-- 初始候选：1835；最终保留来源：44（22 个事件 / 项目，其中 20 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-23 07:02:00 +08:00；互动量均为截止快照。
+- 初始候选：1897；最终保留来源：50（25 个事件 / 项目，其中 23 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-23 10:00:00 +08:00；互动量均为截止快照。

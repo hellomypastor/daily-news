@@ -1,12 +1,12 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T01:02:40+08:00"
+updatedAt: "2026-08-23T10:00:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Claude Code v2.1.240"
-featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.240"
-featuredSummary: "官方发布 v2.1.240，仅标注错误修复与可靠性改进。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-08-22 22:45 +08:00"
+featuredTitle: "Claude Code v2.1.241"
+featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
+featuredSummary: "官方发布 v2.1.241，仅标注错误修复与可靠性改进，未披露具体变更项。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-23 08:52 +08:00"
 featuredTags: ["Claude Code","Release"]
 tags:
   - "Agent"
@@ -24,13 +24,13 @@ tags:
 
 ## 今日概览
 
-研究窗口：**2026-08-22 01:01 至 2026-08-23 01:01（Asia/Shanghai）**。窗口内确认 Claude Code 连续发布 **v2.1.239** 与 **v2.1.240**；前者是一次覆盖计费、云端会话、MCP、IDE、跨会话协作和可靠性的密集更新，后者仅标注为错误修复与可靠性改进。Anthropic Newsroom 与 Claude Status 在本窗口未发现新的产品公告或事故。
+研究窗口：**2026-08-22 10:00 至 2026-08-23 10:00（Asia/Shanghai）**。窗口内确认 Claude Code 连续发布 **v2.1.240** 与 **v2.1.241**，两版官方均仅标注为错误修复与可靠性改进；当天较早已收录的 v2.1.239 按累积规则继续保留，其是一次覆盖计费、云端会话、MCP、IDE、跨会话协作和可靠性的密集更新。Anthropic Newsroom 与 Claude Status 在本窗口未发现新的产品公告或事故。
 
 ## Tier 1：编码与 Agent 主轴
 
 | 产品/能力 | 状态 | 证据与判断 |
 |---|---|---|
-| Claude Code CLI | **有新增** | [v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) 增加 `/claude-api upgrade`、Windows 跨会话消息、目标恢复等，并修复 Bedrock 代理导致请求重复计费、会话恢复错位及大量终端问题；[v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240) 随后发布，官方仅说明为错误修复与可靠性改进。 |
+| Claude Code CLI | **有新增** | [v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) 增加 `/claude-api upgrade`、Windows 跨会话消息、目标恢复等，并修复 Bedrock 代理导致请求重复计费、会话恢复错位及大量终端问题；[v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240) 与 [v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241) 随后发布，官方均仅说明为错误修复与可靠性改进。 |
 | VS Code / JetBrains 集成 | **有新增** | v2.1.239 修复 JetBrains 连接插件时 Edit/Write 约 5 秒暂停，并调整 VS Code 用量提醒横幅布局。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | **部分有新增** | 云端会话恢复、Remote Control 标题同步、长钩子 keep-alive、移动端图片路径以及跨机器会话消息均有修复；webhooks、environments、memory stores 未见独立公告。 |
 | Skills 与 marketplaces | **有新增** | 同步自 claude.ai 的插件改以 `name@synced` 显示且不覆盖本地同名插件；修复 `metadata.pluginRoot` 与含 UTF-8 BOM 的 skills/commands 被忽略问题。 |
@@ -56,6 +56,10 @@ tags:
 - **相邻信号：**v2.1.239 的 Bedrock 代理重复计费修复和数据驻留成本显示修正，对金融、医疗等受监管企业的成本审计与部署可靠性有实际意义，但不等同于新的垂直行业产品发布。
 
 ## 官方更新（新到旧）
+
+### Claude Code v2.1.241
+
+北京时间 8 月 23 日 08:52 发布。[官方说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.241) 仅写明“错误修复与可靠性改进”，没有披露具体变更项，因此不作额外功能推断。
 
 ### Claude Code v2.1.240
 
@@ -96,18 +100,19 @@ tags:
 ## 观察池
 
 - 社区“越权”反馈值得观察后续是否出现可复现案例、GitHub issue 或官方质量说明；当前只将其视为权限边界与提示遵循风险信号。
-- v2.1.240 未披露细项，后续若 CHANGELOG 补充具体内容，应在同日滚动更新中合并，而不是猜测。
+- v2.1.240 与 v2.1.241 均未披露细项，后续若 CHANGELOG 补充具体内容，应在同日滚动更新中合并，而不是猜测。
 
 ## 来源链接
 
-1. [Claude Code v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240) — Anthropic GitHub，官方发布。
-2. [Claude Code v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) — Anthropic GitHub，官方发布。
-3. [Anyone else experiencing wild levels of overreach?](https://www.reddit.com/r/ClaudeAI/comments/1vu8lf8/anyone_else_experiencing_wild_levels_of_overreach/) — Reddit 用户讨论，未经官方确认。
-4. [Claude Code Daily Briefing - 2026-08-22](https://claude-news.today/en/briefings/briefing-2026-08-22/) — 第三方开发者简报，仅作日期未确认的观察候选。
+1. [Claude Code v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241) — Anthropic GitHub，官方发布。
+2. [Claude Code v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240) — Anthropic GitHub，官方发布。
+3. [Claude Code v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) — Anthropic GitHub，官方发布。
+4. [Anyone else experiencing wild levels of overreach?](https://www.reddit.com/r/ClaudeAI/comments/1vu8lf8/anyone_else_experiencing_wild_levels_of_overreach/) — Reddit 用户讨论，未经官方确认。
+5. [Claude Code Daily Briefing - 2026-08-22](https://claude-news.today/en/briefings/briefing-2026-08-22/) — 第三方开发者简报，仅作日期未确认的观察候选。
 
 ## 采集状态
 
 - **已检查来源：**Anthropic Newsroom、Engineering、Claude Platform 文档线索、Claude Code GitHub Releases/CHANGELOG、Claude Status API、Reddit 三个相关社区、Hacker News、中英文网页与开发者简报。
 - **失败来源：**X 无法稳定核验公开原帖时间与互动；YouTube 未检出可核验新视频；GitHub Releases 网页曾加载失败，已用官方 API 复核。
-- **初始候选数：**8；**保留来源数：**4。
+- **初始候选数：**9；**保留来源数：**5。
 - **二次补搜：**否（最终来源不为 0）。
