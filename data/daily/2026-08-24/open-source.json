@@ -1,0 +1,51 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-08-24T01:03:00+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/6270e10d07a9518570497fdb353d87be6da7d3e30f172eaebb12844b52be3300/apache/maka",
+    "alt": "Apache Maka GitHub 项目的 OpenGraph 预览图",
+    "sourceUrl": "https://github.com/apache/maka",
+    "caption": "图片来源：Apache Maka 官方 GitHub 仓库"
+  },
+  "scan": {
+    "checkedSources": [
+      "GitHub Trending daily（overall）",
+      "GitHub Trending daily（Python）",
+      "GitHub Trending daily（TypeScript）",
+      "GitHub REST API（候选仓库元数据）",
+      "Hacker News front/newest",
+      "Hacker News Algolia recent submissions",
+      "arXiv cs.AI recent API",
+      "Hugging Face Papers / Blog / Community Articles",
+      "Simon Willison blog"
+    ],
+    "failedSources": [
+      "arXiv 48 小时新稿：周末无新批次，最新可核验批次为 2026-08-20",
+      "Simon Willison blog：本轮未发现窗口内可保留的独立 AI/Agent 新文"
+    ],
+    "candidateCount": 27,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-08-22 01:03 至 2026-08-24 01:03（Asia/Shanghai）。本轮最清晰的信号来自 GitHub 当日榜单：本地优先、可审计执行日志和编码 Agent 仍在持续吸引开发者；HN 的新项目讨论尚处早期，互动量低，不宜将其当作成熟度证明。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。\n\n## 已验证技术亮点\n\n1. **Writing Eval：面向 AI 文稿的确定性风格检查**（状态：原始仓库可访问；HN 提交于 2026-08-23 22:31 +08:00）  \n   它把可配置规则与 profile 应用于本地文本，输出 Markdown/JSON 审计结果；价值在于把主观的“像不像 AI 文”拆为可在 CI 中复现的检查。来源：[项目仓库](https://github.com/majesticlabs-dev/writing-eval)。\n\n2. **Ducklab：由测试门禁约束的多模型开发 harness**（状态：原始仓库可访问；HN 提交于 2026-08-23 22:55 +08:00）  \n   项目串联 requirements、spec、plan、build、review 与 release，并提供 MCP 入口；其技术看点是强调真实验证门禁，而不是只展示生成结果。来源：[项目仓库](https://github.com/jrullan/ducklab)。\n\n3. **Enozunu：Agent 配置物化工具**（状态：原始仓库可访问；HN 提交于 2026-08-23 19:48 +08:00）  \n   目标是用声明式配置生成可复现的 Agent 环境，回应多工具、多机器之间配置漂移问题；当前 HN 互动仍低，适合试用而非据此判断采用度。来源：[项目仓库](https://github.com/tooppoo/enozunu)。\n\n## GitHub Trending\n\n> 下列数字是 2026-08-24 01:03 +08:00 抓取的 GitHub daily Trending 页面快照，只说明当前热度，不代表项目今天发布。\n\n| 项目 | 技术定位 | 榜单证据 | 为什么值得看 |\n|---|---|---:|---|\n| [Apache Maka](https://github.com/apache/maka) | local-first Agent 工作区，以 append-only log 记录消息、工具调用、权限决定和终止事件 | 2,245 stars；当日 +49 | 可审计事件日志让 Agent 执行更容易复盘与治理 |\n| [OpenHuman](https://github.com/tinyhumansai/openhuman) | 本地优先个人记忆、Agent fleet 编排与深度研究 | 36,606 stars；当日 +106 | 把个人长期记忆与多 Agent 工作流放在同一自托管边界 |\n| [Hermes Agent](https://github.com/NousResearch/hermes-agent) | 可持续积累能力的个人 Agent | 234,785 stars；当日 +519 | 高热度说明“可成长 Agent”仍是开发者关注方向，但不等同质量评测 |\n| [DeerFlow](https://github.com/bytedance/deer-flow) | 含 sandbox、memory、tools、skills 与 subagents 的长任务 harness | 80,673 stars；本轮出现在 Python 榜单后续位置 | 组件覆盖研究、编码与长时任务，便于观察完整 Agent runtime 的组合方式 |\n| [OpenCode](https://github.com/anomalyco/opencode) | 开源编码 Agent | 200,588 stars；当日 +371 | TypeScript 榜单中的高热项目，可作为终端编码 Agent 生态基线 |\n\n## HN 讨论\n\n- [Writing Eval](https://news.ycombinator.com/item?id=49409152)：2026-08-23 22:31 +08:00 提交，抓取时 1 point / 0 comments。讨论尚未形成，保留其发现证据，不把互动量包装成口碑。\n- [Ducklab](https://news.ycombinator.com/item?id=49409329)：2026-08-23 22:55 +08:00 提交，抓取时 2 points / 1 comment。项目自报 416 次运行与 176 美元成本，这些数字尚未由独立材料复核，本文不据此下结论。\n\n## 论文 / 研究\n\n- [AI4AI-Bench](https://arxiv.org/abs/2608.20318)（原始提交：2026-08-21 01:56 +08:00）：用冻结研究仓库评估 LLM Agent 是否真的改进训练算法，而非只调参或收集数据；提供了审视“递归自我改进”主张的可复现实验框架。\n- [MidTool](https://arxiv.org/abs/2608.20314)（原始提交：2026-08-21 01:53 +08:00）：构建面向通用工具使用的 mid-training 数据管线，覆盖真实 API、MCP skills 与文档工作流；提示工具能力不必全部留到 post-training。\n- [Break It Down, Pass It On](https://arxiv.org/abs/2608.20274)（原始提交：2026-08-21 01:12 +08:00）：受控比较 task/subtask 粒度与 text/code skill 格式，报告子任务级文本 skill 的迁移更稳；对 Agent memory 的组织方式有直接参考价值。\n\n## 旧文重新浮现\n\n本轮 HN 最近 24 小时扫描未发现同时满足“原文早于 7 天、且形成有效新讨论”的高相关技术文章。\n\n## 日期未确认\n\n- 本轮没有仅因缺少日期而需要保留的高相关候选；GitHub Trending 项目均明确标成“榜单快照”，没有反推发布日期。\n\n## 观察池\n\n- [VLM Run Gateway](https://huggingface.co/blog/vlm-run/vlm-run-gateway)（状态：Hugging Face Community 页面显示约 1 天前，但未取得精确发布时间）：为 GLM-OCR、DeepSeek-OCR-2、dots.mocr 提供 OpenAI-compatible API，方向有用，待下一轮核对精确日期和代码成熟度。\n- 上述三篇 arXiv 论文均已超过严格 48 小时窗口，且 arXiv 周末无新批次；保留作研究补充，不列为今日新稿。\n\n## 来源链接\n\n正文已直接链接所有 14 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。\n\n## 采集状态\n\n- 已检查：GitHub daily Trending（overall、Python、TypeScript）及仓库 API；HN front/newest 与 Algolia；arXiv cs.AI；Hugging Face Papers/Blog/Community；Simon Willison。\n- 失败/限制：arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Simon Willison 本轮未发现窗口内可保留新文；HN 新提交互动量很低。\n- 初始候选：27；最终保留来源：14；二次补搜：否（最终来源非 0）。"
+  ,
+  "sources": [
+    {"title":"Writing Eval","url":"https://github.com/majesticlabs-dev/writing-eval","source":"GitHub / majesticlabs-dev","publishedAt":"2026-08-23 22:31 +08:00","summary":"本地、确定性的 AI 文稿风格规则检查器。","tags":["Evaluation","Developer Tools"]},
+    {"title":"Ducklab","url":"https://github.com/jrullan/ducklab","source":"GitHub / jrullan","publishedAt":"2026-08-23 22:55 +08:00","summary":"带真实验证门禁的多 LLM 开发 harness。","tags":["Agent","Developer Tools"]},
+    {"title":"Enozunu","url":"https://github.com/tooppoo/enozunu","source":"GitHub / tooppoo","publishedAt":"2026-08-23 19:48 +08:00","summary":"声明式、可复现的 Agent 配置物化工具。","tags":["Agent","Configuration"]},
+    {"title":"Apache Maka","url":"https://github.com/apache/maka","source":"GitHub Trending / Apache","publishedAt":"","summary":"以 append-only log 为核心的本地优先 Agent 工作区；日期为榜单状态而非发布日期。","tags":["Agent","Trending"]},
+    {"title":"OpenHuman","url":"https://github.com/tinyhumansai/openhuman","source":"GitHub Trending / tinyhumansai","publishedAt":"","summary":"本地优先个人记忆与多 Agent 编排项目；日期为榜单状态而非发布日期。","tags":["Agent","Memory","Trending"]},
+    {"title":"Hermes Agent","url":"https://github.com/NousResearch/hermes-agent","source":"GitHub Trending / NousResearch","publishedAt":"","summary":"个人 Agent 项目；仅记录当日榜单热度。","tags":["Agent","Trending"]},
+    {"title":"DeerFlow","url":"https://github.com/bytedance/deer-flow","source":"GitHub Trending / ByteDance","publishedAt":"","summary":"覆盖 sandbox、memory、tools、skills 与 subagents 的长任务 harness。","tags":["Agent","Open Source"]},
+    {"title":"OpenCode","url":"https://github.com/anomalyco/opencode","source":"GitHub Trending / anomalyco","publishedAt":"","summary":"开源编码 Agent；仅记录当日榜单热度。","tags":["Coding Agent","Trending"]},
+    {"title":"Writing Eval on Hacker News","url":"https://news.ycombinator.com/item?id=49409152","source":"Hacker News","publishedAt":"2026-08-23 22:31 +08:00","summary":"Writing Eval 的 Show HN 讨论与发现时间证据。","tags":["HN","Evaluation"]},
+    {"title":"Ducklab on Hacker News","url":"https://news.ycombinator.com/item?id=49409329","source":"Hacker News","publishedAt":"2026-08-23 22:55 +08:00","summary":"Ducklab 的 HN 讨论与低互动状态。","tags":["HN","Agent"]},
+    {"title":"AI4AI-Bench","url":"https://arxiv.org/abs/2608.20318","source":"arXiv","publishedAt":"2026-08-21 01:56 +08:00","summary":"评估 LLM Agent 设计与改进训练算法能力的基准。","tags":["Paper","Evaluation","Agent"]},
+    {"title":"MidTool","url":"https://arxiv.org/abs/2608.20314","source":"arXiv","publishedAt":"2026-08-21 01:53 +08:00","summary":"面向 Agent 通用工具使用的 mid-training 数据合成管线。","tags":["Paper","Tool Use","Training"]},
+    {"title":"Break It Down, Pass It On","url":"https://arxiv.org/abs/2608.20274","source":"arXiv","publishedAt":"2026-08-21 01:12 +08:00","summary":"研究 Agent skills 跨任务迁移的粒度与表示格式。","tags":["Paper","Agent","Skills"]},
+    {"title":"VLM Run Gateway","url":"https://huggingface.co/blog/vlm-run/vlm-run-gateway","source":"Hugging Face Community","publishedAt":"","summary":"为多个 OCR/VLM 模型提供 OpenAI-compatible API；精确日期待确认。","tags":["VLM","Inference","日期未确认"]}
+  ]
+}
