@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T15:02:00+08:00"
+updatedAt: "2026-08-23T19:01:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.241"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
@@ -18,6 +18,7 @@ tags:
   - "Cowork"
   - "Developer Platform"
   - "Enterprise"
+  - "IDE"
   - "MCP"
   - "Release"
   - "Safety"
@@ -27,7 +28,7 @@ tags:
 
 ## 今日概览
 
-研究窗口：**2026-08-22 15:02 至 2026-08-23 15:02（Asia/Shanghai）**。窗口内确认 Claude Code 连续发布 **v2.1.240** 与 **v2.1.241**，两版官方均仅标注为错误修复与可靠性改进；当天较早已收录的 v2.1.239 按累积规则继续保留，其是一次覆盖计费、云端会话、MCP、IDE、跨会话协作和可靠性的密集更新。Anthropic Newsroom 与 Claude Status 在本窗口未发现新的产品公告或事故。
+研究窗口：**2026-08-22 19:01 至 2026-08-23 19:01（Asia/Shanghai）**。窗口内确认 Claude Code 连续发布 **v2.1.240** 与 **v2.1.241**，两版官方均仅标注为错误修复与可靠性改进；当天较早已收录的 v2.1.239 按累积规则继续保留，其是一次覆盖计费、云端会话、MCP、IDE、跨会话协作和可靠性的密集更新。Anthropic Newsroom 与 Claude Status 在本窗口未发现新的产品公告或事故。社区新增一组关于 Claude Code 监督界面的讨论，反映用户在终端、IDE、桌面端与第三方多会话工具间偏好分散。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -80,6 +81,7 @@ tags:
 ## Love
 
 - 社区讨论中，有用户明确表示喜欢自动模式带来的自主执行；这说明“更主动”对部分用户是核心价值，而非普遍缺陷。证据来自同一讨论串的少量回复，样本有限。
+- [Claude Code 监督界面讨论](https://www.reddit.com/r/ClaudeCode/comments/1vuwq5h/best_ide_for_supervising_claude_code/) 中，用户分别认可 VS Code、JetBrains、Zed、终端、桌面端和若干第三方多会话界面，正向信号集中在 diff 审阅、Git 工具、速度和会话可视化；意见分散，不代表单一工具形成共识。
 - v2.1.239 对代理重复计费、会话恢复、MCP 重连和跨机器协作的修复，解决的是可操作的工程痛点；但这是官方变更，不计作正向口碑样本。
 
 ## Hate
@@ -90,7 +92,7 @@ tags:
 
 ## 情绪判断
 
-**谨慎偏负，置信度中低。** 证据主要来自一个窗口内 Reddit 讨论，负面集中在越权与范围控制；正面意见认可自动模式的自主性。样本并非随机调查，且无法确认模型、权限配置与版本变量，不能外推为整体用户群趋势。
+**谨慎偏负，置信度中低。** 证据主要来自一个窗口内 Reddit 讨论，负面集中在越权与范围控制；正面意见认可自动模式的自主性，新增讨论也显示用户积极寻找更好的 diff、Git 和多会话可视化工作流。样本并非随机调查，且无法确认模型、权限配置与版本变量，不能外推为整体用户群趋势。
 
 ## 对比与迁移观察
 
@@ -117,10 +119,11 @@ tags:
 5. [Anthropic Quietly Overriding Effort Settings](https://www.reddit.com/r/ClaudeCode/comments/1vvkot2/anthropic_quietly_overriding_effort_settings/) — Reddit 用户争议信号，未经官方确认。
 6. [Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans) — Anthropic 官方帮助页，绝对更新时间未确认。
 7. [Claude Code Daily Briefing - 2026-08-22](https://claude-news.today/en/briefings/briefing-2026-08-22/) — 第三方开发者简报，仅作日期未确认的观察候选。
+8. [Best IDE for supervising Claude Code?](https://www.reddit.com/r/ClaudeCode/comments/1vuwq5h/best_ide_for_supervising_claude_code/) — Reddit 用户讨论，页面相对时间显示位于本窗口内。
 
 ## 采集状态
 
 - **已检查来源：**Anthropic Newsroom、Engineering、Claude Platform 文档线索、Claude Code GitHub Releases/CHANGELOG、Claude Status API、Reddit 三个相关社区、Hacker News、中英文网页与开发者简报。
 - **失败来源：**X 无法稳定核验公开原帖时间与互动；YouTube 未检出可核验新视频；GitHub Releases 网页曾加载失败，已用官方 API 复核。
-- **初始候选数：**9；**保留来源数：**5。
+- **初始候选数：**12；**保留来源数：**8。
 - **二次补搜：**否（最终来源不为 0）。

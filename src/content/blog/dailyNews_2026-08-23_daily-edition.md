@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-08-23"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T15:02:00+08:00"
+updatedAt: "2026-08-23T19:08:00+08:00"
 description: "2026-08-23 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-23"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
@@ -43,7 +43,7 @@ tags:
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-**[From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)**。近两至三日、时刻未确认：Google DeepMind 回顾游戏 AI 路线，并介绍以 EVE 持续世界研究 Agent 长期学习、适应与记忆的合作计划。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[Synced from monorepo](https://github.com/xai-org/grok-build/commit/07b2f7144fd5c5c9d3dd1966937a87852d2dbdb8)**。xAI 官方 Grok Build 仓库同步大规模代码更新，加入 workflow 命令、MCP elicitation 与扩展工作流入口；未见 release/tag，不等同正式版本发布。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-23_ai-industry)
 

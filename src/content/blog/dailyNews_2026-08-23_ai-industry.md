@@ -1,21 +1,24 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T15:02:00+08:00"
+updatedAt: "2026-08-23T19:04:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "From Atari to EVE Online: Building on 15 Years of AI Research in Games"
-featuredUrl: "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
-featuredSummary: "近两至三日、时刻未确认：Google DeepMind 回顾游戏 AI 路线，并介绍以 EVE 持续世界研究 Agent 长期学习、适应与记忆的合作计划。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredPublishedAt: "2026-08-21"
-featuredTags: ["Agent","Research","Games","Google DeepMind","Watchlist"]
+featuredTitle: "Synced from monorepo"
+featuredUrl: "https://github.com/xai-org/grok-build/commit/07b2f7144fd5c5c9d3dd1966937a87852d2dbdb8"
+featuredSummary: "xAI 官方 Grok Build 仓库同步大规模代码更新，加入 workflow 命令、MCP elicitation 与扩展工作流入口；未见 release/tag，不等同正式版本发布。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-08-23 18:48 +08:00"
+featuredTags: ["xAI","Grok","Agent","Coding Agent","GitHub"]
 tags:
   - "日期未确认"
   - "Agent"
   - "AI"
   - "Benchmark"
+  - "Coding Agent"
   - "Developer Tools"
   - "Games"
+  - "GitHub"
   - "Google DeepMind"
+  - "Grok"
   - "Harness"
   - "Hugging Face"
   - "Industry"
@@ -27,16 +30,18 @@ tags:
   - "Security"
   - "Simulation"
   - "Watchlist"
+  - "xAI"
 ---
 
 ## 今日概览
 
-扫描窗口：2026-08-22 15:02 至 2026-08-23 15:02（Asia/Shanghai）；同时覆盖 24–48 小时与 48–72 小时候选。本页累计保留 1 条窗口内社区技术文章，并补入 2 条 NVIDIA 与 1 条 Google DeepMind 官方 Agent/研究文章。后三篇原文只标注 2026-08-21、没有时刻，因此仅作为近两至三日且时刻未确认的补充，不写成最近 24 小时事实。
+扫描窗口：2026-08-22 19:04 至 2026-08-23 19:04（Asia/Shanghai）；同时覆盖 24–48 小时与 48–72 小时候选。本页累计保留 1 条窗口内社区技术文章，并新增 1 条 xAI 官方仓库提交；另补入 2 条 NVIDIA 与 1 条 Google DeepMind 官方 Agent/研究文章。后三篇原文只标注 2026-08-21、没有时刻，因此仅作为近两至三日且时刻未确认的补充，不写成最近 24 小时事实。
 
 ## 优先动态
 
 | 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |
 |---|---|---|---|---|---|
+| xAI / Grok Build | Synced from monorepo | 官方仓库提交 | 2026-08-23 18:48 +08:00；窗口内，未见 release/tag | 一次 45,361 行新增、9,795 行删除的同步提交加入 workflow 命令、MCP elicitation、扩展工作流选择界面及 NFS/worktree 基础设施等代码。它说明开源 coding-agent harness 正在推进工作流与工具交互能力，但仓库未附面向用户的版本说明，不能等同正式发布。 | [提交](https://github.com/xai-org/grok-build/commit/07b2f7144fd5c5c9d3dd1966937a87852d2dbdb8) |
 | FINAL-Bench / Hugging Face 社区 | We changed one line and the benchmark score moved 0.21 AUROC | 技术文章/基准 | 2026-08-22；窗口内，具体时刻未展示 | 作者在同一 hERG 数据上比较时间切分与随机切分，报告 AUROC 相差 0.211，并用跨论文重复测量估计标签噪声。意义在于提醒模型排行榜必须披露切分策略、简单基线与测量精度；数字仅适用于作者给定数据与实验。 | [原文](https://huggingface.co/blog/FINAL-Bench/leadboard-drug) |
 
 ## 常规厂商扫描
@@ -45,7 +50,7 @@ Anthropic 与 OpenAI 官方入口已检查；相关动态分别详见 Claude 专
 
 ### xAI / Grok 强制检查
 
-已显式检查 xAI News、API/模型文档、Grok Build changelog 与 xai-org GitHub，覆盖模型/API、DeepSearch、语音、编码、工具调用和 Agent 动态；最新官方新闻仍早于本轮窗口，因此不硬凑条目。
+已显式检查 xAI News、API/模型文档、Grok Build changelog 与 xai-org GitHub，覆盖模型/API、DeepSearch、语音、编码、工具调用和 Agent 动态；其中 News、API/模型文档未见窗口内公告；xai-org 的 Grok Build 仓库则出现一笔可核实的窗口内同步提交，已列入优先动态。该提交未附 release/tag，未写成正式版本发布。
 
 ## 播客
 
@@ -60,7 +65,7 @@ Anthropic 与 OpenAI 官方入口已检查；相关动态分别详见 Claude 专
 
 ## 近三日补充
 
-Google DeepMind 与两篇 NVIDIA 原文均缺少时刻，按本轮 15:02 截止点可能落在 24–48 小时或 48–72 小时范围，故统一保留“近两至三日、时刻未确认”限制。
+Google DeepMind 与两篇 NVIDIA 原文均缺少时刻，按本轮 19:04 截止点可能落在 24–48 小时或 48–72 小时范围，故统一保留“近两至三日、时刻未确认”限制。
 
 ## 日期未确认
 
@@ -74,6 +79,7 @@ Google DeepMind 与两篇 NVIDIA 原文均缺少时刻，按本轮 15:02 截止�
 
 ## 来源链接
 
+- [xAI / Grok Build：Synced from monorepo](https://github.com/xai-org/grok-build/commit/07b2f7144fd5c5c9d3dd1966937a87852d2dbdb8)
 - [Google DeepMind：From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)
 - [FINAL-Bench：We changed one line and the benchmark score moved 0.21 AUROC](https://huggingface.co/blog/FINAL-Bench/leadboard-drug)
 - [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/)
@@ -83,7 +89,7 @@ Google DeepMind 与两篇 NVIDIA 原文均缺少时刻，按本轮 15:02 截止�
 
 - 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta、Microsoft、xAI/Grok 全部强制入口、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 与指定播客入口。
 - 失败来源：部分页面依赖 JavaScript；部分中文厂商缺少稳定的带时刻更新流；社交入口需要登录；NGC 镜像未提供对应变更说明。
-- 初始候选：13 条；最终保留：6 条。
+- 初始候选：14 条；最终保留：7 条。
 - 二次补搜：否（最终来源不为 0）。
 
-一句话总结：厂商官方发布面仍较安静，Agent 社会模拟与 harness 演化出现新的研究/工程讨论；近三日补充集中在持续学习游戏 Agent、长程 Agent 架构与 Agent 栈安全边界。
+一句话总结：xAI Grok Build 出现窗口内的大规模仓库同步，工作流与 MCP 交互能力继续推进；Agent 社会模拟与 harness 演化也出现新的研究/工程讨论；近三日补充集中在持续学习游戏 Agent、长程 Agent 架构与 Agent 栈安全边界。

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T15:02:00+08:00"
+updatedAt: "2026-08-23T19:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7"
@@ -20,6 +20,7 @@ tags:
   - "Enterprise"
   - "GPTs"
   - "Hate"
+  - "Mixed"
   - "Mobile"
   - "Model"
   - "OpenAI"
@@ -33,7 +34,7 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-22 15:02 至 2026-08-23 15:02（Asia/Shanghai）**。当日累计核验到 Codex CLI 四个官方预发布构建，其中本轮新增 0.149.0-alpha.7.2 与 0.150.0-alpha.7；发布页均未附变更清单。ChatGPT 发布说明新增一组标为 8 月 21 日的产品更新，但没有精确时刻，故列入“日期未确认”。社区侧继续集中反馈 Codex 用量消耗、桌面端卡顿与 Remote 可用性，均为用户自述，尚无官方事故确认。
+采集窗口为 **2026-08-22 19:02 至 2026-08-23 19:02（Asia/Shanghai）**。当日累计核验到 Codex CLI 四个官方预发布构建，发布页均未附变更清单。ChatGPT 发布说明新增一组标为 8 月 21 日的产品更新，但没有精确时刻，故列入“日期未确认”。社区侧继续讨论 Codex 用量消耗、速度、桌面端卡顿与 Remote 可用性；本轮新增讨论中的体验明显分化，均为用户自述，尚无官方事故或修复确认。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -85,16 +86,17 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-22 02:12 +08:00** �
 
 ## Love
 
-本窗口抽样未获得足够新的、可独立引用的明确正向体验帖。官方发布不计入正向口碑。
+- 新增的一则 r/codex 讨论中，部分用户称当天额度消耗速度有所改善或 Codex 运行更快；同一讨论也有相反反馈，且没有统一测量条件，因此只作为低置信度正向信号。[查看讨论](https://www.reddit.com/r/codex/comments/1vvsvk3/did_your_usage_got_better_today/)
 
 ## Hate
 
 - 一则 r/codex 用户帖集中抱怨 ChatGPT 桌面端会话加载、桌面网页冻结，以及 Codex Remote 在更新后不可用；这是单个用户的体验陈述，不能等同于已确认的全局故障。[查看社区帖](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
 - r/codex 的滚动讨论中，多名用户在 8 月 22 日继续反馈相似工作负载下周额度消耗异常快；也有人称 CLI 消耗正常而 App 更快。样本自选择且缺乏可复现实验，证据强度有限。[查看滚动讨论](https://www.reddit.com/r/codex/comments/1vqwcbs/codex_usage_and_operation_discussion_updated/)
+- 8 月 23 日的新讨论里仍有人称额度没有改善、模型更慢或很快耗尽；这些回复与同帖正向体验冲突，不能证明统一的服务端变化。[查看讨论](https://www.reddit.com/r/codex/comments/1vvsvk3/did_your_usage_got_better_today/)
 
 ## 情绪判断
 
-**偏负面，置信度中低。** 依据是两个社区入口中出现多条同方向的额度消耗与可用性投诉；但样本主要来自故障/用量讨论帖，天然放大负面体验，且未见 OpenAI 状态页或正式公告在窗口内确认事故。
+**体验分化、整体仍偏负面，置信度中低。** 新讨论同时出现额度改善、速度变快、速度变慢和仍快速耗尽的反馈；累计样本中的负向体验更多，但样本主要来自故障/用量讨论帖，天然放大负面感受，且未见 OpenAI 状态页或正式公告在窗口内确认事故或修复。
 
 ## 比较信号
 
@@ -126,10 +128,11 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-22 02:12 +08:00** �
 7. [Codex 用量滚动讨论](https://www.reddit.com/r/codex/comments/1vqwcbs/codex_usage_and_operation_discussion_updated/)
 8. [Sol 优惠讨论（日期/条款未确认）](https://www.reddit.com/r/ChatGPT/comments/1vv5qcr/sol_is_20_cheaper_for_next_3_months/)
 9. [“GPT-Reserve”观察信号（未确认）](https://www.reddit.com/r/ChatGPT/comments/1vtz90w/i_think_i_accidentally_found_a_hidden_gptreserve/)
+10. [Codex 当日用量体验分化讨论](https://www.reddit.com/r/codex/comments/1vvsvk3/did_your_usage_got_better_today/)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Index、OpenAI Help Center、OpenAI Developers API 与 Codex changelog、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开网页搜索。
 - 失败来源：X（未登录环境无法稳定核验完整帖文与时间）；YouTube（未发现可交叉核验的窗口内新增）。
-- 初始候选：16；最终保留来源：11。
+- 初始候选：17；最终保留来源：12。
 - 二次补搜：否（最终来源不为 0）。
