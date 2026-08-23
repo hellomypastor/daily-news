@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T10:00:00+08:00"
+updatedAt: "2026-08-23T15:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "The New MCP Roadmap"
 featuredUrl: "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
@@ -12,12 +12,16 @@ featuredImage: "https://blog.modelcontextprotocol.io/og-image.png"
 featuredImageAlt: "Model Context Protocol 官方博客的 MCP 标识题图"
 featuredImageCaption: "图片来源：Model Context Protocol 官方博客"
 tags:
+  - "Accessibility"
   - "Agent"
   - "AI"
   - "Apple Silicon"
   - "Autocomplete"
+  - "Caching"
   - "Claude Code"
+  - "Code Review"
   - "Coding"
+  - "Coding Agent"
   - "Computer Vision"
   - "Date Unverified"
   - "Design"
@@ -36,6 +40,7 @@ tags:
   - "Observability"
   - "On-device"
   - "Open Source"
+  - "Protocol"
   - "Research"
   - "Resurfaced"
   - "Safety"
@@ -45,6 +50,7 @@ tags:
   - "Skill"
   - "Skills"
   - "State"
+  - "Testing"
   - "Training"
   - "TTS"
   - "Watchlist"
@@ -52,7 +58,7 @@ tags:
 
 ## 今日概览
 
-本页研究窗口为 **2026-08-21 10:00 至 2026-08-23 10:00（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
+本页研究窗口为 **2026-08-21 15:02 至 2026-08-23 15:02（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
 
 ## 已验证精选
 
@@ -93,6 +99,14 @@ tags:
 
 [Locum 官方仓库](https://github.com/HarjjotSinghh/locum)于 **2026-08-22 05:35 +08:00** 创建，采用 Apache-2.0 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49403691)于 **2026-08-23 04:41 +08:00** 提交，截止时 1 point、0 comments。README 描述其通过自定义 MCP connector 将 Grok Bot 任务转交本机 Claude Code / Codex CLI；这是低互动早期项目，未独立验证端到端安全边界。
 
+### Cache-Control for LLMs：给推理缓存定义可移植契约
+
+[Gojiberries 原文](https://www.gojiberries.io/cache-control-for-llms/) 提出区分强制约束与可忽略提示的 LLM 缓存控制契约，并给出 IETF draft、JSON Schema、合规测试和 [BSD-3-Clause 参考实现](https://github.com/gojiplus/llm-cache-control)。文章与仓库均在本窗口发布；兼容性和作者主张尚未独立复测。
+
+### More than just code review：Agent 时代的验证边界
+
+[Simon Willison](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/) 讨论 coding agent 时代不应只靠逐行审查验证改动，并列出未审代码外溢等反模式。原页显示 8 月 22 日 15:56，但时区未标注，因此日期可信、精确上海时刻未确认。
+
 ## GitHub Trending
 
 本轮检查了 overall、Python 与 TypeScript daily 页面，但动态页面未稳定返回可复核的榜单项目与 `stars today` 文本，因此不填入可能过时的数字，也不把仓库更新误写成今日上榜。
@@ -124,6 +138,7 @@ tags:
 
 ## 观察池
 
+- [LayoutLens](https://github.com/gojiplus/layoutlens) 是 MIT 许可的 UI 测试工具，组合 axe-core、几何确定性检查与可选视觉 LLM；[HN 发现页](https://news.ycombinator.com/item?id=49405683) 在 10:33 +08:00 提交，截止快照 2 points、0 comments。README 中的 benchmark 数字仅属作者结果。
 - **低互动 / Agent 工具**：[TechSkills](https://github.com/debabratasaha-dev/techskills)采用 MIT，提供 coding-agent 技能模块；[HN 讨论](https://news.ycombinator.com/item?id=49401893)于 **2026-08-23 01:37 +08:00** 提交，截止时 2 points、0 comments。[Terminito](https://github.com/arturlimaaa/terminito)采用 MIT，提供 Claude Code 状态栏；[HN 讨论](https://news.ycombinator.com/item?id=49403092)于 **2026-08-23 03:40 +08:00** 提交，截止时 1 point、1 comment。两者均属早期低互动信号，未复测 README 所述效果。
 - **低互动 / Shell 辅助**：[Namo Complete](https://github.com/namo-robotics/namo_complete)采用 MIT，提供 Bash 本地补全；[HN 讨论](https://news.ycombinator.com/item?id=49401434)于 **2026-08-23 00:44 +08:00** 提交，截止时 1 point、0 comments。项目早期且未复测补全质量。
 - **低互动 / 开源边界待查**：端侧 iOS agent 虽可公开访问，但未声明许可证；Myli、TT-AMX、StateM、Knowl 与 GitX Skill 的定位由 README 核验，尚缺广泛社区验证。
@@ -139,5 +154,5 @@ tags:
 
 - 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。
 - 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号；Prime Intellect 与推理图解页未提供精确发布日期。
-- 初始候选：1897；最终保留来源：50（25 个事件 / 项目，其中 23 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-23 10:00:00 +08:00；互动量均为截止快照。
+- 初始候选：2008；最终保留来源：55（28 个事件 / 项目，其中 24 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-23 15:02:00 +08:00；互动量均为截止快照。

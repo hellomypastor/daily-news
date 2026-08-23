@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T07:02:00+08:00"
+updatedAt: "2026-08-23T15:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7"
@@ -17,6 +17,8 @@ tags:
   - "CLI"
   - "Codex"
   - "Community"
+  - "Enterprise"
+  - "GPTs"
   - "Hate"
   - "Mobile"
   - "Model"
@@ -26,11 +28,12 @@ tags:
   - "Release"
   - "Remote"
   - "Usage"
+  - "Watchlist"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-22 07:02 至 2026-08-23 07:02（Asia/Shanghai）**。当日累计核验到 Codex CLI 四个官方预发布构建，其中本轮新增 0.149.0-alpha.7.2 与 0.150.0-alpha.7；发布页均未附变更清单。ChatGPT 发布说明新增一组标为 8 月 21 日的产品更新，但没有精确时刻，故列入“日期未确认”。社区侧继续集中反馈 Codex 用量消耗、桌面端卡顿与 Remote 可用性，均为用户自述，尚无官方事故确认。
+采集窗口为 **2026-08-22 15:02 至 2026-08-23 15:02（Asia/Shanghai）**。当日累计核验到 Codex CLI 四个官方预发布构建，其中本轮新增 0.149.0-alpha.7.2 与 0.150.0-alpha.7；发布页均未附变更清单。ChatGPT 发布说明新增一组标为 8 月 21 日的产品更新，但没有精确时刻，故列入“日期未确认”。社区侧继续集中反馈 Codex 用量消耗、桌面端卡顿与 Remote 可用性，均为用户自述，尚无官方事故确认。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -52,7 +55,7 @@ tags:
 |---|---|
 | 浏览器 / Operator 能力 | 无新增 |
 | macOS / Windows / 移动端 | 官方说明列出 iOS 照片入口、连接状态提示与 Android 图片/侧栏改进，但精确时间未确认；另有桌面端加载与冻结投诉 |
-| GPTs / GPT Store / Canvas | 无新增 |
+| GPTs / GPT Store / Canvas | **日期未确认**：官方帮助页当前明确个人账户不能新建或发布 GPT，既有 GPT 仍可使用；Business、Enterprise、Edu 依管理员权限处理。页面没有绝对更新时间。 |
 | Sora / 视频 | 无新增 |
 | GPT Image / DALL·E | Android 生成图片展示改进见日期未确认 |
 | Voice | 无新增 |
@@ -60,7 +63,7 @@ tags:
 
 ## Tier 3：企业、安全与行业方案
 
-Enterprise、Business、Edu、Gov、Science、安全与行业方案在窗口内未发现经核验的新公告。官方新闻首页最新可见条目早于本窗口，本轮不把旧闻包装为当日更新。
+Enterprise、Business、Edu、Gov、Science、安全与行业方案在窗口内未发现经核验的新公告。GPT 权限帮助页明确 Business、Enterprise、Edu 工作区仍可按管理员设置创建、编辑和发布，但生效时间未确认。官方新闻首页最新可见条目早于本窗口，本轮不把旧闻包装为当日更新。
 
 ## 官方更新（新到旧）
 
@@ -99,11 +102,13 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-22 02:12 +08:00** �
 
 ## 日期未确认
 
+- [GPTs in ChatGPT](https://help.openai.com/en/articles/8554407) 官方帮助页当前明确：Free、Go、Plus、Pro 等个人账户不能新建或发布 GPT，既有 GPT 仍可使用；Business、Enterprise、Edu 工作区依管理员权限处理。页面只显示相对更新时间，因此不把它写成过去 24 小时正式发布。
 - OpenAI 的 ChatGPT Release Notes 列出 **2026-08-21** 更新：插件推荐排序更重视安装后的持续使用、回答增强本地时间感知、网页长对话分段加载、互动内容渐进呈现，以及 iOS/Android 体验改进。页面没有发布时间，无法确认是否落入本轮上海时间窗口，故只作为官方日期未确认候选。[查看官方发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
 - 社区流传“Sol 降价/优惠”的说法，但搜索结果未能定位窗口内对应的 OpenAI 官方公告或完整条款，暂不写成事实。[查看讨论](https://www.reddit.com/r/ChatGPT/comments/1vv5qcr/sol_is_20_cheaper_for_next_3_months/)
 
 ## 观察池
 
+- [一则 r/ChatGPT 讨论](https://www.reddit.com/r/ChatGPT/comments/1vvidqm/gpt_56_got_massively_upgraded_without_an/) 声称 GPT-5.6 Sol 出现“静默升级”，但回复体验相互矛盾，也没有官方模型更新公告；无法证明权重、系统提示或路由变化，仅保留为未证实社区信号。
 - Reddit 用户称在 Codex 中看到“GPT-Reserve”名称；目前没有找到官方模型文档或发布说明佐证，可能是界面实验、内部标识或误读，状态为 **未确认**。[查看原帖](https://www.reddit.com/r/ChatGPT/comments/1vtz90w/i_think_i_accidentally_found_a_hidden_gptreserve/)
 
 ## 未证实传闻
@@ -126,5 +131,5 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-22 02:12 +08:00** �
 
 - 已检查：OpenAI News / Index、OpenAI Help Center、OpenAI Developers API 与 Codex changelog、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开网页搜索。
 - 失败来源：X（未登录环境无法稳定核验完整帖文与时间）；YouTube（未发现可交叉核验的窗口内新增）。
-- 初始候选：12；最终保留来源：9。
+- 初始候选：16；最终保留来源：11。
 - 二次补搜：否（最终来源不为 0）。

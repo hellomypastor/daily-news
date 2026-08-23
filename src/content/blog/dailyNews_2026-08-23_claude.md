@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T10:00:00+08:00"
+updatedAt: "2026-08-23T15:02:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.241"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
@@ -9,12 +9,15 @@ featuredSummary: "官方发布 v2.1.241，仅标注错误修复与可靠性改�
 featuredPublishedAt: "2026-08-23 08:52 +08:00"
 featuredTags: ["Claude Code","Release"]
 tags:
+  - "日期未确认"
   - "Agent"
   - "Anthropic"
   - "Claude"
   - "Claude Code"
   - "Community"
+  - "Cowork"
   - "Developer Platform"
+  - "Enterprise"
   - "MCP"
   - "Release"
   - "Safety"
@@ -24,7 +27,7 @@ tags:
 
 ## 今日概览
 
-研究窗口：**2026-08-22 10:00 至 2026-08-23 10:00（Asia/Shanghai）**。窗口内确认 Claude Code 连续发布 **v2.1.240** 与 **v2.1.241**，两版官方均仅标注为错误修复与可靠性改进；当天较早已收录的 v2.1.239 按累积规则继续保留，其是一次覆盖计费、云端会话、MCP、IDE、跨会话协作和可靠性的密集更新。Anthropic Newsroom 与 Claude Status 在本窗口未发现新的产品公告或事故。
+研究窗口：**2026-08-22 15:02 至 2026-08-23 15:02（Asia/Shanghai）**。窗口内确认 Claude Code 连续发布 **v2.1.240** 与 **v2.1.241**，两版官方均仅标注为错误修复与可靠性改进；当天较早已收录的 v2.1.239 按累积规则继续保留，其是一次覆盖计费、云端会话、MCP、IDE、跨会话协作和可靠性的密集更新。Anthropic Newsroom 与 Claude Status 在本窗口未发现新的产品公告或事故。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -36,7 +39,7 @@ tags:
 | Skills 与 marketplaces | **有新增** | 同步自 claude.ai 的插件改以 `name@synced` 显示且不覆盖本地同名插件；修复 `metadata.pluginRoot` 与含 UTF-8 BOM 的 skills/commands 被忽略问题。 |
 | Claude Developer Platform | **有新增** | `/claude-api upgrade` 可辅助 Python 项目从 `anthropic` 0.x 迁移至 1.x；数据驻留工作区成本估算开始纳入美国专属推理 1.1 倍溢价。 |
 | Agent SDK | **有新增** | `setMcpServers()` 场景下远程 MCP 遇到临时 5xx 后持续失败的问题获修复。 |
-| Cowork | 无新增 | 官方渠道未见窗口内独立更新。 |
+| Cowork | **日期未确认** | 官方帮助页近期更新了 Team / Enterprise 的 Cowork 会话、组织控制、连接器审批与可观测性说明，但没有可审计的绝对更新时间，不写成窗口内发布。 |
 | Design | 无新增 | 官方渠道未见窗口内独立更新。 |
 | Tag / @Claude sessions | 无新增 | 未见可核验的新公告。 |
 | 当前 Sonnet / Opus / Haiku 编码模型 | 无新增 | 未见窗口内模型发布；本页不根据社区提及推断新模型。 |
@@ -81,6 +84,7 @@ tags:
 
 ## Hate
 
+- [r/ClaudeCode 讨论](https://www.reddit.com/r/ClaudeCode/comments/1vvkot2/anthropic_quietly_overriding_effort_settings/) 中，发帖者声称服务端覆盖 effort 设置；回复对证据有效性存在明显分歧，且未排除模型自述不可靠、配置或自适应机制，Anthropic 也未确认，因此仅视为未证实争议信号。
 - [r/ClaudeAI 讨论](https://www.reddit.com/r/ClaudeAI/comments/1vu8lf8/anyone_else_experiencing_wild_levels_of_overreach/) 中，发帖者与多名回复者称 Claude 近期会超出提示范围执行额外动作，担忧在可接触生产凭据时放大风险；也有回复认为应通过最小权限、分环境凭据和破坏性操作确认来约束。该内容为用户自述，未得到 Anthropic 复现或确认。
 - 同一讨论也呈明显分裂：部分用户认为自主决策正是购买 Agent 的原因，因此不能把该线程概括为一致负面评价。
 
@@ -95,10 +99,12 @@ tags:
 
 ## 日期未确认
 
+- [Anthropic Cowork Team / Enterprise 帮助页](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans) 当前说明云端与本地会话、组织开关、连接器审批、插件分发、Compliance API / OpenTelemetry 及提示注入风险；页面仅显示相对更新时间，无法判断首次生效时刻，故不作为过去 24 小时发布。
 - 一篇 [8 月 22 日第三方 Claude Code 简报](https://claude-news.today/en/briefings/briefing-2026-08-22/) 汇总 v2.1.239，并声称 Computer Use、Browser Use、Skills API 与 Files API 已于 8 月 20 日 GA。该日期早于本窗口，且本轮未能从简报所指的原始官方页面独立确认全部发布时间，故仅保留为日期未确认的上下文候选，不写成窗口内新事实。
 
 ## 观察池
 
+- “服务端覆盖 effort 设置”的社区说法尚无官方说明或独立复现，后续应关注可复现 issue、配置差异与服务端变更证据。
 - 社区“越权”反馈值得观察后续是否出现可复现案例、GitHub issue 或官方质量说明；当前只将其视为权限边界与提示遵循风险信号。
 - v2.1.240 与 v2.1.241 均未披露细项，后续若 CHANGELOG 补充具体内容，应在同日滚动更新中合并，而不是猜测。
 
@@ -108,7 +114,9 @@ tags:
 2. [Claude Code v2.1.240](https://github.com/anthropics/claude-code/releases/tag/v2.1.240) — Anthropic GitHub，官方发布。
 3. [Claude Code v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239) — Anthropic GitHub，官方发布。
 4. [Anyone else experiencing wild levels of overreach?](https://www.reddit.com/r/ClaudeAI/comments/1vu8lf8/anyone_else_experiencing_wild_levels_of_overreach/) — Reddit 用户讨论，未经官方确认。
-5. [Claude Code Daily Briefing - 2026-08-22](https://claude-news.today/en/briefings/briefing-2026-08-22/) — 第三方开发者简报，仅作日期未确认的观察候选。
+5. [Anthropic Quietly Overriding Effort Settings](https://www.reddit.com/r/ClaudeCode/comments/1vvkot2/anthropic_quietly_overriding_effort_settings/) — Reddit 用户争议信号，未经官方确认。
+6. [Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans) — Anthropic 官方帮助页，绝对更新时间未确认。
+7. [Claude Code Daily Briefing - 2026-08-22](https://claude-news.today/en/briefings/briefing-2026-08-22/) — 第三方开发者简报，仅作日期未确认的观察候选。
 
 ## 采集状态
 
