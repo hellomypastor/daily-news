@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T04:02:00+08:00"
+updatedAt: "2026-08-24T07:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Apache Maka"
 featuredUrl: "https://github.com/apache/maka"
@@ -23,6 +23,7 @@ tags:
   - "HN"
   - "Inference"
   - "LLM"
+  - "Machine Learning"
   - "Memory"
   - "Model Routing"
   - "Open Source"
@@ -37,7 +38,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：2026-08-22 04:02 至 2026-08-24 04:02（Asia/Shanghai）。本轮最清晰的信号来自 GitHub 当日榜单：本地优先、可审计执行日志和编码 Agent 仍在持续吸引开发者；HN front 新出现的 harness 解释文章形成了初步讨论，但互动量仍不宜当作成熟度证明。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。
+采集窗口：2026-08-22 07:01 至 2026-08-24 07:01（Asia/Shanghai）。本轮最清晰的信号来自 GitHub 当日榜单：本地优先、可审计执行日志和编码 Agent 仍在持续吸引开发者；HN front 新出现的 harness 解释文章形成了初步讨论，但互动量仍不宜当作成熟度证明。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 新发现一篇关于药物预测基准切分与噪声地板的技术复盘，但因页面只有日期、没有精确时刻，按日期未确认保留。
 
 ## 已验证技术亮点
 
@@ -80,7 +81,8 @@ tags:
 
 ## 日期未确认
 
-- 本轮没有仅因缺少日期而需要保留的高相关候选；GitHub Trending 项目均明确标成“榜单快照”，没有反推发布日期。
+- [We changed one line and the benchmark score moved 0.21 AUROC](https://huggingface.co/blog/FINAL-Bench/leadboard-drug)（状态：官方 Community Article 标注 2026-08-22，但没有精确发布时间，无法严格确认是否落在截至 07:01 的 48 小时窗口）：作者用同一药物性质数据展示随机切分与时间切分可造成 0.211 AUROC 差异，并公开讨论噪声地板、简单基线和重复提交泄漏；这是作者团队的方法复盘，尚非独立复现。
+- GitHub Trending 项目均明确标成“榜单快照”，没有反推发布日期。
 
 ## 观察池
 
@@ -88,10 +90,10 @@ tags:
 
 ## 来源链接
 
-正文已直接链接所有 19 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
+正文已直接链接所有 20 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
 
 ## 采集状态
 
 - 已检查：GitHub daily Trending（overall、Python、TypeScript）及仓库 API；HN front/newest 与 Algolia；arXiv cs.AI；Hugging Face Papers/Blog/Community；Simon Willison。
-- 失败/限制：arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face 本轮没有新工作日论文批次；部分 HN 新提交互动量很低。
-- 初始候选：34；最终保留来源：19；二次补搜：否（最终来源非 0）。
+- 失败/限制：arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face Community 部分文章只显示日期、不显示精确时间；部分 HN 新提交互动量很低。
+- 初始候选：35；最终保留来源：20；二次补搜：否（最终来源非 0）。
