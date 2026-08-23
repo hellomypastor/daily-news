@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T01:03:09+08:00"
+updatedAt: "2026-08-24T04:06:57+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "The Lyceum: AI Daily — Aug 23, 2026"
 featuredUrl: "https://www.lyceumnews.com/the-lyceum-ai-daily-aug-23-2026/"
@@ -13,18 +13,24 @@ tags:
   - "观察池"
   - "日期未确认"
   - "Agent"
+  - "Agent Security"
   - "AI"
+  - "ARC-AGI-3"
   - "DeepSeek"
   - "Google DeepMind"
   - "Grok"
   - "Industry"
+  - "NVIDIA"
+  - "OpenShell"
+  - "Podcast"
   - "Research"
+  - "Simulation"
   - "xAI"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-23 01:03 至 2026-08-24 01:03（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；以下保留一条可信二手行业信号和两条较早官方背景，证据状态分别标注。
+采集窗口：**2026-08-23 04:07 至 2026-08-24 04:07（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；以下继续保留当日可信二手信号，并补入三条 8 月 21 日可核验技术内容。
 
 ## 优先动态（过去 24 小时）
 
@@ -34,11 +40,11 @@ tags:
 
 ## 常规厂商扫描
 
-Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业页重复的新条目；如后续出现相关内容，将注明“详见 Claude 专题页”或“详见 OpenAI 专题页”。Google、Meta、Microsoft、Mistral、Cohere、Qwen、Seed、百度、腾讯、DeepSeek、智谱、Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain 与 LlamaIndex 均完成入口检查，未硬凑无动态条目。
+Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业页重复的新条目。Google、Meta、Microsoft、Mistral、Cohere、Qwen、Seed、百度、腾讯、DeepSeek、智谱、Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain 与 LlamaIndex 均完成入口检查，未硬凑无动态条目。
 
 ## 播客
 
-已检查 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；未找到可核实在本窗口发布的新一期技术节目。
+已检查 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；无 24 小时内新一期，Latent Space 的 8 月 21 日节目列入近三日补充。
 
 ## 近两日补充
 
@@ -49,10 +55,13 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 | 厂商 | 标题 | 类型 | 日期/状态 | 摘要与意义 |
 |---|---|---|---|---|
 | Google DeepMind | [From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/) | 研究合作 | 2026-08-21；官方 | DeepMind 回顾游戏环境对 Atari、围棋与 StarCraft 研究的作用，并披露与游戏开发者探索更长时间尺度学习、适应和记忆的合作；它是 Agent 长程记忆与开放环境研究的邻近信号，而非新模型发布。 |
+| NVIDIA | [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/) | Agent 架构/基准 | 2026-08-21；官方 | AVO 以持久记忆、监督和工具循环支持长时自主任务，官方报告其在 ARC-AGI-3 公开集完成 25 个环境、183 关；实验涉及 Claude Opus 5（详见 Claude 专题页）与有限的 GPT-5.6 Sol 子集对比（详见 OpenAI 专题页），不应将系统成绩归因为单一模型能力。 |
+| NVIDIA | [Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/) | Agent 安全/架构 | 2026-08-21；官方 | 文章将行为引导与权威强制分层，主张在 harness 之下的运行时与基础设施实施最小权限、隔离、即时授权与审计；对可编程 Agent 栈的生产安全边界具有直接参考价值。 |
+| Latent Space | [Simulation: the new Scaling Law — Joon Sung Park, Simile AI](https://www.latent.space/p/simile) | 播客/仿真 Agent | 2026-08-21；原始节目 | 节目讨论从 Generative Agents 到人类行为基础模型、数字双胞胎与群体仿真的路线，强调访谈、交易、观察与随机试验数据对评估行为仿真的意义。 |
 
 ## xAI / Grok 专项检查
 
-已显式检查 xAI News、API/模型文档与 Grok 的模型、API、DeepSearch、语音、编码、工具调用和 Agent 动态。本轮 24 小时内未发现新公告。8 月 19 日的 [Grok Build 全平台开放](https://x.ai/news/grok-build-for-everyone) 已超出 72 小时窗口，保留为观察背景，不上升为今日动态。
+已显式检查 xAI News、API/模型文档与 changelog、xai-org 官方仓库，并对 Grok 的模型、API、DeepSearch、语音、编码、工具调用和 Agent 能力逐项检索。本轮 24 小时内未发现新公告或仓库 release；8 月 19 日的 [Grok Build 全平台开放](https://x.ai/news/grok-build-for-everyone) 已超出 72 小时窗口，保留为观察背景，不上升为今日动态。
 
 ## 日期未确认
 
@@ -65,10 +74,10 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 
 ## 一句话总结
 
-本轮行业窗口以低密度为主：唯一的当日信号是尚待官方确认的 DeepSeek 周末 API 价格变化，近三日则有 DeepMind 的长时游戏智能研究合作。
+过去 24 小时仍以待官方确认的 DeepSeek 价格信号为主；近三日补入 NVIDIA 长时 Agent 架构与安全分层，以及仿真 Agent 播客。
 
 ## 采集状态
 
-- 已检查来源：Anthropic、OpenAI、Google DeepMind、Meta AI、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex及主要技术播客。
-- 失败来源：X 时间线未登录无法稳定读取；部分脚本渲染列表页缺少精确时间；部分中文厂商仅有索引摘要。
-- 初始候选：4 条；保留：3 条来源（含观察背景）；二次补搜：否（最终来源不为 0）。
+- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、API 文档/changelog 与 xai-org 仓库；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客。
+- 失败来源：X 时间线未登录无法稳定读取；部分脚本渲染列表页缺少精确时间；部分中文厂商仅有搜索索引摘要，未将摘要当作已确认发布。
+- 初始候选：7 条；保留：6 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。

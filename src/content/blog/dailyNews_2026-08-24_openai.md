@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T01:03:00+08:00"
+updatedAt: "2026-08-24T04:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7"
@@ -21,13 +21,14 @@ tags:
   - "Hate"
   - "OpenAI"
   - "Release"
+  - "Remote"
   - "Usage"
   - "Watchlist"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-23 01:03 至 2026-08-24 01:03（Asia/Shanghai）**。窗口内可明确核验的官方产品动态只有 Codex CLI 0.150.0-alpha.7 预发布构建，发布页没有变更说明；ChatGPT、API 与 Agent 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时及额度消耗等相互矛盾的体验。
+采集窗口为 **2026-08-23 04:02 至 2026-08-24 04:02（Asia/Shanghai）**。窗口内可明确核验的官方产品动态只有 Codex CLI 0.150.0-alpha.7 预发布构建，发布页没有变更说明；ChatGPT、API 与 Agent 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -35,7 +36,7 @@ tags:
 |---|---|---|
 | Codex CLI | **0.150.0-alpha.7 预发布构建**；仅确认构建发布，不推断功能变化 | [官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7) |
 | VS Code / JetBrains 集成 | 无新增 | 已检查官方 Codex 仓库与文档 |
-| Codex cloud / remote tasks / PR agents | 无可确认的官方新增；额度与长任务体验见观察池和 Hate | 官方入口与社区抽样 |
+| Codex cloud / remote tasks / PR agents | 无可确认的官方新增；额度、长任务及 Remote 连接体验见观察池和 Hate | 官方入口、状态页与社区抽样 |
 | ChatGPT agentic mode / Work | 无可确认的官方新增 | ChatGPT Release Notes |
 | Responses API | 无新增 | 开发者文档与 changelog |
 | Agents SDK Python / TypeScript | 无新增；最新可见版本早于窗口 | GitHub Releases |
@@ -53,7 +54,7 @@ tags:
 | 产品面 | 过去 24 小时状态 |
 |---|---|
 | 浏览器 / Operator 能力 | 无新增 |
-| macOS / Windows / 移动端 | 无官方新增；社区有响应模式与质量变化投诉 |
+| macOS / Windows / 移动端 | 无官方新增；社区有响应模式、质量、会话加载与 Remote 连接投诉 |
 | GPTs / GPT Store / Canvas | 无新增 |
 | Sora / 视频 | 无新增 |
 | GPT Image / DALL·E | 无新增 |
@@ -78,10 +79,11 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 
 - 一则 8 月 23 日的 r/ChatGPT 帖中，多名用户称回答突然变得很快但任务完成度或质量下降；评论也提出可能与客户端设置有关。全部属于用户自述，没有受控对比或官方变更确认。[查看讨论](https://www.reddit.com/r/ChatGPT/comments/1vwal4a/chatgpt_has_been_acting_strangely_lately/)
 - 另一则当天讨论汇集了长任务耗时、任务被限制在约 25 分钟、Codex 长时间运行及额度被消耗的不同体验；任务类型与配置差异很大，不能由此推断统一上限或服务端变化。[查看讨论](https://www.reddit.com/r/ChatGPT/comments/1vw9ozm/whats_the_longest_youve_ever_had_chatgptworking/)
+- 8 月 24 日一则 r/codex 帖报告桌面浏览器会话冻结、移动端体验不稳和 Codex Remote 无法连接；评论中有其他用户复现 Remote 问题，也有人称本地桌面端正常。OpenAI 状态页截至采集时没有对应事件，故仅视为多用户自述、不能确认影响范围或共同根因。[查看讨论](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
 
 ## 情绪判断
 
-**偏负面但置信度低。** 本轮可追溯社区样本集中于额度、耗时和回答质量投诉，存在明显的投诉抽样偏差；同时缺少官方状态事件、统一测试条件与足够正向样本，不能推断全体用户体验趋势。
+**偏负面但置信度低。** 本轮可追溯社区样本集中于额度、耗时、回答质量、Remote 连接和会话加载投诉，存在明显的投诉抽样偏差；同帖反馈也并不一致，且缺少官方状态事件、统一测试条件与足够正向样本，不能推断全体用户体验趋势。
 
 ## 比较信号
 
@@ -105,10 +107,11 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 2. [ChatGPT 响应与质量变化讨论](https://www.reddit.com/r/ChatGPT/comments/1vwal4a/chatgpt_has_been_acting_strangely_lately/)
 3. [ChatGPT / Codex 长任务耗时讨论](https://www.reddit.com/r/ChatGPT/comments/1vw9ozm/whats_the_longest_youve_ever_had_chatgptworking/)
 4. [Codex 额度说明的二手转述](https://www.reddit.com/r/ChatGPT/comments/1vw84wh/its_usage_blitz_sunday/)
+5. [Codex Remote 与会话加载投诉](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research、Help Center、开发者文档与 changelog、OpenAI Status、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开中英文网页与 YouTube 搜索。
 - 失败来源：X（未登录无法稳定核验原帖全文与精确时间）；Reddit JSON（403，改用公开搜索索引）；YouTube（未发现可交叉核验的窗口内新增）。
-- 初始候选：14；最终保留来源：4。
+- 初始候选：15；最终保留来源：5。
 - 二次补搜：否（最终来源不为 0）。
