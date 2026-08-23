@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-23T00:00:00+08:00"
-updatedAt: "2026-08-23T19:08:00+08:00"
+updatedAt: "2026-08-23T22:03:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "The New MCP Roadmap"
 featuredUrl: "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
@@ -43,6 +43,7 @@ tags:
   - "Observability"
   - "On-device"
   - "Open Source"
+  - "Orchestration"
   - "Protocol"
   - "Research"
   - "Resurfaced"
@@ -61,7 +62,7 @@ tags:
 
 ## 今日概览
 
-本页研究窗口为 **2026-08-21 19:08 至 2026-08-23 19:08（Asia/Shanghai）**。本轮技术信号集中在可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
+本页研究窗口为 **2026-08-21 22:03 至 2026-08-23 22:03（Asia/Shanghai）**。本轮技术信号集中在新建的跨 Claude Code、Codex 与 Grok 子 Agent 调度器、可复现的 agent 状态控制、视觉设计多代理、端侧 agent、Apple Silicon 推理、GenAI 可观测性与多 Agent 委派边界。GitHub 仓库创建时间与 HN 提交时间分别核验；HN points/comments 只是截止快照，不代表项目成熟度。
 
 ## 已验证精选
 
@@ -102,6 +103,10 @@ tags:
 
 [Locum 官方仓库](https://github.com/HarjjotSinghh/locum)于 **2026-08-22 05:35 +08:00** 创建，采用 Apache-2.0 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49403691)于 **2026-08-23 04:41 +08:00** 提交，截止时 1 point、0 comments。README 描述其通过自定义 MCP connector 将 Grok Bot 任务转交本机 Claude Code / Codex CLI；这是低互动早期项目，未独立验证端到端安全边界。
 
+### Harness Subagent：跨 CLI 的一次性子 Agent 调度
+
+[官方仓库](https://github.com/ptmrio/harness-subagent)于 **2026-08-23 13:43 +08:00** 创建，采用 MIT 许可证；[HN 讨论](https://news.ycombinator.com/item?id=49408449)于 **2026-08-23 20:51 +08:00** 提交，截止时 3 points、0 comments。README 将其定位为从一个 harness 调度 Claude Code、Codex 或 Grok 完成一次性子任务后再综合结果；这是新建低互动项目，未独立验证权限隔离与结果质量。
+
 ### Cache-Control for LLMs：给推理缓存定义可移植契约
 
 [Gojiberries 原文](https://www.gojiberries.io/cache-control-for-llms/) 提出区分强制约束与可忽略提示的 LLM 缓存控制契约，并给出 IETF draft、JSON Schema、合规测试和 [BSD-3-Clause 参考实现](https://github.com/gojiplus/llm-cache-control)。文章与仓库均在本窗口发布；兼容性和作者主张尚未独立复测。
@@ -133,6 +138,7 @@ tags:
 - [Software Engineering in the Agentic Era](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)原文发表于 **2026-02-23**；[HN 讨论](https://news.ycombinator.com/item?id=49405117)于 **2026-08-23 08:20 +08:00** 重新出现，截止时 5 points、2 comments。这里只确认旧文复热，不将其观点当作新发布。
 - [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt)是 2024 年创建的 MIT 许可训练优化仓库；[HN 讨论](https://news.ycombinator.com/item?id=49405157)于 **2026-08-23 08:25 +08:00** 重新出现，截止时 3 points、0 comments。仓库目标来自 GitHub 元数据，不把本次提交视为代码今日发布。
 - [Sol-Luna Orchestrator](https://github.com/mahadansar/sol-luna-orchestrator)于 **2026-08-14 22:09 +08:00** 创建，是 MIT 许可的 Codex 多 Agent 委派 MCP server；[HN 讨论](https://news.ycombinator.com/item?id=49406790)于 **2026-08-23 15:37 +08:00** 提交，截止时 1 point、0 comments。这里只记录旧项目的新讨论，隔离工作树、独立复验等能力按 README 描述，未在本轮复测。
+- [Oh My Subagents](https://github.com/ringlochid/oh-my-subagents)是 **2026-07-20** 创建的 MIT 许可 Agent 团队运行时；[HN 讨论](https://news.ycombinator.com/item?id=49407968)于 **2026-08-23 19:34 +08:00** 提交，截止时 3 points、0 comments。仓库已有 94 stars，但这里仅把本轮提交记作旧项目复热，持久任务、事件日志和恢复能力按 README 描述，未独立复测。
 - [SpotWarp](https://github.com/enplabs/spotwarp)于 **2026-08-04 12:47 +08:00** 创建，README 将其定位为 Spot GPU 训练工作负载的本地备份、故障切换与恢复工具；[HN 讨论](https://news.ycombinator.com/item?id=49407527)于 **2026-08-23 18:07 +08:00** 提交，截止时 1 point、0 comments。GitHub API 未识别仓库许可证，性能、成本和安全声明均未独立验证。
 
 ## 日期未确认
@@ -159,5 +165,5 @@ tags:
 
 - 已检查：HN newest / Algolia 48 小时窗口及最近 24 小时 resurfacing、GitHub Trending overall / Python / TypeScript、GitHub API 与 README、arXiv、Hugging Face Papers / Blog、Simon Willison、NVIDIA、Cloudflare、MCP 官方博客、Nari Labs 与独立工程博客。
 - 失败或受限：Trending 动态页面未稳定提供可复核榜单文本；Hugging Face Papers 当日索引无可独立核验的新条目；Simon Willison、NVIDIA、Cloudflare 无更直接新增；部分极早期项目仅有低互动 HN 信号；Prime Intellect 与推理图解页未提供精确发布日期。
-- 初始候选：2097；最终保留来源：59（30 个事件 / 项目，其中 26 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
-- 截止时间：2026-08-23 19:08:00 +08:00；互动量均为截止快照。
+- 初始候选：2195；最终保留来源：63（32 个事件 / 项目，其中 28 个带 HN 讨论证据）；二次补搜：否（最终来源非 0）。
+- 截止时间：2026-08-23 22:03:00 +08:00；互动量均为截止快照。
