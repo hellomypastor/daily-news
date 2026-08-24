@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T13:06:31+08:00"
+updatedAt: "2026-08-24T16:07:55+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "From Atari to EVE Online: Building on 15 Years of AI Research in Games"
 featuredUrl: "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
@@ -20,6 +20,8 @@ tags:
   - "Doubao"
   - "Google DeepMind"
   - "Grok"
+  - "Grok 4.6"
+  - "Grok Bot"
   - "Harness"
   - "Industry"
   - "Industry Analysis"
@@ -29,12 +31,13 @@ tags:
   - "Qwen"
   - "Research"
   - "Simulation"
+  - "Vertex AI"
   - "xAI"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-23 13:06 至 2026-08-24 13:06（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；在累计保留 DeepSeek 价格信号及中文厂商二手周报的基础上，补入一篇 8 月 22 日发布的 Agent Harness 行业分析。
+采集窗口：**2026-08-23 16:02 至 2026-08-24 16:02（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；累计保留既有来源，并在近三日分区补入两条 8 月 21 日的 xAI 官方动态。
 
 ## 优先动态（过去 24 小时）
 
@@ -64,10 +67,12 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 | NVIDIA | [NVIDIA AVO Reaches 100% on ARC-AGI-3](https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/) | Agent 架构/基准 | 2026-08-21；官方 | AVO 以持久记忆、监督和工具循环支持长时自主任务，官方报告其在 ARC-AGI-3 公开集完成 25 个环境、183 关；实验涉及 Claude Opus 5（详见 Claude 专题页）与有限的 GPT-5.6 Sol 子集对比（详见 OpenAI 专题页），不应将系统成绩归因为单一模型能力。 |
 | NVIDIA | [Where Security Fits in an AI Agent Stack](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/) | Agent 安全/架构 | 2026-08-21；官方 | 文章将行为引导与权威强制分层，主张在 harness 之下的运行时与基础设施实施最小权限、隔离、即时授权与审计；对可编程 Agent 栈的生产安全边界具有直接参考价值。 |
 | Latent Space | [Simulation: the new Scaling Law — Joon Sung Park, Simile AI](https://www.latent.space/p/simile) | 播客/仿真 Agent | 2026-08-21；原始节目 | 节目讨论从 Generative Agents 到人类行为基础模型、数字双胞胎与群体仿真的路线，强调访谈、交易、观察与随机试验数据对评估行为仿真的意义。 |
+| xAI | [Grok Bot is now included with more plans](https://x.ai/news/grok-bot-more-plans) | Agent 产品/套餐 | 2026-08-21；官方，具体时刻未披露 | Grok Bot 扩展至 SuperGrok Plus、Cursor Pro+ 与全部 Cursor Teams 套餐；官方将其定位为可在应用和收件箱中持续工作、并行执行任务的数字队友，显示 xAI 正扩大常驻云端 Agent 的可用范围。 |
+| xAI | [Grok 4.6 on Vertex AI](https://x.ai/news/grok-4-6-vertex-ai) | 模型分发/API | 2026-08-21；官方，具体时刻未披露 | Grok 4.6 进入 Google Cloud Vertex Model Garden，官方列出 500k 上下文、可配置推理强度及输入/缓存输入/输出价格；这为企业在托管云上调用长时 Agent 模型增加了正式入口。 |
 
 ## xAI / Grok 专项检查
 
-已显式检查 xAI News、API/模型文档与 changelog、xai-org 官方仓库，并对 Grok 的模型、API、DeepSearch、语音、编码、工具调用和 Agent 能力逐项检索。本轮 24 小时内未发现新公告或仓库 release；8 月 19 日的 [Grok Build 全平台开放](https://x.ai/news/grok-build-for-everyone) 已超出 72 小时窗口，保留为观察背景，不上升为今日动态。
+已显式检查 xAI News、Grok 文档、API/model changelog、xai-org 官方仓库，并对 Grok 的模型、API、DeepSearch、语音、编码、工具调用和 Agent 能力逐项检索。本轮 24 小时内未发现新公告、文档变更或仓库 release；补录 8 月 21 日 Grok Bot 扩大套餐覆盖与 Grok 4.6 上架 Vertex AI 两条官方动态。8 月 19 日的 [Grok Build 全平台开放](https://x.ai/news/grok-build-for-everyone) 已超出 72 小时窗口，保留为观察背景，不上升为今日动态。
 
 ## 日期未确认
 
@@ -82,10 +87,10 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 
 ## 一句话总结
 
-过去 24 小时仍以待官方确认的厂商信号为主；本轮补入 Agent Harness 演进分析，并继续保留近三日 NVIDIA 长时 Agent 架构、安全分层与仿真 Agent 播客。
+过去 24 小时仍以待官方确认的厂商信号为主；近三日补充显示 xAI 正通过更多订阅套餐与 Vertex AI 扩大 Grok Agent 和模型的分发范围。
 
 ## 采集状态
 
-- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、API 文档/changelog 与 xai-org 官方仓库，并逐项检索 Grok 模型/API、DeepSearch、语音、编码、工具调用和 Agent；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；新浪财经转载的界面新闻 AI 应用周度观察。
+- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、Grok 文档、API/model changelog 与 xai-org 官方仓库，并逐项检索 Grok 模型/API、DeepSearch、语音、编码、工具调用和 Agent；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；新浪财经转载的界面新闻 AI 应用周度观察。
 - 失败来源：X 时间线未登录无法稳定读取；部分脚本渲染列表页缺少精确时间；部分中文厂商仅有搜索索引摘要；界面新闻原转载入口无法打开，因此相关说法未作为官方确认发布。
-- 初始候选：10 条；保留：8 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。
+- 初始候选：12 条；保留：10 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T10:02:00+08:00"
+updatedAt: "2026-08-24T16:03:44+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7"
@@ -13,12 +13,14 @@ featuredImageAlt: "GitHub 上 OpenAI Codex 仓库 0.150.0-alpha.7 发布页的�
 featuredImageCaption: "图片来源：OpenAI / GitHub"
 tags:
   - "二手来源"
+  - "范围未确认"
   - "Agent"
   - "ChatGPT"
   - "CLI"
   - "Codex"
   - "Community"
   - "Hate"
+  - "Love"
   - "OpenAI"
   - "Pre-release"
   - "Release"
@@ -29,7 +31,7 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-23 10:02 至 2026-08-24 10:02（Asia/Shanghai）**。窗口内新增可明确核验的 Codex CLI 发布为 0.149.0-alpha.4.3 预发布构建和稳定版 0.149.1；前者只有版本标识，后者仅给出完整比较链接，因此不推断具体功能变化。当天较早已收录的 0.150.0-alpha.7 预发布构建继续保留。ChatGPT、API 与 Agent SDK 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
+采集窗口为 **2026-08-23 16:02 至 2026-08-24 16:02（Asia/Shanghai）**。窗口内新增可明确核验的 Codex CLI 发布为 0.149.0-alpha.4.3 预发布构建和稳定版 0.149.1；前者只有版本标识，后者仅给出完整比较链接，因此不推断具体功能变化。当天较早已收录的 0.150.0-alpha.7 预发布构建继续保留。ChatGPT、API 与 Agent SDK 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池；随后出现用户报告额度已重置，但没有官方公告可确认范围或机制。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -82,7 +84,7 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 
 ## Love
 
-本轮没有找到证据强度足够、且能与明确产品变化对应的新增正向口碑。零散用户仍称某些任务响应更快，但同帖伴随质量下降投诉，不单列为产品改善。
+一则 8 月 24 日的 r/ChatGPT 帖称 Codex 额度已重置；固定讨论串也出现“已重置”的用户回复。它们只能确认部分用户的界面观察，不能证明全量账户均已恢复或额度异常根因已解决。[查看讨论](https://www.reddit.com/r/ChatGPT/comments/1vwrpbc/huzzah_codex_has_been_reset/)
 
 ## Hate
 
@@ -119,10 +121,11 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 5. [ChatGPT / Codex 长任务耗时讨论](https://www.reddit.com/r/ChatGPT/comments/1vw9ozm/whats_the_longest_youve_ever_had_chatgptworking/)
 6. [Codex 额度说明的二手转述](https://www.reddit.com/r/ChatGPT/comments/1vw84wh/its_usage_blitz_sunday/)
 7. [Codex Remote 与会话加载投诉](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
+8. [Codex 额度重置的社区报告](https://www.reddit.com/r/ChatGPT/comments/1vwrpbc/huzzah_codex_has_been_reset/)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research、Help Center、开发者文档与 changelog、OpenAI Status、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开中英文网页与 YouTube 搜索。
 - 失败来源：X（未登录无法稳定核验原帖全文与精确时间）；Reddit JSON（403，改用公开搜索索引）；YouTube（未发现可交叉核验的窗口内新增）。
-- 初始候选：19；最终保留来源：7。
+- 初始候选：23；最终保留来源：8。
 - 二次补搜：否（最终来源不为 0）。

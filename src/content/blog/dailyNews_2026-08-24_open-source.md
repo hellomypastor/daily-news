@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T13:03:00+08:00"
+updatedAt: "2026-08-24T16:04:31+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Apache Maka"
 featuredUrl: "https://github.com/apache/maka"
@@ -20,6 +20,7 @@ tags:
   - "Coding Agent"
   - "Configuration"
   - "Debugging"
+  - "Design Engineering"
   - "Developer Tools"
   - "Evaluation"
   - "Harness"
@@ -44,7 +45,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：2026-08-22 13:03 至 2026-08-24 13:03（Asia/Shanghai）。本轮新增的明确技术信号来自 LLM 0.33：工具日志、可组合模板、reasoning summary 与依赖升级集中改善了命令行模型工具链；同时，编码 Agent 的验证方法和真实内核调试案例提供了两个边界互补的工程观察。GitHub 当日榜单继续显示本地优先、可审计执行日志和编码 Agent 的关注度，但榜单热度不代表项目今天发布或已经成熟。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 的药物预测基准复盘仍因缺少精确时刻按日期未确认保留。
+采集窗口：2026-08-22 16:02 至 2026-08-24 16:02（Asia/Shanghai）。本轮新增的明确技术信号来自 LLM 0.33：工具日志、可组合模板、reasoning summary 与依赖升级集中改善了命令行模型工具链；同时，编码 Agent 的验证方法和真实内核调试案例提供了两个边界互补的工程观察。GitHub 当日榜单继续显示本地优先、可审计执行日志和编码 Agent 的关注度，但榜单热度不代表项目今天发布或已经成熟。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 的药物预测基准复盘仍因缺少精确时刻按日期未确认保留。
 
 ## 已验证技术亮点
 
@@ -68,7 +69,7 @@ tags:
 | [OpenHuman](https://github.com/tinyhumansai/openhuman) | 本地优先个人记忆、Agent fleet 编排与深度研究 | 36,606 stars；当日 +106 | 把个人长期记忆与多 Agent 工作流放在同一自托管边界 |
 | [Hermes Agent](https://github.com/NousResearch/hermes-agent) | 可持续积累能力的个人 Agent | 234,785 stars；当日 +519 | 高热度说明“可成长 Agent”仍是开发者关注方向，但不等同质量评测 |
 | [DeerFlow](https://github.com/bytedance/deer-flow) | 含 sandbox、memory、tools、skills 与 subagents 的长任务 harness | 80,673 stars；本轮出现在 Python 榜单后续位置 | 组件覆盖研究、编码与长时任务，便于观察完整 Agent runtime 的组合方式 |
-| [OpenCode](https://github.com/anomalyco/opencode) | 开源编码 Agent | 200,624 stars；当日 +371 | TypeScript 榜单中的高热项目，可作为终端编码 Agent 生态基线 |\n| [Proliferate](https://github.com/proliferate-ai/proliferate) | 可在本地或云端并行运行多种编码 Agent 的开源 IDE | 317 stars；当日 +45 | 把并行会话与可复用 workflow 放进同一开发界面；榜单热度不等于成熟度 |\n| [Skills for Real Engineers](https://github.com/mattpocock/skills) | 面向编码 Agent 的工程技能与规则集合 | 234,176 stars；当日 +2,447 | 反映可复用技能包和工程约束成为 Agent 工具链的高关注层；星数仅为榜单快照 |\n| [ECC](https://github.com/affaan-m/ECC) | 聚合 skills、memory、安全与研究优先流程的 Agent harness 优化系统 | 242,643 stars；当日 +427 | 提供观察跨编码 Agent 复用工作流与安全约束的样本；项目自述能力待独立验证 |\n| [Ruflo](https://github.com/ruvnet/ruflo) | 支持多 Agent 协作、记忆与 RAG 的 meta-harness | 69,134 stars；当日 +131 | 展示多运行时集成和 swarm 编排方向；榜单热度不等于成熟度或性能结论 |\n\n## HN 讨论
+| [OpenCode](https://github.com/anomalyco/opencode) | 开源编码 Agent | 200,624 stars；当日 +371 | TypeScript 榜单中的高热项目，可作为终端编码 Agent 生态基线 |\n| [Proliferate](https://github.com/proliferate-ai/proliferate) | 可在本地或云端并行运行多种编码 Agent 的开源 IDE | 317 stars；当日 +45 | 把并行会话与可复用 workflow 放进同一开发界面；榜单热度不等于成熟度 |\n| [Skills for Real Engineers](https://github.com/mattpocock/skills) | 面向编码 Agent 的工程技能与规则集合 | 234,176 stars；当日 +2,447 | 反映可复用技能包和工程约束成为 Agent 工具链的高关注层；星数仅为榜单快照 |\n| [ECC](https://github.com/affaan-m/ECC) | 聚合 skills、memory、安全与研究优先流程的 Agent harness 优化系统 | 242,643 stars；当日 +427 | 提供观察跨编码 Agent 复用工作流与安全约束的样本；项目自述能力待独立验证 |\n| [Ruflo](https://github.com/ruvnet/ruflo) | 支持多 Agent 协作、记忆与 RAG 的 meta-harness | 69,134 stars；当日 +131 | 展示多运行时集成和 swarm 编排方向；榜单热度不等于成熟度或性能结论 |\n| [Awesome Agent Skills](https://github.com/VoltAgent/awesome-agent-skills) | 跨 Claude Code、Codex、Gemini CLI、Cursor 等工具的技能集合 | 31,494 stars；16:02 榜单快照 | 反映技能格式与复用层持续受关注；集合规模和兼容性为项目自述 |\n| [Book to Skill](https://github.com/virgiliojr94/book-to-skill) | 把技术书 PDF 转为 Claude Code skill 的开源工具 | 24,928 stars；16:02 榜单快照 | 展示从长文档生成可调用技能的工作流；不据榜单热度判断输出质量 |\n| [UI Skills](https://github.com/ibelick/ui-skills) | 面向设计工程的 Agent skills 集合 | 7,527 stars；16:02 TypeScript 榜单快照 | 提供观察垂直领域技能包的样本；项目创建较早，不反推为今日发布 |\n\n## HN 讨论
 
 <figure class="source-image">
   <a href="https://github.com/apache/maka"><img src="https://opengraph.githubassets.com/6270e10d07a9518570497fdb353d87be6da7d3e30f172eaebb12844b52be3300/apache/maka" alt="Apache Maka GitHub 项目的 OpenGraph 预览图" loading="lazy" /></a>
@@ -101,10 +102,10 @@ tags:
 
 ## 来源链接
 
-正文已直接链接所有 26 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
+正文已直接链接所有 29 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
 
 ## 采集状态
 
 - 已检查：GitHub daily Trending（overall、Python、TypeScript）及仓库 API；HN front/newest 与 Algolia；arXiv cs.AI；Hugging Face Papers/Blog/Community；Simon Willison。
-- 失败/限制：arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face Community 部分文章只显示日期、不显示精确时间；部分 HN 新提交互动量很低。
-- 初始候选：48；最终保留来源：26；二次补搜：否（最终来源非 0）。
+- 失败/限制：arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face Community 部分文章只显示日期、不显示精确时间；HN Algolia 索引最新记录停在 2026-08-23 23:18 +08:00，无法确认其后时段新提交；部分已索引 HN 新提交互动量很低。
+- 初始候选：54；最终保留来源：29；二次补搜：否（最终来源非 0）。
