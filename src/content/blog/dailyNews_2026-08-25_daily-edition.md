@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-08-25"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T01:02:00+08:00"
+updatedAt: "2026-08-25T04:02:00+08:00"
 description: "2026-08-25 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-25"
-featuredUrl: "https://status.claude.com/"
+featuredUrl: "https://stspg.io/kg59rclpfzsz"
 featuredSummary: "2026-08-25 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Claude 全家桶过去 24 小时动态与口碑日报
 
-**[Elevated errors for multiple models](https://status.claude.com/)**。官方状态页确认多个 Claude 模型出现错误升高，最终记录影响时段为上海时间 12:50 至 15:36。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Errors logging into Claude.ai](https://stspg.io/kg59rclpfzsz)**。官方确认上海时间 00:02–00:08 出现 Claude.ai 登录问题，并影响 Claude Code 订阅连接；事件已解决。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-25_claude)
 

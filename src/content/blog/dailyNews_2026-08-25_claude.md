@@ -1,22 +1,24 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T01:02:00+08:00"
+updatedAt: "2026-08-25T04:02:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Elevated errors for multiple models"
-featuredUrl: "https://status.claude.com/"
-featuredSummary: "官方状态页确认多个 Claude 模型出现错误升高，最终记录影响时段为上海时间 12:50 至 15:36。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-08-24 13:06 +08:00"
-featuredTags: ["Claude","Outage","Opus 5","Fable 5"]
+featuredTitle: "Errors logging into Claude.ai"
+featuredUrl: "https://stspg.io/kg59rclpfzsz"
+featuredSummary: "官方确认上海时间 00:02–00:08 出现 Claude.ai 登录问题，并影响 Claude Code 订阅连接；事件已解决。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-25 01:12 +08:00"
+featuredTags: ["Claude.ai","Claude Code","Incident"]
 tags:
   - "日期未确认"
   - "Agent"
   - "Anthropic"
   - "Claude"
   - "Claude Code"
+  - "Claude.ai"
   - "Community"
   - "Fable 5"
   - "Hate"
+  - "Incident"
   - "MCP"
   - "Opus 5"
   - "Outage"
@@ -24,13 +26,13 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-24 01:02 至 2026-08-25 01:02（Asia/Shanghai）**。窗口内最明确的事件是 Claude 多模型在 8 月 24 日出现约 2 小时 46 分钟的错误升高；官方状态页确认 Claude Opus 5、Fable 5 等受影响。Anthropic 同日还发布了一篇 Claude Code 营销自动化案例，但页面没有时分，无法确认是否落在本窗口，故列入‘日期未确认’。Claude Code GitHub 最新 release 为窗口开始前发布，未作为 24 小时更新收录。
+采集窗口：**2026-08-24 04:02 至 2026-08-25 04:02（Asia/Shanghai）**。窗口内新增一项已解决的 Claude.ai 登录故障：官方称上海时间 00:02–00:08 用户登录受阻，并涉及 Claude Code 订阅连接，随后还调查了桌面应用潜在影响。当天早些时候的多模型错误升高事件继续保留；Anthropic 同日发布的 Claude Code 营销自动化案例没有时分，仍列入‘日期未确认’。Claude Code GitHub 最新 release 早于本窗口，未作为 24 小时更新收录。
 
 ## Tier 1：编码与 Agent 主轴
 
 | 产品/能力 | 状态 | 本轮结论 |
 |---|---|---|
-| Claude Code CLI | 有关联动态 | 官方案例展示用 Claude Code、BigQuery MCP 与业务数据生成个性化销售简报；发布日期时分未确认，详见下文。GitHub release 无窗口内新增。 |
+| Claude Code CLI | 有关联动态 | Claude.ai 登录故障涉及 Claude Code 订阅连接；官方案例还展示 Claude Code、BigQuery MCP 与业务数据生成个性化销售简报，但发布日期时分未确认。GitHub release 无窗口内新增。 |
 | VS Code / JetBrains 集成 | 无新增 | 已检索官方产品、文档、GitHub 与社区入口，未发现可核验的窗口内独立更新。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 未发现窗口内官方更新。 |
 | Skills 与 marketplaces | 无新增 | 已检查官方 Skills、Marketplace 及插件入口，未发现窗口内更新。 |
@@ -46,7 +48,7 @@ tags:
 | 产品/能力 | 状态 | 本轮结论 |
 |---|---|---|
 | Chrome / browser agent | 无新增 | 未发现窗口内官方更新。 |
-| Desktop / Preview | 无新增 | 未发现窗口内官方更新。 |
+| Desktop / Preview | 有关联故障 | 登录事件初报称官方继续调查桌面应用的潜在影响；事件随后标记解决，但未公布更具体影响范围。 |
 | Marketplace / Connectors / Plugins | 无新增 | 未发现窗口内官方更新。 |
 | 当前官方创意/视频模型 | 未确认 | 本轮未发现 Anthropic 官方‘视频模型’产品更新；不因检索词存在而确认产品。 |
 | Voice Mode | 无新增 | 未发现窗口内官方更新。 |
@@ -83,7 +85,7 @@ tags:
 
 ### Claude Code 自动生成个性化销售简报
 
-Anthropic 于 8 月 24 日发布 [官方案例](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)，介绍内部营销团队如何让 Claude Code 通过 BigQuery MCP 汇总 HubSpot、Clay、Salesforce 等数据，并为销售人员生成个性化周报。案例披露了人工审核、禁止编造 URL、每轮验证表头映射、小规模试点等防错实践。页面仅给日期、未给发布时间，因此无法确认是否位于本次 01:02 边界之后；作为有价值候选保留，但不计作严格窗口内确认更新。
+Anthropic 于 8 月 24 日发布 [官方案例](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)，介绍内部营销团队如何让 Claude Code 通过 BigQuery MCP 汇总 HubSpot、Clay、Salesforce 等数据，并为销售人员生成个性化周报。案例披露了人工审核、禁止编造 URL、每轮验证表头映射、小规模试点等防错实践。页面仅给日期、未给发布时间，因此无法确认是否位于本次 04:02 窗口内；作为有价值候选保留，但不计作严格窗口内确认更新。
 
 <figure class="source-image">
   <a href="https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8c5c59795765514bd8fd82_og_how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-sales.jpg" alt="Anthropic 官方案例文章的 Claude Code 营销自动化题图" loading="lazy" /></a>
@@ -98,14 +100,14 @@ Anthropic 于 8 月 24 日发布 [官方案例](https://claude.com/blog/how-an-a
 
 ## 来源链接
 
-1. [Claude Status：多个模型错误升高](https://status.claude.com/)
-2. [Claude Blog：营销团队用 Claude Code 生成个性化销售简报](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)
-3. [r/ClaudeCode：Claude Down Again??](https://www.reddit.com/r/ClaudeCode/comments/1vwt5bd/claude_down_again/)
-4. [r/Anthropic：持续出现 529 Overloaded](https://www.reddit.com/r/Anthropic/comments/1vwty0e/anyone_else_getting_constant_529_overloaded/)
+1. [Claude Status：Claude.ai 登录故障](https://stspg.io/kg59rclpfzsz)\n2. [Claude Status：多个模型错误升高](https://status.claude.com/)
+3. [Claude Blog：营销团队用 Claude Code 生成个性化销售简报](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)
+4. [r/ClaudeCode：Claude Down Again??](https://www.reddit.com/r/ClaudeCode/comments/1vwt5bd/claude_down_again/)
+5. [r/Anthropic：持续出现 529 Overloaded](https://www.reddit.com/r/Anthropic/comments/1vwty0e/anyone_else_getting_constant_529_overloaded/)
 
 ## 采集状态
 
-- 已检查来源：Anthropic Newsroom、Claude Blog、Claude Status、Claude Code GitHub releases/changelog、Developer Platform 与产品/生态入口；Reddit r/ClaudeCode、r/ClaudeAI、r/Anthropic、r/LocalLLaMA；Hacker News、X、YouTube 及可信开发者/播客检索。
-- 失败来源：X 未登录页面无法稳定取得帖子与互动量；Hacker News 与 YouTube 未发现窗口内可核验新内容；Developer Platform 未发现带窗口内时间戳的独立更新。
-- 初始候选数：5；保留来源数：4。
+- 已检查来源：Anthropic Newsroom、Claude Blog、Claude Status 事件/API、Claude Code GitHub releases/changelog、Developer Platform 与产品/生态入口；Reddit r/ClaudeCode、r/ClaudeAI、r/Anthropic、r/LocalLLaMA；Hacker News、X、YouTube 及可信开发者/播客检索。
+- 失败来源：X 未登录页面无法稳定取得帖子与互动量；Reddit JSON 接口返回 403，改以公开搜索结果核对；Hacker News 与 YouTube 未发现窗口内可核验新内容；Developer Platform 未发现带窗口内时间戳的独立更新。
+- 初始候选数：6；保留来源数：5。
 - 二次补搜：否（最终来源不为 0）。
