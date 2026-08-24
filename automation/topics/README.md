@@ -6,7 +6,7 @@ Run all five topic scans in order. Each topic writes only its assigned JSON file
 
 1. Anthropic/Claude product news and community sentiment → `claude.json`.
 2. OpenAI/ChatGPT/Codex product news and community sentiment → `openai.json`.
-3. Open-source repositories, independent engineering posts and papers → `open-source.json`.
+3. Coding Agent/harness products (Cline, Pi, DeepSeek Harness/DSH, OpenCode, Aider, Continue, Roo Code), open-source repositories, independent engineering posts and papers → `open-source.json`.
 4. Other vendors' official releases, research and podcasts → `industry.json`.
 5. Hosted/managed/remote Agent business and platform developments → `aaas.json`.
 

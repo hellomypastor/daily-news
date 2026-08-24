@@ -8,6 +8,8 @@ Check current official feeds/list pages for Anthropic, OpenAI, Google DeepMind/R
 
 xAI / Grok is mandatory on every run rather than incidental coverage. Search xAI's official news, documentation, API/model changelog and official repositories for Grok model/API releases, DeepSearch, voice, coding, tool-use and Agent capabilities. Record the checked xAI/Grok channels in `scan.checkedSources`; if nothing relevant is found, do not invent or pad an item.
 
+Also track company-level and ecosystem signals from Cline, Pi Coding Agent and DeepSeek Harness/DSH when they concern product direction, desktop/IDE distribution, partnerships, funding, enterprise adoption, benchmark releases or developer ecosystem growth. Routine commits and releases belong in the open-source harness radar; repeat them here only when there is a genuine industry implication and say `详见开源专题页`.
+
 Anthropic and OpenAI must be checked and relevant items may be repeated here with `详见 Claude 专题页` or `详见 OpenAI 专题页`. Moonshot/Kimi and MiniMax are separate vendors.
 
 ## Time and output

@@ -24,6 +24,8 @@ Use one local-project task to refresh five topics every three hours, accumulate 
 
 每轮必须显式检查 xAI/Grok 与 Cognition Devin，不得只依赖顺带发现：04 行业主题检查 Grok 模型、API、DeepSearch、语音、编码、工具调用和 Agent 官方动态；05 AaaS 主题检查 Devin 的托管异步执行、环境、并发、定价、企业接入与集成，同时检查 Grok 是否出现符合 AaaS 定义的托管 Agent、异步任务、工具或远程执行能力。普通 Grok 模型/API 更新只进入行业主题，不得误写成 AaaS。两项检查均写入对应 `scan.checkedSources`；无动态时不硬凑条目。
 
+将 Coding Agent / Agent Harness 作为独立生产力主轴，而不是只关注模型厂商。03 开源主题每轮必须逐一检查 Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 的官方仓库、release、changelog 和文档，并快速检查 OpenCode、Aider、Continue、Roo Code；关注 Agent loop、模型路由、规划、context/compaction、memory、session、skills/plugins/MCP、权限、沙箱、工具执行、IDE/桌面/CLI、headless/CI、多 Agent、评测与采用信号。04 行业主题收录其中具有产品方向、桌面/IDE 分发、合作、融资、企业采用或生态意义的动态。05 AaaS 仅在出现云端托管、后台/定时任务、远程环境、并发、企业控制面或定价证据时收录；普通本地 harness 更新不得误写成 AaaS。所有必查入口写入 `scan.checkedSources`，无新增时不硬凑条目；任何“追平/超过”结论必须有具名评测、可复现实验或明确标注的社区证据。
+
 禁止为了证明“已检查”而跨日重复同一条较旧背景来源；没有新增时只在 `scan.checkedSources` 和采集状态中写明“无新增”。较旧背景、观察池、日期未确认、未证实传闻和邻近信号不得配置为页面 `image.sourceUrl`，也不得成为 Today 首页精选；没有合格配图时宁可纯文字展示。
 
 如果当天目录已存在，先完整读取五份已有 JSON，再做当天累积更新：
