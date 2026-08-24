@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T19:02:00+08:00"
+updatedAt: "2026-08-24T23:29:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Apache Maka"
 featuredUrl: "https://github.com/apache/maka"
@@ -46,7 +46,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：2026-08-22 16:02 至 2026-08-24 16:02（Asia/Shanghai）。本轮新增的明确技术信号来自 LLM 0.33：工具日志、可组合模板、reasoning summary 与依赖升级集中改善了命令行模型工具链；同时，编码 Agent 的验证方法和真实内核调试案例提供了两个边界互补的工程观察。GitHub 当日榜单继续显示本地优先、可审计执行日志和编码 Agent 的关注度，但榜单热度不代表项目今天发布或已经成熟。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 的药物预测基准复盘仍因缺少精确时刻按日期未确认保留。
+采集窗口：2026-08-22 23:29 至 2026-08-24 23:29（Asia/Shanghai）。本轮晚间增量确认 Pi Coding Agent v0.84.3 已正式发布，集中改善 Windows 工具执行、托管更新、模型 thinking 控制、compaction 事件与技能发现；OpenCode v1.18.22 修复兼容性问题。Cline 窗口内另有两版 SDK 修复补齐。此前明确技术信号来自 LLM 0.33：工具日志、可组合模板、reasoning summary 与依赖升级集中改善了命令行模型工具链；同时，编码 Agent 的验证方法和真实内核调试案例提供了两个边界互补的工程观察。GitHub 当日榜单继续显示本地优先、可审计执行日志和编码 Agent 的关注度，但榜单热度不代表项目今天发布或已经成熟。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 的药物预测基准复盘仍因缺少精确时刻按日期未确认保留。
 
 ## 已验证技术亮点
 
@@ -60,7 +60,8 @@ tags:
    项目串联 requirements、spec、plan、build、review 与 release，并提供 MCP 入口；其技术看点是强调真实验证门禁，而不是只展示生成结果。来源：[项目仓库](https://github.com/jrullan/ducklab)。
 
 4. **Enozunu：Agent 配置物化工具**（状态：原始仓库可访问；HN 提交于 2026-08-23 19:48 +08:00）
-   目标是用声明式配置生成可复现的 Agent 环境，回应多工具、多机器之间配置漂移问题；当前 HN 互动仍低，适合试用而非据此判断采用度。来源：[项目仓库](https://github.com/tooppoo/enozunu)。\n\n5. **What Is a Harness?：面向非专业读者拆解 Agent harness**（状态：原文日期核验为 2026-08-20；HN 于 2026-08-23 22:24 +08:00 再次提交）  \n   文章把 harness 分为 system prompt、工具、agentic loop 与模型翻译层，并讨论本地所有权和模型可替换性；它适合作为概念导读，不是性能基准。来源：[原文](https://earendil.com/posts/what-is-a-harness/)。\n\n## Coding Agent / Harness 雷达（19:02 增量）\n\n- **Cline v4.1.15**（状态：官方 Release；发布于 2026-08-24 03:56 +08:00）：修复 SDK 扩展中 MCP 自动批准开关未能独立覆盖全部 MCP 工具的问题；这是权限策略一致性修复，不代表默认放宽权限。来源：[官方 Release](https://github.com/cline/cline/releases/tag/v4.1.15)。\n- **Pi Coding Agent v0.84.3 发布提交**（状态：官方主分支提交；2026-08-24 18:50 +08:00；GitHub Release 页面截至 19:02 尚未发布）：`badlogic/pi-mono` 已重定向至 `earendil-works/pi`；本轮可核验的发布提交之后又加入 Windows Release ZIP 解压修复。由于正式 Release 说明尚不可用，暂不把具体版本能力写成已发布事实。来源：[官方发布提交](https://github.com/earendil-works/pi/commit/4e58f324fae8ebfa98a3d45181fb248072a2afac)。\n- **DeepSeek Harness / DSH**（状态：较旧观察；最新 RC 发布于 2026-08-21 20:35 +08:00，超出 48 小时窗口）：官方项目处于 developer preview，采用可替换插件架构，提供 Web 与 headless profile；本轮没有更晚 Release，保留为新项目雷达背景而非今日发布。来源：[官方仓库](https://github.com/deepseek-ai/deepseek-harness)。\n- **Tier 2 快速检查**：OpenCode 最新 Release 为 2026-08-21，Aider、Continue、Roo Code 均未发现 48 小时内新 Release；不据仓库 `updated_at` 制造条目。\n\n## GitHub Trending
+   目标是用声明式配置生成可复现的 Agent 环境，回应多工具、多机器之间配置漂移问题；当前 HN 互动仍低，适合试用而非据此判断采用度。来源：[项目仓库](https://github.com/tooppoo/enozunu)。\n\n5. **What Is a Harness?：面向非专业读者拆解 Agent harness**（状态：原文日期核验为 2026-08-20；HN 于 2026-08-23 22:24 +08:00 再次提交）  \n   文章把 harness 分为 system prompt、工具、agentic loop 与模型翻译层，并讨论本地所有权和模型可替换性；它适合作为概念导读，不是性能基准。来源：[原文](https://earendil.com/posts/what-is-a-harness/)。\n\n## Coding Agent / Harness 雷达（23:29 增量）\n\n- **Cline v4.1.13 / v4.1.14 / v4.1.15**（状态：三版均为官方 Release）：v4.1.13（2026-08-23 04:23 +08:00）恢复自定义 OpenAI-compatible 模型工具调用，并改善 Hub 会话重连与追踪；v4.1.14（18:11 +08:00）恢复交互任务完成遥测并刷新模型目录；v4.1.15（2026-08-24 03:56 +08:00）修复 SDK 扩展中 MCP 自动批准开关未能独立覆盖全部 MCP 工具的问题；这是权限策略一致性修复，不代表默认放宽权限。来源：[v4.1.13](https://github.com/cline/cline/releases/tag/v4.1.13)、[v4.1.14](https://github.com/cline/cline/releases/tag/v4.1.14)、[v4.1.15](https://github.com/cline/cline/releases/tag/v4.1.15)。\n- **Pi Coding Agent v0.84.3**（状态：官方 Release；2026-08-24 19:09 +08:00）：新增可选原生 PowerShell 工具、托管安装的分阶段验证与原子更新、`/thinking` 选择器和 compaction 失败事件；同时修复嵌套 skills 发现、compaction 暴露工具、阈值自动压缩及多项 provider reasoning 重放问题。`badlogic/pi-mono` 已重定向至 `earendil-works/pi`。来源：[官方 Release](https://github.com/earendil-works/pi/releases/tag/v0.84.3)；此前[发布提交](https://github.com/earendil-works/pi/commit/4e58f324fae8ebfa98a3d45181fb248072a2afac)按当天累积保留。\n- **DeepSeek Harness / DSH**（状态：较旧观察；最新 RC 发布于 2026-08-21 20:35 +08:00，超出 48 小时窗口）：官方项目处于 developer preview，采用可替换插件架构，提供 Web 与 headless profile；本轮没有更晚 Release，保留为新项目雷达背景而非今日发布。来源：[官方仓库](https://github.com/deepseek-ai/deepseek-harness)。\n- **OpenCode v1.18.22**（状态：官方 Release；2026-08-24 22:37 +08:00）：修复相对 device-login URL、对不支持的 OpenAI-compatible provider 错发 `textVerbosity` 以及 Bedrock 兼容性问题；属于兼容性修复，不据此推断性能变化。来源：[官方 Release](https://github.com/anomalyco/opencode/releases/tag/v1.18.22)。
+- **Tier 2 快速检查**：Aider、Continue、Roo Code 均未发现 48 小时内新 Release；不据仓库 `updated_at` 制造条目。\n\n## GitHub Trending
 
 > 下列数字是 2026-08-24 13:03 +08:00 抓取的 GitHub daily Trending 页面快照，只说明当前热度，不代表项目今天发布。
 
@@ -103,10 +104,10 @@ tags:
 
 ## 来源链接
 
-正文已直接链接所有 32 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
+正文已直接链接所有 36 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
 
 ## 采集状态
 
 - 已检查：Cline、Pi Coding Agent（迁移后官方仓库）、DeepSeek Harness / DSH 的仓库、Release、changelog/文档；OpenCode、Aider、Continue、Roo Code 的官方仓库与 Release 快速检查；GitHub daily Trending（overall、Python、TypeScript）及仓库 API；HN front/newest 与 Algolia；arXiv cs.AI；Hugging Face Papers/Blog/Community；Simon Willison。
-- 失败/限制：Pi v0.84.3 在主分支已有官方发布提交，但截止 19:02 尚无 GitHub Release 页面；OpenCode、Aider、Continue、Roo Code 未发现 48 小时内可报告的新 Release；arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face Community 部分文章只显示日期、不显示精确时间；HN Algolia 索引最新记录停在 2026-08-23 23:18 +08:00，无法确认其后时段新提交；部分已索引 HN 新提交互动量很低。
-- 初始候选：57；最终保留来源：32；二次补搜：否（最终来源非 0）。
+- 失败/限制：Pi v0.84.3 已于 19:09 +08:00 发布正式 Release；Aider、Continue、Roo Code 未发现 48 小时内可报告的新 Release；arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face Community 部分文章只显示日期、不显示精确时间；HN Algolia 索引最新记录停在 2026-08-23 23:18 +08:00，无法确认其后时段新提交；部分已索引 HN 新提交互动量很低。
+- 初始候选：61；最终保留来源：36；二次补搜：否（最终来源非 0）。
