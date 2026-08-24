@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T10:02:00+08:00"
+updatedAt: "2026-08-24T13:06:31+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "From Atari to EVE Online: Building on 15 Years of AI Research in Games"
 featuredUrl: "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
@@ -20,7 +20,9 @@ tags:
   - "Doubao"
   - "Google DeepMind"
   - "Grok"
+  - "Harness"
   - "Industry"
+  - "Industry Analysis"
   - "NVIDIA"
   - "OpenShell"
   - "Podcast"
@@ -32,7 +34,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-23 10:02 至 2026-08-24 10:02（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；除继续保留 DeepSeek 价格信号外，新增一份 8 月 23 日可信二手周报，其中两项中文厂商动态因缺少可访问官方原文而分别进入日期未确认与观察池。
+采集窗口：**2026-08-23 13:06 至 2026-08-24 13:06（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；在累计保留 DeepSeek 价格信号及中文厂商二手周报的基础上，补入一篇 8 月 22 日发布的 Agent Harness 行业分析。
 
 ## 优先动态（过去 24 小时）
 
@@ -46,11 +48,13 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 
 ## 播客
 
-已检查 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；无 24 小时内新一期，Latent Space 的 8 月 21 日节目列入近三日补充。
+已检查 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；无 24 小时内新一期，Latent Space 的 8 月 21 日节目列入近三日补充，8 月 22 日行业分析列入近两日补充。
 
 ## 近两日补充
 
-暂无可确认条目。
+| 来源 | 标题 | 类型 | 日期/状态 | 摘要与意义 |
+|---|---|---|---|---|
+| Latent Space | [The Evolution of the Agent Harness](https://www.latent.space/p/attention-interface) | 行业分析/Agent Harness | 2026-08-22；原始文章 | 文章以 ReAct、早期自治 Agent、IDE 协作与终端 Agent 为线索，论证模型训练与 Harness 共同演化，并预测 Harness 的重心会转向权限、身份、信任与人类注意力调度。它是技术生态分析，不是厂商产品发布；对 Agent 平台评估的启示是应同时考察模型与运行环境，而非只比较裸模型。 |
 
 ## 近三日补充
 
@@ -78,10 +82,10 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 
 ## 一句话总结
 
-过去 24 小时仍以待官方确认的厂商信号为主；新增中文厂商二手观察，同时保留近三日 NVIDIA 长时 Agent 架构、安全分层与仿真 Agent 播客。
+过去 24 小时仍以待官方确认的厂商信号为主；本轮补入 Agent Harness 演进分析，并继续保留近三日 NVIDIA 长时 Agent 架构、安全分层与仿真 Agent 播客。
 
 ## 采集状态
 
-- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、API 文档/changelog 与 xai-org 仓库；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；新浪财经转载的界面新闻 AI 应用周度观察。
+- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、API 文档/changelog 与 xai-org 官方仓库，并逐项检索 Grok 模型/API、DeepSearch、语音、编码、工具调用和 Agent；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；新浪财经转载的界面新闻 AI 应用周度观察。
 - 失败来源：X 时间线未登录无法稳定读取；部分脚本渲染列表页缺少精确时间；部分中文厂商仅有搜索索引摘要；界面新闻原转载入口无法打开，因此相关说法未作为官方确认发布。
-- 初始候选：9 条；保留：7 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。
+- 初始候选：10 条；保留：8 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。
