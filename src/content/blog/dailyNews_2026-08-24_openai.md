@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T16:03:44+08:00"
+updatedAt: "2026-08-24T19:02:53+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7"
@@ -14,6 +14,8 @@ featuredImageCaption: "图片来源：OpenAI / GitHub"
 tags:
   - "二手来源"
   - "范围未确认"
+  - "因果未证实"
+  - "自测证据"
   - "Agent"
   - "ChatGPT"
   - "CLI"
@@ -31,7 +33,7 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-23 16:02 至 2026-08-24 16:02（Asia/Shanghai）**。窗口内新增可明确核验的 Codex CLI 发布为 0.149.0-alpha.4.3 预发布构建和稳定版 0.149.1；前者只有版本标识，后者仅给出完整比较链接，因此不推断具体功能变化。当天较早已收录的 0.150.0-alpha.7 预发布构建继续保留。ChatGPT、API 与 Agent SDK 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池；随后出现用户报告额度已重置，但没有官方公告可确认范围或机制。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
+采集窗口为 **2026-08-23 19:02 至 2026-08-24 19:02（Asia/Shanghai）**。窗口内新增可明确核验的 Codex CLI 发布为 0.149.0-alpha.4.3 预发布构建和稳定版 0.149.1；前者只有版本标识，后者仅给出完整比较链接，因此不推断具体功能变化。当天较早已收录的 0.150.0-alpha.7 预发布构建继续保留。ChatGPT、API 与 Agent SDK 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池；随后出现用户报告额度已重置，但没有官方公告可确认范围或机制。另有用户公开记录 Codex 后端模型缓存的 ETag 和指令包字数变化，但该记录不能证明变化与额度消耗之间存在因果关系，亦仅列入观察池。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -107,6 +109,7 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 ## 观察池
 
 - [“It's Usage Blitz Sunday”](https://www.reddit.com/r/ChatGPT/comments/1vw84wh/its_usage_blitz_sunday/) 转述 Codex 负责人在 X 上称，图片长会话多次压缩、Computer History 的高分位用量以及会话标题功能可能导致额外额度消耗，并提到重置安排。搜索索引可确认二手帖日期为 8 月 23 日，但未登录环境无法稳定打开原始 X 帖核对全文、时间和上下文，因此状态为 **可信二手转述 / 原文未核验**，不写成已确认官方公告。
+- [Codex 后端指令包变化记录](https://www.reddit.com/r/codex/comments/1vwxtgn/i_have_proof_that_openai_changed_something_on/)：发帖者列出本地 `models_cache.json` 所见 ETag、指令包字数和首次观察时间，称 8 月 23 日 23:59 +08:00 的缓存比前一版本多约 4.1 万词。帖子可核验记录本身，但无法独立验证缓存内容是否完整、变化是否面向所有用户，也不能证明其与额度消耗或重置存在因果关系；状态为 **社区自测 / 因果未证实**。
 
 ## 未证实传闻
 
@@ -122,10 +125,11 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 6. [Codex 额度说明的二手转述](https://www.reddit.com/r/ChatGPT/comments/1vw84wh/its_usage_blitz_sunday/)
 7. [Codex Remote 与会话加载投诉](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
 8. [Codex 额度重置的社区报告](https://www.reddit.com/r/ChatGPT/comments/1vwrpbc/huzzah_codex_has_been_reset/)
+9. [Codex 后端指令包变化的社区自测](https://www.reddit.com/r/codex/comments/1vwxtgn/i_have_proof_that_openai_changed_something_on/)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research、Help Center、开发者文档与 changelog、OpenAI Status、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开中英文网页与 YouTube 搜索。
 - 失败来源：X（未登录无法稳定核验原帖全文与精确时间）；Reddit JSON（403，改用公开搜索索引）；YouTube（未发现可交叉核验的窗口内新增）。
-- 初始候选：23；最终保留来源：8。
+- 初始候选：24；最终保留来源：9。
 - 二次补搜：否（最终来源不为 0）。

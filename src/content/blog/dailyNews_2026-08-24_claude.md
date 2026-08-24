@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T16:03:39+08:00"
+updatedAt: "2026-08-24T19:02:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.241"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
@@ -33,7 +33,7 @@ tags:
 
 ## 今日概览
 
-研究窗口：**2026-08-23 16:02 至 2026-08-24 16:02（Asia/Shanghai）**。窗口内可由官方时间戳确认的变化包括一项产品更新与一项服务事件： [Claude Code v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241)，Anthropic 仅说明其包含错误修复与可靠性改进，没有披露具体改动。[Claude Status 事件页](https://stspg.io/5kzdprb1xsbx) 显示，北京时间 8 月 24 日 13:06 起多个模型请求错误升高，claude.ai、API、Claude Code 与 Cowork 进入部分中断；截至 15:47，Opus 5 与 Fable 5 错误趋稳，但事件仍未解决。Claude 官方博客与 Platform Release Notes 未见窗口内新公告。社区则出现一组关于 Opus 5 / Fable 5 突然不遵循既有规则的集中自述；该说法没有可复现实验或官方确认，只能视作负面观察信号。另有高互动帖子重新整理 Code with Claude 2026 的 19 场录像，但 YouTube 官方时间戳显示视频发布于 5 月，并非本窗口新增。
+研究窗口：**2026-08-23 19:02 至 2026-08-24 19:02（Asia/Shanghai）**。当天累计可由官方时间戳确认的变化包括一项产品更新与一项服务事件： [Claude Code v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241)，Anthropic 仅说明其包含错误修复与可靠性改进，没有披露具体改动。[Claude Status 事件页](https://stspg.io/5kzdprb1xsbx) 显示，北京时间 8 月 24 日 13:06 起多个模型请求错误升高，claude.ai、API、Claude Code 与 Cowork 进入部分中断；官方确认影响发生在 12:50 至 15:36，并于 16:30 标记事件解决。Claude 官方博客与 Platform Release Notes 未见窗口内新公告。社区则出现一组关于 Opus 5 / Fable 5 突然不遵循既有规则的集中自述；该说法没有可复现实验或官方确认，只能视作负面观察信号。另有高互动帖子重新整理 Code with Claude 2026 的 19 场录像，但 YouTube 官方时间戳显示视频发布于 5 月，并非本窗口新增。
 
 <figure class="source-image">
   <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.241"><img src="https://opengraph.githubassets.com/1/anthropics/claude-code/releases/tag/v2.1.241" alt="Anthropic Claude Code GitHub 仓库的 v2.1.241 发布页预览图" loading="lazy" /></a>
@@ -74,7 +74,7 @@ tags:
 
 ### 多个模型请求错误升高
 
-[Claude Status 事件页](https://stspg.io/5kzdprb1xsbx) 记录事件始于北京时间 8 月 24 日 13:06，涉及 Mythos 5、Fable 5、Opus 5、Opus 4.8 等模型，影响 claude.ai、Claude API、Claude Code 与 Claude Cowork。截至 15:47，Opus 5 与 Fable 5 错误已趋稳，但官方仍在恢复其他受影响模型的成功率；不推断根因。
+[Claude Status 事件页](https://stspg.io/5kzdprb1xsbx) 记录事件始于北京时间 8 月 24 日 13:06，涉及 Mythos 5、Fable 5、Opus 5、Opus 4.8 等模型，影响 claude.ai、Claude API、Claude Code 与 Claude Cowork。官方最终说明用户实际受影响时段为 12:50 至 15:36，并于 16:30 将事件标记为已解决；不推断根因。
 
 
 ### Claude Code v2.1.241

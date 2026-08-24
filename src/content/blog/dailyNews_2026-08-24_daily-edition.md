@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-08-24"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T16:07:55+08:00"
+updatedAt: "2026-08-24T19:02:53+08:00"
 description: "2026-08-24 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-24"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.241"
