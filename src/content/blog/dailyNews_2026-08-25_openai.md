@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T04:02:00+08:00"
+updatedAt: "2026-08-25T07:03:18+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.149.1"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.149.1"
@@ -23,19 +23,20 @@ tags:
   - "Deprecation"
   - "MCP"
   - "OpenAI"
+  - "Pre-release"
   - "Release"
   - "Usage Reset"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-24 04:02 至 2026-08-25 04:02（Asia/Shanghai）**。窗口内可精确核验的新增是 Codex CLI 0.149.1：GitHub 发布于 8 月 24 日 08:28，发布页仅给出与 0.149.0 的比较链接，没有逐项说明，因此不推断具体修复。官方 ChatGPT & Codex changelog 同日宣布弃用 `codex mcp-server`、建议改用 Codex App Server；该条只有自然日而没有精确发布时间，无法排除其发布于窗口起点前约一小时，故保守列入“日期未确认”。ChatGPT、API、Agents SDK、模型及 Tier 2/3 产品线未发现窗口内新的官方发布。本轮新增一条低置信度社区观察：一位用户称 Codex 全局用量重置已经发生，但同时抱怨重置时机浪费了刚使用的 banked reset；公开索引只有自然日，不能精确归窗，也不能据此推断全部账户状态。
+采集窗口为 **2026-08-24 07:02 至 2026-08-25 07:02（Asia/Shanghai）**。窗口内可精确核验的新增有两项 Codex CLI 发布：稳定版 0.149.1 于 8 月 24 日 08:28 发布，预发布版 0.150.0-alpha.8 于 8 月 25 日 06:11 发布；两页都没有逐项变更说明，因此不推断具体修复。官方 ChatGPT & Codex changelog 同日宣布弃用 `codex mcp-server`、建议改用 Codex App Server；该条只有自然日而没有精确发布时间，无法严格归入窗口，故保守列入“日期未确认”。ChatGPT、API、Agents SDK、模型及 Tier 2/3 产品线未发现窗口内新的官方发布。本轮保留一条低置信度社区观察：一位用户称 Codex 全局用量重置已经发生，但同时抱怨重置时机浪费了刚使用的 banked reset；公开索引只有自然日，不能精确归窗，也不能据此推断全部账户状态。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **新增稳定版 0.149.1**；页面没有逐项 release notes | [GitHub 官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.149.1) |
+| Codex CLI | **新增稳定版 0.149.1 与预发布版 0.150.0-alpha.8**；两页均无逐项 release notes | [0.149.1](https://github.com/openai/codex/releases/tag/rust-v0.149.1)、[0.150.0-alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.8) |
 | VS Code / JetBrains 集成 | 无新增 | 已检查官方 changelog、Codex 文档与仓库 |
 | Codex cloud / remote tasks / PR agents | 无新增 | 已检查官方 changelog、文档与状态页 |
 | ChatGPT agentic mode / Work | 无新增 | ChatGPT Release Notes 与官方 changelog |
@@ -69,6 +70,10 @@ tags:
 Enterprise、Business、Edu、Gov、Science、安全与行业方案均已检查；窗口内未发现可核验的新公告，也未发现值得保留但日期不完整的新候选。
 
 ## 官方更新（新到旧）
+
+### Codex CLI 0.150.0-alpha.8（预发布）
+
+OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.8 于 **2026-08-25 06:11 +08:00** 发布，并明确标为预发布版。页面正文只有版本名称，没有逐项变更说明；本页仅确认该预发布版本出现，不推断功能变化。[查看官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.8)
 
 ### Codex CLI 0.149.1
 
@@ -104,13 +109,14 @@ OpenAI 的 GitHub 发布页显示 Codex CLI 0.149.1 于 **2026-08-24 08:28 +08:0
 
 ## 来源链接
 
-1. [Codex CLI 0.149.1](https://github.com/openai/codex/releases/tag/rust-v0.149.1)
-2. [ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog)
-3. [Huzzah! Codex has been reset!](https://www.reddit.com/r/ChatGPT/comments/1vwrpbc/huzzah_codex_has_been_reset/)
+1. [Codex CLI 0.150.0-alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.8)
+2. [Codex CLI 0.149.1](https://github.com/openai/codex/releases/tag/rust-v0.149.1)
+3. [ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog)
+4. [Huzzah! Codex has been reset!](https://www.reddit.com/r/ChatGPT/comments/1vwrpbc/huzzah_codex_has_been_reset/)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research、ChatGPT Release Notes、ChatGPT & Codex changelog、API changelog、模型与弃用文档、Codex 各产品入口、OpenAI Status、Codex 与 Agents SDK / 官方 SDK GitHub Releases、Reddit 五个相关社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（窗口内相关结果稀少，未取得足够可靠的新口碑样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：10；最终保留来源：3。
+- 初始候选：11；最终保留来源：4。
 - 二次补搜：否（最终来源不为 0）。

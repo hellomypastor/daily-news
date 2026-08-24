@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T04:02:00+08:00"
+updatedAt: "2026-08-25T07:03:20+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "OpenCode v1.18.22"
 featuredUrl: "https://github.com/anomalyco/opencode/releases/tag/v1.18.22"
@@ -27,21 +27,24 @@ tags:
   - "Inference"
   - "LLM"
   - "MCP"
+  - "Observability"
   - "Open Source"
   - "OpenCode"
   - "Optimization"
   - "Permissions"
   - "Pi"
   - "Provider"
+  - "SDK"
   - "Security"
   - "State Machine"
+  - "Storage"
   - "Threat Model"
   - "Windows"
 ---
 
 ## 今日概览
 
-本轮核验窗口为 **2026-08-23 04:02 至 2026-08-25 04:02（Asia/Shanghai，近 48 小时）**。在累计保留 Pi、OpenCode、Cline 等既有条目的基础上，本轮新增 Agent Lightning v1.0.1、一篇推理引擎宿主逃逸威胁分析，以及长程 Agent 状态机 StateM 的社区讨论。安全文章提出的是威胁模型与防御建议，不代表已有真实攻击得到证实；StateM 项目本身较旧，因此只作为观察信号。
+本轮核验窗口为 **2026-08-23 07:02 至 2026-08-25 07:02（Asia/Shanghai，近 48 小时）**。本轮新增 Cline SDK v0.0.79：官方发布说明确认其为 durable event log 设置 64 MiB 磁盘上限、修复会话完成遥测，并刷新模型目录。[查看 Cline SDK v0.0.79 官方发布说明](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)。在累计保留 Pi、OpenCode、Cline 等既有条目的基础上，本轮新增 Agent Lightning v1.0.1、一篇推理引擎宿主逃逸威胁分析，以及长程 Agent 状态机 StateM 的社区讨论。安全文章提出的是威胁模型与防御建议，不代表已有真实攻击得到证实；StateM 项目本身较旧，因此只作为观察信号。
 
 ## Coding Agent / Harness 雷达
 
@@ -49,7 +52,7 @@ tags:
 |---|---|---|---|
 | Pi Coding Agent | 已验证，窗口内 | v0.84.3 增加可选原生 PowerShell 工具、`/thinking` 选择器、原子化托管更新与 `session_compact_failed` 扩展事件；同时修复压缩、技能发现、权限文件与多种 provider 兼容问题。原 `badlogic/pi-mono` 已由 GitHub 重定向到当前官方仓库。 | [官方 Release](https://github.com/earendil-works/pi/releases/tag/v0.84.3)，2026-08-24 19:09 +08:00 |
 | OpenCode | 已验证，窗口内 | v1.18.22 修复设备登录相对 URL/子路径、避免向不支持的 OpenAI 兼容提供商发送 `textVerbosity`，并更新 Bedrock 兼容性。 | [官方 Release](https://github.com/anomalyco/opencode/releases/tag/v1.18.22)，2026-08-24 22:37 +08:00 |
-| Cline | 已验证，窗口内 | v4.1.15 让“Use MCP servers”总开关真正覆盖所有 MCP 工具的自动批准，不再要求逐工具额外启用。该变化扩大开关实际作用范围，使用者应同步检查权限策略。 | [官方 Release](https://github.com/cline/cline/releases/tag/v4.1.15)，2026-08-24 03:56 +08:00 |
+| Cline | 已验证，窗口内 | v4.1.15 修复 MCP 自动批准总开关；SDK v0.0.79 将 durable event log 限制为 64 MiB、修复 `task.completed` 遥测遗漏，并刷新模型目录。 | [v4.1.15](https://github.com/cline/cline/releases/tag/v4.1.15)，2026-08-24 03:56 +08:00；[SDK v0.0.79](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)，2026-08-25 07:01 +08:00 |
 | DeepSeek Harness / DSH | 已检查，无窗口内新发布 | 最新可核验版本为 v0.1.1-rc.2，发布时间早于本轮 48 小时起点；详见观察池。 | 官方仓库与 Releases |
 | Aider | 已检查，无新增 | 官方 Release 未见窗口内版本。 | 官方仓库与 Releases |
 | Continue | 已检查，无新增 | 官方 Release 未见窗口内版本。 | 官方仓库与 Releases |
@@ -61,6 +64,10 @@ tags:
 </figure>
 
 ## 已验证精选
+
+### Cline SDK v0.0.79：限制事件日志磁盘占用并修复完成遥测
+
+官方发布说明称，hub durable event log 现在限制为 64 MiB，最旧事件会先被删除并执行 vacuum，且每新增 16 MiB 就触发裁剪；`task.completed` 也改为在每条会话退出路径恰好发送一次。模型目录新增 AgentRouter 与 Opper，并更新部分 provider 模型、价格和默认选择；这是配置变化说明，不推断服务质量。[官方 Release](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)，2026-08-25 07:01 +08:00。
 
 ### 1. Pi v0.84.3：把 Windows、思考控制与压缩故障纳入正式接口
 
@@ -121,11 +128,12 @@ HN recent submissions 除既有 **Ducklab**（[项目仓库](https://github.com/
 9. [安全分析的 HN 讨论](https://news.ycombinator.com/item?id=49424387)
 10. [StateM 仓库](https://github.com/henryqin1997/statem)
 11. [StateM 的 HN 讨论](https://news.ycombinator.com/item?id=49423887)
+12. [Cline SDK v0.0.79](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库/Release/文档；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供可复核的当日排名/日增星数；Hugging Face 新社区文章只取得相对时间列表、未取得稳定永久链接。
-- 初始候选数：15。
-- 最终保留来源数：11。
+- 初始候选数：16。
+- 最终保留来源数：12。
 - 二次补搜：否（最终来源不为 0）。
