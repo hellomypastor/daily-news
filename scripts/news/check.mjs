@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
-import { outputFiles, outputPath, readSources, ROOT, shanghaiDate } from "./lib.mjs";
+import { outputFiles, outputPath, readSources, ROOT, selectFeaturedSource, shanghaiDate } from "./lib.mjs";
 
 const date = process.argv[2] ?? shanghaiDate();
 const sources = readSources(date);
@@ -49,11 +49,20 @@ for (const { slug, title, updatedAt, sources: references } of sources) {
 		throw new Error(`缺少 ${path.relative(ROOT, target)}，请先运行 yarn news:publish ${date}`);
 	}
 	const content = fs.readFileSync(target, "utf8");
+	const frontmatter = content.slice(0, content.indexOf("\n---\n", 4));
+	const source = sources.find((item) => item.slug === slug);
+	const featured = selectFeaturedSource(source, date);
 	if (!content.includes(`title: ${JSON.stringify(title)}`)) {
 		throw new Error(`${path.relative(ROOT, target)} 标题与源数据不一致`);
 	}
 	if (updatedAt && !content.includes(`updatedAt: ${JSON.stringify(updatedAt)}`)) {
 		throw new Error(`${path.relative(ROOT, target)} 最后更新时间与源数据不一致`);
+	}
+	if (featured && !frontmatter.includes(`featuredUrl: ${JSON.stringify(featured.url)}`)) {
+		throw new Error(`${path.relative(ROOT, target)} 首页精选来源不符合新鲜度与证据状态规则`);
+	}
+	if (!featured && /^featuredUrl:/m.test(frontmatter)) {
+		throw new Error(`${path.relative(ROOT, target)} 不应把较旧或未确认来源提升为首页精选`);
 	}
 	for (const item of references) {
 		if (!content.includes(item.url)) {

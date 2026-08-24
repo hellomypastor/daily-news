@@ -5,6 +5,27 @@ export const ROOT = path.resolve(import.meta.dirname, "../..");
 export const DATA_ROOT = path.join(ROOT, "data", "daily");
 export const BLOG_ROOT = path.join(ROOT, "src", "content", "blog");
 
+const NON_FEATURED_TAGS = new Set([
+	"较旧背景", "较旧上下文", "旧文回热", "观察池", "日期未确认", "未确认",
+	"未证实", "未证实传闻", "邻近信号", "older context", "resurfaced", "watchlist",
+	"date unconfirmed", "date unverified", "unverified date", "unverified", "rumor", "adjacent signal",
+]);
+
+export function isFeaturedCandidate(item, date) {
+	if (item.tags.some((tag) => NON_FEATURED_TAGS.has(tag.trim().toLowerCase()))) return false;
+	const publishedDate = item.publishedAt.match(/^\d{4}-\d{2}-\d{2}/)?.[0];
+	if (publishedDate) {
+		const ageInDays = (Date.parse(`${date}T00:00:00Z`) - Date.parse(`${publishedDate}T00:00:00Z`)) / 86_400_000;
+		if (ageInDays > 3 || ageInDays < -1) return false;
+	}
+	return true;
+}
+
+export function selectFeaturedSource(source, date) {
+	const candidates = source.sources.filter((item) => isFeaturedCandidate(item, date));
+	return candidates.find((item) => item.url === source.image?.sourceUrl) ?? candidates[0] ?? null;
+}
+
 export function shanghaiDate() {
 	return new Intl.DateTimeFormat("en-CA", {
 		timeZone: "Asia/Shanghai",

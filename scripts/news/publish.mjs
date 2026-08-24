@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { outputFiles, outputPath, readSources, ROOT, shanghaiDate } from "./lib.mjs";
+import { outputFiles, outputPath, readSources, ROOT, selectFeaturedSource, shanghaiDate } from "./lib.mjs";
 
 const date = process.argv[2] ?? shanghaiDate();
 const sources = readSources(date);
@@ -39,7 +39,8 @@ const addInlineImage = (content, image) => {
 };
 
 for (const source of sources) {
-	const featured = source.sources.find((item) => item.url === source.image?.sourceUrl) ?? source.sources[0];
+	const featured = selectFeaturedSource(source, date);
+	const featuredImage = source.image && featured?.url === source.image.sourceUrl ? source.image : null;
 	const tags = [...new Set([...source.tags, ...source.sources.flatMap((item) => item.tags)])]
 		.sort((a, b) => a.localeCompare(b, "zh-CN"));
 	const description = source.description || `过去 24 小时精选，共 ${source.sources.length} 个来源。`;
@@ -49,15 +50,17 @@ for (const source of sources) {
 		`date: ${JSON.stringify(`${date}T00:00:00+08:00`)}`,
 		`updatedAt: ${JSON.stringify(source.updatedAt || `${date}T11:00:00+08:00`)}`,
 		`description: ${JSON.stringify(description)}`,
-		`featuredTitle: ${JSON.stringify(featured.title)}`,
-		`featuredUrl: ${JSON.stringify(featured.url)}`,
-		`featuredSummary: ${JSON.stringify(`${featured.summary} ${description}`)}`,
-		...(featured.publishedAt ? [`featuredPublishedAt: ${JSON.stringify(featured.publishedAt)}`] : []),
-		`featuredTags: ${JSON.stringify(featured.tags)}`,
-		...(source.image ? [
-			`featuredImage: ${JSON.stringify(source.image.url)}`,
-			`featuredImageAlt: ${JSON.stringify(source.image.alt)}`,
-			`featuredImageCaption: ${JSON.stringify(source.image.caption)}`,
+		...(featured ? [
+			`featuredTitle: ${JSON.stringify(featured.title)}`,
+			`featuredUrl: ${JSON.stringify(featured.url)}`,
+			`featuredSummary: ${JSON.stringify(`${featured.summary} ${description}`)}`,
+			...(featured.publishedAt ? [`featuredPublishedAt: ${JSON.stringify(featured.publishedAt)}`] : []),
+			`featuredTags: ${JSON.stringify(featured.tags)}`,
+		] : ["featuredTags: []"]),
+		...(featuredImage ? [
+			`featuredImage: ${JSON.stringify(featuredImage.url)}`,
+			`featuredImageAlt: ${JSON.stringify(featuredImage.alt)}`,
+			`featuredImageCaption: ${JSON.stringify(featuredImage.caption)}`,
 		] : []),
 		...(tags.length ? ["tags:", ...tags.map((tag) => `  - ${quote(tag)}`)] : ["tags: []"]),
 		"---",
@@ -72,18 +75,19 @@ const editionTitle = `Daily News 精选日报 · ${date}`;
 const editionDescription = `${date} 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。`;
 const editionTags = ["Daily Edition", "AI", "Agent", "每日精选"];
 const editionSections = sources.map((source) => {
-	const featured = source.sources.find((item) => item.url === source.image?.sourceUrl) ?? source.sources[0];
+	const featured = selectFeaturedSource(source, date);
+	const featuredImage = source.image && featured?.url === source.image.sourceUrl ? source.image : null;
 	const lines = [
 		`## ${source.title}`,
 		"",
 		featured ? `**[${featured.title}](${featured.url})**。${featured.summary} ${source.description}` : source.description,
 	];
-	if (source.image) {
+	if (featuredImage) {
 		lines.push(
 			"",
 			'<figure class="source-image">',
-			`  <a href="${escapeHtml(source.image.sourceUrl)}"><img src="${escapeHtml(source.image.url)}" alt="${escapeHtml(source.image.alt)}" loading="lazy" /></a>`,
-			`  <figcaption><a href="${escapeHtml(source.image.sourceUrl)}">${escapeHtml(source.image.caption)}</a></figcaption>`,
+			`  <a href="${escapeHtml(featuredImage.sourceUrl)}"><img src="${escapeHtml(featuredImage.url)}" alt="${escapeHtml(featuredImage.alt)}" loading="lazy" /></a>`,
+			`  <figcaption><a href="${escapeHtml(featuredImage.sourceUrl)}">${escapeHtml(featuredImage.caption)}</a></figcaption>`,
 			"</figure>",
 		);
 	}

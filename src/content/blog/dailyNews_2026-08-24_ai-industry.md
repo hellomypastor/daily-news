@@ -3,11 +3,11 @@ title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-24T00:00:00+08:00"
 updatedAt: "2026-08-24T10:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "The Lyceum: AI Daily — Aug 23, 2026"
-featuredUrl: "https://www.lyceumnews.com/the-lyceum-ai-daily-aug-23-2026/"
-featuredSummary: "可信二手日报提到 DeepSeek 周末 API 低谷价格变化，官方原始公告尚待定位。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredPublishedAt: "2026-08-23"
-featuredTags: ["DeepSeek","定价","日期未确认"]
+featuredTitle: "From Atari to EVE Online: Building on 15 Years of AI Research in Games"
+featuredUrl: "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
+featuredSummary: "DeepMind 介绍以游戏环境研究长期学习、适应和记忆的最新合作方向。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-08-21"
+featuredTags: ["Google DeepMind","Research","Agent"]
 tags:
   - "定价"
   - "观察池"

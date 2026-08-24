@@ -53,17 +53,12 @@ tags:
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-**[The Lyceum: AI Daily — Aug 23, 2026](https://www.lyceumnews.com/the-lyceum-ai-daily-aug-23-2026/)**。可信二手日报提到 DeepSeek 周末 API 低谷价格变化，官方原始公告尚待定位。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[From Atari to EVE Online: Building on 15 Years of AI Research in Games](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)**。DeepMind 介绍以游戏环境研究长期学习、适应和记忆的最新合作方向。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-24_ai-industry)
 
 ## AaaS（Agent-as-a-Service）行业动态日报
 
-**[Introducing Grok Bot](https://x.ai/news/introducing-grok-bot)**。官方发布具有云端独立电脑、持续执行和多 Bot 并发的 Grok Bot；作为较旧背景保留。 托管 Agent、远程异步执行平台及其商业化与生态动态。
-
-<figure class="source-image">
-  <a href="https://x.ai/news/introducing-grok-bot"><img src="https://x.ai/images/news/introducing-grok-bot-og-2.png" alt="xAI Grok Bot 托管云端智能体产品发布图" loading="lazy" /></a>
-  <figcaption><a href="https://x.ai/news/introducing-grok-bot">图片来源：xAI 官方发布</a></figcaption>
-</figure>
+**[Claude Code v2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241)**。官方仅披露 bug fixes and reliability improvements，未列可安全扩写的具体托管能力。 托管 Agent、远程异步执行平台及其商业化与生态动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-24_aaas)

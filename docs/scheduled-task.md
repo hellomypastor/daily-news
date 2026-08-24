@@ -24,6 +24,8 @@ Use one local-project task to refresh five topics every three hours, accumulate 
 
 每轮必须显式检查 xAI/Grok 与 Cognition Devin，不得只依赖顺带发现：04 行业主题检查 Grok 模型、API、DeepSearch、语音、编码、工具调用和 Agent 官方动态；05 AaaS 主题检查 Devin 的托管异步执行、环境、并发、定价、企业接入与集成，同时检查 Grok 是否出现符合 AaaS 定义的托管 Agent、异步任务、工具或远程执行能力。普通 Grok 模型/API 更新只进入行业主题，不得误写成 AaaS。两项检查均写入对应 `scan.checkedSources`；无动态时不硬凑条目。
 
+禁止为了证明“已检查”而跨日重复同一条较旧背景来源；没有新增时只在 `scan.checkedSources` 和采集状态中写明“无新增”。较旧背景、观察池、日期未确认、未证实传闻和邻近信号不得配置为页面 `image.sourceUrl`，也不得成为 Today 首页精选；没有合格配图时宁可纯文字展示。
+
 如果当天目录已存在，先完整读取五份已有 JSON，再做当天累积更新：
 - 每轮仍重新扫描运行时刻向前 24 小时，而不是只扫描最近 3 小时；这个窗口只用于发现新候选，不用于删除当天已经收录的内容。
 - 无条件保留当天五份 JSON 中已有的 sources；加入本轮新核实条目，按规范化 URL 和同一事件去重。即使已有条目随后滑出本轮 24 小时采集窗口，也要保留到当天结束。

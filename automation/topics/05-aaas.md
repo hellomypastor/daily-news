@@ -17,6 +17,8 @@ Cognition Devin and xAI/Grok are mandatory checks on every run. For Devin, inspe
 
 Use a primary 24h window and include all relevant 24–72h items in a watchlist. Keep older or undated candidates in `日期未确认` or `观察池`. Product names are search terms until confirmed. One-source leaks/rumors may appear only in `未证实传闻`, labeled with source count and never presented as product launches.
 
+Do not repeat the same older/background source on consecutive dates merely to prove that a mandatory vendor was checked. Keep the check in `scan.checkedSources` and say “无新增” in the scan summary instead. An older source may reappear only when a substantive new event changes its interpretation, and it must never be selected as the page image or homepage feature.
+
 Relevant links from Claude, OpenAI, open-source or industry pages may be repeated; add `详见对应专题页` and explain the AaaS implication.
 
 The Markdown page contains: top items; remote/cloud Agent execution; overseas vendors; China with ByteDance highlighted; AaaS vs MaaS/PaaS notes; `日期未确认`; `未证实传闻`; `邻近信号观察池`; trends; source links; and `采集状态`. If verified 24h developments are empty, say so but still list relevant candidates and complete a second search pass. End with `今日扫描完成，共 N 条动态，重点：...`.
