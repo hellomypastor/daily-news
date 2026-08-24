@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T07:06:00+08:00"
+updatedAt: "2026-08-24T10:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Introducing Grok Bot"
 featuredUrl: "https://x.ai/news/introducing-grok-bot"
@@ -34,7 +34,7 @@ tags:
 
 ## 扫描结论
 
-主发现窗口：2026-08-23 07:06 至 2026-08-24 07:06（Asia/Shanghai）；24–72 小时观察窗口：2026-08-21 07:06 至 2026-08-23 07:06。主窗口内没有可核验的新 AaaS 服务发布。补充核验到 xAI 8 月 21 日官方公告：Grok Bot 已纳入 SuperGrok Plus、Cursor Pro+、Cursor Ultra 与 Cursor Teams 等计划，并明确支持云电脑、并行 Bot、跨应用持续执行及企业候补名单；因官方仅给日期无时分，列入日期未确认，而不写成过去 24 小时事实。Anthropic 发布 Claude Code 2.1.241 与 Agent SDK 0.3.241，但只披露可靠性改进和版本同步；Gemini CLI nightly 只有比较链接；GitHub Copilot CLI 预发布增加 Grok 4.6 的 xhigh reasoning 支持和本地插件加载改进，这些均按执行器邻近信号处理，不扩大成托管服务变化。Cognition Devin 与 xAI/Grok 已完成强制检查；Devin 未发现主窗口内新的托管异步执行、环境、并发、定价、企业接入或集成发布，Grok 则补充确认上述日期未确认的商业化信号。Claude 条目详见 Claude 专题页，OpenAI/Codex 检查详见 OpenAI 专题页。
+主发现窗口：2026-08-23 10:02 至 2026-08-24 10:02（Asia/Shanghai）；24–72 小时观察窗口：2026-08-21 10:02 至 2026-08-23 10:02。主窗口内没有可核验的新 AaaS 服务发布。补充核验到 xAI 8 月 21 日官方公告：Grok Bot 已纳入 SuperGrok Plus、Cursor Pro+、Cursor Ultra 与 Cursor Teams 等计划，并明确支持云电脑、并行 Bot、跨应用持续执行及企业候补名单；因官方仅给日期无时分，列入日期未确认，而不写成过去 24 小时事实。Anthropic 发布 Claude Code 2.1.241 与 Agent SDK 0.3.241，但只披露可靠性改进和版本同步；Gemini CLI 8 月 24 日 nightly 仅变更版本元数据；GitHub Copilot CLI 预发布增加 Grok 4.6 的 xhigh reasoning 支持和本地插件加载改进，这些均按执行器邻近信号处理，不扩大成托管服务变化。Cognition Devin 与 xAI/Grok 已完成强制检查；Devin 未发现主窗口内新的托管异步执行、环境、并发、定价、企业接入或集成发布，Grok 则补充确认上述日期未确认的商业化信号。Claude 条目详见 Claude 专题页，OpenAI/Codex 检查详见 OpenAI 专题页。
 
 ## 今日重点
 
@@ -47,6 +47,7 @@ tags:
 
 - [Claude Code 2.1.241](https://github.com/anthropics/claude-code/releases/tag/v2.1.241)和[Claude Agent SDK 0.3.241](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.241)在主窗口内同步发布；官方分别只说明可靠性改进与版本对齐，因此不推断新的云会话、并发或后台任务能力。详见 Claude 专题页。
 - [Gemini CLI nightly 20260823](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260823.g5411f113c)于 09:15 +08:00 发布，release 仅给出与前一 nightly 的比较链接；无法从版本号确认 Vertex Agent Engine 或 Jules 服务端变化。
+- [Gemini CLI nightly 20260824](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260824.g5411f113c)于 08:59 +08:00 发布；官方比较结果只含发布版本号与包元数据变更，未出现可归因于 Vertex Agent Engine、Jules 或其他托管控制面的功能变化。
 
 ## 海外厂商
 
@@ -84,7 +85,7 @@ Claude Code/Agent SDK 的可靠性版本与 Gemini、Copilot CLI 属于 Agent ha
 
 ## 邻近信号观察池
 
-- Gemini CLI nightly 只有版本比较链接，不能推断 Google 托管 Agent 服务端更新。
+- Gemini CLI 8 月 23 日 nightly 只有版本比较链接；8 月 24 日 nightly 的比较结果仅含版本元数据变更，均不能推断 Google 托管 Agent 服务端更新。
 - GitHub Copilot CLI 对 Grok 4.6 reasoning effort 和本地目录插件的支持改善本地 harness，但不是托管 Agent 发布。
 - OpenAI/Codex 官方入口已检查，未检出主窗口内可安全归因的新远程/云 Agent 发布；详见 OpenAI 专题页。
 
@@ -100,8 +101,8 @@ Claude Code/Agent SDK 的可靠性版本与 Gemini、Copilot CLI 属于 Agent ha
 
 - 已检查：Anthropic、OpenAI、Google、Microsoft/GitHub、AWS、Cloudflare、Cursor、Replit、CrewAI、LangGraph、Lindy、Factory、Sourcegraph/Amp；强制核查 Cognition Devin 的异步执行、环境、并发、定价、企业接入和集成；强制核查 xAI/Grok 的托管 Agent、异步任务、工具和远程执行；另查字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek，并做中英文网页与 GitHub release API 交叉检索。
 - 失败来源：X/社交入口需登录；部分官网依赖客户端渲染；Devin 与 Qoder 页面无精确时分；Claude 与 Gemini release 说明过短，未扩写未知细节。
-- 候选数量：43。
-- 最终保留：8 个独立来源 URL。
+- 候选数量：44。
+- 最终保留：9 个独立来源 URL。
 - 二次补搜：否；最终来源不为 0。
 
-今日扫描完成，共 8 条动态，重点：主窗口无可精确归入的新 AaaS 服务发布；新增确认 Grok Bot 的计划覆盖与企业候补商业化信号，因仅有日期而列入日期未确认；Devin 强制检查无新增。
+今日扫描完成，共 9 条动态，重点：主窗口无可精确归入的新 AaaS 服务发布；新增确认 Grok Bot 的计划覆盖与企业候补商业化信号，因仅有日期而列入日期未确认；Devin 强制检查无新增。

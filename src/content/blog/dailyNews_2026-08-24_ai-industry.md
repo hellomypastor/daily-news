@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T04:06:57+08:00"
+updatedAt: "2026-08-24T10:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "The Lyceum: AI Daily — Aug 23, 2026"
 featuredUrl: "https://www.lyceumnews.com/the-lyceum-ai-daily-aug-23-2026/"
@@ -17,12 +17,14 @@ tags:
   - "AI"
   - "ARC-AGI-3"
   - "DeepSeek"
+  - "Doubao"
   - "Google DeepMind"
   - "Grok"
   - "Industry"
   - "NVIDIA"
   - "OpenShell"
   - "Podcast"
+  - "Qwen"
   - "Research"
   - "Simulation"
   - "xAI"
@@ -30,7 +32,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-23 04:07 至 2026-08-24 04:07（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；以下继续保留当日可信二手信号，并补入三条 8 月 21 日可核验技术内容。
+采集窗口：**2026-08-23 10:02 至 2026-08-24 10:02（Asia/Shanghai）**。本轮没有在可公开核验的厂商原始发布页中发现明确落入 24 小时窗口的新产品或模型发布；除继续保留 DeepSeek 价格信号外，新增一份 8 月 23 日可信二手周报，其中两项中文厂商动态因缺少可访问官方原文而分别进入日期未确认与观察池。
 
 ## 优先动态（过去 24 小时）
 
@@ -66,18 +68,20 @@ Anthropic 与 OpenAI 官方入口已检查，本窗口未发现需要在行业�
 ## 日期未确认
 
 - DeepSeek 周末低谷价格目前只有可信二手汇总可访问，尚未定位到可公开打开的官方价格公告；因此发布时间与生效范围仍待核。
+- **可信二手、厂商原文未定位**：新浪财经 8 月 23 日转载的[界面新闻 AI 应用周度观察](https://finance.sina.com.cn/stock/t/2026-08-23/doc-inipichq2453300.shtml)称，通义 App 于 8 月 22 日更名为“千问”并升级至 5.0.0。可访问页面能确认二手报道时间，但本轮未找到阿里官方公告或可核验的应用商店版本记录，因此不作为官方确认发布。
 
 ## 观察池
 
+- **前瞻说法、尚未发生**：同一份界面新闻周报称豆包“最快将于下周”发布独立办公 App；这是二手前瞻信息，产品是否发布、名称与时间均待字节跳动官方确认。
 - **较旧官方背景**：Grok Build 已覆盖网页与移动端，并允许生成应用调用 Grok 的聊天、图片和语音能力；本轮仅用于判断 xAI 产品线是否继续演进，不代表 24 小时内发布。
 - **检索摘要候选，未收录为来源**：搜索结果出现视觉模型、融资与收购类说法，但缺少可直接核对的厂商原始发布，继续观察。
 
 ## 一句话总结
 
-过去 24 小时仍以待官方确认的 DeepSeek 价格信号为主；近三日补入 NVIDIA 长时 Agent 架构与安全分层，以及仿真 Agent 播客。
+过去 24 小时仍以待官方确认的厂商信号为主；新增中文厂商二手观察，同时保留近三日 NVIDIA 长时 Agent 架构、安全分层与仿真 Agent 播客。
 
 ## 采集状态
 
-- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、API 文档/changelog 与 xai-org 仓库；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客。
-- 失败来源：X 时间线未登录无法稳定读取；部分脚本渲染列表页缺少精确时间；部分中文厂商仅有搜索索引摘要，未将摘要当作已确认发布。
-- 初始候选：7 条；保留：6 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。
+- 已检查来源：Anthropic News/Research/Docs；OpenAI News/Research/Developer changelog；Google DeepMind；Meta AI；Microsoft Research/AI；xAI News、API 文档/changelog 与 xai-org 仓库；Mistral、Cohere、Qwen/阿里云、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax；NVIDIA Developer/Research、Hugging Face、LangChain、LlamaIndex；Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客；新浪财经转载的界面新闻 AI 应用周度观察。
+- 失败来源：X 时间线未登录无法稳定读取；部分脚本渲染列表页缺少精确时间；部分中文厂商仅有搜索索引摘要；界面新闻原转载入口无法打开，因此相关说法未作为官方确认发布。
+- 初始候选：9 条；保留：7 条来源（含日期未确认与观察背景）；二次补搜：否（最终来源不为 0）。

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T04:02:00+08:00"
+updatedAt: "2026-08-24T10:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7"
@@ -20,6 +20,7 @@ tags:
   - "Community"
   - "Hate"
   - "OpenAI"
+  - "Pre-release"
   - "Release"
   - "Remote"
   - "Usage"
@@ -28,13 +29,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-23 04:02 至 2026-08-24 04:02（Asia/Shanghai）**。窗口内可明确核验的官方产品动态只有 Codex CLI 0.150.0-alpha.7 预发布构建，发布页没有变更说明；ChatGPT、API 与 Agent 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
+采集窗口为 **2026-08-23 10:02 至 2026-08-24 10:02（Asia/Shanghai）**。窗口内新增可明确核验的 Codex CLI 发布为 0.149.0-alpha.4.3 预发布构建和稳定版 0.149.1；前者只有版本标识，后者仅给出完整比较链接，因此不推断具体功能变化。当天较早已收录的 0.150.0-alpha.7 预发布构建继续保留。ChatGPT、API 与 Agent SDK 产品线未发现新的官方发布。社区侧一条二手帖转述 Codex 负责人对额度异常原因和重置安排的说明，但原始 X 帖在未登录环境下无法完整核验，因此仅列入观察池。ChatGPT 与 Codex 用户继续报告响应变快但质量下降、长任务耗时、额度消耗，以及 Remote 与会话加载异常等相互矛盾的体验；OpenAI 状态页没有对应的新事件。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.150.0-alpha.7 预发布构建**；仅确认构建发布，不推断功能变化 | [官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7) |
+| Codex CLI | **新增稳定版 0.149.1 与 0.149.0-alpha.4.3 预发布构建**；两页均未列出具体改动。当天累计另保留 0.150.0-alpha.7 预发布构建 | [0.149.1](https://github.com/openai/codex/releases/tag/rust-v0.149.1)、[0.149.0-alpha.4.3](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.3)、[0.150.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7) |
 | VS Code / JetBrains 集成 | 无新增 | 已检查官方 Codex 仓库与文档 |
 | Codex cloud / remote tasks / PR agents | 无可确认的官方新增；额度、长任务及 Remote 连接体验见观察池和 Hate | 官方入口、状态页与社区抽样 |
 | ChatGPT agentic mode / Work | 无可确认的官方新增 | ChatGPT Release Notes |
@@ -66,6 +67,14 @@ tags:
 Enterprise、Business、Edu、Gov、Science、安全与行业方案在窗口内未发现经核验的新公告。OpenAI 新闻与研究索引最新可见文章均早于本窗口，本页不把旧闻包装成当日更新。
 
 ## 官方更新（新到旧）
+
+### Codex CLI 0.149.1
+
+GitHub 官方发布页显示稳定版 0.149.1 于 **2026-08-24 08:28 +08:00** 发布。页面没有逐项 release notes，只提供从 0.149.0 到 0.149.1 的完整比较入口；本页仅确认版本发布，不推断修复内容。[查看官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.149.1)
+
+### Codex CLI 0.149.0-alpha.4.3
+
+GitHub 官方发布页显示该预发布构建于 **2026-08-24 07:29 +08:00** 发布，正文只有版本标识，没有变更清单。[查看官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.3)
 
 ### Codex CLI 0.150.0-alpha.7
 
@@ -103,15 +112,17 @@ GitHub 官方发布页显示该预发布构建于 **2026-08-23 05:26 +08:00** �
 
 ## 来源链接
 
-1. [Codex CLI 0.150.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7)
-2. [ChatGPT 响应与质量变化讨论](https://www.reddit.com/r/ChatGPT/comments/1vwal4a/chatgpt_has_been_acting_strangely_lately/)
-3. [ChatGPT / Codex 长任务耗时讨论](https://www.reddit.com/r/ChatGPT/comments/1vw9ozm/whats_the_longest_youve_ever_had_chatgptworking/)
-4. [Codex 额度说明的二手转述](https://www.reddit.com/r/ChatGPT/comments/1vw84wh/its_usage_blitz_sunday/)
-5. [Codex Remote 与会话加载投诉](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
+1. [Codex CLI 0.149.1](https://github.com/openai/codex/releases/tag/rust-v0.149.1)
+2. [Codex CLI 0.149.0-alpha.4.3](https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.3)
+3. [Codex CLI 0.150.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7)
+4. [ChatGPT 响应与质量变化讨论](https://www.reddit.com/r/ChatGPT/comments/1vwal4a/chatgpt_has_been_acting_strangely_lately/)
+5. [ChatGPT / Codex 长任务耗时讨论](https://www.reddit.com/r/ChatGPT/comments/1vw9ozm/whats_the_longest_youve_ever_had_chatgptworking/)
+6. [Codex 额度说明的二手转述](https://www.reddit.com/r/ChatGPT/comments/1vw84wh/its_usage_blitz_sunday/)
+7. [Codex Remote 与会话加载投诉](https://www.reddit.com/r/codex/comments/1vuaj9v/im_absolutely_speechless/)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research、Help Center、开发者文档与 changelog、OpenAI Status、Codex 与 Agents SDK GitHub Releases、Reddit 五个相关社区、Hacker News、公开中英文网页与 YouTube 搜索。
 - 失败来源：X（未登录无法稳定核验原帖全文与精确时间）；Reddit JSON（403，改用公开搜索索引）；YouTube（未发现可交叉核验的窗口内新增）。
-- 初始候选：15；最终保留来源：5。
+- 初始候选：19；最终保留来源：7。
 - 二次补搜：否（最终来源不为 0）。

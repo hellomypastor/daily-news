@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-24T00:00:00+08:00"
-updatedAt: "2026-08-24T07:01:00+08:00"
+updatedAt: "2026-08-24T10:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Apache Maka"
 featuredUrl: "https://github.com/apache/maka"
@@ -15,8 +15,10 @@ tags:
   - "日期未确认"
   - "Agent"
   - "AI"
+  - "AI-assisted Programming"
   - "Coding Agent"
   - "Configuration"
+  - "Debugging"
   - "Developer Tools"
   - "Evaluation"
   - "Harness"
@@ -28,28 +30,33 @@ tags:
   - "Model Routing"
   - "Open Source"
   - "Paper"
+  - "Release"
   - "Skills"
   - "Technical Blog"
   - "Tool Use"
   - "Training"
   - "Trending"
+  - "Verification"
   - "VLM"
 ---
 
 ## 今日概览
 
-采集窗口：2026-08-22 07:01 至 2026-08-24 07:01（Asia/Shanghai）。本轮最清晰的信号来自 GitHub 当日榜单：本地优先、可审计执行日志和编码 Agent 仍在持续吸引开发者；HN front 新出现的 harness 解释文章形成了初步讨论，但互动量仍不宜当作成熟度证明。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 新发现一篇关于药物预测基准切分与噪声地板的技术复盘，但因页面只有日期、没有精确时刻，按日期未确认保留。
+采集窗口：2026-08-22 10:02 至 2026-08-24 10:02（Asia/Shanghai）。本轮新增的明确技术信号来自 LLM 0.33：工具日志、可组合模板、reasoning summary 与依赖升级集中改善了命令行模型工具链；同时，编码 Agent 的验证方法和真实内核调试案例提供了两个边界互补的工程观察。GitHub 当日榜单继续显示本地优先、可审计执行日志和编码 Agent 的关注度，但榜单热度不代表项目今天发布或已经成熟。周末 arXiv 没有新的工作日批次，研究条目因此按原始提交日期列入补充。Hugging Face Community 的药物预测基准复盘仍因缺少精确时刻按日期未确认保留。
 
 ## 已验证技术亮点
 
-1. **Writing Eval：面向 AI 文稿的确定性风格检查**（状态：原始仓库可访问；HN 提交于 2026-08-23 22:31 +08:00）  
+1. **LLM 0.33：命令行模型工具链补齐日志、模板和推理摘要能力**（状态：官方 Release；发布于 2026-08-23 01:01 +08:00）
+   新版升级 OpenAI Python 库 3.x 并迁移到 httpx2，新增服务端工具调用日志、重复 `-t/--template` 组合模板、Responses API `reasoning_summary`，同时保留 provider metadata 的 reasoning stream 事件。来源：[官方 Release](https://github.com/simonw/llm/releases/tag/0.33)。
+
+2. **Writing Eval：面向 AI 文稿的确定性风格检查**（状态：原始仓库可访问；HN 提交于 2026-08-23 22:31 +08:00）
    它把可配置规则与 profile 应用于本地文本，输出 Markdown/JSON 审计结果；价值在于把主观的“像不像 AI 文”拆为可在 CI 中复现的检查。来源：[项目仓库](https://github.com/majesticlabs-dev/writing-eval)。
 
-2. **Ducklab：由测试门禁约束的多模型开发 harness**（状态：原始仓库可访问；HN 提交于 2026-08-23 22:55 +08:00）  
+3. **Ducklab：由测试门禁约束的多模型开发 harness**（状态：原始仓库可访问；HN 提交于 2026-08-23 22:55 +08:00）
    项目串联 requirements、spec、plan、build、review 与 release，并提供 MCP 入口；其技术看点是强调真实验证门禁，而不是只展示生成结果。来源：[项目仓库](https://github.com/jrullan/ducklab)。
 
-3. **Enozunu：Agent 配置物化工具**（状态：原始仓库可访问；HN 提交于 2026-08-23 19:48 +08:00）  
-   目标是用声明式配置生成可复现的 Agent 环境，回应多工具、多机器之间配置漂移问题；当前 HN 互动仍低，适合试用而非据此判断采用度。来源：[项目仓库](https://github.com/tooppoo/enozunu)。\n\n4. **What Is a Harness?：面向非专业读者拆解 Agent harness**（状态：原文日期核验为 2026-08-20；HN 于 2026-08-23 22:24 +08:00 再次提交）  \n   文章把 harness 分为 system prompt、工具、agentic loop 与模型翻译层，并讨论本地所有权和模型可替换性；它适合作为概念导读，不是性能基准。来源：[原文](https://earendil.com/posts/what-is-a-harness/)。\n\n## GitHub Trending
+4. **Enozunu：Agent 配置物化工具**（状态：原始仓库可访问；HN 提交于 2026-08-23 19:48 +08:00）
+   目标是用声明式配置生成可复现的 Agent 环境，回应多工具、多机器之间配置漂移问题；当前 HN 互动仍低，适合试用而非据此判断采用度。来源：[项目仓库](https://github.com/tooppoo/enozunu)。\n\n5. **What Is a Harness?：面向非专业读者拆解 Agent harness**（状态：原文日期核验为 2026-08-20；HN 于 2026-08-23 22:24 +08:00 再次提交）  \n   文章把 harness 分为 system prompt、工具、agentic loop 与模型翻译层，并讨论本地所有权和模型可替换性；它适合作为概念导读，不是性能基准。来源：[原文](https://earendil.com/posts/what-is-a-harness/)。\n\n## GitHub Trending
 
 > 下列数字是 2026-08-24 01:03 +08:00 抓取的 GitHub daily Trending 页面快照，只说明当前热度，不代表项目今天发布。
 
@@ -86,14 +93,16 @@ tags:
 
 ## 观察池
 
+- [More than just code review](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/)（状态：原文发表于 2026-08-22 23:56 +08:00）：Simon Willison 主张，生产性使用编码 Agent 的关键不只是逐行审查，而是能明确下达变更并用测试、静态分析、可视检查等方式验证结果；这是工程方法论，不是对具体 Agent 的质量评测。
+- [drm/xe: Don't hand out the flat CCS storage as usable VRAM](https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c)（状态：Linux 官方提交，作者时间 2026-08-21 11:12 +08:00，超出 48 小时亮点窗口）：Linus Torvalds 记录 AI 协助增加调试代码和分析结果，最终定位一行取整方向错误；案例同时显示模型曾多次建议放弃，适合作为“AI 辅助调试仍需人类持续推进”的邻近信号。
 - [VLM Run Gateway](https://huggingface.co/blog/vlm-run/vlm-run-gateway)（状态：Hugging Face Community 页面显示约 1 天前，但未取得精确发布时间）：为 GLM-OCR、DeepSeek-OCR-2、dots.mocr 提供 OpenAI-compatible API，方向有用，待下一轮核对精确日期和代码成熟度。\n- [Fable & The End of the Free Lunch](https://www.dbreunig.com/2026/08/23/fable-the-end-of-moore-s-law.html)（状态：原文日期核验为 2026-08-23 11:35 -07:00；[Simon Willison 转引](https://simonwillison.net/2026/Aug/23/drew-breunig/)发表于 2026-08-24 03:55 +08:00）：作者主张昂贵旗舰模型会推动编码工作按难度路由，并让 harness 与上下文工程更重要；这是工程观点而非独立成本/质量评测，故列观察池。\n- 上述三篇 arXiv 论文均已超过严格 48 小时窗口，且 arXiv 周末无新批次；保留作研究补充，不列为今日新稿。
 
 ## 来源链接
 
-正文已直接链接所有 20 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
+正文已直接链接所有 23 个收录 URL；同页 URL 按规范化地址去重。GitHub 星数与日增量仅取自本轮 daily Trending 页面快照。
 
 ## 采集状态
 
 - 已检查：GitHub daily Trending（overall、Python、TypeScript）及仓库 API；HN front/newest 与 Algolia；arXiv cs.AI；Hugging Face Papers/Blog/Community；Simon Willison。
 - 失败/限制：arXiv 周末没有 48 小时内新批次，最新可核验提交为 2026-08-20 UTC；Hugging Face Community 部分文章只显示日期、不显示精确时间；部分 HN 新提交互动量很低。
-- 初始候选：35；最终保留来源：20；二次补搜：否（最终来源非 0）。
+- 初始候选：41；最终保留来源：23；二次补搜：否（最终来源非 0）。
