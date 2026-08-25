@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T16:03:58+08:00"
+updatedAt: "2026-08-25T19:00:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTags: []
 tags:
@@ -26,12 +26,13 @@ tags:
   - "OpenCode"
   - "Pi Coding Agent"
   - "Remote Access"
+  - "Scheduled Tasks"
   - "Self-hosted"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-24 16:03 至 2026-08-25 16:03（Asia/Shanghai）**，并回看 24–72 小时观察窗（最早至 2026-08-22 16:03）。本轮没有发现能由官方原文确认、且发布时间落在主窗口内的 AaaS 新发布。新增发现腾讯云 WorkBuddy Managed Agents 官方产品页，但页面没有可核实发布日期，故仅列入日期未确认，不写成今日发布。Devin 与 Grok 已显式检查；七个 coding harness 也逐项检查。上轮截止后发布的 OpenCode v1.18.23 仅修复模型网关路由与会话头；本地运行、远程访问插件或社区自行部署仍不等同于服务商托管执行生命周期。
+采集窗口为 **2026-08-24 19:00 至 2026-08-25 19:00（Asia/Shanghai）**，并回看 24–72 小时观察窗（最早至 2026-08-22 19:00）。本轮没有发现能由官方原文确认、且发布时间落在主窗口内的 AaaS 新发布。新增发现腾讯云 WorkBuddy Managed Agents 官方产品页，但页面没有可核实发布日期，故仅列入日期未确认，不写成今日发布。Devin 与 Grok 已显式检查；七个 coding harness 也逐项检查。Cline Desktop v0.0.17 在上轮截止后发布，加入计划任务模板和计划会话标识，但其执行仍在本地桌面，故仅作为邻近信号；本地运行、远程访问插件或社区自行部署仍不等同于服务商托管执行生命周期。
 
 ## 重点动态
 
@@ -73,6 +74,7 @@ tags:
 
 ## 邻近信号观察池
 
+- **Cline Desktop v0.0.17（主窗口）：** 官方 release 增加计划任务模板，并在侧栏标记计划会话；这些能力由本地 Desktop 调度，未见云端环境、托管并发、企业控制面或服务定价证据，因此不作为 AaaS 发布：[官方 release](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)。
 - **Cline SDK v0.0.79（主窗口）：** 官方 release 为本地 Hub 的 durable event log 增加 64 MiB 上限并修复任务完成遥测。它显示 harness 正在完善长任务事件与观测可靠性，但没有远程环境、托管并发、企业控制面或服务定价证据，因此不作为 AaaS 发布：[官方 release](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)。
 - **Cline CLI v3.0.58（主窗口）：** 本地 Hub 事件日志和模型目录更新，没有供应商托管 Agent 生命周期证据：[官方 release](https://github.com/cline/cline/releases/tag/cli-v3.0.58)。\n- **Pi Coding Agent v0.84.3（主窗口）：** 本地 PowerShell、安装更新与会话控制不构成云端托管执行：[官方 release](https://github.com/earendil-works/pi/releases/tag/v0.84.3)。\n- **OpenCode v1.18.23（主窗口）：** 官方 release 修复经 Cloudflare AI Gateway 路由第三方及 Anthropic 模型，并修复 session-aware provider 的父会话请求头。这是模型网关与本地 harness 集成维护，没有云端 Agent 环境、异步生命周期、托管并发或企业控制面证据，因此不作为 AaaS 发布：[官方 release](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)。
 - **手机隧道访问本机 DSH（24–72 小时观察项）：** 社区插件借助 Cloudflare tunnel 从手机连接仍运行在用户电脑上的 DSH。它提供远程访问，但执行环境和生命周期仍由用户自管，不属于 AaaS：[社区原帖](https://www.reddit.com/r/DeepSeek/comments/1vw9rel/made_deepseek_harness_tunnel_to_your_phone_using/)。
@@ -88,14 +90,17 @@ tags:
 3. [DSH 封闭测试社区说法](https://www.reddit.com/r/DeepSeek/comments/1vwq1n4/i_attend_dsh_closed_beta_testshare_my_experience/)
 4. [DSH on Cloudflare 社区实验](https://www.reddit.com/r/CloudFlare/comments/1vw3xv5/built_a_full_ai_agent_runtime_on_workers_durable/)
 5. [手机隧道访问本机 DSH](https://www.reddit.com/r/DeepSeek/comments/1vw9rel/made_deepseek_harness_tunnel_to_your_phone_using/)
-6. [Cline SDK v0.0.79（官方）](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)\n7. [Cline CLI v3.0.58（官方）](https://github.com/cline/cline/releases/tag/cli-v3.0.58)\n8. [Pi Coding Agent v0.84.3（官方）](https://github.com/earendil-works/pi/releases/tag/v0.84.3)
-9. [OpenCode v1.18.23（官方）](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)
+6. [Cline Desktop v0.0.17（官方）](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)
+7. [Cline SDK v0.0.79（官方）](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)
+8. [Cline CLI v3.0.58（官方）](https://github.com/cline/cline/releases/tag/cli-v3.0.58)
+9. [Pi Coding Agent v0.84.3（官方）](https://github.com/earendil-works/pi/releases/tag/v0.84.3)
+10. [OpenCode v1.18.23（官方）](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)
 
 ## 采集状态
 
 - 已检查：Devin、Grok，以及 Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog/docs；同时覆盖海外云与 Agent 厂商、中国主要厂商和社区备用入口。
 - 失败来源：部分 GitHub 动态页缺少精确时间，部分中国厂商更新页无稳定时间索引；均已换用官方产品页、仓库与中英文补搜，社区说法降级标注。
-- 初始候选：13 条；最终保留：9 条来源（日期未确认/官方背景 2、未证实传闻 2、邻近信号 5）。
+- 初始候选：14 条；最终保留：10 条来源（日期未确认/官方背景 2、未证实传闻 2、邻近信号 6）。
 - 二次补搜：是。主窗口内已验证动态仍为 0，因此扩大中英文关键词并切换官方备用入口、GitHub 与可信二手/社区来源。
 
-今日扫描完成，共 9 条动态，重点：主窗口无已验证 AaaS 发布；腾讯云 WorkBuddy Managed Agents 已由官方产品页确认能力边界但发布日期未确认；Cline、Pi 与 OpenCode 的官方 release 均属本地 harness / MaaS 邻近信号，DSH 社区实验仍需官方或独立证据。
+今日扫描完成，共 10 条动态，重点：主窗口无已验证 AaaS 发布；腾讯云 WorkBuddy Managed Agents 已由官方产品页确认能力边界但发布日期未确认；Cline、Pi 与 OpenCode 的官方 release 均属本地 harness / MaaS 邻近信号，DSH 社区实验仍需官方或独立证据。
