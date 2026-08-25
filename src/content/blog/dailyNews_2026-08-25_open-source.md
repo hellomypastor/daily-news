@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T10:01:22+08:00"
+updatedAt: "2026-08-25T13:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "OpenCode v1.18.22"
 featuredUrl: "https://github.com/anomalyco/opencode/releases/tag/v1.18.22"
@@ -23,6 +23,7 @@ tags:
   - "Cline"
   - "Coding Agent"
   - "Compaction"
+  - "Context"
   - "DeepSeek Harness"
   - "Evaluation"
   - "Hacker News"
@@ -34,8 +35,10 @@ tags:
   - "OpenCode"
   - "Optimization"
   - "Permissions"
+  - "Persistent Agent"
   - "Pi"
   - "Provider"
+  - "Sandbox"
   - "SDK"
   - "Security"
   - "Skills"
@@ -47,12 +50,13 @@ tags:
 
 ## 今日概览
 
-本轮核验窗口为 **2026-08-23 10:01 至 2026-08-25 10:01（Asia/Shanghai，近 48 小时）**。累计保留此前来源，并新增 Cline CLI v3.0.58：官方发布说明确认 CLI 侧同样为 hub event log 设置 64 MiB 磁盘上限并刷新模型目录；它与 SDK v0.0.79 是不同发布面，不据此重复推断性能改善。[查看 Cline CLI v3.0.58 官方发布说明](https://github.com/cline/cline/releases/tag/cli-v3.0.58)。本轮还发现 Poka-Yoke Claude Code 技能及其作者自报基准；因项目采用度低、基准尚缺替代方法对照，保留在观察池。安全文章提出的是威胁模型与防御建议，不代表已有真实攻击得到证实；StateM 项目本身较旧，因此只作为观察信号。
+本轮核验窗口为 **2026-08-23 13:02 至 2026-08-25 13:02（Asia/Shanghai，近 48 小时）**。累计保留此前来源；本轮新增 Laude Institute / MIT 发布的 Headlong：它以不足 10K 行 Bash 实现持续思考的 Agent microharness，并用 append-only jsonl DAG、分层上下文压缩和 Docker 默认沙箱支撑持久运行。项目明确标注为 alpha，持续运行会产生模型调用成本且能执行 shell 命令，不能把研究原型写成已验证的生产能力。[查看 Headlong 官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)。此前新增 Cline CLI v3.0.58：官方发布说明确认 CLI 侧同样为 hub event log 设置 64 MiB 磁盘上限并刷新模型目录；它与 SDK v0.0.79 是不同发布面，不据此重复推断性能改善。[查看 Cline CLI v3.0.58 官方发布说明](https://github.com/cline/cline/releases/tag/cli-v3.0.58)。本轮还发现 Poka-Yoke Claude Code 技能及其作者自报基准；因项目采用度低、基准尚缺替代方法对照，保留在观察池。安全文章提出的是威胁模型与防御建议，不代表已有真实攻击得到证实；StateM 项目本身较旧，因此只作为观察信号。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 本轮状态 | 关键变化 | 证据 |
 |---|---|---|---|
+| Headlong | 已验证，窗口内 | Laude Institute / MIT 发布持续思考的 Bash microharness；以单一思想流接收多人消息，用 jsonl DAG 保存轨迹、分层压缩上下文，并默认提供 Docker 沙箱。项目仍是 alpha，官方要求使用限额 API key。 | [官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)，2026-08-25（页面仅标日期，未标时分） |
 | Pi Coding Agent | 已验证，窗口内 | v0.84.3 增加可选原生 PowerShell 工具、`/thinking` 选择器、原子化托管更新与 `session_compact_failed` 扩展事件；同时修复压缩、技能发现、权限文件与多种 provider 兼容问题。原 `badlogic/pi-mono` 已由 GitHub 重定向到当前官方仓库。 | [官方 Release](https://github.com/earendil-works/pi/releases/tag/v0.84.3)，2026-08-24 19:09 +08:00 |
 | OpenCode | 已验证，窗口内 | v1.18.22 修复设备登录相对 URL/子路径、避免向不支持的 OpenAI 兼容提供商发送 `textVerbosity`，并更新 Bedrock 兼容性。 | [官方 Release](https://github.com/anomalyco/opencode/releases/tag/v1.18.22)，2026-08-24 22:37 +08:00 |
 | Cline | 已验证，窗口内 | v4.1.15 修复 MCP 自动批准总开关；SDK v0.0.79 与 CLI v3.0.58 均限制 durable event log 磁盘占用并刷新模型目录，SDK 版本另修复 `task.completed` 遥测遗漏。 | [v4.1.15](https://github.com/cline/cline/releases/tag/v4.1.15)，2026-08-24 03:56 +08:00；[SDK v0.0.79](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)，2026-08-25 07:01 +08:00；[CLI v3.0.58](https://github.com/cline/cline/releases/tag/cli-v3.0.58)，2026-08-25 07:07 +08:00 |
@@ -67,6 +71,10 @@ tags:
 </figure>
 
 ## 已验证精选
+
+### Headlong：让 Agent 在外部消息之间持续思考
+
+它是什么：Laude Institute 与 MIT 合作发布的开源 Agent microharness，核心不足 10K 行 Bash；消息作为 observation 进入单一 thought stream，轨迹保存为可 fork / merge 的 append-only jsonl DAG，旧上下文按指数衰减精度分层摘要，同时保留原始轨迹供回取。为何重要：它把持久 Agent、多人共享、递归语言模型、上下文压缩和沙箱放进一个可读的小型 harness，适合作为架构实验。限制：官方明确称其为 alpha，Agent 会持续调用模型并执行 shell，建议 Docker、专用限额 API key，不能据此推断生产可靠性。[官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)，页面日期为 2026-08-25。
 
 ### Cline CLI v3.0.58：限制 hub 事件日志磁盘占用\n\nCLI 发布说明称，hub event log 现在限制为 64 MiB，最旧事件优先删除并归还磁盘空间，裁剪按数据量和定时器触发；模型目录也有刷新。该版本发布于 2026-08-25 07:07 +08:00。[官方 Release](https://github.com/cline/cline/releases/tag/cli-v3.0.58)。\n\n### Cline SDK v0.0.79：限制事件日志磁盘占用并修复完成遥测
 
@@ -98,7 +106,7 @@ Boyd Kane 的 [原创安全分析](https://boydkane.com/essays/llms-could-contro
 
 ## HN 讨论
 
-HN recent submissions 新增 **Poka-Yoke**（[项目仓库](https://github.com/rainmanjam/poka-yoke)；[HN 首发](https://news.ycombinator.com/item?id=49427559)），于 2026-08-25 08:14 +08:00 提交，扫描时仅 1 point / 0 comments，因此只作发现证据。其余累计条目包括既有 **Ducklab**（[项目仓库](https://github.com/jrullan/ducklab)；[HN 讨论](https://news.ycombinator.com/item?id=49409329)）外，本轮新增两项。推理宿主安全分析的 [HN 讨论](https://news.ycombinator.com/item?id=49424387) 于 2026-08-25 03:03 +08:00 提交，扫描时为 23 points / 7 comments；互动量仅记录扫描快照。**StateM** 的 [项目仓库](https://github.com/henryqin1997/statem) 提供显式状态、转移门、持久历史和 compaction/resume runbook；仓库创建于 6 月，属于较旧项目，本轮只因 [HN 讨论](https://news.ycombinator.com/item?id=49423887) 于 02:21 +08:00 出现而进入观察池，扫描时为 10 points / 2 comments。
+HN recent submissions 新增 **Headlong**（[官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)；[HN 讨论](https://news.ycombinator.com/item?id=49428882)），于 2026-08-25 11:54 +08:00 提交，扫描时为 14 points / 6 comments；互动量只作扫描快照，不作为采用度证据。随后新增 **Poka-Yoke**（[项目仓库](https://github.com/rainmanjam/poka-yoke)；[HN 首发](https://news.ycombinator.com/item?id=49427559)），于 2026-08-25 08:14 +08:00 提交，扫描时仅 1 point / 0 comments，因此只作发现证据。其余累计条目包括既有 **Ducklab**（[项目仓库](https://github.com/jrullan/ducklab)；[HN 讨论](https://news.ycombinator.com/item?id=49409329)）外，本轮新增两项。推理宿主安全分析的 [HN 讨论](https://news.ycombinator.com/item?id=49424387) 于 2026-08-25 03:03 +08:00 提交，扫描时为 23 points / 7 comments；互动量仅记录扫描快照。**StateM** 的 [项目仓库](https://github.com/henryqin1997/statem) 提供显式状态、转移门、持久历史和 compaction/resume runbook；仓库创建于 6 月，属于较旧项目，本轮只因 [HN 讨论](https://news.ycombinator.com/item?id=49423887) 于 02:21 +08:00 出现而进入观察池，扫描时为 10 points / 2 comments。
 
 ## 论文 / 研究
 
@@ -132,10 +140,12 @@ HN recent submissions 新增 **Poka-Yoke**（[项目仓库](https://github.com/r
 10. [StateM 仓库](https://github.com/henryqin1997/statem)
 11. [StateM 的 HN 讨论](https://news.ycombinator.com/item?id=49423887)
 12. [Cline SDK v0.0.79](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)\n13. [Cline CLI v3.0.58](https://github.com/cline/cline/releases/tag/cli-v3.0.58)\n14. [Poka-Yoke 仓库](https://github.com/rainmanjam/poka-yoke)\n15. [Poka-Yoke 的 HN 首发](https://news.ycombinator.com/item?id=49427559)
+16. [Headlong 官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)
+17. [Headlong 的 HN 讨论](https://news.ycombinator.com/item?id=49428882)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库/Release/文档；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供可复核的当日排名/日增星数；Hugging Face 新社区文章只取得相对时间列表、未取得稳定永久链接。
-- 初始候选数：19。\n- 最终保留来源数：15。
+- 初始候选数：25。\n- 最终保留来源数：17。
 - 二次补搜：否（最终来源不为 0）。

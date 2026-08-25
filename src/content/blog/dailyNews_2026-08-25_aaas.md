@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T10:01:22+08:00"
+updatedAt: "2026-08-25T13:05:50+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTags: []
 tags:
@@ -10,6 +10,7 @@ tags:
   - "较旧背景"
   - "邻近信号"
   - "日期未确认"
+  - "腾讯云"
   - "未证实传闻"
   - "主窗口"
   - "AaaS"
@@ -18,6 +19,7 @@ tags:
   - "Cloud Agent"
   - "Cloudflare"
   - "DSH"
+  - "Enterprise"
   - "Harness"
   - "Managed Agent"
   - "Pi Coding Agent"
@@ -27,7 +29,7 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-24 10:01 至 2026-08-25 10:01（Asia/Shanghai）**，并回看 24–72 小时观察窗（最早至 2026-08-22 10:01）。本轮没有发现能由官方原文确认、且发布时间落在主窗口内的 AaaS 新发布。Devin 与 Grok 已显式检查；七个 coding harness 也逐项检查，但本地运行、远程访问插件或社区自行部署不等同于服务商托管执行生命周期。
+采集窗口为 **2026-08-24 13:02 至 2026-08-25 13:02（Asia/Shanghai）**，并回看 24–72 小时观察窗（最早至 2026-08-22 13:02）。本轮没有发现能由官方原文确认、且发布时间落在主窗口内的 AaaS 新发布。新增发现腾讯云 WorkBuddy Managed Agents 官方产品页，但页面没有可核实发布日期，故仅列入日期未确认，不写成今日发布。Devin 与 Grok 已显式检查；七个 coding harness 也逐项检查，但本地运行、远程访问插件或社区自行部署不等同于服务商托管执行生命周期。
 
 ## 重点动态
 
@@ -48,7 +50,8 @@ tags:
 
 - **字节跳动 Coze / 火山引擎 / 豆包 / Trae / Seed：** 中英文公开入口未发现窗口内可核实的托管 Agent 新发布。
 - **DeepSeek Harness / DSH：** 官方产品页将 DSH 定义为开发者预览的开源 Agent harness，并提供本地 Web UI、插件化 scheduling、sandbox、session 等能力；这说明其具备搭建 Agent runtime 的组件，但没有证明 DeepSeek 代用户托管执行。官方说明见 [DeepSeek Harness developer preview](https://www.deepseek.com/harness/en/)。
-- **阿里云百炼 / Qoder / 通义、腾讯、百度、智谱、Kimi 与 MiniMax：** 未发现窗口内可核实的 AaaS 新发布。
+- **腾讯云 WorkBuddy Managed Agents：** 官方产品页明确其为云端托管智能体运行服务，提供 7×24 小时云端沙箱、自动休眠与恢复、长任务调度、生命周期治理、Trace/Eval、权限及 API/SDK 企业接入；但页面未展示发布日期，详见“日期未确认”。
+- **阿里云百炼 / Qoder / 通义、百度、智谱、Kimi 与 MiniMax：** 未发现窗口内可核实的 AaaS 新发布。
 
 ## AaaS 与 MaaS / PaaS 边界
 
@@ -58,6 +61,7 @@ tags:
 
 ## 日期未确认
 
+- **腾讯云 WorkBuddy Managed Agents：** [官方产品页](https://cloud.tencent.com/product/workbuddy-managed-agents) 可确认这是由腾讯云管理运行环境与 Agent 生命周期的企业级托管平台，并披露云端沙箱、长任务、权限、观测与规模化能力；页面未提供可核实发布日期，因此不进入主窗口新闻或首页候选。
 - **DSH 官方开发者预览页：** 页面可确认产品边界，但页面未展示可核实的发布日期；因此仅作为较旧背景，不进入主窗口新闻或首页候选：[官方页面](https://www.deepseek.com/harness/en/)。
 
 ## 未证实传闻
@@ -76,17 +80,18 @@ tags:
 
 ## 来源链接
 
-1. [DeepSeek Harness developer preview（官方）](https://www.deepseek.com/harness/en/)
-2. [DSH 封闭测试社区说法](https://www.reddit.com/r/DeepSeek/comments/1vwq1n4/i_attend_dsh_closed_beta_testshare_my_experience/)
-3. [DSH on Cloudflare 社区实验](https://www.reddit.com/r/CloudFlare/comments/1vw3xv5/built_a_full_ai_agent_runtime_on_workers_durable/)
-4. [手机隧道访问本机 DSH](https://www.reddit.com/r/DeepSeek/comments/1vw9rel/made_deepseek_harness_tunnel_to_your_phone_using/)
-5. [Cline SDK v0.0.79（官方）](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)\n6. [Cline CLI v3.0.58（官方）](https://github.com/cline/cline/releases/tag/cli-v3.0.58)\n7. [Pi Coding Agent v0.84.3（官方）](https://github.com/earendil-works/pi/releases/tag/v0.84.3)
+1. [腾讯云 WorkBuddy Managed Agents（官方）](https://cloud.tencent.com/product/workbuddy-managed-agents)
+2. [DeepSeek Harness developer preview（官方）](https://www.deepseek.com/harness/en/)
+3. [DSH 封闭测试社区说法](https://www.reddit.com/r/DeepSeek/comments/1vwq1n4/i_attend_dsh_closed_beta_testshare_my_experience/)
+4. [DSH on Cloudflare 社区实验](https://www.reddit.com/r/CloudFlare/comments/1vw3xv5/built_a_full_ai_agent_runtime_on_workers_durable/)
+5. [手机隧道访问本机 DSH](https://www.reddit.com/r/DeepSeek/comments/1vw9rel/made_deepseek_harness_tunnel_to_your_phone_using/)
+6. [Cline SDK v0.0.79（官方）](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)\n7. [Cline CLI v3.0.58（官方）](https://github.com/cline/cline/releases/tag/cli-v3.0.58)\n8. [Pi Coding Agent v0.84.3（官方）](https://github.com/earendil-works/pi/releases/tag/v0.84.3)
 
 ## 采集状态
 
 - 已检查：Devin、Grok，以及 Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog/docs；同时覆盖海外云与 Agent 厂商、中国主要厂商和社区备用入口。
 - 失败来源：部分 GitHub 动态页缺少精确时间，部分中国厂商更新页无稳定时间索引；均已换用官方产品页、仓库与中英文补搜，社区说法降级标注。
-- 初始候选：11 条；最终保留：7 条来源（官方背景 1、未证实传闻 2、邻近信号 4）。
+- 初始候选：12 条；最终保留：8 条来源（日期未确认/官方背景 2、未证实传闻 2、邻近信号 4）。
 - 二次补搜：是。主窗口内已验证动态仍为 0，因此扩大中英文关键词并切换官方备用入口、GitHub 与可信二手/社区来源。
 
-今日扫描完成，共 7 条动态，重点：主窗口无已验证 AaaS 发布；Cline 与 Pi 的官方 release 均属本地 harness 邻近信号，DSH 社区实验仍需官方或独立证据。
+今日扫描完成，共 8 条动态，重点：主窗口无已验证 AaaS 发布；腾讯云 WorkBuddy Managed Agents 已由官方产品页确认能力边界但发布日期未确认；Cline 与 Pi 的官方 release 均属本地 harness 邻近信号，DSH 社区实验仍需官方或独立证据。
