@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T19:00:00+08:00"
+updatedAt: "2026-08-25T22:46:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "OpenCode v1.18.22"
 featuredUrl: "https://github.com/anomalyco/opencode/releases/tag/v1.18.22"
@@ -15,8 +15,10 @@ tags:
   - "多模态"
   - "观察池"
   - "邻近信号"
+  - "预发布"
   - "Agent"
   - "Agent Harness"
+  - "Agent Tool"
   - "AI"
   - "Authentication"
   - "Claude Code"
@@ -30,6 +32,7 @@ tags:
   - "Evaluation"
   - "Hacker News"
   - "Inference"
+  - "JavaScript"
   - "LLM"
   - "MCP"
   - "Observability"
@@ -50,12 +53,13 @@ tags:
   - "State Machine"
   - "Storage"
   - "Threat Model"
+  - "Web"
   - "Windows"
 ---
 
 ## 今日概览
 
-本轮核验窗口为 **2026-08-23 19:00 至 2026-08-25 19:00（Asia/Shanghai，近 48 小时）**。累计保留此前来源；19:00 滚动扫描新增 Cline Desktop v0.0.17：官方发布说明确认其重构 Customize 与模型连接界面、增加全历史会话搜索和日程模板，并为 hub event log 设置磁盘增长上限。[查看 Cline Desktop v0.0.17 官方发布说明](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)。本轮此前新增 Laude Institute / MIT 发布的 Headlong：它以不足 10K 行 Bash 实现持续思考的 Agent microharness，并用 append-only jsonl DAG、分层上下文压缩和 Docker 默认沙箱支撑持久运行。项目明确标注为 alpha，持续运行会产生模型调用成本且能执行 shell 命令，不能把研究原型写成已验证的生产能力。[查看 Headlong 官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)。此前新增 Cline CLI v3.0.58：官方发布说明确认 CLI 侧同样为 hub event log 设置 64 MiB 磁盘上限并刷新模型目录；它与 SDK v0.0.79 是不同发布面，不据此重复推断性能改善。[查看 Cline CLI v3.0.58 官方发布说明](https://github.com/cline/cline/releases/tag/cli-v3.0.58)。本轮还发现 Poka-Yoke Claude Code 技能及其作者自报基准；因项目采用度低、基准尚缺替代方法对照，保留在观察池。安全文章提出的是威胁模型与防御建议，不代表已有真实攻击得到证实；StateM 项目本身较旧，因此只作为观察信号。
+本轮核验窗口更新至 **2026-08-25 22:46（Asia/Shanghai）**。22:46 滚动扫描新增两个有官方发布证据的开发工具信号：Only CLI v0.5.0 新增文档检索、受限 Cookie 会话与响应体上限；SableJS v2.0.0-beta.5 是面向不可信及 AI 生成 JavaScript 的 AOT 沙箱预发布版，发布说明仅提供版本比较，因此不扩写未获支持的功能变化。强制检查的 Cline、Pi、DSH 及 OpenCode、Aider、Continue、Roo Code 在 19:00 后均无新官方发布。累计保留此前来源；19:00 滚动扫描新增 Cline Desktop v0.0.17：官方发布说明确认其重构 Customize 与模型连接界面、增加全历史会话搜索和日程模板，并为 hub event log 设置磁盘增长上限。[查看 Cline Desktop v0.0.17 官方发布说明](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)。本轮此前新增 Laude Institute / MIT 发布的 Headlong：它以不足 10K 行 Bash 实现持续思考的 Agent microharness，并用 append-only jsonl DAG、分层上下文压缩和 Docker 默认沙箱支撑持久运行。项目明确标注为 alpha，持续运行会产生模型调用成本且能执行 shell 命令，不能把研究原型写成已验证的生产能力。[查看 Headlong 官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)。此前新增 Cline CLI v3.0.58：官方发布说明确认 CLI 侧同样为 hub event log 设置 64 MiB 磁盘上限并刷新模型目录；它与 SDK v0.0.79 是不同发布面，不据此重复推断性能改善。[查看 Cline CLI v3.0.58 官方发布说明](https://github.com/cline/cline/releases/tag/cli-v3.0.58)。本轮还发现 Poka-Yoke Claude Code 技能及其作者自报基准；因项目采用度低、基准尚缺替代方法对照，保留在观察池。安全文章提出的是威胁模型与防御建议，不代表已有真实攻击得到证实；StateM 项目本身较旧，因此只作为观察信号。
 
 ## Coding Agent / Harness 雷达
 
@@ -113,13 +117,21 @@ Microsoft Agent Lightning 的 [v1.0.1 官方发布](https://github.com/microsoft
 
 Boyd Kane 的 [原创安全分析](https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines) 提出：若推理引擎存在可被输出序列触发的漏洞，恶意模型可能把 token 输出变成利用载荷。文章发布于 2026-08-24 19:55 +08:00；它是威胁推演与防御讨论，不是已证实的在野攻击。
 
+### Only CLI v0.5.0：为 Agent 提供受边界约束的网页 CLI
+
+官方发布说明称，v0.5.0 新增 11 类语言文档入口与检索，并允许通过标准输入注入限定域名、默认仅 HTTPS、默认一小时过期的 Cookie 会话；传输层把解码响应体限制为 25 MB。项目宣称的 token 节省比例未经独立验证，本文不把它写成性能事实。[官方 Release](https://github.com/only-cli/oc/releases/tag/v0.5.0)，2026-08-25 09:33 +08:00；[HN 提交](https://news.ycombinator.com/item?id=49434400)，2026-08-25 22:07 +08:00。
+
+### SableJS v2.0.0-beta.5：AI 生成 JavaScript 沙箱进入新预发布版
+
+官方仓库将其描述为运行不可信插件、规则、公式及 AI 生成 JavaScript 的 AOT 沙箱；beta.5 于窗口内发布，但 Release 仅给出版本比较链接，因此这里只确认版本与定位，不推断具体新增能力或生产稳定性。[官方 Release](https://github.com/ErosZy/sablejs/releases/tag/v2.0.0-beta.5)，2026-08-25 21:06 +08:00；[HN 提交](https://news.ycombinator.com/item?id=49433953)，2026-08-25 21:42 +08:00。
+
 ## GitHub Trending
 
 已检查 GitHub Trending 的综合、Python 与 TypeScript 入口；本轮页面未稳定返回可复核的当日排名和日增星数，因此不记录或推断 Trending 指标。上述项目入选依据均为官方发布证据，而非 Trending 排名。
 
 ## HN 讨论
 
-HN recent submissions 新增 **Headlong**（[官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)；[HN 讨论](https://news.ycombinator.com/item?id=49428882)），于 2026-08-25 11:54 +08:00 提交，扫描时为 14 points / 6 comments；互动量只作扫描快照，不作为采用度证据。随后新增 **Poka-Yoke**（[项目仓库](https://github.com/rainmanjam/poka-yoke)；[HN 首发](https://news.ycombinator.com/item?id=49427559)），于 2026-08-25 08:14 +08:00 提交，扫描时仅 1 point / 0 comments，因此只作发现证据。其余累计条目包括既有 **Ducklab**（[项目仓库](https://github.com/jrullan/ducklab)；[HN 讨论](https://news.ycombinator.com/item?id=49409329)）外，本轮新增两项。推理宿主安全分析的 [HN 讨论](https://news.ycombinator.com/item?id=49424387) 于 2026-08-25 03:03 +08:00 提交，扫描时为 23 points / 7 comments；互动量仅记录扫描快照。**StateM** 的 [项目仓库](https://github.com/henryqin1997/statem) 提供显式状态、转移门、持久历史和 compaction/resume runbook；仓库创建于 6 月，属于较旧项目，本轮只因 [HN 讨论](https://news.ycombinator.com/item?id=49423887) 于 02:21 +08:00 出现而进入观察池，扫描时为 10 points / 2 comments。
+22:46 滚动扫描另发现 Only CLI 与 SableJS 的低互动提交；版本事实以官方 Release 为准，HN 只作发现证据。累计的 HN recent submissions 新增 **Headlong**（[官方介绍](https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents)；[HN 讨论](https://news.ycombinator.com/item?id=49428882)），于 2026-08-25 11:54 +08:00 提交，扫描时为 14 points / 6 comments；互动量只作扫描快照，不作为采用度证据。随后新增 **Poka-Yoke**（[项目仓库](https://github.com/rainmanjam/poka-yoke)；[HN 首发](https://news.ycombinator.com/item?id=49427559)），于 2026-08-25 08:14 +08:00 提交，扫描时仅 1 point / 0 comments，因此只作发现证据。其余累计条目包括既有 **Ducklab**（[项目仓库](https://github.com/jrullan/ducklab)；[HN 讨论](https://news.ycombinator.com/item?id=49409329)）外，本轮新增两项。推理宿主安全分析的 [HN 讨论](https://news.ycombinator.com/item?id=49424387) 于 2026-08-25 03:03 +08:00 提交，扫描时为 23 points / 7 comments；互动量仅记录扫描快照。**StateM** 的 [项目仓库](https://github.com/henryqin1997/statem) 提供显式状态、转移门、持久历史和 compaction/resume runbook；仓库创建于 6 月，属于较旧项目，本轮只因 [HN 讨论](https://news.ycombinator.com/item?id=49423887) 于 02:21 +08:00 出现而进入观察池，扫描时为 10 points / 2 comments。
 
 ## 论文 / 研究
 
@@ -160,12 +172,12 @@ HN recent submissions 新增 **Headlong**（[官方介绍](https://www.laude.org
 18. [OpenCode v1.18.23](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)
 19. [Exo 仓库](https://github.com/exoharness/exo)
 20. [Exo 的 HN 提交](https://news.ycombinator.com/item?id=49430143)
-21. [Cline Desktop v0.0.17](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)
+21. [Cline Desktop v0.0.17](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)\n22. [Only CLI v0.5.0](https://github.com/only-cli/oc/releases/tag/v0.5.0)\n23. [Only CLI 的 HN 提交](https://news.ycombinator.com/item?id=49434400)\n24. [SableJS v2.0.0-beta.5](https://github.com/ErosZy/sablejs/releases/tag/v2.0.0-beta.5)\n25. [SableJS 的 HN 提交](https://news.ycombinator.com/item?id=49433953)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库/Release/文档；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供可复核的当日排名/日增星数；Hugging Face 新社区文章只取得相对时间列表、未取得稳定永久链接。
-- 初始候选数：36。
-- 最终保留来源数：21。
+- 初始候选数：43。
+- 最终保留来源数：25。
 - 二次补搜：否（最终来源不为 0）。

@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T19:00:00+08:00"
+updatedAt: "2026-08-25T22:45:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "v2.1.245"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.245"
@@ -17,6 +17,7 @@ tags:
   - "Claude Code"
   - "Claude Cowork"
   - "Claude.ai"
+  - "Codex"
   - "Community"
   - "Enterprise"
   - "Fable 5"
@@ -29,7 +30,7 @@ tags:
   - "Release"
 ---
 
-## 今日概览
+## 本轮滚动补充（22:45）\n\n采集窗口：**2026-08-24 22:45 至 2026-08-25 22:45（Asia/Shanghai）**。官方 Newsroom、Claude Blog、Claude Status、Claude Code GitHub releases 在 19:00 后未出现新的可核验条目。社区侧新增一条日期可确认、时分未确认的高互动对比信号：r/ClaudeCode 的 [Claude 与 Codex 选择讨论](https://www.reddit.com/r/ClaudeCode/comments/1vxffzn/respectfully_asking_why_claude_over_codex/) 在采集时约 78 票，最高可见评论约 258 票。样本同时出现偏好 Claude Fable 5、Claude 生态，以及偏好 Codex 的 computer use 与编码 Agent 等观点，说明选择因素涉及模型表现、工作流能力和生态惯性；这些均为个体观点，不作为产品能力事实。公开页面只能确认帖子日期为 8 月 24 日，无法核验具体时分，故列入“日期未确认”，并取代下文早先“未形成信息量足够的新对比”的扫描结论。\n\n## 今日概览
 
 采集窗口：**2026-08-24 19:00 至 2026-08-25 19:00（Asia/Shanghai）**。本轮新增两条日期可确认但时分未确认的社区使用信号：r/ClaudeCode 围绕 CLI 与桌面端的讨论显示，用户在终端速度、脚本化、IDE/SSH 与隔离能力，以及桌面端多会话管理、文件/图片交互和内置浏览器之间形成明确取舍；因 Reddit JSON 接口返回 403，二者均保守列入“日期未确认”，评论中的产品能力不作为官方事实。当天累计保留 Claude Code v2.1.245：官方 release 于上海时间 13:13 发布，修复采用 glibc 2.44 的 Linux 发行版启动崩溃；当天更早的 v2.1.243 继续累计保留：官方 release 于上海时间 07:40 发布，带来 loop 用量拆分、模型选择与企业定价/缓存管理、无 API key 的 Console 登录，以及 MCP、后台 subagent、Remote Control 与 VS Code 等修复。当天累计的两项已解决 Claude.ai 登录故障：官方记录上海时间 00:02–00:08 与 04:00–04:08 两个影响时段，均涉及 Claude Code 订阅登录；第二起还明确将 Claude Cowork 列为受影响组件。当天早些时候的多模型错误升高事件继续保留；Anthropic 同日发布的 Claude Code 营销自动化案例没有时分，仍列入‘日期未确认’。Claude Code GitHub releases v2.1.245 与 v2.1.243 均已作为窗口内确认更新收录。
 
