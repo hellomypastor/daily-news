@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-08-25"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T07:07:00+08:00"
+updatedAt: "2026-08-25T10:01:22+08:00"
 description: "2026-08-25 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-25"
-featuredUrl: "https://stspg.io/6211zbpptv0y"
+featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.243"
 featuredSummary: "2026-08-25 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Claude 全家桶过去 24 小时动态与口碑日报
 
-**[Issues logging into Claude.ai](https://stspg.io/6211zbpptv0y)**。官方确认上海时间 04:00–04:08 访问 Claude.ai 及 Claude Code 订阅登录出现错误，Claude Cowork 同列受影响组件；事件已解决。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243)**。Claude Code v2.1.243 新增 loop 用量拆分、模型列表与缓存/定价管理、Console 无 API key 登录，并修复 MCP、后台 subagent、Remote Control、VS Code 与会话可靠性问题。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-25_claude)
 
@@ -48,7 +48,12 @@ tags:
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-**[Build AI agents without leaving VS Code, join our 3-part Reactor Series](https://techcommunity.microsoft.com/blog/educatordeveloperblog/build-ai-agents-without-leaving-vs-code-join-our-3-part-reactor-series/4548177)**。微软预告在 VS Code 中构建、部署并编排托管多 Agent 应用的三期开发者系列。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[NVIDIA Vera Rubin and Blackwell Set a New Standard for Agentic AI Performance per Watt](https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/)**。NVIDIA 以 AgentX 生产式编码 Agent 会话负载评估 Vera Rubin、Blackwell 与 H200 的每兆瓦吞吐，并披露厂商预览/测量结果。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+
+<figure class="source-image">
+  <a href="https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/"><img src="https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/image3-4.webp" alt="NVIDIA Vera Rubin 与 Blackwell 在 AgentX 编码 Agent 负载下的能效比较图" loading="lazy" /></a>
+  <figcaption><a href="https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/">图片来源：NVIDIA Technical Blog</a></figcaption>
+</figure>
 
 [阅读完整专题日报](/blog/dailynews_2026-08-25_ai-industry)
 

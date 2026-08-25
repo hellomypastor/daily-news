@@ -1,13 +1,13 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-25T00:00:00+08:00"
-updatedAt: "2026-08-25T07:03:16+08:00"
+updatedAt: "2026-08-25T10:01:22+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Issues logging into Claude.ai"
-featuredUrl: "https://stspg.io/6211zbpptv0y"
-featuredSummary: "官方确认上海时间 04:00–04:08 访问 Claude.ai 及 Claude Code 订阅登录出现错误，Claude Cowork 同列受影响组件；事件已解决。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-08-25 04:11 +08:00"
-featuredTags: ["Claude.ai","Claude Code","Claude Cowork","Incident"]
+featuredTitle: "v2.1.243"
+featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.243"
+featuredSummary: "Claude Code v2.1.243 新增 loop 用量拆分、模型列表与缓存/定价管理、Console 无 API key 登录，并修复 MCP、后台 subagent、Remote Control、VS Code 与会话可靠性问题。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-25 07:40 +08:00"
+featuredTags: ["Claude Code","Release","Agent","Enterprise"]
 tags:
   - "日期未确认"
   - "Agent"
@@ -17,23 +17,25 @@ tags:
   - "Claude Cowork"
   - "Claude.ai"
   - "Community"
+  - "Enterprise"
   - "Fable 5"
   - "Hate"
   - "Incident"
   - "MCP"
   - "Opus 5"
   - "Outage"
+  - "Release"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-24 07:02 至 2026-08-25 07:02（Asia/Shanghai）**。窗口内累积两项已解决的 Claude.ai 登录故障：官方记录上海时间 00:02–00:08 与 04:00–04:08 两个影响时段，均涉及 Claude Code 订阅登录；第二起还明确将 Claude Cowork 列为受影响组件。当天早些时候的多模型错误升高事件继续保留；Anthropic 同日发布的 Claude Code 营销自动化案例没有时分，仍列入‘日期未确认’。Claude Code GitHub 最新 release 早于本窗口，未作为 24 小时更新收录。
+采集窗口：**2026-08-24 10:01 至 2026-08-25 10:01（Asia/Shanghai）**。本轮新增 Claude Code v2.1.243：官方 release 于上海时间 07:40 发布，带来 loop 用量拆分、模型选择与企业定价/缓存管理、无 API key 的 Console 登录，以及 MCP、后台 subagent、Remote Control 与 VS Code 等修复。当天累计的两项已解决 Claude.ai 登录故障：官方记录上海时间 00:02–00:08 与 04:00–04:08 两个影响时段，均涉及 Claude Code 订阅登录；第二起还明确将 Claude Cowork 列为受影响组件。当天早些时候的多模型错误升高事件继续保留；Anthropic 同日发布的 Claude Code 营销自动化案例没有时分，仍列入‘日期未确认’。Claude Code GitHub release v2.1.243 已作为窗口内确认更新收录。
 
 ## Tier 1：编码与 Agent 主轴
 
 | 产品/能力 | 状态 | 本轮结论 |
 |---|---|---|
-| Claude Code CLI | 有关联动态 | 两起 Claude.ai 登录故障均涉及 Claude Code 订阅连接；官方案例还展示 Claude Code、BigQuery MCP 与业务数据生成个性化销售简报，但发布日期时分未确认。GitHub release 无窗口内新增。 |
+| Claude Code CLI | 有官方更新 | v2.1.243 新增 `/usage` 的 Loops 拆分、`modelPicker`、prompt cache TTL、企业 `modelPricing`、Console 无 API key 登录，并修复 MCP、后台 subagent、Remote Control、会话恢复与可靠性问题；两起登录故障仍累计保留。 |
 | VS Code / JetBrains 集成 | 无新增 | 已检索官方产品、文档、GitHub 与社区入口，未发现可核验的窗口内独立更新。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 未发现窗口内官方更新。 |
 | Skills 与 marketplaces | 无新增 | 已检查官方 Skills、Marketplace 及插件入口，未发现窗口内更新。 |
@@ -60,6 +62,10 @@ tags:
 安全、科学、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持入口均已检索；本窗口内未发现可核验的独立官方发布。销售/营销属于邻近企业应用信号：Anthropic 的 Claude Code 个性化销售简报案例见‘日期未确认’。
 
 ## 官方更新（从新到旧）
+
+### Claude Code v2.1.243 发布
+
+[官方 GitHub release](https://github.com/anthropics/claude-code/releases/tag/v2.1.243) 于上海时间 07:40 发布。面向日常编码与 Agent 运维，版本新增 `/usage` 的 loop 运行次数、token 与最近运行拆分；允许用 `modelPicker` 管理模型列表，并为 API key/云厂商用户分别配置主会话与 subagent 的 prompt cache TTL；企业还可通过受管 `modelPricing` 让 `/cost`、状态栏和遥测使用合同价格。登录侧新增 Console 账号无 API key 登录。可靠性方面修复远程 MCP 断线恢复、后台 subagent 唤醒、长时间无响应超时重试、云会话恢复、Remote Control 重连以及 VS Code 权限模式等问题。
 
 ### Claude.ai、Claude Code 与 Cowork 登录故障，官方已恢复
 
@@ -90,7 +96,7 @@ tags:
 
 ### Claude Code 自动生成个性化销售简报
 
-Anthropic 于 8 月 24 日发布 [官方案例](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)，介绍内部营销团队如何让 Claude Code 通过 BigQuery MCP 汇总 HubSpot、Clay、Salesforce 等数据，并为销售人员生成个性化周报。案例披露了人工审核、禁止编造 URL、每轮验证表头映射、小规模试点等防错实践。页面仅给日期、未给发布时间，因此无法确认是否位于本次 07:02 窗口内；作为有价值候选保留，但不计作严格窗口内确认更新。
+Anthropic 于 8 月 24 日发布 [官方案例](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)，介绍内部营销团队如何让 Claude Code 通过 BigQuery MCP 汇总 HubSpot、Clay、Salesforce 等数据，并为销售人员生成个性化周报。案例披露了人工审核、禁止编造 URL、每轮验证表头映射、小规模试点等防错实践。页面仅给日期、未给发布时间，因此无法确认是否位于本次 10:01 窗口内；作为有价值候选保留，但不计作严格窗口内确认更新。
 
 <figure class="source-image">
   <a href="https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8c5c59795765514bd8fd82_og_how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-sales.jpg" alt="Anthropic 官方案例文章的 Claude Code 营销自动化题图" loading="lazy" /></a>
@@ -100,21 +106,21 @@ Anthropic 于 8 月 24 日发布 [官方案例](https://claude.com/blog/how-an-a
 ## 观察池
 
 - 社区对状态页更新延迟的抱怨与官方事件时间线大体吻合，但无法从公开页面精确量化延迟，暂不写成官方事实。
-- Claude Code GitHub 最新 release v2.1.241 发布于 2026-08-23 00:52 UTC（上海时间 08:52），早于本窗口开始约 22 小时；作为查验结果记录，不纳入来源与正文新闻。
 - 未发现可信的窗口内未证实新品传闻。
 
 ## 来源链接
 
-1. [Claude Status：Claude.ai、Claude Code 与 Cowork 登录故障](https://stspg.io/6211zbpptv0y)
-2. [Claude Status：Claude.ai 登录故障](https://stspg.io/kg59rclpfzsz)
-3. [Claude Status：多个模型错误升高](https://status.claude.com/)
-4. [Claude Blog：营销团队用 Claude Code 生成个性化销售简报](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)
-5. [r/ClaudeCode：Claude Down Again??](https://www.reddit.com/r/ClaudeCode/comments/1vwt5bd/claude_down_again/)
-6. [r/Anthropic：持续出现 529 Overloaded](https://www.reddit.com/r/Anthropic/comments/1vwty0e/anyone_else_getting_constant_529_overloaded/)
+1. [Claude Code GitHub：v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243)
+2. [Claude Status：Claude.ai、Claude Code 与 Cowork 登录故障](https://stspg.io/6211zbpptv0y)
+3. [Claude Status：Claude.ai 登录故障](https://stspg.io/kg59rclpfzsz)
+4. [Claude Status：多个模型错误升高](https://status.claude.com/)
+5. [Claude Blog：营销团队用 Claude Code 生成个性化销售简报](https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep)
+6. [r/ClaudeCode：Claude Down Again??](https://www.reddit.com/r/ClaudeCode/comments/1vwt5bd/claude_down_again/)
+7. [r/Anthropic：持续出现 529 Overloaded](https://www.reddit.com/r/Anthropic/comments/1vwty0e/anyone_else_getting_constant_529_overloaded/)
 
 ## 采集状态
 
 - 已检查来源：Anthropic Newsroom、Claude Blog、Claude Status 事件/API、Claude Code GitHub releases/changelog、Developer Platform 与产品/生态入口；Reddit r/ClaudeCode、r/ClaudeAI、r/Anthropic、r/LocalLLaMA；Hacker News、X、YouTube 及可信开发者/播客检索。
 - 失败来源：X 未登录页面无法稳定取得帖子与互动量；Reddit JSON 接口返回 403，改以公开搜索结果核对；Hacker News 与 YouTube 未发现窗口内可核验新内容；Developer Platform 未发现带窗口内时间戳的独立更新。
-- 初始候选数：7；保留来源数：6。
+- 初始候选数：8；保留来源数：7。
 - 二次补搜：否（最终来源不为 0）。
