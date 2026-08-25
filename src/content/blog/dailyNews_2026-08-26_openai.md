@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T04:02:00+08:00"
+updatedAt: "2026-08-26T07:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.9"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9"
@@ -36,13 +36,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-25 04:02 至 2026-08-26 04:02（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是一项 Codex CLI 预发布：0.150.0-alpha.9 于 8 月 25 日 20:51 发布，但发布页没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。其余 Tier 1、Tier 2 与 Tier 3 产品线未发现可核验的新发布。社区侧累计保留五条窗口内、可精确核时的 Codex 官方仓库用户报告，均仍为 open，不能外推为 OpenAI 已确认的普遍缺陷。
+采集窗口为 **2026-08-25 07:02 至 2026-08-26 07:02（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是三项 Codex CLI 预发布：0.150.0-alpha.9、alpha.10 与 alpha.11 分别于 8 月 25 日 20:51、8 月 26 日 04:36 与 05:30 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。其余 Tier 1、Tier 2 与 Tier 3 产品线未发现可核验的新发布。社区侧累计保留五条窗口内、可精确核时的 Codex 官方仓库用户报告，均仍为 open，不能外推为 OpenAI 已确认的普遍缺陷。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.150.0-alpha.9 预发布**；无逐项 release notes | [官方发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9) |
+| Codex CLI | **0.150.0-alpha.9、alpha.10、alpha.11 预发布**；均无逐项 release notes | [alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11) |
 | VS Code / JetBrains 集成 | 无新增 | 已检查官方文档、changelog 与仓库 |
 | Codex cloud / remote tasks / PR agents | 无官方新增；Android 冷加载与跨主机子任务权限降级个案见观察池 | 官方 changelog、文档与仓库 issue |
 | ChatGPT agentic mode / Work | 无新增 | ChatGPT Release Notes |
@@ -76,6 +76,10 @@ tags:
 Enterprise、Business、Edu、Gov、Science 与行业方案未发现窗口内可核验的新产品发布。安全侧，OpenAI 于 8 月 25 日发布俄罗斯隐蔽影响行动调查，但因官方页未给精确时刻，保守放入“日期未确认”。
 
 ## 官方更新（新到旧）
+
+### Codex CLI 0.150.0-alpha.11 与 alpha.10（预发布）
+
+OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.10 与 alpha.11 分别于 **2026-08-26 04:36 +08:00** 和 **05:30 +08:00** 发布，并均标记为预发布版。两个页面都没有逐项变更说明；本页仅确认版本出现，不推断功能变化。[查看 alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10) 与 [alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)
 
 ### Codex CLI 0.150.0-alpha.9（预发布）
 
@@ -115,17 +119,19 @@ OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.9 于 **2026-08-25 20:
 
 ## 来源链接
 
-1. [Codex CLI 0.150.0-alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)
-2. [Disrupting a new covert influence campaign from Russia](https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/)
-3. [Codex Remote on Android: very large task history causes indefinite cold-load](https://github.com/openai/codex/issues/40638)
-4. [Agent edits code before validating hypotheses](https://github.com/openai/codex/issues/40639)
-5. [Permission profiles cannot protect absent nested metadata paths](https://github.com/openai/codex/issues/40685)
-6. [Remote Control create_thread silently downgrades child permission profile](https://github.com/openai/codex/issues/40682)
-7. [Windows Desktop active chats unexpectedly disappear](https://github.com/openai/codex/issues/40674)
+1. [Codex CLI 0.150.0-alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)
+2. [Codex CLI 0.150.0-alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)
+3. [Codex CLI 0.150.0-alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)
+4. [Disrupting a new covert influence campaign from Russia](https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/)
+5. [Codex Remote on Android: very large task history causes indefinite cold-load](https://github.com/openai/codex/issues/40638)
+6. [Agent edits code before validating hypotheses](https://github.com/openai/codex/issues/40639)
+7. [Permission profiles cannot protect absent nested metadata paths](https://github.com/openai/codex/issues/40685)
+8. [Remote Control create_thread silently downgrades child permission profile](https://github.com/openai/codex/issues/40682)
+9. [Windows Desktop active chats unexpectedly disappear](https://github.com/openai/codex/issues/40674)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Global Affairs、ChatGPT Release Notes、ChatGPT & Codex changelog、API changelog、模型与弃用文档、Codex 各产品入口、OpenAI Status、Codex 与 Agents SDK / 官方 SDK GitHub Releases、Codex 官方仓库 issues、Reddit 五个相关社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（公开搜索未提供足够可精确核时的新正面样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：40；最终保留来源：7。
+- 初始候选：42；最终保留来源：9。
 - 二次补搜：否（最终来源不为 0）。

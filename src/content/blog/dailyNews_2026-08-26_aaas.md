@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T01:01:00+08:00"
+updatedAt: "2026-08-26T07:06:59+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTags: []
 tags:
@@ -11,21 +11,25 @@ tags:
   - "日期未确认"
   - "AaaS"
   - "Agent"
+  - "Agent Infrastructure"
+  - "Airbyte Agents"
   - "Cloud Agent"
   - "Cloudflare"
   - "Cursor"
   - "DeepSeek Harness"
+  - "Governance"
   - "Grok Build"
   - "Hosted App"
   - "Managed Agent"
   - "Pi Coding Agent"
   - "Self-hosted"
+  - "State"
   - "Third Party"
 ---
 
 ## 今日结论
 
-采集窗口：**2026-08-25 01:01 至 2026-08-26 01:01（Asia/Shanghai）**。本轮未发现可严格确认的 24 小时内 AaaS 发布。已按要求扩大中英文关键词并切换官方新闻、文档/changelog、GitHub 和可信二手入口进行第二轮补搜。值得持续观察的是 Grok Build 已具备托管生成、发布和分享应用的能力，以及社区出现将 DeepSeek Harness 部署到 Cloudflare 的第三方实现；两者都不属于本窗口新发布，且后者不是供应商托管服务，因此不写成当日 AaaS 事实。
+采集窗口：**2026-08-25 07:02 至 2026-08-26 07:02（Asia/Shanghai）**。本轮未发现可严格确认的 24 小时内托管执行型 AaaS 发布。已按要求扩大中英文关键词并切换官方新闻、文档/changelog、GitHub 和可信二手入口进行第二轮补搜。Airbyte 在窗口内新增两篇关于 Agent 权限化上下文、审计访问和外部业务状态的官方技术说明；它们是生产 Agent 的数据与治理基础设施，不负责托管 Agent 执行生命周期，因此列入邻近信号观察池。值得持续观察的是 Grok Build 已具备托管生成、发布和分享应用的能力，以及社区出现将 DeepSeek Harness 部署到 Cloudflare 的第三方实现；两者都不属于本窗口新发布，且后者不是供应商托管服务，因此不写成当日 AaaS 事实。
 
 ## 重点动态
 
@@ -81,7 +85,7 @@ AaaS 要求供应商托管或管理 Agent 的执行、环境、生命周期、�
 - [Grok Build on web and mobile](https://x.ai/news/grok-build-for-everyone)：8 月 19 日官方发布，具备构建、托管发布、分享、GitHub 导出、secrets 和 connectors；已超出 72 小时，不作为今日动态，也不把 Grok API 能力扩大解释为异步 Agent 服务。
 - [DeepSeek Harness 官方开发者预览](https://www.deepseek.com/harness/en/)：插件体系覆盖 sessions、sandboxes、storage、loops 与 scheduling，但官方入口要求本地 npm 启动或源码安装，当前证据指向开源/自托管 harness。
 - [dsh-cloud](https://github.com/dorisgyl/dsh-cloud)：第三方 Cloudflare 端口，有远程会话和 sandbox 执行证据；明确非 DeepSeek 官方，且由用户自行部署。
-- [pi-dispatch](https://github.com/edgehero/pi-dispatch)：第三方把 Pi Coding Agent 包装为按需、定时或代码托管事件触发的容器服务；用户控制基础设施，不属于官方托管商业服务。
+- [pi-dispatch](https://github.com/edgehero/pi-dispatch)：第三方把 Pi Coding Agent 包装为按需、定时或代码托管事件触发的容器服务；用户控制基础设施，不属于官方托管商业服务。\n- [Airbyte：Secure AI Agent System](https://airbyte.com/agentic-data/secure-agentic-ai-agent-system)：8 月 25 日官方技术说明给出权限化上下文、策略执行和访问日志方案；支持生产 Agent 的治理，但不托管其执行。\n- [Airbyte：Stateful AI Agents](https://airbyte.com/agentic-data/stateful-ai-agents-external-data)：8 月 25 日官方技术说明区分会话状态、持久记忆与外部业务状态，并介绍权限化、可查询的外部状态层；属于 Agent 数据基础设施而非执行型 AaaS。
 
 ## 趋势
 
@@ -93,13 +97,13 @@ AaaS 要求供应商托管或管理 Agent 的执行、环境、生命周期、�
 2. [Cursor Docs：Cloud Agents](https://prod.cursor.com/docs/cloud-agent)
 3. [DeepSeek：DeepSeek Harness developer preview](https://www.deepseek.com/harness/en/)
 4. [GitHub：dsh-cloud](https://github.com/dorisgyl/dsh-cloud)
-5. [GitHub：pi-dispatch](https://github.com/edgehero/pi-dispatch)
+5. [GitHub：pi-dispatch](https://github.com/edgehero/pi-dispatch)\n6. [Airbyte：How to Build a Secure AI Agent System With Permissioned Context and Observable Access](https://airbyte.com/agentic-data/secure-agentic-ai-agent-system)\n7. [Airbyte：How Do You Build Stateful AI Agents with External Data?](https://airbyte.com/agentic-data/stateful-ai-agents-external-data)
 
 ## 采集状态
 
 - 已检查来源：Cognition Devin 官方新闻/文档/定价/企业/集成；xAI/SpaceXAI News、Grok Build changelog 与开发者 release notes；OpenAI、Anthropic、Google、Microsoft、GitHub、Cursor、Replit、AWS、Cloudflare、Factory、Sourcegraph、Lindy、CrewAI、LangGraph；字节跳动重点及阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code；GitHub 与中英文可信二手检索。
 - 失败来源：Devin 与 xAI 未发现窗口内合格 AaaS 更新；指定 harness 未发现供应商托管服务的新证据；X 无法稳定核验；部分 changelog 无逐条时间戳。
-- 初始候选数：14；保留来源数：5。
+- 初始候选数：16；保留来源数：7。
 - 二次补搜：是；因严格窗口内已验证动态为 0，已扩大中英文关键词并切换 GitHub、备用官方入口及可信二手来源。
 
-**今日扫描完成，共 5 条动态，重点：严格 24 小时内无已验证 AaaS 发布；持续关注 Grok Build 托管交付与开源 harness 的第三方远程化。**
+**今日扫描完成，共 7 条动态，重点：严格 24 小时内无已验证托管执行型 AaaS 发布；窗口内新增 Airbyte 权限化上下文与外部状态两项邻近信号，并持续关注 Grok Build 托管交付与开源 harness 的第三方远程化。**

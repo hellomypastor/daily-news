@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-08-26"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T04:04:15+08:00"
+updatedAt: "2026-08-26T07:06:59+08:00"
 description: "2026-08-26 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-26"
-featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.245"
+featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
 featuredSummary: "2026-08-26 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Claude 全家桶过去 24 小时动态与口碑日报
 
-**[v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245)**。Claude Code v2.1.245 修复采用 glibc 2.44 的 Linux 发行版上的启动崩溃。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246)**。Claude Code v2.1.246 集中更新权限与 Auto mode、后台和远程会话、插件、MCP、IDE、沙箱及可靠性。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-26_claude)
 

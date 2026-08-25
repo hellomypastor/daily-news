@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T04:02:00+08:00"
+updatedAt: "2026-08-26T07:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Uncovering a universal offline sandbox escape"
 featuredUrl: "https://www.primeintellect.ai/blog/universal-offline-sandbox-escape"
@@ -22,14 +22,18 @@ tags:
   - "Cline"
   - "Coding Agent"
   - "Compaction"
+  - "Developer Tools"
   - "Evaluation"
   - "FOSS"
+  - "Governance"
   - "Hacker News"
+  - "iOS"
   - "LLM"
   - "LLM Memory"
   - "Local AI"
   - "MCP"
   - "Memory"
+  - "Multi-Agent"
   - "Open Source"
   - "OpenCode"
   - "Pi"
@@ -39,12 +43,14 @@ tags:
   - "Sandbox"
   - "Security"
   - "Sessions"
+  - "Testing"
+  - "Token"
   - "Windows"
 ---
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-25 04:02 至 2026-08-26 04:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截止时间前强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 8 月 25 日 22:46 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。
+本页发现窗口为 **2026-08-25 07:02 至 2026-08-26 07:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截至 07:02 强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 04:02 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。
 
 ## Coding Agent / Harness 雷达
 
@@ -91,7 +97,7 @@ tags:
 
 ## HN 讨论
 
-Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436787) 于 2026-08-26 00:35 +08:00 出现，扫描时 1 point / 0 comments；nolabs 综述的 [HN 提交](https://news.ycombinator.com/item?id=49436558) 于 00:21 +08:00 出现，扫描时 2 points / 0 comments。互动数字仅是发现时快照，不支持采用趋势。
+Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436787) 于 2026-08-26 00:35 +08:00 出现，扫描时 1 point / 0 comments；nolabs 综述的 [HN 提交](https://news.ycombinator.com/item?id=49436558) 于 00:21 +08:00 出现，扫描时 2 points / 0 comments。增量窗口还出现 LIGH、slash-tokens 与 MREA 的低互动提交，详见观察池。互动数字仅是发现时快照，不支持采用趋势。
 
 ## 论文 / 研究
 
@@ -110,6 +116,9 @@ Sillage 将 Hebbian n-gram 矩阵、按置信度路由的语义层、按 surpris
 ## 观察池
 
 - **PowerAI｜邻近信号 / 低采用度**：8 月 25 日创建的终端工具经 Ollama 或本地 OpenAI-compatible endpoint 生成命令，并在执行前要求确认；仓库扫描时仅 3 stars，许可证元数据也未给出标准 SPDX 标识，质量、维护持续性和“零遥测”声明仍待独立验证。[项目仓库](https://github.com/Luizhcrs/powerai)；[HN 提交](https://news.ycombinator.com/item?id=49436182) 于 2026-08-25 23:52 +08:00。
+- **LIGH｜Coding Agent 邻近信号 / 低采用度**：项目把 CoreSimulator、accessibility JSON、自动路径探索和严格 pass/fail verifier 组合成 iOS coding-agent 的本地执行底座；MIT 仓库创建于 8 月 20 日，扫描时仅 2 stars，作者的速度与 token 节省数字尚无独立复现。[项目仓库](https://github.com/mrmarino023/light-ios-simulator)；[HN 提交](https://news.ycombinator.com/item?id=49441675) 于 2026-08-26 06:41 +08:00。
+- **slash-tokens｜开发工具 / 作者声明待验证**：MIT 工具在请求离开本机前估算 token、成本与上下文容量，并提供同 provider 路由建议；仓库扫描时 5 stars，4.8 KB、亚毫秒和定价准确性均为作者声明。[项目仓库](https://github.com/Wolfe-Jam/slash-tokens)；[HN 提交](https://news.ycombinator.com/item?id=49441725) 于 2026-08-26 06:48 +08:00。
+- **MREA｜多 Agent 治理邻近信号 / 低采用度**：MIT 仓库用 orchestrator、专职架构师与审计员、质量门和实施前人工批准描述企业软件 Agent 工作流；它目前主要是框架与模板，扫描时仅 1 star，实际效果尚无基准或独立案例。[项目仓库](https://github.com/JairValle/mrea-framework)；[HN 提交](https://news.ycombinator.com/item?id=49440302) 于 2026-08-26 04:40 +08:00。
 
 ## 来源链接
 
@@ -126,11 +135,17 @@ Sillage 将 Hebbian n-gram 矩阵、按置信度路由的语义层、按 surpris
 11. [PowerAI 的 HN 提交](https://news.ycombinator.com/item?id=49436182)
 12. [Sillage 项目仓库](https://github.com/riscoss63/sillage)
 13. [Sillage 的 HN 提交](https://news.ycombinator.com/item?id=49439609)
+14. [LIGH 项目仓库](https://github.com/mrmarino023/light-ios-simulator)
+15. [LIGH 的 HN 提交](https://news.ycombinator.com/item?id=49441675)
+16. [slash-tokens 项目仓库](https://github.com/Wolfe-Jam/slash-tokens)
+17. [slash-tokens 的 HN 提交](https://news.ycombinator.com/item?id=49441725)
+18. [MREA 项目仓库](https://github.com/JairValle/mrea-framework)
+19. [MREA 的 HN 提交](https://news.ycombinator.com/item?id=49440302)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Prime Intellect、nolabs 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；SFC 原文未显示发布日期。
-- 初始候选数：41。
-- 最终保留来源数：13。
+- 初始候选数：46。
+- 最终保留来源数：19。
 - 二次补搜：否（最终来源不为 0）。

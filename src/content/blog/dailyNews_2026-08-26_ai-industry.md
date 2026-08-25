@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T04:04:15+08:00"
+updatedAt: "2026-08-26T07:06:52+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028"
 featuredUrl: "https://www.dwarkesh.com/p/dylan-patel-3"
@@ -12,6 +12,7 @@ tags:
   - "播客"
   - "产业结构"
   - "观察池"
+  - "开发者生态"
   - "日期未确认"
   - "社区信号"
   - "算力"
@@ -20,6 +21,8 @@ tags:
   - "AI"
   - "Anthropic"
   - "Cohere"
+  - "DeepSeek Harness"
+  - "DSH"
   - "Google DeepMind"
   - "Grok"
   - "Industry"
@@ -31,7 +34,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：2026-08-25 04:04 至 2026-08-26 04:04（Asia/Shanghai）；当天页面按累计规则保留此前来源。本轮未找到能由厂商原文确认、且发布时间落在最近 24 小时内的新产品发布，但补充发现一集日期可核验的行业播客。以下保留近几日官方入口和当天社区讨论作为观察信号，并明确区分证据状态。
+采集窗口：2026-08-25 07:02 至 2026-08-26 07:02（Asia/Shanghai）；当天页面按累计规则保留此前来源。本轮未找到能由厂商原文确认、且发布时间落在最近 24 小时内的新产品发布；新增保留一条日期未确认的 DeepSeek Harness 官方生态信号。以下保留近几日官方入口、已核验播客和当天社区讨论作为观察信号，并明确区分证据状态。
 
 ## 优先动态
 
@@ -65,6 +68,7 @@ Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商官方播
 ## 日期未确认
 
 - Google DeepMind 的 [News 列表](https://deepmind.google/blog/) 显示 2026 年 8 月仍有 Gemini 3.7 Flash 等模型/研究内容，但列表仅显示月份，无法据此确认具体发布日期，因此不写成最近 24 小时发布。
+- DeepSeek 官方 [Harness developer preview](https://www.deepseek.com/harness/en/) 可确认 DSH 已面向全球开发者提供预览与源码，模型、工具、技能、会话、沙箱、存储、循环、调度和 UI 均采用插件化架构；页面未给可核验发布日期，因此仅作为开发者生态扩张信号，详见开源专题页。
 
 ## 观察池
 
@@ -74,10 +78,10 @@ Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商官方播
 
 ## 一句话总结
 
-本轮行业面没有发现可确认的 24 小时官方发布，值得继续盯住 xAI/Grok 的托管 Agent 分发与中国模型社区采用信号，但现有证据不足以形成趋势结论。
+本轮行业面没有发现可确认的 24 小时官方发布，值得继续盯住 xAI/Grok 的托管 Agent 分发、DSH 插件生态与中国模型社区采用信号，但现有证据不足以形成趋势结论。
 
 ## 采集状态
 
-- 已检查来源：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及指定播客和 Coding Agent 公司级动态入口。
+- 已检查来源：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI/Grok（News、API/模型文档、changelog 与官方仓库）、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 和厂商官方播客；另检查 Cline、Pi Coding Agent 与 DeepSeek Harness/DSH 的公司及生态信号。
 - 失败来源：部分 X/社交入口需登录；部分中国厂商与播客列表依赖客户端渲染或索引滞后。
-- 初始候选数：6；保留来源数：6；二次补搜：否（最终来源不为 0）。
+- 初始候选数：7；保留来源数：7；二次补搜：否（最终来源不为 0）。
