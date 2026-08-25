@@ -1,0 +1,73 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-08-26T01:01:34+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Engineering / Research（详见 Claude 专题页）",
+      "OpenAI News / Research / Developer changelog（详见 OpenAI 专题页）",
+      "Google DeepMind News / Google Research",
+      "Meta AI Research",
+      "Microsoft Research / Microsoft AI",
+      "xAI News、Grok API 文档与 Grok Build changelog（模型、API、DeepSearch、语音、编码、工具调用、Agent）",
+      "Mistral News、Cohere Blog",
+      "Qwen / Alibaba、ByteDance Seed、Baidu、Tencent Hunyuan、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax 官方入口",
+      "NVIDIA Developer / Research、Hugging Face Blog、LangChain、LlamaIndex",
+      "Cline、Pi Coding Agent、DeepSeek Harness/DSH 公司级动态（详见开源专题页）",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 播客入口"
+    ],
+    "failedSources": [
+      "部分官方社交账号/X：未登录环境无法稳定核验逐条发布时间与互动量",
+      "部分中国厂商动态列表依赖客户端渲染，搜索索引未返回可核验的 24 小时条目",
+      "部分播客 feed 的最新集时间未被搜索索引及时收录"
+    ],
+    "candidateCount": 5,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-08-25 01:01 至 2026-08-26 01:01（Asia/Shanghai）。本轮未找到能由厂商原文确认、且发布时间落在最近 24 小时内的新发布。以下保留近几日官方入口和当天社区讨论作为观察信号，并明确区分证据状态。\n\n## 优先动态\n\n最近 24 小时暂无经官方原文确认的新条目。Anthropic 与 OpenAI 的专项扫描结果分别见 Claude 与 OpenAI 专题页。\n\n## 例行扫描\n\n| 厂商/项目 | 状态 | 说明 |\n|---|---|---|\n| xAI / Grok | 无新增 | 已检查 [xAI News](https://x.ai/news?category=all) 及 Grok Build changelog；未发现窗口内新的模型、API、DeepSearch、语音、编码、工具调用或 Agent 官方公告。|\n| Google DeepMind | 无 24h 新增 | [官方 News](https://deepmind.google/blog/) 仍展示 8 月模型与研究条目，但列表页未给出足以把候选判定为本窗口内发布的日级时间。|\n| Mistral | 无新增 | [官方 News](https://mistral.ai/news/) 最新可核验条目早于本窗口。|\n| Cohere | 无新增 | [官方 Blog](https://cohere.com/blog) 最新可核验条目早于本窗口。|\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution 与 a16z AI 的公开入口均已抽查；本轮未找到可核实发布时间落在窗口内的新集。\n\n## 近两日补充\n\n未发现可核实为 24–48 小时内的新增。\n\n## 近三日补充\n\n未发现可核实为 48–72 小时内的新增。\n\n## 日期未确认\n\n- Google DeepMind 的 [News 列表](https://deepmind.google/blog/) 显示 2026 年 8 月仍有 Gemini 3.7 Flash 等模型/研究内容，但列表仅显示月份，无法据此确认具体发布日期，因此不写成最近 24 小时发布。\n\n## 观察池\n\n- [xAI News](https://x.ai/news?category=all) 显示 8 月 21 日仍有 Grok Bot 计划覆盖范围更新；它早于本轮窗口，仅作为产品分发方向背景，不作为今日动态。\n- [Mistral News](https://mistral.ai/news/) 与 [Cohere Blog](https://cohere.com/blog) 的最新可见官方文章均早于本轮窗口，保留为已检查入口而非新增事实。\n- Reddit 上 8 月 25 日出现一则关于中国开源模型选择的 [低互动讨论](https://www.reddit.com/r/EcoGPT/comments/1vx6dxi/which_chinese_opensource_ai_model_is_leading/)。它只有社区观点、互动量很低且没有新发布原文支持，不能据此推导厂商排名或产品更新。\n\n## 一句话总结\n\n本轮行业面没有发现可确认的 24 小时官方发布，值得继续盯住 xAI/Grok 的托管 Agent 分发与中国模型社区采用信号，但现有证据不足以形成趋势结论。\n\n## 采集状态\n\n- 已检查来源：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及指定播客和 Coding Agent 公司级动态入口。\n- 失败来源：部分 X/社交入口需登录；部分中国厂商与播客列表依赖客户端渲染或索引滞后。\n- 初始候选数：5；保留来源数：5；二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "News: Research, Product & Company Updates",
+      "url": "https://x.ai/news?category=all",
+      "source": "xAI",
+      "publishedAt": "",
+      "summary": "xAI 官方新闻索引，用于核对 Grok 模型、API、编码与 Agent 动态；本轮无 24 小时新增。",
+      "tags": ["xAI", "Grok", "观察池"]
+    },
+    {
+      "title": "News",
+      "url": "https://deepmind.google/blog/",
+      "source": "Google DeepMind",
+      "publishedAt": "",
+      "summary": "DeepMind 官方新闻列表仅提供部分月份级日期，相关候选日期未确认。",
+      "tags": ["Google DeepMind", "日期未确认"]
+    },
+    {
+      "title": "Latest news",
+      "url": "https://mistral.ai/news/",
+      "source": "Mistral AI",
+      "publishedAt": "",
+      "summary": "Mistral 官方新闻入口；最新可核验内容早于本轮窗口。",
+      "tags": ["Mistral", "观察池"]
+    },
+    {
+      "title": "The Cohere Blog",
+      "url": "https://cohere.com/blog",
+      "source": "Cohere",
+      "publishedAt": "",
+      "summary": "Cohere 官方博客入口；最新可核验内容早于本轮窗口。",
+      "tags": ["Cohere", "观察池"]
+    },
+    {
+      "title": "Which Chinese open-source AI model is leading right now?",
+      "url": "https://www.reddit.com/r/EcoGPT/comments/1vx6dxi/which_chinese_opensource_ai_model_is_leading/",
+      "source": "Reddit r/EcoGPT",
+      "publishedAt": "2026-08-25 +08:00",
+      "summary": "低互动社区讨论，作为采用口碑弱信号保留，不支持发布或排名结论。",
+      "tags": ["社区信号", "观察池", "中国模型"]
+    }
+  ]
+}
