@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T01:01:00+08:00"
+updatedAt: "2026-08-26T04:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Uncovering a universal offline sandbox escape"
 featuredUrl: "https://www.primeintellect.ai/blog/universal-offline-sandbox-escape"
@@ -26,13 +26,16 @@ tags:
   - "FOSS"
   - "Hacker News"
   - "LLM"
+  - "LLM Memory"
   - "Local AI"
   - "MCP"
+  - "Memory"
   - "Open Source"
   - "OpenCode"
   - "Pi"
   - "Policy"
   - "Provider"
+  - "Research"
   - "Sandbox"
   - "Security"
   - "Sessions"
@@ -41,7 +44,7 @@ tags:
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-25 01:01 至 2026-08-26 01:01（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。Coding Agent 方面，截止时间前强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 8 月 25 日 22:46 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。
+本页发现窗口为 **2026-08-25 04:02 至 2026-08-26 04:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截止时间前强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 8 月 25 日 22:46 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。
 
 ## Coding Agent / Harness 雷达
 
@@ -92,7 +95,9 @@ Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436
 
 ## 论文 / 研究
 
-已检查 arXiv recent 与 Hugging Face Papers；截止时间前未发现同时满足主题相关性、可核验日期和稳定原始链接的新论文。
+### Sillage：固定容量的无梯度模型记忆
+
+Sillage 将 Hebbian n-gram 矩阵、按置信度路由的语义层、按 surprise 巩固的冷存储和 rank-16 readout adapter 组合成可跨会话保存的本地记忆。仓库提供 MIT 代码、测试、结果 JSON、复现说明及四份带 Zenodo DOI 的预印本；作者报告在其 36k-token 技术文本评测上，7.4 MB 的 memory + fast weights 将 GPT-2 perplexity 从 31.2 降至 16.8。上述数字来自项目作者，尚无独立复现，且仓库明确说明测量仅覆盖 GPT-2 124M 与 Qwen3-0.6B 等小模型。[项目仓库](https://github.com/riscoss63/sillage)，仓库创建于 2026-08-24；[HN 提交](https://news.ycombinator.com/item?id=49439609) 于 2026-08-26 03:47 +08:00，扫描时 2 points / 0 comments。
 
 ## 旧文再讨论
 
@@ -119,11 +124,13 @@ Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436
 9. [SFC 建议的 HN 提交](https://news.ycombinator.com/item?id=49436388)
 10. [PowerAI 仓库](https://github.com/Luizhcrs/powerai)
 11. [PowerAI 的 HN 提交](https://news.ycombinator.com/item?id=49436182)
+12. [Sillage 项目仓库](https://github.com/riscoss63/sillage)
+13. [Sillage 的 HN 提交](https://news.ycombinator.com/item?id=49439609)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Prime Intellect、nolabs 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；SFC 原文未显示发布日期。
-- 初始候选数：37。
-- 最终保留来源数：11。
+- 初始候选数：41。
+- 最终保留来源数：13。
 - 二次补搜：否（最终来源不为 0）。

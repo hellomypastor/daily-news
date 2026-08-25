@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T01:01:00+08:00"
+updatedAt: "2026-08-26T04:01:59+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "v2.1.245"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.245"
@@ -13,7 +13,9 @@ tags:
   - "日期未确认"
   - "Agent"
   - "Anthropic"
+  - "Background Sessions"
   - "Bug Fix"
+  - "Bug Report"
   - "Claude"
   - "Claude Code"
   - "Community"
@@ -27,7 +29,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-25 01:01 至 2026-08-26 01:01（Asia/Shanghai）**。窗口内可严格确认的官方产品更新只有 [Claude Code v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245)：修复采用 glibc 2.44 的 Linux 发行版启动崩溃。Anthropic Newsroom、Claude Blog、状态页和 Developer Platform 未发现新的带窗口内时间戳独立发布。社区讨论则呈明显两极：一条高互动帖子赞赏 Opus 5 medium 的能力与偶发出人意料表现，另一条集中批评 Claude 日常对话变长、偏好与 Skills 执行不稳定，同时仍认可 Claude Code 的编码能力；这些是用户样本，不是产品能力事实。
+采集窗口：**2026-08-25 04:01 至 2026-08-26 04:01（Asia/Shanghai）**。窗口内可严格确认的官方产品更新只有 [Claude Code v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245)：修复采用 glibc 2.44 的 Linux 发行版启动崩溃。Anthropic Newsroom、Claude Blog、状态页和 Developer Platform 未发现新的带窗口内时间戳独立发布。社区讨论则呈明显两极：一条高互动帖子赞赏 Opus 5 medium 的能力与偶发出人意料表现，另一条集中批评 Claude 日常对话变长、偏好与 Skills 执行不稳定，同时仍认可 Claude Code 的编码能力；这些是用户样本，不是产品能力事实。新增观察信号是一名用户在官方仓库报告后台会话恢复后缺少可机读的父子关系，尚无官方确认或修复结论。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -90,6 +92,7 @@ tags:
 ## 观察池
 
 - Claude Code GitHub [issue #89454](https://github.com/anthropics/claude-code/issues/89454) 于 8 月 25 日打开：一名 Windows 用户报告本地 Kubernetes 安全测试提示词被错误标为 cyber。issue 带 bug、security、Windows 和 duplicate 标签；这是单用户报告且尚无修复结论，不表述为普遍缺陷。
+- Claude Code GitHub [issue #89624](https://github.com/anthropics/claude-code/issues/89624) 于 8 月 26 日 04:01（上海时间）打开：发帖者在 v2.1.245 / Linux 上复测称，使用 `claude --bg -r` 恢复后台会话会产生新 session ID，但磁盘状态未记录可机读的父子关系，导致外部列表可能长期显示重复会话。这是单用户缺陷报告，暂无标签、评论或官方修复结论。
 - 未发现可信的窗口内未证实新品传闻。
 
 ## 来源链接
@@ -99,10 +102,11 @@ tags:
 3. [r/ClaudeAI：Claude 是否变得普通](https://www.reddit.com/r/ClaudeAI/comments/1vxzgqp/is_claude_becoming_average/)
 4. [r/ClaudeAI：Opus 5 制作咖啡式任务总结](https://www.reddit.com/r/ClaudeAI/comments/1vxscwm/claude_opus_5_makes_a_cup_of_coffee/)
 5. [Claude Code GitHub：安全测试提示词误判 issue](https://github.com/anthropics/claude-code/issues/89454)
+6. [Claude Code GitHub：后台会话恢复关系缺失 issue](https://github.com/anthropics/claude-code/issues/89624)
 
 ## 采集状态
 
 - 已检查来源：Anthropic Newsroom、Claude Blog、Claude Status、Claude Code GitHub releases/changelog/issues、Developer Platform、Agent SDK、Skills/Marketplace/Connectors/Plugins/Cowork 与模型入口；Reddit r/ClaudeAI、r/ClaudeCode、r/Anthropic、r/LocalLLaMA；Hacker News、X、YouTube 与可信开发者/播客检索。
 - 失败来源：X 未登录页面无法稳定取得互动量；Reddit 公开页面无法稳定给出精确时分；Hacker News、YouTube 未发现窗口内可核验新内容；Developer Platform 未发现带窗口内时间戳的独立更新。
-- 初始候选数：12；保留来源数：5。
+- 初始候选数：14；保留来源数：6。
 - 二次补搜：否（最终来源不为 0）。

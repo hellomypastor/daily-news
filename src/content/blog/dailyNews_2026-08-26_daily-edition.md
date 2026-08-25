@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-08-26"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T01:01:34+08:00"
+updatedAt: "2026-08-26T04:04:15+08:00"
 description: "2026-08-26 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-26"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.245"
@@ -48,7 +48,7 @@ tags:
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028](https://www.dwarkesh.com/p/dylan-patel-3)**。Dylan Patel 讨论前沿实验室算力集中、晶圆厂资本开支、训练与推理资源配置及中美算力供给差异。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-26_ai-industry)
 

@@ -1,45 +1,58 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T01:01:34+08:00"
+updatedAt: "2026-08-26T04:04:15+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTags: []
+featuredTitle: "Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028"
+featuredUrl: "https://www.dwarkesh.com/p/dylan-patel-3"
+featuredSummary: "Dylan Patel 讨论前沿实验室算力集中、晶圆厂资本开支、训练与推理资源配置及中美算力供给差异。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-08-25 +08:00"
+featuredTags: ["播客","算力","产业结构","Anthropic","OpenAI"]
 tags:
+  - "播客"
+  - "产业结构"
   - "观察池"
   - "日期未确认"
   - "社区信号"
+  - "算力"
   - "中国模型"
   - "Agent"
   - "AI"
+  - "Anthropic"
   - "Cohere"
   - "Google DeepMind"
   - "Grok"
   - "Industry"
   - "Mistral"
+  - "OpenAI"
   - "Research"
   - "xAI"
 ---
 
 ## 今日概览
 
-采集窗口：2026-08-25 01:01 至 2026-08-26 01:01（Asia/Shanghai）。本轮未找到能由厂商原文确认、且发布时间落在最近 24 小时内的新发布。以下保留近几日官方入口和当天社区讨论作为观察信号，并明确区分证据状态。
+采集窗口：2026-08-25 04:04 至 2026-08-26 04:04（Asia/Shanghai）；当天页面按累计规则保留此前来源。本轮未找到能由厂商原文确认、且发布时间落在最近 24 小时内的新产品发布，但补充发现一集日期可核验的行业播客。以下保留近几日官方入口和当天社区讨论作为观察信号，并明确区分证据状态。
 
 ## 优先动态
 
-最近 24 小时暂无经官方原文确认的新条目。Anthropic 与 OpenAI 的专项扫描结果分别见 Claude 与 OpenAI 专题页。
+最近 24 小时暂无经官方原文确认的新产品条目。Anthropic 与 OpenAI 的专项扫描结果分别见 Claude 与 OpenAI 专题页。
 
 ## 例行扫描
 
 | 厂商/项目 | 状态 | 说明 |
 |---|---|---|
-| xAI / Grok | 无新增 | 已检查 [xAI News](https://x.ai/news?category=all) 及 Grok Build changelog；未发现窗口内新的模型、API、DeepSearch、语音、编码、工具调用或 Agent 官方公告。|
+| xAI / Grok | 无新增 | 已检查 [xAI News](https://x.ai/news?category=all)、Grok API/模型文档与 changelog、Grok Build 官方仓库；未发现窗口内新的模型、API、DeepSearch、语音、编码、工具调用或 Agent 官方公告。|
 | Google DeepMind | 无 24h 新增 | [官方 News](https://deepmind.google/blog/) 仍展示 8 月模型与研究条目，但列表页未给出足以把候选判定为本窗口内发布的日级时间。|
 | Mistral | 无新增 | [官方 News](https://mistral.ai/news/) 最新可核验条目早于本窗口。|
 | Cohere | 无新增 | [官方 Blog](https://cohere.com/blog) 最新可核验条目早于本窗口。|
 
 ## 播客
 
-Latent Space、Dwarkesh、No Priors、The Cognitive Revolution 与 a16z AI 的公开入口均已抽查；本轮未找到可核实发布时间落在窗口内的新集。
+| 节目 | 标题 | 日期/状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|
+| Dwarkesh Podcast | [Dylan Patel：Anthropic 与 OpenAI 到 2028 年将掌握全球大部分算力](https://www.dwarkesh.com/p/dylan-patel-3) | 2026-08-25，已核验 | Dylan Patel 从晶圆厂资本开支、训练与推理资源分配、中美新增算力供给讨论前沿实验室集中化。 | 为模型竞争提供基础设施与产业结构视角；涉及 Anthropic/OpenAI，详见 Claude 与 OpenAI 专题页。 |
+
+Latent Space、No Priors、The Cognitive Revolution、a16z AI 与厂商官方播客入口均已抽查；除上述节目外，本轮未找到可核实发布时间落在窗口内的新集。
 
 ## 近两日补充
 
@@ -67,4 +80,4 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution 与 a16z AI 的�
 
 - 已检查来源：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及指定播客和 Coding Agent 公司级动态入口。
 - 失败来源：部分 X/社交入口需登录；部分中国厂商与播客列表依赖客户端渲染或索引滞后。
-- 初始候选数：5；保留来源数：5；二次补搜：否（最终来源不为 0）。
+- 初始候选数：6；保留来源数：6；二次补搜：否（最终来源不为 0）。
