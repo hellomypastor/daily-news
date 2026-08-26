@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-27T00:00:00+08:00"
-updatedAt: "2026-08-27T04:01:00+08:00"
+updatedAt: "2026-08-27T07:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Lody Is Now Open Source"
 featuredUrl: "https://lody.ai/blog/lody-is-now-open-source/"
@@ -19,6 +19,7 @@ tags:
   - "Agent Harness"
   - "AI"
   - "Batching"
+  - "Benchmark"
   - "CLI"
   - "Cline"
   - "Coding Agent"
@@ -35,11 +36,13 @@ tags:
   - "MCP"
   - "Model Routing"
   - "Multi-Agent"
+  - "Observability"
   - "Open Source"
   - "Protocol"
   - "Reliability"
   - "Research"
   - "Safety"
+  - "Sandbox"
   - "SDK"
   - "Security"
   - "Serving Systems"
@@ -52,7 +55,7 @@ tags:
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-26 04:01 至 2026-08-27 04:01（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。Coding Agent 主轴中，Cline v4.1.16 修复了多工作区 hooks、Git remote 凭据脱敏和 MCP Marketplace 参数解析，SDK v0.0.81 与 Desktop v0.0.19 则收紧长会话状态事件的载荷。VS Code 新增独立 Agent Host 与开放 AHP，使不同 harness 的会话可以跨窗口、跨客户端并在本地或远端延续。新开源的 Lody 把团队决策上下文与 Coding Agent 放入本地优先、CRDT 同步的共享工作区；vllm-ios 提供了 iPhone 上连续批处理的代码与实验方法，但性能数字仍是作者自测。研究方面，三篇较旧论文因本轮 HN 提交重新浮现，分别讨论 Agent 工作负载、长周期多 Agent 商务模拟，以及 harness 版本演进对 coding-agent 质量的影响；均按旧文再讨论处理。
+本页发现窗口为 **2026-08-26 07:01 至 2026-08-27 07:01（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。Coding Agent 主轴中，Cline v4.1.16 修复了多工作区 hooks、Git remote 凭据脱敏和 MCP Marketplace 参数解析，SDK v0.0.81 与 Desktop v0.0.19 则收紧长会话状态事件的载荷。VS Code 新增独立 Agent Host 与开放 AHP，使不同 harness 的会话可以跨窗口、跨客户端并在本地或远端延续。新开源的 Lody 把团队决策上下文与 Coding Agent 放入本地优先、CRDT 同步的共享工作区；vllm-ios 提供了 iPhone 上连续批处理的代码与实验方法，但性能数字仍是作者自测。研究方面，三篇较旧论文因本轮 HN 提交重新浮现，分别讨论 Agent 工作负载、长周期多 Agent 商务模拟，以及 harness 版本演进对 coding-agent 质量的影响；均按旧文再讨论处理。
 
 ## Coding Agent / Harness 雷达
 
@@ -99,7 +102,7 @@ CodeRabbit 宣布未来 12 个月投入超过 1,000 万美元的“实际直接�
 
 ## HN 讨论
 
-本轮较技术性的窗口内提交包括 Lody 开源、vllm-ios 连续批处理、两篇 Agent 系统论文，以及一篇未标日期的推理性能排障文章。互动数字只是扫描快照，不作为采用或优劣证据。[Lody 提交](https://news.ycombinator.com/item?id=49450167) 于 2026-08-26 22:48 +08:00；[vllm-ios 提交](https://news.ycombinator.com/item?id=49440382) 于 2026-08-26 04:47 +08:00。
+本轮较技术性的窗口内提交包括 Lody 开源、vllm-ios 连续批处理、两篇 Agent 系统论文，以及一篇未标日期的推理性能排障文章。互动数字只是扫描快照，不作为采用或优劣证据。07:01 滚动扫描新增 AgentPlayback 与 SandboxEscapeBench 的 HN 提交，均仅有早期低互动。[Lody 提交](https://news.ycombinator.com/item?id=49450167) 于 2026-08-26 22:48 +08:00；[vllm-ios 提交](https://news.ycombinator.com/item?id=49440382) 于 2026-08-26 04:47 +08:00。
 
 ## 论文 / 研究
 
@@ -119,6 +122,10 @@ CodeRabbit 宣布未来 12 个月投入超过 1,000 万美元的“实际直接�
 
 论文在长周期商务模拟中研究 Agent 是否形成与真实意图不一致的策略沟通；v1 提交于 8 月 14 日、v3 修订于 8 月 21 日。它是受控模拟证据，不能直接推断真实企业 Agent 必然出现相同行为。[arXiv 原文](https://arxiv.org/abs/2608.14825)，v3 2026-08-21；[HN 提交](https://news.ycombinator.com/item?id=49451451) 于 2026-08-27 00:03 +08:00。
 
+### SandboxEscapeBench：安全评估容器逃逸能力
+
+英国 AI Security Institute 的开源基准以‘沙箱内再套强化虚拟机’的方式安全测试 Agent 容器逃逸，覆盖编排、运行时与内核三层的 18 个场景。官方原文发表于 3 月 23 日，本轮仅因 HN 新提交而重新浮现；公开集只包含已知漏洞类别，且模型结果受具体提示与推理预算约束。[官方文章](https://www.aisi.gov.uk/blog/can-ai-agents-escape-their-sandboxes-a-benchmark-for-safely-measuring-container-breakout-capabilities)，2026-03-23；[代码](https://github.com/UKGovernmentBEIS/sandbox_escape_bench)；[HN 提交](https://news.ycombinator.com/item?id=49456457) 于 2026-08-27 05:57 +08:00。
+
 ## 日期未确认
 
 - **Inference Wall｜推理排障教程**：作者用一个 8.6 GB 模型与 trace 拆解吞吐瓶颈，文章有公开 notebook / scripts，但页面未显示可核验发布日期，且性能数据为作者环境结果，故不作为今日发布事实。[原文](https://mapathak-commits.github.io/inference-wall/articles/part-1/)；[HN 提交](https://news.ycombinator.com/item?id=49448707) 于 2026-08-26 21:22 +08:00。
@@ -128,6 +135,8 @@ CodeRabbit 宣布未来 12 个月投入超过 1,000 万美元的“实际直接�
 - **MCP vs CLI token 成本｜较旧 / 厂商实验**：Blocks.ai 文章以其工具集合比较 MCP schema 预载与 CLI 按需帮助的上下文成本，标题中的 26,000 tokens 是作者设置下的测量，不应泛化到所有 MCP 实现；原文发表于 8 月 1 日，本轮 HN 再提交互动较低。[原文](https://blocks.ai/blog/mcp-vs-cli-context-window-cost)，2026-08-01；[HN 提交](https://news.ycombinator.com/item?id=49449997) 于 2026-08-26 22:37 +08:00。
 
 - **AgentBridge｜新项目 / 低采用信号**：MIT 许可的 TypeScript CLI 尝试在 Claude Code、Codex 与 Antigravity 之间同步 Skills、MCP 配置和规则，并提供备份、冲突检测与回滚设计；仓库创建于 8 月 25 日，本轮检查时仅 1 star，功能与安全声明尚缺独立验证，故只进入观察池。[仓库](https://github.com/Helter5/agentbridge)；[HN 提交](https://news.ycombinator.com/item?id=49454480) 于 2026-08-27 03:26 +08:00。
+
+- **AgentPlayback｜新项目 / 低采用信号**：MIT 许可的本地可视化工具读取 Codex 与 Claude Code 现有会话日志，展示运行/等待时间、按任务与项目分组、token 和估算成本；仓库创建于 8 月 26 日，本轮检查仅 2 stars，成本估算准确性与跨版本日志兼容性尚缺独立验证。[仓库](https://github.com/JerryZLiu/AgentPlayback)；[HN 提交](https://news.ycombinator.com/item?id=49456949) 于 2026-08-27 06:46 +08:00。
 
 ## 来源链接
 
@@ -154,11 +163,16 @@ CodeRabbit 宣布未来 12 个月投入超过 1,000 万美元的“实际直接�
 21. [Harness 演进论文的 HN 提交](https://news.ycombinator.com/item?id=49453846)
 22. [AgentBridge 仓库](https://github.com/Helter5/agentbridge)
 23. [AgentBridge 的 HN 提交](https://news.ycombinator.com/item?id=49454480)
+24. [SandboxEscapeBench 官方文章](https://www.aisi.gov.uk/blog/can-ai-agents-escape-their-sandboxes-a-benchmark-for-safely-measuring-container-breakout-capabilities)
+25. [SandboxEscapeBench 代码](https://github.com/UKGovernmentBEIS/sandbox_escape_bench)
+26. [SandboxEscapeBench 的 HN 提交](https://news.ycombinator.com/item?id=49456457)
+27. [AgentPlayback 仓库](https://github.com/JerryZLiu/AgentPlayback)
+28. [AgentPlayback 的 HN 提交](https://news.ycombinator.com/item?id=49456949)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Lody、CodeRabbit 与可信工程博客。
-- 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；Inference Wall 原文未显示发布日期。
-- 初始候选数：103。
-- 最终保留来源数：23。
+- 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；Inference Wall 原文未显示发布日期；Julin.ai 被办公网络策略拦截。
+- 初始候选数：210。
+- 最终保留来源数：28。
 - 二次补搜：否（最终来源不为 0）。
