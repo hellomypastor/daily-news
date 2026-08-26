@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T07:02:00+08:00"
+updatedAt: "2026-08-26T10:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Uncovering a universal offline sandbox escape"
 featuredUrl: "https://www.primeintellect.ai/blog/universal-offline-sandbox-escape"
@@ -29,6 +29,7 @@ tags:
   - "Hacker News"
   - "iOS"
   - "LLM"
+  - "LLM Agent"
   - "LLM Memory"
   - "Local AI"
   - "MCP"
@@ -39,18 +40,20 @@ tags:
   - "Pi"
   - "Policy"
   - "Provider"
+  - "Reinforcement Learning"
   - "Research"
   - "Sandbox"
   - "Security"
   - "Sessions"
   - "Testing"
   - "Token"
+  - "Tool Use"
   - "Windows"
 ---
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-25 07:02 至 2026-08-26 07:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截至 07:02 强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 04:02 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。
+本页发现窗口为 **2026-08-25 07:02 至 2026-08-26 10:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截至 10:02 强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 07:02 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。
 
 ## Coding Agent / Harness 雷达
 
@@ -105,6 +108,10 @@ Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436
 
 Sillage 将 Hebbian n-gram 矩阵、按置信度路由的语义层、按 surprise 巩固的冷存储和 rank-16 readout adapter 组合成可跨会话保存的本地记忆。仓库提供 MIT 代码、测试、结果 JSON、复现说明及四份带 Zenodo DOI 的预印本；作者报告在其 36k-token 技术文本评测上，7.4 MB 的 memory + fast weights 将 GPT-2 perplexity 从 31.2 降至 16.8。上述数字来自项目作者，尚无独立复现，且仓库明确说明测量仅覆盖 GPT-2 124M 与 Qwen3-0.6B 等小模型。[项目仓库](https://github.com/riscoss63/sillage)，仓库创建于 2026-08-24；[HN 提交](https://news.ycombinator.com/item?id=49439609) 于 2026-08-26 03:47 +08:00，扫描时 2 points / 0 comments。
 
+### SMITH：联合训练工具创建与调用
+
+SMITH（Schema-grounded Multi-task Iterative Tool Honing）让同一策略交替完成“从少量示例构建工具”和“在留出问题上调用共享工具”两类任务，并分别对 schema、代码与最终结果给奖励。论文报告，使用 13 个带精确 verifier 的程序化推理任务训练 Qwen3 4B 后，在作者的留出任务上达到 79.8 macro-average accuracy，并在 TabMWP-Hard 与域外 GQA 上取得 40.4 和 42.6；这些是论文作者的实验结果，尚未视为跨模型通用结论。[arXiv 原文](https://arxiv.org/abs/2608.24571)，提交于 2026-08-25 21:59 +08:00；[HN 提交](https://news.ycombinator.com/item?id=49443118) 于 2026-08-26 09:36 +08:00，扫描时 2 points / 0 comments。
+
 ## 旧文再讨论
 
 未发现原文超过七天、但在过去 24 小时重新获得明确 HN 讨论的合格条目。
@@ -141,11 +148,13 @@ Sillage 将 Hebbian n-gram 矩阵、按置信度路由的语义层、按 surpris
 17. [slash-tokens 的 HN 提交](https://news.ycombinator.com/item?id=49441725)
 18. [MREA 项目仓库](https://github.com/JairValle/mrea-framework)
 19. [MREA 的 HN 提交](https://news.ycombinator.com/item?id=49440302)
+20. [SMITH 论文](https://arxiv.org/abs/2608.24571)
+21. [SMITH 的 HN 提交](https://news.ycombinator.com/item?id=49443118)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Prime Intellect、nolabs 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；SFC 原文未显示发布日期。
-- 初始候选数：46。
-- 最终保留来源数：19。
+- 初始候选数：59。
+- 最终保留来源数：21。
 - 二次补搜：否（最终来源不为 0）。

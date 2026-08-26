@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T07:02:00+08:00"
+updatedAt: "2026-08-26T10:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.9"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9"
@@ -20,8 +20,11 @@ tags:
   - "CLI"
   - "Codex"
   - "Community"
+  - "Connector"
   - "Desktop"
+  - "GitHub"
   - "Global Affairs"
+  - "MCP"
   - "Model Behavior"
   - "OpenAI"
   - "Permissions"
@@ -31,12 +34,13 @@ tags:
   - "Sandbox"
   - "Security"
   - "Subagent"
+  - "UX"
   - "Windows"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-25 07:02 至 2026-08-26 07:02（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是三项 Codex CLI 预发布：0.150.0-alpha.9、alpha.10 与 alpha.11 分别于 8 月 25 日 20:51、8 月 26 日 04:36 与 05:30 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。其余 Tier 1、Tier 2 与 Tier 3 产品线未发现可核验的新发布。社区侧累计保留五条窗口内、可精确核时的 Codex 官方仓库用户报告，均仍为 open，不能外推为 OpenAI 已确认的普遍缺陷。
+采集窗口为 **2026-08-25 10:02 至 2026-08-26 10:02（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是三项 Codex CLI 预发布：0.150.0-alpha.9、alpha.10 与 alpha.11 分别于 8 月 25 日 20:51、8 月 26 日 04:36 与 05:30 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。其余 Tier 1、Tier 2 与 Tier 3 产品线未发现可核验的新发布。社区侧累计保留九条窗口内、可精确核时的 Codex 官方仓库用户报告，均仍为 open，不能外推为 OpenAI 已确认的普遍缺陷。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -44,7 +48,7 @@ tags:
 |---|---|---|
 | Codex CLI | **0.150.0-alpha.9、alpha.10、alpha.11 预发布**；均无逐项 release notes | [alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11) |
 | VS Code / JetBrains 集成 | 无新增 | 已检查官方文档、changelog 与仓库 |
-| Codex cloud / remote tasks / PR agents | 无官方新增；Android 冷加载与跨主机子任务权限降级个案见观察池 | 官方 changelog、文档与仓库 issue |
+| Codex cloud / remote tasks / PR agents | 无官方新增；Android 冷加载、跨主机子任务权限降级与 GitHub connector 授权异常个案见观察池 | 官方 changelog、文档与仓库 issue |
 | ChatGPT agentic mode / Work | 无新增 | ChatGPT Release Notes |
 | 当前官方 Agent 构建产品 | 无新增 | 官方 Agent 文档与 changelog |
 | Responses API | 无新增 | API changelog |
@@ -63,7 +67,7 @@ tags:
 | 产品面 | 过去 24 小时状态 |
 |---|---|
 | 浏览器 / Operator 能力 | 无新增 |
-| macOS / Windows / 移动端 | 无官方新增；Android 冷加载与 Windows 会话消失个案见观察池 |
+| macOS / Windows / 移动端 | 无官方新增；Android 冷加载、Windows 会话消失与更新后启动失败个案见观察池 |
 | GPTs / GPT Store | 无新增 |
 | Canvas | 无新增 |
 | Sora / 视频 | 无新增 |
@@ -91,11 +95,11 @@ OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.9 于 **2026-08-25 20:
 
 ## Hate
 
-官方 Codex 仓库出现两条可精确核时的用户报告：一名用户称超大历史任务在 Android Remote 中冷打开时长期停留在加载骨架，缩减本地历史后恢复；另一名用户称长时间复杂编码会话中，Agent 有时在充分验证前编辑代码并把推测性修复写成已证明结论。两条既有 issue 仍为 open；本轮又核验三条新报告：跨平台沙箱无法一致保护尚不存在的嵌套元数据路径、跨 Mac Remote Control 创建子任务时权限配置被静默降级，以及 Windows Desktop 活跃会话在界面中消失但底层任务仍存在。五条均为用户报告，不能证明根因、影响范围或普遍性。详见 [Android Remote 冷加载报告](https://github.com/openai/codex/issues/40638)、[推测性修复报告](https://github.com/openai/codex/issues/40639)、[嵌套路径权限报告](https://github.com/openai/codex/issues/40685)、[跨主机权限降级报告](https://github.com/openai/codex/issues/40682) 与 [Windows 会话消失报告](https://github.com/openai/codex/issues/40674)。
+官方 Codex 仓库累计保留九条可精确核时的用户报告。除 Android Remote 冷加载、验证前编辑代码、嵌套路径权限、跨 Mac 子任务权限降级与 Windows 会话消失外，本轮新增两条相互独立的 Windows Desktop 更新后无法定位 CLI、进而无法启动的报告；另有用户报告 starter card 只提交单个动词，以及 GitHub connector 获得私有仓库权限后全部工具返回 Unknown tool。所有 issue 均仍为 open，不能证明根因、影响范围或普遍性。详见 [Android Remote 冷加载报告](https://github.com/openai/codex/issues/40638)、[推测性修复报告](https://github.com/openai/codex/issues/40639)、[嵌套路径权限报告](https://github.com/openai/codex/issues/40685)、[跨主机权限降级报告](https://github.com/openai/codex/issues/40682)、[Windows 会话消失报告](https://github.com/openai/codex/issues/40674)、[Windows 启动失败报告一](https://github.com/openai/codex/issues/40752)、[报告二](https://github.com/openai/codex/issues/40754)、[starter card 报告](https://github.com/openai/codex/issues/40734) 与 [GitHub connector 报告](https://github.com/openai/codex/issues/40729)。
 
 ## 情绪判断
 
-**轻微偏负面，置信度低。** 本轮可核验社区样本为五条官方仓库问题报告，没有匹配的新增正面样本；样本选择本身偏向故障反馈，且 issue 尚未获维护者确认，因此不能据此判断 Codex 整体口碑。
+**偏负面，置信度低。** 本轮可核验社区样本为九条官方仓库问题报告，没有匹配的新增正面样本；两条 Windows 启动失败报告提供了有限交叉印证，但样本选择本身偏向故障反馈，且 issue 尚未获维护者确认，因此不能据此判断 Codex 整体口碑。
 
 ## 比较信号
 
@@ -112,6 +116,10 @@ OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.9 于 **2026-08-25 20:
 - [权限配置无法跨 Seatbelt 与 bubblewrap 保护尚不存在的嵌套路径](https://github.com/openai/codex/issues/40685) 创建于 **2026-08-26 03:44 +08:00**。报告者给出 macOS Seatbelt 与 WSL2 bubblewrap 对照复现。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一报告**；维护者尚未确认根因。
 - [Remote Control 跨 Mac 创建子任务时权限配置被静默降级](https://github.com/openai/codex/issues/40682) 创建于 **2026-08-26 03:38 +08:00**。报告者给出同机与跨主机无网络、无写入的对照探针。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一报告**；尚无维护者确认。
 - [Windows Desktop 活跃会话从界面消失](https://github.com/openai/codex/issues/40674) 创建于 **2026-08-26 02:55 +08:00**。报告者称 UI 会话消失，但底层任务仍为 active。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 间歇性单一报告**；触发条件未确认。
+- [Windows Desktop 26.820.60940 更新后无法定位 Codex CLI](https://github.com/openai/codex/issues/40752) 创建于 **2026-08-26 09:27 +08:00**。报告者称更新后应用启动失败，把 `CODEX_CLI_PATH` 指向 `.cmd` 又触发 `spawn EINVAL`，直接指向原生 `codex.exe` 可绕过。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一报告**；根因与影响范围未获维护者确认。
+- [另一名 Windows 用户报告更新后同类启动阻断](https://github.com/openai/codex/issues/40754) 创建于 **2026-08-26 10:00 +08:00**。报告者称重装未解决，显式设置 `CODEX_CLI_PATH` 并重新登录 Windows 后恢复。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 与上一条相互独立但仍属有限样本**。
+- [Codex Desktop starter card 只提交单个动词](https://github.com/openai/codex/issues/40734) 创建于 **2026-08-26 07:31 +08:00**。报告者称卡片实际只向新任务发送 `Review` 等单词。状态为 **官方仓库用户 issue / 精确时间已核验 / open / macOS 单一复现**；尚无维护者确认。
+- [GitHub connector 获得私有仓库权限后全部工具失效](https://github.com/openai/codex/issues/40729) 创建于 **2026-08-26 06:51 +08:00**。报告者称授权后多个 GitHub 工具统一返回 `Unknown tool`。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一仓库与账户个案**；根因未确认。
 
 ## 未证实传闻
 
@@ -128,10 +136,14 @@ OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.9 于 **2026-08-25 20:
 7. [Permission profiles cannot protect absent nested metadata paths](https://github.com/openai/codex/issues/40685)
 8. [Remote Control create_thread silently downgrades child permission profile](https://github.com/openai/codex/issues/40682)
 9. [Windows Desktop active chats unexpectedly disappear](https://github.com/openai/codex/issues/40674)
+10. [Windows Desktop 26.820.60940 fails to start after update](https://github.com/openai/codex/issues/40752)
+11. [Windows Desktop cannot locate CLI after update](https://github.com/openai/codex/issues/40754)
+12. [Codex Desktop starter cards submit only one-word prompts](https://github.com/openai/codex/issues/40734)
+13. [GitHub connector loses all tools after private-repository authorization](https://github.com/openai/codex/issues/40729)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Global Affairs、ChatGPT Release Notes、ChatGPT & Codex changelog、API changelog、模型与弃用文档、Codex 各产品入口、OpenAI Status、Codex 与 Agents SDK / 官方 SDK GitHub Releases、Codex 官方仓库 issues、Reddit 五个相关社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（公开搜索未提供足够可精确核时的新正面样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：42；最终保留来源：9。
+- 初始候选：58；最终保留来源：13。
 - 二次补搜：否（最终来源不为 0）。
