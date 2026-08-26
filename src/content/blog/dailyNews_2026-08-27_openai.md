@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-27T00:00:00+08:00"
-updatedAt: "2026-08-27T01:02:00+08:00"
+updatedAt: "2026-08-27T04:01:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.13"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13"
@@ -36,6 +36,7 @@ tags:
   - "PR Review"
   - "Pre-release"
   - "Rate Limits"
+  - "Release"
   - "Scheduled Tasks"
   - "Subagent"
   - "Tools"
@@ -47,13 +48,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-26 01:02 至 2026-08-27 01:02（Asia/Shanghai）**。窗口内可精确核验的官方版本动态为 Codex CLI 0.150.0-alpha.10 至 alpha.13 四个预发布版，发布页均没有逐项变更说明，因此只确认版本出现。另有四项 8 月 25 日官方内容——ChatGPT Work 定时任务 webhook 与分享、Admin plugin、Codex 重复工作实践文章、Jalapeño 首批测量结果——均只有自然日、没有精确时刻，本页保守列入“日期未确认”。o3 于 8 月 26 日从 ChatGPT 退役是较旧公告在本日生效，API 不受影响。社区侧窗口内 Codex 官方仓库 issue 候选达到 203 条，本页仅保留九条具有明确复现、对照或多报告交叉印证的代表性观察，均不能外推为 OpenAI 已确认缺陷。
+采集窗口为 **2026-08-26 04:01 至 2026-08-27 04:01（Asia/Shanghai）**。窗口内可精确核验的官方版本动态为 Codex CLI 0.150.0 稳定版及此前的 alpha.10 至 alpha.13 四个预发布版；稳定版附完整官方 changelog，新增跨任务引用与任务管理、复制选择器、自动标题、可点击链接、权限模式快捷键和 Interrupt hooks，并包含安全、凭据脱敏、MCP、Windows sandbox、Unix 关停与 Bedrock 兼容性修复。另有四项 8 月 25 日官方内容——ChatGPT Work 定时任务 webhook 与分享、Admin plugin、Codex 重复工作实践文章、Jalapeño 首批测量结果——均只有自然日、没有精确时刻，本页保守列入“日期未确认”。o3 于 8 月 26 日从 ChatGPT 退役是较旧公告在本日生效，API 不受影响。社区侧窗口内 Codex 官方仓库 issue 候选达到 203 条，本页仅保留九条具有明确复现、对照或多报告交叉印证的代表性观察，均不能外推为 OpenAI 已确认缺陷。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.150.0-alpha.10 至 alpha.13 预发布**；均无逐项 release notes | [alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)、[alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)、[alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13) |
+| Codex CLI | **0.150.0 稳定版发布**；附完整功能与修复 changelog，此前 alpha.10 至 alpha.13 均无逐项说明 | [0.150.0](https://github.com/openai/codex/releases/tag/rust-v0.150.0)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)、[alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)、[alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13) |
 | VS Code / JetBrains 集成 | 无官方新增；JetBrains 终端重绘个案未列为产品更新 | 官方文档与仓库 |
 | Codex cloud / remote tasks / PR agents | 无官方 changelog 新增；PR Review 不可解析 SHA、跨主机权限与线程恢复问题见观察池 | 官方 changelog、GitHub issue |
 | ChatGPT agentic mode / Work | **8 月 25 日 Release Notes 新增 webhook 触发与定时任务分享**，但精确时刻未确认 | 日期未确认 |
@@ -87,6 +88,10 @@ tags:
 Enterprise / Business 侧，OpenAI 于 8 月 25 日介绍 Admin plugin，可在 ChatGPT Work 与 Codex 中按既有角色权限查看使用情况、管理成员与访问、处理额度和支出请求；因页面没有精确时刻，列入“日期未确认”。Edu、Gov、Science、安全与其他行业方案未发现窗口内可精确核验的新发布。Jalapeño 推理芯片测量结果属于基础设施邻近信号，同样因缺少精确时刻保守收录。
 
 ## 官方更新（新到旧）
+
+### Codex CLI 0.150.0（稳定版）
+
+官方 [GitHub 发布页](https://github.com/openai/codex/releases/tag/rust-v0.150.0) 显示稳定版于 **2026-08-27 03:37 +08:00** 发布。官方列出的主要新增包括在终端以 `@` 引用和管理其他 Codex 任务、`/copy` 内容选择器、自动任务标题与 `/rename` 建议、支持终端中的可点击 Markdown 链接、权限模式快捷键、Vim 点重复和 Interrupt hooks；修复覆盖不可信项目指令隔离、凭据脱敏、远程 MCP token、Windows sandbox 与 Unicode 路径、Unix 关停，以及 Amazon Bedrock 的 compaction / multi-agent 兼容性。
 
 ### Codex CLI 0.150.0-alpha.10 至 alpha.13（预发布）
 
@@ -136,27 +141,28 @@ Codex 官方仓库在窗口内出现大量故障报告，其中 Windows 26.820 �
 
 ## 来源链接
 
-1. [Codex CLI 0.150.0-alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)
-2. [Codex CLI 0.150.0-alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)
-3. [Codex CLI 0.150.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)
-4. [Codex CLI 0.150.0-alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13)
-5. [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453/chatgpt-release-notes)
-6. [Admin plugin for ChatGPT Work and Codex](https://openai.com/index/introducing-admin-plugin/)
-7. [Automating repetitive work with Codex](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
-8. [Jalapeño first results](https://openai.com/index/jalapeno-first-results/)
-9. [Windows Desktop startup regression](https://github.com/openai/codex/issues/40752)
-10. [PR Review unresolvable SHA](https://github.com/openai/codex/issues/40755)
-11. [WSL invalid transport report](https://github.com/openai/codex/issues/40829)
-12. [Second WSL transport report](https://github.com/openai/codex/issues/40894)
-13. [Enterprise deny_read timeout](https://github.com/openai/codex/issues/40831)
-14. [Usage reset not refreshing](https://github.com/openai/codex/issues/40862)
-15. [Unexpected API-key billing report](https://github.com/openai/codex/issues/40871)
-16. [Full-history fork loses tools after compaction](https://github.com/openai/codex/issues/40890)
-17. [Windows + WSL smoke-test proposal](https://github.com/openai/codex/issues/40875)
+1. [Codex CLI 0.150.0](https://github.com/openai/codex/releases/tag/rust-v0.150.0)
+2. [Codex CLI 0.150.0-alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)
+3. [Codex CLI 0.150.0-alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)
+4. [Codex CLI 0.150.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)
+5. [Codex CLI 0.150.0-alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13)
+6. [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453/chatgpt-release-notes)
+7. [Admin plugin for ChatGPT Work and Codex](https://openai.com/index/introducing-admin-plugin/)
+8. [Automating repetitive work with Codex](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex)
+9. [Jalapeño first results](https://openai.com/index/jalapeno-first-results/)
+10. [Windows Desktop startup regression](https://github.com/openai/codex/issues/40752)
+11. [PR Review unresolvable SHA](https://github.com/openai/codex/issues/40755)
+12. [WSL invalid transport report](https://github.com/openai/codex/issues/40829)
+13. [Second WSL transport report](https://github.com/openai/codex/issues/40894)
+14. [Enterprise deny_read timeout](https://github.com/openai/codex/issues/40831)
+15. [Usage reset not refreshing](https://github.com/openai/codex/issues/40862)
+16. [Unexpected API-key billing report](https://github.com/openai/codex/issues/40871)
+17. [Full-history fork loses tools after compaction](https://github.com/openai/codex/issues/40890)
+18. [Windows + WSL smoke-test proposal](https://github.com/openai/codex/issues/40875)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Global Affairs、OpenAI Developers 与开发者博客、ChatGPT Release Notes、API / Codex changelog、模型与弃用文档、Responses / Realtime / Assistants 迁移资料、Codex 全产品入口、OpenAI Status、五个官方 GitHub Releases、Codex issue、Reddit 五个社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（新帖时间与正文访问不稳定，未形成可精确核时的正面样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：228；最终保留来源：17。
+- 初始候选：271；最终保留来源：18。
 - 二次补搜：否（最终来源不为 0）。

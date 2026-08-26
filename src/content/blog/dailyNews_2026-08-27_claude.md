@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-27T00:00:00+08:00"
-updatedAt: "2026-08-27T01:05:00+08:00"
+updatedAt: "2026-08-27T04:01:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.246"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
@@ -12,17 +12,21 @@ tags:
   - "观察池"
   - "Agent"
   - "Anthropic"
+  - "Bedrock"
   - "Claude"
   - "Claude Code"
   - "Community"
+  - "Developer Platform"
   - "Hate"
   - "Plugins"
+  - "SDK"
   - "Security"
+  - "Tools"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-26 01:02 至 2026-08-27 01:02（Asia/Shanghai）**。窗口内确认到一项 Claude Code 官方更新：`v2.1.246` 集中改善后台会话、非交互执行、插件、MCP、权限与安全边界。Anthropic Newsroom、Claude Blog 与 Help Center 在本窗口内未见新的产品公告。社区样本偏负面，但证据仅来自一条讨论串中的单用户反馈，不能据此推断整体质量变化。
+采集窗口：**2026-08-26 04:01 至 2026-08-27 04:01（Asia/Shanghai）**。窗口内累计确认四项值得保留的官方来源：Claude Code `v2.1.246`，以及 8 月 27 日凌晨发布的 Python SDK `v1.1.0`、TypeScript SDK `v0.121.0` 和 Bedrock SDK `v0.33.2`。两套主 SDK 新增 `updates` thinking display mode、Organization API 支持，并修复工具运行器遇到 `pause_turn` 时过早停止；TypeScript 版另支持 Standard Schema。Bedrock SDK 修复了环境中的第一方凭证可能被发送到 Mantle endpoint 的边界。Anthropic Newsroom、Claude Blog 与 Help Center 在本窗口内未见新的产品公告。社区样本偏负面，但证据仅来自一条讨论串中的单用户反馈，不能据此推断整体质量变化。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -32,8 +36,8 @@ tags:
 | VS Code / JetBrains 集成 | **有相关修复** | 同一版本修复 VS Code 恢复会话时 permission/plan mode 状态丢失；JetBrains 未见独立新增。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | **有相关修复** | 同一版本修复后台会话启动、重复命名、云端并发启动串入其他 worktree 未提交改动等问题；未见 webhook、environment 或 memory store 独立公告。 |
 | Skills 与 marketplaces | **有相关修复** | 同一版本修复插件缓存重复目录、技能名前缀重复、裸名更新、BOM manifest、reload 计数和 marketplace 损坏时的错误处理。 |
-| Claude Developer Platform | 无新增 | 已查官方公告、文档与模型页，窗口内无独立发布。 |
-| Agent SDK | **有相关修复** | 非交互 `-p`、SDK 与云会话在流式连接中断时可自动续接；未见 SDK 独立版本公告。 |
+| Claude Developer Platform | **有 SDK 更新** | Python SDK `v1.1.0` 与 TypeScript SDK `v0.121.0` 新增 beta `updates` thinking display mode、Organization API 支持与缺失的 beta 枚举；TypeScript 版另支持 Standard Schema。 |
+| Agent SDK | **有相关修复** | Python/TypeScript SDK 工具运行器在收到 `pause_turn` 时继续运行；两版文档也澄清 beta session thread agent 与 compaction 字段。Claude Code 非交互、SDK 与云会话在流式连接中断时可自动续接。 |
 | Claude Cowork | 无新增 | 已查官方公告与帮助中心。 |
 | Claude Design | 未确认 | 未在 Anthropic/Claude 官方入口确认名为“Claude Design”的独立产品或窗口内更新。 |
 | Tag / @Claude sessions | 无新增 | 已查 Claude Tag 与 GitHub `@claude` 相关入口。 |
@@ -52,9 +56,15 @@ tags:
 
 ## Tier 3：垂直领域
 
-Security、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持均已逐项检查官方公告。本窗口内未见独立发布；`v2.1.246` 的安全相关变化包括对危险 Bash allow rule 的启动警告、畸形 `&&`/`||` 命令强制审批，以及避免把第三方网关 API key 随遥测发送到 Anthropic。
+Security、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持均已逐项检查官方公告。本窗口内未见垂直行业独立发布。安全相关变化除 `v2.1.246` 对危险 Bash allow rule、畸形 shell 连接符与第三方网关 API key 的边界强化外，Bedrock SDK `v0.33.2` 还修复了绝不向 Mantle endpoint 发送 ambient first-party credentials 的问题。
 
 ## 官方更新（由新到旧）
+
+### Anthropic SDK：thinking 展示、Organization API 与工具循环更新
+
+- [TypeScript SDK v0.121.0](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.121.0) 于 2026-08-27 01:24（上海时间）发布，新增 beta `updates` thinking display mode、Organization API、Standard Schema，并使 tool runner 在 `pause_turn` 后继续。
+- [Python SDK v1.1.0](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0) 于 2026-08-27 01:14（上海时间）发布，覆盖同一批 thinking、Organization API 与 tool runner 变化。
+- [Bedrock SDK v0.33.2](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.2) 于 2026-08-27 01:24（上海时间）发布，修复 ambient first-party credentials 被发送到 Mantle endpoint 的风险边界。同期 Vertex 与 Google Cloud 包只有示例维护，没有单列为实质来源。
 
 ### Claude Code v2.1.246：后台 Agent、插件与安全边界集中修复
 
@@ -95,13 +105,16 @@ Reddit 的 [Performance and Bugs Discussion Hub](https://www.reddit.com/r/Claude
 
 ## 来源链接
 
-1. [Claude Code v2.1.246 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) — Anthropic / GitHub，官方版本说明。
-2. [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1vwxe6p/performance_and_bugs_discussion_hub_updated_on_24/) — r/ClaudeAI，社区观察样本。
+1. [TypeScript SDK v0.121.0](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.121.0) — Anthropic / GitHub，官方版本说明。
+2. [Python SDK v1.1.0](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0) — Anthropic / GitHub，官方版本说明。
+3. [Bedrock SDK v0.33.2](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/bedrock-sdk-v0.33.2) — Anthropic / GitHub，官方版本说明。
+4. [Claude Code v2.1.246 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) — Anthropic / GitHub，官方版本说明。
+5. [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1vwxe6p/performance_and_bugs_discussion_hub_updated_on_24/) — r/ClaudeAI，社区观察样本。
 
 ## 采集状态
 
-- **已检查来源：** Anthropic Newsroom、Claude Blog、Help Center Release Notes、Claude Code GitHub Releases/CHANGELOG/commits、Developer Platform 与 Agent SDK 入口、各 Tier 产品关键词，以及 Reddit、Hacker News、X、YouTube 和可信二手搜索。
+- **已检查来源：** Anthropic Newsroom、Claude Blog、Help Center Release Notes、Claude Code GitHub Releases/CHANGELOG/commits、Python/TypeScript/Bedrock/Vertex/Google Cloud SDK Releases、Developer Platform 与 Agent SDK 入口、各 Tier 产品关键词，以及 Reddit、Hacker News、X、YouTube 和可信二手搜索。
 - **失败来源：** X 未提供可稳定复核的窗口内原帖时间与互动数据；Hacker News 和 YouTube 未检出可核验的新条目。
-- **初始候选数：** 5。
-- **保留来源数：** 2（官方 1、社区观察 1）。
+- **初始候选数：** 8。
+- **保留来源数：** 5（官方 4、社区观察 1）。
 - **二次补搜：** 否；最终来源不为 0。
