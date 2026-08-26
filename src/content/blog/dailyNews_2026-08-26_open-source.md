@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T10:02:00+08:00"
+updatedAt: "2026-08-26T13:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Uncovering a universal offline sandbox escape"
 featuredUrl: "https://www.primeintellect.ai/blog/universal-offline-sandbox-escape"
@@ -13,15 +13,18 @@ featuredImageAlt: "Prime Intellect 离线 Agent 沙箱逃逸研究的官方题�
 featuredImageCaption: "图片来源：Prime Intellect 官方技术博客"
 tags:
   - "观察池"
+  - "旧文再讨论"
   - "日期未确认"
   - "Agent"
   - "AI"
   - "Architecture"
   - "Authentication"
+  - "Claude Desktop"
   - "CLI"
   - "Cline"
   - "Coding Agent"
   - "Compaction"
+  - "Context Management"
   - "Developer Tools"
   - "Evaluation"
   - "FOSS"
@@ -35,6 +38,7 @@ tags:
   - "MCP"
   - "Memory"
   - "Multi-Agent"
+  - "Ollama"
   - "Open Source"
   - "OpenCode"
   - "Pi"
@@ -53,7 +57,7 @@ tags:
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-25 07:02 至 2026-08-26 10:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截至 10:02 强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现晚于 07:02 上轮扫描的新官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。
+本页发现窗口为 **2026-08-25 13:01 至 2026-08-26 13:01（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截至 13:01 强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现新的窗口内官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。Ollama 新增了 Claude Desktop 对本地模型与 Anthropic-compatible API 的接入说明。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。
 
 ## Coding Agent / Harness 雷达
 
@@ -94,13 +98,17 @@ tags:
 
 官方说明修复第三方 provider 经 Cloudflare AI Gateway REST API 的路由、Anthropic 点号模型 ID 到原生 slug 的转换，以及不应发送给 session-aware provider 的父会话请求头；TUI 同时修复不可变 OIDC subject token 的 GitHub 认证。这些是兼容性修复，不代表性能提升。[官方 Release](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)，2026-08-25 14:30 +08:00。
 
+### Ollama：Claude Desktop 可调用本地开放模型
+
+Ollama 官方说明，Claude Desktop 现在可通过其原生 Anthropic-compatible API 连接本地模型；设置中启用高级选项并配置 Ollama endpoint 后，可在模型选择器中使用支持的本地模型。文章还给出 `qwen3-coder-next`、`glm-4.7-flash` 等示例及上下文长度配置提示。这里仅确认接入方式，不推断模型质量或兼容所有 Claude 功能。[官方文章](https://ollama.com/blog/claude-desktop)，2026-08-25；[HN 提交](https://news.ycombinator.com/item?id=49444111) 于 2026-08-26 12:05 +08:00。
+
 ## GitHub Trending
 
 已检查综合、Python 与 TypeScript 入口，但页面未稳定给出可复核的当日排名和日增星数，因此不记录或推断 Trending 指标。
 
 ## HN 讨论
 
-Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436787) 于 2026-08-26 00:35 +08:00 出现，扫描时 1 point / 0 comments；nolabs 综述的 [HN 提交](https://news.ycombinator.com/item?id=49436558) 于 00:21 +08:00 出现，扫描时 2 points / 0 comments。增量窗口还出现 LIGH、slash-tokens 与 MREA 的低互动提交，详见观察池。互动数字仅是发现时快照，不支持采用趋势。
+Prime Intellect 文章的 [HN 提交](https://news.ycombinator.com/item?id=49436787) 于 2026-08-26 00:35 +08:00 出现，扫描时 1 point / 0 comments；nolabs 综述的 [HN 提交](https://news.ycombinator.com/item?id=49436558) 于 00:21 +08:00 出现，扫描时 2 points / 0 comments。增量窗口还出现 Ollama 的 Claude Desktop 本地模型接入，以及 LIGH、slash-tokens 与 MREA 的低互动提交；后 3 项详见观察池。互动数字仅是发现时快照，不支持采用趋势。
 
 ## 论文 / 研究
 
@@ -114,7 +122,9 @@ SMITH（Schema-grounded Multi-task Iterative Tool Honing）让同一策略交替
 
 ## 旧文再讨论
 
-未发现原文超过七天、但在过去 24 小时重新获得明确 HN 讨论的合格条目。
+### Agentic Context Management：把记忆、压缩与成本视作生命周期
+
+这篇 7 月 23 日论文把生产 Agent 的上下文管理拆成 architecting、ingesting、scoping、anticipating、compacting & consolidation 五类原语，并讨论上下文累积带来的 token 成本。论文还报告其参考实现的 LongMemEval / LoCoMo 结果，但属于作者实验，尚不作为通用性能结论。[arXiv 原文](https://arxiv.org/abs/2607.21503)，2026-07-23；[HN 再讨论](https://news.ycombinator.com/item?id=49443523) 于 2026-08-26 10:35 +08:00，扫描时 9 points / 3 comments。
 
 ## 日期未确认
 
@@ -150,11 +160,15 @@ SMITH（Schema-grounded Multi-task Iterative Tool Honing）让同一策略交替
 19. [MREA 的 HN 提交](https://news.ycombinator.com/item?id=49440302)
 20. [SMITH 论文](https://arxiv.org/abs/2608.24571)
 21. [SMITH 的 HN 提交](https://news.ycombinator.com/item?id=49443118)
+22. [Ollama：Claude Desktop support](https://ollama.com/blog/claude-desktop)
+23. [Ollama 文章的 HN 提交](https://news.ycombinator.com/item?id=49444111)
+24. [Agentic Context Management 论文](https://arxiv.org/abs/2607.21503)
+25. [论文的 HN 再讨论](https://news.ycombinator.com/item?id=49443523)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Prime Intellect、nolabs 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；SFC 原文未显示发布日期。
-- 初始候选数：59。
-- 最终保留来源数：21。
+- 初始候选数：74。
+- 最终保留来源数：25。
 - 二次补搜：否（最终来源不为 0）。
