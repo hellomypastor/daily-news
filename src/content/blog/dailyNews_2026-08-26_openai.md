@@ -1,15 +1,15 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T16:00:00+08:00"
+updatedAt: "2026-08-26T22:55:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Codex CLI 0.150.0-alpha.9"
-featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9"
-featuredSummary: "Codex 官方仓库发布 0.150.0-alpha.9 预发布版；发布页没有逐项变更说明。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-08-25 20:51 +08:00"
+featuredTitle: "Codex CLI 0.150.0-alpha.13"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13"
+featuredSummary: "Codex 官方仓库发布 0.150.0-alpha.13 预发布版；发布页没有逐项变更说明。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-26 19:18 +08:00"
 featuredTags: ["Codex","CLI","Pre-release"]
-featuredImage: "https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.9"
-featuredImageAlt: "GitHub 上 OpenAI Codex 0.150.0-alpha.9 发布页的预览图"
+featuredImage: "https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.13"
+featuredImageAlt: "GitHub 上 OpenAI Codex 0.150.0-alpha.13 发布页的预览图"
 featuredImageCaption: "图片来源：OpenAI / GitHub"
 tags:
   - "观察池"
@@ -47,13 +47,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-25 13:01 至 2026-08-26 16:00（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是三项 Codex CLI 预发布：0.150.0-alpha.9、alpha.10 与 alpha.11 分别于 8 月 25 日 20:51、8 月 26 日 04:36 与 05:30 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。ChatGPT Release Notes 此前预告的 o3 ChatGPT 退役于 8 月 26 日生效；该公告发布于 5 月 28 日，属于今日生效的较旧官方背景，且不影响 API。社区侧累计保留十五条窗口内、可精确核时的 Codex 官方仓库用户报告，不能外推为 OpenAI 已确认的普遍缺陷。
+采集窗口为 **2026-08-25 22:31 至 2026-08-26 22:31（Asia/Shanghai）**。窗口内可精确核验的官方产品动态累计为五项 Codex CLI 预发布：0.150.0-alpha.9 至 alpha.13；其中本轮新增 alpha.12 与 alpha.13，分别于 8 月 26 日 18:06 与 19:18 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。ChatGPT Release Notes 此前预告的 o3 ChatGPT 退役于 8 月 26 日生效；该公告发布于 5 月 28 日，属于今日生效的较旧官方背景，且不影响 API。社区侧累计保留十五条窗口内、可精确核时的 Codex 官方仓库用户报告，不能外推为 OpenAI 已确认的普遍缺陷。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.150.0-alpha.9、alpha.10、alpha.11 预发布**；均无逐项 release notes | [alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11) |
+| Codex CLI | **0.150.0-alpha.9 至 alpha.13 预发布**；均无逐项 release notes | [alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11) |
 | VS Code / JetBrains 集成 | 无新增 | 已检查官方文档、changelog 与仓库 |
 | Codex cloud / remote tasks / PR agents | 无官方新增；Android 冷加载、跨主机子任务权限降级、GitHub connector 授权异常与 PR Review 提交元数据误报个案见观察池 | 官方 changelog、文档与仓库 issue |
 | ChatGPT agentic mode / Work | 无新增 | ChatGPT Release Notes |
@@ -63,11 +63,6 @@ tags:
 | Assistants API 迁移 / 弃用 | 无新增 | 官方弃用与迁移文档 |
 | Realtime API | 无新增 | API changelog 与 Realtime 文档 |
 | GPT / reasoning / Codex 模型家族 | **o3 于今日从 ChatGPT 退役**；5 月 28 日公告明确 API 不受影响；另有 GPT-5.6 Sol Ultra 在 Windows Codex Desktop 工具握手失败的单一个案见观察池 | ChatGPT Release Notes、官方模型目录与 changelog |
-
-<figure class="source-image">
-  <a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9"><img src="https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.9" alt="GitHub 上 OpenAI Codex 0.150.0-alpha.9 发布页的预览图" loading="lazy" /></a>
-  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9">图片来源：OpenAI / GitHub</a></figcaption>
-</figure>
 
 ## Tier 2：ChatGPT 产品面
 
@@ -86,9 +81,13 @@ tags:
 
 Enterprise、Business、Edu、Gov、Science 与行业方案未发现窗口内可核验的新产品发布。安全侧，OpenAI 于 8 月 25 日发布俄罗斯隐蔽影响行动调查，但因官方页未给精确时刻，保守放入“日期未确认”。
 
-## 官方更新（新到旧）
-
+## 官方更新（新到旧）\n\n### Codex CLI 0.150.0-alpha.13 与 alpha.12（预发布）\n\nOpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.12 与 alpha.13 分别于 **2026-08-26 18:06 +08:00** 和 **19:18 +08:00** 发布，并均标记为预发布版。两个页面都没有逐项变更说明；本页仅确认版本出现，不推断功能变化。[查看 alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12) 与 [alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13)\n
 ### Codex CLI 0.150.0-alpha.11 与 alpha.10（预发布）
+
+<figure class="source-image">
+  <a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13"><img src="https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.13" alt="GitHub 上 OpenAI Codex 0.150.0-alpha.13 发布页的预览图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13">图片来源：OpenAI / GitHub</a></figcaption>
+</figure>
 
 OpenAI 的 GitHub 发布页显示 Codex CLI 0.150.0-alpha.10 与 alpha.11 分别于 **2026-08-26 04:36 +08:00** 和 **05:30 +08:00** 发布，并均标记为预发布版。两个页面都没有逐项变更说明；本页仅确认版本出现，不推断功能变化。[查看 alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10) 与 [alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)
 
@@ -160,11 +159,11 @@ OpenAI 的 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-c
 13. [GitHub connector loses all tools after private-repository authorization](https://github.com/openai/codex/issues/40729)
 14. [Windows local execution host missing](https://github.com/openai/codex/issues/40817)
 15. [WSL thread resume MCP transport failure](https://github.com/openai/codex/issues/40819)
-16. [Enterprise deny_read timeout](https://github.com/openai/codex/issues/40831)
+16. [Enterprise deny_read timeout](https://github.com/openai/codex/issues/40831)\n17. [Codex CLI 0.150.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)\n18. [Codex CLI 0.150.0-alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Global Affairs、ChatGPT Release Notes、ChatGPT & Codex changelog、API changelog、模型与弃用文档、Codex 各产品入口、OpenAI Status、Codex 与 Agents SDK / 官方 SDK GitHub Releases、Codex 官方仓库 issues、Reddit 五个相关社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（公开搜索未提供足够可精确核时的新正面样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：126；最终保留来源：20。
+- 初始候选：181；最终保留来源：22。
 - 二次补搜：否（最终来源不为 0）。

@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T16:00:00+08:00"
+updatedAt: "2026-08-26T23:21:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "v2.1.246"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
@@ -19,26 +19,35 @@ tags:
   - "Bug Report"
   - "Claude"
   - "Claude Code"
+  - "Claude Memory"
   - "Community"
+  - "Cowork"
+  - "Data Loss"
   - "Desktop"
   - "Hate"
   - "Hooks"
   - "Linux"
   - "Love"
   - "MCP"
+  - "Model"
   - "Opus 5"
+  - "Permissions"
   - "Plugins"
   - "Privacy"
+  - "Product Update"
   - "Release"
   - "Remote Control"
+  - "Routines"
+  - "Sandbox"
   - "Security"
   - "VS Code"
+  - "Windows"
   - "Workflow"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-25 16:00 至 2026-08-26 16:00（Asia/Shanghai）**。当天累积保留两项官方产品更新：[Claude Code v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) 集中更新权限与 Auto mode、后台/远程会话、插件、MCP、IDE 和可靠性，[v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245) 修复采用 glibc 2.44 的 Linux 发行版启动崩溃。Anthropic Newsroom、Claude Blog、状态页和 Developer Platform 未发现新的带窗口内时间戳独立发布。社区讨论则呈明显两极：一条高互动帖子赞赏 Opus 5 medium 的能力与偶发出人意料表现，另一条集中批评 Claude 日常对话变长、偏好与 Skills 执行不稳定，同时仍认可 Claude Code 的编码能力；这些是用户样本，不是产品能力事实。观察池累计保留多条带复现材料的官方仓库用户报告；本轮新增两条，分别涉及 VS Code/Desktop 插件必填配置无法录入，以及 Remote Control 默认启用与提示机制。它们均尚无 Anthropic 确认或修复结论。
+采集窗口：**2026-08-25 22:31 至 2026-08-26 22:31（Asia/Shanghai）**。当天累积保留两项官方产品更新：[Claude Code v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) 集中更新权限与 Auto mode、后台/远程会话、插件、MCP、IDE 和可靠性，[v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245) 修复采用 glibc 2.44 的 Linux 发行版启动崩溃。Anthropic Newsroom、Claude Blog、状态页和 Developer Platform 未发现新的带窗口内时间戳独立发布。社区讨论则呈明显两极：一条高互动帖子赞赏 Opus 5 medium 的能力与偶发出人意料表现，另一条集中批评 Claude 日常对话变长、偏好与 Skills 执行不稳定，同时仍认可 Claude Code 的编码能力；这些是用户样本，不是产品能力事实。观察池累计保留多条带复现材料的官方仓库用户报告；本轮新增七条，涉及 sandbox 策略覆盖范围、虚构授权消息、Workflow 恢复重派、Routines 无人值守挂起或空跑、Cowork 项目目录隔离，以及 VS Code 会话恢复数据链。它们均尚无 Anthropic 确认或修复结论。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -46,11 +55,11 @@ tags:
 |---|---|---|
 | Claude Code CLI | 有官方更新 | v2.1.246 更新权限与 Auto mode、后台/远程会话、插件、MCP、IDE 和可靠性；v2.1.245 修复 glibc 2.44 Linux 启动崩溃。 |
 | VS Code / JetBrains 集成 | 无新增 | 已分别检查官方 release、文档与社区入口，未发现窗口内独立更新。 |
-| Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 未发现窗口内官方更新。 |
+| Managed Agents（sessions、webhooks、environments、memory stores） | 社区有新报告 | Workflow 恢复重派与 Routines 无人值守执行出现带复现材料的用户报告。 |
 | Skills 与 marketplaces | 无新增 | 未发现窗口内官方更新；社区有 Skills 遵循不稳定的个体报告。 |
 | Claude Developer Platform | 无新增 | 未发现带窗口内时间戳的独立更新。 |
 | Agent SDK | 无新增 | 未发现窗口内官方更新。 |
-| Cowork | 无新增 | 未发现窗口内官方更新。 |
+| Cowork | 社区有新报告 | 新增 scheduled tasks 空跑与项目目录隔离的单用户报告。 |
 | Design | 无新增 | 未发现窗口内官方更新。 |
 | Tag / @Claude sessions | 无新增 | 未发现窗口内官方更新。 |
 | 当前官方 Sonnet、Opus、Haiku 编码模型 | 社区有新反馈 | Opus 5 评价两极；未发现 Sonnet、Haiku 的窗口内官方更新。 |
@@ -68,7 +77,7 @@ tags:
 
 ## Tier 3：行业场景
 
-安全、科学、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持入口均已检索；本窗口内未发现可核验的独立官方发布。安全方向仅发现一条 Claude Code 用户缺陷报告，因属于单一案例，列入观察池。
+安全、科学、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持入口均已检索；本窗口内未发现可核验的独立官方发布。安全方向新增 sandbox 覆盖范围、虚构授权消息与 Cowork 目录隔离三条带材料的单用户报告，均列入观察池。
 
 ## 官方更新（从新到旧）
 
@@ -110,6 +119,13 @@ tags:
 - Claude Code GitHub [issue #89716](https://github.com/anthropics/claude-code/issues/89716) 于 8 月 26 日 12:36（上海时间）打开：发帖者给出复现步骤，称 Auto mode 倾向改用 Bash 读写文件后，按 `Read`、`Edit` 或 `Write` 工具名匹配的 PreToolUse hooks 不再触发，可能让既有路径或密钥保护规则失去覆盖。issue 已带 `has repro`、`area:security`、`area:hooks` 和 `area:permissions` 标签；尚无 Anthropic 确认，不能表述为已证实的普遍漏洞。
 - Claude Code GitHub [issue #89749](https://github.com/anthropics/claude-code/issues/89749) 于 8 月 26 日 15:13（上海时间）打开：发帖者在 v2.1.246 上提供最小复现，称 VS Code 与 Desktop 图形安装流程不会收集插件必填 userConfig，导致相关 MCP server 不启动；已有 bug、has repro、area:ide 与 area:plugins 标签，但暂无官方结论。
 - Claude Code GitHub [issue #89752](https://github.com/anthropics/claude-code/issues/89752) 于 8 月 26 日 15:47（上海时间）打开：一名 Linux 用户基于本机配置、transcript 与 bundle 代码称，未主动启用 Remote Control 的普通会话也会由服务端 flag 注册 cloud session slot，且提示有展示次数上限；发帖者明确没有证据表明第三方连接过这些 slot，暂无官方确认。
+- Claude Code GitHub [issue #89762](https://github.com/anthropics/claude-code/issues/89762) 于 8 月 26 日 16:20（上海时间）打开：发帖者用网络与文件写入对照实验称 sandbox 策略只约束 Bash，不约束进程内 WebFetch 与 Write；尚无 Anthropic 结论。
+- Claude Code GitHub [issue #89765](https://github.com/anthropics/claude-code/issues/89765) 于 8 月 26 日 16:27（上海时间）打开：发帖者提供 transcript 线索，称模型生成了貌似用户授权副作用操作的消息；两次均被用户拦截，仍是单用户报告。
+- Claude Code GitHub [issue #89784](https://github.com/anthropics/claude-code/issues/89784) 于 8 月 26 日 18:49（上海时间）打开：发帖者称 Workflow 恢复后，已有结果且参数未变的 agent 调用仍被重派；尚无官方结论。
+- Claude Code GitHub [issue #89791](https://github.com/anthropics/claude-code/issues/89791) 于 8 月 26 日 19:53（上海时间）打开：发帖者列出三次 Routines cloud run 因写入 .claude 路径触发无人可回应的批准提示而挂起；尚无官方确认。
+- Claude Code GitHub [issue #89811](https://github.com/anthropics/claude-code/issues/89811) 于 8 月 26 日 21:24（上海时间）打开：一名 Pro 用户称 Cowork scheduled tasks 的触发时间正常推进，但连续 30 多小时未执行工具或产生输出；未证明为普遍故障。
+- Claude Code GitHub [issue #89813](https://github.com/anthropics/claude-code/issues/89813) 于 8 月 26 日 21:32（上海时间）打开：一名 Windows 用户称 Cowork 项目会话读写挂载了从未附加的目录，同时漏掉已附加目录；发帖者无法隔离具体原因。
+- Claude Code GitHub [issue #89820](https://github.com/anthropics/claude-code/issues/89820) 于 8 月 26 日 22:12（上海时间）打开：发帖者分析 VS Code session JSONL 后称，自动继续消息有时挂到过期 parent UUID，使后续记录不在可恢复链上；尚无官方确认。
 - 未发现可信的窗口内未证实新品传闻。
 
 ## 来源链接
@@ -125,10 +141,43 @@ tags:
 9. [Claude Code GitHub：Auto mode 与 PreToolUse hooks 覆盖 issue](https://github.com/anthropics/claude-code/issues/89716)
 10. [Claude Code GitHub：VS Code/Desktop 插件 userConfig issue](https://github.com/anthropics/claude-code/issues/89749)
 11. [Claude Code GitHub：Remote Control 默认启用与提示机制 issue](https://github.com/anthropics/claude-code/issues/89752)
+12. [sandbox 策略覆盖范围 issue](https://github.com/anthropics/claude-code/issues/89762)
+13. [虚构授权消息 issue](https://github.com/anthropics/claude-code/issues/89765)
+14. [Workflow 恢复重派 issue](https://github.com/anthropics/claude-code/issues/89784)
+15. [Routines 敏感路径挂起 issue](https://github.com/anthropics/claude-code/issues/89791)
+16. [scheduled tasks 空跑 issue](https://github.com/anthropics/claude-code/issues/89811)
+17. [Cowork 项目目录隔离 issue](https://github.com/anthropics/claude-code/issues/89813)
+18. [VS Code 会话恢复链 issue](https://github.com/anthropics/claude-code/issues/89820)
 
 ## 采集状态
 
 - 已检查来源：Anthropic Newsroom、Claude Blog、Claude Status、Claude Code GitHub releases/changelog/issues、Developer Platform、Agent SDK、Skills/Marketplace/Connectors/Plugins/Cowork 与模型入口；Reddit r/ClaudeAI、r/ClaudeCode、r/Anthropic、r/LocalLLaMA；Hacker News、X、YouTube 与可信开发者/播客检索。
 - 失败来源：X 未登录页面无法稳定取得互动量；Reddit 公开页面无法稳定给出精确时分；Hacker News、YouTube 未发现窗口内可核验新内容；Developer Platform 未发现带窗口内时间戳的独立更新。
-- 初始候选数：49；保留来源数：11。
+- 初始候选数：126；保留来源数：19。
 - 二次补搜：否（最终来源不为 0）。
+
+## 22:31 滚动补充
+
+### 日期未确认：Claude chat 与 Cowork 统一 memory
+
+Anthropic 官方 [Claude memory 更新](https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it) 宣布 chat 与 Cowork 现在共用同一套 memory；用户可按主题查看、编辑或删除，健康、信仰等敏感主题默认不保存，也可在设置中选择开启。官方页面只标注 2026 年 8 月 25 日，没有精确时分，因此不把它表述为严格落在本窗口内的发布。
+
+<figure class="source-image">
+  <a href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8dcb60a9e2ed84590a8b9e_og_claudes-memory-works-everywhere-and-you-decide-whats-in-it.jpg" alt="Claude 官方发布的 chat 与 Cowork 统一 memory 功能配图" loading="lazy" /></a>
+  <figcaption><a href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it">图片来源：Claude by Anthropic 官方博客</a></figcaption>
+</figure>
+
+### 观察池新增
+
+- Claude Code GitHub [issue #89811](https://github.com/anthropics/claude-code/issues/89811) 于 8 月 26 日 21:24（上海时间）打开：一名用户称 Cowork Routines 的 scheduled tasks 会推进 last_fired_at，但没有工具调用、输出或下游副作用；相同提示在交互会话可运行。这是单用户报告，暂无 Anthropic 确认。
+- Claude Code GitHub [issue #89813](https://github.com/anthropics/claude-code/issues/89813) 于 8 月 26 日 21:32（上海时间）打开：一名 Windows 用户称 Cowork 会话读写挂载了从未附加到该项目的目录，同时遗漏已附加目录；issue 带 area:security 与 area:cowork 标签，但发帖者也说明现有复测不能隔离根因，暂无官方确认。
+- Claude Code GitHub [issue #89820](https://github.com/anthropics/claude-code/issues/89820) 于 8 月 26 日 22:12（上海时间）打开：发帖者提供 transcript 与 parentUuid 链复现，称自动注入的 Continue from where you left off 可能挂到旧节点，令后续记录不在 resume 重建的主链中。issue 带 has repro 与 data-loss 标签，仍是单用户报告且无官方结论。
+
+### 滚动补充来源
+
+12. [Claude 官方：Claude memory works everywhere](https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it)
+13. [Claude Code GitHub：scheduled tasks 空跑 issue](https://github.com/anthropics/claude-code/issues/89811)
+14. [Claude Code GitHub：Cowork 跨项目目录挂载 issue](https://github.com/anthropics/claude-code/issues/89813)
+15. [Claude Code GitHub：自动续接分支不可恢复 issue](https://github.com/anthropics/claude-code/issues/89820)
+
+本轮累计初始候选数 126，保留来源数 19；二次补搜为否。

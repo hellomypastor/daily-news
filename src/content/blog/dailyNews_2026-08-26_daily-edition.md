@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-08-26"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T16:05:00+08:00"
+updatedAt: "2026-08-26T23:27:00+08:00"
 description: "2026-08-26 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-26"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
@@ -26,11 +26,11 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[Codex CLI 0.150.0-alpha.9](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9)**。Codex 官方仓库发布 0.150.0-alpha.9 预发布版；发布页没有逐项变更说明。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Codex CLI 0.150.0-alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13)**。Codex 官方仓库发布 0.150.0-alpha.13 预发布版；发布页没有逐项变更说明。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 <figure class="source-image">
-  <a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9"><img src="https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.9" alt="GitHub 上 OpenAI Codex 0.150.0-alpha.9 发布页的预览图" loading="lazy" /></a>
-  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9">图片来源：OpenAI / GitHub</a></figcaption>
+  <a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13"><img src="https://opengraph.githubassets.com/1/openai/codex/releases/tag/rust-v0.150.0-alpha.13" alt="GitHub 上 OpenAI Codex 0.150.0-alpha.13 发布页的预览图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13">图片来源：OpenAI / GitHub</a></figcaption>
 </figure>
 
 [阅读完整专题日报](/blog/dailynews_2026-08-26_openai)
@@ -54,6 +54,6 @@ tags:
 
 ## AaaS（Agent-as-a-Service）行业动态日报
 
-托管 Agent、远程异步执行平台及其商业化与生态动态。
+**[FinOps for the AI era: New flexible billing and cost controls for agents](https://cloud.google.com/blog/products/ai-machine-learning/flexible-billing-and-cost-controls-for-agents-on-google-cloud)**。Google Cloud 为 Gemini Enterprise Agent 工作负载增加按量付费、统一管理、节省计划、月度上限与运行成本预估。 托管 Agent、远程异步执行平台及其商业化与生态动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-26_aaas)

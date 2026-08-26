@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T16:05:00+08:00"
+updatedAt: "2026-08-26T22:49:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Uncovering a universal offline sandbox escape"
 featuredUrl: "https://www.primeintellect.ai/blog/universal-offline-sandbox-escape"
@@ -51,6 +51,7 @@ tags:
   - "Policy"
   - "Provider"
   - "Reinforcement Learning"
+  - "Reliability"
   - "Reproducibility"
   - "Research"
   - "Sandbox"
@@ -65,13 +66,13 @@ tags:
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-25 13:01 至 2026-08-26 13:01（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，截至 13:01 强制检查的 Cline、Pi、DeepSeek Harness，以及 OpenCode、Aider、Continue、Roo Code 均未出现新的窗口内官方版本；本页仍按 48 小时规则保留 Cline Desktop、Pi v0.84.3 与 OpenCode v1.18.23。Ollama 新增了 Claude Desktop 对本地模型与 Anthropic-compatible API 的接入说明。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。13:01 后新增 MongoDB 的 AI 辅助数据库兼容层工程案例；Julia Bench 与 7 月的 DumpsterCluster 论文分别按观察池和旧文再讨论收录。
+本页发现窗口为 **2026-08-25 22:49 至 2026-08-26 22:49（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。最值得关注的是 Agent 沙箱的边界问题：Prime Intellect 复现了评测 Agent 借推理 API 的服务端联网能力突破所谓“离线”限制的路径，并说明 `verifiers` v0.3.1 已加入传播至拦截代理与 provider 的域名规则；nolabs 的安全综述则强调，microVM 外墙不能替代任务级凭据、文件挂载、网络出口与逐工具权限隔离。新发现的 Sillage 提供固定容量、无梯度模型记忆的代码、测试和结果文件，但性能数字仍是作者自报，尚无独立复现。Coding Agent 方面，Cline 在下午发布 Desktop v0.0.18 / v0.0.19、SDK v0.0.80 / v0.0.81 与主扩展 v4.1.16；本页以 Desktop v0.0.19 和 v4.1.16 两条官方证据合并记录长会话内存、工作区 hooks、凭据脱敏及 Marketplace 修复，避免重复拆分同一修复链。Pi、DeepSeek Harness、OpenCode、Aider、Continue 与 Roo Code 本轮未见更新。Ollama 新增了 Claude Desktop 对本地模型与 Anthropic-compatible API 的接入说明。增量 HN 发现的 LIGH、slash-tokens 与 MREA 均处于低采用度或缺少独立验证阶段，已保留在观察池。13:01 后新增 MongoDB 的 AI 辅助数据库兼容层工程案例；Julia Bench 与 7 月的 DumpsterCluster 论文分别按观察池和旧文再讨论收录。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 状态 | 关键变化 | 证据 |
 |---|---|---|---|
-| Cline | 已验证，48 小时内 | Desktop v0.0.17 统一 Plugins、MCP、Skills、Rules、Hooks 与 Tools，扩大全历史会话搜索并限制 hub event log 增长。 | [官方 Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)，2026-08-25 17:06 +08:00 |
+| Cline | 已验证，窗口内连续更新 | Desktop v0.0.19 / SDK v0.0.81 改为按需获取转录，避免状态事件复制完整长会话；v4.1.16 同步修复多工作区 hooks、凭据脱敏、MCP 安装与日志增长。 | [Desktop v0.0.19](https://github.com/cline/cline/releases/tag/desktop-v0.0.19)，2026-08-26 17:31 +08:00；[v4.1.16](https://github.com/cline/cline/releases/tag/v4.1.16)，16:42 +08:00 |
 | Pi Coding Agent | 已验证，48 小时内 | v0.84.3 增加可选 PowerShell 工具、`/thinking` 选择器、原子更新与 `session_compact_failed` 扩展事件。 | [官方 Release](https://github.com/earendil-works/pi/releases/tag/v0.84.3)，2026-08-24 19:09 +08:00 |
 | OpenCode | 已验证，48 小时内 | v1.18.23 修复 Cloudflare AI Gateway 的第三方 provider / Anthropic 模型路由及 OIDC 认证。 | [官方 Release](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)，2026-08-25 14:30 +08:00 |
 | DeepSeek Harness / DSH | 已检查，无窗口内新发布 | 最新可核验版本仍为 v0.1.1-rc.2，早于 48 小时起点；未重复写入旧背景来源。 | 官方仓库、Releases 与文档 |
@@ -97,6 +98,10 @@ tags:
 ### Cline Desktop v0.0.17：整合扩展入口并改善会话管理
 
 官方说明将 Plugins、MCP、Skills、Rules、Hooks 和 Tools 集中到 Customize，模型页按连接状态和认证方式整理，全历史会话搜索取代仅搜索已加载列表；同时移除 Agent todo / Agenda，并限制 hub event log 的磁盘增长。本文不据功能清单推断稳定性或采用度。[官方 Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)，2026-08-25 17:06 +08:00。
+
+### Cline Desktop v0.0.19 / v4.1.16：收紧长会话状态广播与工作区边界
+
+Desktop v0.0.19 将会话状态事件改为只携带状态、用量、模型、工作区和 checkpoint，完整转录改为按需获取；官方说明旧路径在多 MB 会话中会把后台进程推至数十 GB。同期 v4.1.16 修复多 VS Code 窗口间 hooks 错用共享工作区、超长单行文件搜索崩溃和 MCP Marketplace 参数解析，并对发送给模型的 Git remote URL 凭据脱敏。这些是发布方描述的缺陷与修复，不外推为普遍性能结论。[Desktop v0.0.19](https://github.com/cline/cline/releases/tag/desktop-v0.0.19)，2026-08-26 17:31 +08:00；[v4.1.16](https://github.com/cline/cline/releases/tag/v4.1.16)，2026-08-26 16:42 +08:00。
 
 ### Pi v0.84.3：把压缩失败与 Windows 工具纳入接口
 
@@ -162,6 +167,8 @@ SMITH（Schema-grounded Multi-task Iterative Tool Honing）让同一策略交替
 3. [nolabs：Agent 时代的沙箱分类](https://nolabs.ai/blog/sandbox-primer)
 4. [nolabs 文章的 HN 提交](https://news.ycombinator.com/item?id=49436558)
 5. [Cline Desktop v0.0.17](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)
+6. [Cline Desktop v0.0.19](https://github.com/cline/cline/releases/tag/desktop-v0.0.19)
+7. [Cline v4.1.16](https://github.com/cline/cline/releases/tag/v4.1.16)
 6. [Pi v0.84.3](https://github.com/earendil-works/pi/releases/tag/v0.84.3)
 7. [OpenCode v1.18.23](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)
 8. [SFC 的 FOSS / LLM 建议](https://sfconservancy.org/llm-gen-ai/llm-backed-generative-ai-recommendations.html)
@@ -193,6 +200,6 @@ SMITH（Schema-grounded Multi-task Iterative Tool Honing）让同一策略交替
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Prime Intellect、nolabs 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；SFC 原文未显示发布日期。
-- 初始候选数：91。
-- 最终保留来源数：31。
+- 初始候选数：112。
+- 最终保留来源数：33。
 - 二次补搜：否（最终来源不为 0）。

@@ -1,9 +1,13 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T16:05:00+08:00"
+updatedAt: "2026-08-26T23:27:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredTags: []
+featuredTitle: "FinOps for the AI era: New flexible billing and cost controls for agents"
+featuredUrl: "https://cloud.google.com/blog/products/ai-machine-learning/flexible-billing-and-cost-controls-for-agents-on-google-cloud"
+featuredSummary: "Google Cloud 为 Gemini Enterprise Agent 工作负载增加按量付费、统一管理、节省计划、月度上限与运行成本预估。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-08-26"
+featuredTags: ["Google Cloud","Gemini Enterprise","Agent Billing","AaaS"]
 tags:
   - "观察池"
   - "较旧背景"
@@ -11,17 +15,26 @@ tags:
   - "日期未确认"
   - "AaaS"
   - "Agent"
+  - "Agent Billing"
   - "Agent Infrastructure"
+  - "AgentArts"
   - "Airbyte Agents"
+  - "Background Tasks"
   - "Cloud Agent"
   - "Cloudflare"
   - "Cursor"
   - "DeepSeek Harness"
+  - "Enterprise"
+  - "Gemini Enterprise"
+  - "Google Cloud"
   - "Governance"
   - "Grok Bot"
   - "Grok Build"
+  - "Hosted Agent"
   - "Hosted App"
+  - "Legal Agent"
   - "Managed Agent"
+  - "Microsoft Foundry"
   - "Pi Coding Agent"
   - "Qoder"
   - "Self-hosted"
@@ -31,7 +44,7 @@ tags:
 
 ## 今日结论
 
-采集窗口：**2026-08-25 16:05 至 2026-08-26 16:05（Asia/Shanghai）**。本轮未发现可严格确认的 24 小时内托管执行型 AaaS 发布。已按要求扩大中英文关键词并切换官方新闻、文档/changelog、GitHub 和可信二手入口进行第二轮补搜。Airbyte 在窗口内新增两篇关于 Agent 权限化上下文、审计访问和外部业务状态的官方技术说明；它们是生产 Agent 的数据与治理基础设施，不负责托管 Agent 执行生命周期，因此列入邻近信号观察池。补充核验发现 8 月 21 日官方发布的 Grok Bot 扩展明确提供独立云电脑、离线持续执行、多 Bot 并行协作与跨应用操作，符合 AaaS 定义，但已超出 72 小时，因此仅作为较旧背景保留。
+采集窗口：**2026-08-25 22:31 至 2026-08-26 22:31（Asia/Shanghai）**。本轮未发现可严格确认的 24 小时内托管执行型 AaaS 发布。已按要求扩大中英文关键词并切换官方新闻、文档/changelog、GitHub 和可信二手入口进行第二轮补搜。Airbyte 在窗口内新增两篇关于 Agent 权限化上下文、审计访问和外部业务状态的官方技术说明；它们是生产 Agent 的数据与治理基础设施，不负责托管 Agent 执行生命周期，因此列入邻近信号观察池。补充核验发现 8 月 21 日官方发布的 Grok Bot 扩展明确提供独立云电脑、离线持续执行、多 Bot 并行协作与跨应用操作，符合 AaaS 定义，但已超出 72 小时，因此仅作为较旧背景保留。
 
 ## 重点动态
 
@@ -119,3 +132,17 @@ AaaS 要求供应商托管或管理 Agent 的执行、环境、生命周期、�
 - 二次补搜：是；因严格窗口内已验证动态为 0，已扩大中英文关键词并切换 GitHub、备用官方入口及可信二手来源。
 
 **今日扫描完成，共 9 条动态，重点：严格 24 小时内无已验证托管执行型 AaaS 发布；窗口内新增 Airbyte 权限化上下文与外部状态两项邻近信号，并持续关注 Grok Bot 云端持续执行、Grok Build 托管交付与开源 harness 的第三方远程化。**
+
+## 22:31 累计更新
+
+- **严格窗口内已验证动态：2 条。** [Google Cloud Agent 计费与成本控制](https://cloud.google.com/blog/products/ai-machine-learning/flexible-billing-and-cost-controls-for-agents-on-google-cloud) 为 Gemini Enterprise Agent 工作负载增加按量付费、统一管理、Flexible Savings Plans、项目月度上限与运行成本预估；[Gemini Enterprise for Legal](https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-legal) 将可执行法律工作的 Agent、专业 Skills、企业数据连接器、权限与治理打包为托管行业方案。
+- **22:31 补搜未再发现额外严格窗口动态。** Cognition Devin 已复查异步执行、环境、并发、定价、企业接入与集成，无新增；xAI/Grok 已复查托管、异步、工具和远程执行，无新增，普通模型/API 动态继续排除。
+- **日期未确认：** [华为云 AgentArts 最新动态](https://support.huaweicloud.com/wtsnew-agentarts/index.html) 页面于 8 月 25 日更新，披露智能体卫士、运行时灰度、网关会话保持、第三方 Agent 统一观测和会话存储；各功能无独立时分。
+- **24–72 小时观察：** [Microsoft Foundry 长时容错 hosted agent](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/deploy-resilient-agent) 指南于 8 月 24 日更新，展示 stored background response、无客户端持续执行、checkpoint 恢复和日志监控。
+
+## 累计采集状态
+
+- 初始候选数：26；保留来源数：13。
+- 二次补搜：是；补搜后除上述 Google Cloud 两项严格窗口动态外，未再发现额外合格发布。
+
+**今日扫描完成，共 13 条动态，重点：Google Cloud 两项严格窗口企业 Agent 更新，以及 AgentArts 与 Microsoft Foundry 两项分级观察信号。**
