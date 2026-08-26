@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T13:01:52+08:00"
+updatedAt: "2026-08-26T16:00:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "v2.1.246"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
@@ -20,6 +20,7 @@ tags:
   - "Claude"
   - "Claude Code"
   - "Community"
+  - "Desktop"
   - "Hate"
   - "Hooks"
   - "Linux"
@@ -27,14 +28,17 @@ tags:
   - "MCP"
   - "Opus 5"
   - "Plugins"
+  - "Privacy"
   - "Release"
+  - "Remote Control"
   - "Security"
+  - "VS Code"
   - "Workflow"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-25 13:01 至 2026-08-26 13:01（Asia/Shanghai）**。当天累积保留两项官方产品更新：[Claude Code v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) 集中更新权限与 Auto mode、后台/远程会话、插件、MCP、IDE 和可靠性，[v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245) 修复采用 glibc 2.44 的 Linux 发行版启动崩溃。Anthropic Newsroom、Claude Blog、状态页和 Developer Platform 未发现新的带窗口内时间戳独立发布。社区讨论则呈明显两极：一条高互动帖子赞赏 Opus 5 medium 的能力与偶发出人意料表现，另一条集中批评 Claude 日常对话变长、偏好与 Skills 执行不稳定，同时仍认可 Claude Code 的编码能力；这些是用户样本，不是产品能力事实。观察池新增两条带复现材料的官方仓库用户报告，分别涉及 Auto mode 下按工具名配置的 hooks 覆盖面，以及 Workflow 部分 Agent 失败的机器可读状态；两者均尚无 Anthropic 确认或修复结论。
+采集窗口：**2026-08-25 16:00 至 2026-08-26 16:00（Asia/Shanghai）**。当天累积保留两项官方产品更新：[Claude Code v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246) 集中更新权限与 Auto mode、后台/远程会话、插件、MCP、IDE 和可靠性，[v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245) 修复采用 glibc 2.44 的 Linux 发行版启动崩溃。Anthropic Newsroom、Claude Blog、状态页和 Developer Platform 未发现新的带窗口内时间戳独立发布。社区讨论则呈明显两极：一条高互动帖子赞赏 Opus 5 medium 的能力与偶发出人意料表现，另一条集中批评 Claude 日常对话变长、偏好与 Skills 执行不稳定，同时仍认可 Claude Code 的编码能力；这些是用户样本，不是产品能力事实。观察池累计保留多条带复现材料的官方仓库用户报告；本轮新增两条，分别涉及 VS Code/Desktop 插件必填配置无法录入，以及 Remote Control 默认启用与提示机制。它们均尚无 Anthropic 确认或修复结论。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -104,6 +108,8 @@ tags:
 - Claude Code GitHub [issue #89624](https://github.com/anthropics/claude-code/issues/89624) 于 8 月 26 日 04:01（上海时间）打开：发帖者在 v2.1.245 / Linux 上复测称，使用 `claude --bg -r` 恢复后台会话会产生新 session ID，但磁盘状态未记录可机读的父子关系，导致外部列表可能长期显示重复会话。这是单用户缺陷报告，暂无标签、评论或官方修复结论。
 - Claude Code GitHub [issue #89709](https://github.com/anthropics/claude-code/issues/89709) 于 8 月 26 日 12:01（上海时间）打开：发帖者提供多轮运行与复现脚本，称 Workflow fan-out 中部分 Agent 失败时，顶层状态仍可能为 `completed`，而脚本只收到缺少原因的 `null`，使下游自动化难以识别不完整结果。issue 已带 `bug` 与 `area:agents` 标签，但仍是单用户报告，暂无官方结论。
 - Claude Code GitHub [issue #89716](https://github.com/anthropics/claude-code/issues/89716) 于 8 月 26 日 12:36（上海时间）打开：发帖者给出复现步骤，称 Auto mode 倾向改用 Bash 读写文件后，按 `Read`、`Edit` 或 `Write` 工具名匹配的 PreToolUse hooks 不再触发，可能让既有路径或密钥保护规则失去覆盖。issue 已带 `has repro`、`area:security`、`area:hooks` 和 `area:permissions` 标签；尚无 Anthropic 确认，不能表述为已证实的普遍漏洞。
+- Claude Code GitHub [issue #89749](https://github.com/anthropics/claude-code/issues/89749) 于 8 月 26 日 15:13（上海时间）打开：发帖者在 v2.1.246 上提供最小复现，称 VS Code 与 Desktop 图形安装流程不会收集插件必填 userConfig，导致相关 MCP server 不启动；已有 bug、has repro、area:ide 与 area:plugins 标签，但暂无官方结论。
+- Claude Code GitHub [issue #89752](https://github.com/anthropics/claude-code/issues/89752) 于 8 月 26 日 15:47（上海时间）打开：一名 Linux 用户基于本机配置、transcript 与 bundle 代码称，未主动启用 Remote Control 的普通会话也会由服务端 flag 注册 cloud session slot，且提示有展示次数上限；发帖者明确没有证据表明第三方连接过这些 slot，暂无官方确认。
 - 未发现可信的窗口内未证实新品传闻。
 
 ## 来源链接
@@ -117,10 +123,12 @@ tags:
 7. [Claude Code GitHub：后台会话恢复关系缺失 issue](https://github.com/anthropics/claude-code/issues/89624)
 8. [Claude Code GitHub：Workflow 部分 Agent 失败状态 issue](https://github.com/anthropics/claude-code/issues/89709)
 9. [Claude Code GitHub：Auto mode 与 PreToolUse hooks 覆盖 issue](https://github.com/anthropics/claude-code/issues/89716)
+10. [Claude Code GitHub：VS Code/Desktop 插件 userConfig issue](https://github.com/anthropics/claude-code/issues/89749)
+11. [Claude Code GitHub：Remote Control 默认启用与提示机制 issue](https://github.com/anthropics/claude-code/issues/89752)
 
 ## 采集状态
 
 - 已检查来源：Anthropic Newsroom、Claude Blog、Claude Status、Claude Code GitHub releases/changelog/issues、Developer Platform、Agent SDK、Skills/Marketplace/Connectors/Plugins/Cowork 与模型入口；Reddit r/ClaudeAI、r/ClaudeCode、r/Anthropic、r/LocalLLaMA；Hacker News、X、YouTube 与可信开发者/播客检索。
 - 失败来源：X 未登录页面无法稳定取得互动量；Reddit 公开页面无法稳定给出精确时分；Hacker News、YouTube 未发现窗口内可核验新内容；Developer Platform 未发现带窗口内时间戳的独立更新。
-- 初始候选数：19；保留来源数：9。
+- 初始候选数：49；保留来源数：11。
 - 二次补搜：否（最终来源不为 0）。

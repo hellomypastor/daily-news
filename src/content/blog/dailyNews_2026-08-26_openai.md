@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-26T00:00:00+08:00"
-updatedAt: "2026-08-26T13:01:00+08:00"
+updatedAt: "2026-08-26T16:00:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.9"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.9"
@@ -24,6 +24,7 @@ tags:
   - "Connector"
   - "Deprecation"
   - "Desktop"
+  - "Enterprise"
   - "Git"
   - "GitHub"
   - "Global Affairs"
@@ -46,7 +47,7 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-25 13:01 至 2026-08-26 13:01（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是三项 Codex CLI 预发布：0.150.0-alpha.9、alpha.10 与 alpha.11 分别于 8 月 25 日 20:51、8 月 26 日 04:36 与 05:30 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。ChatGPT Release Notes 此前预告的 o3 ChatGPT 退役于 8 月 26 日生效；该公告发布于 5 月 28 日，属于今日生效的较旧官方背景，且不影响 API。社区侧累计保留十二条窗口内、可精确核时的 Codex 官方仓库用户报告，不能外推为 OpenAI 已确认的普遍缺陷。
+采集窗口为 **2026-08-25 13:01 至 2026-08-26 16:00（Asia/Shanghai）**。窗口内可精确核验的官方产品动态是三项 Codex CLI 预发布：0.150.0-alpha.9、alpha.10 与 alpha.11 分别于 8 月 25 日 20:51、8 月 26 日 04:36 与 05:30 发布，但发布页均没有逐项变更说明，因此不推断具体功能或修复。OpenAI 同日发布一篇俄罗斯隐蔽影响行动调查，确认已封禁一批相关 ChatGPT 账户；页面只有自然日、没有精确时刻，故列入“日期未确认”。ChatGPT Release Notes 此前预告的 o3 ChatGPT 退役于 8 月 26 日生效；该公告发布于 5 月 28 日，属于今日生效的较旧官方背景，且不影响 API。社区侧累计保留十五条窗口内、可精确核时的 Codex 官方仓库用户报告，不能外推为 OpenAI 已确认的普遍缺陷。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -105,11 +106,11 @@ OpenAI 的 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-c
 
 ## Hate
 
-官方 Codex 仓库累计保留十二条可精确核时的用户报告。除 Android Remote 冷加载、验证前编辑代码、嵌套路径权限、跨 Mac 子任务权限降级与 Windows 会话消失外，本轮新增两条相互独立的 Windows Desktop 更新后无法定位 CLI、进而无法启动的报告；另有用户报告 starter card 只提交单个动词、GitHub connector 获得私有仓库权限后全部工具返回 Unknown tool；10:02 后新增的报告涉及 PR Review 引用不可解析 SHA、Windows WSL2 更新后启动阻断，以及 GPT-5.6 Sol Ultra 在同机对照下无法完成工具握手。所有 issue 均仍为 open，不能证明根因、影响范围或普遍性。详见 [Android Remote 冷加载报告](https://github.com/openai/codex/issues/40638)、[推测性修复报告](https://github.com/openai/codex/issues/40639)、[嵌套路径权限报告](https://github.com/openai/codex/issues/40685)、[跨主机权限降级报告](https://github.com/openai/codex/issues/40682)、[Windows 会话消失报告](https://github.com/openai/codex/issues/40674)、[Windows 启动失败报告一](https://github.com/openai/codex/issues/40752)、[报告二](https://github.com/openai/codex/issues/40754)、[starter card 报告](https://github.com/openai/codex/issues/40734) 、[GitHub connector 报告](https://github.com/openai/codex/issues/40729)、[PR Review 元数据报告](https://github.com/openai/codex/issues/40755)、[WSL2 启动报告](https://github.com/openai/codex/issues/40776) 与 [工具握手报告](https://github.com/openai/codex/issues/40798)。
+官方 Codex 仓库累计保留十五条可精确核时的用户报告。除 Android Remote 冷加载、验证前编辑代码、嵌套路径权限、跨 Mac 子任务权限降级与 Windows 会话消失外，本轮新增两条相互独立的 Windows Desktop 更新后无法定位 CLI、进而无法启动的报告；另有用户报告 starter card 只提交单个动词、GitHub connector 获得私有仓库权限后全部工具返回 Unknown tool；10:02 后新增的报告涉及 PR Review 引用不可解析 SHA、Windows WSL2 更新后启动阻断、GPT-5.6 Sol Ultra 工具握手失败，以及 14:33 后出现的本地执行宿主缺失、WSL 线程恢复 MCP 配置错误和企业 deny_read 策略超时个案。所有 issue 均仍为 open，不能证明根因、影响范围或普遍性。详见 [Android Remote 冷加载报告](https://github.com/openai/codex/issues/40638)、[推测性修复报告](https://github.com/openai/codex/issues/40639)、[嵌套路径权限报告](https://github.com/openai/codex/issues/40685)、[跨主机权限降级报告](https://github.com/openai/codex/issues/40682)、[Windows 会话消失报告](https://github.com/openai/codex/issues/40674)、[Windows 启动失败报告一](https://github.com/openai/codex/issues/40752)、[报告二](https://github.com/openai/codex/issues/40754)、[starter card 报告](https://github.com/openai/codex/issues/40734) 、[GitHub connector 报告](https://github.com/openai/codex/issues/40729)、[PR Review 元数据报告](https://github.com/openai/codex/issues/40755)、[WSL2 启动报告](https://github.com/openai/codex/issues/40776) 与 [工具握手报告](https://github.com/openai/codex/issues/40798)。
 
 ## 情绪判断
 
-**偏负面，置信度低。** 本轮可核验社区样本为十二条官方仓库问题报告，没有匹配的新增正面样本；两条 Windows 启动失败报告提供了有限交叉印证，但样本选择本身偏向故障反馈，且 issue 尚未获维护者确认，因此不能据此判断 Codex 整体口碑。
+**偏负面，置信度低。** 本轮可核验社区样本为十五条官方仓库问题报告，没有匹配的新增正面样本；两条 Windows 启动失败报告提供了有限交叉印证，但样本选择本身偏向故障反馈，且 issue 尚未获维护者确认，因此不能据此判断 Codex 整体口碑。
 
 ## 比较信号
 
@@ -134,10 +135,13 @@ OpenAI 的 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-c
 - [Codex PR Review 引用不可解析提交 SHA](https://github.com/openai/codex/issues/40755) 创建于 **2026-08-26 10:05 +08:00**。报告者提供跨 54 个 PR 的检查和公开最小复现，称 Review 在检查 author、committer 与 trailer 时引用仓库中不存在的重建提交对象。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 复现充分但未获维护者确认**。
 - [Windows Desktop 更新后 WSL2 模式无法定位 CLI](https://github.com/openai/codex/issues/40776) 创建于 **2026-08-26 11:47 +08:00**。报告者称 26.820.7780.0 更新后应用无法启动，关闭 WSL2 集成可绕过。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一个案**；版本字段存在不一致，根因未确认。
 - [GPT-5.6 Sol Ultra 在 Windows Codex Desktop 工具握手失败](https://github.com/openai/codex/issues/40798) 创建于 **2026-08-26 12:57 +08:00**。报告者在同一安装与环境中对照称 GPT-5.6 Sol Ultra 的工具调用在握手前失败，而 GPT-5.5 可执行同一命令。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一 A/B 个案**；不能外推为模型普遍问题。
+- [Windows 更新后本地执行组件缺失](https://github.com/openai/codex/issues/40817) 创建于 **2026-08-26 14:33 +08:00**。报告者称 26.820.7780.0 更新后连只读命令也因执行宿主缺失而无法启动。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单机复现**；根因及范围未获维护者确认。
+- [Windows WSL 托管线程恢复失败](https://github.com/openai/codex/issues/40819) 创建于 **2026-08-26 14:42 +08:00**。报告者提供 JSON-RPC 对照，称应用注入缺少 transport 的 MCP 配置。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 技术复现较完整但未获维护者确认**。
+- [企业 deny_read 策略导致提交后超时](https://github.com/openai/codex/issues/40831) 创建于 **2026-08-26 15:43 +08:00**。用户给出最小策略对照，称移除 deny_read 后恢复。状态为 **官方仓库用户 issue / 精确时间已核验 / open / 单一企业环境**；根因与普遍性未确认。
 
 ## 未证实传闻
 
-本轮没有需要单列的新传闻。对上述两个 issue 的根因推断均未被当作事实。
+本轮没有需要单列的新传闻。对上述 issue 的根因推断均未被当作事实。
 
 ## 来源链接
 
@@ -154,10 +158,13 @@ OpenAI 的 [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-c
 11. [Windows Desktop cannot locate CLI after update](https://github.com/openai/codex/issues/40754)
 12. [Codex Desktop starter cards submit only one-word prompts](https://github.com/openai/codex/issues/40734)
 13. [GitHub connector loses all tools after private-repository authorization](https://github.com/openai/codex/issues/40729)
+14. [Windows local execution host missing](https://github.com/openai/codex/issues/40817)
+15. [WSL thread resume MCP transport failure](https://github.com/openai/codex/issues/40819)
+16. [Enterprise deny_read timeout](https://github.com/openai/codex/issues/40831)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Global Affairs、ChatGPT Release Notes、ChatGPT & Codex changelog、API changelog、模型与弃用文档、Codex 各产品入口、OpenAI Status、Codex 与 Agents SDK / 官方 SDK GitHub Releases、Codex 官方仓库 issues、Reddit 五个相关社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（公开搜索未提供足够可精确核时的新正面样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：96；最终保留来源：17。
+- 初始候选：126；最终保留来源：20。
 - 二次补搜：否（最终来源不为 0）。
