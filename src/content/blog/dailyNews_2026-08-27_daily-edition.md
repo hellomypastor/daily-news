@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-08-27"
 date: "2026-08-27T00:00:00+08:00"
-updatedAt: "2026-08-27T07:01:00+08:00"
+updatedAt: "2026-08-27T13:02:00+08:00"
 description: "2026-08-27 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-27"
-featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
+featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.247"
 featuredSummary: "2026-08-27 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Claude 全家桶过去 24 小时动态与口碑日报
 
-**[Claude Code v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246)**。Claude Code v2.1.246 改善后台与非交互会话、插件和 MCP 稳定性，并强化 Bash 权限与第三方网关凭证边界。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Claude Code v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247)**。Claude Code v2.1.247 新增反馈草稿、API 成本优化与 Admin API 技能覆盖，并修复子 Agent、后台任务、云会话及 marketplace 安全边界。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-27_claude)
 
