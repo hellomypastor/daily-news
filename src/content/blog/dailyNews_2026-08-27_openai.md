@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-27T00:00:00+08:00"
-updatedAt: "2026-08-27T13:02:00+08:00"
+updatedAt: "2026-08-27T16:00:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.150.0-alpha.13"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13"
@@ -57,13 +57,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-26 13:02 至 2026-08-27 13:02（Asia/Shanghai）**；当天累计来源无条件保留。窗口内可精确核验的官方版本动态新增 Codex CLI 0.150.1 稳定版、0.151.0-alpha.3、alpha.4 与 0.150.0-alpha.12.1，连同此前的 0.150.0、0.151.0-alpha.2 及 0.150.0 alpha.10 至 alpha.13；稳定版附完整官方 changelog，新增跨任务引用与任务管理、复制选择器、自动标题、可点击链接、权限模式快捷键和 Interrupt hooks，并包含安全、凭据脱敏、MCP、Windows sandbox、Unix 关停与 Bedrock 兼容性修复。另有四项 8 月 25 日官方内容——ChatGPT Work 定时任务 webhook 与分享、Admin plugin、Codex 重复工作实践文章、Jalapeño 首批测量结果——均只有自然日、没有精确时刻，本页保守列入“日期未确认”。o3 于 8 月 26 日从 ChatGPT 退役是较旧公告在本日生效，API 不受影响。社区侧窗口内 Codex 官方仓库 issue 候选达到 203 条，本页仅保留九条具有明确复现、对照或多报告交叉印证的代表性观察，均不能外推为 OpenAI 已确认缺陷。
+采集窗口为 **2026-08-26 16:00 至 2026-08-27 16:00（Asia/Shanghai）**；当天累计来源无条件保留。窗口内可精确核验的官方版本动态累计包括 Codex CLI 0.150.1 稳定版、0.151.0-alpha.3 至 alpha.5，以及 0.150.0-alpha.12.1、alpha.12.2，连同此前的 0.150.0、0.151.0-alpha.2 及 0.150.0 alpha.10 至 alpha.13；稳定版附完整官方 changelog，新增跨任务引用与任务管理、复制选择器、自动标题、可点击链接、权限模式快捷键和 Interrupt hooks，并包含安全、凭据脱敏、MCP、Windows sandbox、Unix 关停与 Bedrock 兼容性修复。另有四项 8 月 25 日官方内容——ChatGPT Work 定时任务 webhook 与分享、Admin plugin、Codex 重复工作实践文章、Jalapeño 首批测量结果——均只有自然日、没有精确时刻，本页保守列入“日期未确认”。o3 于 8 月 26 日从 ChatGPT 退役是较旧公告在本日生效，API 不受影响。社区侧窗口内 Codex 官方仓库 issue 与补充搜索候选持续增加，本页累计保留十一条具有明确复现、对照或多报告交叉印证的代表性观察，均不能外推为 OpenAI 已确认缺陷。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.150.1 稳定版发布**，修复远程 compaction 的保留图片 token 预算；另新增 alpha.3、alpha.4 与 alpha.12.1（均无逐项说明） | [0.150.0](https://github.com/openai/codex/releases/tag/rust-v0.150.0)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)、[alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)、[alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13) |
+| Codex CLI | **0.150.1 稳定版发布**，修复远程 compaction 的保留图片 token 预算；另累计新增 alpha.3 至 alpha.5、alpha.12.1 与 alpha.12.2（预发布页均无逐项说明） | [0.150.0](https://github.com/openai/codex/releases/tag/rust-v0.150.0)、[alpha.10](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.10)、[alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.11)、[alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12)、[alpha.13](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.13) |
 | VS Code / JetBrains 集成 | 无官方新增；JetBrains 终端重绘个案未列为产品更新 | 官方文档与仓库 |
 | Codex cloud / remote tasks / PR agents | 无官方 changelog 新增；PR Review 不可解析 SHA、跨主机权限与线程恢复问题见观察池 | 官方 changelog、GitHub issue |
 | ChatGPT agentic mode / Work | **8 月 25 日 Release Notes 新增 webhook 触发与定时任务分享**，但精确时刻未确认 | 日期未确认 |
@@ -97,6 +97,10 @@ tags:
 Enterprise / Business 侧，OpenAI 于 8 月 25 日介绍 Admin plugin，可在 ChatGPT Work 与 Codex 中按既有角色权限查看使用情况、管理成员与访问、处理额度和支出请求；因页面没有精确时刻，列入“日期未确认”。Edu 侧新增两篇 8 月 26 日官方内容：ChatGPT for Teachers 扩展至 55 个学区系统，以及一份持续学习使用报告；安全侧新增 Hugging Face 事件调查与整改说明。三者仅标自然日、无精确时刻，列入“日期未确认”。Gov、Science 与其他行业方案未发现窗口内可精确核验的新发布。Jalapeño 推理芯片测量结果属于基础设施邻近信号，同样因缺少精确时刻保守收录。
 
 ## 官方更新（新到旧）
+
+### Codex CLI 0.150.0-alpha.12.2 与 0.151.0-alpha.5（新增）
+
+官方 GitHub 发布页显示 [0.150.0-alpha.12.2](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12.2) 与 [0.151.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.5) 分别于 **2026-08-27 15:22、14:22 +08:00** 发布。两者均为预发布，页面只写明版本号，没有逐项变更说明，本页不推断功能或修复。
 
 ### Codex CLI 0.151.0-alpha.4、0.150.1 与 alpha.12.1（新增）
 
@@ -196,10 +200,12 @@ Codex 官方仓库在窗口内出现大量故障报告，其中 Windows 26.820 �
 26. [Hugging Face incident and the road ahead](https://openai.com/index/hugging-face-incident-and-the-road-ahead/)
 27. [ChatGPT for Teachers district expansion](https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts/)
 28. [Learning never stops](https://openai.com/index/learning-never-stops/)
+29. [Codex CLI 0.151.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.5)
+30. [Codex CLI 0.150.0-alpha.12.2](https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.12.2)
 
 ## 采集状态
 
-- 已检查：OpenAI News / Research / Global Affairs、OpenAI Developers 与开发者博客、ChatGPT Release Notes、API / Codex changelog、模型与弃用文档、Responses / Realtime / Assistants 迁移资料、Codex 全产品入口、OpenAI Status、五个官方 GitHub Releases、Codex issue、Reddit 五个社区、Hacker News、YouTube 与公开中英文网页搜索。
+- 已检查：OpenAI News / Research / Global Affairs、OpenAI Developers 与开发者博客、ChatGPT Release Notes、API / Codex changelog、模型与弃用文档、Responses / Realtime / Assistants 迁移资料、Codex 全产品入口、OpenAI Status、七个官方 GitHub Releases、Codex issue、Reddit 五个社区、Hacker News、YouTube 与公开中英文网页搜索。
 - 失败来源：X（未登录无法稳定核验原帖与精确时间）；Reddit（新帖时间与正文访问不稳定，未形成可精确核时的正面样本）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：304；最终保留来源：28。
+- 初始候选：342；最终保留来源：30。
 - 二次补搜：否（最终来源不为 0）。

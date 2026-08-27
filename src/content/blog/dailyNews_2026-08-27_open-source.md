@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-27T00:00:00+08:00"
-updatedAt: "2026-08-27T13:02:00+08:00"
+updatedAt: "2026-08-27T16:00:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Lody Is Now Open Source"
 featuredUrl: "https://lody.ai/blog/lody-is-now-open-source/"
@@ -62,7 +62,7 @@ tags:
 
 ## 今日概览
 
-本页滚动发现窗口已推进至 **2026-08-26 13:02 至 2026-08-27 13:02（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。Coding Agent 主轴中，Cline v4.1.16 修复了多工作区 hooks、Git remote 凭据脱敏和 MCP Marketplace 参数解析，SDK v0.0.81 与 Desktop v0.0.19 则收紧长会话状态事件的载荷。VS Code 新增独立 Agent Host 与开放 AHP，使不同 harness 的会话可以跨窗口、跨客户端并在本地或远端延续。新开源的 Lody 把团队决策上下文与 Coding Agent 放入本地优先、CRDT 同步的共享工作区；vllm-ios 提供了 iPhone 上连续批处理的代码与实验方法，但性能数字仍是作者自测。研究方面，新增 Meta^n 论文与代码，提出用固定元操作从执行轨迹生成可执行改进层，但效果仍限于作者报告的九类基准；另有三篇较旧论文因本轮 HN 提交重新浮现，分别讨论 Agent 工作负载、长周期多 Agent 商务模拟，以及 harness 版本演进对 coding-agent 质量的影响；均按旧文再讨论处理。
+本页滚动发现窗口已推进至 **2026-08-26 16:00 至 2026-08-27 16:00（Asia/Shanghai）**，技术高亮优先覆盖此前 48 小时。Coding Agent 主轴中，Cline v4.1.16 修复了多工作区 hooks、Git remote 凭据脱敏和 MCP Marketplace 参数解析，SDK v0.0.81 与 Desktop v0.0.19 则收紧长会话状态事件的载荷。VS Code 新增独立 Agent Host 与开放 AHP，使不同 harness 的会话可以跨窗口、跨客户端并在本地或远端延续。新开源的 Lody 把团队决策上下文与 Coding Agent 放入本地优先、CRDT 同步的共享工作区；vllm-ios 提供了 iPhone 上连续批处理的代码与实验方法，但性能数字仍是作者自测。研究方面，新增 Meta^n 论文与代码，提出用固定元操作从执行轨迹生成可执行改进层，但效果仍限于作者报告的九类基准；另有三篇较旧论文因本轮 HN 提交重新浮现，分别讨论 Agent 工作负载、长周期多 Agent 商务模拟，以及 harness 版本演进对 coding-agent 质量的影响；均按旧文再讨论处理。
 
 ## Coding Agent / Harness 雷达
 
@@ -153,6 +153,8 @@ Meta^n 固定一个元操作 Ω，让它读取下层执行轨迹并生成 `pre_p
 
 - **AgentPlayback｜新项目 / 低采用信号**：MIT 许可的本地可视化工具读取 Codex 与 Claude Code 现有会话日志，展示运行/等待时间、按任务与项目分组、token 和估算成本；仓库创建于 8 月 26 日，本轮检查仅 2 stars，成本估算准确性与跨版本日志兼容性尚缺独立验证。[仓库](https://github.com/JerryZLiu/AgentPlayback)；[HN 提交](https://news.ycombinator.com/item?id=49456949) 于 2026-08-27 06:46 +08:00。
 
+- **ken｜新项目 / 作者小样本基准**：新建插件把“先建模、优先复用、从底层构建、测量后再优化、第三次补丁后重写”等方法规则带到 Claude Code、Cline、OpenCode、Pi、Codex 等宿主，并公开行为门禁与结果目录。README 报告同一小模型各 3 次对照中的重写行为差异，但样本很小、仓库本轮仅 1 star 且尚无独立复现，故不据此宣称质量提升。[仓库](https://github.com/rajnandan1/ken)，创建于 2026-08-26 14:59 +08:00；[HN 提交](https://news.ycombinator.com/item?id=49461066) 于 2026-08-27 15:17 +08:00。
+
 ## 来源链接
 
 1. [Cline v4.1.16](https://github.com/cline/cline/releases/tag/v4.1.16)
@@ -192,11 +194,13 @@ Meta^n 固定一个元操作 Ω，让它读取下层执行轨迹并生成 `pre_p
 35. [Wattage 的 HN 提交](https://news.ycombinator.com/item?id=49459005)
 36. [OpenExecutive 仓库](https://github.com/SenteLabsAI/OpenExecutive)
 37. [OpenExecutive 的 HN 提交](https://news.ycombinator.com/item?id=49458418)
+38. [ken 仓库](https://github.com/rajnandan1/ken)
+39. [ken 的 HN 提交](https://news.ycombinator.com/item?id=49461066)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Release / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison、Lody、CodeRabbit 与可信工程博客。
 - 失败来源：GitHub Trending 未稳定提供当日指标；Hugging Face 部分入口只有相对时间；Inference Wall 原文未显示发布日期；Julin.ai 被办公网络策略拦截。
-- 初始候选数：310。
-- 最终保留来源数：37。
+- 初始候选数：312。
+- 最终保留来源数：39。
 - 二次补搜：否（最终来源不为 0）。
