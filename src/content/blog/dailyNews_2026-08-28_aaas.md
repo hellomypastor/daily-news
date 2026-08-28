@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T10:13:53+08:00"
+updatedAt: "2026-08-28T10:54:27+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Grok Bot is now included with more plans"
 featuredUrl: "https://x.ai/news/grok-bot-more-plans"
@@ -14,34 +14,47 @@ tags:
   - "日期未确认"
   - "AaaS"
   - "Agent"
+  - "AgentZ"
+  - "Background Agent"
+  - "Claude"
   - "Cloud Agent"
+  - "Enterprise"
+  - "GA"
   - "Grok"
   - "Grok Bot"
+  - "Identity"
   - "MaaS"
   - "Managed Agent"
   - "PaaS"
   - "Qoder"
+  - "Sandbox"
+  - "Security Agent"
 ---
 
 ## 今日概览
 
-扫描窗口为 **2026-08-27 06:12 至 2026-08-28 06:12（Asia/Shanghai）**。严格 24 小时窗口内没有可核验的 AaaS 新发布；24–72 小时观察范围内保留 2 条 xAI 官方动态，以及 1 条日期未确认的中国平台入口。因 verified 24 小时动态为空，已扩大中英文关键词并切换官方备用入口、GitHub release/changelog 与可信二手来源完成第二轮补搜，仍未发现可核验的 24 小时新增。
+扫描窗口为 **2026-08-27 10:54 至 2026-08-28 10:54（Asia/Shanghai）**。严格 24 小时窗口内新增 3 条可核验 AaaS 动态：AccuKnox 发布 AgentZ 托管 Agent 平台，SonarQube Hunter Agent 在 Cloud 版 GA，Dock 为云端 Agent 增加免复制凭据的 Claude 登录流程。当天早先收录的 2 条 xAI 官方动态和 1 条日期未确认中国平台入口继续累积保留。
 
 ## 重点动态
 
-过去 24 小时暂无可核验新增。
+- [AccuKnox 发布 AgentZ](https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html)：厂商新闻稿称平台已提供托管免费方案，并把 Agent、工作流、隔离 Sandbox、运行时凭据、权限、追踪与审计纳入统一控制面；同时支持本地与隔离部署。
+- [SonarQube Hunter Agent GA](https://www.sonarsource.com/company/press-releases/sonar-launches-sonarqube-hunter-agent/)：该 Agent 可按计划或按需在后台扫描完整代码库，并已在 SonarQube Cloud 正式可用，符合托管后台 Agent 服务定义。
+- [Dock 云端 Agent 登录改进](https://trydock.ai/changelog/2026-08-27-cloud-agents-sign-themselves-in)：云端 Agent 现在可通过浏览器授权取得自己的 Claude CLI 凭据并持久化在 Agent 卷中，减少远程环境的人工凭据搬运（涉及 Claude，详见 Claude 专题页）。
 
 ## 远程 / 云端 Agent 执行
 
 | 平台 | 动态 | 证据状态 | AaaS 意义 |
 |---|---|---|---|
-| SpaceXAI / xAI | [Grok Bot 扩大套餐覆盖](https://x.ai/news/grok-bot-more-plans) | 官方，2026-08-26（24–72h） | Bot 具有自己的常驻云端计算机、浏览器和终端，可跨应用持续执行、多 Bot 并行协作并配置例行任务；扩展至 SuperGrok、Cursor Pro 与 Cursor Teams 套餐后，托管执行的商业覆盖明显扩大。 |
+| AccuKnox | [AgentZ 发布](https://www.globenewswire.com/news-release/2026/08/27/3351759/0/en/accuknox-launches-agentz-to-help-enterprises-build-run-and-govern-ai-agents-at-scale.html) | 厂商新闻稿，2026-08-27 | 托管执行、独立计算机与文件系统、工作流触发、权限、审计和企业部署形成完整生命周期控制面。 |
+| Sonar | [Hunter Agent GA](https://www.sonarsource.com/company/press-releases/sonar-launches-sonarqube-hunter-agent/) | 官方，2026-08-27 | 在 SonarQube Cloud 后台按计划或按需运行，属于特定安全任务的托管 Agent。 |
+| Dock | [云端 Agent 自助登录](https://trydock.ai/changelog/2026-08-27-cloud-agents-sign-themselves-in) | 官方 changelog，2026-08-27 | 改善远程 Agent 的身份生命周期与持久凭据管理；Claude 相关能力详见 Claude 专题页。 |
+| SpaceXAI / xAI | [Grok Bot 扩大套餐覆盖](https://x.ai/news/grok-bot-more-plans) | 官方，2026-08-26（24–72h） | Bot 具有自己的常驻云端计算机、浏览器和终端，可跨应用持续执行、多 Bot 并行协作并配置例行任务；套餐扩展扩大托管执行商业覆盖。 |
 
 ## 海外厂商
 
-- **Cognition Devin（必查）**：已显式检查官方产品新闻、文档、托管异步执行、环境、并发、定价、企业接入和集成入口；本轮未找到截止时间内可核验的新公告，不重复旧背景来源。
-- **Grok（必查）**：Grok Bot 的云端计算机、后台持续执行、多 Bot 与 routine 符合 AaaS 定义，列于上表；普通 Grok 4.6 模型分发仅作邻近信号。
-- Anthropic、OpenAI、Google、Microsoft、Replit、Cursor、GitHub、Amazon、Cloudflare、Factory、Amp、Lindy、CrewAI 与 LangGraph Platform 官方入口均已检查，本轮无新的可核验发布。
+- **Cognition Devin（必查）**：已显式检查官方产品新闻、2026 release notes 与文档，覆盖托管异步执行、环境、并发、定价、企业接入和集成；本轮未找到窗口内新公告，不重复旧背景来源。
+- **Grok（必查）**：已检查 xAI News、Grok Bot 与 Build 入口；Grok Bot 的云端计算机、后台持续执行、多 Bot 与 routine 符合 AaaS 定义并继续累积保留，窗口内无新发布；普通 Grok 4.6 模型分发仅作邻近信号。
+- Anthropic、OpenAI、Google、Microsoft、Replit、Cursor、GitHub、Amazon、Cloudflare、Factory、Amp、Lindy、CrewAI 与 LangGraph Platform 官方入口均已检查，本轮无其他可核验新增。
 
 ## 中国市场（字节重点）
 
@@ -50,7 +63,7 @@ tags:
 
 ## AaaS 与 MaaS / PaaS 边界
 
-Grok Bot 由提供方托管持续执行环境与 Agent 生命周期，属于 AaaS；Grok 4.6 在 Foundry 的托管模型端点本身更接近 MaaS/PaaS，只有与 Agent 编排、运行环境和治理结合后才构成完整 AaaS。
+AgentZ、Hunter Agent、Dock Cloud Agent 与 Grok Bot 都由服务方托管或管理执行环境及生命周期，属于 AaaS。Grok 4.6 在 Foundry 的托管模型端点本身更接近 MaaS/PaaS，只有与 Agent 编排、运行环境和治理结合后才构成完整 AaaS。
 
 ## 日期未确认
 
@@ -67,13 +80,13 @@ Grok Bot 由提供方托管持续执行环境与 Agent 生命周期，属于 Aaa
 
 ## 趋势
 
-AaaS 正从单 Agent 远程任务向常驻云端电脑、多 Agent 并行、跨应用执行与可复用 routine 扩展；同时必须继续区分“模型进入云市场”和“服务方管理 Agent 生命周期”。
+AaaS 的控制面正在细化为隔离执行、权限与运行时凭据、定时后台任务、追踪审计和企业部署选项；同时必须继续区分“模型进入云市场”和“服务方管理 Agent 生命周期”。
 
 ## 采集状态
 
-- 已检查：海外与中国指定厂商、所有 Coding Agent/harness 托管信号；特别完成 Devin 与 Grok 的强制专项检查。
+- 已检查：海外与中国指定厂商、所有 Coding Agent/harness 托管信号；特别完成 Devin 与 Grok 的强制专项检查，并核验 AgentZ、Hunter Agent 与 Dock 官方/厂商原文。
 - 失败来源：Devin 本轮搜索未找到可核验的新官方时间条目；若干中国厂商页面缺少逐条日期；部分社交账号需登录。
-- 初始候选数：8；保留来源数：3。
-- 二次补搜：是（verified 24 小时动态为空；已扩大中英文关键词并改查官方备用入口、GitHub release/changelog 与可信二手来源，未发现可核验的 24 小时新增）。
+- 初始候选数：11；保留来源数：6。
+- 二次补搜：是（当天早先 verified 24 小时动态为空时已完成；本轮新增来源后无需再次触发，但继续检查官方备用入口与可信二手来源）。
 
-今日扫描完成，共 3 条动态/候选，重点：Grok Bot 扩大托管 Agent 套餐覆盖；Grok 4.6 的 Foundry 分发仅按 AaaS 邻近信号处理。
+今日扫描完成，共 6 条动态/候选，重点：AgentZ 带来完整托管运行与治理控制面，Hunter Agent 和 Dock 分别补强后台安全任务与云端 Agent 身份生命周期。

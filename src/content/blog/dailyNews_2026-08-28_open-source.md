@@ -1,24 +1,26 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T09:20:00+08:00"
+updatedAt: "2026-08-28T10:50:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredTitle: "DeepSeek Harness v0.1.2-alpha.1"
-featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.1"
-featuredSummary: "预发布改善会话与持久化，扩展子代理模型配置，修复持久终端和工具调用，并调整 Headless 输出与 Remote 鉴权。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredPublishedAt: "2026-08-28 01:06 +08:00"
-featuredTags: ["DeepSeek Harness","Coding Agent","Sub-agent","Headless","Pre-release"]
+featuredTitle: "Cline Desktop v0.0.20"
+featuredUrl: "https://github.com/cline/cline/releases/tag/desktop-v0.0.20"
+featuredSummary: "Cline Desktop 新增 Windows 签名安装包与自动更新，并修复定时任务持久化、MCP 启动、checkpoint 恢复和会话搜索问题。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-08-28 09:33 +08:00"
+featuredTags: ["Cline","Coding Agent","Desktop","Scheduled Tasks","Windows"]
 tags:
   - "观察池"
   - "日期未确认"
   - "Agent"
   - "Agent Workflow"
   - "AI"
+  - "Cline"
   - "Coding Agent"
   - "Community"
   - "Compaction"
   - "Constraints"
   - "DeepSeek Harness"
+  - "Desktop"
   - "Hacker News"
   - "Handoff"
   - "Headless"
@@ -29,6 +31,7 @@ tags:
   - "Pre-release"
   - "Research"
   - "Safety"
+  - "Scheduled Tasks"
   - "Self-hosted"
   - "Sub-agent"
   - "Windows"
@@ -36,13 +39,13 @@ tags:
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-27 00:00 至 2026-08-28 09:20（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。Tier 1 中，DeepSeek Harness 发布 v0.1.2-alpha.1：子代理可单独配置提供方、模型与推理力度，Headless 模式把进度送至 stderr，同时修复持久终端、预设和工具调用问题。其余强制检查项目未见窗口内正式发布；Cline 最近发布仍是 8 月 26 日版本，Pi 最新 v0.84.3 为 8 月 24 日，均不冒充今日更新。研究方面，一篇新论文系统测量 coding-agent 模型切换的 handoff 成本；另一篇研究多阶段 Agent 工作流如何把强制约束弱化为可选上下文。HN 上的 Proliferate 提供多 harness、自托管工作区与工作流编排，但功能和采用信号仍以作者陈述为主，放入观察池。
+本页发现窗口为 **2026-08-27 10:50 至 2026-08-28 10:50（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。Tier 1 中，Cline Desktop 发布 v0.0.20，带来 Windows 正式分发，并集中修复定时任务、会话搜索、MCP 启动与 checkpoint 恢复安全；DeepSeek Harness 发布 v0.1.2-alpha.1：子代理可单独配置提供方、模型与推理力度，Headless 模式把进度送至 stderr，同时修复持久终端、预设和工具调用问题。其余强制检查项目未见窗口内正式发布；Pi 最新 v0.84.3 为 8 月 24 日，不冒充今日更新。研究方面，一篇新论文系统测量 coding-agent 模型切换的 handoff 成本；另一篇研究多阶段 Agent 工作流如何把强制约束弱化为可选上下文。HN 上的 Proliferate 提供多 harness、自托管工作区与工作流编排，但功能和采用信号仍以作者陈述为主，放入观察池。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 状态 | 关键变化 | 证据 |
 |---|---|---|---|
-| Cline | 已检查，无窗口内新发布 | 最近可核验主扩展版本仍为 v4.1.16（8 月 26 日 16:42 +08:00），本页不重复收录昨日来源。 | 官方仓库、Releases 与 changelog |
+| Cline | **已验证，窗口内发布** | Desktop v0.0.20 增加 Windows 签名安装包与自动更新，修复定时任务丢失、MCP 启动阻塞和 checkpoint 恢复风险，并改进会话搜索与工具图片呈现。 | [官方 Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)，2026-08-28 09:33 +08:00 |
 | Pi Coding Agent | 已检查，无窗口内新发布 | 当前第一方仓库为 `earendil-works/pi`；最新 v0.84.3 发布于 8 月 24 日，早于窗口。 | 官方仓库、Releases 与文档 |
 | DeepSeek Harness / DSH | **已验证，窗口内预发布** | v0.1.2-alpha.1 改善会话加载与持久化；子代理可配置模型；修复持久终端、预设与工具调用；Headless 进度与最终输出分流。 | [官方 Release](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.1)，2026-08-28 01:06 +08:00 |
 | OpenCode | 已检查，无窗口内新发布 | 当前第一方仓库为 `anomalyco/opencode`；未见窗口内正式 Release。 | 官方仓库与 Releases |
@@ -51,6 +54,10 @@ tags:
 | Roo Code | 已检查，无新增 | 第一方 `RooCodeInc/Roo-Code` 已于 5 月 15 日归档，最新 v3.54.0 同日发布；不以社区 fork 冒充官方更新。 | 官方归档仓库与 Releases |
 
 ## 已验证精选
+
+### Cline Desktop v0.0.20：Windows 分发与定时任务可靠性同步推进
+
+Cline Desktop 首次提供 Windows x64 代码签名安装包，并让 Windows 与 macOS 共用自动更新机制。harness 侧的变化包括：hub 管理的 schedule 不再因重启时 cron 对账而消失，Agent 创建的 schedule 统一保存到用户级目录并出现在 Schedules 页面，完成后的定时会话会展示最终 Markdown 报告；会话搜索改为覆盖完整索引历史。安全与执行方面，checkpoint 恢复在检测到之后新增 commit 时会拒绝重置工作区，离线 remote MCP 不再拖住启动，WSL/headless 可发现全局规则，`apply_patch` 保留 CRLF。 [官方 Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)，2026-08-28 09:33 +08:00。
 
 ### DeepSeek Harness v0.1.2-alpha.1：扩展子代理配置并修整持久执行路径
 
@@ -90,19 +97,20 @@ tags:
 
 ## 来源链接
 
-1. [DeepSeek Harness v0.1.2-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.1)
-2. [The Handoff Tax（Hugging Face）](https://huggingface.co/papers/2608.24358)
-3. [The Handoff Tax（arXiv）](https://arxiv.org/abs/2608.24358)
-4. [When ‘Must’ Becomes ‘Maybe’（Hugging Face）](https://huggingface.co/papers/2608.24569)
-5. [When ‘Must’ Becomes ‘Maybe’（arXiv）](https://arxiv.org/abs/2608.24569)
-6. [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)
-7. [Proliferate 的 HN 提交](https://news.ycombinator.com/item?id=49390739)
-8. [Nailong Harness 社区讨论](https://github.com/deepseek-ai/deepseek-harness/discussions/4723)
+1. [Cline Desktop v0.0.20](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)
+2. [DeepSeek Harness v0.1.2-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.1)
+3. [The Handoff Tax（Hugging Face）](https://huggingface.co/papers/2608.24358)
+4. [The Handoff Tax（arXiv）](https://arxiv.org/abs/2608.24358)
+5. [When ‘Must’ Becomes ‘Maybe’（Hugging Face）](https://huggingface.co/papers/2608.24569)
+6. [When ‘Must’ Becomes ‘Maybe’（arXiv）](https://arxiv.org/abs/2608.24569)
+7. [Proliferate 官方仓库](https://github.com/proliferate-ai/proliferate)
+8. [Proliferate 的 HN 提交](https://news.ycombinator.com/item?id=49390739)
+9. [Nailong Harness 社区讨论](https://github.com/deepseek-ai/deepseek-harness/discussions/4723)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Releases / changelog 或 README；HN front/newest 与近期索引候选；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers；Simon Willison 与可信工程博客。
-- 失败来源：GitHub REST API DNS 解析失败；部分 HN 条目页返回 429；GitHub Trending 未稳定提供当日指标；Hugging Face 部分列表只有相对时间。均已通过公开 HTML、搜索索引或独立论文页切换入口复核。
-- 初始候选数：14。
-- 最终保留来源数：8。
+- 失败来源：GitHub Releases HTML 部分列表缓存滞后，已改用官方 REST API；部分 HN 条目页返回 429；GitHub Trending 未稳定提供当日指标；Hugging Face 部分列表只有相对时间。均已通过公开 HTML、搜索索引或独立论文页切换入口复核。
+- 初始候选数：15。
+- 最终保留来源数：9。
 - 二次补搜：否（最终来源不为 0）。

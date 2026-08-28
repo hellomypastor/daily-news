@@ -1,40 +1,44 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T10:18:00+08:00"
+updatedAt: "2026-08-28T10:50:38+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Claude Code 2.1.247 changelog update"
-featuredUrl: "https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3"
-featuredSummary: "官方提交记录 Claude Code 2.1.247 的反馈、成本分析、Agent 可靠性、云会话、插件市场与企业管理更新。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-08-27 07:06 +08:00"
-featuredTags: ["Claude Code","Agent","Developer Platform"]
+featuredTitle: "Claude Code 2.1.250 changelog update"
+featuredUrl: "https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6"
+featuredSummary: "官方提交将版本推进到 2.1.250，公开说明为 bug 修复与可靠性改善，未提供更细功能清单。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-08-28 08:49 +08:00"
+featuredTags: ["Claude Code","可靠性"]
 tags:
   - "比较"
   - "较旧背景"
+  - "可靠性"
   - "日期未确认"
   - "社区口碑"
   - "Agent"
+  - "Agent SDK"
   - "Anthropic"
   - "Claude"
   - "Claude Code"
   - "Developer Platform"
+  - "Enterprise"
   - "Opus 5"
+  - "Security"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-27 06:12 至 2026-08-28 06:12（Asia/Shanghai）**。窗口内确认到一组 Claude Code 官方更新：2.1.247 增加反馈草稿、API 成本优化与 Admin API 能力，并集中修复子 Agent、云端/后台会话、插件市场和企业登录问题。Anthropic 新闻与研究主页未见窗口内新的模型或行业公告。社区侧对额度消耗和 Opus 5 表现的看法分裂，现有证据主要是自报体验，不足以推出平台级降额或模型退化。
+采集窗口：**2026-08-27 10:50 至 2026-08-28 10:50（Asia/Shanghai）**。窗口内确认到 Claude Code 2.1.248 与 2.1.250 两次官方更新：2.1.248 增加受限模式、跨会话通信和企业额度申请，并集中修复云端/后台会话、缓存、凭据文件上传、MCP 与 IDE 问题；2.1.250 的公开说明仅为可靠性改进。当天更早收录的 2.1.247 继续累计保留。Anthropic 新闻与研究主页未见窗口内新的模型或行业公告。社区侧对额度消耗和 Opus 5 表现的看法分裂，现有证据主要是自报体验，不足以推出平台级降额或模型退化。
 
 ## Tier 1：编码与 Agent 主轴
 
 | 项目 | 状态 | 本轮结论 |
 |---|---|---|
-| Claude Code CLI | **有更新** | [官方仓库 2.1.247 变更提交](https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3) 于 2026-08-27 07:06（上海时间）写入 CHANGELOG：新增 `SendFeedback`、`/claude-api cost-optimize`，更新 `/claude-api` 的 Admin API 覆盖，并修复终端、沙箱、compact 与登录问题。 |
-| VS Code / JetBrains 集成 | 无新增 | 已查官方文档、仓库更新与发行记录；本窗口未见独立 IDE 功能公告。 |
-| Managed Agents（sessions、webhooks、environments、memory stores） | **有相关更新** | 同一 2.1.247 更新修复后台 session 启动、容器重启后云端 session 静默、Remote Control diff 上报和 self-hosted runner 状态过早上报；未见 webhooks、environment 或 memory stores 独立公告。 |
+| Claude Code CLI | **有更新** | [2.1.248 官方提交](https://github.com/anthropics/claude-code/commit/c336b74efcb15cdbacab427d277d5ebed11ddbec) 于 2026-08-28 06:12（上海时间）写入受限模式、跨会话通信和多项可靠性修复；[2.1.250 官方提交](https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6) 于 08:49 写入笼统的可靠性改进。当天更早的 [2.1.247 变更提交](https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3) 继续保留。 |
+| VS Code / JetBrains 集成 | **有修复** | 2.1.248 修复 VS Code chat tab 因 session 从未保存而卡在 “No conversation found”；JetBrains 未见独立更新。 |
+| Managed Agents（sessions、webhooks、environments、memory stores） | **有相关更新** | 2.1.248 增加同机跨 session 的 `SendMessage` / `ListAgents`，修复云端启动、Remote Control 重连、后台 worktree 锁与陈旧 session 恢复；未见 webhooks、environment 或 memory stores 独立公告。 |
 | Skills 与 marketplaces | **有更新** | 2.1.247 加固插件市场：拒绝控制/不可见字符名称，并对 `/plugin` 与 CLI 输出做转义；同时修复无版本插件跨 scope 安装时 live cache 被重建的问题。 |
 | Claude Developer Platform | **有更新** | `/claude-api cost-optimize` 提供按缓存、token、batch、effort 与模型选择逐项分析成本的工作流；相关 skill 增补组织成员、邀请、workspace、API key、rate-limit report、WIF 与 CMEK。 |
-| Agent SDK | 无新增 | 已查官方文档与 GitHub；窗口内未见独立 SDK release。 |
+| Agent SDK | **有同步发布** | [Python SDK 0.2.147 changelog 提交](https://github.com/anthropics/claude-agent-sdk-python/commit/1cd478b838e7e6a8193597f966530df67d642782) 于上海时间 09:03 发布，将捆绑 Claude CLI 更新到 2.1.250；未宣称有独立 SDK API 功能。 |
 | Cowork | **相关修复** | 2.1.247 的云端 session 恢复与权限模式同步修复适用于桌面/移动端云会话；未见 Cowork 独立功能公告。 |
 | Design | 无新增 | 将 Design 作为产品关键词检查，未找到 Anthropic 可核验的新公告。 |
 | Tag / @Claude sessions | 无新增 | 已查 Claude Tag 官方入口与近期新闻；未见窗口内新功能。 |
@@ -58,6 +62,12 @@ tags:
 Security 有一项产品侧邻近更新：2.1.247 对插件市场名称和输出转义加固，并修复 Bash sandbox 误删符号链接配置的场景。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客服入口均已检查，本窗口未见可核验的新官方行业发布。
 
 ## 官方更新（由新到旧）
+
+### Claude Code 2.1.250 / 2.1.248：受限执行、跨会话通信与会话可靠性
+
+[2.1.250 官方提交](https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6) 只公开说明 bug 修复与可靠性改善，不进一步推断具体功能。[2.1.248 官方提交](https://github.com/anthropics/claude-code/commit/c336b74efcb15cdbacab427d277d5ebed11ddbec) 则提供详细清单：`--restricted` 可移除命令/代码执行和默认 WebFetch、限制文件工具在工作目录内并拒绝绕过权限；同机 session 可通过 `SendMessage` / `ListAgents` 通信。对长时 Agent 更关键的是缓存稳定性、云端 session 启动、Remote Control 重连、后台 worktree 锁和旧 session 恢复修复；安全侧还阻止 `/ultrareview` 与云 session 上传 `prod.env`、`*.tfvars` 及凭据临时副本。
+
+[Python Agent SDK 0.2.147 提交](https://github.com/anthropics/claude-agent-sdk-python/commit/1cd478b838e7e6a8193597f966530df67d642782) 仅同步捆绑 CLI 2.1.250，属于版本联动而非独立 SDK 能力发布。
 
 ### Claude Code 2.1.247：成本分析、Agent 可靠性与企业控制面
 
@@ -93,15 +103,18 @@ Security 有一项产品侧邻近更新：2.1.247 对插件市场名称和输出
 
 ## 来源链接
 
-1. [Claude Code 2.1.247 CHANGELOG 提交](https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3)
-2. [额度提升到期讨论（Reddit）](https://www.reddit.com/r/ClaudeCode/comments/1w01yew/per_anthropics_own_help_page_claude_code_weekly/)
-3. [Claude 竞品比较讨论（Reddit）](https://www.reddit.com/r/ClaudeAI/comments/1vzomwt/claude_competitor_comparison_discussion_hub/)
-4. [Opus 5 使用体验讨论（Reddit）](https://www.reddit.com/r/ClaudeCode/comments/1vz2mwx/opus_5_am_i_going_mad/)
-5. [AI-Native SDLC playbook（较旧背景）](https://claude.com/blog/the-ai-native-sdlc-playbook)
+1. [Claude Code 2.1.250 CHANGELOG 提交](https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6)
+2. [Claude Code 2.1.248 CHANGELOG 提交](https://github.com/anthropics/claude-code/commit/c336b74efcb15cdbacab427d277d5ebed11ddbec)
+3. [Claude Agent SDK Python 0.2.147 提交](https://github.com/anthropics/claude-agent-sdk-python/commit/1cd478b838e7e6a8193597f966530df67d642782)
+4. [Claude Code 2.1.247 CHANGELOG 提交](https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3)
+5. [额度提升到期讨论（Reddit）](https://www.reddit.com/r/ClaudeCode/comments/1w01yew/per_anthropics_own_help_page_claude_code_weekly/)
+6. [Claude 竞品比较讨论（Reddit）](https://www.reddit.com/r/ClaudeAI/comments/1vzomwt/claude_competitor_comparison_discussion_hub/)
+7. [Opus 5 使用体验讨论（Reddit）](https://www.reddit.com/r/ClaudeCode/comments/1vz2mwx/opus_5_am_i_going_mad/)
+8. [AI-Native SDLC playbook（较旧背景）](https://claude.com/blog/the-ai-native-sdlc-playbook)
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Research、Claude Blog、Developer Platform 与 Claude Code 文档；Claude Code GitHub commit/tag/CHANGELOG；Agent SDK；Help Center；Status；Tier 1/2/3 全部指定产品与行业关键词；Reddit 四个社区、Hacker News、X、YouTube及中英文网页搜索。
 - 失败来源：X 无法稳定展开公开原帖时间与互动量；YouTube 未找到可与官方交叉核验的新发布；Help Center 部分页面仅有相对更新时间；GitHub Releases API 未返回对象，已切换 commit、tag 和 CHANGELOG。
-- 初始候选：8；保留来源：5（窗口内官方 1、日期未确认社区 2、较旧背景 2）。
+- 初始候选：11；保留来源：8（窗口内官方 4、日期未确认社区 2、较旧背景 2）。
 - 二次补搜：否（最终来源不为 0）。

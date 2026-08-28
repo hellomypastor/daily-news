@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-08-28"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T10:18:00+08:00"
+updatedAt: "2026-08-28T10:54:27+08:00"
 description: "2026-08-28 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-28"
-featuredUrl: "https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3"
+featuredUrl: "https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6"
 featuredSummary: "2026-08-28 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Claude 全家桶过去 24 小时动态与口碑日报
 
-**[Claude Code 2.1.247 changelog update](https://github.com/anthropics/claude-code/commit/cad6304e85e2767eac20044e752b010fff1bb4c3)**。官方提交记录 Claude Code 2.1.247 的反馈、成本分析、Agent 可靠性、云会话、插件市场与企业管理更新。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Claude Code 2.1.250 changelog update](https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6)**。官方提交将版本推进到 2.1.250，公开说明为 bug 修复与可靠性改善，未提供更细功能清单。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-28_claude)
 
@@ -37,7 +37,7 @@ tags:
 
 ## 今日 AI / Agent 开源项目与技术博客精选
 
-**[DeepSeek Harness v0.1.2-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.1)**。预发布改善会话与持久化，扩展子代理模型配置，修复持久终端和工具调用，并调整 Headless 输出与 Remote 鉴权。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。
+**[Cline Desktop v0.0.20](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)**。Cline Desktop 新增 Windows 签名安装包与自动更新，并修复定时任务持久化、MCP 启动、checkpoint 恢复和会话搜索问题。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-28_open-source)
 

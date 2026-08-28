@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T06:12:22+08:00"
+updatedAt: "2026-08-28T10:54:04+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Grok Bot is now included with more plans"
 featuredUrl: "https://x.ai/news/grok-bot-more-plans"
@@ -10,12 +10,18 @@ featuredPublishedAt: "2026-08-26"
 featuredTags: ["Grok","Agent","Industry","近两日补充"]
 tags:
   - "近两日补充"
+  - "日期未确认"
   - "Agent"
   - "AI"
+  - "API"
+  - "Cohere"
+  - "Document AI"
+  - "Education"
   - "Grok"
   - "Hugging Face"
   - "Industry"
   - "Microsoft Foundry"
+  - "OpenAI"
   - "RAG"
   - "Research"
   - "Retrieval"
@@ -23,15 +29,15 @@ tags:
 
 ## 今日概览
 
-本轮扫描窗口为 **2026-08-27 06:12 至 2026-08-28 06:12（Asia/Shanghai）**。在能够核验日期的官方入口中，未发现落入严格 24 小时窗口的新条目；保留 3 条 24–48 小时范围内的官方补充。
+本轮增量扫描窗口为 **2026-08-27 10:54 至 2026-08-28 10:54（Asia/Shanghai）**，并保留今日早前已累计的 3 条来源。新增发现 2 条日期为 8 月 27 日的官方候选，但原页未给出精确发布时间，无法判定是否落入严格 24 小时窗口，故列入“日期未确认”。
 
 ## 优先动态（过去 24 小时）
 
-暂无可核验的官方新增。
+暂无可核验到精确时刻的官方新增。
 
 ## 常规动态
 
-本轮无新增。
+本轮无可核验到精确时刻的新增。
 
 ## 播客
 
@@ -51,20 +57,24 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂�
 
 ## 日期未确认
 
-暂无保留项。
+| 厂商 | 动态 | 类型 | 日期/状态 | 摘要与意义 |
+|---|---|---|---|---|
+| Cohere | [Meet Cohere Parse](https://docs.cohere.com/v2/changelog) | 模型/API | 2026-08-27，官方日期；时刻未给出 | Cohere 发布 2.3B 参数多模态文档解析模型 `parse-v5.0`，可把复杂文档转换为保留表格、表单、图片描述、边界框和版面结构的 Markdown/HTML，并通过 Parse API、Microsoft Foundry、AWS SageMaker 与 Model Vault 提供。精确时刻缺失，暂不计入严格 24 小时确认项。 |
+| OpenAI | [ChatGPT 与批判性思维训练的学生随机实验](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/) | 经济研究/教育 | 2026-08-27，官方日期；时刻未给出 | 超过 1,000 名学生的随机实验显示，ChatGPT 访问提升作业质量与连贯性，因果推理训练则扩大想法独特性；两者效果互补。该结果提示教育评估需同时关注成品质量、原创性与推理过程；详见 OpenAI 专题页。 |
 
 ## 观察池
 
+- 腾讯云的旧版 `youtu-agent` 与 `youtu-mrc-pro` 于 8 月 28 日停止调用并引导迁移至 DeepSeek V4 Pro；公告发布时间无法从原页稳定核验，且更接近平台运维迁移，暂不列入来源表。
 - Mistral 社区出现对后续模型发布时间的讨论，但缺少官方新公告，仅作为需求信号，不据此推断产品或发布日期。
 - 多个聚合站列出所谓 2026 年 8 月模型发布记录；因不是一手材料且本轮未逐项找到新的官方原文，不写入事实表。
 
 ## 一句话总结
 
-严格 24 小时窗口内官方更新偏静默；近两日最值得关注的是 Grok Bot 扩大订阅覆盖，以及 Grok 4.6 进入 Microsoft Foundry。
+严格 24 小时窗口内仍缺少精确时刻可核验的新发布；新增观察重点是 Cohere Parse 的结构化文档解析能力，以及 OpenAI 对 AI 辅助与批判性思维互补效应的随机实验。
 
 ## 采集状态
 
-- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok（新闻、文档、API/模型入口及 DeepSearch、语音、编码、工具调用、Agent）、Mistral、Cohere、Qwen/阿里、字节、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及指定播客和 Coding Agent 厂商级信号。
-- 失败来源：部分官方社交账号需要登录，无法稳定核验时间与互动量；部分中文厂商列表页未在搜索索引中暴露本轮新增原文。
-- 初始候选数：7；保留来源数：3。
+- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok（官方 News、文档、API/模型变更入口、官方仓库，以及 DeepSearch、语音、编码、工具调用、Agent）、Mistral、Cohere、Qwen/阿里、字节、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，Cline/pi-mono/DSH 厂商级信号，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 和厂商播客。
+- 失败来源：部分官方社交账号需要登录，无法稳定核验时间与互动量；部分中文厂商列表页未在搜索索引中暴露本轮新增原文；LlamaIndex 搜索命中陈旧的预发布镜像，未作为本轮事实来源。
+- 初始候选数：9；保留来源数：5。
 - 二次补搜：否（最终来源不为 0）。
