@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T15:02:00+08:00"
+updatedAt: "2026-08-28T18:03:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.151.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7"
@@ -39,13 +39,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-27 15:02 至 2026-08-28 15:02（Asia/Shanghai）**。可精确核时的官方动态包括 Codex CLI 0.151.0-alpha.6、alpha.7 与 alpha.8 三个预发布版，以及 OpenAI Node SDK v7.8.0；三个 Codex 发布页都没有逐项变更说明，因此不推断功能。Node SDK 新版加入 Responses / Chat Completions 的 `compute_units` 用量字段和 WebSocket 标识，并带来认证、事件、浏览器 ESM 与上传检测修复。ChatGPT Release Notes、教育研究、巴西业务与 OpenAI Academy 的 Ariso 案例均只有自然日而没有精确时刻，本页保守列入“日期未确认”。Agent SDK、Realtime 与模型目录未发现窗口内新条目。
+采集窗口为 **2026-08-27 18:03 至 2026-08-28 18:03（Asia/Shanghai）**。可精确核时的官方动态包括 Codex CLI 0.151.0-alpha.6、alpha.7 与 alpha.8 三个预发布版，以及 OpenAI Node SDK v7.8.0；三个 Codex 发布页都没有逐项变更说明，因此不推断功能。Node SDK 新版加入 Responses / Chat Completions 的 `compute_units` 用量字段和 WebSocket 标识，并带来认证、事件、浏览器 ESM 与上传检测修复。ChatGPT Release Notes、教育研究、巴西业务与 OpenAI Academy 的 Ariso 案例均只有自然日而没有精确时刻，本页保守列入“日期未确认”。Agent SDK、Realtime 与模型目录未发现窗口内新条目。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.151.0-alpha.6 与 alpha.7 发布，alpha.8 预发布标签创建**；三者均无逐项说明 | [alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.6)、[alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7)、[alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8) |
+| Codex CLI | **0.151.0-alpha.6、alpha.7 与 alpha.8 发布**；三者均无逐项说明 | [alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.6)、[alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7)、[alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8) |
 | VS Code / JetBrains 集成 | 无官方新增 | 官方文档与 changelog |
 | Codex cloud / remote tasks / PR agents | 无官方新增 | 官方 Codex 文档与 changelog |
 | ChatGPT agentic mode | 无官方新增；临时聊天控制属于普通 ChatGPT 产品更新 | ChatGPT Release Notes |
@@ -86,7 +86,7 @@ Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的
 
 ### Codex CLI 0.151.0-alpha.8
 
-官方 [GitHub 发布页](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8) 显示该预发布标签于 **2026-08-28 10:55 +08:00** 创建。页面仅标注版本号，没有逐项 changelog，本页不推断功能或修复。
+官方 [GitHub 发布页](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8) 显示该预发布版于 **2026-08-28 12:42 +08:00** 发布。页面仅标注版本号，没有逐项 changelog，本页不推断功能或修复。
 
 ### Codex CLI 0.151.0-alpha.7
 
@@ -147,6 +147,6 @@ Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Global Affairs / Academy、OpenAI Developers API changelog、模型与弃用文档、Responses / Realtime / Assistants 迁移资料、ChatGPT Release Notes、Codex CLI / IDE / Cloud / Remote Tasks / PR Review / Desktop 官方入口、五个官方 GitHub Releases 集合、OpenAI Status、Reddit 五个社区、Hacker News、X、YouTube 与公开中英文网页搜索。
-- 失败来源：GitHub API（alpha.8 标签接口无 release 元数据，已改用公开 Releases HTML 核时）；X（未登录无法稳定核验原帖时间）；Reddit（新帖时间与正文访问不稳定）；YouTube（无可交叉核验的窗口内新增）。
+- 失败来源：X（未登录无法稳定核验原帖时间）；Reddit（新帖时间与正文访问不稳定）；YouTube（无可交叉核验的窗口内新增）。
 - 初始候选：25；最终保留来源：9。
 - 二次补搜：否（最终来源不为 0）。

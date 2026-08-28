@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T15:02:00+08:00"
+updatedAt: "2026-08-28T18:03:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Cline Desktop v0.0.20"
 featuredUrl: "https://github.com/cline/cline/releases/tag/desktop-v0.0.20"
@@ -26,6 +26,7 @@ tags:
   - "Community"
   - "Compaction"
   - "Constraints"
+  - "Cross-session"
   - "DeepSeek Harness"
   - "Desktop"
   - "Hacker News"
@@ -42,15 +43,17 @@ tags:
   - "Research"
   - "Safety"
   - "Scheduled Tasks"
+  - "Security"
   - "Self-hosted"
   - "Session"
+  - "Skills"
   - "Sub-agent"
   - "Windows"
 ---
 
 ## 今日概览
 
-本页发现窗口为 **2026-08-27 15:02 至 2026-08-28 15:02（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。Tier 1 中，Cline Desktop 发布 v0.0.20，带来 Windows 正式分发，并集中修复定时任务、会话搜索、MCP 启动与 checkpoint 恢复安全；随后主分支又合并会话中止向 teammate 任务传播的修复，但该提交明确尚未进入发布版。DeepSeek Harness 发布 v0.1.2-alpha.1：子代理可单独配置提供方、模型与推理力度，Headless 模式把进度送至 stderr，同时修复持久终端、预设和工具调用问题。OpenCode 在午后连续发布 v1.18.24 与 v1.18.25，修复 Bedrock 推理响应回放，并打通 Azure CLI / Microsoft Entra ID 登录；Pi、Aider、Continue 与 Roo Code 未见窗口内正式发布。研究方面，一篇新论文系统测量 coding-agent 模型切换的 handoff 成本；另一篇研究多阶段 Agent 工作流如何把强制约束弱化为可选上下文。HN 上的 Proliferate 提供多 harness、自托管工作区与工作流编排，但功能和采用信号仍以作者陈述为主，放入观察池。
+本页发现窗口为 **2026-08-27 15:02 至 2026-08-28 15:02（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。18:03 滚动补扫新增 EVOMAL 自演化技能库安全研究，并把跨机器、跨会话 Agent 通信项目 AgentParty 以作者自述状态纳入观察池。Tier 1 中，Cline Desktop 发布 v0.0.20，带来 Windows 正式分发，并集中修复定时任务、会话搜索、MCP 启动与 checkpoint 恢复安全；随后主分支又合并会话中止向 teammate 任务传播的修复，但该提交明确尚未进入发布版。DeepSeek Harness 发布 v0.1.2-alpha.1：子代理可单独配置提供方、模型与推理力度，Headless 模式把进度送至 stderr，同时修复持久终端、预设和工具调用问题。OpenCode 在午后连续发布 v1.18.24 与 v1.18.25，修复 Bedrock 推理响应回放，并打通 Azure CLI / Microsoft Entra ID 登录；Pi、Aider、Continue 与 Roo Code 未见窗口内正式发布。研究方面，一篇新论文系统测量 coding-agent 模型切换的 handoff 成本；另一篇研究多阶段 Agent 工作流如何把强制约束弱化为可选上下文。HN 上的 Proliferate 提供多 harness、自托管工作区与工作流编排，但功能和采用信号仍以作者陈述为主，放入观察池。
 
 ## Coding Agent / Harness 雷达
 
@@ -104,7 +107,7 @@ Cline LLM SDK 将实验性遥测迁移到 AI SDK 7 正式接口，并保留 sess
 
 论文关注计划、摘要、工单、记忆和 handoff note 等中间产物：它们可能保留某个未决条件的文字，却把“执行前必须解决”改写为“可供参考”，导致下游违反约束。该问题对多 Agent 编排、压缩与持久记忆尤其相关；目前是论文提出的机制与实验，不应外推为所有工作流都必然失效。[Hugging Face 论文页](https://huggingface.co/papers/2608.24569)，原文发表于 2026-08-25；[arXiv 原文](https://arxiv.org/abs/2608.24569)。
 
-## 旧文再讨论
+### EVOMAL：自演化技能库可能放大恶意模板\n\n论文研究 coding agent 从共享技能库检索既有技能、再模仿编写新工具的路径。作者称恶意技能即使未被直接调用，其代码结构也可能被 Agent 复制到新技能并重新进入共享库；论文在六个模型与 153 个 tool-relevant SWE-bench Verified 任务上报告自投毒率，并测试 counter-prompt 缓解。这里仅将数值与效果视为作者实验结果，不外推到所有技能市场或生产系统。[arXiv 原文](https://arxiv.org/abs/2608.25776)，2026-08-26 21:19 +08:00。\n\n## 旧文再讨论
 
 本轮未发现满足“原文超过七天、且过去 24 小时在 HN 重新出现并可核验互动”的新增条目。
 
@@ -116,7 +119,7 @@ Cline LLM SDK 将实验性遥测迁移到 AI SDK 7 正式接口，并保留 sess
 
 - **Proliferate｜新项目 / 作者自述**：项目提供自托管工作区，尝试统一多个原生 coding-agent harness，并用父子 Agent 通信、可复用工作流和人工审批门组织任务。仓库可公开检查，但跨 harness 兼容范围、隔离边界和实际采用尚缺独立验证；HN 条目页本轮又受 429 限制，因此只作邻近信号。[官方仓库](https://github.com/proliferate-ai/proliferate)；[HN 提交](https://news.ycombinator.com/item?id=49390739)。
 
-- **What Is a Harness?｜较旧背景 / 第一方观点**：Pi 第一方团队 8 月 20 日的解释把 harness 概括为 system prompt、工具、agentic loop 与跨模型翻译层，并主张本地开源 harness 能保留用户对模型选择和会话数据的控制。文中“超过 5,000 个扩展”为作者自述，未作独立采用验证；原文早于本轮窗口，因此不列为今日发布。[原文](https://earendil.com/posts/what-is-a-harness/)，2026-08-20。
+- **AgentParty｜新项目 / 作者自述**：项目尝试让不同机器、不同会话中的 coding agent 通过终端 `@mention` 交换消息，并宣称可跨团队与组织协作。官方仓库可检查，HN 于 2026-08-28 16:54 +08:00 出现新提交；但采用、消息认证、隔离和权限边界尚缺独立验证。[官方仓库](https://github.com/leeguooooo/AgentParty)；[HN 提交](https://news.ycombinator.com/item?id=49476112)。\n\n- **What Is a Harness?｜较旧背景 / 第一方观点**：Pi 第一方团队 8 月 20 日的解释把 harness 概括为 system prompt、工具、agentic loop 与跨模型翻译层，并主张本地开源 harness 能保留用户对模型选择和会话数据的控制。文中“超过 5,000 个扩展”为作者自述，未作独立采用验证；原文早于本轮窗口，因此不列为今日发布。[原文](https://earendil.com/posts/what-is-a-harness/)，2026-08-20。
 
 - **Nailong Harness｜非官方 Windows 伴随启动器**：DeepSeek Harness 官方 Discussions 在 8 月 27 日出现一个社区项目，作者明确声明不受 DeepSeek 认可；它启动官方 `@deepseek-ai/dsh` 包并等待 Web 界面就绪，属于外围生命周期控制器而非 DSH 插件或官方桌面版。[官方社区讨论](https://github.com/deepseek-ai/deepseek-harness/discussions/4723)，2026-08-27。
 
@@ -135,12 +138,12 @@ Cline LLM SDK 将实验性遥测迁移到 AI SDK 7 正式接口，并保留 sess
 11. [What Is a Harness?](https://earendil.com/posts/what-is-a-harness/)
 12. [OpenCode v1.18.24](https://github.com/anomalyco/opencode/releases/tag/v1.18.24)
 13. [OpenCode v1.18.25](https://github.com/anomalyco/opencode/releases/tag/v1.18.25)
-14. [Cline AI SDK 7 / Langfuse 遥测合并提交](https://github.com/cline/cline/commit/aa4753f4abc8303dcecd5d27cde622215047c21b)
+14. [Cline AI SDK 7 / Langfuse 遥测合并提交](https://github.com/cline/cline/commit/aa4753f4abc8303dcecd5d27cde622215047c21b)\n15. [EVOMAL（arXiv）](https://arxiv.org/abs/2608.25776)\n16. [AgentParty 官方仓库](https://github.com/leeguooooo/AgentParty)\n17. [AgentParty 的 HN 提交](https://news.ycombinator.com/item?id=49476112)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库 / Releases / changelog 或 README；HN front/newest 与近期索引候选；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers；Simon Willison 与可信工程博客。
-- 失败来源：GitHub Releases HTML 部分列表缓存滞后，已改用官方 REST API；部分 HN 条目页返回 429；GitHub Trending 未稳定提供当日指标；Hugging Face 部分列表只有相对时间。均已通过公开 HTML、搜索索引或独立论文页切换入口复核。
-- 初始候选数：20。
-- 最终保留来源数：14。
+- 失败来源：GitHub Releases HTML 部分列表缓存滞后，已改用官方 REST API；部分 HN 条目页返回 429；GitHub Trending 未稳定提供当日指标；Hugging Face 部分列表只有相对时间；Dynamic Tools 技术博客返回 403，因此未据 HN 标题转述其结论。其余候选已通过公开 HTML、搜索索引或独立论文页切换入口复核。
+- 初始候选数：24。
+- 最终保留来源数：17。
 - 二次补搜：否（最终来源不为 0）。
