@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T10:54:27+08:00"
+updatedAt: "2026-08-28T12:05:48+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Grok Bot is now included with more plans"
 featuredUrl: "https://x.ai/news/grok-bot-more-plans"
@@ -15,9 +15,11 @@ tags:
   - "AaaS"
   - "Agent"
   - "AgentZ"
+  - "Automation"
   - "Background Agent"
   - "Claude"
   - "Cloud Agent"
+  - "Devin"
   - "Enterprise"
   - "GA"
   - "Grok"
@@ -26,14 +28,16 @@ tags:
   - "MaaS"
   - "Managed Agent"
   - "PaaS"
+  - "Pricing"
   - "Qoder"
   - "Sandbox"
   - "Security Agent"
+  - "WorkBuddy"
 ---
 
 ## 今日概览
 
-扫描窗口为 **2026-08-27 10:54 至 2026-08-28 10:54（Asia/Shanghai）**。严格 24 小时窗口内新增 3 条可核验 AaaS 动态：AccuKnox 发布 AgentZ 托管 Agent 平台，SonarQube Hunter Agent 在 Cloud 版 GA，Dock 为云端 Agent 增加免复制凭据的 Claude 登录流程。当天早先收录的 2 条 xAI 官方动态和 1 条日期未确认中国平台入口继续累积保留。
+扫描窗口为 **2026-08-27 12:05 至 2026-08-28 12:05（Asia/Shanghai）**。严格 24 小时窗口内新增 3 条可核验 AaaS 动态：AccuKnox 发布 AgentZ 托管 Agent 平台，SonarQube Hunter Agent 在 Cloud 版 GA，Dock 为云端 Agent 增加免复制凭据的 Claude 登录流程。当天早先来源继续累积；本轮另补录 Devin 8 月 26 日官方更新为 24–72h 观察项，并保留腾讯云 WorkBuddy Managed Agents、PPIO Agent 托管两个日期未确认的明确 AaaS 官方入口。
 
 ## 重点动态
 
@@ -49,25 +53,28 @@ tags:
 | Sonar | [Hunter Agent GA](https://www.sonarsource.com/company/press-releases/sonar-launches-sonarqube-hunter-agent/) | 官方，2026-08-27 | 在 SonarQube Cloud 后台按计划或按需运行，属于特定安全任务的托管 Agent。 |
 | Dock | [云端 Agent 自助登录](https://trydock.ai/changelog/2026-08-27-cloud-agents-sign-themselves-in) | 官方 changelog，2026-08-27 | 改善远程 Agent 的身份生命周期与持久凭据管理；Claude 相关能力详见 Claude 专题页。 |
 | SpaceXAI / xAI | [Grok Bot 扩大套餐覆盖](https://x.ai/news/grok-bot-more-plans) | 官方，2026-08-26（24–72h） | Bot 具有自己的常驻云端计算机、浏览器和终端，可跨应用持续执行、多 Bot 并行协作并配置例行任务；套餐扩展扩大托管执行商业覆盖。 |
+| Cognition Devin | [8 月 26 日 Recent Updates](https://docs.devin.ai/release-notes/overview) | 官方，2026-08-26（24–72h） | 改进长等待期间的排队消息、自动化计划与触发器、企业级批量修复 API、MCP 安装与权限控制，体现托管异步执行和企业控制面的持续完善。 |
 
 ## 海外厂商
 
-- **Cognition Devin（必查）**：已显式检查官方产品新闻、2026 release notes 与文档，覆盖托管异步执行、环境、并发、定价、企业接入和集成；本轮未找到窗口内新公告，不重复旧背景来源。
+- **Cognition Devin（必查）**：已显式检查官方产品新闻、2026 release notes 与文档，覆盖托管异步执行、环境、并发、定价、企业接入和集成；24 小时内无新增。8 月 26 日 [Recent Updates](https://docs.devin.ai/release-notes/overview) 仍在 24–72h 观察范围，包含长等待时接收排队消息、更细自动化日程、多 Slack 触发频道、批量修复 API 与 MCP/OAuth 流程等托管控制面更新。
 - **Grok（必查）**：已检查 xAI News、Grok Bot 与 Build 入口；Grok Bot 的云端计算机、后台持续执行、多 Bot 与 routine 符合 AaaS 定义并继续累积保留，窗口内无新发布；普通 Grok 4.6 模型分发仅作邻近信号。
 - Anthropic、OpenAI、Google、Microsoft、Replit、Cursor、GitHub、Amazon、Cloudflare、Factory、Amp、Lindy、CrewAI 与 LangGraph Platform 官方入口均已检查，本轮无其他可核验新增。
 
 ## 中国市场（字节重点）
 
 - 字节 Coze/火山/Doubao/Trae/Seed 已检查，未发现本轮可核验的新 AaaS 发布。
-- 阿里百炼/Qoder、腾讯、百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek 入口已检查；除下方日期未确认候选外无可核验新增。
+- 阿里百炼/Qoder、腾讯、百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek 入口已检查；Qoder Cloud Agents、腾讯云 WorkBuddy Managed Agents 与 PPIO Agent 托管均符合 AaaS 边界，但页面缺少可核验发布时间，见下方“日期未确认”。
 
 ## AaaS 与 MaaS / PaaS 边界
 
-AgentZ、Hunter Agent、Dock Cloud Agent 与 Grok Bot 都由服务方托管或管理执行环境及生命周期，属于 AaaS。Grok 4.6 在 Foundry 的托管模型端点本身更接近 MaaS/PaaS，只有与 Agent 编排、运行环境和治理结合后才构成完整 AaaS。
+AgentZ、Hunter Agent、Dock Cloud Agent、Grok Bot、Devin、WorkBuddy Managed Agents 与 PPIO Agent 托管都由服务方托管或管理执行环境及生命周期，属于 AaaS。Grok 4.6 在 Foundry 的托管模型端点本身更接近 MaaS/PaaS，只有与 Agent 编排、运行环境和治理结合后才构成完整 AaaS。
 
 ## 日期未确认
 
 - [Qoder Cloud Agents](https://qoder.com/zh/cloud-agents)：当前官方页面描述 API 驱动的托管 Agent、长时 Session、断点恢复、独立 Sandbox、SSE 可观测与弹性并发，产品定义明确符合 AaaS；页面未显示可核验发布日期，因此不当作本轮新发布。
+- [腾讯云 WorkBuddy Managed Agents](https://intl.cloud.tencent.com/zh/products/workbuddy-managed-agents)：官方页面描述云端托管运行底座、长周期异步、沙箱暂停/唤醒、API / SDK、MCP / OAuth / A2A 连接器、Trace 与评测；搜索入口可读但原页本轮打开超时，且没有可核验发布日期，因此仅作为日期未确认候选。
+- [PPIO Agent 托管](https://ppio.com/agents)：官方页面提供云端 Agent 沙箱、控制台与 CLI 管理、暂停保留状态且停费、秒级恢复、持续运行与飞书集成；页面未显示发布时间，不当作本轮发布。
 
 ## 未证实传闻
 
@@ -85,8 +92,8 @@ AaaS 的控制面正在细化为隔离执行、权限与运行时凭据、定时
 ## 采集状态
 
 - 已检查：海外与中国指定厂商、所有 Coding Agent/harness 托管信号；特别完成 Devin 与 Grok 的强制专项检查，并核验 AgentZ、Hunter Agent 与 Dock 官方/厂商原文。
-- 失败来源：Devin 本轮搜索未找到可核验的新官方时间条目；若干中国厂商页面缺少逐条日期；部分社交账号需登录。
-- 初始候选数：11；保留来源数：6。
+- 失败来源：Devin 24 小时内无新条目，最新官方更新为 8 月 26 日；腾讯云 WorkBuddy 原页本轮超时但搜索入口可读；若干中国厂商页面缺少逐条日期；部分社交账号需登录。
+- 初始候选数：14；保留来源数：9。
 - 二次补搜：是（当天早先 verified 24 小时动态为空时已完成；本轮新增来源后无需再次触发，但继续检查官方备用入口与可信二手来源）。
 
-今日扫描完成，共 6 条动态/候选，重点：AgentZ 带来完整托管运行与治理控制面，Hunter Agent 和 Dock 分别补强后台安全任务与云端 Agent 身份生命周期。
+今日扫描完成，共 9 条动态/候选，重点：AgentZ、Hunter Agent 与 Dock 构成 24 小时内新增；Devin 的 24–72h 控制面更新，以及 WorkBuddy 与 PPIO 两个日期未确认托管入口补足异步运行、沙箱和企业治理覆盖。

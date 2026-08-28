@@ -2,9 +2,14 @@
   "slug": "ai-industry",
   "title": "主流 AI / Agent 厂商技术动态日报",
   "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
-  "tags": ["AI", "Agent", "Industry", "Research"],
+  "tags": [
+    "AI",
+    "Agent",
+    "Industry",
+    "Research"
+  ],
   "order": 40,
-  "updatedAt": "2026-08-28T10:54:04+08:00",
+  "updatedAt": "2026-08-28T12:06:04+08:00",
   "scan": {
     "checkedSources": [
       "Anthropic News/Research/Engineering",
@@ -35,10 +40,10 @@
       "部分厂商官方社交账号：未登录页面无法稳定读取精确发布时间与互动量",
       "部分中文厂商动态页：搜索索引未返回可核验的本轮新增原文"
     ],
-    "candidateCount": 9,
+    "candidateCount": 16,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n本轮增量扫描窗口为 **2026-08-27 10:54 至 2026-08-28 10:54（Asia/Shanghai）**，并保留今日早前已累计的 3 条来源。新增发现 2 条日期为 8 月 27 日的官方候选，但原页未给出精确发布时间，无法判定是否落入严格 24 小时窗口，故列入“日期未确认”。\n\n## 优先动态（过去 24 小时）\n\n暂无可核验到精确时刻的官方新增。\n\n## 常规动态\n\n本轮无可核验到精确时刻的新增。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口均已检查，未找到可在截止时间前核验为过去 24 小时发布的新一期。\n\n## 近两日补充\n\n| 厂商 | 动态 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| SpaceXAI / xAI | [Grok Bot 扩大套餐覆盖](https://x.ai/news/grok-bot-more-plans) | Agent 产品/商业化 | 2026-08-26，官方 | Grok Bot 已纳入 SuperGrok、Cursor Pro 与 Cursor Teams 等套餐；官方说明 Bot 有独立用量、云端计算机、浏览器和终端，可并行持续工作。它把“常驻数字同事”从单独测试扩大到更多个人及团队订阅，是产品分发与 Agent 商业化信号。 |\n| SpaceXAI / xAI | [Grok 4.6 登陆 Microsoft Foundry](https://x.ai/news/grok-4-6-microsoft-foundry) | 模型分发/企业平台 | 2026-08-26，官方 | Grok 4.6 可通过 Microsoft Foundry 使用；原文将其定位于长时 Agent、编码 Agent 与企业自动化，并给出 500k 上下文和可配置推理强度。Foundry 提供评测、托管端点及企业治理，说明 xAI 正扩大企业平台覆盖。 |\n| Hugging Face | [Sentence Transformers 多向量检索训练指南](https://huggingface.co/blog/train-multi-vector-encoder) | 技术博客/检索 | 2026-08-26，官方社区博客 | 文章介绍 Sentence Transformers v6 的 `MultiVectorEncoder` 训练路径，覆盖 ColBERT 式逐 token 交互、领域微调、长文截断与评测。对 RAG、代码搜索和专业领域检索的可复现训练有直接参考价值。 |\n\n## 近三日补充\n\n除上述条目外，未发现需要单列且可核验的新来源。\n\n## 日期未确认\n\n| 厂商 | 动态 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| Cohere | [Meet Cohere Parse](https://docs.cohere.com/v2/changelog) | 模型/API | 2026-08-27，官方日期；时刻未给出 | Cohere 发布 2.3B 参数多模态文档解析模型 `parse-v5.0`，可把复杂文档转换为保留表格、表单、图片描述、边界框和版面结构的 Markdown/HTML，并通过 Parse API、Microsoft Foundry、AWS SageMaker 与 Model Vault 提供。精确时刻缺失，暂不计入严格 24 小时确认项。 |\n| OpenAI | [ChatGPT 与批判性思维训练的学生随机实验](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/) | 经济研究/教育 | 2026-08-27，官方日期；时刻未给出 | 超过 1,000 名学生的随机实验显示，ChatGPT 访问提升作业质量与连贯性，因果推理训练则扩大想法独特性；两者效果互补。该结果提示教育评估需同时关注成品质量、原创性与推理过程；详见 OpenAI 专题页。 |\n\n## 观察池\n\n- 腾讯云的旧版 `youtu-agent` 与 `youtu-mrc-pro` 于 8 月 28 日停止调用并引导迁移至 DeepSeek V4 Pro；公告发布时间无法从原页稳定核验，且更接近平台运维迁移，暂不列入来源表。\n- Mistral 社区出现对后续模型发布时间的讨论，但缺少官方新公告，仅作为需求信号，不据此推断产品或发布日期。\n- 多个聚合站列出所谓 2026 年 8 月模型发布记录；因不是一手材料且本轮未逐项找到新的官方原文，不写入事实表。\n\n## 一句话总结\n\n严格 24 小时窗口内仍缺少精确时刻可核验的新发布；新增观察重点是 Cohere Parse 的结构化文档解析能力，以及 OpenAI 对 AI 辅助与批判性思维互补效应的随机实验。\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok（官方 News、文档、API/模型变更入口、官方仓库，以及 DeepSearch、语音、编码、工具调用、Agent）、Mistral、Cohere、Qwen/阿里、字节、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，Cline/pi-mono/DSH 厂商级信号，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 和厂商播客。\n- 失败来源：部分官方社交账号需要登录，无法稳定核验时间与互动量；部分中文厂商列表页未在搜索索引中暴露本轮新增原文；LlamaIndex 搜索命中陈旧的预发布镜像，未作为本轮事实来源。\n- 初始候选数：9；保留来源数：5。\n- 二次补搜：否（最终来源不为 0）。\n",
+  "content": "## 今日概览\n\n本轮增量扫描窗口为 **2026-08-27 12:05 至 2026-08-28 12:05（Asia/Shanghai）**，并保留今日早前已累计的 5 条来源。新增发现 Google DeepMind、NVIDIA 与 Anthropic 共 3 条日期为 8 月 27 日的官方候选，但原页均未给出精确发布时间，无法判定是否落入严格 24 小时窗口，故列入“日期未确认”。xAI / Grok 全渠道未发现比已累计的 Grok Bot 套餐扩展和 Grok 4.6 Microsoft Foundry 分发更晚的新发布。\n\n## 优先动态（过去 24 小时）\n\n暂无可核验到精确时刻的官方新增。\n\n## 常规动态\n\n本轮无可核验到精确时刻的新增。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口均已检查，未找到可在截止时间前核验为过去 24 小时发布的新一期。\n\n## 近两日补充\n\n| 厂商 | 动态 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| SpaceXAI / xAI | [Grok Bot 扩大套餐覆盖](https://x.ai/news/grok-bot-more-plans) | Agent 产品/商业化 | 2026-08-26，官方 | Grok Bot 已纳入 SuperGrok、Cursor Pro 与 Cursor Teams 等套餐；官方说明 Bot 有独立用量、云端计算机、浏览器和终端，可并行持续工作。它把“常驻数字同事”从单独测试扩大到更多个人及团队订阅，是产品分发与 Agent 商业化信号。 |\n| SpaceXAI / xAI | [Grok 4.6 登陆 Microsoft Foundry](https://x.ai/news/grok-4-6-microsoft-foundry) | 模型分发/企业平台 | 2026-08-26，官方 | Grok 4.6 可通过 Microsoft Foundry 使用；原文将其定位于长时 Agent、编码 Agent 与企业自动化，并给出 500k 上下文和可配置推理强度。Foundry 提供评测、托管端点及企业治理，说明 xAI 正扩大企业平台覆盖。 |\n| Hugging Face | [Sentence Transformers 多向量检索训练指南](https://huggingface.co/blog/train-multi-vector-encoder) | 技术博客/检索 | 2026-08-26，官方社区博客 | 文章介绍 Sentence Transformers v6 的 `MultiVectorEncoder` 训练路径，覆盖 ColBERT 式逐 token 交互、领域微调、长文截断与评测。对 RAG、代码搜索和专业领域检索的可复现训练有直接参考价值。 |\n\n## 近三日补充\n\n除上述条目外，未发现需要单列且可核验的新来源。\n\n## 日期未确认\n\n| 厂商 | 动态 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| Cohere | [Meet Cohere Parse](https://docs.cohere.com/v2/changelog) | 模型/API | 2026-08-27，官方日期；时刻未给出 | Cohere 发布 2.3B 参数多模态文档解析模型 `parse-v5.0`，可把复杂文档转换为保留表格、表单、图片描述、边界框和版面结构的 Markdown/HTML，并通过 Parse API、Microsoft Foundry、AWS SageMaker 与 Model Vault 提供。精确时刻缺失，暂不计入严格 24 小时确认项。 |\n| OpenAI | [ChatGPT 与批判性思维训练的学生随机实验](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/) | 经济研究/教育 | 2026-08-27，官方日期；时刻未给出 | 超过 1,000 名学生的随机实验显示，ChatGPT 访问提升作业质量与连贯性，因果推理训练则扩大想法独特性；两者效果互补。该结果提示教育评估需同时关注成品质量、原创性与推理过程；详见 OpenAI 专题页。 |\n| Google DeepMind | [试点首个专有前沿模型双盲评估](https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/) | 安全评测/研究基础设施 | 2026-08-27，官方日期；时刻未给出 | Google 与新加坡 AI Safety Institute、OpenMined、AVERI、MLCommons 合作，以 Confidential Space 隔离 Gemini Flash Lite 模型权重与外部机密测试题；Google 看不到题目、评测方看不到权重，旨在降低基准污染并保护双方资产。 |\n| NVIDIA | [Vera：首款为 Agent 打造的 CPU 开始规模交付](https://blogs.nvidia.com/blog/vera-cpu-delivery/) | Agent 基础设施/交付 | 2026-08-27，官方更新日期；时刻未给出 | NVIDIA 称 AWS 已收到首台 Vera CPU 服务器与 Vera Rubin GPU，此前已向 OCI、Anthropic、OpenAI 与 SpaceXAI 交付；Vera 面向编排、工具调用、Agent 沙箱和长上下文状态管理。原文最初发布于 5 月 18 日、8 月 27 日更新，故只把交付进展视为本轮候选。 |\n| Anthropic | [Claude Team plan for scientists](https://claude.com/programs/team-plan-for-scientists) | 科研产品/生态采用 | 2026-08-27 起算；精确上线时刻未给出 | 官方面向全球科研团队开放 10,000 个席位：Standard 首年免费、Premium 每月 15 美元，包含 Claude Science、Code、Cowork、科研数据库连接器及团队控制面；官方同时声明不以该计划的对话、上传文件或研究数据训练模型。详见 Claude 专题页。 |\n\n## 观察池\n\n- 腾讯云的旧版 `youtu-agent` 与 `youtu-mrc-pro` 于 8 月 28 日停止调用并引导迁移至 DeepSeek V4 Pro；公告发布时间无法从原页稳定核验，且更接近平台运维迁移，暂不列入来源表。\n- Mistral 社区出现对后续模型发布时间的讨论，但缺少官方新公告，仅作为需求信号，不据此推断产品或发布日期。\n- 多个聚合站列出所谓 2026 年 8 月模型发布记录；因不是一手材料且本轮未逐项找到新的官方原文，不写入事实表。\n\n## 一句话总结\n\n严格 24 小时窗口内仍缺少精确时刻可核验的新发布；8 月 27 日官方候选的重点是 Google 双盲安全评测、NVIDIA Vera Agent 基础设施交付、Anthropic 科研团队分发，以及 Cohere Parse 和 OpenAI 教育实验。\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok（官方 News、文档、API/模型变更入口、官方仓库，以及 DeepSearch、语音、编码、工具调用、Agent）、Mistral、Cohere、Qwen/阿里、字节、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，Cline/pi-mono/DSH 厂商级信号，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 和厂商播客。\n- 失败来源：部分官方社交账号需要登录，无法稳定核验时间与互动量；部分中文厂商列表页未在搜索索引中暴露本轮新增原文；LlamaIndex 搜索命中陈旧的预发布镜像，未作为本轮事实来源。\n- 初始候选数：16；保留来源数：8。\n- 二次补搜：否（最终来源不为 0）。\n",
   "sources": [
     {
       "title": "Grok Bot is now included with more plans",
@@ -46,7 +51,12 @@
       "source": "SpaceXAI / xAI",
       "publishedAt": "2026-08-26",
       "summary": "Grok Bot 扩展至 SuperGrok、Cursor Pro 和 Cursor Teams 等套餐，并提供独立用量与常驻云端执行能力。",
-      "tags": ["Grok", "Agent", "Industry", "近两日补充"]
+      "tags": [
+        "Grok",
+        "Agent",
+        "Industry",
+        "近两日补充"
+      ]
     },
     {
       "title": "Grok 4.6 on Microsoft Foundry",
@@ -54,7 +64,12 @@
       "source": "SpaceXAI / xAI",
       "publishedAt": "2026-08-26",
       "summary": "Grok 4.6 进入 Microsoft Foundry，面向长时 Agent、编码与企业自动化场景。",
-      "tags": ["Grok", "Microsoft Foundry", "Agent", "近两日补充"]
+      "tags": [
+        "Grok",
+        "Microsoft Foundry",
+        "Agent",
+        "近两日补充"
+      ]
     },
     {
       "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
@@ -62,7 +77,12 @@
       "source": "Hugging Face",
       "publishedAt": "2026-08-26",
       "summary": "介绍 Sentence Transformers v6 MultiVectorEncoder 的领域训练、评测和长文检索实践。",
-      "tags": ["Hugging Face", "Retrieval", "RAG", "近两日补充"]
+      "tags": [
+        "Hugging Face",
+        "Retrieval",
+        "RAG",
+        "近两日补充"
+      ]
     },
     {
       "title": "Meet Cohere Parse",
@@ -70,7 +90,12 @@
       "source": "Cohere",
       "publishedAt": "2026-08-27",
       "summary": "Cohere 发布 parse-v5.0 多模态文档解析模型，支持结构化 Markdown/HTML、表格、版面与图像描述输出。",
-      "tags": ["Cohere", "Document AI", "API", "日期未确认"]
+      "tags": [
+        "Cohere",
+        "Document AI",
+        "API",
+        "日期未确认"
+      ]
     },
     {
       "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
@@ -78,7 +103,51 @@
       "source": "OpenAI",
       "publishedAt": "2026-08-27",
       "summary": "千余名学生的随机实验显示，ChatGPT 访问与批判性思维训练分别改善作业质量和想法独特性。",
-      "tags": ["OpenAI", "Education", "Research", "日期未确认"]
+      "tags": [
+        "OpenAI",
+        "Education",
+        "Research",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Piloting the world's first double-blind AI evaluations",
+      "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-08-27",
+      "summary": "Google 与多家外部安全评测机构试点双盲前沿模型评估，以机密计算隔离模型权重和未公开测试题。",
+      "tags": [
+        "Google DeepMind",
+        "AI Safety",
+        "Evaluation",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Delivering Vera: NVIDIA’s First CPU Built for Agents Is Shipping Now",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+      "source": "NVIDIA",
+      "publishedAt": "2026-08-27",
+      "summary": "NVIDIA 更新 Vera 交付进展，AWS 收到首台系统，此前已向 OCI、Anthropic、OpenAI 与 SpaceXAI 交付。",
+      "tags": [
+        "NVIDIA",
+        "Agent Infrastructure",
+        "Vera",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Claude Team plan for scientists",
+      "url": "https://claude.com/programs/team-plan-for-scientists",
+      "source": "Claude by Anthropic",
+      "publishedAt": "2026-08-27",
+      "summary": "Anthropic 面向科研团队提供 10,000 个 Claude Team 席位及一年优惠，覆盖 Science、Code、Cowork 和科研连接器。",
+      "tags": [
+        "Anthropic",
+        "Science",
+        "Industry",
+        "日期未确认"
+      ]
     }
   ]
 }

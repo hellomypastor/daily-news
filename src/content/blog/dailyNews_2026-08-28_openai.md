@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-28T00:00:00+08:00"
-updatedAt: "2026-08-28T10:13:14+08:00"
+updatedAt: "2026-08-28T12:02:08+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.151.0-alpha.7"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7"
@@ -12,12 +12,15 @@ featuredImage: "https://opengraph.githubassets.com/1/openai/codex/releases/tag/r
 featuredImageAlt: "GitHub 上 OpenAI Codex 0.151.0-alpha.7 发布页的预览图"
 featuredImageCaption: "图片来源：OpenAI / GitHub"
 tags:
+  - "较旧背景"
   - "日期未确认"
   - "Agent"
   - "Brazil"
+  - "Bug Fix"
   - "ChatGPT"
   - "CLI"
   - "Codex"
+  - "Connectors"
   - "Edu"
   - "Education"
   - "Enterprise"
@@ -25,18 +28,20 @@ tags:
   - "Plugins"
   - "Pre-release"
   - "Research"
+  - "Startup"
   - "Temporary Chat"
+  - "Voice"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-27 10:13 至 2026-08-28 10:13（Asia/Shanghai）**。可精确核时的官方动态是 Codex CLI 0.151.0-alpha.6 与 alpha.7 两个预发布版；两页都没有逐项变更说明，因此不推断功能。ChatGPT Release Notes、教育研究与巴西业务文章均标注 8 月 27 日但没有精确时刻，本页保守列入“日期未确认”。API、Agent SDK、Realtime 与模型目录未发现窗口内新条目。
+采集窗口为 **2026-08-27 12:02 至 2026-08-28 12:02（Asia/Shanghai）**。可精确核时的官方动态是 Codex CLI 0.151.0-alpha.6、alpha.7 与 alpha.8 三个预发布版；三页都没有逐项变更说明，因此不推断功能。ChatGPT Release Notes、教育研究、巴西业务与 OpenAI Academy 的 Ariso 案例均只有自然日而没有精确时刻，本页保守列入“日期未确认”。API、Agent SDK、Realtime 与模型目录未发现窗口内新条目。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 过去 24 小时状态 | 证据 |
 |---|---|---|
-| Codex CLI | **0.151.0-alpha.6 与 alpha.7 发布**；均为预发布且无逐项说明 | [alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.6)、[alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7) |
+| Codex CLI | **0.151.0-alpha.6 与 alpha.7 发布，alpha.8 预发布标签创建**；三者均无逐项说明 | [alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.6)、[alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7)、[alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8) |
 | VS Code / JetBrains 集成 | 无官方新增 | 官方文档与 changelog |
 | Codex cloud / remote tasks / PR agents | 无官方新增 | 官方 Codex 文档与 changelog |
 | ChatGPT agentic mode | 无官方新增；临时聊天控制属于普通 ChatGPT 产品更新 | ChatGPT Release Notes |
@@ -67,9 +72,13 @@ tags:
 
 ## Tier 3：企业、安全与行业方案
 
-Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的新发布。Edu 侧有一项随机实验结果；巴西业务文章同时涉及 Enterprise、Edu、API 与 Codex 采用。两篇均只有自然日，列入“日期未确认”，文章中的规模与增长数据均视为 OpenAI 自报，不外推为独立市场统计。
+Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的新发布。Edu 侧有一项随机实验结果；巴西业务文章同时涉及 Enterprise、Edu、API 与 Codex 采用；OpenAI Academy 则刊出 Ariso 使用 voice models、连接器与 Codex 的厂商案例。三篇均只有自然日，列入“日期未确认”，文章中的规模、效果与增长数据均视为发布方或受访者自报，不外推为独立市场统计。
 
 ## 官方更新（新到旧）
+
+### Codex CLI 0.151.0-alpha.8
+
+官方 [GitHub 发布页](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8) 显示该预发布标签于 **2026-08-28 10:55 +08:00** 创建。页面仅标注版本号，没有逐项 changelog，本页不推断功能或修复。
 
 ### Codex CLI 0.151.0-alpha.7
 
@@ -89,7 +98,7 @@ Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的
 
 ## 情绪判断
 
-**中性，置信度低。** 本轮有两个无说明的 Codex 预发布版本和三项只有自然日的官方内容，缺少可精确核时且可交叉验证的社区正负样本，证据不足以判断口碑方向。
+**中性，置信度低。** 本轮有三个无说明的 Codex 预发布版本和四项只有自然日的官方内容，缺少可精确核时且可交叉验证的社区正负样本，证据不足以判断口碑方向。
 
 ## 比较信号
 
@@ -100,6 +109,11 @@ Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的
 - [ChatGPT 临时聊天新增更多控制](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)：8 月 27 日条目说明，用户可在创建临时聊天时选择是否使用既有 memory、plugins 与 custom instructions，并可将临时聊天保存为普通聊天。页面没有精确发布时间。
 - [ChatGPT 与批判性思维训练随机实验](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/)：OpenAI 与博科尼大学合作的逾千名学生实验称，ChatGPT 使用与因果推理训练带来互补效果；页面只有 8 月 27 日自然日，研究结论应结合原论文与实验范围理解。
 - [OpenAI 扩展巴西业务](https://openai.com/index/expanding-our-presence-in-brazil/)：官方宣布在圣保罗启动商业运营，并介绍 ChatGPT、API、Codex、Enterprise 与 Edu 的当地采用及合作；页面只有自然日，采用数字均为厂商自报。
+- [Ariso 使用 OpenAI 模型构建职场教练](https://academy.openai.com/public/blogs/how-ariso-uses-openai-models-to-build-a-workplace-coach-2026-08-27)：OpenAI Academy 文章标注 8 月 28 日，介绍 Ari 使用 OpenAI voice models、Google Workspace 等连接来源，并让 Codex 参与开源工具 Ivan 的代码审查流程；效果与规模数据来自受访者自述，且页面没有精确发布时间。
+
+## 较旧背景
+
+- [Codex CLI 0.150.1](https://github.com/openai/codex/releases/tag/rust-v0.150.1) 于 **2026-08-27 09:56 +08:00** 发布，早于本轮窗口约两小时。其修复让 remote compaction 默认把保留图片计入 token 预算，并按需裁剪较旧图片；此项仅作版本背景，不计作过去 24 小时新增。
 
 ## 观察池
 
@@ -117,10 +131,13 @@ Enterprise、Business、Gov、Science 与安全方案未发现可精确核时的
 3. [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
 4. [Better answers, broader thinking](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/)
 5. [Expanding OpenAI’s presence in Brazil](https://openai.com/index/expanding-our-presence-in-brazil/)
+6. [Codex CLI 0.151.0-alpha.8](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.8)
+7. [How Ariso uses OpenAI models to build a workplace coach](https://academy.openai.com/public/blogs/how-ariso-uses-openai-models-to-build-a-workplace-coach-2026-08-27)
+8. [Codex CLI 0.150.1](https://github.com/openai/codex/releases/tag/rust-v0.150.1)
 
 ## 采集状态
 
-- 已检查：OpenAI News / Research / Global Affairs、OpenAI Developers API changelog、模型与弃用文档、Responses / Realtime / Assistants 迁移资料、ChatGPT Release Notes、Codex CLI / IDE / Cloud / Remote Tasks / PR Review / Desktop 官方入口、五个官方 GitHub Releases 集合、OpenAI Status、Reddit 五个社区、Hacker News、X、YouTube 与公开中英文网页搜索。
-- 失败来源：GitHub API（本地请求超时，已改用公开 Releases HTML）；X（未登录无法稳定核验原帖时间）；Reddit（新帖时间与正文访问不稳定）；YouTube（无可交叉核验的窗口内新增）。
-- 初始候选：21；最终保留来源：5。
+- 已检查：OpenAI News / Research / Global Affairs / Academy、OpenAI Developers API changelog、模型与弃用文档、Responses / Realtime / Assistants 迁移资料、ChatGPT Release Notes、Codex CLI / IDE / Cloud / Remote Tasks / PR Review / Desktop 官方入口、五个官方 GitHub Releases 集合、OpenAI Status、Reddit 五个社区、Hacker News、X、YouTube 与公开中英文网页搜索。
+- 失败来源：GitHub API（alpha.8 标签接口无 release 元数据，已改用公开 Releases HTML 核时）；X（未登录无法稳定核验原帖时间）；Reddit（新帖时间与正文访问不稳定）；YouTube（无可交叉核验的窗口内新增）。
+- 初始候选：24；最终保留来源：8。
 - 二次补搜：否（最终来源不为 0）。
