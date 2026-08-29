@@ -43,7 +43,7 @@ OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区�
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-**[Piloting the world's first double-blind AI evaluations](https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/)**。DeepMind 与多家外部机构用隐私保护环境试点专有前沿模型的双盲评测。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[Piloting the world's first double-blind AI evaluations](https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/)**。DeepMind 与外部机构试点专有前沿模型双盲评测。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
 
 <figure class="source-image">
   <a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"><img src="https://lh3.googleusercontent.com/fHN8sOK3p7BTKR4s-3lpYYnq5IEadmVKnqssJO4OmfL6remdC7E8voV-IEue8NPviKWUR7WtCtNTfsKZpld6y2jjwVhNAiqYL9-9EQzj5OURGXCCuug=w1200-h630-n-nu-rw" alt="带有钥匙孔与锁图案的半透明立方体，光束从中穿过，象征隐私保护的双盲模型评测" loading="lazy" /></a>
