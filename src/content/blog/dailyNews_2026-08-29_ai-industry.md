@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T09:27:41+08:00"
+updatedAt: "2026-08-29T12:04:43+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Piloting the world's first double-blind AI evaluations"
 featuredUrl: "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
@@ -19,6 +19,7 @@ tags:
   - "AI"
   - "Coding Agent"
   - "Cohere"
+  - "Cursor"
   - "DeepSeek"
   - "Developer Tools"
   - "Ecosystem"
@@ -37,7 +38,7 @@ tags:
 
 ## 今日概览
 
-滚动采集窗口为 **2026-08-28 09:27 至 2026-08-29 09:27（Asia/Shanghai）**。同日累计保留早前 4 条来源；本轮新增 OpenAI 泰国创业加速器与 Cohere 企业生成式 AI 采用指南两条 8 月 28 日官方候选。两页均未给出精确发布时间，无法严格确认是否落入 24 小时窗口，故列入“日期未确认”。
+滚动采集窗口为 **2026-08-28 12:04 至 2026-08-29 12:04（Asia/Shanghai）**。同日累计保留已有 6 条来源；本轮新增 OpenAI 关于 SpaceX 收购 Cursor 后模型供应安排的一条 8 月 28 日官方候选。该页未给出精确发布时间，无法严格确认是否落入 24 小时窗口，故列入“日期未确认”。
 
 ## 优先动态（过去 24 小时）
 
@@ -72,6 +73,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 | 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 | 原文 |
 |---|---|---|---|---|---|---|
+| OpenAI | SpaceX 收购 Cursor 后的模型供应决定 | 编码 Agent 生态/合作 | 2026-08-28，官方日期；时刻未给出 | OpenAI 称拟于 2026-11-12 停止向 Cursor 提供 OpenAI 模型，且不向其提供未来模型；详见 OpenAI 专题页。 | 若按计划执行，将改变 Cursor 的模型供应与编码 Agent 竞争格局；这是未来安排而非已生效状态。 | [原文](https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/) |
 | OpenAI | 支持泰国下一代 AI 初创企业 | 产业生态 | 2026-08-28，官方日期；时刻未给出 | OpenAI 与泰国高等教育、科学、研究与创新部启动八周加速器，支持医疗、健康和教育方向 10 家初创公司；详见 OpenAI 专题页。 | 体现模型厂商通过政府、大学和产业伙伴推动区域落地。 | [原文](https://openai.com/index/supporting-next-generation-ai-startups-thailand/) |
 | Cohere | 企业生成式 AI：用例、收益与采用路径 | 企业采用 | 2026-08-28，官方日期；时刻未给出 | 总结企业 GenAI 用例，并强调业务问题、数据治理、安全控制和小范围试点。 | 反映企业 Agent 采用转向治理、可靠性和业务价值。 | [原文](https://cohere.com/blog/generative-ai-for-business) |
 
@@ -91,11 +93,11 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 一句话总结
 
-严格 24 小时窗口内无精确时刻可核验的新发布；8 月 28 日的观察重点是 OpenAI 泰国区域生态合作和 Cohere 企业 AI 采用指南。
+严格 24 小时窗口内无精确时刻可核验的新发布；8 月 28 日的观察重点新增 OpenAI 与 Cursor 的未来模型供应变化，另有泰国区域生态合作和 Cohere 企业 AI 采用指南。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、API、模型变更和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：腾讯云详情页超时；部分中国厂商、社交账号和播客索引未提供窗口内可核验页面。
-- 初始候选数：12；保留来源数：6。
+- 初始候选数：13；保留来源数：7。
 - 二次补搜：否（最终来源不为 0）。

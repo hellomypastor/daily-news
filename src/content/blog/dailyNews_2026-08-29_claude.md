@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T05:04:00+08:00"
+updatedAt: "2026-08-29T12:07:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code 2.1.251 changelog update"
 featuredUrl: "https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e"
@@ -19,25 +19,27 @@ tags:
   - "Anthropic"
   - "Claude"
   - "Claude Code"
+  - "Cowork"
   - "Research"
   - "Security"
+  - "Status"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-28 04:55 至 2026-08-29 04:55（Asia/Shanghai）**。本窗口的核心更新是 [Claude Code 2.1.251](https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e)：新增模型切换 hooks、前台子 Agent 工具流式回传、缓存与额度可观测性，并集中修补符号链接、插件路径穿越、项目级追踪配置、Workflow 读取顺序及 sandbox 输出文件等安全边界；后台会话、Agent Teams、Remote Control、SDK MCP 握手、云会话和企业策略也有大量修复。[Python Agent SDK 0.2.148](https://github.com/anthropics/claude-agent-sdk-python/commit/af5ff1b9f2f279575f89b78f17572c6e35fbc2b6) 与 [TypeScript Agent SDK 0.3.251](https://github.com/anthropics/claude-agent-sdk-typescript/commit/75667f1f76e800bb845b0a0e211df79fedfc9e86) 随后同步 CLI。Anthropic 另发布自动化对齐研究，但官方页只标注 8 月 28 日、没有精确时刻，列入日期未确认。社区样本继续集中在额度透明度、成本与生成代码可维护性，证据均不足以推导平台级降额或模型退化。
+采集窗口：**2026-08-28 12:02 至 2026-08-29 12:02（Asia/Shanghai）**。本窗口的核心更新是 [Claude Code 2.1.251](https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e)：新增模型切换 hooks、前台子 Agent 工具流式回传、缓存与额度可观测性，并集中修补符号链接、插件路径穿越、项目级追踪配置、Workflow 读取顺序及 sandbox 输出文件等安全边界；后台会话、Agent Teams、Remote Control、SDK MCP 握手、云会话和企业策略也有大量修复。[Python Agent SDK 0.2.148](https://github.com/anthropics/claude-agent-sdk-python/commit/af5ff1b9f2f279575f89b78f17572c6e35fbc2b6) 与 [TypeScript Agent SDK 0.3.251](https://github.com/anthropics/claude-agent-sdk-typescript/commit/75667f1f76e800bb845b0a0e211df79fedfc9e86) 随后同步 CLI。官方状态页还记录了 [Claude Code 与 Cowork Web 部分中断](https://status.anthropic.com/incidents/vr9tpk8w7zr8)：上游云服务商问题导致部分会话无法启动或中途断开，上海时间 01:22 报告、04:21 恢复。Anthropic 另发布自动化对齐研究，但官方页只标注 8 月 28 日、没有精确时刻，列入日期未确认。社区样本继续集中在额度透明度、成本与生成代码可维护性，证据均不足以推导平台级降额或模型退化。
 
 ## Tier 1：编码与 Agent 主轴
 
 | 项目 | 状态 | 本轮结论 |
 |---|---|---|
-| Claude Code CLI | **有更新** | 2.1.251 新增 `PreModelSwitch` / `PostModelSwitch`、前台子 Agent 工具流、`/usage` spend limit、`/cost` 缓存指标及后台 session 管理命令；并修复多项 Agent、云端、权限和安全问题。窗口内较早的 [2.1.250](https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6) 与 [2.1.248](https://github.com/anthropics/claude-code/commit/c336b74efcb15cdbacab427d277d5ebed11ddbec) 也保留。 |
+| Claude Code CLI | **有更新** | 2.1.251 新增 `PreModelSwitch` / `PostModelSwitch`、前台子 Agent 工具流、`/usage` spend limit、`/cost` 缓存指标及后台 session 管理命令；并修复多项 Agent、云端、权限和安全问题。另有一次 Web 端部分中断，现已恢复。窗口内较早的 [2.1.250](https://github.com/anthropics/claude-code/commit/92bb6850f1bb51f4d18b03b23d643642f9d687b6) 与 [2.1.248](https://github.com/anthropics/claude-code/commit/c336b74efcb15cdbacab427d277d5ebed11ddbec) 也保留。 |
 | VS Code / JetBrains 集成 | **有更新** | 2.1.251 修复 VS Code 第三方 provider 文档跳转，并把 Remote Control banner 改为 footer pill；JetBrains 无独立新增。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | **有更新** | 前台子 Agent 工具结果可向 Remote Control 实时回传；修复 team lead 收不到 teammate 最终答案、后台 Agent 无法回复、worktree 编辑、会话 transcript 覆盖与 MCP 握手无限等待。未见 webhooks、environment、memory stores 独立公告。 |
 | Skills 与 marketplaces | **有修复** | 阻止 marketplace 中插件命令指向插件目录外，并修复并发刷新时后台 session 丢失 skills。 |
 | Claude Developer Platform | **有更新** | Gateway spend limit 与 prompt-cache 指标进入 `/usage`、`/cost` 和 status line；Bedrock、Vertex、Foundry 及 host-managed provider 路径也有修复。 |
 | Agent SDK | **同步发布** | Python 0.2.148 和 TypeScript 0.3.251 对齐 CLI 2.1.251；窗口内较早的 [Python 0.2.147](https://github.com/anthropics/claude-agent-sdk-python/commit/1cd478b838e7e6a8193597f966530df67d642782) 同步 2.1.250。 |
-| Cowork | **相关更新** | 后台 session、跨 session 消息、Remote Control 与云端启动修复影响 Cowork/桌面工作流；无 Cowork 独立公告。 |
+| Cowork | **相关更新** | 后台 session、跨 session 消息、Remote Control 与云端启动修复影响 Cowork/桌面工作流；另有一次与 Claude Code Web 同时发生的上游云服务商部分中断，现已恢复。 |
 | Design | 无新增 | 已按产品关键词检查，未见官方窗口内新公告。 |
 | Tag / @Claude sessions | 无新增 | 已检查官方入口与近期发布，未见窗口内独立更新。 |
 | Sonnet 5 | 无模型新增 | 未见模型卡、定价或能力更新。 |
@@ -49,7 +51,7 @@ tags:
 | 项目 | 本轮结论 |
 |---|---|
 | Chrome / browser agent | 2.1.251 改为浏览器动作始终经过 Claude Code 权限检查，包括关闭 telemetry 的会话 |
-| Desktop / Preview | 跨 session 消息与 Remote Control 有修复；无独立版本公告 |
+| Desktop / Preview | 跨 session 消息与 Remote Control 有修复；Cowork Web 曾因上游云服务商问题部分中断，现已恢复 |
 | Marketplace / Connectors / Plugins | 有路径穿越防护与 skills 并发刷新修复；连接器无新增 |
 | 创意 / 视频模型 | 未确认窗口内官方新版本，不把搜索词当作产品事实 |
 | Voice Mode | 无新增 |
@@ -60,6 +62,10 @@ tags:
 Security 有明确客户端更新：2.1.251 修补符号链接竞态、插件路径穿越、Workflow 越权预读、Grep/Glob deny rule 绕过、sandbox 输出替换及敏感配置审批边界。Science / Alignment 出现 [Automated researchers can reliably mitigate alignment failures](https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures)：Anthropic 报告 Claude 自动训练模型以改善十类对齐失败基准，并与 28 名人类安全研究者进行比较；页面标注 2026-08-28 但无精确时刻，故不确定是否落在本窗口。金融、生命科学、医疗、法律、政府、非营利、教育与客服入口均已检查，未见其他可核验新发布。
 
 ## 官方更新（由新到旧）
+
+### Claude Code / Cowork Web 部分中断已恢复
+
+[Anthropic Status](https://status.anthropic.com/incidents/vr9tpk8w7zr8) 于上海时间 8 月 29 日 01:22 报告上游云服务商问题，Claude Code 与 Cowork Web 部分会话可能无法启动或中途断开；02:21 应用缓解措施并进入监控，04:21 宣布恢复。官方将事件影响标为 major，但未披露受影响会话比例，不能据此推断整体用户覆盖范围。
 
 ### Claude Code 2.1.251：模型切换、长时 Agent 与安全边界
 
@@ -110,10 +116,11 @@ Security 有明确客户端更新：2.1.251 修补符号链接竞态、插件路
 7. [Claude Agent SDK Python 0.2.147](https://github.com/anthropics/claude-agent-sdk-python/commit/1cd478b838e7e6a8193597f966530df67d642782)
 8. [Claude Code weekly limits discussion](https://www.reddit.com/r/ClaudeCode/comments/1w01yew/per_anthropics_own_help_page_claude_code_weekly/)
 9. [Claude Code project maintainability discussion](https://www.reddit.com/r/ClaudeCode/comments/1w0o61n/faced_problem_in_projects_after_using_claude_code/)
+10. [Claude Code and Cowork Web incident](https://status.anthropic.com/incidents/vr9tpk8w7zr8)
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Research、Engineering、Claude Blog、Developer Platform、Claude Code 文档与 GitHub commit/tag/CHANGELOG、Python/TypeScript Agent SDK、Help Center、Status；Tier 1/2/3 全部指定产品和行业关键词；Reddit 四个社区、Hacker News、X、YouTube及中英文网页搜索。
 - 失败来源：X 无法稳定展开原帖绝对时间与互动量；YouTube 未检出可与官方交叉核验的新发布；Help Center 部分页面仅有相对更新时间；Reddit 部分页面缺稳定绝对时刻。
-- 初始候选：16；保留来源：9（窗口内官方 6、日期未完全确认官方 1、日期未确认社区 2）。
+- 初始候选：17；保留来源：10（窗口内官方 7、日期未完全确认官方 1、日期未确认社区 2）。
 - 二次补搜：否（最终来源不为 0）。

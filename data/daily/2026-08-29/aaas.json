@@ -4,7 +4,7 @@
   "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
   "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
   "order": 50,
-  "updatedAt": "2026-08-29T09:26:53+08:00",
+  "updatedAt": "2026-08-29T12:05:11+08:00",
   "scan": {
     "checkedSources": [
       "Cognition Devin 2026 官方 release notes（最新条目为 8 月 26 日；检查托管异步执行、环境、并发、定价、企业接入与集成，无窗口内新增）",
@@ -20,16 +20,17 @@
       "DeepSeek Harness / DSH 官方页面、GitHub 与文档（确认为本地/自托管开源 harness，无供应商托管执行证据）",
       "OpenCode、Aider、Continue、Roo Code 快速检查（未发现符合 AaaS 定义的窗口内新增）",
       "Ona Background Agents 官方产品页（日期未确认）",
+      "OpenAgents 官方 Workspace 教程与 Client API（页面标注 8 月 27 日更新；检查托管 Cloud Agents、任务委派、托管 workspace 与事件接口）",
       "中英文关键词检索：托管 Agent、后台任务、远程环境、并发、企业控制面、cloud coding agent、hosted agent、background agent"
     ],
     "failedSources": [
       "部分厂商动态页未提供条目级发布时间，无法把页面近期抓取时间当作发布时间",
       "Tutti 官方站点未在检索结果中稳定返回可核验发布页；仅取得 PR Newswire 转载"
     ],
-    "candidateCount": 8,
+    "candidateCount": 10,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n采集窗口为 **2026-08-28 00:05 至 2026-08-29 00:05（Asia/Shanghai）**。本轮未发现可由官方原文确认、且在窗口内发布的 AaaS 新产品或重大功能。正文保留一条窗口内的 Cloud Agent 运行边界故障信号，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。\n\n## 远程 / 云端 Agent 执行\n\n### Cursor Cloud Agent 出现执行目标偏离的用户报告（社区证据）\n\nCursor 社区有用户在 8 月 28 日 23:49 报告：本应以 Cloud Agent 运行的 Autopilot PR 流程实际落到本地执行，且 Cloud Agent 控制台没有对应运行记录。该条是**单一用户报告，尚无官方根因或修复公告**，因此只能作为托管执行路由与可观测性的风险信号，不能外推为普遍故障。来源：[Cursor Community](https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871)。\n\n## 海外厂商\n\n### Cognition Devin：必查完成，窗口内无新增\n\n已显式检查 Devin 官方 2026 release notes 及 Automations、Scheduled Sessions、环境、并发、定价、企业权限和集成入口。官方 release notes 最新可见条目为 8 月 26 日，位于本轮主窗口之外；其中包含更细的自动化排程、Slack 多频道触发、触发事件回链和批量修复 API 等托管执行能力，但按规则不跨日重复作为今日新闻。官方入口：[Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)。\n\n### xAI / Grok：必查完成，窗口内无新增\n\n已逐项检查 xAI 官方 News 中的 Grok 托管 Agent、异步任务、工具调用、编码/远程执行、企业与 API Agent 能力。窗口内没有新条目；普通 Grok 模型/API 动态不满足 AaaS 定义，未写成 AaaS 新闻。官方入口：[xAI News](https://x.ai/news?category=all)。\n\n## 中国厂商（含字节跳动）\n\n已检查字节跳动 Coze/火山引擎/Trae，以及阿里云百炼/Qoder、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 等公开入口，未找到窗口内可核验的托管异步执行、远程环境、并发或企业控制面新增。DeepSeek Harness / DSH 当前官方页面强调开源、可本地安装的 harness、沙箱与调度能力，未发现供应商托管执行生命周期证据，因此不列为 AaaS 正文动态。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- AaaS 必须有供应商托管或管理 Agent 执行生命周期的证据，例如后台/异步任务、隔离远程环境、调度、并发、企业权限或运行观测。\n- 单纯模型 API 是 MaaS；仅提供共享开发环境、虚拟化或自托管 harness 是邻近 PaaS/工具链。\n- Cline、Pi Coding Agent、DeepSeek Harness、OpenCode、Aider、Continue 与 Roo Code 本轮均未发现新的供应商托管生命周期证据；相关本地或开源更新应归入开源专题。\n\n## 日期未确认\n\nOna 官方 Background Agents 页面明确描述云端隔离环境、并行执行、GitHub/Linear/Slack/定时触发与企业合规，符合 AaaS 定义，但页面没有可核验发布日期。本轮仅将其作为日期未确认候选，不把近期抓取时间当作发布时间。来源：[Ona Background Agents](https://ona.com/cases/background-agent)。\n\n## 未证实传闻\n\n本轮未发现值得保留的未证实发布传闻。\n\n## 邻近信号观察池\n\n### Tutti • VM：共享云 Room，但 Agent 仍在用户本机运行\n\n一篇 8 月 28 日的 PR Newswire 转载称 Tutti • VM 开放 Early Access，提供多人、多 Agent 的共享云 Room 和文件系统层冲突处理；但其说明明确写明 Agent 继续运行在各自所有者的电脑上。因此它更接近 Agent 协作基础设施/PaaS，而不是托管 Agent 执行服务。该候选只有新闻稿转载，尚未核到稳定官方发布页。来源：[PR Newswire 转载](https://www.prnews.in.th/prnewswire/en/view/68255)。\n\n## 趋势\n\n本轮最值得关注的不是新品数量，而是托管执行的可验证边界：用户需要能确认任务究竟跑在本地还是云端，并在控制台看到对应运行记录。与此同时，共享云工作区并不自动等于 AaaS；执行主体仍在本地时，应继续归入邻近基础设施。\n\n## 来源链接\n\n- [Cursor Community：Autopilot PR 未按预期进入 Cloud Agent](https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871)\n- [Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)\n- [xAI News](https://x.ai/news?category=all)\n- [Ona Background Agents](https://ona.com/cases/background-agent)\n- [PR Newswire 转载：Tutti • VM Early Access](https://www.prnews.in.th/prnewswire/en/view/68255)\n\n## 采集状态\n\n已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 8 个候选，最终保留 5 个证据链接（其中 1 条窗口内社区风险信号、2 个厂商无新增核验入口、1 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。\n\n今日扫描完成，共 2 条动态，重点：Cloud Agent 执行位置与运行记录需要可核验；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。",
+  "content": "## 今日概览\n\n采集窗口为 **2026-08-28 12:05 至 2026-08-29 12:05（Asia/Shanghai）**，24–72 小时观察窗口回溯至 **2026-08-26 12:05**。本轮未发现可由官方原文确认、且在主窗口内发布的 AaaS 新产品或重大功能。正文保留一条窗口内的 Cloud Agent 运行边界故障信号、一条 24–72 小时但缺少具体更新时间的托管 Cloud Agent 文档候选，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。\n\n## 远程 / 云端 Agent 执行\n\n### Cursor Cloud Agent 出现执行目标偏离的用户报告（社区证据）\n\nCursor 社区有用户在 8 月 28 日 23:49 报告：本应以 Cloud Agent 运行的 Autopilot PR 流程实际落到本地执行，且 Cloud Agent 控制台没有对应运行记录。该条是**单一用户报告，尚无官方根因或修复公告**，因此只能作为托管执行路由与可观测性的风险信号，不能外推为普遍故障。来源：[Cursor Community](https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871)。\n\n## 海外厂商\n\n### Cognition Devin：必查完成，窗口内无新增\n\n已显式检查 Devin 官方 2026 release notes 及 Automations、Scheduled Sessions、环境、并发、定价、企业权限和集成入口。官方 release notes 最新可见条目为 8 月 26 日，位于本轮主窗口之外；其中包含更细的自动化排程、Slack 多频道触发、触发事件回链和批量修复 API 等托管执行能力，但按规则不跨日重复作为今日新闻。官方入口：[Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)。\n\n### xAI / Grok：必查完成，窗口内无新增\n\n已逐项检查 xAI 官方 News 中的 Grok 托管 Agent、异步任务、工具调用、编码/远程执行、企业与 API Agent 能力。窗口内没有新条目；普通 Grok 模型/API 动态不满足 AaaS 定义，未写成 AaaS 新闻。官方入口：[xAI News](https://x.ai/news?category=all)。\n\n## 中国厂商（含字节跳动）\n\n已检查字节跳动 Coze/火山引擎/Trae，以及阿里云百炼/Qoder、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 等公开入口，未找到窗口内可核验的托管异步执行、远程环境、并发或企业控制面新增。DeepSeek Harness / DSH 当前官方页面强调开源、可本地安装的 harness、沙箱与调度能力，未发现供应商托管执行生命周期证据，因此不列为 AaaS 正文动态。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- AaaS 必须有供应商托管或管理 Agent 执行生命周期的证据，例如后台/异步任务、隔离远程环境、调度、并发、企业权限或运行观测。\n- 单纯模型 API 是 MaaS；仅提供共享开发环境、虚拟化或自托管 harness 是邻近 PaaS/工具链。\n- Cline、Pi Coding Agent、DeepSeek Harness、OpenCode、Aider、Continue 与 Roo Code 本轮均未发现新的供应商托管生命周期证据；相关本地或开源更新应归入开源专题。\n\n## 日期未确认\n\nOna 官方 Background Agents 页面明确描述云端隔离环境、并行执行、GitHub/Linear/Slack/定时触发与企业合规，符合 AaaS 定义，但页面没有可核验发布日期。本轮仅将其作为日期未确认候选，不把近期抓取时间当作发布时间。来源：[Ona Background Agents](https://ona.com/cases/background-agent)。\n\nOpenAgents 官方入门教程标注 8 月 27 日更新，明确写明 Cloud Agents 由平台托管、无需下载，并可在 workspace 中委派任务，离开后由 Inbox 保留结果；但页面未给具体更新时间与产品发布说明，无法确认是否落入 24–72 小时观察窗口的精确边界，因此作为日期未确认候选保留。来源：[OpenAgents：Your First Workspace](https://openagents.org/docs/en/tutorials/your-first-workspace)。\n\n## 未证实传闻\n\n本轮未发现值得保留的未证实发布传闻。\n\n## 邻近信号观察池\n\n### Tutti • VM：共享云 Room，但 Agent 仍在用户本机运行\n\n一篇 8 月 28 日的 PR Newswire 转载称 Tutti • VM 开放 Early Access，提供多人、多 Agent 的共享云 Room 和文件系统层冲突处理；但其说明明确写明 Agent 继续运行在各自所有者的电脑上。因此它更接近 Agent 协作基础设施/PaaS，而不是托管 Agent 执行服务。该候选只有新闻稿转载，尚未核到稳定官方发布页。来源：[PR Newswire 转载](https://www.prnews.in.th/prnewswire/en/view/68255)。\n\n## 趋势\n\n本轮最值得关注的不是新品数量，而是托管执行的可验证边界：用户需要能确认任务究竟跑在本地还是云端，并在控制台看到对应运行记录。与此同时，共享云工作区并不自动等于 AaaS；执行主体仍在本地时，应继续归入邻近基础设施。\n\n## 来源链接\n\n- [Cursor Community：Autopilot PR 未按预期进入 Cloud Agent](https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871)\n- [Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)\n- [xAI News](https://x.ai/news?category=all)\n- [Ona Background Agents](https://ona.com/cases/background-agent)\n- [OpenAgents：Your First Workspace](https://openagents.org/docs/en/tutorials/your-first-workspace)\n- [PR Newswire 转载：Tutti • VM Early Access](https://www.prnews.in.th/prnewswire/en/view/68255)\n\n## 采集状态\n\n已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 10 个候选，最终保留 6 个证据链接（其中 1 条窗口内社区风险信号、2 个厂商无新增核验入口、2 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。\n\n今日扫描完成，共 3 条动态，重点：Cloud Agent 执行位置与运行记录需要可核验；托管 workspace 文档缺少精确发布时间时保持日期未确认；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。",
   "sources": [
     {
       "title": "Autopilot PR / cloud autopilot ran locally instead of as a Cloud Agent",
@@ -62,6 +63,14 @@
       "publishedAt": "",
       "summary": "官方页面描述云端隔离环境、并行任务、事件/定时触发和企业能力，但未提供可核验发布日期。",
       "tags": ["日期未确认", "Background Agent", "Cloud Environment"]
+    },
+    {
+      "title": "Your First Workspace",
+      "url": "https://openagents.org/docs/en/tutorials/your-first-workspace",
+      "source": "OpenAgents",
+      "publishedAt": "",
+      "summary": "官方教程标注 8 月 27 日更新，并描述平台托管 Cloud Agents、workspace 任务委派与 Inbox 结果保留；缺少具体更新时间，按日期未确认候选处理。",
+      "tags": ["日期未确认", "Cloud Agent", "Hosted Workspace"]
     },
     {
       "title": "Tutti • VM Launches in Early Access",

@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T09:26:53+08:00"
+updatedAt: "2026-08-29T12:05:11+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Autopilot PR / cloud autopilot ran locally instead of as a Cloud Agent"
 featuredUrl: "https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871"
@@ -23,13 +23,14 @@ tags:
   - "Cloud Environment"
   - "Devin"
   - "Grok"
+  - "Hosted Workspace"
   - "Managed Agent"
   - "PaaS"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-28 00:05 至 2026-08-29 00:05（Asia/Shanghai）**。本轮未发现可由官方原文确认、且在窗口内发布的 AaaS 新产品或重大功能。正文保留一条窗口内的 Cloud Agent 运行边界故障信号，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。
+采集窗口为 **2026-08-28 12:05 至 2026-08-29 12:05（Asia/Shanghai）**，24–72 小时观察窗口回溯至 **2026-08-26 12:05**。本轮未发现可由官方原文确认、且在主窗口内发布的 AaaS 新产品或重大功能。正文保留一条窗口内的 Cloud Agent 运行边界故障信号、一条 24–72 小时但缺少具体更新时间的托管 Cloud Agent 文档候选，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。
 
 ## 远程 / 云端 Agent 执行
 
@@ -61,6 +62,8 @@ Cursor 社区有用户在 8 月 28 日 23:49 报告：本应以 Cloud Agent 运�
 
 Ona 官方 Background Agents 页面明确描述云端隔离环境、并行执行、GitHub/Linear/Slack/定时触发与企业合规，符合 AaaS 定义，但页面没有可核验发布日期。本轮仅将其作为日期未确认候选，不把近期抓取时间当作发布时间。来源：[Ona Background Agents](https://ona.com/cases/background-agent)。
 
+OpenAgents 官方入门教程标注 8 月 27 日更新，明确写明 Cloud Agents 由平台托管、无需下载，并可在 workspace 中委派任务，离开后由 Inbox 保留结果；但页面未给具体更新时间与产品发布说明，无法确认是否落入 24–72 小时观察窗口的精确边界，因此作为日期未确认候选保留。来源：[OpenAgents：Your First Workspace](https://openagents.org/docs/en/tutorials/your-first-workspace)。
+
 ## 未证实传闻
 
 本轮未发现值得保留的未证实发布传闻。
@@ -81,10 +84,11 @@ Ona 官方 Background Agents 页面明确描述云端隔离环境、并行执行
 - [Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)
 - [xAI News](https://x.ai/news?category=all)
 - [Ona Background Agents](https://ona.com/cases/background-agent)
+- [OpenAgents：Your First Workspace](https://openagents.org/docs/en/tutorials/your-first-workspace)
 - [PR Newswire 转载：Tutti • VM Early Access](https://www.prnews.in.th/prnewswire/en/view/68255)
 
 ## 采集状态
 
-已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 8 个候选，最终保留 5 个证据链接（其中 1 条窗口内社区风险信号、2 个厂商无新增核验入口、1 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。
+已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 10 个候选，最终保留 6 个证据链接（其中 1 条窗口内社区风险信号、2 个厂商无新增核验入口、2 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。
 
-今日扫描完成，共 2 条动态，重点：Cloud Agent 执行位置与运行记录需要可核验；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。
+今日扫描完成，共 3 条动态，重点：Cloud Agent 执行位置与运行记录需要可核验；托管 workspace 文档缺少精确发布时间时保持日期未确认；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。

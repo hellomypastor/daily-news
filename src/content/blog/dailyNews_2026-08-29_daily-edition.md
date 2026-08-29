@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-08-29"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T09:42:00+08:00"
+updatedAt: "2026-08-29T12:08:00+08:00"
 description: "2026-08-29 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-29"
 featuredUrl: "https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e"
@@ -26,7 +26,7 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Codex 0.151.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.12)**。官方仓库发布 Codex CLI 0.151.0-alpha.12；release 正文仅列版本号，版本比较显示多项在研能力，不能视为稳定版上线。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-29_openai)
 
