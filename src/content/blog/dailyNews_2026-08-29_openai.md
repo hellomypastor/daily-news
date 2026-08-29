@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T12:05:16+08:00"
+updatedAt: "2026-08-29T15:00:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.151.0-alpha.12"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.12"
@@ -11,6 +11,7 @@ featuredTags: ["Codex CLI","alpha","官方预览"]
 tags:
   - "采用案例"
   - "额度"
+  - "工具调用"
   - "观察池"
   - "官方预览"
   - "教育"
@@ -20,6 +21,7 @@ tags:
   - "生态"
   - "生态合作"
   - "稳定性"
+  - "新闻业"
   - "Agent"
   - "alpha"
   - "API"
@@ -30,6 +32,7 @@ tags:
   - "Codex Desktop"
   - "Coding Agent"
   - "Cursor"
+  - "macOS"
   - "OpenAI"
   - "Temporary Chat"
   - "Windows"
@@ -38,7 +41,7 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-28 12:02 至 2026-08-29 12:02（Asia/Shanghai）**。本轮可精确落入窗口的新增证据主要来自 OpenAI 官方 Codex 仓库的用户报告；OpenAI Newsroom、Academy 与 ChatGPT Release Notes 的新页面只给出日历日期，没有公开精确发布时间，因此统一放入“日期未确认”。窗口内新增 Codex CLI 0.151.0 alpha 预览序列；未核实到稳定版 Codex CLI、Responses API、Agents SDK、Realtime API 或模型家族的正式版本更新。
+采集窗口为 **2026-08-28 15:00 至 2026-08-29 15:00（Asia/Shanghai）**。本轮可精确落入窗口的新增证据主要来自 OpenAI 官方 Codex 仓库的用户报告；OpenAI Newsroom、Academy 与 ChatGPT Release Notes 的新页面只给出日历日期，没有公开精确发布时间，因此统一放入“日期未确认”。窗口内新增 Codex CLI 0.151.0 alpha 预览序列；未核实到稳定版 Codex CLI、Responses API、Agents SDK、Realtime API 或模型家族的正式版本更新。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -82,6 +85,7 @@ tags:
 
 - [[Windows + WSL] Cannot create projects – AbsolutePathBuf deserialized without a base path](https://github.com/openai/codex/issues/41463)（2026-08-29 11:52 +08:00）记录：用户在两个 Desktop build 上复现 WSL 仓库项目创建失败，并提供路径与文件监视错误日志；尚无官方根因确认。
 - [Codex desktop repeatedly hangs silently during long-running commands](https://github.com/openai/codex/issues/41418)（2026-08-29 05:28 +08:00）记录：Windows 用户提供后端意外退出、连接转为错误与任务中断日志；日志不能证明 Remote Control WebSocket 停止是根因。
+- [[macOS][Desktop 26.825.32147] Local project task loses shell/filesystem tools; terminal cannot attach](https://github.com/openai/codex/issues/41439)（2026-08-29 08:50 +08:00）记录：用户称新建本地项目任务缺少 shell 与普通文件读取工具，并给出工具目录、终端附着失败和重建任务仍失败的复现步骤；这是单一用户报告，尚无官方根因确认。
 
 ## 情绪判断
 
@@ -100,6 +104,7 @@ tags:
 - [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-gpt-4) 新增 2026-08-27 条目，介绍临时聊天可选择个性化并可保存为普通聊天；页面没有该条目的精确发布时间，无法确认是否落入本轮起点之后。
 
 - [Our decision on Cursor following its acquisition by SpaceX](https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/) 标注 2026-08-28、无精确时刻。OpenAI 宣布拟于 2026-11-12 停止向 Cursor 提供 OpenAI 模型，并称不会向其提供未来模型；这是编码 Agent 生态合作的未来安排，尚未生效。
+- [Webinar: Intro to ChatGPT Work For Newsrooms](https://academy.openai.com/public/clubs/news-organizations-b9osl/videos/webinar-intro-to-chatgpt-work-for-newsrooms-2026-08-26) 页面显示 Posted Aug 29, 2026，但 URL 带 8 月 26 日且无精确时刻。回放介绍 ChatGPT Work 如何借助 Agent、skills 与 plugins 支持新闻团队的研究、分析和规划；它是采用培训材料，不是产品发布。
 
 ## 观察池
 
@@ -113,4 +118,4 @@ tags:
 
 - 已检查：OpenAI Newsroom 各分类、OpenAI Developers 与模型/Codex 页面、ChatGPT Release Notes、Codex 与 Agents SDK 官方 GitHub、Developer Community、OpenAI Academy、Reddit、Hacker News，以及中英文 Web 搜索。
 - 失败来源：X 未登录时间线无法稳定读取；YouTube 未找到可交叉核实的新发布；官方页面未稳定暴露可确认的可靠原图，因此本页未配置图片。
-- 初始候选：19；保留来源：12；二次补搜：否（最终来源非 0）。
+- 初始候选：21；保留来源：14；二次补搜：否（最终来源非 0）。

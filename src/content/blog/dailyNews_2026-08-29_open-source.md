@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T12:08:00+08:00"
+updatedAt: "2026-08-29T15:00:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "How Auto Review works in Bionic"
 featuredUrl: "https://lmstudio.ai/blog/how-auto-review-works"
@@ -14,6 +14,8 @@ featuredImageCaption: "图片来源：LM Studio 官方工程博客"
 tags:
   - "观察池"
   - "较旧背景"
+  - "邻近信号"
+  - "日期未确认"
   - "未发布"
   - "Agent"
   - "Agent Harness"
@@ -28,12 +30,15 @@ tags:
   - "Compaction"
   - "DeepSeek Harness"
   - "Desktop"
+  - "Developer Tool"
   - "Documentation"
+  - "Engineering Blog"
   - "Hacker News"
   - "Headless"
   - "Incident"
   - "Langfuse"
   - "LLM"
+  - "MCP"
   - "Mistral"
   - "Model Routing"
   - "Multi-Agent"
@@ -50,11 +55,12 @@ tags:
   - "Shell"
   - "Sub-agent"
   - "Tool Calling"
+  - "Worktree"
 ---
 
 ## 今日概览
 
-本页发现窗口已滚动至 **2026-08-29 12:05（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。Coding Agent / Harness 是本轮主轴：Cline Desktop v0.0.20 完成 Windows 正式分发并修复定时任务、MCP 启动与 checkpoint 安全问题，主分支另合并 Agent Plugin 发现边界、teammate 取消传播、live model catalog 刷新及生产构建 Langfuse tracing 修复，但这些提交尚未发布；DeepSeek Harness 发布 v0.1.2-alpha.1；OpenCode 发布 v1.18.24 与 v1.18.25。Pi 已发布 [v0.84.4](https://github.com/earendil-works/pi/releases/tag/v0.84.4)（2026-08-29 06:08 +08:00；发布页无逐项说明），主分支修复了同一轮工具调用后跨过阈值却未先压缩上下文的问题，并修复 Mistral 分片工具调用合并。LM Studio 的工程文章则公开了 Bionic 对 shell 命令进行 AST 解析、能力提取和策略匹配的 Auto Review 路径；新论文 LoopHarness 则研究跨多轮持久化、非衰减的安全状态。
+本页发现窗口已滚动至 **2026-08-29 15:00（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。15:00 前未发现七个必查 Coding Agent / Harness 的新增正式版本或值得单列的官方关键提交；窗口末段的新项目和评论均缺少采用或独立效果验证，已按证据强度保留在观察池。Coding Agent / Harness 是本轮主轴：Cline Desktop v0.0.20 完成 Windows 正式分发并修复定时任务、MCP 启动与 checkpoint 安全问题，主分支另合并 Agent Plugin 发现边界、teammate 取消传播、live model catalog 刷新及生产构建 Langfuse tracing 修复，但这些提交尚未发布；DeepSeek Harness 发布 v0.1.2-alpha.1；OpenCode 发布 v1.18.24 与 v1.18.25。Pi 已发布 [v0.84.4](https://github.com/earendil-works/pi/releases/tag/v0.84.4)（2026-08-29 06:08 +08:00；发布页无逐项说明），主分支修复了同一轮工具调用后跨过阈值却未先压缩上下文的问题，并修复 Mistral 分片工具调用合并。LM Studio 的工程文章则公开了 Bionic 对 shell 命令进行 AST 解析、能力提取和策略匹配的 Auto Review 路径；新论文 LoopHarness 则研究跨多轮持久化、非衰减的安全状态。
 
 ## Coding Agent / Harness 雷达
 
@@ -113,7 +119,7 @@ Cline 现在会为 Cline 与 Cline Pass provider 启动时获取 live catalog，
 
 ## HN 讨论
 
-窗口末段出现 Bionic Auto Review、coding-agent shell 安全代理与代码文档辅助 Agent 等新提交。只有 Bionic 原文能核验发布日期并提供足够实现细节，已列入精选；其余营销型或新项目候选保留在观察池，不把提交热度当作技术验证。
+窗口末段出现 Bionic Auto Review、coding-agent shell 安全代理、代码文档辅助 Agent、token 效率 lint、git worktree 编排、MCP Registry 扫描与 harness 评论等新提交。只有 Bionic 原文能核验发布日期并提供足够实现细节，已列入精选；其余营销型或新项目候选保留在观察池，不把提交热度当作技术验证。
 
 ## 论文 / 研究
 
@@ -129,6 +135,11 @@ Datadog Security Labs 8 月 19 日的 plan/default secure-coding 测试在窗口
 
 ## 观察池
 
+- **Tokensift｜新项目 / 作者自述**：项目将自己描述为 LLM prompt 与 payload 的 token-efficiency linter；仓库可访问，但采用很早期，未见独立效果评测。[官方仓库](https://github.com/ritenv/tokensift)。
+- **LaneGate｜新项目 / 作者自述**：尝试用 git worktree lanes 与 protected gates 编排并行 coding agents；能力、稳定性与采用均未获独立验证。[官方仓库](https://github.com/sudheerdvn/lanegate)。
+- **Chunky Agents｜工程评论 / 邻近信号**：围绕 Agent 多轮执行与 post-training 的观点文章，不是可复现 harness 发布。[原文](https://ianbarber.blog/2026/08/28/chunky-agents/)。
+- **MCP Registry Audit｜日期未确认 / 原文不可访问**：HN 标题声称扫描官方 MCP Registry，但原文返回 HTTP 403，方法与结论未独立核验。[HN 讨论](https://news.ycombinator.com/item?id=49483485)。
+- **Obsessing over AI Agent Harnesses｜日期未确认 / 原文不可访问**：原站返回 HTTP 403，只保留 [HN 讨论](https://news.ycombinator.com/item?id=49481994) 作为发现证据。
 - **Codecut｜新项目 / 作者自述**：项目尝试用代码文档约束 coding agent，但采用、兼容性和效果缺少独立验证，仅保留 [官方仓库](https://github.com/treadiehq/codecut) 与 [HN 提交](https://news.ycombinator.com/item?id=49479877) 作为发现证据。
 - **Secure coding：plan vs default｜较旧背景**：Datadog 比较模型在规划模式与默认模式中的安全编码表现；原文发表于 8 月 19 日，测试结论依赖其任务与评分方法，不作为今日发布。[原文](https://securitylabs.datadoghq.com/articles/putting-models-to-the-secure-coding-test-plan-vs-default-mode/)。
 - **METR Agent 事件调查｜较旧背景 / 原文已恢复**：8 月 26 日发布的调查分析 Agent 在 OpenAI / Hugging Face 相关 hacking incident 中的行为；本轮仅记录原文恢复可访问，不把 HN 标题或论文作者结论升级为独立事实。[原文](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/)。
@@ -152,11 +163,16 @@ Datadog Security Labs 8 月 19 日的 plan/default secure-coding 测试在窗口
 14. [Cline Langfuse tracing 修复](https://github.com/cline/cline/commit/1986fa56de5dc91d635ef3a696136f6dc11799dd)
 15. [Safety Does Not Compose](https://arxiv.org/abs/2608.27141)
 16. [METR Agent 事件调查](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/)
+17. [Tokensift](https://github.com/ritenv/tokensift)
+18. [LaneGate](https://github.com/sudheerdvn/lanegate)
+19. [Chunky Agents](https://ianbarber.blog/2026/08/28/chunky-agents/)
+20. [MCP Registry Audit HN 讨论](https://news.ycombinator.com/item?id=49483485)
+21. [Agent Harness 评论 HN 讨论](https://news.ycombinator.com/item?id=49481994)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的第一方仓库 / Releases / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers；Simon Willison、LM Studio 与可信工程博客。
 - 失败来源：GitHub Releases HTML 部分缓存滞后，改用官方 REST API；GitHub Trending 未稳定显示可复核日增指标；GitHub Search / Trending 动态页面未稳定提供完整当日排名，改用项目官方 API 与原始页面核验。METR 原文已恢复访问。
-- 初始候选数：31。
-- 最终保留来源数：17。
+- 初始候选数：36。
+- 最终保留来源数：22。
 - 二次补搜：否（最终来源不为 0）。
