@@ -1,19 +1,21 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T12:05:11+08:00"
+updatedAt: "2026-08-29T18:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredTitle: "Autopilot PR / cloud autopilot ran locally instead of as a Cloud Agent"
-featuredUrl: "https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871"
-featuredSummary: "单一用户报告称 Autopilot PR 未进入 Cloud Agent，而在本地执行；控制台也没有云端运行记录，尚待官方确认。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
-featuredPublishedAt: "2026-08-28 23:49 +08:00"
-featuredTags: ["Cloud Agent","社区证据","执行路由"]
+featuredTitle: "feat(work): 接入 Coze Studio (10 容器栈) + 初始化容器/种子卷机制"
+featuredUrl: "https://github.com/AgentsDanceAI/deepseek-harness-cloud/commit/ef5e50049480bd7c56e892a56a6d25ccab8a384d"
+featuredSummary: "第三方 DSH Cloud 在托管 ECI 工作区接入 Coze Studio 多容器栈与初始化容器机制；项目非 DeepSeek 官方服务。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-08-29 17:36 +08:00"
+featuredTags: ["AaaS","托管工作区","DSH","第三方开源证据"]
 tags:
+  - "第三方开源证据"
   - "多 Agent 协作"
   - "官方核验"
   - "邻近信号"
   - "日期未确认"
   - "社区证据"
+  - "托管工作区"
   - "无新增"
   - "执行路由"
   - "AaaS"
@@ -22,6 +24,7 @@ tags:
   - "Cloud Agent"
   - "Cloud Environment"
   - "Devin"
+  - "DSH"
   - "Grok"
   - "Hosted Workspace"
   - "Managed Agent"
@@ -30,9 +33,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-28 12:05 至 2026-08-29 12:05（Asia/Shanghai）**，24–72 小时观察窗口回溯至 **2026-08-26 12:05**。本轮未发现可由官方原文确认、且在主窗口内发布的 AaaS 新产品或重大功能。正文保留一条窗口内的 Cloud Agent 运行边界故障信号、一条 24–72 小时但缺少具体更新时间的托管 Cloud Agent 文档候选，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。
+采集窗口为 **2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**，24–72 小时观察窗口回溯至 **2026-08-26 18:02**。本轮新增核实一项第三方 DSH Cloud 托管运行环境工程进展；它不是 DeepSeek 官方云服务，证据来自公开仓库提交。正文同时累计保留一条窗口内的 Cloud Agent 运行边界故障信号、两条缺少精确发布日期的托管 Cloud Agent 候选，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。
 
 ## 远程 / 云端 Agent 执行
+
+### DSH Cloud 接入 Dify / Coze 多容器托管工作区（第三方开源证据）
+
+DSH Cloud 的公开仓库在 8 月 29 日 15:18–17:36（上海时间）连续提交托管 ECI 工作区更新：先接入 Dify 十容器栈并处理沙箱、持久化、共享网络与就绪探测，随后加入 Coze Studio 十容器栈和初始化容器/种子卷机制。仓库自述提供托管订阅、隔离 Agent workspace、账户与用量策略；因此这些提交符合 AaaS 的托管环境与执行生命周期边界。不过该项目由 AgentsDanceAI 运营，**不是 DeepSeek 官方服务**，也不能据此推断 DeepSeek 已推出官方 DSH Cloud。代表性提交：[GitHub commit](https://github.com/AgentsDanceAI/deepseek-harness-cloud/commit/ef5e50049480bd7c56e892a56a6d25ccab8a384d)。
 
 ### Cursor Cloud Agent 出现执行目标偏离的用户报告（社区证据）
 
@@ -50,13 +57,13 @@ Cursor 社区有用户在 8 月 28 日 23:49 报告：本应以 Cloud Agent 运�
 
 ## 中国厂商（含字节跳动）
 
-已检查字节跳动 Coze/火山引擎/Trae，以及阿里云百炼/Qoder、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 等公开入口，未找到窗口内可核验的托管异步执行、远程环境、并发或企业控制面新增。DeepSeek Harness / DSH 当前官方页面强调开源、可本地安装的 harness、沙箱与调度能力，未发现供应商托管执行生命周期证据，因此不列为 AaaS 正文动态。
+已检查字节跳动 Coze/火山引擎/Trae，以及阿里云百炼/Qoder、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 等公开入口，未找到这些厂商在窗口内发布的托管异步执行、远程环境、并发或企业控制面新增。DeepSeek Harness / DSH 官方页面仍强调开源、可本地安装的 harness；本轮新增的 DSH Cloud 是独立第三方托管项目，不能归为 DeepSeek 官方 AaaS。
 
 ## AaaS 与 MaaS / PaaS 边界
 
 - AaaS 必须有供应商托管或管理 Agent 执行生命周期的证据，例如后台/异步任务、隔离远程环境、调度、并发、企业权限或运行观测。
 - 单纯模型 API 是 MaaS；仅提供共享开发环境、虚拟化或自托管 harness 是邻近 PaaS/工具链。
-- Cline、Pi Coding Agent、DeepSeek Harness、OpenCode、Aider、Continue 与 Roo Code 本轮均未发现新的供应商托管生命周期证据；相关本地或开源更新应归入开源专题。
+- Cline、Pi Coding Agent、OpenCode、Aider、Continue 与 Roo Code 本轮均未发现新的供应商托管生命周期证据；DeepSeek Harness 本体也仍是本地/自托管开源 harness，但第三方 DSH Cloud 已提供独立托管运行环境，二者必须分开表述。
 
 ## 日期未确认
 
@@ -76,10 +83,11 @@ OpenAgents 官方入门教程标注 8 月 27 日更新，明确写明 Cloud Agen
 
 ## 趋势
 
-本轮最值得关注的不是新品数量，而是托管执行的可验证边界：用户需要能确认任务究竟跑在本地还是云端，并在控制台看到对应运行记录。与此同时，共享云工作区并不自动等于 AaaS；执行主体仍在本地时，应继续归入邻近基础设施。
+本轮最值得关注的是托管执行的可验证边界与工程复杂度：用户需要能确认任务究竟跑在本地还是云端，并在控制台看到对应运行记录；而多容器 Agent 栈进入托管环境后，就绪探测、初始化容器、持久化与网络隔离都成为服务方必须管理的生命周期问题。共享云工作区仍不自动等于 AaaS；执行主体留在本地时，应继续归入邻近基础设施。
 
 ## 来源链接
 
+- [DSH Cloud：Coze Studio 多容器托管工作区提交](https://github.com/AgentsDanceAI/deepseek-harness-cloud/commit/ef5e50049480bd7c56e892a56a6d25ccab8a384d)
 - [Cursor Community：Autopilot PR 未按预期进入 Cloud Agent](https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871)
 - [Devin 2026 release notes](https://docs.devin.ai/release-notes/2026)
 - [xAI News](https://x.ai/news?category=all)
@@ -89,6 +97,6 @@ OpenAgents 官方入门教程标注 8 月 27 日更新，明确写明 Cloud Agen
 
 ## 采集状态
 
-已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 10 个候选，最终保留 6 个证据链接（其中 1 条窗口内社区风险信号、2 个厂商无新增核验入口、2 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。
+已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 12 个候选，最终保留 7 个证据链接（其中 1 条窗口内第三方托管环境工程进展、1 条窗口内社区风险信号、2 个厂商无新增核验入口、2 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。
 
-今日扫描完成，共 3 条动态，重点：Cloud Agent 执行位置与运行记录需要可核验；托管 workspace 文档缺少精确发布时间时保持日期未确认；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。
+今日扫描完成，共 4 条动态，重点：第三方 DSH 托管工作区出现多容器运行环境进展，但不代表 DeepSeek 官方推出 AaaS；Cloud Agent 执行位置与运行记录需要可核验；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。

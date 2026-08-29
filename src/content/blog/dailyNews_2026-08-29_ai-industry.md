@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T15:00:00+08:00"
+updatedAt: "2026-08-29T18:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Piloting the world's first double-blind AI evaluations"
 featuredUrl: "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
@@ -25,6 +25,7 @@ tags:
   - "Cursor"
   - "DeepSeek"
   - "Developer Tools"
+  - "Document Intelligence"
   - "Ecosystem"
   - "Enterprise AI"
   - "Evaluation"
@@ -47,7 +48,7 @@ tags:
 
 ## 今日概览
 
-滚动采集窗口为 **2026-08-28 15:00 至 2026-08-29 15:00（Asia/Shanghai）**。同日累计保留已有 7 条来源；本轮补入 4 条此前遗漏的 48–72 小时行业信号，其中 MiniMax 中期业绩为官方来源，Google DeepMind 人才变动由可信媒体援引本人及公司确认，NVIDIA–Hugging Face 与 Moonshot 海外云合作仍属于媒体报道或早期洽谈，均按证据状态保守表述。
+滚动采集窗口为 **2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**。同日累计保留已有 11 条来源；本轮补入 2 条此前遗漏的 48–72 小时 Cohere 官方行业信号：Parse 企业文档解析产品，以及以能力转移而非长期依赖为目标的前线部署工程方法。严格 24 小时窗口内仍未发现可同时核验原始来源与精确发布时间的新发布。
 
 ## 优先动态（过去 24 小时）
 
@@ -80,6 +81,8 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 |---|---|---|---|---|---|---|
 | MiniMax | 2026 年上半年业绩 | 商业化/企业 AI | 2026-08-26 20:00 +08:00，官方 | 上半年收入 1.166 亿美元，同比增长 283.1%；开放平台和企业 AI 服务收入 7390 万美元，同比增长 703.1%。 | 企业/API 收入占比升至 63.4%，显示模型调用与企业工作负载已成为主要商业化来源。 | [原文](https://www.minimax.io/news/minimax-announces-first-half-2026-financial-results-1787744160) |
 | Google DeepMind | Barret Zoph 加入并任研究副总裁 | 人才/组织 | 2026-08-27 10:53 +08:00，可信媒体 | Reuters 报道 Zoph 本人宣布加入 Google DeepMind，Google 表示其强化学习和后训练经验将用于 Gemini。 | 前沿模型竞争继续集中于强化学习、后训练与研究领导人才。 | [报道](https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/) |
+| Cohere | Parse 企业文档智能模型发布 | 产品/企业 AI | 2026-08-27，官方 | Parse 将复杂多模态文档转成结构化 Markdown，支持九种主要商业语言，并通过 API、Model Vault、Microsoft Foundry 与 AWS SageMaker 提供。 | 文档解析是企业 RAG 与 Agent 检索进入生产的关键前置能力；官方基准为自评，且明确未覆盖图表和完整视觉定位。 | [原文](https://cohere.com/blog/parse) |
+| Cohere | 前线部署工程应建设客户能力而非依赖 | 企业采用/工程方法 | 2026-08-27，官方 | Cohere 说明 FDE 与客户共同完成架构、集成、部署、测试和故障排查，并通过知识转移与客户自有测试套件降低长期运营依赖。 | 反映模型厂商竞争从 API 供给延伸到生产落地、可运维性和组织能力建设。 | [原文](https://cohere.com/blog/forward-deployed-engineers-capability-building) |
 
 ## 日期未确认
 
@@ -113,5 +116,5 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、API、模型变更和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：腾讯云详情页超时；部分中国厂商、社交账号和播客索引未提供窗口内可核验页面。
-- 初始候选数：17；保留来源数：11。
+- 初始候选数：19；保留来源数：13。
 - 二次补搜：否（最终来源不为 0）。

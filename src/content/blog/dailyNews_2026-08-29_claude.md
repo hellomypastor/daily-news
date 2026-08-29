@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T15:00:00+08:00"
+updatedAt: "2026-08-29T18:02:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code 2.1.251 changelog update"
 featuredUrl: "https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e"
@@ -13,22 +13,25 @@ tags:
   - "观察池"
   - "可靠性"
   - "日期未确认"
+  - "社区报告"
   - "社区口碑"
   - "Agent"
   - "Agent SDK"
+  - "Agent Teams"
   - "Alignment"
   - "Anthropic"
   - "Claude"
   - "Claude Code"
   - "Cowork"
   - "Research"
+  - "Routines"
   - "Security"
   - "Status"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-28 15:00 至 2026-08-29 15:00（Asia/Shanghai）**。本窗口的核心更新是 [Claude Code 2.1.251](https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e)：新增模型切换 hooks、前台子 Agent 工具流式回传、缓存与额度可观测性，并集中修补符号链接、插件路径穿越、项目级追踪配置、Workflow 读取顺序及 sandbox 输出文件等安全边界；后台会话、Agent Teams、Remote Control、SDK MCP 握手、云会话和企业策略也有大量修复。[Python Agent SDK 0.2.148](https://github.com/anthropics/claude-agent-sdk-python/commit/af5ff1b9f2f279575f89b78f17572c6e35fbc2b6) 与 [TypeScript Agent SDK 0.3.251](https://github.com/anthropics/claude-agent-sdk-typescript/commit/75667f1f76e800bb845b0a0e211df79fedfc9e86) 随后同步 CLI。官方状态页还记录了 [Claude Code 与 Cowork Web 部分中断](https://status.anthropic.com/incidents/vr9tpk8w7zr8)：上游云服务商问题导致部分会话无法启动或中途断开，上海时间 01:22 报告、04:21 恢复。Anthropic 另发布自动化对齐研究，但官方页只标注 8 月 28 日、没有精确时刻，列入日期未确认。社区样本继续集中在额度透明度、成本与生成代码可维护性，证据均不足以推导平台级降额或模型退化。
+采集窗口：**2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**。本窗口的核心更新是 [Claude Code 2.1.251](https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e)：新增模型切换 hooks、前台子 Agent 工具流式回传、缓存与额度可观测性，并集中修补符号链接、插件路径穿越、项目级追踪配置、Workflow 读取顺序及 sandbox 输出文件等安全边界；后台会话、Agent Teams、Remote Control、SDK MCP 握手、云会话和企业策略也有大量修复。[Python Agent SDK 0.2.148](https://github.com/anthropics/claude-agent-sdk-python/commit/af5ff1b9f2f279575f89b78f17572c6e35fbc2b6) 与 [TypeScript Agent SDK 0.3.251](https://github.com/anthropics/claude-agent-sdk-typescript/commit/75667f1f76e800bb845b0a0e211df79fedfc9e86) 随后同步 CLI。官方状态页还记录了 [Claude Code 与 Cowork Web 部分中断](https://status.anthropic.com/incidents/vr9tpk8w7zr8)：上游云服务商问题导致部分会话无法启动或中途断开，上海时间 01:22 报告、04:21 恢复。Anthropic 另发布自动化对齐研究，但官方页只标注 8 月 28 日、没有精确时刻，列入日期未确认。社区样本继续集中在额度透明度、成本与生成代码可维护性；本轮新增两份带复现步骤的 GitHub 用户报告，涉及 Windows 定时任务注册表和 WSL 子 Agent 结果交付，均尚无维护者确认，不能外推为普遍故障。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -87,6 +90,8 @@ Security 有明确客户端更新：2.1.251 修补符号链接竞态、插件路
 
 - [额度到期讨论](https://www.reddit.com/r/ClaudeCode/comments/1w01yew/per_anthropics_own_help_page_claude_code_weekly/) 担心 8 月 31 日后提升额度回落，并混有“最近消耗更快”的自报。新增的 [Max 与 Pro 周限额讨论](https://www.reddit.com/r/ClaudeAI/comments/1w1c51c/weekly_limit_doesnt_scale_5x_on_max_compared_to/) 质疑 Max 的周限额是否随五小时额度同比扩大；回复同时出现“额度不值”与“实际用不完”的相反个体体验。公开证据只能支持用户对规则透明度存在疑问，不能证明已经降额、套餐比例或模型效率系统性变化。
 - 可维护性求助帖称原型依赖过多、代码不整洁；缺少仓库、提示词和对照实验，标注为**个体体验、低置信度**。
+- [Windows 定时任务注册表失效报告](https://github.com/anthropics/claude-code/issues/90533) 称一个由应用工具写入的 ISO 时间字符串会让 35 个 routines 停止调度；报告给出日志、文件形态和本地恢复步骤，但仍是单一用户报告、尚无维护者确认。
+- [子 Agent 报告截断报告](https://github.com/anthropics/claude-code/issues/90544) 称带 instruction-shaped pattern 的长结果约在 2,500 字符处截断，按提示重发会重复运行并再次截断；报告提供 WSL2 / 2.1.251 复现步骤，仍需维护者或独立样本确认。
 
 ## 情绪判断
 
@@ -105,6 +110,7 @@ Security 有明确客户端更新：2.1.251 修补符号链接竞态、插件路
 
 - 额度提升是否在 8 月 31 日后延长尚无本窗口官方决定；“已经降额”“模型退化”维持**未证实传闻**。
 - 2.1.251 的 Enterprise 默认 Opus 5、Claude in Chrome 权限链和后台/云 Agent 修复可能形成后续企业采用信号；当前没有独立采用数据。
+- 定时任务注册表整体失效与子 Agent 结果截断均为官方仓库内带复现步骤的用户报告；当前维持**观察池 / 未确认缺陷**，不据此判断影响范围或平台可靠性。
 
 ## 来源链接
 
@@ -118,11 +124,13 @@ Security 有明确客户端更新：2.1.251 修补符号链接竞态、插件路
 8. [Claude Code weekly limits discussion](https://www.reddit.com/r/ClaudeCode/comments/1w01yew/per_anthropics_own_help_page_claude_code_weekly/)
 9. [Claude Code project maintainability discussion](https://www.reddit.com/r/ClaudeCode/comments/1w0o61n/faced_problem_in_projects_after_using_claude_code/)
 10. [Claude Code and Cowork Web incident](https://status.anthropic.com/incidents/vr9tpk8w7zr8)
-11. [Weekly limit doesn't scale 5x on Max compared to Pro?](https://www.reddit.com/r/ClaudeAI/comments/1w1c51c/weekly_limit_doesnt_scale_5x_on_max_compared_to/)
+11. [Weekly limit doesn’t scale 5x on Max compared to Pro?](https://www.reddit.com/r/ClaudeAI/comments/1w1c51c/weekly_limit_doesnt_scale_5x_on_max_compared_to/)
+12. [Scheduled tasks registry can stop all routines](https://github.com/anthropics/claude-code/issues/90533)
+13. [Subagent report truncation on instruction-shaped patterns](https://github.com/anthropics/claude-code/issues/90544)
 
 ## 采集状态
 
-- 已检查：Anthropic Newsroom、Research、Engineering、Claude Blog、Developer Platform、Claude Code 文档与 GitHub commit/tag/CHANGELOG、Python/TypeScript Agent SDK、Help Center、Status；Tier 1/2/3 全部指定产品和行业关键词；Reddit 四个社区、Hacker News、X、YouTube及中英文网页搜索。
+- 已检查：Anthropic Newsroom、Research、Engineering、Claude Blog、Developer Platform、Claude Code 文档与 GitHub commit/tag/CHANGELOG/新开 issues、Python/TypeScript Agent SDK、Help Center、Status；Tier 1/2/3 全部指定产品和行业关键词；Reddit 四个社区、Hacker News、X、YouTube及中英文网页搜索。
 - 失败来源：X 无法稳定展开原帖绝对时间与互动量；YouTube 未检出可与官方交叉核验的新发布；Help Center 部分页面仅有相对更新时间；Reddit 部分页面缺稳定绝对时刻。
-- 初始候选：18；保留来源：11（窗口内官方 7、日期未完全确认官方 1、社区 3；新增社区帖仅确认相对时间）。
+- 初始候选：20；保留来源：13（窗口内官方 7、日期未完全确认官方 1、社区 5；Reddit 新增帖仅确认相对时间，GitHub issues 为未确认用户报告）。
 - 二次补搜：否（最终来源不为 0）。

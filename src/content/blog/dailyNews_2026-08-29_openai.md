@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T15:00:00+08:00"
+updatedAt: "2026-08-29T18:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.151.0-alpha.12"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.12"
@@ -9,7 +9,9 @@ featuredSummary: "官方仓库发布 Codex CLI 0.151.0-alpha.12；release 正文
 featuredPublishedAt: "2026-08-29 09:29 +08:00"
 featuredTags: ["Codex CLI","alpha","官方预览"]
 tags:
+  - "安全边界"
   - "采用案例"
+  - "插件"
   - "额度"
   - "工具调用"
   - "观察池"
@@ -20,9 +22,11 @@ tags:
   - "社区反馈"
   - "生态"
   - "生态合作"
+  - "稳定版"
   - "稳定性"
   - "新闻业"
   - "Agent"
+  - "AGENTS.md"
   - "alpha"
   - "API"
   - "ChatGPT"
@@ -33,6 +37,7 @@ tags:
   - "Coding Agent"
   - "Cursor"
   - "macOS"
+  - "MCP"
   - "OpenAI"
   - "Temporary Chat"
   - "Windows"
@@ -41,13 +46,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-28 15:00 至 2026-08-29 15:00（Asia/Shanghai）**。本轮可精确落入窗口的新增证据主要来自 OpenAI 官方 Codex 仓库的用户报告；OpenAI Newsroom、Academy 与 ChatGPT Release Notes 的新页面只给出日历日期，没有公开精确发布时间，因此统一放入“日期未确认”。窗口内新增 Codex CLI 0.151.0 alpha 预览序列；未核实到稳定版 Codex CLI、Responses API、Agents SDK、Realtime API 或模型家族的正式版本更新。
+采集窗口为 **2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**。本轮可精确落入窗口的官方实质更新是 Codex CLI 0.151.0 稳定版；OpenAI Newsroom、Academy 与 ChatGPT Release Notes 的新页面只给出日历日期，没有公开精确发布时间，因此统一放入“日期未确认”。窗口内另有 Codex CLI 0.151.0 alpha 预览序列与多条用户故障报告；未核实到Responses API、Agents SDK、Realtime API 或模型家族的正式版本更新。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 本轮状态 | 证据与判断 |
 |---|---|---|
-| Codex CLI | 官方 alpha 预览 + 社区负面信号 | 官方仓库发布 0.151.0 alpha 预览序列；另有 npm 安装、Windows 沙箱与 WSL 项目路径问题报告，均不能视为官方确认的普遍回归。 |
+| Codex CLI | 官方稳定版 + alpha 预览 + 社区负面信号 | 官方仓库发布 0.151.0 稳定版，包含 MCP、插件目录、权限与远程沙箱修复；另有 alpha 预览序列及 CLI/桌面故障报告，后者不能视为官方确认的普遍回归。 |
 | VS Code / JetBrains 集成 | 无新增 | 已查官方文档、Codex 仓库与社区入口，未见窗口内可确认发布。 |
 | Codex Cloud / Remote / PR Agents | 无新增 | 未见窗口内官方版本或功能公告。 |
 | ChatGPT agentic mode / ChatGPT Work | 日期未确认 | 当日 Academy 案例展示 ChatGPT Work 与 Codex 的生产使用，但属于采用案例而非新功能发布。 |
@@ -72,6 +77,8 @@ tags:
 
 ## 官方动态（按证据时间）
 
+[Codex 0.151.0](https://github.com/openai/codex/releases/tag/rust-v0.151.0) 于 2026-08-29 17:55 +08:00 发布稳定版。官方 changelog 列出可配置的可选 MCP server 工具发现宽限期、扩展拦截 MCP 工具结果、按仓库合并插件目录，以及权限配置、远程沙箱、模型切换和 Guardian 授权缓存等修复。
+
 [Codex 0.151.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.12) 于 2026-08-29 09:29 +08:00 发布。官方 release 正文仅给出版本号；同一官方仓库的版本比较显示 MCP 单工具输出限额、压缩历史读取、远程插件刷新等在研变更。它是 alpha 预览，不能据此声称稳定客户端已获得这些能力。
 
 ## Love
@@ -87,9 +94,12 @@ tags:
 - [Codex desktop repeatedly hangs silently during long-running commands](https://github.com/openai/codex/issues/41418)（2026-08-29 05:28 +08:00）记录：Windows 用户提供后端意外退出、连接转为错误与任务中断日志；日志不能证明 Remote Control WebSocket 停止是根因。
 - [[macOS][Desktop 26.825.32147] Local project task loses shell/filesystem tools; terminal cannot attach](https://github.com/openai/codex/issues/41439)（2026-08-29 08:50 +08:00）记录：用户称新建本地项目任务缺少 shell 与普通文件读取工具，并给出工具目录、终端附着失败和重建任务仍失败的复现步骤；这是单一用户报告，尚无官方根因确认。
 
+- [0.150.1: untrusted project AGENTS.md is included in prompt input](https://github.com/openai/codex/issues/41499)（2026-08-29 16:07 +08:00）给出隔离 CODEX_HOME、临时仓库和 debug/exec 两条复现路径，称不受信任项目的 AGENTS.md 仍进入模型提示；这是安全边界相关的单一用户报告，尚无维护者确认。
+- [Codex Desktop (Windows): code-mode host exits during handshake](https://github.com/openai/codex/issues/41507)（2026-08-29 17:35 +08:00）记录 Windows Desktop 的 code-mode host 握手退出，并用空 CODEX_HOME、进程监控与同机 CLI 对照缩小范围；根因推测尚未获官方确认。
+
 ## 情绪判断
 
-**偏负面，低到中等置信度。** 可精确落窗的两条证据都是可操作的故障报告，而正面采用案例只有日期、缺少精确时间且来自 OpenAI 自身编辑渠道。样本小，不能外推整体用户口碑。
+**中性偏负，低到中等置信度。** 官方稳定版带来明确功能与安全修复，但可精确落窗的社区证据仍以可操作的故障报告为主；正面采用案例只有日期、缺少精确时间且来自 OpenAI 自身编辑渠道。样本小，不能外推整体用户口碑。
 
 ## 比较与替代信号
 
@@ -118,4 +128,4 @@ tags:
 
 - 已检查：OpenAI Newsroom 各分类、OpenAI Developers 与模型/Codex 页面、ChatGPT Release Notes、Codex 与 Agents SDK 官方 GitHub、Developer Community、OpenAI Academy、Reddit、Hacker News，以及中英文 Web 搜索。
 - 失败来源：X 未登录时间线无法稳定读取；YouTube 未找到可交叉核实的新发布；官方页面未稳定暴露可确认的可靠原图，因此本页未配置图片。
-- 初始候选：21；保留来源：14；二次补搜：否（最终来源非 0）。
+- 初始候选：24；保留来源：17；二次补搜：否（最终来源非 0）。

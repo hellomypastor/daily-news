@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-08-29"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T15:00:00+08:00"
+updatedAt: "2026-08-29T18:02:00+08:00"
 description: "2026-08-29 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-29"
 featuredUrl: "https://github.com/anthropics/claude-code/commit/f1af9b1f4b1fd4c776135381606edada82ef638e"
@@ -54,6 +54,6 @@ tags:
 
 ## AaaS（Agent-as-a-Service）行业动态日报
 
-**[Autopilot PR / cloud autopilot ran locally instead of as a Cloud Agent](https://forum.cursor.com/t/autopilot-pr-cloud-autopilot-ran-locally-instead-of-as-a-cloud-agent/169871)**。单一用户报告称 Autopilot PR 未进入 Cloud Agent，而在本地执行；控制台也没有云端运行记录，尚待官方确认。 托管 Agent、远程异步执行平台及其商业化与生态动态。
+**[feat(work): 接入 Coze Studio (10 容器栈) + 初始化容器/种子卷机制](https://github.com/AgentsDanceAI/deepseek-harness-cloud/commit/ef5e50049480bd7c56e892a56a6d25ccab8a384d)**。第三方 DSH Cloud 在托管 ECI 工作区接入 Coze Studio 多容器栈与初始化容器机制；项目非 DeepSeek 官方服务。 托管 Agent、远程异步执行平台及其商业化与生态动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-29_aaas)

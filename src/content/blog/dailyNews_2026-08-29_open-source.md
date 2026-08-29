@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T15:00:00+08:00"
+updatedAt: "2026-08-29T18:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "How Auto Review works in Bionic"
 featuredUrl: "https://lmstudio.ai/blog/how-auto-review-works"
@@ -35,6 +35,7 @@ tags:
   - "Engineering Blog"
   - "Hacker News"
   - "Headless"
+  - "Hooks"
   - "Incident"
   - "Langfuse"
   - "LLM"
@@ -50,6 +51,7 @@ tags:
   - "Plugins"
   - "Pre-release"
   - "Release"
+  - "Reliability"
   - "Research"
   - "Security"
   - "Shell"
@@ -60,13 +62,13 @@ tags:
 
 ## 今日概览
 
-本页发现窗口已滚动至 **2026-08-29 15:00（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。15:00 前未发现七个必查 Coding Agent / Harness 的新增正式版本或值得单列的官方关键提交；窗口末段的新项目和评论均缺少采用或独立效果验证，已按证据强度保留在观察池。Coding Agent / Harness 是本轮主轴：Cline Desktop v0.0.20 完成 Windows 正式分发并修复定时任务、MCP 启动与 checkpoint 安全问题，主分支另合并 Agent Plugin 发现边界、teammate 取消传播、live model catalog 刷新及生产构建 Langfuse tracing 修复，但这些提交尚未发布；DeepSeek Harness 发布 v0.1.2-alpha.1；OpenCode 发布 v1.18.24 与 v1.18.25。Pi 已发布 [v0.84.4](https://github.com/earendil-works/pi/releases/tag/v0.84.4)（2026-08-29 06:08 +08:00；发布页无逐项说明），主分支修复了同一轮工具调用后跨过阈值却未先压缩上下文的问题，并修复 Mistral 分片工具调用合并。LM Studio 的工程文章则公开了 Bionic 对 shell 命令进行 AST 解析、能力提取和策略匹配的 Auto Review 路径；新论文 LoopHarness 则研究跨多轮持久化、非衰减的安全状态。
+本页发现窗口已滚动至 **2026-08-29 18:02（Asia/Shanghai）**，技术高亮向前覆盖 48 小时。18:02 前七个必查 Coding Agent / Harness 没有新增正式版本；Cline 在窗口末段新增一项值得单列的未发布可靠性与安全修复，其余新项目和评论均缺少采用或独立效果验证，未升级成已验证事实。Coding Agent / Harness 是本轮主轴：Cline Desktop v0.0.20 完成 Windows 正式分发并修复定时任务、MCP 启动与 checkpoint 安全问题，主分支另合并 Agent Plugin 发现边界、teammate 取消传播、live model catalog 刷新、生产构建 Langfuse tracing 与 hook spawn 失败隔离修复，但这些提交尚未发布；DeepSeek Harness 发布 v0.1.2-alpha.1；OpenCode 发布 v1.18.24 与 v1.18.25。Pi 已发布 [v0.84.4](https://github.com/earendil-works/pi/releases/tag/v0.84.4)（2026-08-29 06:08 +08:00；发布页无逐项说明），主分支修复了同一轮工具调用后跨过阈值却未先压缩上下文的问题，并修复 Mistral 分片工具调用合并。LM Studio 的工程文章则公开了 Bionic 对 shell 命令进行 AST 解析、能力提取和策略匹配的 Auto Review 路径；新论文 LoopHarness 则研究跨多轮持久化、非衰减的安全状态。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 状态 | 关键变化 | 证据 |
 |---|---|---|---|
-| Cline | **窗口内发布；另有未发布提交** | Desktop v0.0.20 增加 Windows 签名安装包与自动更新，修复 schedule、MCP 启动及 checkpoint 恢复；主分支为 vendor-neutral Agent Plugin 设置独立发现边界，并让根会话中止向 teammate 任务传播；另修复 live catalog 刷新与生产构建 Langfuse tracing。 | [Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)；[Plugin 边界提交](https://github.com/cline/cline/commit/2208d185a442d29aac9b796ebd5ed4fae3ae887e)；[取消传播提交](https://github.com/cline/cline/commit/52d5e1a515b2dd6b1cc8c0bbc9886be76e9eca4c)；[模型目录提交](https://github.com/cline/cline/commit/aa815cd41a6c0a2753fea20370295fce0d796dbf)；[Langfuse 提交](https://github.com/cline/cline/commit/1986fa56de5dc91d635ef3a696136f6dc11799dd) |
+| Cline | **窗口内发布；另有未发布提交** | Desktop v0.0.20 增加 Windows 签名安装包与自动更新，修复 schedule、MCP 启动及 checkpoint 恢复；主分支为 vendor-neutral Agent Plugin 设置独立发现边界，并让根会话中止向 teammate 任务传播；另修复 live catalog、生产构建 Langfuse tracing，并让 hook spawn 或工作目录失败只终止该 hook、不会拖垮 core 进程或改在无关目录运行。 | [Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)；[Plugin 边界提交](https://github.com/cline/cline/commit/2208d185a442d29aac9b796ebd5ed4fae3ae887e)；[取消传播提交](https://github.com/cline/cline/commit/52d5e1a515b2dd6b1cc8c0bbc9886be76e9eca4c)；[模型目录提交](https://github.com/cline/cline/commit/aa815cd41a6c0a2753fea20370295fce0d796dbf)；[Langfuse 提交](https://github.com/cline/cline/commit/1986fa56de5dc91d635ef3a696136f6dc11799dd)；[Hook spawn 提交](https://github.com/cline/cline/commit/cea134be06cbb60af4a7341ddc065c3b8be6be86) |
 | Pi Coding Agent | **主分支未发布修复** | 在同一 Agent run 的工具结果跨过阈值后、下一次模型请求前执行 compaction；另修复 Mistral 流式工具调用分片缺少 ID 时被拆开。v0.84.4 已于 8 月 29 日发布。 | [v0.84.4](https://github.com/earendil-works/pi/releases/tag/v0.84.4)；[Compaction 提交](https://github.com/earendil-works/pi/commit/56700d42ed65a94a80af7376adb19a9298065164)；[Mistral 提交](https://github.com/earendil-works/pi/commit/6c87d9a026677b601e8278030dcf1ad97fe0bd86) |
 | DeepSeek Harness / DSH | **窗口内 alpha 预发布** | 子代理可指定 provider、model 与 reasoning effort；修复持久终端、预设和工具调用，Headless 将进度与最终 stdout 分流。 | [官方 Release](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.1) |
 | OpenCode | **窗口内连续发布** | v1.18.24 修复 Bedrock reasoning 回放并支持 Azure CLI / Entra ID；v1.18.25 移除认证对 Bun 的依赖。 | [v1.18.24](https://github.com/anomalyco/opencode/releases/tag/v1.18.24)；[v1.18.25](https://github.com/anomalyco/opencode/releases/tag/v1.18.25) |
@@ -112,6 +114,10 @@ Mistral 流式响应的续传 chunk 可能不再携带 tool-call ID；Pi 改用 
 ### Cline 主分支：刷新 live model catalog，并修复生产构建 tracing
 
 Cline 现在会为 Cline 与 Cline Pass provider 启动时获取 live catalog，同时让运行时注册的 model override 保持最高优先级；另一个提交不再依赖会被 minifier 改名的 OpenTelemetry class name，而按结构与对象身份识别 tracer provider，修复 Langfuse 在生产构建中静默不可用的问题。两者均为未发布主分支提交。[模型目录提交](https://github.com/cline/cline/commit/aa815cd41a6c0a2753fea20370295fce0d796dbf)，2026-08-29 07:19 +08:00；[Langfuse 提交](https://github.com/cline/cline/commit/1986fa56de5dc91d635ef3a696136f6dc11799dd)，2026-08-29 10:44 +08:00。
+
+### Cline 主分支：隔离 hook spawn 失败并拒绝错误工作目录
+
+Cline 修复了 hook 子进程启动失败在没有 `error` listener 时变成未捕获异常、进而杀死整个 core 进程的问题。若 workspace 根目录已被删除、改名或卸载，hook 现在会带具体目录信息失败，而不会退回宿主进程目录执行相对路径；这是未发布主分支提交。[官方提交](https://github.com/cline/cline/commit/cea134be06cbb60af4a7341ddc065c3b8be6be86)，2026-08-29 15:07 +08:00。
 
 ## GitHub Trending
 
@@ -161,18 +167,19 @@ Datadog Security Labs 8 月 19 日的 plan/default secure-coding 测试在窗口
 12. [Datadog secure-coding 测试](https://securitylabs.datadoghq.com/articles/putting-models-to-the-secure-coding-test-plan-vs-default-mode/)
 13. [Cline live model catalog](https://github.com/cline/cline/commit/aa815cd41a6c0a2753fea20370295fce0d796dbf)
 14. [Cline Langfuse tracing 修复](https://github.com/cline/cline/commit/1986fa56de5dc91d635ef3a696136f6dc11799dd)
-15. [Safety Does Not Compose](https://arxiv.org/abs/2608.27141)
-16. [METR Agent 事件调查](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/)
-17. [Tokensift](https://github.com/ritenv/tokensift)
-18. [LaneGate](https://github.com/sudheerdvn/lanegate)
-19. [Chunky Agents](https://ianbarber.blog/2026/08/28/chunky-agents/)
-20. [MCP Registry Audit HN 讨论](https://news.ycombinator.com/item?id=49483485)
-21. [Agent Harness 评论 HN 讨论](https://news.ycombinator.com/item?id=49481994)
+15. [Cline hook spawn 失败隔离](https://github.com/cline/cline/commit/cea134be06cbb60af4a7341ddc065c3b8be6be86)
+16. [Safety Does Not Compose](https://arxiv.org/abs/2608.27141)
+17. [METR Agent 事件调查](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/)
+18. [Tokensift](https://github.com/ritenv/tokensift)
+19. [LaneGate](https://github.com/sudheerdvn/lanegate)
+20. [Chunky Agents](https://ianbarber.blog/2026/08/28/chunky-agents/)
+21. [MCP Registry Audit HN 讨论](https://news.ycombinator.com/item?id=49483485)
+22. [Agent Harness 评论 HN 讨论](https://news.ycombinator.com/item?id=49481994)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的第一方仓库 / Releases / changelog；HN front/newest 与 Algolia；GitHub Trending 综合/Python/TypeScript；arXiv；Hugging Face Papers；Simon Willison、LM Studio 与可信工程博客。
 - 失败来源：GitHub Releases HTML 部分缓存滞后，改用官方 REST API；GitHub Trending 未稳定显示可复核日增指标；GitHub Search / Trending 动态页面未稳定提供完整当日排名，改用项目官方 API 与原始页面核验。METR 原文已恢复访问。
-- 初始候选数：36。
-- 最终保留来源数：22。
+- 初始候选数：47。
+- 最终保留来源数：23。
 - 二次补搜：否（最终来源不为 0）。
