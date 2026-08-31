@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T09:36:00+08:00"
+updatedAt: "2026-08-31T10:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.2"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.2"
@@ -14,6 +14,7 @@ featuredImageCaption: "图片来源：DeepSeek Harness GitHub Release 的公开 
 tags:
   - "观察池"
   - "较旧背景"
+  - "日期未确认"
   - "Agent"
   - "Agent Evaluation"
   - "Agent Memory"
@@ -44,7 +45,7 @@ tags:
 
 ## 今日概览
 
-本轮以 **2026-08-30 09:28 至 2026-08-31 09:28（Asia/Shanghai）** 为 24 小时发现窗口，并按主题规范把可核实的技术精选放宽到过去 48 小时。最明确的更新来自 DeepSeek Harness 的 alpha 发布与 Pi Coding Agent 的会话、压缩和 RPC 改进；研究侧则出现了对 Agent 模型路由静态回放评测的直接质疑。以下只陈述原始页面能够支持的事实，不以提交活跃度推断质量或领先性。
+本轮以 **2026-08-30 10:02 至 2026-08-31 10:02（Asia/Shanghai）** 为 24 小时发现窗口，并按主题规范把可核实的技术精选放宽到过去 48 小时。最明确的更新来自 DeepSeek Harness 的 alpha 发布与 Pi Coding Agent 的会话、压缩和 RPC 改进；研究侧则出现了对 Agent 模型路由静态回放评测的直接质疑。以下只陈述原始页面能够支持的事实，不以提交活跃度推断质量或领先性。
 
 ## Coding Agent / Harness 雷达
 
@@ -115,12 +116,14 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 
 ## 日期未确认
 
-本轮没有必须保留但无法确认原始日期的高优先级条目。GitHub Trending 项目的“上榜时间”只代表采集时观察状态，已单独标注，不推断项目发布日期。
+- [The Shapes of Agent Memory – Files, Stores, and Experience](https://pinglin.tw/blog/the-shapes-of-agent-memory/)：**原始发布日期未确认 / HN 初始信号。** 该文于 2026-08-31 09:38（上海时间）被提交至 Hacker News；采集时仅 1 point，原站本轮未返回可读取正文或日期，因此这里只保留标题与讨论入口，不转述为已验证技术结论。
+- GitHub Trending 项目的“上榜时间”只代表采集时观察状态，已单独标注，不推断项目发布日期。
 
 ## 观察池
 
 - [SIMURG](https://github.com/doofzoff/SIMURG)：**早期项目 / 社区信号弱。** 仓库可访问且许可证明确，但其“中止幻觉”等效果描述尚未由本轮独立基准验证。
 - [norms](https://github.com/gsttm/norms)：**新建项目 / 日期已确认。** 值得观察多 Agent 规范分发思路，尚无采用证据。
+- [The Shapes of Agent Memory – Files, Stores, and Experience](https://pinglin.tw/blog/the-shapes-of-agent-memory/)：**日期未确认 / 低互动邻近信号。** 主题与 Agent 记忆形态相关，但原站本轮不可读，待后续复核正文与日期。
 - [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)、[scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)、[crawl4ai](https://github.com/unclecode/crawl4ai)、[last30days-skill](https://github.com/mvanhorn/last30days-skill)：**GitHub Trending 邻近信号。** 仅记录当天榜单可见性，不把热度等同于新发布或技术验证。
 
 ## 来源链接
@@ -129,8 +132,8 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 
 ## 采集状态
 
-- **采集窗口：** 2026-08-30 09:28 至 2026-08-31 09:28（Asia/Shanghai）；技术精选回看 48 小时。
+- **采集窗口：** 2026-08-30 10:02 至 2026-08-31 10:02（Asia/Shanghai）；技术精选回看 48 小时。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
-- **失败/受限：** Pi 与 Roo Code 旧仓库名已重定向，已转到当前官方仓库；GitHub Trending 首次请求因 shell 参数未加引号失败，重试成功；Hugging Face 与 Simon Willison 本轮未检出优先级足够的窗口内条目。
-- **初始候选数：** 18；**最终保留来源数：** 12；**二次补搜：** 否（最终来源不为 0）。
+- **失败/受限：** Pi 与 Roo Code 旧仓库名已重定向，已转到当前官方仓库；GitHub Trending 首次请求因 shell 参数未加引号失败，重试成功；Hugging Face 与 Simon Willison 本轮未检出优先级足够的窗口内条目；Agent Memory 原站未返回可读取正文或日期。
+- **初始候选数：** 19；**最终保留来源数：** 13；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 预览，来源 URL 与正文对应条目一致。

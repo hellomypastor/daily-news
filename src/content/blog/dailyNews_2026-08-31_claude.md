@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T09:28:08+08:00"
+updatedAt: "2026-08-31T10:03:22+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTags: []
 tags:
@@ -13,6 +13,7 @@ tags:
   - "Claude"
   - "Claude Code"
   - "Codex"
+  - "Desktop"
   - "Government"
   - "Hate"
   - "Love"
@@ -21,7 +22,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-30 09:28 至 2026-08-31 09:28（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
+采集窗口：**2026-08-30 10:02 至 2026-08-31 10:02（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、桌面会话生命周期缺陷报告、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
 
 ## Tier 1：编码、Agent 与模型主轴
 
@@ -65,11 +66,13 @@ tags:
 
 ## Hate
 
+- 官方仓库新增一则桌面端更新重启缺陷报告：用户提供日志称更新重启会终止运行中的 Claude Code 会话，窗口与会话卡片恢复但底层进程不恢复。原始现象发生于 8 月 27 日，issue 于本轮窗口内创建；这是低置信度用户报告，尚无 Anthropic 官方确认，不计作已确认事故。[GitHub issue](https://github.com/anthropics/claude-code/issues/90867)
+
 - 社区对“临时 50% 周用量提升结束后保留 25% 提升”的表述出现明显反弹，部分用户将其理解为相对当前容量下降，并批评可预测性与沟通方式。讨论串有支持与反对两种解释，且原始官方社交帖未能稳定核验，因此只能作为负面口碑样本。[Reddit 讨论](https://www.reddit.com/r/Anthropic/comments/1w2wfke/one_of_the_biggest_disaster_announcements_in_the/)
 
 ## 情绪判断
 
-**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与两个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制和插件开发稳定性。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。
+**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与三个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制和插件开发稳定性。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。
 
 ## 对比与迁移信号
 
@@ -83,18 +86,19 @@ tags:
 
 ## 观察池
 
+- [桌面更新重启终止运行中会话](https://github.com/anthropics/claude-code/issues/90867)：用户日志型报告；原始现象日期为 8 月 27 日，issue 创建于本轮窗口，官方尚未确认。同根因拆分 issue 未重复收录。
 - [会话内切换模型、effort 与清空上下文请求](https://github.com/anthropics/claude-code/issues/90772)：官方仓库中的用户提案，可能反映长时 Agent 工作流对分段控制的需求，尚非已排期功能。
 - [VS Code guardrail / 消息列表不同步报告](https://github.com/anthropics/claude-code/issues/90773)：用户报告附错误时间戳，但没有官方复现或处置结论。
 - [美联社政府争议报道](https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c)：可信二手来源、但已早于本轮窗口，仅作 Tier 3 背景。
 
 ## 来源链接
 
-正文中的六个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
+正文中的七个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Help Center release notes、Developer Platform、Claude Code 文档/官方 GitHub、Status；逐项覆盖 Tier 1 与 Tier 2；快速检查 Tier 3 垂直入口；抽样 Reddit、Hacker News、X、YouTube与可信二手报道。
-- 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 release 页面未由搜索返回。
-- 初始候选：12；最终保留：6（2 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
+- 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 releases 可访问但窗口内无新版本。
+- 初始候选：21；最终保留：7（3 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
 - 二次补搜：否（最终来源不为 0）。
 - 图片：无。候选来源主要是 GitHub issue、Reddit 用户帖和较旧背景报道，未选用用户上传图、搜索缩略图或较旧背景作为页面图片。
