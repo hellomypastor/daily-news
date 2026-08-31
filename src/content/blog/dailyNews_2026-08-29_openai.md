@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T18:02:00+08:00"
+updatedAt: "2026-08-29T21:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.151.0-alpha.12"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.12"
@@ -16,9 +16,11 @@ tags:
   - "工具调用"
   - "观察池"
   - "官方预览"
+  - "会话恢复"
   - "教育"
   - "媒体"
   - "日期未确认"
+  - "沙箱"
   - "社区反馈"
   - "生态"
   - "生态合作"
@@ -31,6 +33,7 @@ tags:
   - "API"
   - "ChatGPT"
   - "ChatGPT Work"
+  - "Cloud Browser"
   - "Codex"
   - "Codex CLI"
   - "Codex Desktop"
@@ -46,13 +49,13 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**。本轮可精确落入窗口的官方实质更新是 Codex CLI 0.151.0 稳定版；OpenAI Newsroom、Academy 与 ChatGPT Release Notes 的新页面只给出日历日期，没有公开精确发布时间，因此统一放入“日期未确认”。窗口内另有 Codex CLI 0.151.0 alpha 预览序列与多条用户故障报告；未核实到Responses API、Agents SDK、Realtime API 或模型家族的正式版本更新。
+采集窗口为 **2026-08-28 21:02 至 2026-08-29 21:02（Asia/Shanghai）**。本轮可精确落入窗口的官方实质更新是 Codex CLI 0.151.0 稳定版与 0.152.0-alpha.1 预览版；OpenAI Newsroom、Academy 与 ChatGPT Release Notes 的新页面只给出日历日期，没有公开精确发布时间，因此统一放入“日期未确认”。窗口内另有多条用户故障报告；未核实到 Responses API、Agents SDK、Realtime API 或模型家族的正式版本更新。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 产品线 | 本轮状态 | 证据与判断 |
 |---|---|---|
-| Codex CLI | 官方稳定版 + alpha 预览 + 社区负面信号 | 官方仓库发布 0.151.0 稳定版，包含 MCP、插件目录、权限与远程沙箱修复；另有 alpha 预览序列及 CLI/桌面故障报告，后者不能视为官方确认的普遍回归。 |
+| Codex CLI | 官方稳定版 + alpha 预览 + 社区负面信号 | 官方仓库发布 0.151.0 稳定版，包含 MCP、插件目录、权限与远程沙箱修复；随后发布 0.152.0-alpha.1，正文仅列版本号；另有 CLI/桌面故障报告，后者不能视为官方确认的普遍回归。 |
 | VS Code / JetBrains 集成 | 无新增 | 已查官方文档、Codex 仓库与社区入口，未见窗口内可确认发布。 |
 | Codex Cloud / Remote / PR Agents | 无新增 | 未见窗口内官方版本或功能公告。 |
 | ChatGPT agentic mode / ChatGPT Work | 日期未确认 | 当日 Academy 案例展示 ChatGPT Work 与 Codex 的生产使用，但属于采用案例而非新功能发布。 |
@@ -81,6 +84,8 @@ tags:
 
 [Codex 0.151.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.12) 于 2026-08-29 09:29 +08:00 发布。官方 release 正文仅给出版本号；同一官方仓库的版本比较显示 MCP 单工具输出限额、压缩历史读取、远程插件刷新等在研变更。它是 alpha 预览，不能据此声称稳定客户端已获得这些能力。
 
+[Codex 0.152.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.1) 于 2026-08-29 18:47 +08:00 发布。官方 release 正文仅列版本号，没有 changelog；它是下一版本线的首个 alpha 预览，不能据此推断具体能力或稳定客户端变化。
+
 ## Love
 
 - 官方 Academy 的三个案例显示 Codex 被用于大规模公开记录整理、两人健身创业团队和新闻编辑部自动化；这是由 OpenAI 选择发布的案例，属于采用信号，不作为独立社区好评计数。
@@ -97,9 +102,13 @@ tags:
 - [0.150.1: untrusted project AGENTS.md is included in prompt input](https://github.com/openai/codex/issues/41499)（2026-08-29 16:07 +08:00）给出隔离 CODEX_HOME、临时仓库和 debug/exec 两条复现路径，称不受信任项目的 AGENTS.md 仍进入模型提示；这是安全边界相关的单一用户报告，尚无维护者确认。
 - [Codex Desktop (Windows): code-mode host exits during handshake](https://github.com/openai/codex/issues/41507)（2026-08-29 17:35 +08:00）记录 Windows Desktop 的 code-mode host 握手退出，并用空 CODEX_HOME、进程监控与同机 CLI 对照缩小范围；根因推测尚未获官方确认。
 
+- [[Critical][Windows App 26.825] One writable-root setup failure disables exec and apply_patch globally](https://github.com/openai/codex/issues/41516)（2026-08-29 18:39 +08:00）记录一个 writable root 的 ACL 写入失败会令 exec 与 apply_patch 在进程启动前一起失效；报告用沙箱外只读命令对照排除了 shell 与仓库故障，但仍是单一用户复现。
+- [[ChatGPT Work] Cloud Browser can surface another parallel chat’s tab](https://github.com/openai/codex/issues/41517)（2026-08-29 18:40 +08:00）记录一次并行 ChatGPT Work 会话的 Cloud Browser 页面错配。报告明确未发现凭据泄露，只能支持浏览器任务归属与隔离存在保证缺口，不能外推为普遍安全事件。
+- [[ChatGPT Work] Conversation-length limit blocks recoverable closeout and handoff](https://github.com/openai/codex/issues/41531)（2026-08-29 20:54 +08:00）记录长会话达到硬上限后无法完成交接，且外部自动化动作缺少可见回执导致重复创建；作者随后通过实时状态核对发现原动作已完成，支持可恢复性风险，但不是官方根因结论。
+
 ## 情绪判断
 
-**中性偏负，低到中等置信度。** 官方稳定版带来明确功能与安全修复，但可精确落窗的社区证据仍以可操作的故障报告为主；正面采用案例只有日期、缺少精确时间且来自 OpenAI 自身编辑渠道。样本小，不能外推整体用户口碑。
+**中性偏负，中等置信度。** 官方稳定版带来明确功能与安全修复，并继续发布下一版本 alpha；可精确落窗的社区证据仍以可操作的桌面沙箱、浏览器隔离与长会话恢复故障报告为主。正面采用案例只有日期、缺少精确时间且来自 OpenAI 自身编辑渠道；样本仍不能外推整体用户口碑。
 
 ## 比较与替代信号
 
@@ -128,4 +137,4 @@ tags:
 
 - 已检查：OpenAI Newsroom 各分类、OpenAI Developers 与模型/Codex 页面、ChatGPT Release Notes、Codex 与 Agents SDK 官方 GitHub、Developer Community、OpenAI Academy、Reddit、Hacker News，以及中英文 Web 搜索。
 - 失败来源：X 未登录时间线无法稳定读取；YouTube 未找到可交叉核实的新发布；官方页面未稳定暴露可确认的可靠原图，因此本页未配置图片。
-- 初始候选：24；保留来源：17；二次补搜：否（最终来源非 0）。
+- 初始候选：44；保留来源：21；二次补搜：否（最终来源非 0）。

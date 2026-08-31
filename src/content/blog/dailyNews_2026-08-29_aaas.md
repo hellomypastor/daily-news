@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T18:02:00+08:00"
+updatedAt: "2026-08-29T21:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "feat(work): 接入 Coze Studio (10 容器栈) + 初始化容器/种子卷机制"
 featuredUrl: "https://github.com/AgentsDanceAI/deepseek-harness-cloud/commit/ef5e50049480bd7c56e892a56a6d25ccab8a384d"
@@ -12,6 +12,7 @@ tags:
   - "第三方开源证据"
   - "多 Agent 协作"
   - "官方核验"
+  - "较旧背景"
   - "邻近信号"
   - "日期未确认"
   - "社区证据"
@@ -23,17 +24,19 @@ tags:
   - "Background Agent"
   - "Cloud Agent"
   - "Cloud Environment"
+  - "Deployment Agent"
   - "Devin"
   - "DSH"
   - "Grok"
   - "Hosted Workspace"
   - "Managed Agent"
+  - "Observability"
   - "PaaS"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**，24–72 小时观察窗口回溯至 **2026-08-26 18:02**。本轮新增核实一项第三方 DSH Cloud 托管运行环境工程进展；它不是 DeepSeek 官方云服务，证据来自公开仓库提交。正文同时累计保留一条窗口内的 Cloud Agent 运行边界故障信号、两条缺少精确发布日期的托管 Cloud Agent 候选，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。
+采集窗口为 **2026-08-28 21:02 至 2026-08-29 21:02（Asia/Shanghai）**，24–72 小时观察窗口回溯至 **2026-08-26 21:02**。本轮新增保留一篇在 HN 重新出现的较旧部署 Agent 工程文章；它描述内部系统而非对外 AaaS 产品。本页继续累计保留一项第三方 DSH Cloud 托管运行环境工程进展；它不是 DeepSeek 官方云服务，证据来自公开仓库提交。正文同时累计保留一条窗口内的 Cloud Agent 运行边界故障信号、两条缺少精确发布日期的托管 Cloud Agent 候选，以及一条明确不属于 AaaS 的邻近基础设施信号；没有把普通模型 API、本地 CLI 或自托管 harness 更新包装成托管 Agent 服务。
 
 ## 远程 / 云端 Agent 执行
 
@@ -81,6 +84,10 @@ OpenAgents 官方入门教程标注 8 月 27 日更新，明确写明 Cloud Agen
 
 一篇 8 月 28 日的 PR Newswire 转载称 Tutti • VM 开放 Early Access，提供多人、多 Agent 的共享云 Room 和文件系统层冲突处理；但其说明明确写明 Agent 继续运行在各自所有者的电脑上。因此它更接近 Agent 协作基础设施/PaaS，而不是托管 Agent 执行服务。该候选只有新闻稿转载，尚未核到稳定官方发布页。来源：[PR Newswire 转载](https://www.prnews.in.th/prnewswire/en/view/68255)。
 
+### exe.dev Athena：内部部署监督 Agent（较旧工程信号）
+
+exe.dev 8 月 18 日的工程文章在本轮 HN 窗口重新出现。其内部 Athena Agent 可读 git、指标与日志，在部署各阶段决定是否继续、选择下一批机器，并可暂停或升级给人工。该文说明长尾运维判断可由 Agent 持续监督，但没有证据表明 Athena 是对外托管服务，因此只属于较旧邻近工程信号。[原文](https://blog.exe.dev/athena-deploys-exe)。
+
 ## 趋势
 
 本轮最值得关注的是托管执行的可验证边界与工程复杂度：用户需要能确认任务究竟跑在本地还是云端，并在控制台看到对应运行记录；而多容器 Agent 栈进入托管环境后，就绪探测、初始化容器、持久化与网络隔离都成为服务方必须管理的生命周期问题。共享云工作区仍不自动等于 AaaS；执行主体留在本地时，应继续归入邻近基础设施。
@@ -94,9 +101,10 @@ OpenAgents 官方入门教程标注 8 月 27 日更新，明确写明 Cloud Agen
 - [Ona Background Agents](https://ona.com/cases/background-agent)
 - [OpenAgents：Your First Workspace](https://openagents.org/docs/en/tutorials/your-first-workspace)
 - [PR Newswire 转载：Tutti • VM Early Access](https://www.prnews.in.th/prnewswire/en/view/68255)
+- [exe.dev：Athena 监督部署](https://blog.exe.dev/athena-deploys-exe)
 
 ## 采集状态
 
-已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 12 个候选，最终保留 7 个证据链接（其中 1 条窗口内第三方托管环境工程进展、1 条窗口内社区风险信号、2 个厂商无新增核验入口、2 条日期未确认、1 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。
+已完成 Cognition Devin 与 xAI/Grok 强制检查，并覆盖 Cursor、GitHub、Google、AWS、Microsoft、Ona、中国厂商及 Cline、Pi、DSH 等 harness 云托管信号。初筛 13 个候选，最终保留 8 个证据链接（其中 1 条窗口内第三方托管环境工程进展、1 条窗口内社区风险信号、2 个厂商无新增核验入口、2 条日期未确认、2 条邻近信号）；因最终来源不为 0，未触发来源为零的强制二次补搜。
 
-今日扫描完成，共 4 条动态，重点：第三方 DSH 托管工作区出现多容器运行环境进展，但不代表 DeepSeek 官方推出 AaaS；Cloud Agent 执行位置与运行记录需要可核验；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。
+今日扫描完成，共 5 条动态，重点：第三方 DSH 托管工作区出现多容器运行环境进展，但不代表 DeepSeek 官方推出 AaaS；Cloud Agent 执行位置与运行记录需要可核验；共享云环境若不托管 Agent 执行，仍属于邻近 PaaS 信号。

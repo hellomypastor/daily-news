@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-08-29T00:00:00+08:00"
-updatedAt: "2026-08-29T18:02:00+08:00"
+updatedAt: "2026-08-29T21:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Piloting the world's first double-blind AI evaluations"
 featuredUrl: "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
@@ -13,11 +13,13 @@ featuredImageAlt: "带有钥匙孔与锁图案的半透明立方体，光束从�
 featuredImageCaption: "图片来源：Google DeepMind"
 tags:
   - "观察池"
+  - "近三日补充"
   - "日期未确认"
   - "Acquisition"
   - "Adoption"
   - "Agent"
   - "AI"
+  - "Anthropic"
   - "Business"
   - "Cloud"
   - "Coding Agent"
@@ -30,6 +32,7 @@ tags:
   - "Enterprise AI"
   - "Evaluation"
   - "Google DeepMind"
+  - "Hardware"
   - "Hugging Face"
   - "Industry"
   - "Infrastructure"
@@ -42,13 +45,14 @@ tags:
   - "Qwen"
   - "Research"
   - "Safety"
+  - "Standard"
   - "Talent"
   - "Tencent Cloud"
 ---
 
 ## 今日概览
 
-滚动采集窗口为 **2026-08-28 18:02 至 2026-08-29 18:02（Asia/Shanghai）**。同日累计保留已有 11 条来源；本轮补入 2 条此前遗漏的 48–72 小时 Cohere 官方行业信号：Parse 企业文档解析产品，以及以能力转移而非长期依赖为目标的前线部署工程方法。严格 24 小时窗口内仍未发现可同时核验原始来源与精确发布时间的新发布。
+滚动采集窗口为 **2026-08-28 21:02 至 2026-08-29 21:02（Asia/Shanghai）**。同日累计保留已有 13 条来源；本轮补入 1 条此前遗漏的 Anthropic 官方行业信号：Model Hardware Standard（MHS）研究预览。其官方页面仅给出 8 月 27 日日期，可能跨越 48 小时边界，因此保守放入近三日补充。严格 24 小时窗口内仍未发现可同时核验原始来源与精确发布时间的新发布。
 
 ## 优先动态（过去 24 小时）
 
@@ -79,6 +83,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 | 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 | 原文 |
 |---|---|---|---|---|---|---|
+| Anthropic | Model Hardware Standard 研究预览 | Agent / 物理设备标准 | 2026-08-27，官方日期、时刻未给出 | MHS 以统一 driver、设备描述与 MCP / CLI / API 接口，让 Agent 发现并控制实验室和制造设备；当前仅向首批实验室与制造商开放研究预览。 | 把 Agent 标准从软件工具扩展到物理设备，并显式保留安全限制与人工评测需求；详见 Claude 专题页。 | [原文](https://www.anthropic.com/news/model-hardware-standard-research-preview) |
 | MiniMax | 2026 年上半年业绩 | 商业化/企业 AI | 2026-08-26 20:00 +08:00，官方 | 上半年收入 1.166 亿美元，同比增长 283.1%；开放平台和企业 AI 服务收入 7390 万美元，同比增长 703.1%。 | 企业/API 收入占比升至 63.4%，显示模型调用与企业工作负载已成为主要商业化来源。 | [原文](https://www.minimax.io/news/minimax-announces-first-half-2026-financial-results-1787744160) |
 | Google DeepMind | Barret Zoph 加入并任研究副总裁 | 人才/组织 | 2026-08-27 10:53 +08:00，可信媒体 | Reuters 报道 Zoph 本人宣布加入 Google DeepMind，Google 表示其强化学习和后训练经验将用于 Gemini。 | 前沿模型竞争继续集中于强化学习、后训练与研究领导人才。 | [报道](https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/) |
 | Cohere | Parse 企业文档智能模型发布 | 产品/企业 AI | 2026-08-27，官方 | Parse 将复杂多模态文档转成结构化 Markdown，支持九种主要商业语言，并通过 API、Model Vault、Microsoft Foundry 与 AWS SageMaker 提供。 | 文档解析是企业 RAG 与 Agent 检索进入生产的关键前置能力；官方基准为自评，且明确未覆盖图表和完整视觉定位。 | [原文](https://cohere.com/blog/parse) |
@@ -110,11 +115,11 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 一句话总结
 
-严格 24 小时窗口内无精确时刻可核验的新发布；三日补充显示企业/API 商业化、后训练人才和模型平台分发正同时成为竞争焦点，其中两项交易/合作信号仍待厂商公告确认。
+严格 24 小时窗口内无精确时刻可核验的新发布；Anthropic 的 MHS 研究预览显示 Agent 互操作标准正在从软件工具延伸到实验室与制造硬件；三日补充显示企业/API 商业化、后训练人才和模型平台分发正同时成为竞争焦点，其中两项交易/合作信号仍待厂商公告确认。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、API、模型变更和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：腾讯云详情页超时；部分中国厂商、社交账号和播客索引未提供窗口内可核验页面。
-- 初始候选数：19；保留来源数：13。
+- 初始候选数：20；保留来源数：14。
 - 二次补搜：否（最终来源不为 0）。
