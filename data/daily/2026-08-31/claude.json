@@ -1,0 +1,114 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-08-31T09:28:08+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom",
+      "Anthropic Help Center Release notes",
+      "Anthropic Developer Platform 文档与 release notes",
+      "Claude Code 官方文档、GitHub 仓库、issues 与 releases",
+      "Anthropic Status",
+      "Claude Code CLI、VS Code 与 JetBrains 集成",
+      "Managed Agents、sessions、webhooks、environments 与 memory stores",
+      "Skills、marketplaces、Agent SDK、Cowork、Design 与 Claude Tag",
+      "Claude Sonnet、Opus、Haiku 当前官方模型入口",
+      "Claude for Chrome、Desktop、Preview、Connectors、Plugins、Voice Mode 与 Microsoft 365",
+      "Anthropic Security、Science、金融、生命科学、医疗、法律、政府、公益、教育与客服入口",
+      "Reddit r/ClaudeAI、r/Anthropic、r/ClaudeCode 与相关编码社区",
+      "Hacker News、X、YouTube 与可信二手报道"
+    ],
+    "failedSources": [
+      "X：公开搜索结果未提供可稳定核验的原帖时间与互动量",
+      "Hacker News：窗口内未检出可核验的 Claude 新条目",
+      "YouTube：窗口内结果噪声较高，未找到可确认的新官方视频",
+      "Claude Code 官方 releases：搜索未返回官方 release 页面；仅以官方仓库 issue 作为用户报告证据"
+    ],
+    "candidateCount": 12,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-08-30 09:28 至 2026-08-31 09:28（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。\n\n## Tier 1：编码、Agent 与模型主轴\n\n| 项目 | 状态 | 核验结果 |\n|---|---|---|\n| Claude Code CLI | 观察池 | 官方仓库出现关于会话内切换模型/effort 与清空上下文的功能请求，反映长链 skills 工作流的控制需求；这是用户提案，不是路线承诺。[GitHub issue](https://github.com/anthropics/claude-code/issues/90772) |\n| VS Code / JetBrains 集成 | 观察池 | VS Code 用户报告 2.1.251 在音频插件开发中触发 guardrail，并附带消息列表不同步错误；尚无官方确认或修复结论。[GitHub issue](https://github.com/anthropics/claude-code/issues/90773) JetBrains 未发现窗口内新增。 |\n| Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 已检查官方文档、发布说明和仓库入口，未发现窗口内可确认更新。 |\n| Skills 与 marketplaces | 无新增 | 已检查官方发布说明、文档与仓库入口，未发现窗口内可确认更新。 |\n| Claude Developer Platform | 无新增 | API 文档与发布入口未发现窗口内可确认更新。 |\n| Agent SDK | 无新增 | 官方文档与 GitHub 入口未发现窗口内可确认更新。 |\n| Cowork | 无新增 | 官方发布说明与状态页未发现窗口内新功能或事故。 |\n| Claude Design | 无新增 | 官方发布说明未发现窗口内更新。 |\n| Claude Tag / @Claude sessions | 无新增 | 官方帮助与发布入口未发现窗口内更新。 |\n| 当前 Sonnet 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内更新。 |\n| 当前 Opus 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内更新。 |\n| 当前 Haiku 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内更新。 |\n\n## Tier 2：客户端、连接器与创意能力\n\n| 项目 | 状态 | 核验结果 |\n|---|---|---|\n| Chrome / browser agent | 无新增 | 官方发布说明与文档未发现窗口内更新。 |\n| Desktop / Preview | 无新增 | 官方发布说明与状态入口未发现窗口内更新。 |\n| Marketplace / Connectors / Plugins | 无新增 | 官方发布说明与文档未发现窗口内更新。 |\n| 当前官方创意 / 视频模型 | 未确认 | 未核实到 Anthropic 官方窗口内发布；不根据搜索词推断产品存在。 |\n| Voice Mode | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |\n| Microsoft 365 集成 | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |\n\n## Tier 3：垂直行业雷达\n\n安全、科学、金融服务、生命科学、医疗、法律、政府、公益、教育与客服入口均已检查，窗口内没有 Anthropic 官方新增。政府方向有一条较旧背景：美联社报道联邦法官裁定五角大楼针对 Anthropic 的措施违法；报道发布于窗口之前，仅作背景，不计入过去 24 小时官方动态。[美联社报道](https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c)\n\n## 官方更新（由新到旧）\n\n本轮没有窗口内可确认的 Anthropic 官方发布。Anthropic 状态页显示 8 月 30 日无事故；该入口仅用于核验，不据此制造新闻条目。\n\n## Love\n\n- 有开发者逐版分析本地 JSONL，认为 2.1.237 至 2.1.251 新增了成本、缓存与 thinking token 等可观测字段，并特别肯定 `cost-state` 对会话成本分析的价值。这是个人逆向观察，字段稳定性和支持承诺均未获官方确认。[Reddit 观察](https://www.reddit.com/r/ClaudeAI/comments/1w2mbc9/claude_code_added_33_fields_and_4_line_types_to/)\n\n## Hate\n\n- 社区对“临时 50% 周用量提升结束后保留 25% 提升”的表述出现明显反弹，部分用户将其理解为相对当前容量下降，并批评可预测性与沟通方式。讨论串有支持与反对两种解释，且原始官方社交帖未能稳定核验，因此只能作为负面口碑样本。[Reddit 讨论](https://www.reddit.com/r/Anthropic/comments/1w2wfke/one_of_the_biggest_disaster_announcements_in_the/)\n\n## 情绪判断\n\n**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与两个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制和插件开发稳定性。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。\n\n## 对比与迁移信号\n\n当日相关编码社区有人讨论从 Claude Code 转向 Codex，理由是新模型发布后的体验比较，但帖子样本很小、没有可复现实验，故仅作为迁移意向信号。[社区对比帖](https://www.reddit.com/r/AIcodingProfessionals/comments/1w2nbo1/should_i_swtich/) Cline、Pi Coding Agent、DeepSeek Harness / DSH、Cursor 等未发现带可核验证据的窗口内 Claude 对比结论；其完整产品扫描留给开源 Harness 专题。\n\n## 日期未确认\n\n- Claude Code 本地日志字段观察帖被搜索入口标注为 8 月 30 日，但没有精确时刻；保留为日期级社区证据，不将字段变化写成官方 changelog。\n- 用量讨论帖被搜索入口标注为 8 月 30 日，但所引用官方社交帖无法稳定打开，互动数字也会变化；保留观点，不确认政策细节。\n- 编码工具迁移讨论帖为 8 月 30 日日期级结果，没有基准或复现实验，只能支持“有人在比较”的弱信号。\n\n## 观察池\n\n- [会话内切换模型、effort 与清空上下文请求](https://github.com/anthropics/claude-code/issues/90772)：官方仓库中的用户提案，可能反映长时 Agent 工作流对分段控制的需求，尚非已排期功能。\n- [VS Code guardrail / 消息列表不同步报告](https://github.com/anthropics/claude-code/issues/90773)：用户报告附错误时间戳，但没有官方复现或处置结论。\n- [美联社政府争议报道](https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c)：可信二手来源、但已早于本轮窗口，仅作 Tier 3 背景。\n\n## 来源链接\n\n正文中的六个 URL 均已列入结构化 `sources`；页面内按 URL 去重。\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Help Center release notes、Developer Platform、Claude Code 文档/官方 GitHub、Status；逐项覆盖 Tier 1 与 Tier 2；快速检查 Tier 3 垂直入口；抽样 Reddit、Hacker News、X、YouTube与可信二手报道。\n- 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 release 页面未由搜索返回。\n- 初始候选：12；最终保留：6（2 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。\n- 二次补搜：否（最终来源不为 0）。\n- 图片：无。候选来源主要是 GitHub issue、Reddit 用户帖和较旧背景报道，未选用用户上传图、搜索缩略图或较旧背景作为页面图片。",
+  "sources": [
+    {
+      "title": "Allow mid-session model/effort changes and context clearing for workflow automation",
+      "url": "https://github.com/anthropics/claude-code/issues/90772",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "",
+      "summary": "用户请求让长时工作流在会话中切换模型与 effort 并清空上下文；属于功能建议，尚非官方路线承诺。",
+      "tags": [
+        "Claude Code",
+        "观察池",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Guardrail triggered unexpectedly during audio plugin development",
+      "url": "https://github.com/anthropics/claude-code/issues/90773",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-08-30 07:33 +08:00",
+      "summary": "VS Code 用户报告 Claude Code 2.1.251 的 guardrail 与消息列表不同步错误，尚无官方确认。",
+      "tags": [
+        "Claude Code",
+        "VS Code",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Claude Code added 33 fields and 4 line types to your local logs in eight days",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1w2mbc9/claude_code_added_33_fields_and_4_line_types_to/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "",
+      "summary": "开发者分享对多个 Claude Code 版本本地日志字段的个人分析，正向评价成本可观测性；非官方说明。",
+      "tags": [
+        "Claude Code",
+        "Love",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "One of the biggest Disaster Announcements in the history of Disaster Announcements",
+      "url": "https://www.reddit.com/r/Anthropic/comments/1w2wfke/one_of_the_biggest_disaster_announcements_in_the/",
+      "source": "Reddit r/Anthropic",
+      "publishedAt": "",
+      "summary": "社区围绕周用量提升政策的措辞与可预测性展开负面讨论，官方原帖未稳定核验。",
+      "tags": [
+        "Claude Code",
+        "Hate",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Should I switch",
+      "url": "https://www.reddit.com/r/AIcodingProfessionals/comments/1w2nbo1/should_i_swtich/",
+      "source": "Reddit r/AIcodingProfessionals",
+      "publishedAt": "",
+      "summary": "小样本用户讨论是否从 Claude Code 转向 Codex，没有基准或可复现实验。",
+      "tags": [
+        "Claude Code",
+        "Codex",
+        "观察池",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Judge says Pentagon's measures against Anthropic were illegal and baseless",
+      "url": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c",
+      "source": "Associated Press",
+      "publishedAt": "2026-08-28 11:08 +08:00",
+      "summary": "美联社报道联邦法官对五角大楼针对 Anthropic 措施的裁决；早于本轮 24 小时窗口，仅作政府方向背景。",
+      "tags": [
+        "Anthropic",
+        "Government",
+        "较旧背景"
+      ]
+    }
+  ]
+}
