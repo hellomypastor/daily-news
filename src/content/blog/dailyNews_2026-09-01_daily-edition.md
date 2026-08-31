@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-09-01"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T01:08:00+08:00"
+updatedAt: "2026-09-01T04:02:00+08:00"
 description: "2026-09-01 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-01"
-featuredUrl: "https://github.com/anthropics/claude-code/issues/91034"
+featuredUrl: "https://github.com/anthropics/claude-code/issues/90997"
 featuredSummary: "2026-09-01 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ## Claude 全家桶过去 24 小时动态与口碑日报
 
-Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)**。官方发布修复 Bash task-output swap、首次保存 always allow、Remote Control 弱网卡顿和超大后台失败输出导致的 API 请求过大。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-01_claude)
 

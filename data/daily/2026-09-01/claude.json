@@ -9,7 +9,7 @@
     "Agent"
   ],
   "order": 10,
-  "updatedAt": "2026-09-01T01:02:57+08:00",
+  "updatedAt": "2026-09-01T04:02:00+08:00",
   "scan": {
     "checkedSources": [
       "Anthropic Newsroom",
@@ -30,60 +30,25 @@
       "X：公开搜索结果未提供可稳定核验的原帖时间与互动量",
       "Hacker News：窗口内未检出可核验的新条目",
       "YouTube：结果噪声较高，未找到可确认的新官方视频",
-      "Claude Code 官方 releases：可访问，但窗口内没有新 release（最新仍为 v2.1.251，发布于窗口之前）"
+      "Reddit 与其他社区入口：未取得可同时核验时间、事实与互动量的新样本"
     ],
-    "candidateCount": 200,
+    "candidateCount": 237,
     "secondPass": false
   },
-  "content": "## 今日概览\n\n采集窗口：**2026-08-31 01:03 至 2026-09-01 01:03（Asia/Shanghai）**。Anthropic Newsroom、帮助中心发布说明、Developer Platform 与 Claude Code releases 均未发现窗口内新发布；最新 Claude Code release 仍是窗口外的 v2.1.251。本轮保留 8 条来自 Anthropic 官方 Claude Code 仓库的用户报告，重点落在 Remote Control 进程生命周期、连接器登录状态、Cowork 目录持久化、Skills 生成兼容性、hooks 环境隔离、Web 分支权限与多 Agent 编排。它们均有不同程度的复现或环境信息，但尚无 Anthropic 官方确认，因此只作为观察池证据。\n\n## Tier 1：编码与 Agent 主轴\n\n| 项目 | 状态 | 核验结果 |\n|---|---|---|\n| Claude Code CLI | 观察池 | 官方 release 无新增；2.1.251 用户报告称启用子进程环境清理后，hooks 与 Bash 子进程可能收不到 `CLAUDE_CONFIG_DIR`。[环境清理回归报告](https://github.com/anthropics/claude-code/issues/91020) 另有报告称异步 hook 的 `terminalSequence` 虽被解析却未输出。[异步 hook 报告](https://github.com/anthropics/claude-code/issues/90997) 均未获官方确认。 |\n| VS Code 集成 | 观察池 | 用户报告规划模式下 orchestrator 在声称等待 subagents 时仍继续重复工作；环境为 Linux、VS Code、Claude Code 2.1.251，缺少独立复现者。[规划模式报告](https://github.com/anthropics/claude-code/issues/91011) |\n| JetBrains 集成 | 无新增 | 官方文档、仓库与发布入口未发现窗口内更新。 |\n| Managed Agents：sessions | 观察池 | Remote Control 用户提交日志和进程统计，称每次客户端重连都会重新恢复会话且旧进程不被清理，可能累积 `ccd-cli` 进程与插件目录；这是单一用户高细节报告。[Remote Control 报告](https://github.com/anthropics/claude-code/issues/91034) |\n| Managed Agents：webhooks | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| Managed Agents：environments | 观察池 | Claude Code Web 用户称选择基础分支会同时授予直接推送权限，缺少“从该分支开始但只开新分支/PR”的控制；这是产品权限模型反馈，尚无官方回应。[Web 分支权限报告](https://github.com/anthropics/claude-code/issues/91018) |\n| Managed Agents：memory stores | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| Skills 与 marketplaces | 观察池 | 用户报告 docx skill 的 docx-js 路径若不显式定义 Normal 段落样式，会让部分 python-docx 消费者读取未样式化段落时失败；附最小复现与修复建议。[docx skill 报告](https://github.com/anthropics/claude-code/issues/91025) |\n| Claude Developer Platform | 无新增 | 官方开发者文档与 release notes 未发现窗口内更新。 |\n| Agent SDK | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| Cowork | 观察池 | Linux/WSL2 用户报告新建 Cowork project 未提示目录、会话内添加目录不持久化到项目，且 `coworkUserFilesPath` 未生效；附本地状态证据。[Cowork 目录报告](https://github.com/anthropics/claude-code/issues/91029) |\n| Design | 无新增 | 官方发布说明与产品入口未发现窗口内更新。 |\n| Tag / @Claude sessions | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| 当前 Sonnet 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内更新。 |\n| 当前 Opus 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内更新。 |\n| 当前 Haiku 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内更新。 |\n\n## Tier 2：客户端、连接器与创意能力\n\n| 项目 | 状态 | 核验结果 |\n|---|---|---|\n| Chrome / browser agent | 无新增 | 官方发布说明与文档未发现窗口内更新。 |\n| Desktop / Preview | 观察池 | Remote Control 进程生命周期与 Cowork 目录持久化报告同时涉及 Desktop，但均未获官方确认。 |\n| Marketplace / Connectors / Plugins | 观察池 | 企业账户用户报告 claude.ai 同步的 MCP connectors 在 Code 会话中停止加载，`/login` 后恢复；连接器在 Desktop chat 中同期仍可用，报告附日志路径和工具数量变化。[连接器登录状态报告](https://github.com/anthropics/claude-code/issues/91031) |\n| 当前官方创意 / 视频模型 | 未确认 | 未核实到 Anthropic 官方窗口内发布；不根据搜索词推断产品存在。 |\n| Voice Mode | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |\n| Microsoft 365 集成 | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |\n\n## Tier 3：垂直行业雷达\n\n安全、科学、金融服务、生命科学、医疗、法律、政府、公益、教育与客服官方入口均已检查，窗口内没有核实到 Anthropic 官方新增。Claude Code 环境清理报告带 `area:security` 标签，但它是用户提交的软件回归报告，不等同于 Anthropic 安全公告。\n\n## 官方更新（由新到旧）\n\n本轮没有窗口内可确认的 Anthropic 官方发布。Claude Code 最新 release v2.1.251 发布于 2026-08-29 02:19（Asia/Shanghai），早于本轮采集窗口，仅用于确认当前版本，不重复列入来源。\n\n## Love\n\n本轮没有时间、原文与互动信息均可稳定核验的正向社区样本。官方发布入口无新增，不能据此计作正向口碑。\n\n## Hate\n\n- Remote Control 进程泄漏报告给出约 30 次连接周期、重复会话进程与资源占用的本地观测，是本轮细节最充分的负面样本；但仍是单一用户环境，不能外推为普遍故障。[原始 issue](https://github.com/anthropics/claude-code/issues/91034)\n- 连接器静默消失、Cowork 目录不持久化及 Web 分支权限耦合分别指向企业连接器可靠性、跨平台项目状态和远程 Agent 权限边界；三者均未获维护者确认。[连接器 issue](https://github.com/anthropics/claude-code/issues/91031)、[Cowork issue](https://github.com/anthropics/claude-code/issues/91029)、[Web issue](https://github.com/anthropics/claude-code/issues/91018)\n\n## 情绪判断\n\n**谨慎偏负，置信度低至中等。** 证据来自 8 条官方仓库用户 issue，其中 5 条含复现、日志或结构化环境信息；没有同窗口可核验的正向社区样本。官方 issue 仓库天然偏向问题反馈，且这些报告尚未被 Anthropic 确认，因此只能说明“本轮可见反馈集中在可靠性和权限控制”，不能代表 Claude 全体用户口碑。\n\n## 对比与迁移信号\n\n窗口内未发现带具名评测或可复现实验的 Claude 与 Codex、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 对比结论。Cline、Pi 与 DSH 的完整产品扫描留给开源 Harness 专题。\n\n## 日期未确认\n\n本轮保留的 8 条 issue 均能由 GitHub API 核验创建时刻，不需要进入日期未确认。X、Reddit 与视频搜索中的零散候选因无法同时稳定核验原帖时间与事实证据，未写成趋势或互动量结论。\n\n## 观察池\n\n- [Remote Control 重连可能累积 `ccd-cli` 进程](https://github.com/anthropics/claude-code/issues/91034)：高细节单用户报告，附日志、资源统计与复现路径；尚无官方确认。\n- [claude.ai connectors 在 Code 会话中停止加载](https://github.com/anthropics/claude-code/issues/91031)：附连接日志和 `/login` 恢复现象；是否跨会话稳定修复仍待观察。\n- [Cowork Linux/WSL2 项目目录不持久化](https://github.com/anthropics/claude-code/issues/91029)：附本地状态文件证据；跨平台范围未知。\n- [docx skill 缺少默认 Normal 样式](https://github.com/anthropics/claude-code/issues/91025)：最小复现显示与 python-docx 读取链不兼容；尚无维护者结论。\n- [2.1.251 子进程环境清理回归](https://github.com/anthropics/claude-code/issues/91020)：对比 2.1.250 与 2.1.251，附可执行复现；不等同于安全公告。\n- [Claude Code Web 基础分支与直接推送权限耦合](https://github.com/anthropics/claude-code/issues/91018)：属于权限体验与控制面反馈，尚无官方回应。\n- [规划模式 orchestrator 未等待 subagents](https://github.com/anthropics/claude-code/issues/91011)：单用户报告、无错误日志，证据强度低于其他条目。\n- [异步 hook 的 `terminalSequence` 被解析后丢弃](https://github.com/anthropics/claude-code/issues/90997)：附同步/异步对照实验；影响范围较窄。\n\n## 来源链接\n\n正文中的 8 个 URL 均已列入结构化 `sources`；页面内按 URL 去重。\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Help Center release notes、Developer Platform、Claude Code 文档/官方 GitHub、CHANGELOG、releases 与 Status；逐项覆盖 Tier 1、Tier 2 和 Tier 3；抽样 Reddit、Hacker News、X、YouTube 与可信二手报道。\n- 失败入口：X 无法稳定核验原帖时间与互动量；Hacker News 无窗口内可核验条目；YouTube 噪声较高；官方 releases 可访问但最新 v2.1.251 早于窗口。\n- 初始候选：200；最终保留：8（均为 Anthropic 官方仓库中的用户 issue，且明确标注为未获官方确认的观察池）。\n- 二次补搜：否（最终来源不为 0）。\n- 图片：无。候选均为 GitHub 用户 issue，没有选择用户上传截图、搜索缩略图或仓库头像作为页面图片。",
+  "content": "## 今日概览\n\n采集窗口：**2026-08-31 04:02 至 2026-09-01 04:02（Asia/Shanghai）**。窗口内确认一项官方更新：Claude Code [v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) 修复 Bash task-output swap、首次保存“always allow”、弱网下 Remote Control 工具完成后长时间卡顿，以及超大后台失败输出撑爆 API 请求的问题。本日此前累积的 8 条观察池来源全部保留；本轮新增 8 条证据较完整的官方仓库用户报告，均不视作 Anthropic 官方确认。\n\n## Tier 1：编码与 Agent 主轴\n\n| 项目 | 状态 | 核验结果 |\n|---|---|---|\n| Claude Code CLI | 官方更新 | v2.1.252 已发布，含 Bash、权限持久化和后台错误输出修复。[官方 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)；此前 [环境清理回归](https://github.com/anthropics/claude-code/issues/91020) 与 [异步 hook](https://github.com/anthropics/claude-code/issues/90997) 报告继续观察。 |\n| VS Code 集成 | 官方更新 / 观察池 | v2.1.252 修复 VS Code 托管 Remote Control 弱网卡顿；另有 [规划模式报告](https://github.com/anthropics/claude-code/issues/91011)，尚无官方确认。 |\n| JetBrains 集成 | 无新增 | 官方文档与发布入口未发现窗口内单独更新。 |\n| Managed Agents：sessions | 官方更新 / 观察池 | v2.1.252 修复弱网卡顿；此前 [进程累积](https://github.com/anthropics/claude-code/issues/91034) 仍待确认。新报告称生成的 session 名称碰撞后，跨会话消息可能静默投递到错误会话。[名称碰撞报告](https://github.com/anthropics/claude-code/issues/91054) |\n| Managed Agents：webhooks | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| Managed Agents：environments | 观察池 | [Web 分支权限报告](https://github.com/anthropics/claude-code/issues/91018) 继续观察；另有用户报告打开另一台机器创建的会话会在原主机执行、界面缺少主机提示。[跨机器会话报告](https://github.com/anthropics/claude-code/issues/91055) |\n| Managed Agents：memory stores | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| Skills 与 marketplaces | 观察池 | 保留 [docx skill 兼容性报告](https://github.com/anthropics/claude-code/issues/91025)；新报告称 Desktop slash menu 将账户 skill 以裸名称和 `anthropic-skills:` 前缀重复显示。[Skills 重复报告](https://github.com/anthropics/claude-code/issues/91053) |\n| Claude Developer Platform | 无新增 | 官方开发者文档与 release notes 未发现窗口内更新。 |\n| Agent SDK | 无新增 | 未找到官方 release；窗口内候选多为未确认用户报告。 |\n| Cowork | 观察池 | 保留 [Linux/WSL2 目录持久化报告](https://github.com/anthropics/claude-code/issues/91029)；新报告称不存在的服务端 protected root 会让已附加目录在会话启动时被静默丢弃。[Cowork 挂载报告](https://github.com/anthropics/claude-code/issues/91064) |\n| Design | 观察池 | 用户称 DesignSync 仅能通过交互式 `/design-login` 授权，无法用于无 TTY 的 CI、定时任务或 Agent sandbox。[DesignSync 报告](https://github.com/anthropics/claude-code/issues/91063) |\n| Tag / @Claude sessions | 无新增 | 官方文档与发布入口未发现窗口内更新。 |\n| 当前 Sonnet / Opus / Haiku 编码模型 | 无新增 | 官方模型与发布入口未发现窗口内新发布。 |\n\n## Tier 2：客户端、连接器与创意能力\n\n| 项目 | 状态 | 核验结果 |\n|---|---|---|\n| Chrome / browser agent | 观察池 | 用户报告内置 browser pane 中手输 URL 在模型先用工具注册 origin 前不会加载，且无错误提示。[浏览器 origin 报告](https://github.com/anthropics/claude-code/issues/91066) |\n| Desktop / Preview | 官方更新 / 观察池 | v2.1.252 涉及 Desktop 托管 Remote Control；Cowork 挂载与跨机器会话报告仍未获官方确认。 |\n| Marketplace / Connectors / Plugins | 观察池 | 保留 [连接器登录状态报告](https://github.com/anthropics/claude-code/issues/91031)；新增 Skills 重复显示报告。 |\n| 当前官方创意 / 视频模型 | 未确认 | 未核实到 Anthropic 官方窗口内发布，不根据搜索词推断产品存在。 |\n| Voice Mode / Microsoft 365 | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |\n\n## Tier 3：垂直行业雷达\n\n安全、科学、金融服务、生命科学、医疗、法律、政府、公益、教育与客服入口均已检查，未核实到窗口内新的垂直行业官方发布。Windows 用户报告 `safeSpawn` 将位于用户目录下的 per-user Git 安装误判为不安全，导致 marketplace clone 失败；该条是产品安全边界兼容性反馈，不是安全公告。[safeSpawn 报告](https://github.com/anthropics/claude-code/issues/91060)\n\n## 官方更新（由新到旧）\n\n- **Claude Code v2.1.252**（2026-09-01 03:46 +08:00）：四项修复覆盖 Bash、权限保存、Remote Control 弱网延迟与后台错误输出。[官方 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)\n\n## Love\n\n本轮没有时间、原文与互动信息均可稳定核验的正向社区样本。官方修复发布不计作正向口碑。\n\n## Hate\n\n- 新增报告集中在会话/主机边界、目录挂载和工具可靠性：名称碰撞、跨机器执行、Cowork 目录静默丢弃、browser origin 限制都附有不同程度的复现信息，但尚未获维护者确认。\n- 此前 Remote Control 进程累积、连接器消失和 Cowork 持久化报告继续保留，不能据单一用户外推为普遍故障。\n\n## 情绪判断\n\n**谨慎偏负，置信度中低。** 本日累计 15 条用户 issue 观察信号，样本仍来自天然偏负面的 issue 仓库；v2.1.252 是可确认的修复发布。证据只能说明本轮可见反馈集中于可靠性、权限与跨环境一致性，不能代表整体用户口碑。\n\n## 对比与迁移信号\n\n窗口内未发现可复现实验支持 Claude 与 Codex、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 的新增对比结论。Cline、Pi 与 DSH 的完整扫描留给开源 Harness 专题。\n\n## 日期未确认\n\n保留条目均可通过 GitHub API 核验时间；X、Reddit 与视频候选未能同时稳定核验原帖时间、互动量和关键事实，未写成趋势结论。\n\n## 观察池\n\n- [Remote Control 重连可能累积进程](https://github.com/anthropics/claude-code/issues/91034)、[连接器登录状态](https://github.com/anthropics/claude-code/issues/91031)、[Cowork 目录持久化](https://github.com/anthropics/claude-code/issues/91029)、[docx skill 样式](https://github.com/anthropics/claude-code/issues/91025)、[环境清理回归](https://github.com/anthropics/claude-code/issues/91020)、[Web 分支权限](https://github.com/anthropics/claude-code/issues/91018)、[规划模式](https://github.com/anthropics/claude-code/issues/91011)、[异步 hook](https://github.com/anthropics/claude-code/issues/90997)：均为本日此前已收录、未获官方确认的用户报告。\n- 本轮新增的 [Skills 重复](https://github.com/anthropics/claude-code/issues/91053)、[session 名称碰撞](https://github.com/anthropics/claude-code/issues/91054)、[跨机器执行](https://github.com/anthropics/claude-code/issues/91055)、[safeSpawn](https://github.com/anthropics/claude-code/issues/91060)、[DesignSync](https://github.com/anthropics/claude-code/issues/91063)、[Cowork 挂载](https://github.com/anthropics/claude-code/issues/91064)、[browser origin](https://github.com/anthropics/claude-code/issues/91066) 均有环境或复现描述，仍需维护者确认。\n\n## 来源链接\n\n正文中的 16 个 URL 均列入结构化 `sources`，页面内按 URL 去重。\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Help Center、Developer Platform、Claude Code 文档/官方 GitHub/CHANGELOG/releases/Status；逐项覆盖 Tier 1、Tier 2、Tier 3，并抽样 Reddit、Hacker News、X、YouTube与可信二手报道。\n- 失败入口：X 无法稳定核验原帖时间与互动量；Hacker News 无窗口内可核验条目；YouTube 噪声较高；社区入口未取得可核验互动量。\n- 初始候选：237；最终保留：16（1 条官方 release，15 条官方仓库用户 issue；issue 均标注为未获官方确认）。\n- 二次补搜：否（最终来源不为 0）。\n- 图片：无。官方 release 页面未提供适合的独立题图，issue 附件不作为可靠配图。\n",
   "sources": [
     {
-      "title": "Remote control: server leaks a ccd-cli process per resumed session on every reconnect",
-      "url": "https://github.com/anthropics/claude-code/issues/91034",
+      "title": "terminalSequence from an async hook is parsed and then dropped",
+      "url": "https://github.com/anthropics/claude-code/issues/90997",
       "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-09-01 00:48 +08:00",
-      "summary": "用户提供进程、内存、日志与复现数据，称 Remote Control 重连可能重复恢复会话而不清理旧进程；尚无官方确认。",
-      "tags": ["Claude Code", "Remote Control", "Managed Agents", "Hate", "观察池"]
-    },
-    {
-      "title": "claude.ai connectors silently stop being fetched in Code sessions until a manual /login",
-      "url": "https://github.com/anthropics/claude-code/issues/91031",
-      "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-09-01 00:43 +08:00",
-      "summary": "企业账户用户称同步 MCP connectors 在 Code 会话中停止加载而 Desktop chat 仍可用，手动登录后恢复；附日志证据。",
-      "tags": ["Claude Code", "MCP", "Connectors", "Enterprise", "观察池"]
-    },
-    {
-      "title": "Cowork Linux/WSL2 new project never prompts for directory and folder binding is not persisted",
-      "url": "https://github.com/anthropics/claude-code/issues/91029",
-      "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-09-01 00:32 +08:00",
-      "summary": "Linux/WSL2 用户报告 Cowork 项目目录选择、会话目录持久化和用户文件路径设置存在问题；附本地状态证据。",
-      "tags": ["Cowork", "Linux", "WSL2", "Desktop", "观察池"]
-    },
-    {
-      "title": "docx skill output has no default Normal paragraph style",
-      "url": "https://github.com/anthropics/claude-code/issues/91025",
-      "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-09-01 00:23 +08:00",
-      "summary": "用户以最小样例说明 docx skill 的部分输出缺少默认段落样式，可能导致 python-docx 消费者失败；尚无官方确认。",
-      "tags": ["Claude Code", "Skills", "DOCX", "Compatibility", "观察池"]
-    },
-    {
-      "title": "2.1.251 regression strips CLAUDE_CONFIG_DIR from hooks and Bash subprocesses",
-      "url": "https://github.com/anthropics/claude-code/issues/91020",
-      "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-08-31 23:46 +08:00",
-      "summary": "用户对比 2.1.250 与 2.1.251，称启用子进程环境清理后 CLAUDE_CONFIG_DIR 不再传给 hooks 与 Bash；附复现。",
-      "tags": ["Claude Code", "Hooks", "Security", "Regression", "观察池"]
-    },
-    {
-      "title": "Claude Code on the web couples base branch selection with direct push permission",
-      "url": "https://github.com/anthropics/claude-code/issues/91018",
-      "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-08-31 23:41 +08:00",
-      "summary": "用户称 Web 会话选择基础分支时同时授予直接推送权限，缺少只从该分支创建 PR 的控制；尚无官方回应。",
-      "tags": ["Claude Code Web", "Managed Agents", "Permissions", "Git", "观察池"]
+      "publishedAt": "2026-08-31 22:09 +08:00",
+      "summary": "用户以同步与异步对照实验报告 async hook 的 terminalSequence 字段被解析但未输出；尚无官方确认。",
+      "tags": [
+        "Claude Code",
+        "Hooks",
+        "Windows",
+        "观察池"
+      ]
     },
     {
       "title": "Planning mode orchestrator continues working instead of waiting for subagents",
@@ -91,15 +56,202 @@
       "source": "Anthropic Claude Code GitHub",
       "publishedAt": "2026-08-31 23:26 +08:00",
       "summary": "用户报告规划模式 orchestrator 在等待 subagents 时仍继续重复工作；单用户、低置信度且未获官方确认。",
-      "tags": ["Claude Code", "Subagents", "Planning", "VS Code", "观察池"]
+      "tags": [
+        "Claude Code",
+        "Subagents",
+        "Planning",
+        "VS Code",
+        "观察池"
+      ]
     },
     {
-      "title": "terminalSequence from an async hook is parsed and then dropped",
-      "url": "https://github.com/anthropics/claude-code/issues/90997",
+      "title": "Claude Code on the web couples base branch selection with direct push permission",
+      "url": "https://github.com/anthropics/claude-code/issues/91018",
       "source": "Anthropic Claude Code GitHub",
-      "publishedAt": "2026-08-31 22:09 +08:00",
-      "summary": "用户以同步与异步对照实验报告 async hook 的 terminalSequence 字段被解析但未输出；尚无官方确认。",
-      "tags": ["Claude Code", "Hooks", "Windows", "观察池"]
+      "publishedAt": "2026-08-31 23:41 +08:00",
+      "summary": "用户称 Web 会话选择基础分支时同时授予直接推送权限，缺少只从该分支创建 PR 的控制；尚无官方回应。",
+      "tags": [
+        "Claude Code Web",
+        "Managed Agents",
+        "Permissions",
+        "Git",
+        "观察池"
+      ]
+    },
+    {
+      "title": "2.1.251 regression strips CLAUDE_CONFIG_DIR from hooks and Bash subprocesses",
+      "url": "https://github.com/anthropics/claude-code/issues/91020",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-08-31 23:46 +08:00",
+      "summary": "用户对比 2.1.250 与 2.1.251，称启用子进程环境清理后 CLAUDE_CONFIG_DIR 不再传给 hooks 与 Bash；附复现。",
+      "tags": [
+        "Claude Code",
+        "Hooks",
+        "Security",
+        "Regression",
+        "观察池"
+      ]
+    },
+    {
+      "title": "docx skill output has no default Normal paragraph style",
+      "url": "https://github.com/anthropics/claude-code/issues/91025",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 00:23 +08:00",
+      "summary": "用户以最小样例说明 docx skill 的部分输出缺少默认段落样式，可能导致 python-docx 消费者失败；尚无官方确认。",
+      "tags": [
+        "Claude Code",
+        "Skills",
+        "DOCX",
+        "Compatibility",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Cowork Linux/WSL2 new project never prompts for directory and folder binding is not persisted",
+      "url": "https://github.com/anthropics/claude-code/issues/91029",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 00:32 +08:00",
+      "summary": "Linux/WSL2 用户报告 Cowork 项目目录选择、会话目录持久化和用户文件路径设置存在问题；附本地状态证据。",
+      "tags": [
+        "Cowork",
+        "Linux",
+        "WSL2",
+        "Desktop",
+        "观察池"
+      ]
+    },
+    {
+      "title": "claude.ai connectors silently stop being fetched in Code sessions until a manual /login",
+      "url": "https://github.com/anthropics/claude-code/issues/91031",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 00:43 +08:00",
+      "summary": "企业账户用户称同步 MCP connectors 在 Code 会话中停止加载而 Desktop chat 仍可用，手动登录后恢复；附日志证据。",
+      "tags": [
+        "Claude Code",
+        "MCP",
+        "Connectors",
+        "Enterprise",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Remote control: server leaks a ccd-cli process per resumed session on every reconnect",
+      "url": "https://github.com/anthropics/claude-code/issues/91034",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 00:48 +08:00",
+      "summary": "用户提供进程、内存、日志与复现数据，称 Remote Control 重连可能重复恢复会话而不清理旧进程；尚无官方确认。",
+      "tags": [
+        "Claude Code",
+        "Remote Control",
+        "Managed Agents",
+        "Hate",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Desktop app slash menu lists every claude.ai account skill twice",
+      "url": "https://github.com/anthropics/claude-code/issues/91053",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 02:10 +08:00",
+      "summary": "用户提供 Desktop 版本与复现，称账户 Skills 在 slash menu 以两种名称重复显示；尚无官方确认。",
+      "tags": [
+        "Claude Desktop",
+        "Skills",
+        "Plugins",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Generated session names collide and cross-session messages can reach the wrong session",
+      "url": "https://github.com/anthropics/claude-code/issues/91054",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 02:11 +08:00",
+      "summary": "用户报告自动生成的 session 名称可能碰撞，跨会话消息会静默投递到其中一个同名会话；附复现。",
+      "tags": [
+        "Claude Code",
+        "Sessions",
+        "Multi-agent",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Opening a session created on another machine executes on that machine with no host indication",
+      "url": "https://github.com/anthropics/claude-code/issues/91055",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 02:14 +08:00",
+      "summary": "用户报告跨设备打开会话时任务仍在原主机执行且界面缺少主机提示，涉及远程执行边界；尚无官方确认。",
+      "tags": [
+        "Claude Desktop",
+        "Remote Control",
+        "Security",
+        "观察池"
+      ]
+    },
+    {
+      "title": "safeSpawn false-positives on per-user Git install when cwd is the user's home directory",
+      "url": "https://github.com/anthropics/claude-code/issues/91060",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 03:07 +08:00",
+      "summary": "Windows 用户以路径解析说明 safeSpawn 可能误判位于用户目录内的 per-user Git，阻断 marketplace clone。",
+      "tags": [
+        "Claude Code",
+        "Security",
+        "Marketplace",
+        "Windows",
+        "观察池"
+      ]
+    },
+    {
+      "title": "DesignSync has no non-interactive authorization path",
+      "url": "https://github.com/anthropics/claude-code/issues/91063",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 03:12 +08:00",
+      "summary": "用户称 DesignSync 授权仅支持交互式终端，无法用于 CI、定时任务或无 TTY 的 Agent sandbox。",
+      "tags": [
+        "Design",
+        "CI",
+        "Authentication",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Attached folder silently dropped due to phantom server-side protected root",
+      "url": "https://github.com/anthropics/claude-code/issues/91064",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 03:18 +08:00",
+      "summary": "用户提供 Windows Cowork 复现，称不存在的 protected root 会使附加目录在启动时静默丢弃。",
+      "tags": [
+        "Cowork",
+        "Desktop",
+        "Windows",
+        "观察池"
+      ]
+    },
+    {
+      "title": "Browser pane user-typed URLs require a prior tool call to register the origin",
+      "url": "https://github.com/anthropics/claude-code/issues/91066",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 03:35 +08:00",
+      "summary": "用户报告内置浏览器对手输 URL 静默不加载，直到模型工具调用先注册同一 origin；附复现。",
+      "tags": [
+        "Claude Desktop",
+        "Browser",
+        "Tools",
+        "观察池"
+      ]
+    },
+    {
+      "title": "v2.1.252",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+      "source": "Anthropic Claude Code GitHub",
+      "publishedAt": "2026-09-01 03:46 +08:00",
+      "summary": "官方发布修复 Bash task-output swap、首次保存 always allow、Remote Control 弱网卡顿和超大后台失败输出导致的 API 请求过大。",
+      "tags": [
+        "Claude Code",
+        "Release",
+        "Remote Control",
+        "官方更新"
+      ]
     }
   ]
 }

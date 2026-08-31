@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T01:03:00+08:00"
+updatedAt: "2026-09-01T04:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.3"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3"
@@ -20,11 +20,14 @@ tags:
   - "AI"
   - "Coding Agent"
   - "Evaluation"
+  - "Governance"
   - "Harness"
+  - "Knowledge Base"
   - "LLM"
   - "Maintenance"
   - "MCP"
   - "Memory"
+  - "Multi-Agent"
   - "Open Source"
   - "OpenCode"
   - "Orchestration"
@@ -39,7 +42,7 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口为 **2026-08-31 01:03 至 2026-09-01 01:03（Asia/Shanghai）**，已验证技术精选回看 48 小时。最明确的一方更新是 DeepSeek Harness v0.1.2-alpha.3：它继续处理长会话、图片工具与连接状态等 Harness 可靠性问题。HN 同时出现本地项目记忆、LLM 输出检查点与开源 Agent 编排等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
+本轮发现窗口为 **2026-08-31 04:02 至 2026-09-01 04:02（Asia/Shanghai）**，已验证技术精选回看 48 小时。最明确的一方更新仍是 DeepSeek Harness v0.1.2-alpha.3：它继续处理长会话、图片工具与连接状态等 Harness 可靠性问题。HN 同时出现本地项目记忆、LLM 输出检查点与开放知识发布和多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
 
 ## Coding Agent / Harness 雷达
 
@@ -81,6 +84,8 @@ tags:
 - [Rta-Smriti](https://github.com/sulabhdubey/rta-smriti-brain) 于 2026-09-01 00:20（上海时间）提交到 HN；采集时 2 points、0 comments。仓库可核实其本地优先、证据感知的 coding-agent 项目记忆定位，但仓库创建于 8 月中旬，当前互动与采用信号都很弱。
 - [BOOTH](https://github.com/Vedantgitbot/booth) 于 2026-08-31 23:58（上海时间）提交到 HN；采集时 1 point、0 comments。功能范围与许可证可由仓库核实，效果仍待复现。
 - [Lessons learned from building a harness for cyber security](https://vigilsoc.org/blog/2026/08/27/lessons-learned-building-a-harness-for-cyber-security/) 于本轮窗口内重新提交到 HN；采集时 2 points、0 comments。文章原始日期为 2026-08-27，强调由确定性控制器持有状态，属于作者工程经验而非通用评测。
+- [XYZZY](https://github.com/Project-Nexus-YR/XYZZY) 于 2026-09-01 02:58（上海时间）提交到 HN；采集时 2 points、0 comments。仓库早于本轮创建，README 可核实其自托管多 Agent 房间、人工审批、暂停/恢复和哈希链事件审计设计，但这些仍是项目自述，尚无独立采用证据。
+- [Kiso](https://github.com/oak-invest/kiso) 于 2026-09-01 03:28（上海时间）提交到 HN；采集时 2 points、0 comments。仓库早于本轮创建，将 OKF 知识包发布为面向人和 Agent 的静态站点并提供 MCP Server；本轮没有窗口内正式版本发布。
 
 ## 论文与研究
 
@@ -100,6 +105,9 @@ tags:
 - [Rta-Smriti](https://github.com/sulabhdubey/rta-smriti-brain)：**较早仓库 / HN 新浮现。** 本地优先记忆与证据追踪方向贴近 coding-agent context 管理，但暂无采用和独立可靠性证据。
 - [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)、[video-use](https://github.com/browser-use/video-use)、[paperclip](https://github.com/paperclipai/paperclip)：**GitHub Trending 邻近信号。** 分别涉及科研技能库、用 coding agents 编辑视频与工作场景 Agent 管理；本轮只确认榜单与仓库可访问，不采信 README 中未独立验证的规模、效果或采用数字。
 - [Vigil SOC Harness 工程总结](https://vigilsoc.org/blog/2026/08/27/lessons-learned-building-a-harness-for-cyber-security/)：**较旧技术文章 / HN 新浮现。** 确定性控制器管理状态的实践值得后续跟踪，但结论来自作者项目。
+- [XYZZY](https://github.com/Project-Nexus-YR/XYZZY)：**较早仓库 / HN 新浮现。** 自托管多人 Agent 协作、审批门和防篡改审计贴近多 Agent Harness 治理，但目前主要证据来自 README。
+- [Kiso](https://github.com/oak-invest/kiso)：**较早仓库 / HN 新浮现。** OKF、静态发布和 MCP 的组合是知识库面向 Agent 消费的邻近信号，未见本轮窗口内 release。
+
 
 ## 来源链接
 
@@ -107,8 +115,8 @@ tags:
 
 ## 采集状态
 
-- **采集窗口：** 2026-08-31 01:03 至 2026-09-01 01:03（Asia/Shanghai）；技术精选回看 48 小时。
+- **采集窗口：** 2026-08-31 04:02 至 2026-09-01 04:02（Asia/Shanghai）；技术精选回看 48 小时。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
 - **失败/受限：** Pi 旧入口重定向至当前官方仓库；部分候选缺少可核验原始发布日期；Trending 未稳定提供日增星标；arXiv、Hugging Face 与 Simon Willison 未检出优先级足够的窗口内新增。
-- **初始候选数：** 20；**最终保留来源数：** 11；**二次补搜：** 否（最终来源不为 0）。
+- **初始候选数：** 22；**最终保留来源数：** 13；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 图片，来源 URL 与正文对应条目一致。
