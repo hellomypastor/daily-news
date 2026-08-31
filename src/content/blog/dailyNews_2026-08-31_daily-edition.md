@@ -1,10 +1,10 @@
 ---
 title: "Daily News 精选日报 · 2026-08-31"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T10:03:22+08:00"
+updatedAt: "2026-08-31T13:03:00+08:00"
 description: "2026-08-31 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-08-31"
-featuredUrl: "https://github.com/anthropics/claude-code/issues/90867"
+featuredUrl: "https://github.com/anthropics/claude-code/issues/90883"
 featuredSummary: "2026-08-31 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTags: ["Daily Edition","AI","Agent","每日精选"]
 tags:
@@ -26,7 +26,7 @@ Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区�
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[Codex CLI 0.152.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.5)**。Codex CLI 0.152.0-alpha.5 预发布；tag compare 显示 MCP server name、JediTerm 渲染及测试工作目录相关变更。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Codex CLI 0.152.0-alpha.6](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.6)**。Codex CLI 0.152.0-alpha.6 预发布；官方 tag compare 显示可操作限额提示与恢复流程、历史摄取 metadata 和 update_plan opt-in 变更。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-08-31_openai)
 

@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T10:03:22+08:00"
+updatedAt: "2026-08-31T13:03:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTags: []
 tags:
@@ -17,12 +17,14 @@ tags:
   - "Government"
   - "Hate"
   - "Love"
+  - "Scheduled Tasks"
+  - "Skills"
   - "VS Code"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-30 10:02 至 2026-08-31 10:02（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、桌面会话生命周期缺陷报告、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
+采集窗口：**2026-08-30 13:02 至 2026-08-31 13:02（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、桌面会话生命周期缺陷报告、`/loop` 定时执行可靠性报告、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
 
 ## Tier 1：编码、Agent 与模型主轴
 
@@ -31,7 +33,7 @@ tags:
 | Claude Code CLI | 观察池 | 官方仓库出现关于会话内切换模型/effort 与清空上下文的功能请求，反映长链 skills 工作流的控制需求；这是用户提案，不是路线承诺。[GitHub issue](https://github.com/anthropics/claude-code/issues/90772) |
 | VS Code / JetBrains 集成 | 观察池 | VS Code 用户报告 2.1.251 在音频插件开发中触发 guardrail，并附带消息列表不同步错误；尚无官方确认或修复结论。[GitHub issue](https://github.com/anthropics/claude-code/issues/90773) JetBrains 未发现窗口内新增。 |
 | Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 已检查官方文档、发布说明和仓库入口，未发现窗口内可确认更新。 |
-| Skills 与 marketplaces | 无新增 | 已检查官方发布说明、文档与仓库入口，未发现窗口内可确认更新。 |
+| Skills 与 marketplaces | 观察池 | 用户报告 `/loop 15m mailroom` 加载 skill 后可能只执行一次任务，未调用 `CronCreate`，而 `CronList` 显示没有定时任务。该 issue 有复现步骤，但尚无官方确认。[GitHub issue](https://github.com/anthropics/claude-code/issues/90883) |
 | Claude Developer Platform | 无新增 | API 文档与发布入口未发现窗口内可确认更新。 |
 | Agent SDK | 无新增 | 官方文档与 GitHub 入口未发现窗口内可确认更新。 |
 | Cowork | 无新增 | 官方发布说明与状态页未发现窗口内新功能或事故。 |
@@ -72,7 +74,7 @@ tags:
 
 ## 情绪判断
 
-**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与三个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制和插件开发稳定性。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。
+**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与四个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制和插件开发稳定性。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。
 
 ## 对比与迁移信号
 
@@ -86,6 +88,7 @@ tags:
 
 ## 观察池
 
+- [`/loop` skill 可能未创建定时任务](https://github.com/anthropics/claude-code/issues/90883)：用户提供了命令和 `CronList` 检查步骤；属于单一用户可复现报告，尚无官方确认或修复结论。
 - [桌面更新重启终止运行中会话](https://github.com/anthropics/claude-code/issues/90867)：用户日志型报告；原始现象日期为 8 月 27 日，issue 创建于本轮窗口，官方尚未确认。同根因拆分 issue 未重复收录。
 - [会话内切换模型、effort 与清空上下文请求](https://github.com/anthropics/claude-code/issues/90772)：官方仓库中的用户提案，可能反映长时 Agent 工作流对分段控制的需求，尚非已排期功能。
 - [VS Code guardrail / 消息列表不同步报告](https://github.com/anthropics/claude-code/issues/90773)：用户报告附错误时间戳，但没有官方复现或处置结论。
@@ -93,12 +96,12 @@ tags:
 
 ## 来源链接
 
-正文中的七个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
+正文中的八个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Help Center release notes、Developer Platform、Claude Code 文档/官方 GitHub、Status；逐项覆盖 Tier 1 与 Tier 2；快速检查 Tier 3 垂直入口；抽样 Reddit、Hacker News、X、YouTube与可信二手报道。
-- 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 releases 可访问但窗口内无新版本。
-- 初始候选：21；最终保留：7（3 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
+- 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 releases 可访问但窗口内无新版本（最新仍为 v2.1.251）。
+- 初始候选：22；最终保留：8（4 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
 - 二次补搜：否（最终来源不为 0）。
 - 图片：无。候选来源主要是 GitHub issue、Reddit 用户帖和较旧背景报道，未选用用户上传图、搜索缩略图或较旧背景作为页面图片。
