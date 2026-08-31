@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T16:01:00+08:00"
+updatedAt: "2026-08-31T19:03:42+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTags: []
 tags:
@@ -10,24 +10,34 @@ tags:
   - "日期未确认"
   - "Agent"
   - "Anthropic"
+  - "Browser Agent"
   - "Claude"
   - "Claude Code"
   - "Claude Desktop"
+  - "Claude in Chrome"
   - "Codex"
+  - "Concurrent Sessions"
+  - "Connectors"
+  - "Cowork"
   - "Desktop"
+  - "Git"
   - "Git Worktree"
   - "Government"
   - "Hate"
   - "Love"
+  - "Models"
   - "Plugins"
+  - "PowerShell"
   - "Scheduled Tasks"
   - "Skills"
+  - "Subagent"
   - "VS Code"
+  - "Windows"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-30 16:01 至 2026-08-31 16:01（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、VS Code worktree 会话展示、桌面插件列表、桌面会话生命周期缺陷报告、`/loop` 定时执行可靠性报告、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
+采集窗口：**2026-08-30 19:02 至 2026-08-31 19:02（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、VS Code worktree 会话展示、桌面插件列表、桌面会话生命周期缺陷报告、`/loop` 定时执行可靠性报告、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
 
 ## Tier 1：编码、Agent 与模型主轴
 
@@ -97,14 +107,14 @@ tags:
 - [VS Code guardrail / 消息列表不同步报告](https://github.com/anthropics/claude-code/issues/90773)：用户报告附错误时间戳，但没有官方复现或处置结论。
 - [VS Code worktree 会话从分组侧栏静默消失](https://github.com/anthropics/claude-code/issues/90924)：用户给出 2.1.251 环境、复现步骤和本地状态证据；转录文件仍在，尚无官方确认。\n- [Desktop 插件面板偶尔显示空状态](https://github.com/anthropics/claude-code/issues/90927)：用户日志显示本地插件计数短时间内在 51 与 0 之间变化，刷新 marketplace 可恢复；尚无官方确认。\n- [美联社政府争议报道](https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c)：可信二手来源、但已早于本轮窗口，仅作 Tier 3 背景。
 
-## 来源链接
+## 本轮新增观察池（16:01—19:02）\n\n- [并发会话 Git index 风险](https://github.com/anthropics/claude-code/issues/90943)：用户报告同一 working tree 的并发会话可能因陈旧独立 index 静默删除或回退另一会话已提交工作；附原理与复现，尚无官方确认。\n- [Cowork 定时任务权限不持久](https://github.com/anthropics/claude-code/issues/90938)：用户称选择允许所有计划运行后，下一轮 Gmail connector 仍再次询问；单用户复现。\n- [subagent 模型参数可能被忽略](https://github.com/anthropics/claude-code/issues/90929)：报告称显式指定 Sonnet 的 12 个 subagent 仍跟随父会话使用 Opus，尚无官方确认。\n- [Claude in Chrome 招聘站域名拦截](https://github.com/anthropics/claude-code/issues/90928)：两个日本招聘站域名被拒而其他招聘站可用，疑似分类问题。\n- [PowerShell 5.1 无 BOM 脚本风险](https://github.com/anthropics/claude-code/issues/90962)：窗口截止前数秒创建的报告给出字符级机制和复现；由 AI agent 自主提交，需额外审慎，尚无官方确认。\n\n## 来源链接
 
-正文中的十个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
+正文中的十五个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Help Center release notes、Developer Platform、Claude Code 文档/官方 GitHub、Status；逐项覆盖 Tier 1 与 Tier 2；快速检查 Tier 3 垂直入口；抽样 Reddit、Hacker News、X、YouTube与可信二手报道。
 - 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 releases 可访问但窗口内无新版本（最新仍为 v2.1.251）。
-- 初始候选：51；最终保留：10（6 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
+- 初始候选：81；最终保留：15（11 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
 - 二次补搜：否（最终来源不为 0）。
 - 图片：无。候选来源主要是 GitHub issue、Reddit 用户帖和较旧背景报道，未选用用户上传图、搜索缩略图或较旧背景作为页面图片。

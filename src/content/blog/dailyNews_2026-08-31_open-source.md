@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T16:01:00+08:00"
+updatedAt: "2026-08-31T19:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.2"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.2"
@@ -22,6 +22,8 @@ tags:
   - "AI"
   - "CLI"
   - "Cline"
+  - "Code Graph"
+  - "Code Validation"
   - "Coding Agent"
   - "Configuration"
   - "Context"
@@ -51,7 +53,7 @@ tags:
 
 ## 今日概览
 
-本轮以 **2026-08-30 16:01 至 2026-08-31 16:01（Asia/Shanghai）** 为 24 小时发现窗口，并按主题规范把可核实的技术精选放宽到过去 48 小时；同日早前已收录的来源全部累积保留。最明确的更新来自 DeepSeek Harness 的 alpha 发布与 Pi Coding Agent 的会话、压缩和 RPC 改进；13:02 后又确认 OpenCode 的会话 UI 回归修复与 AgentConnect 的 Slack 工具边界改进。研究侧则出现了对 Agent 模型路由静态回放评测的直接质疑。以下只陈述原始页面能够支持的事实，不以提交活跃度推断质量或领先性。
+本轮以 **2026-08-30 19:02 至 2026-08-31 19:02（Asia/Shanghai）** 为 24 小时发现窗口，并按主题规范把可核实的技术精选放宽到过去 48 小时；同日早前已收录的来源全部累积保留。最明确的更新来自 DeepSeek Harness 的 alpha 发布与 Pi Coding Agent 的会话、压缩和 RPC 改进；13:02 后又确认 OpenCode 的会话 UI 回归修复与 AgentConnect 的 Slack 工具边界改进，16:01 后 HN 还出现了 Sonde 与 hedgemony 两个早期 Coding Agent 工具。研究侧则出现了对 Agent 模型路由静态回放评测的直接质疑。以下只陈述原始页面能够支持的事实，不以提交活跃度推断质量或领先性。
 
 ## Coding Agent / Harness 雷达
 
@@ -121,7 +123,7 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 - [glean](https://github.com/amalucelli/glean) 在 2026-08-31 10:39（上海时间）提交到 HN；项目按 consumer 记录文件内容基线，让循环 skill 只处理上次标记后的变化。仓库创建于 2026-06-17，属 HN 新浮现的较旧项目。
 - [MaCcyP](https://github.com/harleensahni/MaCcyP) 在 2026-08-31 10:58（上海时间）以 Show HN 形式出现；该 Maccy fork 增加独立 Agents 视图。仓库未声明可机器识别许可证，暂留观察池。
 
-## 论文与研究
+- [Sonde](https://github.com/anishmoncivarghese/sonde) 在 2026-08-31 16:21（上海时间）以 Show HN 形式出现。仓库提供本地符号图、MCP 工具与可复现 benchmark，并主动披露对缺少共同词汇的行为查询效果较差；数字仍属于作者测试结果。\n- [hedgemony](https://github.com/lovettsendit/hedgemony) 在 2026-08-31 16:47（上海时间）以 Show HN 形式出现。项目用解释器和包注册表检查不存在的包、属性与不可能调用，并明确不检测缺少可核对规范的逻辑错误；项目很新，许可证为 SSPL-1.0。\n\n## 论文与研究
 
 - [The Replay Gap](https://arxiv.org/abs/2608.08239) 的原始论文发表于 2026-08-09（上海时间），本轮因 HN 新讨论重新进入视野。作者在 SWE-bench Agent 轨迹上进行分支 rollout，认为以静态日志拼接评估逐步模型切换会错判实际轨迹；论文报告六组配对实验、约 900 次 rollout，并开放 harness 和轨迹。结论属于作者实验结果，需关注配置和独立复现。
 - [Safety Does Not Compose](https://arxiv.org/abs/2608.27141) 关注跨迭代安全状态，已列入上方技术精选。
@@ -141,7 +143,7 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 - [glean](https://github.com/amalucelli/glean)：**较旧项目 / HN 新浮现。** 增量基线适合定时 skill 与多 consumer 工作流，但本轮未做规模或正确性基准。
 - [MaCcyP](https://github.com/harleensahni/MaCcyP)：**新近 fork / 许可证状态待确认。** Agent 到用户粘贴通道的 UI 思路与 coding workflow 相邻，尚无采用证据。
 
-- [SIMURG](https://github.com/doofzoff/SIMURG)：**早期项目 / 社区信号弱。** 仓库可访问且许可证明确，但其“中止幻觉”等效果描述尚未由本轮独立基准验证。
+- [Sonde](https://github.com/anishmoncivarghese/sonde)：**早期项目 / 作者基准。** 本地代码图、token 预算和 MCP 接口可由仓库核实；性能数据可复现但尚非独立评测。\n- [hedgemony](https://github.com/lovettsendit/hedgemony)：**当天新建 / 范围受限。** 确定性检查避免再调用模型，但只覆盖可由解释器、注册表或示例判定的 fabrication，不代表代码整体正确。\n\n- [SIMURG](https://github.com/doofzoff/SIMURG)：**早期项目 / 社区信号弱。** 仓库可访问且许可证明确，但其“中止幻觉”等效果描述尚未由本轮独立基准验证。
 - [norms](https://github.com/gsttm/norms)：**新建项目 / 日期已确认。** 值得观察多 Agent 规范分发思路，尚无采用证据。
 - [The Shapes of Agent Memory – Files, Stores, and Experience](https://pinglin.tw/blog/the-shapes-of-agent-memory/)：**日期未确认 / 低互动邻近信号。** 主题与 Agent 记忆形态相关，但原站本轮不可读，待后续复核正文与日期。
 - [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)、[scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)、[crawl4ai](https://github.com/unclecode/crawl4ai)、[last30days-skill](https://github.com/mvanhorn/last30days-skill)：**GitHub Trending 邻近信号。** 仅记录当天榜单可见性，不把热度等同于新发布或技术验证。
@@ -155,5 +157,5 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 - **采集窗口：** 2026-08-30 16:01 至 2026-08-31 16:01（Asia/Shanghai）；技术精选回看 48 小时。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
 - **失败/受限：** Pi 与 Roo Code 旧仓库名已重定向，已转到当前官方仓库；GitHub Trending 首次请求因 shell 参数未加引号失败，重试成功；Hugging Face 与 Simon Willison 本轮未检出优先级足够的窗口内条目；Agent Memory 原站未返回可读取正文或日期。
-- **初始候选数：** 24；**最终保留来源数：** 18；**二次补搜：** 否（最终来源不为 0）。
+- **初始候选数：** 26；**最终保留来源数：** 20；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 预览，来源 URL 与正文对应条目一致。
