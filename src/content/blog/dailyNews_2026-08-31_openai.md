@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T19:02:00+08:00"
+updatedAt: "2026-08-31T22:01:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.152.0-alpha.6"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.6"
@@ -31,20 +31,25 @@ tags:
   - "Context"
   - "DALL·E"
   - "Desktop"
+  - "Git"
   - "Goal"
   - "GPTs"
+  - "Linux"
   - "macOS"
   - "MCP"
   - "Mobile"
   - "OpenAI"
+  - "Plugins"
   - "PR"
   - "Responses API"
+  - "Skills"
   - "Windows"
+  - "Worktree"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-30 19:02 至 2026-08-31 19:02（Asia/Shanghai）**。本轮可确认的主线是 Codex CLI 连续发布三个 `0.152.0` alpha 构建；最新 alpha.6 加入可操作的限额提示与恢复流程，并把 `update_plan` 工具改为显式启用；ChatGPT 产品侧则到达官方早先公布的 DALL·E GPT 退役日期。16:01 后没有新的官方 release，但 Codex 官方仓库继续出现容量/Goal 生命周期、Azure 自动化序列化、用量重置授权、本地会话存储膨胀及移动端 Cloud 交付缺失等用户报告；它们均未获维护者确认，不能外推为全量状态。
+采集窗口：**2026-08-30 22:01 至 2026-08-31 22:01（Asia/Shanghai）**。本轮可确认的主线是 Codex CLI 连续发布三个 `0.152.0` alpha 构建；最新 alpha.6 加入可操作的限额提示与恢复流程，并把 `update_plan` 工具改为显式启用；ChatGPT 产品侧则到达官方早先公布的 DALL·E GPT 退役日期。16:01 后没有新的官方 release，但 Codex 官方仓库继续出现容量/Goal 生命周期、Azure 自动化序列化、用量重置授权、本地会话存储膨胀、移动端 Cloud 交付缺失、工作树分支占用、Linux 工具执行进程递归及插件技能发现性等用户报告；它们均未获维护者确认，不能外推为全量状态。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -97,6 +102,9 @@ Enterprise、Business、Edu、Gov、Science、安全与行业方案未发现窗�
 - 一名 macOS 用户提交系统 Jetsam 诊断，称 4 个闲置 Codex Renderer 进程各增长至约 5.6 GB，最终触发交换空间耗尽与系统冻结；报告提供版本、时间线和系统诊断摘要，但尚无稳定复现或维护者确认，列为**证据较详细但未确认的性能个案**。[GitHub issue](https://github.com/openai/codex/issues/41794)
 - 容量错误在本轮后段继续出现：一个 macOS Desktop 报告称瞬时容量错误后 Goal 未经 `update_goal` 调用便转为 blocked。报告给出本地时间线，但仍是单用户诊断，列为**容量故障簇中的未确认生命周期问题**。[GitHub issue](https://github.com/openai/codex/issues/41808)
 - 一名用户称 Codex 在只提出“可以尝试”后便调用工具消耗了已储备的用量重置额度，未获得单独明确授权。仓库已标记为 bug，但尚无维护者结论，列为**高影响、待确认的授权边界报告**。[GitHub issue](https://github.com/openai/codex/issues/41801)
+- Codex Desktop 用户报告托管 worktree 在合并/清理期间切到共享本地 `main`，导致主 checkout 无法再切回该分支。issue 提供 reflog 序列、复现环境与规避方式，已标为 bug，但仍待维护者确认。[GitHub issue](https://github.com/openai/codex/issues/41824)
+- Fedora 用户报告一次普通 CLI 工具调用会递归产生数百个 Bash 进程，提供跨版本、跨模型与绕过 agent dispatch 的对照结果；影响可能很高，但目前仍是单环境报告。[GitHub issue](https://github.com/openai/codex/issues/41825)
+- 一份 Goal 生命周期报告称，明确到达暂停条件后仍自动续跑 12 个无操作 turn，并记录约 126 万 total token counter 增量。数据来自单个私有任务的脱敏日志，未获维护者确认。[GitHub issue](https://github.com/openai/codex/issues/41831)
 
 ## 情绪判断
 
@@ -118,6 +126,7 @@ Enterprise、Business、Edu、Gov、Science、安全与行业方案未发现窗�
 - macOS + Azure/OpenAI-compatible Responses provider 用户报告定时自动化的 bootstrap `function_call_output` 缺少 `call_id`，导致请求在提示词到达模型前被 HTTP 400 拒绝；报告含版本、请求形状与本地代理验证，但尚无维护者确认。[GitHub issue](https://github.com/openai/codex/issues/41799)
 - 一名 macOS 用户报告 `~/.codex` 增长至约 42 GB，并把主要增量归因于 rollout JSONL 重复嵌入 `replacement_history` 与归档会话未清理；报告给出目录统计，但数据和因果仍待维护者复核。[GitHub issue](https://github.com/openai/codex/issues/41806)
 - 一名 iPhone 上的 Codex Cloud 用户报告 8 月 31 日新任务仍能修改文件，却不再显示 diff 或 Create PR 交付入口；旧任务仍正常。当前是单用户移动端回归报告，待复现。[GitHub issue](https://github.com/openai/codex/issues/41807)
+- Codex CLI 0.151.0 用户报告已启用插件提供的 skill 可通过完整名称调用，却不会出现在 `$` 自动补全中；属于发现性缺陷单例，尚无修复结论。[GitHub issue](https://github.com/openai/codex/issues/41842)
 
 ## 来源链接
 
@@ -136,10 +145,14 @@ Enterprise、Business、Edu、Gov、Science、安全与行业方案未发现窗�
 - [Codex GitHub：Azure 自动化缺失 call_id 报告](https://github.com/openai/codex/issues/41799)
 - [Codex GitHub：本地会话存储膨胀报告](https://github.com/openai/codex/issues/41806)
 - [Codex GitHub：移动端 Cloud 缺失 diff / PR 交付报告](https://github.com/openai/codex/issues/41807)
+- [Codex GitHub：托管 worktree 占用本地 main 报告](https://github.com/openai/codex/issues/41824)
+- [Codex GitHub：Linux 工具调用递归生成 Bash 进程报告](https://github.com/openai/codex/issues/41825)
+- [Codex GitHub：Goal 暂停后重复续跑报告](https://github.com/openai/codex/issues/41831)
+- [Codex GitHub：插件 skill 未出现在自动补全报告](https://github.com/openai/codex/issues/41842)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research、Platform 文档与 changelog、ChatGPT Release Notes、Codex / Agents SDK / OpenAI SDK 官方 GitHub releases、Codex 官方仓库窗口内新建 issues、OpenAI Developer Community，以及 Reddit、Hacker News、X/YouTube 公开搜索结果。
 - 失败入口：X 完整时间线受登录限制；YouTube 未检出可核实的窗口内官方新视频；Hacker News 未发现可保留条目。
-- 初始候选：34；最终保留来源：15；二次补搜：否（最终来源不为 0）。
+- 初始候选：57；最终保留来源：19；二次补搜：否（最终来源不为 0）。
 - 图片：未配置。已检查本页官方来源，未找到适合作为对应条目配图且来源清晰的稳定公开图片 URL；不使用 GitHub/搜索结果动态缩略图。

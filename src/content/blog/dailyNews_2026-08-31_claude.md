@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T19:03:42+08:00"
+updatedAt: "2026-08-31T22:04:18+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTags: []
 tags:
@@ -20,15 +20,19 @@ tags:
   - "Connectors"
   - "Cowork"
   - "Desktop"
+  - "Filesystem"
   - "Git"
   - "Git Worktree"
   - "Government"
   - "Hate"
   - "Love"
+  - "macOS"
+  - "MCP"
   - "Models"
   - "Plugins"
   - "PowerShell"
   - "Scheduled Tasks"
+  - "Security"
   - "Skills"
   - "Subagent"
   - "VS Code"
@@ -37,7 +41,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-30 19:02 至 2026-08-31 19:02（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、VS Code worktree 会话展示、桌面插件列表、桌面会话生命周期缺陷报告、`/loop` 定时执行可靠性报告、遥测字段观察和订阅用量沟通争议；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
+采集窗口：**2026-08-30 22:01 至 2026-08-31 22:01（Asia/Shanghai）**。窗口内未核实到 Anthropic Newsroom、产品发布说明或开发者平台发布的新产品公告。新增信号集中在 Claude Code 2.1.251 用户工作流反馈、VS Code worktree 会话展示、桌面插件列表、桌面会话生命周期缺陷报告、`/loop` 定时执行可靠性报告、遥测字段观察、订阅用量沟通争议，以及插件 MCP、Cowork 定时任务和桌面端文件副作用报告；以下均按证据层级呈现，GitHub issue 与社区帖不等同于 Anthropic 已确认的缺陷或产品路线。
 
 ## Tier 1：编码、Agent 与模型主轴
 
@@ -45,7 +49,7 @@ tags:
 |---|---|---|
 | Claude Code CLI | 观察池 | 官方仓库出现关于会话内切换模型/effort 与清空上下文的功能请求，反映长链 skills 工作流的控制需求；这是用户提案，不是路线承诺。[GitHub issue](https://github.com/anthropics/claude-code/issues/90772) |
 | VS Code / JetBrains 集成 | 观察池 | VS Code 用户报告 2.1.251 在音频插件开发中触发 guardrail，并附带消息列表不同步错误；另有带复现步骤的报告称，重启后位于 workspace 内 Git worktree 的会话会从分组侧栏静默消失，但转录文件仍在。两者均无官方确认或修复结论。[guardrail issue](https://github.com/anthropics/claude-code/issues/90773) [worktree issue](https://github.com/anthropics/claude-code/issues/90924) JetBrains 未发现窗口内新增。 |
-| Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 已检查官方文档、发布说明和仓库入口，未发现窗口内可确认更新。 |
+| Managed Agents（sessions、webhooks、environments、memory stores） | 观察池 | 官方文档与发布说明未发现更新；Cowork 用户报告 `create_trigger` 定时任务虽按时触发，却没有继承原会话已连接的 Slack、Notion 与 Google Calendar MCP 工具，五次运行均无输出后被放弃。该报告有运行次数与现象，但尚无官方确认。[GitHub issue](https://github.com/anthropics/claude-code/issues/90972) |
 | Skills 与 marketplaces | 观察池 | 用户报告 `/loop 15m mailroom` 加载 skill 后可能只执行一次任务，未调用 `CronCreate`，而 `CronList` 显示没有定时任务。该 issue 有复现步骤，但尚无官方确认。[GitHub issue](https://github.com/anthropics/claude-code/issues/90883) |
 | Claude Developer Platform | 无新增 | API 文档与发布入口未发现窗口内可确认更新。 |
 | Agent SDK | 无新增 | 官方文档与 GitHub 入口未发现窗口内可确认更新。 |
@@ -62,7 +66,7 @@ tags:
 |---|---|---|
 | Chrome / browser agent | 无新增 | 官方发布说明与文档未发现窗口内更新。 |
 | Desktop / Preview | 无新增 | 官方发布说明与状态入口未发现窗口内更新。 |
-| Marketplace / Connectors / Plugins | 观察池 | 官方发布说明与文档未发现窗口内更新；Windows Desktop 用户提交带日志的报告，称已安装插件列表偶尔显示为首次使用空状态，刷新 marketplace 后恢复。该报告有复现线索但尚无官方确认。[GitHub issue](https://github.com/anthropics/claude-code/issues/90927) |
+| Marketplace / Connectors / Plugins | 观察池 | 官方发布说明与文档未发现窗口内更新；Windows Desktop 用户提交带日志的报告，称已安装插件列表偶尔显示为首次使用空状态，刷新 marketplace 后恢复。[插件面板 issue](https://github.com/anthropics/claude-code/issues/90927) 另有带复现的报告称，Desktop/Cowork 中插件 HTTP MCP 的 `headersHelper` 未获得文档所列的 `CLAUDE_PLUGIN_ROOT`，令帮助脚本落到错误路径并转入失败的 OAuth/DCR 流程。[MCP issue](https://github.com/anthropics/claude-code/issues/90968) 两者均无官方确认。 |
 | 当前官方创意 / 视频模型 | 未确认 | 未核实到 Anthropic 官方窗口内发布；不根据搜索词推断产品存在。 |
 | Voice Mode | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |
 | Microsoft 365 集成 | 无新增 | 官方发布说明与帮助入口未发现窗口内更新。 |
@@ -87,7 +91,7 @@ tags:
 
 ## 情绪判断
 
-**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与六个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制、会话可发现性和插件展示稳定性。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。
+**谨慎偏负，置信度中等。** 证据来自两个当日社区样本与十个官方仓库用户 issue：正向信号集中在本地可观测性，负向信号集中在用量沟通、工作流控制、会话可发现性、插件/MCP 稳定性与桌面端文件副作用。样本规模有限、平台偏差明显，不能外推为全体 Claude 用户情绪；官方公告本身不计作正面口碑。
 
 ## 对比与迁移信号
 
@@ -107,14 +111,21 @@ tags:
 - [VS Code guardrail / 消息列表不同步报告](https://github.com/anthropics/claude-code/issues/90773)：用户报告附错误时间戳，但没有官方复现或处置结论。
 - [VS Code worktree 会话从分组侧栏静默消失](https://github.com/anthropics/claude-code/issues/90924)：用户给出 2.1.251 环境、复现步骤和本地状态证据；转录文件仍在，尚无官方确认。\n- [Desktop 插件面板偶尔显示空状态](https://github.com/anthropics/claude-code/issues/90927)：用户日志显示本地插件计数短时间内在 51 与 0 之间变化，刷新 marketplace 可恢复；尚无官方确认。\n- [美联社政府争议报道](https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c)：可信二手来源、但已早于本轮窗口，仅作 Tier 3 背景。
 
-## 本轮新增观察池（16:01—19:02）\n\n- [并发会话 Git index 风险](https://github.com/anthropics/claude-code/issues/90943)：用户报告同一 working tree 的并发会话可能因陈旧独立 index 静默删除或回退另一会话已提交工作；附原理与复现，尚无官方确认。\n- [Cowork 定时任务权限不持久](https://github.com/anthropics/claude-code/issues/90938)：用户称选择允许所有计划运行后，下一轮 Gmail connector 仍再次询问；单用户复现。\n- [subagent 模型参数可能被忽略](https://github.com/anthropics/claude-code/issues/90929)：报告称显式指定 Sonnet 的 12 个 subagent 仍跟随父会话使用 Opus，尚无官方确认。\n- [Claude in Chrome 招聘站域名拦截](https://github.com/anthropics/claude-code/issues/90928)：两个日本招聘站域名被拒而其他招聘站可用，疑似分类问题。\n- [PowerShell 5.1 无 BOM 脚本风险](https://github.com/anthropics/claude-code/issues/90962)：窗口截止前数秒创建的报告给出字符级机制和复现；由 AI agent 自主提交，需额外审慎，尚无官方确认。\n\n## 来源链接
+## 本轮新增观察池（16:01—19:02）\n\n- [并发会话 Git index 风险](https://github.com/anthropics/claude-code/issues/90943)：用户报告同一 working tree 的并发会话可能因陈旧独立 index 静默删除或回退另一会话已提交工作；附原理与复现，尚无官方确认。\n- [Cowork 定时任务权限不持久](https://github.com/anthropics/claude-code/issues/90938)：用户称选择允许所有计划运行后，下一轮 Gmail connector 仍再次询问；单用户复现。\n- [subagent 模型参数可能被忽略](https://github.com/anthropics/claude-code/issues/90929)：报告称显式指定 Sonnet 的 12 个 subagent 仍跟随父会话使用 Opus，尚无官方确认。\n- [Claude in Chrome 招聘站域名拦截](https://github.com/anthropics/claude-code/issues/90928)：两个日本招聘站域名被拒而其他招聘站可用，疑似分类问题。\n- [PowerShell 5.1 无 BOM 脚本风险](https://github.com/anthropics/claude-code/issues/90962)：窗口截止前数秒创建的报告给出字符级机制和复现；由 AI agent 自主提交，需额外审慎，尚无官方确认。\n\n## 本轮新增观察池（19:02—22:01）
 
-正文中的十五个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
+- [插件 MCP `headersHelper` 缺少 `CLAUDE_PLUGIN_ROOT`](https://github.com/anthropics/claude-code/issues/90968)：报告对比 2.1.221 与 2.1.247，并给出帮助脚本错误路径、日志和失败链；属于用户复现，尚无官方确认。
+- [Cowork 定时任务未继承已连接 MCP 工具](https://github.com/anthropics/claude-code/issues/90972)：用户称三次手动与两次定时触发均无输出，任务随后被放弃；尚无官方确认。
+- [Telegram 插件命令可能绕过 allowlist gate](https://github.com/anthropics/claude-code/issues/90965)：提交者指出 `/start`、`/help`、`/status` 的注册位置早于共享 `gate()`，并给出复现步骤；这是潜在信息披露报告，不等同于已确认安全公告。
+- [macOS Desktop 可能批量写入自定义文件夹图标](https://github.com/anthropics/claude-code/issues/90993)：用户提供扩展属性、资源叉大小、进程观察和 Git/Python venv 影响描述；另有同内容重复 issue，本文仅保留首个 URL。影响严重但仍是单一用户报告，尚无官方确认。
+
+## 来源链接
+
+正文中的十九个 URL 均已列入结构化 `sources`；页面内按 URL 去重。
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Help Center release notes、Developer Platform、Claude Code 文档/官方 GitHub、Status；逐项覆盖 Tier 1 与 Tier 2；快速检查 Tier 3 垂直入口；抽样 Reddit、Hacker News、X、YouTube与可信二手报道。
 - 失败入口：X 原帖时间与互动量无法稳定核验；Hacker News 无窗口内可核验条目；YouTube 结果噪声高；Claude Code 官方 releases 可访问但窗口内无新版本（最新仍为 v2.1.251）。
-- 初始候选：81；最终保留：15（11 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
+- 初始候选：116；最终保留：19（15 个官方仓库用户 issue、3 个社区样本、1 个较旧可信二手背景）。
 - 二次补搜：否（最终来源不为 0）。
 - 图片：无。候选来源主要是 GitHub issue、Reddit 用户帖和较旧背景报道，未选用用户上传图、搜索缩略图或较旧背景作为页面图片。
