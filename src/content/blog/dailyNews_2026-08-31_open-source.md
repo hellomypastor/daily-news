@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T13:02:00+08:00"
+updatedAt: "2026-08-31T16:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.2"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.2"
@@ -36,19 +36,22 @@ tags:
   - "LLM"
   - "Loop"
   - "Model Routing"
+  - "Multi-Agent"
   - "Open Source"
   - "Release"
   - "Research"
   - "Session"
   - "Skills"
+  - "Slack"
   - "Telemetry"
   - "Tool Governance"
+  - "UI Fix"
   - "Web"
 ---
 
 ## 今日概览
 
-本轮以 **2026-08-30 13:02 至 2026-08-31 13:02（Asia/Shanghai）** 为 24 小时发现窗口，并按主题规范把可核实的技术精选放宽到过去 48 小时。最明确的更新来自 DeepSeek Harness 的 alpha 发布与 Pi Coding Agent 的会话、压缩和 RPC 改进；研究侧则出现了对 Agent 模型路由静态回放评测的直接质疑。以下只陈述原始页面能够支持的事实，不以提交活跃度推断质量或领先性。
+本轮以 **2026-08-30 16:01 至 2026-08-31 16:01（Asia/Shanghai）** 为 24 小时发现窗口，并按主题规范把可核实的技术精选放宽到过去 48 小时；同日早前已收录的来源全部累积保留。最明确的更新来自 DeepSeek Harness 的 alpha 发布与 Pi Coding Agent 的会话、压缩和 RPC 改进；13:02 后又确认 OpenCode 的会话 UI 回归修复与 AgentConnect 的 Slack 工具边界改进。研究侧则出现了对 Agent 模型路由静态回放评测的直接质疑。以下只陈述原始页面能够支持的事实，不以提交活跃度推断质量或领先性。
 
 ## Coding Agent / Harness 雷达
 
@@ -57,7 +60,7 @@ tags:
 | DeepSeek Harness / DSH | **窗口内发布** | [v0.1.2-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.2) 增加连接异常自动重试/立即重连、会话标题中的活动定时计划，并改善长会话与高密度实时消息处理；仍是开发者预览版。 |
 | Pi Coding Agent | **48 小时精选** | [v0.84.4](https://github.com/earendil-works/pi/releases/tag/v0.84.4) 增加 RPC `clear_queue` 与扩展 UI prompt 事件，并修复大工具结果越过自动压缩阈值后先发给模型的问题。旧 `badlogic/pi-mono` 入口已由 GitHub 重定向到 `earendil-works/pi`。 |
 | Cline | **近 48 小时提交，暂无新 release** | [VS Code hook telemetry 修复](https://github.com/cline/cline/commit/48d63852745460ff0fa3dfcc0457bbe2493841de) 将 task id 传入 hook runner；属于可核实的工程修复，不扩写成产品发布。 |
-| OpenCode | 已检查 | 官方仓库与 release 页在本轮窗口内未见可报告的新 release；最近窗口内提交主要是文档/展示调整。 |
+| OpenCode | **窗口内工程修复，暂无新 release** | [会话重命名与标签菜单修复](https://github.com/anomalyco/opencode/commit/9f69463f1d556af2b5b51d2efa1c04f5f544f911) 回补到 v1 应用，并增加会话重命名端到端回归测试；不扩写成正式版本发布。 |
 | Aider | 已检查 | 官方 release 最新项不在本轮时效范围，无新增行。 |
 | Continue | 已检查 | 官方 release 页未见窗口内新版本；仓库虽有活动，但没有足够明确的可报告 release。 |
 | Roo Code | 已检查 | 旧入口重定向至 `RooCodeInc/Roo-Code`；官方 release 页未见窗口内新版本。 |
@@ -105,13 +108,13 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 
 **为什么重要：** 它把权限与工具治理从提示词移到确定性的执行前拦截层，直接对应 Harness 的安全边界。项目刚创建且尚无采用证据，本轮只核实仓库代码、许可证与公开用法。
 
-## GitHub Trending
+### 7. AgentConnect 补齐 Slack 持久状态工具的写入边界\n\nAgentConnect 的 [Slack bookmarks / lists 工具提交](https://github.com/agentconnect-md/agentconnect/commit/56cdc29a63e4e9bb801c4ce189f3120fc31f4c4a) 于 2026-08-31 13:56（上海时间）合入。该提交增加书签与列表读写工具，并在实现和测试中明确书签会跨任务保留、跨平台会话不能借用错误频道 ID、列表响应 schema 与可写字段并非镜像关系。\n\n**为什么重要：** 多 Agent 接入团队协作系统时，工具调用不仅要通过 sandbox，还要正确表达外部持久状态、目标会话和 API schema 权限边界。这里仅核实提交内容，不把 HN 讨论标题当成独立安全评测。\n\n## GitHub Trending
 
 本轮 GitHub 日榜出现 [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)、[scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)、[crawl4ai](https://github.com/unclecode/crawl4ai) 与 [last30days-skill](https://github.com/mvanhorn/last30days-skill) 等 AI/Agent 相关仓库。Trending 只证明抓取时处于日榜，不等同于当天发布；页面未稳定提供可复核的日增数据，因此不记录星标增长。
 
 ## Hacker News 讨论
 
-- [SIMURG](https://github.com/doofzoff/SIMURG) 在 2026-08-31 01:04（上海时间）提交到 HN。仓库定位包含 OpenAI-compatible 流式输出异常检测与 Agent Web Search；当前讨论量很小，功能与效果应以代码和可复现实验为准。
+- [AgentConnect](https://github.com/agentconnect-md/agentconnect) 在 2026-08-31 15:38（上海时间）以“sandbox 不是多 Agent 权限模型”为题再次提交至 HN；采集时为 3 points、1 comment。仓库与上述提交可核实其多运行时、独立工具/工作区配置和 Slack 工具边界，但标题观点仍不等同于独立安全结论。\n- [SIMURG](https://github.com/doofzoff/SIMURG) 在 2026-08-31 01:04（上海时间）提交到 HN。仓库定位包含 OpenAI-compatible 流式输出异常检测与 Agent Web Search；当前讨论量很小，功能与效果应以代码和可复现实验为准。
 - [norms](https://github.com/gsttm/norms) 在 2026-08-31 06:16（上海时间）以 Show HN 形式出现，尝试在不同 coding Agent 之间共享轻量工程规范。仓库创建时间很近，暂不把作者定位写成采用事实。
 
 - [steer](https://github.com/amalucelli/steer) 在 2026-08-31 10:38（上海时间）提交到 HN；仓库当天创建，仍属早期项目。
@@ -149,8 +152,8 @@ Cline 的 [task id 传递修复](https://github.com/cline/cline/commit/48d638527
 
 ## 采集状态
 
-- **采集窗口：** 2026-08-30 13:02 至 2026-08-31 13:02（Asia/Shanghai）；技术精选回看 48 小时。
+- **采集窗口：** 2026-08-30 16:01 至 2026-08-31 16:01（Asia/Shanghai）；技术精选回看 48 小时。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
 - **失败/受限：** Pi 与 Roo Code 旧仓库名已重定向，已转到当前官方仓库；GitHub Trending 首次请求因 shell 参数未加引号失败，重试成功；Hugging Face 与 Simon Willison 本轮未检出优先级足够的窗口内条目；Agent Memory 原站未返回可读取正文或日期。
-- **初始候选数：** 22；**最终保留来源数：** 16；**二次补搜：** 否（最终来源不为 0）。
+- **初始候选数：** 24；**最终保留来源数：** 18；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 预览，来源 URL 与正文对应条目一致。

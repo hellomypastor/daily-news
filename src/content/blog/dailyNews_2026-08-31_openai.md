@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-08-31T00:00:00+08:00"
-updatedAt: "2026-08-31T13:02:00+08:00"
+updatedAt: "2026-08-31T16:01:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex CLI 0.152.0-alpha.6"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.6"
@@ -12,8 +12,10 @@ tags:
   - "观察池"
   - "较旧背景"
   - "配额"
+  - "容量"
   - "社区口碑"
   - "限额"
+  - "性能"
   - "预发布"
   - "Agent"
   - "ChatGPT"
@@ -23,6 +25,7 @@ tags:
   - "DALL·E"
   - "Desktop"
   - "GPTs"
+  - "macOS"
   - "MCP"
   - "OpenAI"
   - "Windows"
@@ -30,7 +33,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-30 13:02 至 2026-08-31 13:02（Asia/Shanghai）**。本轮可确认的主线是 Codex CLI 连续发布三个 `0.152.0` alpha 构建；最新 alpha.6 加入可操作的限额提示与恢复流程，并把 `update_plan` 工具改为显式启用；ChatGPT 产品侧则到达官方早先公布的 DALL·E GPT 退役日期。社区反馈继续集中在 Codex 配额中断、上下文配置回退和 Windows 长对话稳定性，但这些均为个案样本，尚不能外推为全量用户状态。
+采集窗口：**2026-08-30 16:01 至 2026-08-31 16:01（Asia/Shanghai）**。本轮可确认的主线是 Codex CLI 连续发布三个 `0.152.0` alpha 构建；最新 alpha.6 加入可操作的限额提示与恢复流程，并把 `update_plan` 工具改为显式启用；ChatGPT 产品侧则到达官方早先公布的 DALL·E GPT 退役日期。13:02 后没有新的官方 release，但 Codex 官方仓库新增容量中断、macOS Renderer 内存耗尽和 MCP 数值 elicitation 空提交三个缺陷报告；它们均为用户提交、尚无官方确认，不能外推为全量状态。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -79,6 +82,8 @@ Enterprise、Business、Edu、Gov、Science、安全与行业方案未发现窗�
 - 一篇 8 月 30 日的 r/ChatGPTCoding 帖文称，Plus 用户在编码流程中受到 5 小时窗口限制影响，评论也提到任务流被配额打断。该样本互动有限，且套餐、区域和实际用量未独立核验，只能代表**低置信度个案**。[社区讨论](https://www.reddit.com/r/ChatGPTCoding/comments/1w2etrb/help_understanding_the_new_restrictions_and_limits/)
 - r/codex 用户报告 Windows Codex App 在自定义 100 万上下文与 90 万自动压缩阈值后，近期又显示约 25.8 万上下文。帖子未提供可复现实验或官方确认，暂列**未复现的配置回退个案**。[社区讨论](https://www.reddit.com/r/codex/comments/1w2886c/codex_not_giving_the_user_set_context_window_and/)
 - OpenAI Developer Community 有用户报告 Windows Desktop 26.825.51511 的长对话锁死、长文本粘贴卡住与折叠消息无法展开。当前仅见单帖，尚无官方回复，列为**待复核故障样本**。[开发者社区帖子](https://community.openai.com/t/windows-desktop-26-825-51511-long-chats-can-lock-without-warning-work-long-paste-hangs-and-collapsed-messages-cannot-be-expanded/1393640)
+- Codex 官方 GitHub 仓库有 Pro 用户报告正常 Agent 任务中反复出现“Selected model is at capacity”，约 15 分钟内遇到 3 次并进入长退避。issue 已获 `bug`、`rate-limits`、`app`、`connectivity` 标签，但暂无维护者确认，列为**单用户容量中断样本**。[GitHub issue](https://github.com/openai/codex/issues/41790)
+- 一名 macOS 用户提交系统 Jetsam 诊断，称 4 个闲置 Codex Renderer 进程各增长至约 5.6 GB，最终触发交换空间耗尽与系统冻结；报告提供版本、时间线和系统诊断摘要，但尚无稳定复现或维护者确认，列为**证据较详细但未确认的性能个案**。[GitHub issue](https://github.com/openai/codex/issues/41794)
 
 ## 情绪判断
 
@@ -96,6 +101,7 @@ Enterprise、Business、Edu、Gov、Science、安全与行业方案未发现窗�
 
 - 继续观察 Codex 预发布线何时形成 `0.152.0` 稳定版，以及 alpha.5 的 package-style MCP server name、alpha.6 的限额恢复与 `update_plan` opt-in 变更是否进入正式 release notes。
 - 继续观察配额中断、上下文设置回退和 Windows 长对话问题是否出现官方确认、issue 或修复版本。
+- Codex CLI 0.151.0 用户报告 MCP 表单的 number/integer 字段被回退为普通批准框，接受后提交空 `content` 并形成循环。issue 指向仓库中的相关解析分支与测试，但尚无维护者结论，列为**可复现描述充分的未确认缺陷**。[GitHub issue](https://github.com/openai/codex/issues/41797)
 
 ## 来源链接
 
@@ -106,10 +112,13 @@ Enterprise、Business、Edu、Gov、Science、安全与行业方案未发现窗�
 - [Reddit：Codex / ChatGPT 使用限制讨论](https://www.reddit.com/r/ChatGPTCoding/comments/1w2etrb/help_understanding_the_new_restrictions_and_limits/)
 - [Reddit：Codex 上下文配置回退报告](https://www.reddit.com/r/codex/comments/1w2886c/codex_not_giving_the_user_set_context_window_and/)
 - [OpenAI Developer Community：Windows Desktop 长对话问题](https://community.openai.com/t/windows-desktop-26-825-51511-long-chats-can-lock-without-warning-work-long-paste-hangs-and-collapsed-messages-cannot-be-expanded/1393640)
+- [Codex GitHub：模型容量中断报告](https://github.com/openai/codex/issues/41790)
+- [Codex GitHub：macOS Renderer 内存耗尽报告](https://github.com/openai/codex/issues/41794)
+- [Codex GitHub：MCP 数值 elicitation 空提交报告](https://github.com/openai/codex/issues/41797)
 
 ## 采集状态
 
-- 已检查：OpenAI News / Research、Platform 文档与 changelog、ChatGPT Release Notes、Codex / Agents SDK / OpenAI SDK 官方 GitHub releases、OpenAI Developer Community，以及 Reddit、Hacker News、X/YouTube 公开搜索结果。
+- 已检查：OpenAI News / Research、Platform 文档与 changelog、ChatGPT Release Notes、Codex / Agents SDK / OpenAI SDK 官方 GitHub releases、Codex 官方仓库窗口内新建 issues、OpenAI Developer Community，以及 Reddit、Hacker News、X/YouTube 公开搜索结果。
 - 失败入口：X 完整时间线受登录限制；YouTube 未检出可核实的窗口内官方新视频；Hacker News 未发现可保留条目。
-- 初始候选：9；最终保留来源：7；二次补搜：否（最终来源不为 0）。
+- 初始候选：12；最终保留来源：10；二次补搜：否（最终来源不为 0）。
 - 图片：未配置。已检查本页官方来源，未找到适合作为对应条目配图且来源清晰的稳定公开图片 URL；不使用 GitHub/搜索结果动态缩略图。
