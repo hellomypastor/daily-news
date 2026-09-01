@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T01:01:48+08:00"
+updatedAt: "2026-09-02T04:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.4"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"
@@ -17,13 +17,16 @@ tags:
   - "Agent Engineering"
   - "Agent Harness"
   - "Agent Reliability"
+  - "Agent Runtime"
   - "Agent Skills"
   - "AI"
   - "Cline"
+  - "Codex"
   - "Coding Agent"
   - "DeepSeek Harness"
   - "Education"
   - "Generative UI"
+  - "Git"
   - "GitHub Trending"
   - "LLM"
   - "Long Context"
@@ -41,7 +44,7 @@ tags:
 
 ## 今日概览
 
-本轮技术亮点窗口为 **2026-08-31 01:01 至 2026-09-02 01:01（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线有两项明确发布：Cline Desktop 强化了子 Agent 取消传播与 provider 目录，DeepSeek Harness 连续迭代长会话和可持续子 Agent 通信。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
+本轮技术亮点窗口为 **2026-08-31 04:02 至 2026-09-02 04:02（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线有两项明确发布：Cline Desktop 强化了子 Agent 取消传播与 provider 目录，DeepSeek Harness 连续迭代长会话和可持续子 Agent 通信。截止前的新研究进一步暴露了 coding agent 启动阶段继承仓库 Git 配置的执行风险；Simon Willison 也拆解了 Codex 桌面运行时捆绑 LibreOffice 等开源工具的方式。截止前的新研究进一步暴露了 coding agent 启动阶段继承仓库 Git 配置的执行风险；Simon Willison 也拆解了 Codex 桌面运行时捆绑 LibreOffice 等开源工具的方式。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
 
 ## Coding Agent / Harness 雷达
 
@@ -76,6 +79,22 @@ tags:
 
 Simon Willison 介绍的 [wrapture](https://simonwillison.net/2026/Aug/31/introducing-wrapture/) 于 2026-09-01 07:59 +08:00 发布。它围绕 Python monkey-patching 提供声明式包装，目标是在不修改目标库源代码的情况下附加日志、追踪或测试行为；对 Agent 工程而言，这类低侵入 instrumentation 可用于观察工具调用与第三方 SDK 边界。该条是独立技术博客，不把作者评价扩写为性能结论。
 
+### 5. GitSpawn：仓库 Git 配置可在 coding agent 启动阶段触发宿主执行
+
+Manifold Security 于 2026-09-02 02:08 +08:00 发布 [GitSpawn 研究](https://www.manifold.security/blog/ai-coding-agents-git-hijack)。研究者称，多款 CLI coding agent 在启动或收集仓库上下文时调用 Git，却没有屏蔽仓库级 `core.fsmonitor` 等可执行配置，使不受信任仓库可能在提示发送甚至认证前触发宿主命令。文章逐项标注供应商响应：其中 Claude Code、Codex、Cursor 与 Goose 的相应问题已修补，另一些产品在发布时仍未修补；本页仅转述研究方复测状态，未独立执行攻击样例。
+
+### 6. Codex 桌面运行时捆绑 LibreOffice、Poppler 与完整 Python/Node
+
+Simon Willison 在 2026-09-02 03:03 +08:00 的 [运行时拆解](https://simonwillison.net/2026/Sep/1/codex-libreoffice/) 中记录，Codex 桌面应用缓存的 primary runtime 包含完整 Python、Node.js，以及 LibreOffice headless、Poppler、Git 等原生工具；配套 skills 指示 Agent 如何调用这些二进制。这提供了桌面 Agent 处理文档与 PDF 时“技能说明 + 本地开源运行时”的可观察实现样本，也提醒用户关注本地缓存体积和执行面。
+
+### 5. GitSpawn：仓库 Git 配置可在 coding agent 启动阶段触发宿主执行
+
+Manifold Security 于 2026-09-02 02:08 +08:00 发布 [GitSpawn 研究](https://www.manifold.security/blog/ai-coding-agents-git-hijack)。研究者称，多款 CLI coding agent 在启动或收集仓库上下文时调用 Git，却没有屏蔽仓库级 `core.fsmonitor` 等可执行配置，使不受信任仓库可能在提示发送甚至认证前触发宿主命令。文章逐项标注供应商响应：其中 Claude Code、Codex、Cursor 与 Goose 的相应问题已修补，另一些产品在发布时仍未修补；本页仅转述研究方复测状态，未独立执行攻击样例。
+
+### 6. Codex 桌面运行时捆绑 LibreOffice、Poppler 与完整 Python/Node
+
+Simon Willison 在 2026-09-02 03:03 +08:00 的 [运行时拆解](https://simonwillison.net/2026/Sep/1/codex-libreoffice/) 中记录，Codex 桌面应用缓存的 primary runtime 包含完整 Python、Node.js，以及 LibreOffice headless、Poppler、Git 等原生工具；配套 skills 指示 Agent 如何调用这些二进制。这提供了桌面 Agent 处理文档与 PDF 时“技能说明 + 本地开源运行时”的可观察实现样本，也提醒用户关注本地缓存体积和执行面。
+
 ## GitHub Trending
 
 以下均为 2026-09-02 01:01 左右抓取的 daily 榜单快照；星数增量是页面当时显示值，只表示当日热度。
@@ -89,7 +108,7 @@ Simon Willison 介绍的 [wrapture](https://simonwillison.net/2026/Aug/31/introd
 
 ## HN 讨论
 
-HN front/newest 已检查；Algolia recent submissions 查询连续出现 HTTP 500 与超时，因此本轮不记录无法可靠核对时间、积分和评论数的讨论条目。
+HN front/newest 与 Algolia recent submissions 已检查。GitSpawn 在 2026-09-02 02:06 +08:00 被提交到 HN；本轮抓取时为 2 points、1 条评论，互动仍低，因此不把它描述为热门讨论，其技术事实以上述研究原文为准。
 
 ## 论文 / 研究
 
@@ -125,6 +144,10 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 - [DeepSeek Harness v0.1.2-alpha.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4)
 - [DeepSeek Harness v0.1.2-alpha.3](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3)
 - [Introducing wrapture](https://simonwillison.net/2026/Aug/31/introducing-wrapture/)
+- [GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok](https://www.manifold.security/blog/ai-coding-agents-git-hijack)
+- [Codex bundles LibreOffice](https://simonwillison.net/2026/Sep/1/codex-libreoffice/)
+- [GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok](https://www.manifold.security/blog/ai-coding-agents-git-hijack)
+- [Codex bundles LibreOffice](https://simonwillison.net/2026/Sep/1/codex-libreoffice/)
 - [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)
 - [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector)
 - [video-use](https://github.com/browser-use/video-use)
@@ -136,7 +159,7 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 ## 采集状态
 
 - **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；Hugging Face Daily Papers、arXiv；Simon Willison。
-- **失败来源**：HN Algolia recent submissions（HTTP 500/超时）；GitHub Trending TypeScript（未返回可解析条目）。
-- **初始候选数**：18。
-- **保留来源数**：11。
+- **失败来源**：无。
+- **初始候选数**：24。
+- **保留来源数**：13。
 - **二次补搜**：否（最终来源不为 0）。

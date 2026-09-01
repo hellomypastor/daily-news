@@ -1,25 +1,29 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T01:01:43+08:00"
+updatedAt: "2026-09-02T04:03:14+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Codex 0.153.0-alpha.2"
-featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2"
-featuredSummary: "Codex 官方仓库发布 0.153.0-alpha.2 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-09-01 14:15 +08:00"
-featuredTags: ["Codex","预发布"]
+featuredTitle: "How AI-native companies turn workflows into operating capability"
+featuredUrl: "https://openai.com/index/ai-native-company-workflows"
+featuredSummary: "OpenAI 介绍 Basis、Clay 与 Exa Labs 如何使用 AI Agent 改进客户入驻、客户管理与开发者集成。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-09-02 01:00 +08:00"
+featuredTags: ["AI Adoption","Agent","Enterprise"]
 tags:
   - "稳定版"
   - "预发布"
   - "Agent"
+  - "AI Adoption"
   - "ChatGPT"
   - "Codex"
+  - "Connectors"
+  - "Enterprise"
+  - "Healthcare"
   - "OpenAI"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 01:01 至 2026-09-02 01:01（Asia/Shanghai）**。窗口内可核实的更新集中在 Codex 官方仓库：`0.152.0` 稳定版与 `0.153.0-alpha.1`、`0.153.0-alpha.2`、`0.152.0-alpha.7.2` 三个预发布。稳定版 release 提供完整 changelog；三个 alpha 页面只给版本标识，不能据此推断具体能力。OpenAI News RSS、ChatGPT release notes、Agents SDK Python/TypeScript 及官方 Python/Node SDK 未发现窗口内可核实的独立更新。
+采集窗口：**2026-09-01 04:02 至 2026-09-02 04:02（Asia/Shanghai）**。窗口内新增两条 OpenAI 官方动态：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源，以及 Basis、Clay、Exa Labs 使用 AI Agent 改造工作流的企业案例。编码主轴仍包括 Codex `0.152.0` 稳定版与 `0.153.0-alpha.1`、`0.153.0-alpha.2`、`0.152.0-alpha.7.2` 三个预发布；稳定版 release 提供完整 changelog，三个 alpha 页面只给版本标识，不能据此推断具体能力。ChatGPT release notes、Agents SDK Python/TypeScript 及官方 Python/Node SDK 未发现窗口内可核实的独立更新。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -57,11 +61,15 @@ tags:
 
 ## Tier 3：企业、教育、安全与行业
 
-- **Enterprise / Business / Edu / Gov / Science / safety**：OpenAI News、Help Center 与 Enterprise/Edu release notes 未发现窗口内可核实的独立更新。
+- **Healthcare / Enterprise**：OpenAI 宣布医疗机构现在可把 EHR 与其他可信行业数据源连接到 ChatGPT，帮助临床人员安全访问患者背景与医学研究。[官方产品公告](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)
+- **AI Adoption / 企业工作流**：OpenAI 总结 Basis、Clay 与 Exa Labs 如何使用 AI Agent 改进客户入驻、客户管理和开发者集成。[官方案例](https://openai.com/index/ai-native-company-workflows)
+- **Business / Edu / Gov / Science / safety**：除上述医疗与企业采用案例外，OpenAI News、Help Center 与 Enterprise/Edu release notes 未发现窗口内可核实的独立更新。
 - 本轮未保留日期不明的企业候选；没有把较旧公告重复包装成窗口内动态。
 
 ## 官方更新（最新在前）
 
+- OpenAI 发布企业 AI-native 工作流案例，涵盖 Basis、Clay 与 Exa Labs 的 Agent 实践。
+- OpenAI 宣布医疗机构可将 EHR 和其他行业数据源连接到 ChatGPT。
 - Codex `0.153.0-alpha.2`、`0.153.0-alpha.1` 为官方测试通道版本信号；页面没有功能清单。
 - Codex `0.152.0` 为本窗口的稳定版更新，官方 release 披露了交互、凭据、MCP 与安全相关变化。
 - Codex `0.152.0-alpha.7.2` 为较早的官方预发布，页面没有功能清单。
@@ -76,7 +84,7 @@ tags:
 
 ## 口碑判断
 
-整体情绪：**证据不足，暂不定性**。本轮可保留来源全部为官方 release，不能代表用户情绪；Reddit、Developer Community、Hacker News 与公开社交搜索没有提供足够可靠的新样本。
+整体情绪：**证据不足，暂不定性**。本轮可保留来源全部为官方发布与官方案例，不能代表用户情绪；Reddit、Developer Community、Hacker News 与公开社交搜索没有提供足够可靠的新样本。
 
 ## 对比与替代工具信号
 
@@ -92,6 +100,8 @@ tags:
 
 ## 来源链接
 
+- [AI-native companies turn workflows into operating capability](https://openai.com/index/ai-native-company-workflows)
+- [ChatGPT connects health records and healthcare sources](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)
 - [Codex 0.153.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)
 - [Codex 0.153.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)
 - [Codex 0.152.0](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
@@ -101,5 +111,5 @@ tags:
 
 - 已检查：OpenAI News / Research / Product RSS 与索引、开发者文档和平台 changelog、ChatGPT 及 Enterprise/Edu release notes、Codex / Agents SDK / Python / Node 官方 GitHub releases、OpenAI Developer Community、Reddit、Hacker News、X 与 YouTube/播客公开检索。
 - 失败来源：ChatGPT release notes HTML 直连返回 403；X 未得到可直接验证时间戳的窗口内条目；YouTube/播客未发现可核实的新条目。
-- 初始候选：**5**（4 个窗口内 Codex release，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**4**；二次补搜：**否**（最终来源不为 0）。
-- 图片：**未配置**。4 个保留来源均为 GitHub release 页面，未发现适合作为新闻配图的专题原图，故宁可纯文字展示。
+- 初始候选：**7**（4 个窗口内 Codex release、2 个窗口内 OpenAI News 官方条目，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**6**；二次补搜：**否**（最终来源不为 0）。
+- 图片：**未配置**。本轮直连 OpenAI 文章页遇到验证页，未能可靠核验专题原图；GitHub release 页面也没有合适的故事图片，故宁可纯文字展示。

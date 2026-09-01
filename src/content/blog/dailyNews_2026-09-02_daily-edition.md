@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-09-02"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T01:02:00+08:00"
+updatedAt: "2026-09-02T04:04:38+08:00"
 description: "2026-09-02 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-02"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -26,7 +26,7 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[Codex 0.153.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)**。Codex 官方仓库发布 0.153.0-alpha.2 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[How AI-native companies turn workflows into operating capability](https://openai.com/index/ai-native-company-workflows)**。OpenAI 介绍 Basis、Clay 与 Exa Labs 如何使用 AI Agent 改进客户入驻、客户管理与开发者集成。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-02_openai)
 
@@ -43,7 +43,7 @@ tags:
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[Introducing Claude Fable 5.1 and Claude Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1)**。Fable 5.1 与受信访问的 Mythos 5.1 覆盖编码、长时间 Agent、科研、价格和安全护栏，产品集成由窗口内 Claude Code Release 佐证。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-02_ai-industry)
 

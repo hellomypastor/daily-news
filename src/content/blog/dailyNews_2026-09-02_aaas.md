@@ -1,19 +1,27 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T01:01:00+08:00"
+updatedAt: "2026-09-02T04:04:38+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTags: []
 tags:
+  - "24–72 小时观察"
+  - "多 Agent"
+  - "邻近信号"
+  - "日期未确认"
+  - "视频创作"
   - "AaaS"
   - "Agent"
   - "Cloud Agent"
+  - "Grok"
   - "Managed Agent"
+  - "Safety"
+  - "xAI"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 01:01 至 2026-09-02 01:01（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-30 01:01 至 2026-09-01 01:01**。本轮没有发现可确认的新 AaaS 发布。Devin 与 xAI/Grok 已按要求独立核查；均未出现新的托管异步执行、远程环境、并发、定价、企业控制面或集成动态。因最终来源为 0，已完成扩大中英文关键词、备用官方入口、GitHub 与可信二手来源的第二轮搜索。
+采集窗口：**2026-09-01 04:02 至 2026-09-02 04:02（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-30 04:02 至 2026-09-01 04:02**。本轮没有发现可确认的新 AaaS 发布，但在观察窗口保留 1 条可信二手 AaaS 候选，并记录 1 条官方 MaaS/安全邻近信号。Devin 与 xAI/Grok 已按要求独立核查；均未出现新的托管异步执行、远程环境、并发、定价、企业控制面或集成动态。因最终来源为 0，已完成扩大中英文关键词、备用官方入口、GitHub 与可信二手来源的第二轮搜索。
 
 ## 重点动态
 
@@ -42,7 +50,7 @@ Devin、Grok Bot、Jules、GitHub Copilot cloud agent、Replit Agent、Cursor、
 
 ## 日期未确认
 
-本轮没有保留新的日期未确认候选；搜索摘要或无发布日期的现有能力页不足以证明本轮发生变化。
+- **千问创作 Agent Teams（可信二手、事件日期为 8 月 31 日，具体时刻未确认）**：艾媒网 9 月 1 日报道，千问创作面向全部用户开放 Agent Teams，并接入 Wan3.0，将视频创作拆分为脚本、分镜、画面和配音配乐等多 Agent 协作环节。该事件位于 24–72 小时观察窗，尚未找到带精确发布时间的独立官方公告，因此不计为过去 24 小时已确认发布。[可信二手报道](https://www.iimedia.cn/c1088/115562.html)
 
 ## 未证实传闻
 
@@ -50,22 +58,24 @@ Devin、Grok Bot、Jules、GitHub Copilot cloud agent、Replit Agent、Cursor、
 
 ## 邻近信号观察池
 
-普通模型/API 更新、通用执行基础设施与本地/自托管 harness 命中均未出现本窗口内新的“供应商托管 Agent 生命周期”证据，因此不列为动态。
+- **xAI Grok 4.6 生物安全评测（官方、非 AaaS）**：xAI 于 9 月 1 日发布 LatchBio 独立评测解读，涉及 Agent harness 中的文件检查、工具使用与环境推理，但没有新增托管执行、后台任务、远程环境或企业 Agent 服务证据，故仅作为 MaaS/安全邻近信号。[xAI 官方文章](https://x.ai/news/biosafety-at-the-frontier)
+- 其余普通模型/API 更新、通用执行基础设施与本地/自托管 harness 命中均未出现本窗口内新的“供应商托管 Agent 生命周期”证据。
 
 ## 趋势判断
 
-本轮没有新增证据，无法支持新的行业趋势结论。
+观察窗内的千问创作候选显示，多 Agent 协作正向托管内容生产流程延伸；但目前只有可信二手报道，证据不足以据此推断更广泛行业趋势。
 
 ## 来源链接
 
-本轮无保留来源。
+- [千问创作推出 Agent Teams（可信二手）](https://www.iimedia.cn/c1088/115562.html)
+- [Biosecurity at the frontier（xAI 官方，邻近信号）](https://x.ai/news/biosafety-at-the-frontier)
 
 ## 采集状态
 
 - 已检查：Devin 与 xAI/Grok 必查入口；GitHub、Google、Microsoft、Replit、Cursor、Lindy、CrewAI、LangGraph、Amazon Q、Cloudflare、Factory、Amp；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code；字节跳动重点及主要中国厂商。
 - 失败入口：部分产品/文档页无逐条日期；部分社交入口需要登录或仅有摘要；部分 changelog 存在索引延迟。
-- 初始候选：6 条；最终保留：0 条。候选均为已报告的跨日旧背景、窗口外更新或 MaaS/PaaS/自托管 harness 邻近信号。
+- 初始候选：8 条；最终保留：2 条（1 条 24–72 小时可信二手 AaaS 候选、1 条官方 MaaS/安全邻近信号）；过去 24 小时确认的 AaaS 发布仍为 0 条。
 - 二次补搜：是；已扩大中英文关键词并切换官方 changelog、GitHub 与可信二手入口，仍未发现合格新增。
-- 图片：无；没有合格来源，故不配置页面图片。
+- 图片：无；观察池与邻近信号均不适合作为首页图片，故不配置页面图片。
 
-今日扫描完成，共 0 条动态，重点：过去 24 小时无可确认的新 AaaS 发布；Devin 与 xAI/Grok 均已完成专项检查。
+今日扫描完成，共 2 条观察动态，重点：过去 24 小时无可确认的新 AaaS 发布；千问 Agent Teams 进入日期未确认观察，xAI 生物安全评测仅作邻近信号；Devin 与 xAI/Grok 均已完成专项检查。

@@ -1,31 +1,48 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T01:01:00+08:00"
+updatedAt: "2026-09-02T04:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTags: []
+featuredTitle: "Introducing Claude Fable 5.1 and Claude Mythos 5.1"
+featuredUrl: "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+featuredSummary: "Fable 5.1 与受信访问的 Mythos 5.1 覆盖编码、长时间 Agent、科研、价格和安全护栏，产品集成由窗口内 Claude Code Release 佐证。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredTags: ["Anthropic","Model","Coding Agent","详见 Claude 专题页"]
 tags:
   - "日期未确认"
+  - "详见 Claude 专题页"
+  - "详见 OpenAI 专题页"
   - "Agent"
   - "Agent Safety"
   - "AI"
+  - "Anthropic"
+  - "Claude Code"
+  - "Coding Agent"
+  - "Enterprise"
+  - "Enterprise Adoption"
+  - "Healthcare"
   - "Industry"
   - "Microsoft"
+  - "Model"
+  - "OpenAI"
   - "Research"
   - "Responsible AI"
+  - "Security"
 ---
 
 ## 今日概览
 
-采集截止 **2026-09-02 01:01（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 01:01 至 2026-09-02 01:01**，另检查 24–48 小时与 48–72 小时补充。本轮最明确的新信号是 Microsoft 发布 2026 责任 AI 透明度报告配套说明，披露 AI Red Teaming Agent、Agent evaluators、ASSERT 与 Agent Control Specification，并把 Agent 身份、工具权限和动作监控列为治理重点。官方页只标注 9 月 1 日而无精确时刻，因此保守列入“日期未确认”。
+采集截止 **2026-09-02 04:02（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 04:02 至 2026-09-02 04:02**。本轮新增的行业信号集中在三条主线：Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，OpenAI 展示 Agent 原生企业的工作流实践并开放医疗机构连接 EHR 等行业数据，Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
 
 ## 优先动态（过去 24 小时）
 
-未发现同时具备可打开原始来源与精确发布时间、可严格确认落入窗口的厂商发布。Anthropic 与 OpenAI 官方入口均已检查；相关生态内容分别详见 Claude 专题页与 OpenAI 专题页。
+1. **Claude Code v2.1.257 落地 Fable 5.1 与更完整的 Agent 控制面**：新版本加入 Fable 5.1、跨工作目录读取确认、子 Agent 模型强制设置，以及后台会话、沙箱、MCP、Remote Control 和 VS Code 更新，体现 coding Agent 向长期任务、安全边界与企业控制演进。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)（详见 Claude 专题页）
+2. **OpenAI 汇总 AI-native 企业的 Agent 工作流实践**：Basis、Clay 与 Exa Labs 案例覆盖客户入驻、客户管理、研究和开发者集成，显示 Agent 从单点助手进入企业核心运营流程。[OpenAI 原文](https://openai.com/index/ai-native-company-workflows)（详见 OpenAI 专题页）
+3. **ChatGPT 面向医疗机构连接 EHR 与行业数据**：医疗组织可把 EHR 和其他可信来源接入 ChatGPT，以便临床人员获取患者背景与医学研究，属于受监管行业数据接入的重要产品信号。[OpenAI 原文](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)（详见 OpenAI 专题页）
+4. **Fable 5.1 / Mythos 5.1 发布**：Fable 5.1 面向编码、知识工作和长时间 Agent 任务，Mythos 5.1 通过网络安全与生命科学受信访问计划提供；官方文章未给精确时刻，但 Claude Code v2.1.257 的 01:53 发布记录确认了窗口内产品集成。[Anthropic 原文](https://www.anthropic.com/claude-fable-and-mythos-5-1)（详见 Claude 专题页）
 
 ## 常规动态
 
-除下方 Microsoft 日期未确认条目外，未发现可核验的窗口内独立更新。
+除上述 Anthropic 与 OpenAI 官方动态，以及下方 Anthropic EFS、Microsoft 治理条目外，未发现其他需要跨主题重复的独立更新。
 
 ## 播客
 
@@ -43,6 +60,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 | 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 | 原文 |
 |---|---|---|---|---|---|---|
+| Anthropic | Developing Enterprise Frontier Safeguards with our customers | 企业安全 / 数据治理 | 2026-09-01，官方日期；时刻未给出 | EFS 让企业在自有云环境保存数据并默认自行完成人工复核，计划覆盖 Claude Code、Claude Enterprise、Claude Platform 与主要云平台。 | 由超过 100 家客户参与开发，显示前沿模型的安全控制与零数据保留需求正在转化为企业级基础设施；详见 Claude 专题页。 | [原文](https://www.anthropic.com/news/enterprise-frontier-safeguards) |
 | Microsoft | Responsible AI in 2026 | 治理 / Agent 安全 | 2026-09-01，官方日期；时刻未给出 | Microsoft 发布第三份年度责任 AI 透明度报告，说明新的 AI Red Teaming Agent、Agent evaluators、RAMPART、ASSERT 与 Agent Control Specification，并强调 Agent 身份、工具权限和动作监控。 | Agent 治理正从发布前模型评估转向覆盖身份、权限、工具链、运行时控制与持续监测的生命周期体系。 | [原文](https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/) |
 
 ## 观察池
@@ -53,12 +71,12 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 一句话总结
 
-Microsoft 的最新透明度报告把 Agent 身份、工具权限、运行时控制与持续监测推到责任 AI 治理中心，但因页面没有精确时刻，本轮不把它冒充严格窗口内确认发布。
+Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、企业控制面和行业数据连接扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、文档、API/模型变更、DeepSearch、语音、编码、工具调用和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：部分中国厂商官网/社交入口无可核验窗口内原文；播客无截止时间前新集；部分官方页面仅给日期。
-- 初始候选数：7；保留来源数：1。
-- 图片检查：唯一保留来源属于日期未确认条目，按规则不配置为页面图片。
+- 初始候选数：12；保留来源数：6。
+- 图片检查：本轮跨主题来源未额外配置页面图片；日期未确认条目不作为首页图片候选。
 - 二次补搜：否（最终来源不为 0）。
