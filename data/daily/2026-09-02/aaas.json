@@ -1,0 +1,31 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-09-02T01:01:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition Devin 2026 release notes、Recent Updates、API release notes、官方博客与文档：显式检查托管异步 session、环境/快照、并发、计划任务、ACU/定价、企业治理、API 与集成；截至窗口末无可确认新增",
+      "SpaceXAI/xAI News 与开发者文档：显式检查 Grok Bot、Automations、Workflows、Agent Tools API、远程代码执行、托管计算机、异步/后台任务及企业接入；无本窗口新增，不跨日重复 8 月 29 日旧条目",
+      "GitHub Changelog、Google Vertex/Gemini/Jules、Microsoft Copilot Studio/Azure Agent Service、Replit、Cursor、Lindy、CrewAI、LangGraph Platform、Amazon Q、Cloudflare Agents/Sandbox/Computer、Factory、Sourcegraph/Amp 官方入口",
+      "Cline 官方博客/文档/定价：检查托管云执行、后台/定时任务、远程环境、并发、企业控制与定价；无新证据",
+      "Pi Coding Agent / pi-mono 官方站、仓库与文档：未见托管云执行、后台任务、远程环境或企业控制面新证据",
+      "DeepSeek Harness / DSH 官方站、仓库、release、discussion 与文档：未见供应商托管执行生命周期、并发服务或商业定价新证据",
+      "OpenCode、Aider、Continue、Roo Code 官方仓库与文档：快速检查 cloud/background/remote/scheduled/enterprise/pricing；无符合 AaaS 定义的新发布",
+      "字节跳动 Coze/火山引擎/Doubao/Trae/Seed 官方入口：重点检查托管执行、定时任务、远程环境与企业控制",
+      "阿里云百炼/Qoder/通义/夸克、腾讯元宝/混元/云、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax、DeepSeek 及可信创业公司官方入口",
+      "第二轮扩展检索：中英文托管 Agent、云端异步智能体、background agent、managed agent runtime、remote coding agent、scheduled agent，并切换官方 changelog、GitHub 与可信二手入口"
+    ],
+    "failedSources": [
+      "部分厂商产品页和文档只显示当前能力、没有逐条发布日期，无法把抓取时间视为发布时间",
+      "部分社交平台搜索需要登录或只返回搜索摘要，未作为事实确认依据",
+      "搜索索引对部分官方 changelog 的最新条目存在抓取延迟，仅在能打开原页并核实日期时计入"
+    ],
+    "candidateCount": 6,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-09-01 01:01 至 2026-09-02 01:01（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-30 01:01 至 2026-09-01 01:01**。本轮没有发现可确认的新 AaaS 发布。Devin 与 xAI/Grok 已按要求独立核查；均未出现新的托管异步执行、远程环境、并发、定价、企业控制面或集成动态。因最终来源为 0，已完成扩大中英文关键词、备用官方入口、GitHub 与可信二手来源的第二轮搜索。\n\n## 重点动态\n\n过去 24 小时没有可确认的 AaaS 新发布。日期未确认、较旧背景与普通模型/API 命中均没有足够新证据，不为填充页面而跨日重复。\n\n## 远程 / 云端 Agent 执行\n\nDevin、Grok Bot、Jules、GitHub Copilot cloud agent、Replit Agent、Cursor、Factory、Amp、Cloudflare Agents 等官方入口均已检查，未发现本窗口内可核实的新托管异步任务、远程环境、并发、定价或企业控制面发布。\n\n## 海外厂商\n\n- **Cognition Devin：无新增。** 已显式检查官方 2026 release notes、Recent Updates、API release notes、博客与文档，覆盖托管异步 session、环境与快照、并发和子 session、计划任务、ACU/定价、企业治理以及 API、Slack、Linear、Jira 与 MCP 集成。\n- **xAI/Grok：无新增。** 已显式检查 Grok Bot、Automations、Workflows、Agent Tools API、远程代码执行、托管计算机、异步任务与企业/API Agent 能力。普通 Grok 模型/API 新闻不等于 AaaS，详见行业专题页。\n- **Coding Agent / Harness：无新增。** Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue、Roo Code 均检查托管 cloud/background/scheduled/remote execution、并发、企业控制与定价证据；本地或自托管变化仍归开源专题。\n\n## 中国市场（字节跳动重点）\n\n- **字节跳动 Coze / 火山引擎 / Doubao / Trae / Seed：无可确认新增。** 已检查托管执行、定时任务、远程环境与企业控制相关入口。\n- 阿里云百炼 / Qoder / 通义 / 夸克、腾讯元宝 / 混元 / 云、百度 AgentBuilder / Comate、智谱、Kimi、MiniMax、DeepSeek 等官方入口未见本窗口内可确认的 AaaS 发布。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- 模型、推理 API、上下文窗口与工具调用接口属于 MaaS；只有服务方进一步托管任务、会话、环境、调度或执行生命周期时才计入 AaaS。\n- 通用容器、沙箱、浏览器和云运行时属于 PaaS 邻近能力；没有 Agent loop、任务编排、持久状态或企业控制面证据时不作为 AaaS 发布。\n- 本地或自托管 coding harness 的 release、插件和模型适配不等于供应商托管服务。\n\n## 日期未确认\n\n本轮没有保留新的日期未确认候选；搜索摘要或无发布日期的现有能力页不足以证明本轮发生变化。\n\n## 未证实传闻\n\n本轮没有保留单一来源泄漏或未经官方确认的产品发布传闻。\n\n## 邻近信号观察池\n\n普通模型/API 更新、通用执行基础设施与本地/自托管 harness 命中均未出现本窗口内新的“供应商托管 Agent 生命周期”证据，因此不列为动态。\n\n## 趋势判断\n\n本轮没有新增证据，无法支持新的行业趋势结论。\n\n## 来源链接\n\n本轮无保留来源。\n\n## 采集状态\n\n- 已检查：Devin 与 xAI/Grok 必查入口；GitHub、Google、Microsoft、Replit、Cursor、Lindy、CrewAI、LangGraph、Amazon Q、Cloudflare、Factory、Amp；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code；字节跳动重点及主要中国厂商。\n- 失败入口：部分产品/文档页无逐条日期；部分社交入口需要登录或仅有摘要；部分 changelog 存在索引延迟。\n- 初始候选：6 条；最终保留：0 条。候选均为已报告的跨日旧背景、窗口外更新或 MaaS/PaaS/自托管 harness 邻近信号。\n- 二次补搜：是；已扩大中英文关键词并切换官方 changelog、GitHub 与可信二手入口，仍未发现合格新增。\n- 图片：无；没有合格来源，故不配置页面图片。\n\n今日扫描完成，共 0 条动态，重点：过去 24 小时无可确认的新 AaaS 发布；Devin 与 xAI/Grok 均已完成专项检查。",
+  "sources": []
+}

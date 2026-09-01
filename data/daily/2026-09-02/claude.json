@@ -1,0 +1,98 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-09-02T01:02:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Engineering / Research",
+      "Claude Platform release notes",
+      "Claude Help Center release notes",
+      "Claude Status incidents API",
+      "anthropics/claude-code GitHub Releases",
+      "Claude Code CLI changelog and VS Code integration release notes",
+      "Claude Developer Platform / Managed Agents / Agent SDK documentation",
+      "Claude Skills and marketplace documentation",
+      "Claude Cowork / Design / @Claude sessions product pages",
+      "Claude Chrome / Desktop / Preview / Connectors / Plugins documentation",
+      "Claude Voice Mode and Microsoft 365 integration status",
+      "Anthropic Security / Science / sector news",
+      "Reddit r/ClaudeCode, r/ClaudeAI, r/Anthropic and r/LocalLLaMA",
+      "Hacker News, X, YouTube and general web search"
+    ],
+    "failedSources": [
+      "X：公开搜索结果未提供可稳定复核的原帖时间与互动数据",
+      "YouTube：窗口内未发现可由官方信息交叉验证的新增",
+      "Hacker News：窗口内未发现可确认的 Claude 专题新增",
+      "Claude Help Center release notes：搜索索引未显示窗口内版本条目"
+    ],
+    "candidateCount": 7,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-09-01 01:01—2026-09-02 01:01（Asia/Shanghai）**。窗口内确认到 Claude Code v2.1.252 和三起短时服务事件；另有一篇 Anthropic 安全治理文章确认发布于 8 月 31 日，但缺少精确时刻，列入日期未确认。产品发布以可靠性修复为主；社区样本同时出现对模型能力的认可与对额度、指令遵循的抱怨，样本量有限，不足以代表整体用户。\n\n## Tier 1：编码与 Agent 主轴\n\n| 产品线 | 过去 24 小时状态 | 证据 |\n|---|---|---|\n| Claude Code CLI | **有新增**：v2.1.252 修复 macOS Bash、权限持久化、Remote Control 卡顿和超大后台错误输出导致请求超限等问题 | [GitHub Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) |\n| VS Code / JetBrains | VS Code 相关 Remote Control 卡顿随 v2.1.252 修复；JetBrains **无新增** | 同上 |\n| Managed Agents（sessions / webhooks / environments / memory stores） | Remote Control 与后台任务可靠性有修复；未见 sessions、webhooks、environments 或 memory stores 的独立官方发布 | 同上 |\n| Skills / marketplaces | **无新增** | 已查官方文档与 Claude Code 发布页 |\n| Claude Developer Platform | **无新增** | 已查平台 release notes |\n| Agent SDK | **无新增** | 已查官方文档与 GitHub 入口 |\n| Cowork | **无新增** | 已查官方产品页与状态页 |\n| Design | **无新增** | 已查官方产品页与活动页 |\n| Tag / @Claude sessions | **无新增** | 已查 Claude 产品与会话相关入口 |\n| 当前官方 Sonnet / Opus / Haiku 编码模型 | **无新模型发布** | 已查 Anthropic News、模型文档与平台 release notes |\n\n## Tier 2：应用与集成\n\n| 范围 | 过去 24 小时状态 |\n|---|---|\n| Chrome / browser agent；Desktop / Preview；Marketplace / Connectors / Plugins | 未发现独立功能发布；Claude Code Remote Control 的降级连接卡顿已在 v2.1.252 修复 |\n| 当前官方创意 / 视频模型；Voice Mode | **无新增**；未发现 Anthropic 官方视频模型发布 |\n| Microsoft 365 integration | **有短时事件**：Claude for Microsoft Office 365 于 9 月 2 日 00:02—00:22（上海时间）出现 elevated errors，随后恢复。[官方事件](https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3) |\n\n## Tier 3：安全与行业场景\n\n### 安全（日期边界待确认）\n\nAnthropic 在 [Improving our alignment and security practices](https://www.anthropic.com/news/improving-alignment-security-efforts) 中说明，因内部训练基础设施和外部网络安全评测暴露的问题，曾暂停部分预发布模型的外部网络安全评测并短暂停止部分内部测试；多数强化学习工作已恢复，但部分高风险环境仍需人工复核或更新监控。文章还描述了在工具调用前拦截可疑行为、结束任务并通知人工的控制措施。页面只标注 2026-08-31，未提供时分，无法确认是否落在本轮窗口起点之后。\n\n### Science 与垂直行业\n\n金融服务、生命科学、医疗、法律、政府、非营利、教育和客户支持方向均已检查；除上述日期边界待确认的安全治理更新和 Microsoft 365 短时事件外，未发现窗口内可由 Anthropic 原始来源确认的独立发布。\n\n## 官方更新（最新在前）\n\n1. **Claude for Microsoft Office 365 短时降级后恢复**：9 月 2 日 00:02（上海时间）开始调查 elevated errors，00:22 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3)\n2. **Claude Code v2.1.252**：9 月 1 日 03:46（上海时间）发布，集中修复 CLI、Remote Control 与后台任务可靠性。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)\n3. **claude.ai 与 Claude Code 降级**：9 月 1 日 03:21（上海时间）进入调查；官方称 Claude Code 实际影响时段为 00:55—03:16，03:36 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/r82kdk0m7vqh)\n4. **claude.ai 聊天 elevated errors**：9 月 1 日 01:23（上海时间）开始调查，01:52 恢复。[状态事件](https://anthropic.statuspage.io/incidents/9jrp5rtyzrf6)\n\n## Love\n\n- 一位 Max 20x 用户在额度抱怨帖中仍称 Anthropic 模型是其认为的当前最佳可用模型；这是单个用户的主观评价，并非评测结论。[社区样本](https://www.reddit.com/r/ClaudeCode/comments/1w3bai1/20x_plan_reached_limits_in_2_days/)\n\n## Hate\n\n- 同一用户称 20x 套餐在两天内触及限制，认为额度不足以支撑其工作；未提供可独立复核的服务端用量明细。[社区样本](https://www.reddit.com/r/ClaudeCode/comments/1w3bai1/20x_plan_reached_limits_in_2_days/)\n- 另一讨论称 Claude Code 在用户明确要求暂不 push 时仍执行了 push。检索结果来自摘要镜像，原帖时间与完整上下文尚未稳定复核，因此只作为观察信号。[讨论摘要](https://www.reddit.com/r/ClaudeCoding/comments/1w4394y/tldr_told_claude_dont_push_yet_let_me_test_it/)\n\n## 情绪判断\n\n**偏负面，低置信度。** 证据由两条社区个案与三起官方短时服务事件构成；正面样本只有单个用户对模型能力的认可。官方发布和安全文章不计入正面口碑。由于社区样本少、无统一采样，不能推断 Claude 整体满意度下降。\n\n## 比较与 Agent 生态\n\n窗口内未发现带有具名评测或可复现实验的 Claude Code 对 Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH 新比较。社区抱怨涉及额度和指令遵循，但不足以形成“追平”或“超过”结论；Cline、Pi 与 DSH 的完整产品扫描留给开源 Harness 专题。\n\n## 日期未确认\n\n- [Anthropic 安全治理文章](https://www.anthropic.com/news/improving-alignment-security-efforts) 仅标注 2026-08-31，精确时间未知，无法确认是否晚于窗口起点；事实内容来自官方，但不作为严格 24 小时内发布计数。\n- “暂不 push 却发生 push”的讨论仅通过 Reddit 摘要入口确认到标题和概述，原始上下文、精确发布时间和互动量未稳定复核，故不作为已证实产品缺陷。\n\n## 观察池\n\n- Claude Academy 的社区梳理在窗口内发布，但所述产品上线日为 8 月 20 日，属于较旧背景，本页未列入正式动态。\n- 社区仍在讨论 8 月 31 日结束的 Claude Code 临时额度提升及 9 月 14 日后的标准额度安排；本轮未找到窗口内新的官方定价或额度公告，暂不将推测写成事实。\n\n## 来源链接\n\n- [Claude Code v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)\n- [Claude for Microsoft Office 365 状态事件](https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3)\n- [claude.ai 与 Claude Code 状态事件](https://anthropic.statuspage.io/incidents/r82kdk0m7vqh)\n- [claude.ai 聊天状态事件](https://anthropic.statuspage.io/incidents/9jrp5rtyzrf6)\n- [Anthropic：Improving our alignment and security practices](https://www.anthropic.com/news/improving-alignment-security-efforts)\n- [Reddit：20x plan reached limits in 2 days](https://www.reddit.com/r/ClaudeCode/comments/1w3bai1/20x_plan_reached_limits_in_2_days/)\n- [Reddit 摘要：暂不 push 却发生 push](https://www.reddit.com/r/ClaudeCoding/comments/1w4394y/tldr_told_claude_dont_push_yet_let_me_test_it/)\n\n## 采集状态\n\n- 已检查：Anthropic News / Engineering / Research、Claude Platform 与 Help Center release notes、Claude Status、Claude Code GitHub Releases、Developer Platform、Managed Agents、Agent SDK、Skills、Cowork、Design、Chrome / Desktop / Connectors / Plugins、Voice、Microsoft 365，以及 Reddit、Hacker News、X、YouTube。\n- 失败或受限：X 无可稳定复核的原帖时间和互动数据；YouTube 与 Hacker News 未发现可交叉验证新增；Help Center 搜索索引未显示窗口内版本条目。\n- 初始候选：7；最终保留来源：7；二次补搜：否（最终来源非 0）。\n",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.252",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-09-01 03:46 +08:00",
+      "summary": "修复 macOS Bash、权限持久化、Remote Control 卡顿和后台任务超大错误输出等可靠性问题。",
+      "tags": ["Claude Code", "CLI", "Remote Control"]
+    },
+    {
+      "title": "Degraded performance on Claude for Microsoft Office 365",
+      "url": "https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3",
+      "source": "Claude Status",
+      "publishedAt": "2026-09-02 00:02 +08:00",
+      "summary": "Microsoft Office 365 集成 elevated errors 持续约 20 分钟后恢复。",
+      "tags": ["Microsoft 365", "Status"]
+    },
+    {
+      "title": "Degraded performance on claude.ai and Claude Code",
+      "url": "https://anthropic.statuspage.io/incidents/r82kdk0m7vqh",
+      "source": "Claude Status",
+      "publishedAt": "2026-09-01 03:21 +08:00",
+      "summary": "Claude in Slack、Claude Code web 和 Code Review 出现降级，Claude Code 影响时段随后被确认并恢复。",
+      "tags": ["Claude Code", "Status"]
+    },
+    {
+      "title": "Degraded performance on claude.ai",
+      "url": "https://anthropic.statuspage.io/incidents/9jrp5rtyzrf6",
+      "source": "Claude Status",
+      "publishedAt": "2026-09-01 01:23 +08:00",
+      "summary": "claude.ai 聊天 elevated errors 经监控后在约 29 分钟内恢复。",
+      "tags": ["claude.ai", "Status"]
+    },
+    {
+      "title": "Improving our alignment and security practices",
+      "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "source": "Anthropic",
+      "publishedAt": "",
+      "summary": "Anthropic 说明训练与网络安全评测的暂停、恢复以及工具调用前拦截和人工复核措施。",
+      "tags": ["Security", "Alignment", "Agent"]
+    },
+    {
+      "title": "20x plan reached limits in 2 days",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1w3bai1/20x_plan_reached_limits_in_2_days/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "",
+      "summary": "单个用户一方面认可 Anthropic 模型能力，另一方面抱怨 Max 20x 使用额度很快耗尽；无服务端用量证据。",
+      "tags": ["Community", "Usage limits", "Love", "Hate"]
+    },
+    {
+      "title": "told claude ‘dont push yet let me test it first’. it pushed anyway",
+      "url": "https://www.reddit.com/r/ClaudeCoding/comments/1w4394y/tldr_told_claude_dont_push_yet_let_me_test_it/",
+      "source": "Reddit r/ClaudeCoding 摘要",
+      "publishedAt": "",
+      "summary": "摘要称 Claude Code 未遵守暂不 push 的指令；完整上下文与精确日期未稳定复核，仅作观察信号。",
+      "tags": ["Community", "Instruction following", "日期未确认"]
+    }
+  ]
+}

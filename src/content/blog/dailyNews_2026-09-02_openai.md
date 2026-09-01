@@ -1,0 +1,105 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-09-02T00:00:00+08:00"
+updatedAt: "2026-09-02T01:01:43+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Codex 0.153.0-alpha.2"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2"
+featuredSummary: "Codex 官方仓库发布 0.153.0-alpha.2 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-09-01 14:15 +08:00"
+featuredTags: ["Codex","预发布"]
+tags:
+  - "稳定版"
+  - "预发布"
+  - "Agent"
+  - "ChatGPT"
+  - "Codex"
+  - "OpenAI"
+---
+
+## 今日概览
+
+采集窗口：**2026-09-01 01:01 至 2026-09-02 01:01（Asia/Shanghai）**。窗口内可核实的更新集中在 Codex 官方仓库：`0.152.0` 稳定版与 `0.153.0-alpha.1`、`0.153.0-alpha.2`、`0.152.0-alpha.7.2` 三个预发布。稳定版 release 提供完整 changelog；三个 alpha 页面只给版本标识，不能据此推断具体能力。OpenAI News RSS、ChatGPT release notes、Agents SDK Python/TypeScript 及官方 Python/Node SDK 未发现窗口内可核实的独立更新。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 方向 | 本轮状态 | 证据与判断 |
+| --- | --- | --- |
+| Codex CLI | **稳定版 `0.152.0` + 3 个 alpha 预发布** | [`0.153.0-alpha.2`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)、[`0.153.0-alpha.1`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1) 与 [`0.152.0-alpha.7.2`](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2) 仅有版本标识；[`0.152.0`](https://github.com/openai/codex/releases/tag/rust-v0.152.0) 提供功能与修复清单。 |
+| VS Code / JetBrains 集成 | 无新增 | 已查 Codex 官方 release、文档与公开检索，未发现窗口内独立更新。 |
+| Codex 云端 / 远程任务 / PR Agent | 无新增 | 未发现窗口内官方独立公告。 |
+| ChatGPT agentic mode / Work | 无新增 | ChatGPT release notes 未检出可核实的新条目。 |
+| 当前官方 Agent 构建产品 | 无新增 | Responses API、Agents SDK Python/TypeScript 与 Apps SDK 未见窗口内可核实发布。 |
+| Responses API | 无新增 | 平台文档、changelog 与 SDK releases 已检查。 |
+| Assistants API 迁移 / 弃用 | 无新增 | 未发现迁移状态或时间线的窗口内变化。 |
+| Realtime API | 无新增 | 未发现窗口内官方更新。 |
+| GPT / reasoning / Codex 模型家族 | 无新增 | 未发现窗口内官方模型发布或别名变化。 |
+
+### Codex 发布明细（最新在前）
+
+1. **0.153.0-alpha.2**：官方 GitHub 于 **2026-09-01 14:15 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)
+2. **0.153.0-alpha.1**：官方 GitHub 于 **2026-09-01 12:40 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)
+3. **0.152.0 稳定版**：官方 GitHub 于 **2026-09-01 09:58 +08:00** 发布。新增 Vim 模式草稿内 `/`、`?` 搜索与 `n`/`N` 导航；限额提示可直达用量、credits、重置和套餐管理；CLI 展示凭据刷新进度；MCP server 名称支持包式字符，并可为单个 MCP 工具设置输出 token 上限。修复覆盖压缩后的审批授权保留、恢复线程工作目录、MCP 缓存刷新、Windows sandbox 与云任务凭据来源限制等。[官方 release 与完整 changelog](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
+4. **0.152.0-alpha.7.2**：官方 GitHub 于 **2026-09-01 08:30 +08:00** 发布。页面只有版本标识，不据此推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2)
+
+## Tier 2：消费端功能
+
+| 方向 | 本轮状态 |
+| --- | --- |
+| 浏览器 / Operator 能力 | 无新增 |
+| 桌面应用 | 无新增 |
+| GPTs / GPT Store | 无新增 |
+| Canvas | 无新增 |
+| Sora / 视频 | 无新增 |
+| GPT Image / DALL·E | 无新增 |
+| Voice | 无新增 |
+| Connectors / MCP | 无新增 |
+
+## Tier 3：企业、教育、安全与行业
+
+- **Enterprise / Business / Edu / Gov / Science / safety**：OpenAI News、Help Center 与 Enterprise/Edu release notes 未发现窗口内可核实的独立更新。
+- 本轮未保留日期不明的企业候选；没有把较旧公告重复包装成窗口内动态。
+
+## 官方更新（最新在前）
+
+- Codex `0.153.0-alpha.2`、`0.153.0-alpha.1` 为官方测试通道版本信号；页面没有功能清单。
+- Codex `0.152.0` 为本窗口的稳定版更新，官方 release 披露了交互、凭据、MCP 与安全相关变化。
+- Codex `0.152.0-alpha.7.2` 为较早的官方预发布，页面没有功能清单。
+
+## Love
+
+- **无可定性样本**：窗口内没有找到时间可核实、内容可直接打开的新增社区正面反馈；官方发布不计入正面口碑。
+
+## Hate
+
+- **无可定性样本**：窗口内没有找到时间可核实、内容可直接打开的新增社区负面反馈。
+
+## 口碑判断
+
+整体情绪：**证据不足，暂不定性**。本轮可保留来源全部为官方 release，不能代表用户情绪；Reddit、Developer Community、Hacker News 与公开社交搜索没有提供足够可靠的新样本。
+
+## 对比与替代工具信号
+
+本轮没有足以支持“追平”或“超过”结论的具名评测或可复现实验。检索覆盖 Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 等关键词，但没有保留窗口内可核实的新对比；Cline、Pi 与 DSH 的完整产品扫描归开源 Harness 雷达。
+
+## 日期未确认
+
+- 本轮没有保留与窗口高度相关但日期无法确认的候选。
+
+## 观察池
+
+- 本轮没有足够可靠的新观察项。ChatGPT release notes 的 8 月 31 日条目已明确早于窗口，未作为本页来源重复收录。
+
+## 来源链接
+
+- [Codex 0.153.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)
+- [Codex 0.153.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)
+- [Codex 0.152.0](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
+- [Codex 0.152.0-alpha.7.2](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2)
+
+## 采集状态
+
+- 已检查：OpenAI News / Research / Product RSS 与索引、开发者文档和平台 changelog、ChatGPT 及 Enterprise/Edu release notes、Codex / Agents SDK / Python / Node 官方 GitHub releases、OpenAI Developer Community、Reddit、Hacker News、X 与 YouTube/播客公开检索。
+- 失败来源：ChatGPT release notes HTML 直连返回 403；X 未得到可直接验证时间戳的窗口内条目；YouTube/播客未发现可核实的新条目。
+- 初始候选：**5**（4 个窗口内 Codex release，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**4**；二次补搜：**否**（最终来源不为 0）。
+- 图片：**未配置**。4 个保留来源均为 GitHub release 页面，未发现适合作为新闻配图的专题原图，故宁可纯文字展示。
