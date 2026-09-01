@@ -1,48 +1,57 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T04:02:00+08:00"
+updatedAt: "2026-09-02T07:08:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "Introducing Claude Fable 5.1 and Claude Mythos 5.1"
-featuredUrl: "https://www.anthropic.com/claude-fable-and-mythos-5-1"
-featuredSummary: "Fable 5.1 与受信访问的 Mythos 5.1 覆盖编码、长时间 Agent、科研、价格和安全护栏，产品集成由窗口内 Claude Code Release 佐证。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTags: ["Anthropic","Model","Coding Agent","详见 Claude 专题页"]
+featuredTitle: "Claude Code v2.1.258"
+featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.258"
+featuredSummary: "Claude Code 修复 macOS 12 启动回归，以及权限批准重发失败后远程与定时会话出现空用户消息错误的问题。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-09-02 06:33 +08:00"
+featuredTags: ["Anthropic","Claude Code","Reliability","详见 Claude 专题页"]
 tags:
+  - "观察池"
   - "日期未确认"
   - "详见 Claude 专题页"
   - "详见 OpenAI 专题页"
+  - "月度汇总"
   - "Agent"
   - "Agent Safety"
   - "AI"
   - "Anthropic"
   - "Claude Code"
   - "Coding Agent"
+  - "Cybersecurity"
   - "Enterprise"
   - "Enterprise Adoption"
+  - "Google"
   - "Healthcare"
   - "Industry"
   - "Microsoft"
   - "Model"
   - "OpenAI"
+  - "Reliability"
   - "Research"
   - "Responsible AI"
+  - "Safety"
   - "Security"
 ---
 
 ## 今日概览
 
-采集截止 **2026-09-02 04:02（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 04:02 至 2026-09-02 04:02**。本轮新增的行业信号集中在三条主线：Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，OpenAI 展示 Agent 原生企业的工作流实践并开放医疗机构连接 EHR 等行业数据，Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
+采集截止 **2026-09-02 07:00（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 07:00 至 2026-09-02 07:00**。本轮行业信号集中在四条主线：Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
 
 ## 优先动态（过去 24 小时）
 
-1. **Claude Code v2.1.257 落地 Fable 5.1 与更完整的 Agent 控制面**：新版本加入 Fable 5.1、跨工作目录读取确认、子 Agent 模型强制设置，以及后台会话、沙箱、MCP、Remote Control 和 VS Code 更新，体现 coding Agent 向长期任务、安全边界与企业控制演进。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)（详见 Claude 专题页）
-2. **OpenAI 汇总 AI-native 企业的 Agent 工作流实践**：Basis、Clay 与 Exa Labs 案例覆盖客户入驻、客户管理、研究和开发者集成，显示 Agent 从单点助手进入企业核心运营流程。[OpenAI 原文](https://openai.com/index/ai-native-company-workflows)（详见 OpenAI 专题页）
-3. **ChatGPT 面向医疗机构连接 EHR 与行业数据**：医疗组织可把 EHR 和其他可信来源接入 ChatGPT，以便临床人员获取患者背景与医学研究，属于受监管行业数据接入的重要产品信号。[OpenAI 原文](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)（详见 OpenAI 专题页）
-4. **Fable 5.1 / Mythos 5.1 发布**：Fable 5.1 面向编码、知识工作和长时间 Agent 任务，Mythos 5.1 通过网络安全与生命科学受信访问计划提供；官方文章未给精确时刻，但 Claude Code v2.1.257 的 01:53 发布记录确认了窗口内产品集成。[Anthropic 原文](https://www.anthropic.com/claude-fable-and-mythos-5-1)（详见 Claude 专题页）
+1. **Claude Code v2.1.258 修复平台与远程会话回归**：修复 macOS 12 无法启动，以及重发的权限批准无法应用后，远程和定时会话因空用户消息而失败的问题；体现长期 Agent 会话可靠性仍在快速迭代。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)（详见 Claude 专题页）
+2. **Path to Astra：前沿网络安全能力与发布保障**：OpenAI 表示 Astra 是首个达到 Preparedness Framework “Critical” 网络安全能力阈值的 OpenAI 模型，并将以更强保障措施约束发布；不把能力阈值外推为普遍开放。[OpenAI 原文](https://openai.com/index/path-to-astra)（详见 OpenAI 专题页）
+3. **Claude Code v2.1.257 落地 Fable 5.1 与更完整的 Agent 控制面**：新版本加入 Fable 5.1、跨工作目录读取确认、子 Agent 模型强制设置，以及后台会话、沙箱、MCP、Remote Control 和 VS Code 更新，体现 coding Agent 向长期任务、安全边界与企业控制演进。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)（详见 Claude 专题页）
+4. **OpenAI 汇总 AI-native 企业的 Agent 工作流实践**：Basis、Clay 与 Exa Labs 案例覆盖客户入驻、客户管理、研究和开发者集成，显示 Agent 从单点助手进入企业核心运营流程。[OpenAI 原文](https://openai.com/index/ai-native-company-workflows)（详见 OpenAI 专题页）
+5. **ChatGPT 面向医疗机构连接 EHR 与行业数据**：医疗组织可把 EHR 和其他可信来源接入 ChatGPT，以便临床人员获取患者背景与医学研究，属于受监管行业数据接入的重要产品信号。[OpenAI 原文](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)（详见 OpenAI 专题页）
+6. **Fable 5.1 / Mythos 5.1 发布**：Fable 5.1 面向编码、知识工作和长时间 Agent 任务，Mythos 5.1 通过网络安全与生命科学受信访问计划提供；官方文章未给精确时刻，但 Claude Code v2.1.257 的 01:53 发布记录确认了窗口内产品集成。[Anthropic 原文](https://www.anthropic.com/claude-fable-and-mythos-5-1)（详见 Claude 专题页）
 
 ## 常规动态
 
-除上述 Anthropic 与 OpenAI 官方动态，以及下方 Anthropic EFS、Microsoft 治理条目外，未发现其他需要跨主题重复的独立更新。
+除上述 Anthropic 与 OpenAI 官方动态，以及下方 Google 月度汇总、Anthropic EFS、Microsoft 治理条目外，未发现其他需要跨主题重复的独立更新。
 
 ## 播客
 
@@ -65,18 +74,19 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 观察池
 
+- **Google AI 8 月更新汇总（窗口内发布、内容为旧闻回顾）**：Google 于 **2026-09-02 04:45 +08:00** 发布月度汇总，聚合 8 月 Gemini、开发者工具与 DeepMind 等既有公告；作为生态盘点信号保留，不把其中旧条目重报为过去 24 小时新品。[Google 原文](https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/)
 - xAI/Grok 官方新闻、文档、API/模型变更入口和官方仓库已显式检查模型、DeepSearch、语音、编码、工具调用与 Agent 动态；未发现截止时间前的新官方发布，不重复前一日较旧背景。
 - Cline、Pi Coding Agent 与 DeepSeek Harness/DSH 的产品方向、桌面/IDE 分发、合作、融资、企业采用、基准和生态入口均已检查；未见需要跨出开源专题重复的新增产业事件，常规仓库变化详见开源专题页。
 - 其余指定厂商、研究机构与播客入口未见可核验的新原文；日期或来源不足的搜索摘要未写成事实。
 
 ## 一句话总结
 
-Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、企业控制面和行业数据连接扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
+Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接和前沿网络安全扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、文档、API/模型变更、DeepSearch、语音、编码、工具调用和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：部分中国厂商官网/社交入口无可核验窗口内原文；播客无截止时间前新集；部分官方页面仅给日期。
-- 初始候选数：12；保留来源数：6。
+- 初始候选数：15；保留来源数：9。
 - 图片检查：本轮跨主题来源未额外配置页面图片；日期未确认条目不作为首页图片候选。
 - 二次补搜：否（最终来源不为 0）。
