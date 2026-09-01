@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T16:01:00+08:00"
+updatedAt: "2026-09-01T19:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.3"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3"
@@ -20,8 +20,11 @@ tags:
   - "AI"
   - "Browser Agent"
   - "Coding Agent"
+  - "Computer Use"
   - "Database"
+  - "Engineering"
   - "Evaluation"
+  - "Extensions"
   - "Governance"
   - "Harness"
   - "Knowledge Base"
@@ -36,6 +39,8 @@ tags:
   - "OpenCode"
   - "Orchestration"
   - "Permissions"
+  - "Reliability"
+  - "Sandbox"
   - "Security"
   - "Session"
   - "Skills"
@@ -49,7 +54,7 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口累计至 **2026-09-01 16:01（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；其余必查 Harness 未出现新 release。HN 同时出现本地项目记忆、LLM 输出检查点、工具参数权限门、可观察工作簿与多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
+本轮发现窗口累计至 **2026-09-01 19:02（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；Pi 主分支另有三项运行时修复，其余必查 Harness 未出现新 release 或可报告实质提交。HN 同时出现本地项目记忆、LLM 输出检查点、工具参数权限门、可观察工作簿与多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
 
 ## Coding Agent / Harness 雷达
 
@@ -57,7 +62,7 @@ tags:
 |---|---|---|
 | DeepSeek Harness / DSH | **窗口内正式发布** | [v0.1.2-alpha.3](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3) 改善长会话分页导航、渲染内存与代码高亮，并修复运行中图片投递、无扩展名图片读取和连接误判；同时移除可选 SQLite Session 后端。 |
 | Cline | **窗口内正式发布；主分支有权限与工具默认值更新** | [Desktop v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) 让停止操作向委派子 Agent 与队友传播并持久化取消状态，同时改进实时模型目录、认证错误分类、附件拖放与 Marketplace 浏览；09:39 合入的[工具拒绝语义修复](https://github.com/cline/cline/commit/0852992f3b6843e69a03936b0bc67d2968990168)会明确告诉模型拒绝不是工具或系统故障，应先向用户澄清再继续；12:23 合入的[桌面端 Web Search 默认值变更](https://github.com/cline/cline/commit/8eb5f3d57f3eb87f21262f6ec2326ce460445dea)只在用户从未设置该工具时默认开启，并保留显式关闭。 |
-| Pi Coding Agent | 已检查，暂无新 release | `badlogic/pi-mono` 已由 GitHub 重定向至当前一方仓库 `earendil-works/pi`；最新 release v0.84.4 已早于本轮 48 小时边界。 |
+| Pi Coding Agent | **主分支有三项运行时修复，暂无新 release** | `badlogic/pi-mono` 已重定向至 `earendil-works/pi`；17:00–17:16 合入[预检中止后停止已准备工具](https://github.com/earendil-works/pi/commit/afda4d6202cc179f3d7029d50c9e5752c3b3097d)、[内存 fork 前等待活动轮次完成](https://github.com/earendil-works/pi/commit/56c6fb33c4972ef8bb2f4f829518d5d9a7fa24a1)和[扩展工具使用会话 cwd](https://github.com/earendil-works/pi/commit/62835ea81b4bdaee91ec8f775f4ac6d7f693ff2e)三项修复。 |
 | OpenCode | 已检查，暂无新 release | 官方 release 最新仍为 v1.18.25；窗口内有一项 [TUI 首页快捷键对齐修复](https://github.com/anomalyco/opencode/commit/26ff3ed3d3e28830190ef53f2ff4b261852139a4)，属于维护提交，不扩写为产品版本。 |
 | Aider | 已检查 | 官方 release 页未见窗口内新版本。 |
 | Continue | 已检查 | 官方 release 页未见窗口内新版本。 |
@@ -87,6 +92,12 @@ tags:
 [Cline 主分支提交](https://github.com/cline/cline/commit/8eb5f3d57f3eb87f21262f6ec2326ce460445dea)于 2026-09-01 10:23（上海时间）合入：桌面应用会在共享设置中尚未出现 `web_search` 时将其设为开启；用户此前从任一 Cline 应用显式关闭时不会覆盖，设置文件不可写也不会阻塞启动。
 
 **为什么重要：** 这是 Agent 工具默认权限面的实质变化；“仅首次未设置时启用”和“显式关闭优先”限制了影响范围，但桌面自动化用户仍应复核网络访问策略。
+
+### 3A. Pi 修补工具中止、会话 fork 与工作目录边界
+
+Pi 主分支在 2026-09-01 17:00–17:16（上海时间）连续合入三项带回归测试的修复：[预检中止后停止已准备工具](https://github.com/earendil-works/pi/commit/afda4d6202cc179f3d7029d50c9e5752c3b3097d)，避免并行工具在 preflight abort 后继续运行；[内存 fork 前等待活动轮次完成](https://github.com/earendil-works/pi/commit/56c6fb33c4972ef8bb2f4f829518d5d9a7fa24a1)，处理活动工具调用期间 fork 的竞态；以及[扩展工具使用会话 cwd](https://github.com/earendil-works/pi/commit/62835ea81b4bdaee91ec8f775f4ac6d7f693ff2e)，让读写、搜索和 shell 等工具优先采用扩展上下文中的实际工作目录。
+
+**为什么重要：** 三项都落在 Agent loop 的可控终止、会话分叉一致性和工具路径隔离边界；它们是主分支维护提交，尚未进入新的正式 release。
 
 ### 4. BOOTH 尝试为 LLM 输出增加轻量检查点
 
@@ -123,6 +134,11 @@ tags:
 - [agents-workbook](https://github.com/softcane/agents-workbook) 于 2026-09-01 15:40（上海时间）提交到 HN；采集时 1 point、1 comment。它以本地代理给 Claude Code 或 Codex 请求增加显式工作簿工具，并把模型主动写出的决策笔记流式展示在本地面板；README 同时警告额外调用的成本、延迟和秘密泄露风险。仓库创建于 8 月中旬，当前属于早期实验。
 - [Verb Authority](https://github.com/yairsabag/verb-authority) 于 2026-09-01 14:17（上海时间）提交到 HN；采集时 1 point、0 comments。仓库提供本地 schema 扫描与执行前 gate，用参数级 authority map 区分模型可写内容和必须由可信应用状态提供的目标参数；项目较早，本轮只作为工具权限边界的再浮现信号。
 
+- [I Built an Agent Harness to See What’s Inside](https://mamonas.dev/posts/agent-harness-to-see-whats-inside/) 原文日期为 2026-09-01，于 16:21（上海时间）提交到 HN；采集时 1 point、0 comments。作者用最小 harness 拆解 tool loop、消息流与停止条件，属于一方教学实验，不是跨框架基准。
+- [AgentConnect](https://github.com/agentconnect-md/agentconnect) 于 17:49（上海时间）提交到 HN；采集时 4 points、1 comment。仓库创建于 7 月，本轮仅确认新讨论信号。
+- [DeskWright](https://github.com/tristanmuzzu/deskwright) 于 18:07（上海时间）提交到 HN；采集时 1 point、0 comments。仓库创建于 8 月，本轮未见正式版本发布。
+- [Checkly 的 Node.js 到 Go Agent 重写复盘](https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/) 原文日期为 2026-09-01，于 18:50（上海时间）提交到 HN；采集时 2 points、0 comments。业务规模与成效来自项目方，应视为工程案例而非通用效率证明。
+
 ## 论文与研究
 
 本轮 arXiv 与 Hugging Face Papers/blog 扫描未发现同时满足窗口、主题相关性和可核验原始日期的高优先级新增。为避免用营销条目填充，本节不硬凑论文。
@@ -155,8 +171,8 @@ tags:
 
 ## 采集状态
 
-- **采集窗口：** 技术精选 2026-08-30 16:01 至 2026-09-01 16:01，HN 2026-08-31 16:01 至 2026-09-01 16:01（Asia/Shanghai）。
+- **采集窗口：** 技术精选 2026-08-30 19:02 至 2026-09-01 19:02，HN 2026-08-31 19:02 至 2026-09-01 19:02（Asia/Shanghai）。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
 - **失败/受限：** Pi 旧入口重定向至当前官方仓库；部分候选缺少可核验原始发布日期；Trending 未稳定提供日增星标；arXiv、Hugging Face 与 Simon Willison 未检出优先级足够的窗口内新增。
-- **初始候选数：** 59；**最终保留来源数：** 22；**二次补搜：** 否（最终来源不为 0）。
+- **初始候选数：** 70；**最终保留来源数：** 29；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 图片，来源 URL 与正文对应条目一致。
