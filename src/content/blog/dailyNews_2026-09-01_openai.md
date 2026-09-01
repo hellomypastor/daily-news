@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T16:01:00+08:00"
+updatedAt: "2026-09-01T22:01:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.153.0-alpha.2"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2"
@@ -12,9 +12,11 @@ tags:
   - "当天较早已收录"
   - "观察池"
   - "客户案例"
+  - "日期未确认"
   - "商业化"
   - "社区口碑"
   - "稳定版"
+  - "移动端"
   - "预发布"
   - "Agent"
   - "ChatGPT"
@@ -25,7 +27,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-31 16:01 至 2026-09-01 16:01（Asia/Shanghai）**。本轮新增确认 Codex 官方仓库发布 `0.153.0-alpha.2`，release note 只有版本标识；当天已收录的 `0.153.0-alpha.1`、`0.152.0` 稳定版与 4 个更早 alpha 预发布继续按累积规则保留。OpenAI News RSS 还确认 Polimill 日本公共 AI 基础设施客户案例于 8 月 31 日 15:00 +08:00 发布。RSS 同时给出 ChatGPT Ads 公告的精确时间 8 月 31 日 12:00 +08:00；该条已在当天较早轮次收录，现按累积规则保留，但已滑出本轮 24 小时发现窗口。
+采集窗口：**2026-08-31 22:01 至 2026-09-01 22:01（Asia/Shanghai）**。本轮核对 Codex 官方发布列表，截至窗口终点仍以当天已收录的 `0.153.0-alpha.2` 为最新；`0.153.0-alpha.1`、`0.152.0` 稳定版与 4 个更早 alpha 预发布继续按累积规则保留。ChatGPT Release Notes 新检出 8 月 31 日的个性化贴纸包功能，但页面只给日期、未给时分，无法确认是否落在 22:01 之后，因此仅收入“日期未确认”，不列为严格窗口内事实。OpenAI News RSS 已收录的 Polimill 客户案例与 ChatGPT Ads 公告均已滑出本轮发现窗口，按当天累积规则保留。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -60,7 +62,7 @@ tags:
 | GPTs / GPT Store | 无新增 |
 | Canvas | 无新增 |
 | Sora / 视频 | 无新增 |
-| GPT Image / DALL·E | 无新增 |
+| GPT Image / DALL·E | **日期未确认**：8 月 31 日 release notes 列出个性化贴纸包，但无时分，见下文 |
 | Voice | 无新增 |
 | Connectors / MCP | 无新增 |
 
@@ -90,6 +92,10 @@ tags:
 
 本轮没有足以支持‘追平’或‘超过’结论的具名评测或可复现实验。公开检索同时覆盖 Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 等关键词，但没有保留窗口内可核实的新对比；Cline、Pi 与 DSH 的完整产品扫描归开源 Harness 雷达。
 
+## 日期未确认
+
+- **ChatGPT 个性化贴纸包**：官方 ChatGPT Release Notes 列于 **2026-08-31**，称用户可从提示词、照片或模板生成贴纸包，下载后可在支持的设备上添加到 iMessage 或 WhatsApp；官方称该功能面向全球移动端用户。页面没有披露时分，无法判定是否在本轮 22:01 起点之后，故不计为严格窗口内新增。[ChatGPT 官方发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
+
 ## 当天较早已收录
 
 ### ChatGPT Ads 达到 10 亿美元年化收入运行率并扩展自助投放
@@ -112,10 +118,11 @@ OpenAI 官方 RSS 将发布时间标为 **2026-08-31 12:00 +08:00**，早于本�
 - [Polimill builds Japan's next-generation public AI infrastructure](https://openai.com/index/polimill)
 - [A milestone in expanding access to AI](https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/)
 - [Feature request: reliable cross-device Codex chat synchronization](https://community.openai.com/t/feature-request-reliable-cross-device-codex-chat-synchronization/1393585)
+- [ChatGPT Release Notes：Create and share personalized sticker packs](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Product、开发者文档与平台 changelog、ChatGPT 及 Enterprise/Edu release notes、Codex / Agents SDK / Python / Node 官方 GitHub releases、OpenAI Developer Community、Reddit、Hacker News、X 与 YouTube/播客公开检索。
 - 失败来源：OpenAI 文章 HTML 直连返回 403，未能验证稳定的官方原图 URL；X 未得到可直接验证时间戳的窗口内条目；YouTube/播客未发现可核实新条目。
-- 初始候选：**13**；保留来源：**10**；二次补搜：**否**（最终来源不为 0）。
+- 初始候选：**15**；保留来源：**11**；二次补搜：**否**（最终来源不为 0）。
 - 图片：**未配置**。官方文章页面可打开，但未能验证公开、稳定且来源明确的原始图片 URL，故宁可纯文字展示。

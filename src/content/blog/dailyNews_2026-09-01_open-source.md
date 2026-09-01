@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T19:02:00+08:00"
+updatedAt: "2026-09-01T22:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.3"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3"
@@ -20,6 +20,7 @@ tags:
   - "AI"
   - "Browser Agent"
   - "Coding Agent"
+  - "Compatibility"
   - "Computer Use"
   - "Database"
   - "Engineering"
@@ -54,7 +55,7 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口累计至 **2026-09-01 19:02（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；Pi 主分支另有三项运行时修复，其余必查 Harness 未出现新 release 或可报告实质提交。HN 同时出现本地项目记忆、LLM 输出检查点、工具参数权限门、可观察工作簿与多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
+本轮发现窗口累计至 **2026-09-01 22:01（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；Pi 主分支累计有五项运行时与兼容性修复，其余必查 Harness 未出现新 release 或可报告实质提交。HN 同时出现本地项目记忆、LLM 输出检查点、工具参数权限门、可观察工作簿与多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
 
 ## Coding Agent / Harness 雷达
 
@@ -62,7 +63,7 @@ tags:
 |---|---|---|
 | DeepSeek Harness / DSH | **窗口内正式发布** | [v0.1.2-alpha.3](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3) 改善长会话分页导航、渲染内存与代码高亮，并修复运行中图片投递、无扩展名图片读取和连接误判；同时移除可选 SQLite Session 后端。 |
 | Cline | **窗口内正式发布；主分支有权限与工具默认值更新** | [Desktop v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) 让停止操作向委派子 Agent 与队友传播并持久化取消状态，同时改进实时模型目录、认证错误分类、附件拖放与 Marketplace 浏览；09:39 合入的[工具拒绝语义修复](https://github.com/cline/cline/commit/0852992f3b6843e69a03936b0bc67d2968990168)会明确告诉模型拒绝不是工具或系统故障，应先向用户澄清再继续；12:23 合入的[桌面端 Web Search 默认值变更](https://github.com/cline/cline/commit/8eb5f3d57f3eb87f21262f6ec2326ce460445dea)只在用户从未设置该工具时默认开启，并保留显式关闭。 |
-| Pi Coding Agent | **主分支有三项运行时修复，暂无新 release** | `badlogic/pi-mono` 已重定向至 `earendil-works/pi`；17:00–17:16 合入[预检中止后停止已准备工具](https://github.com/earendil-works/pi/commit/afda4d6202cc179f3d7029d50c9e5752c3b3097d)、[内存 fork 前等待活动轮次完成](https://github.com/earendil-works/pi/commit/56c6fb33c4972ef8bb2f4f829518d5d9a7fa24a1)和[扩展工具使用会话 cwd](https://github.com/earendil-works/pi/commit/62835ea81b4bdaee91ec8f775f4ac6d7f693ff2e)三项修复。 |
+| Pi Coding Agent | **主分支累计五项运行时与兼容性修复，暂无新 release** | `badlogic/pi-mono` 已重定向至 `earendil-works/pi`；除 17:00–17:16 的工具中止、会话 fork 与 cwd 修复外，20:16 合入[受限 seccomp 下避免 SIGWINCH 自信号导致启动崩溃](https://github.com/earendil-works/pi/commit/605a1b0385a7e94e3760d7e0a507741fbb67ac21)，20:42 合入[OpenAI Responses 最大输出 token 兼容标记](https://github.com/earendil-works/pi/commit/b8b873b9872db04a938fb4357b5e8e824ddc051c)。 |
 | OpenCode | 已检查，暂无新 release | 官方 release 最新仍为 v1.18.25；窗口内有一项 [TUI 首页快捷键对齐修复](https://github.com/anomalyco/opencode/commit/26ff3ed3d3e28830190ef53f2ff4b261852139a4)，属于维护提交，不扩写为产品版本。 |
 | Aider | 已检查 | 官方 release 页未见窗口内新版本。 |
 | Continue | 已检查 | 官方 release 页未见窗口内新版本。 |
@@ -99,7 +100,7 @@ Pi 主分支在 2026-09-01 17:00–17:16（上海时间）连续合入三项带�
 
 **为什么重要：** 三项都落在 Agent loop 的可控终止、会话分叉一致性和工具路径隔离边界；它们是主分支维护提交，尚未进入新的正式 release。
 
-### 4. BOOTH 尝试为 LLM 输出增加轻量检查点
+### 3B. Pi 修补受限沙箱启动与 OpenAI Responses 参数兼容性\n\nPi 主分支在 20:16（上海时间）合入[受限 seccomp 下的 TUI 启动修复](https://github.com/earendil-works/pi/commit/605a1b0385a7e94e3760d7e0a507741fbb67ac21)：当策略禁止向自身发送 `SIGWINCH` 时，不再因该信号调用失败而崩溃；20:42 又合入[OpenAI Responses 兼容标记](https://github.com/earendil-works/pi/commit/b8b873b9872db04a938fb4357b5e8e824ddc051c)，让 provider 可声明是否支持 `max_output_tokens`。两项均带测试，但仍是主分支提交而非正式 release。\n\n**为什么重要：** 前者直接影响在受限容器/沙箱中运行 CLI Agent 的可用性，后者把 provider 参数差异显式化，减少模型路由时发送不兼容请求的风险。\n\n### 4. BOOTH 尝试为 LLM 输出增加轻量检查点
 
 [BOOTH](https://github.com/Vedantgitbot/booth) 仓库创建于 2026-08-23 05:25（上海时间），并于本轮窗口内以 Show HN 形式出现。README 将其定位为应用与 LLM 调用之间的检查层，用于决定输出直接通过、重新考虑、标记多义或标记不确定；仓库采用 MIT 许可证。
 
@@ -139,7 +140,7 @@ Pi 主分支在 2026-09-01 17:00–17:16（上海时间）连续合入三项带�
 - [DeskWright](https://github.com/tristanmuzzu/deskwright) 于 18:07（上海时间）提交到 HN；采集时 1 point、0 comments。仓库创建于 8 月，本轮未见正式版本发布。
 - [Checkly 的 Node.js 到 Go Agent 重写复盘](https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/) 原文日期为 2026-09-01，于 18:50（上海时间）提交到 HN；采集时 2 points、0 comments。业务规模与成效来自项目方，应视为工程案例而非通用效率证明。
 
-## 论文与研究
+- [oh-my-subagents](https://github.com/ringlochid/oh-my-subagents) 于 21:01（上海时间）提交到 HN；采集时 3 points、1 comment。仓库创建于 7 月，本轮将其 Codex/Claude 子 Agent 运行时定位保留为较旧项目的新讨论信号。\n- [extensible-mcp](https://github.com/SenteLabsAI/extensible-mcp) 于 19:32（上海时间）提交到 HN；采集时 3 points、0 comments。仓库提供模型不可直接修改的 MCP proxy 过滤与访问控制层；当前采用信号很弱。\n- [Foremerge](https://github.com/naw103/foremerge) 于 20:44（上海时间）提交到 HN；采集时 1 point、0 comments。项目尝试在多个 coding agents 写代码前交换 intent 以发现语义冲突，仓库创建于 8 月，效果尚无独立评测。\n- [Manzanas](https://github.com/BariBariGood/manzanas) 于 21:01（上海时间）提交到 HN；采集时 1 point、0 comments。仓库描述为向 coding agents 租赁 iOS 模拟器的本机编排守护进程，当前仍属早期项目自述。\n\n## 论文与研究
 
 本轮 arXiv 与 Hugging Face Papers/blog 扫描未发现同时满足窗口、主题相关性和可核验原始日期的高优先级新增。为避免用营销条目填充，本节不硬凑论文。
 
@@ -162,7 +163,7 @@ Pi 主分支在 2026-09-01 17:00–17:16（上海时间）连续合入三项带�
 - [Saccade](https://github.com/nanlogic/saccade)：**release candidate / 项目自测。** 语义增量、会话专属标签页和动作回执贴近浏览器 Agent 工具可靠性，但 0.2.0 尚非正式 release，结果主要来自仓库内 release gate。
 - [Agentdock](https://github.com/vishalnarkhede/agentdock)：**较早仓库 / HN 新浮现。** 以 tmux 会话和 Git worktree 管理跨仓库并行 Claude Agent；未见本轮正式版本。
 - [agents-workbook](https://github.com/softcane/agents-workbook)：**早期实验 / HN 新浮现。** 可观察决策笔记有助于人工审阅 Agent 行为，但它增加调用次数、成本与延迟，并非受保护内部推理的提取工具。
-- [Verb Authority](https://github.com/yairsabag/verb-authority)：**较早项目 / HN 新浮现。** 参数级授权与执行前门控贴近 Agent 工具安全；当前证据主要来自项目 README 和离线 quickstart，未见独立安全评估。
+- [Verb Authority](https://github.com/yairsabag/verb-authority)：**较早项目 / HN 新浮现。** 参数级授权与执行前门控贴近 Agent 工具安全；当前证据主要来自项目 README 和离线 quickstart，未见独立安全评估。\n- [oh-my-subagents](https://github.com/ringlochid/oh-my-subagents)、[extensible-mcp](https://github.com/SenteLabsAI/extensible-mcp)、[Foremerge](https://github.com/naw103/foremerge)、[Manzanas](https://github.com/BariBariGood/manzanas)：**较早仓库 / HN 新浮现。** 分别涉及子 Agent 运行时、MCP 权限代理、coding-agent intent 冲突预检和 iOS 模拟器租赁；均仅按仓库与低互动讨论信号记录，不推断成熟度或效果。
 
 
 ## 来源链接
@@ -171,8 +172,8 @@ Pi 主分支在 2026-09-01 17:00–17:16（上海时间）连续合入三项带�
 
 ## 采集状态
 
-- **采集窗口：** 技术精选 2026-08-30 19:02 至 2026-09-01 19:02，HN 2026-08-31 19:02 至 2026-09-01 19:02（Asia/Shanghai）。
+- **采集窗口：** 技术精选 2026-08-30 22:01 至 2026-09-01 22:01，HN 2026-08-31 22:01 至 2026-09-01 22:01（Asia/Shanghai）。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
-- **失败/受限：** Pi 旧入口重定向至当前官方仓库；部分候选缺少可核验原始发布日期；Trending 未稳定提供日增星标；arXiv、Hugging Face 与 Simon Willison 未检出优先级足够的窗口内新增。
-- **初始候选数：** 70；**最终保留来源数：** 29；**二次补搜：** 否（最终来源不为 0）。
+- **失败/受限：** Pi 旧入口重定向至当前官方仓库；部分候选缺少可核验原始发布日期；Trending 未稳定提供日增星标；arXiv、Hugging Face 与 Simon Willison 未检出优先级足够的窗口内新增；一篇 Skills/MCP 文章直连返回 403，未据二手标题写入事实。
+- **初始候选数：** 96；**最终保留来源数：** 35；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 图片，来源 URL 与正文对应条目一致。

@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T19:02:00+08:00"
+updatedAt: "2026-09-01T22:01:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "v2.1.252"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -54,6 +54,7 @@ tags:
   - "Model Routing"
   - "Multi-agent"
   - "Network"
+  - "OAuth"
   - "Performance"
   - "Permissions"
   - "Planning"
@@ -64,6 +65,7 @@ tags:
   - "Reliability"
   - "Remote Control"
   - "Resume"
+  - "Routines"
   - "Sandbox"
   - "Scheduled Tasks"
   - "Security"
@@ -76,12 +78,13 @@ tags:
   - "Tools"
   - "VS Code"
   - "Windows"
+  - "Workflow"
   - "WSL2"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-08-31 19:02 至 2026-09-01 19:02（Asia/Shanghai）**。窗口内确认一项官方更新：Claude Code [v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) 修复 Bash task-output swap、首次保存“always allow”、弱网下 Remote Control 工具完成后长时间卡顿，以及超大后台失败输出撑爆 API 请求的问题。本日此前累积的 39 条来源全部保留；本轮新增 8 条带详细环境、复现、代码路径或规模数据的官方仓库用户报告，均不视作 Anthropic 官方确认。
+采集窗口：**2026-08-31 22:01 至 2026-09-01 22:01（Asia/Shanghai）**。窗口内确认一项官方更新：Claude Code [v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) 修复 Bash task-output swap、首次保存“always allow”、弱网下 Remote Control 工具完成后长时间卡顿，以及超大后台失败输出撑爆 API 请求的问题。本日此前累积的 39 条来源全部保留；本轮新增 8 条带详细环境、复现、代码路径或规模数据的官方仓库用户报告，均不视作 Anthropic 官方确认。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -168,14 +171,18 @@ tags:
 
 以上 8 条均为未获维护者确认的单方报告，不外推为普遍故障。
 
+### 19:02 后增量观察
+
+- [云端/routine 会话无法归档](https://github.com/anthropics/claude-code/issues/91194)、[MCP OAuth client secret 被丢弃](https://github.com/anthropics/claude-code/issues/91199)、[VS Code Open in editor 终止后台 Workflow](https://github.com/anthropics/claude-code/issues/91206)、[Desktop 队列出现非人工 user 消息](https://github.com/anthropics/claude-code/issues/91207)、[Desktop slash menu 丢失本地与插件 Skills](https://github.com/anthropics/claude-code/issues/91210)、[后台会话不处理跨会话消息](https://github.com/anthropics/claude-code/issues/91211)、[Fork Subagent 忽略前台执行参数](https://github.com/anthropics/claude-code/issues/91225)、[相对路径 hook 锁死 Bash](https://github.com/anthropics/claude-code/issues/91226) 均提供日志、复现或对照证据，但未获维护者确认；其中消息注入条目来源未明，不表述为已确认安全漏洞。
+
 ## 来源链接
 
-正文中的 47 个 URL 均列入结构化 `sources`，页面内按 URL 去重。
+正文中的 55 个 URL 均列入结构化 `sources`，页面内按 URL 去重。
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Help Center、Developer Platform、Claude Code 文档/官方 GitHub/CHANGELOG/releases/Status；逐项覆盖 Tier 1、Tier 2、Tier 3，并抽样 Reddit、Hacker News、X、YouTube与可信二手报道。
 - 失败入口：X 无法稳定核验原帖时间与互动量；Hacker News 无窗口内可核验条目；YouTube 噪声较高；社区入口未取得可核验互动量。
-- 初始候选：371；最终保留：47（1 条官方 release，46 条官方仓库用户 issue；issue 均标注为未获官方确认）。
+- 初始候选：234；最终保留：55（1 条官方 release，54 条官方仓库用户 issue；issue 均标注为未获官方确认）。
 - 二次补搜：否（最终来源不为 0）。
 - 图片：无。官方 release 页面未提供适合的独立题图，issue 附件不作为可靠配图。

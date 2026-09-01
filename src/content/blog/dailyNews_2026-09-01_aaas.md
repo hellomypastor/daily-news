@@ -1,26 +1,29 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T19:02:00+08:00"
+updatedAt: "2026-09-01T22:01:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTags: []
 tags:
   - "定价"
   - "观察池"
+  - "邻近信号"
   - "平台调整"
   - "日期未确认"
   - "中国"
   - "AaaS"
   - "Agent"
+  - "Agent Mode"
   - "Cloud Agent"
   - "Enterprise"
   - "GitHub Copilot"
+  - "MaaS"
   - "Managed Agent"
 ---
 
 ## 今日概览
 
-采集窗口：2026-08-31 19:02 至 2026-09-01 19:02（Asia/Shanghai）；24–72 小时观察窗口为 2026-08-28 19:02 至 2026-08-31 19:02。本轮没有发现窗口内新发布，但确认 1 条今日生效的企业接入信号：GitHub 从 9 月 1 日开始重新开放以信用卡或 PayPal 付款的 Copilot Business/Enterprise 新客户注册；原公告发布于 8 月 28 日，故列为观察池而非 24 小时新发布。另累计保留 2 个日期未确认候选：巨章 DesireCore 的云托管 Agent 定价，以及百度文心智能体平台创建与工作流入口的生命周期调整。
+采集窗口：2026-08-31 22:01 至 2026-09-01 22:01（Asia/Shanghai）；24–72 小时观察窗口为 2026-08-28 22:01 至 2026-08-31 22:01。本轮没有发现窗口内新发布，但累计确认 2 条今日生效的 GitHub Copilot 观察信号：企业新客户接入恢复，以及多个旧模型在 Chat、agent mode 等体验中停用；两则原公告均早于主窗口，故不写成 24 小时新发布。另累计保留 2 个日期未确认候选：巨章 DesireCore 的云托管 Agent 定价，以及百度文心智能体平台创建与工作流入口的生命周期调整。
 
 ## 重点动态
 
@@ -66,6 +69,8 @@ Devin、Grok Bot、Jules、Cursor、Replit Agent、Factory、Amp、Cloudflare Ag
 
 ## 邻近信号观察池
 
+GitHub 7 月 31 日公告预告，Gemini 3.1 Pro、Claude Opus 4.5/4.6、Claude Sonnet 4.5/4.6 与 Raptor Mini 于 9 月 1 日在 Copilot Chat、agent mode 等体验停用，并提示企业管理员检查替代模型策略。该变化今日生效且涉及 Agent 产品的模型治理，但没有新增托管任务、环境或执行生命周期，因此只作为 MaaS/企业治理邻近信号。[GitHub 官方公告](https://github.blog/changelog/2026-07-31-upcoming-august-2026-model-deprecations-in-github-copilot/)
+
 检索到的普通模型/API 更新、Cloudflare Sandbox 等通用执行基础设施、以及本地/自托管 harness 信号均未出现本窗口内新的“供应商托管 Agent 生命周期”证据，因此不列为 AaaS 动态。阿里百炼 8 月月报的模型、模板与 MCP 上新也没有形成新的托管执行生命周期事件。
 
 ### 今日生效的官方观察信号
@@ -81,13 +86,14 @@ Devin、Grok Bot、Jules、Cursor、Replit Agent、Factory、Amp、Cloudflare Ag
 - [百度文心智能体平台](https://agents.baidu.com/)
 - [巨章 DesireCore 定价](https://www.desirecore.cn/pricing/)
 - [GitHub Copilot 政策与计费调整](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/)
+- [GitHub Copilot 9 月 1 日模型弃用公告](https://github.blog/changelog/2026-07-31-upcoming-august-2026-model-deprecations-in-github-copilot/)
 
 ## 采集状态
 
 - 已检查：Devin 与 xAI/Grok 必查入口；GitHub、Google、Microsoft、Replit、Cursor、Lindy、CrewAI、LangGraph、Amazon Q、Cloudflare、Factory、Amp；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code；字节跳动重点、主要中国厂商、百度 AgentBuilder、阿里百炼 8 月月报及 DesireCore 官方入口。
 - 失败入口：部分产品/文档页无逐条日期；部分社交入口需要登录或仅有摘要；部分 changelog 存在索引延迟。
-- 初始候选：10 条；最终保留：3 条。其余候选为已于前一日报告的旧条目、窗口外更新或 MaaS/PaaS/自托管 harness 邻近信号。
-- 二次补搜：是；扩展中英文关键词并切换官方 changelog、GitHub 与可信二手入口，累计保留 2 个日期未确认候选，并新增 1 个今日生效的官方观察信号。
+- 初始候选：11 条；最终保留：4 条。其余候选为已于前一日报告的旧条目、窗口外更新或 MaaS/PaaS/自托管 harness 邻近信号。
+- 二次补搜：是；扩展中英文关键词并切换官方 changelog、GitHub 与可信二手入口，累计保留 2 个日期未确认候选，并确认 2 个今日生效的官方观察信号。
 - 图片：无。保留来源没有可核实的合格原始题图，因此不配置页面图片。
 
-今日扫描完成，共 3 条动态，重点：过去 24 小时无新发布；GitHub Copilot 企业接入调整今日开始生效，另保留 2 个日期未确认候选。
+今日扫描完成，共 4 条动态，重点：过去 24 小时无新发布；累计确认 2 个今日生效的 GitHub Copilot 观察信号，并保留 2 个日期未确认候选。
