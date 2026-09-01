@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T13:02:00+08:00"
+updatedAt: "2026-09-01T16:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.3"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3"
@@ -31,6 +31,7 @@ tags:
   - "Memory"
   - "Model Routing"
   - "Multi-Agent"
+  - "Observability"
   - "Open Source"
   - "OpenCode"
   - "Orchestration"
@@ -48,7 +49,7 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口累计至 **2026-09-01 13:02（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；其余必查 Harness 未出现新 release。HN 同时出现本地项目记忆、LLM 输出检查点与开放知识发布和多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
+本轮发现窗口累计至 **2026-09-01 16:01（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；其余必查 Harness 未出现新 release。HN 同时出现本地项目记忆、LLM 输出检查点、工具参数权限门、可观察工作簿与多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
 
 ## Coding Agent / Harness 雷达
 
@@ -93,7 +94,13 @@ tags:
 
 **为什么重要：** 这类输出门控可以成为 Agent loop 的确定性检查点，但当前项目很早期，尚无独立效果评测，本页不采信泛化质量结论。
 
-### 5. DoltLite Beta 把 Agent 团队构建的 SQLite 分支推进到稳定存储格式
+### 5. Vercel 用 design.md 与评测循环约束 Coding Agent 的品牌页面输出
+
+[Vercel 的 design.md 工程文章](https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md) 发布于 2026-08-31 12:00（上海时间）。团队把品牌规则压缩为 Coding Agent 可直接加载的一份公开 Markdown，并用页面生成任务、浏览器截图和具名评审标准反复测试规则是否有效；文章明确区分可执行约束与仅描述品牌感觉的弱规则。
+
+**为什么重要：** 这是一份把 skills/context 文件纳入可迭代评测闭环的一方工程案例；它证明了规则设计方法与内部流程，不等于对所有 Agent 或前端任务的通用效果评测。
+
+### 6. DoltLite Beta 把 Agent 团队构建的 SQLite 分支推进到稳定存储格式
 
 [DoltLite Beta](https://www.dolthub.com/blog/2026-08-31-doltlite-beta/) 发布于 2026-08-31。DoltHub 将其描述为替换 SQLite B-tree 层、加入 Git 式分支、合并、差异和远程同步的嵌入式数据库；Beta v0.50.0 承诺后续破坏性存储格式变化提供迁移路径。作者披露该项目最初用于测试 Gas Town Agent 编排，并经过约 2,000 个 Agent PR，但这一数字属于项目方自述。文章同时给出 sqllogictest 与 SQLite 接受测试结果以及公开性能报告入口。
 
@@ -113,6 +120,8 @@ tags:
 
 - [Saccade](https://github.com/nanlogic/saccade) 于 2026-09-01 07:35（上海时间）提交到 HN；采集时 3 points、0 comments。仓库将其定位为浏览器 Agent 的闭环语义控制运行时，0.2.0 仍是 release candidate，基准与兼容性结果来自项目自测。
 - [Agentdock](https://github.com/vishalnarkhede/agentdock) 于 2026-09-01 07:00（上海时间）提交到 HN；采集时 1 point、0 comments。其 README 描述了通过 tmux 与 Git worktree 管理跨仓库并行 Agent 的移动端友好面板；仓库创建较早，本轮仅确认新讨论信号。
+- [agents-workbook](https://github.com/softcane/agents-workbook) 于 2026-09-01 15:40（上海时间）提交到 HN；采集时 1 point、1 comment。它以本地代理给 Claude Code 或 Codex 请求增加显式工作簿工具，并把模型主动写出的决策笔记流式展示在本地面板；README 同时警告额外调用的成本、延迟和秘密泄露风险。仓库创建于 8 月中旬，当前属于早期实验。
+- [Verb Authority](https://github.com/yairsabag/verb-authority) 于 2026-09-01 14:17（上海时间）提交到 HN；采集时 1 point、0 comments。仓库提供本地 schema 扫描与执行前 gate，用参数级 authority map 区分模型可写内容和必须由可信应用状态提供的目标参数；项目较早，本轮只作为工具权限边界的再浮现信号。
 
 ## 论文与研究
 
@@ -136,6 +145,8 @@ tags:
 - [Kiso](https://github.com/oak-invest/kiso)：**较早仓库 / HN 新浮现。** OKF、静态发布和 MCP 的组合是知识库面向 Agent 消费的邻近信号，未见本轮窗口内 release。
 - [Saccade](https://github.com/nanlogic/saccade)：**release candidate / 项目自测。** 语义增量、会话专属标签页和动作回执贴近浏览器 Agent 工具可靠性，但 0.2.0 尚非正式 release，结果主要来自仓库内 release gate。
 - [Agentdock](https://github.com/vishalnarkhede/agentdock)：**较早仓库 / HN 新浮现。** 以 tmux 会话和 Git worktree 管理跨仓库并行 Claude Agent；未见本轮正式版本。
+- [agents-workbook](https://github.com/softcane/agents-workbook)：**早期实验 / HN 新浮现。** 可观察决策笔记有助于人工审阅 Agent 行为，但它增加调用次数、成本与延迟，并非受保护内部推理的提取工具。
+- [Verb Authority](https://github.com/yairsabag/verb-authority)：**较早项目 / HN 新浮现。** 参数级授权与执行前门控贴近 Agent 工具安全；当前证据主要来自项目 README 和离线 quickstart，未见独立安全评估。
 
 
 ## 来源链接
@@ -144,8 +155,8 @@ tags:
 
 ## 采集状态
 
-- **采集窗口：** 技术精选 2026-08-30 13:02 至 2026-09-01 13:02，HN 2026-08-31 13:02 至 2026-09-01 13:02（Asia/Shanghai）。
+- **采集窗口：** 技术精选 2026-08-30 16:01 至 2026-09-01 16:01，HN 2026-08-31 16:01 至 2026-09-01 16:01（Asia/Shanghai）。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
 - **失败/受限：** Pi 旧入口重定向至当前官方仓库；部分候选缺少可核验原始发布日期；Trending 未稳定提供日增星标；arXiv、Hugging Face 与 Simon Willison 未检出优先级足够的窗口内新增。
-- **初始候选数：** 46；**最终保留来源数：** 19；**二次补搜：** 否（最终来源不为 0）。
+- **初始候选数：** 59；**最终保留来源数：** 22；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 图片，来源 URL 与正文对应条目一致。

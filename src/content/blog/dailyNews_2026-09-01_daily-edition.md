@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-09-01"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T13:02:00+08:00"
+updatedAt: "2026-09-01T16:01:00+08:00"
 description: "2026-09-01 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-01"
 featuredUrl: "https://github.com/anthropics/claude-code/issues/90997"
@@ -26,7 +26,7 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[Codex 0.153.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)**。Codex 官方仓库发布 0.153.0-alpha.1 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Codex 0.153.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)**。Codex 官方仓库发布 0.153.0-alpha.2 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-01_openai)
 

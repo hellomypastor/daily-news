@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T13:02:00+08:00"
+updatedAt: "2026-09-01T16:01:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "v2.1.252"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -16,7 +16,9 @@ tags:
   - "Agent Teams"
   - "Anthropic"
   - "Authentication"
+  - "Background Sessions"
   - "Bash"
+  - "Bedrock"
   - "Browser"
   - "Caching"
   - "CI"
@@ -27,6 +29,7 @@ tags:
   - "CLI"
   - "Compatibility"
   - "Connectors"
+  - "Context"
   - "Cowork"
   - "Design"
   - "Desktop"
@@ -38,17 +41,20 @@ tags:
   - "Hate"
   - "Headless"
   - "Hooks"
+  - "IDE"
   - "Linux"
   - "macOS"
   - "Managed Agents"
   - "Marketplace"
   - "MCP"
   - "Messaging"
+  - "Model Routing"
   - "Multi-agent"
   - "Performance"
   - "Permissions"
   - "Planning"
   - "Plugins"
+  - "Prompt Cache"
   - "Regression"
   - "Release"
   - "Reliability"
@@ -60,6 +66,7 @@ tags:
   - "Sessions"
   - "Skills"
   - "Subagents"
+  - "Terminal"
   - "Tools"
   - "VS Code"
   - "Windows"
@@ -68,7 +75,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-08-31 13:02 至 2026-09-01 13:02（Asia/Shanghai）**。窗口内确认一项官方更新：Claude Code [v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) 修复 Bash task-output swap、首次保存“always allow”、弱网下 Remote Control 工具完成后长时间卡顿，以及超大后台失败输出撑爆 API 请求的问题。本日此前累积的 26 条来源全部保留；本轮新增 6 条带详细环境、复现或机制证据的官方仓库用户报告，均不视作 Anthropic 官方确认。
+采集窗口：**2026-08-31 16:01 至 2026-09-01 16:01（Asia/Shanghai）**。窗口内确认一项官方更新：Claude Code [v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252) 修复 Bash task-output swap、首次保存“always allow”、弱网下 Remote Control 工具完成后长时间卡顿，以及超大后台失败输出撑爆 API 请求的问题。本日此前累积的 32 条来源全部保留；本轮新增 7 条带详细环境、复现、代码路径或规模数据的官方仓库用户报告，均不视作 Anthropic 官方确认。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -118,7 +125,7 @@ tags:
 
 ## 情绪判断
 
-**谨慎偏负，置信度中低。** 本日累计 31 条用户 issue 观察信号，样本仍来自天然偏负面的 issue 仓库；v2.1.252 是可确认的修复发布。证据只能说明本轮可见反馈集中于可靠性、权限、Agent 编排与跨环境一致性，不能代表整体用户口碑。
+**谨慎偏负，置信度中低。** 本日累计 38 条用户 issue 观察信号，样本仍来自天然偏负面的 issue 仓库；v2.1.252 是可确认的修复发布。证据只能说明本轮可见反馈集中于可靠性、权限、Agent 编排与跨环境一致性，不能代表整体用户口碑。
 
 ## 对比与迁移信号
 
@@ -133,15 +140,14 @@ tags:
 - [Remote Control 重连可能累积进程](https://github.com/anthropics/claude-code/issues/91034)、[连接器登录状态](https://github.com/anthropics/claude-code/issues/91031)、[Cowork 目录持久化](https://github.com/anthropics/claude-code/issues/91029)、[docx skill 样式](https://github.com/anthropics/claude-code/issues/91025)、[环境清理回归](https://github.com/anthropics/claude-code/issues/91020)、[Web 分支权限](https://github.com/anthropics/claude-code/issues/91018)、[规划模式](https://github.com/anthropics/claude-code/issues/91011)、[异步 hook](https://github.com/anthropics/claude-code/issues/90997)：均为本日此前已收录、未获官方确认的用户报告。
 - 本轮新增的 [Skills 重复](https://github.com/anthropics/claude-code/issues/91053)、[session 名称碰撞](https://github.com/anthropics/claude-code/issues/91054)、[跨机器执行](https://github.com/anthropics/claude-code/issues/91055)、[safeSpawn](https://github.com/anthropics/claude-code/issues/91060)、[DesignSync](https://github.com/anthropics/claude-code/issues/91063)、[Cowork 挂载](https://github.com/anthropics/claude-code/issues/91064)、[browser origin](https://github.com/anthropics/claude-code/issues/91066)、[Skill 双重编排](https://github.com/anthropics/claude-code/issues/91073)、[Remote Control 崩溃恢复](https://github.com/anthropics/claude-code/issues/91087)、[scheduled task 空执行](https://github.com/anthropics/claude-code/issues/91095)、[VS Code MCP config probe](https://github.com/anthropics/claude-code/issues/91098)、[MCP discovery 协商](https://github.com/anthropics/claude-code/issues/91099)、[VS Code 快捷键](https://github.com/anthropics/claude-code/issues/91103)、[跨会话消息静默丢失](https://github.com/anthropics/claude-code/issues/91105)、[advisor caching](https://github.com/anthropics/claude-code/issues/91110)、[Cowork 设备桥](https://github.com/anthropics/claude-code/issues/91111) 与 [恢复后输出丢失](https://github.com/anthropics/claude-code/issues/91113) 均有环境、复现或机制描述，仍需维护者确认。
 - 本轮新增的 [WSL2 启动扫描](https://github.com/anthropics/claude-code/issues/91119)、[Bash 只读挂载](https://github.com/anthropics/claude-code/issues/91122)、[多行环境变量转义](https://github.com/anthropics/claude-code/issues/91123)、[Browser GPU 崩溃](https://github.com/anthropics/claude-code/issues/91130)、[跨会话消息终止后台任务](https://github.com/anthropics/claude-code/issues/91139) 与 [headless Agent Teams 不唤醒](https://github.com/anthropics/claude-code/issues/91140) 均提供环境、复现、日志或对照试验；仍是未获维护者确认的单方报告。
+\n### 13:02 后增量观察\n\n- [后台 attach 鼠标模式](https://github.com/anthropics/claude-code/issues/91142)：byte-level 终端模式对照称 attach 后没有启用 mouse tracking，2.1.252 仍可复现。\n- [Remote Control 孤儿 bridge](https://github.com/anthropics/claude-code/issues/91143)：报告称父会话退出后 bridge 持续数日，并保留 computer-use 工具与 bypassPermissions。\n- [IDE socket handoff](https://github.com/anthropics/claude-code/issues/91149) 与 [stale selection](https://github.com/anthropics/claude-code/issues/91155)：分别提供进程采样、日志与扩展代码路径，指向 IDE 集成的会话启动和上下文边界问题。\n- [Agent SDK prompt cache](https://github.com/anthropics/claude-code/issues/91151)：来自 1,100 多次恢复边界的 Bedrock 生产统计称，超过约 80k tokens 且空闲超过一分钟后 cache 经常只命中 system+tools 前缀。\n- [凭据存储](https://github.com/anthropics/claude-code/issues/91158)：单机报告给出明文 refresh token 文件、Keychain 条目持续累积和认证范围证据；不是 Anthropic 安全公告。\n- [subagent 模型优先级](https://github.com/anthropics/claude-code/issues/91160)：对照复现称环境变量会压过 frontmatter 与调用级模型参数。\n\n以上均为未获维护者确认的单方报告，不外推为普遍故障。\n\n## 来源链接
 
-## 来源链接
-
-正文中的 32 个 URL 均列入结构化 `sources`，页面内按 URL 去重。
+正文中的 39 个 URL 均列入结构化 `sources`，页面内按 URL 去重。
 
 ## 采集状态
 
 - 已检查：Anthropic Newsroom、Help Center、Developer Platform、Claude Code 文档/官方 GitHub/CHANGELOG/releases/Status；逐项覆盖 Tier 1、Tier 2、Tier 3，并抽样 Reddit、Hacker News、X、YouTube与可信二手报道。
 - 失败入口：X 无法稳定核验原帖时间与互动量；Hacker News 无窗口内可核验条目；YouTube 噪声较高；社区入口未取得可核验互动量。
-- 初始候选：308；最终保留：32（1 条官方 release，31 条官方仓库用户 issue；issue 均标注为未获官方确认）。
+- 初始候选：340；最终保留：39（1 条官方 release，38 条官方仓库用户 issue；issue 均标注为未获官方确认）。
 - 二次补搜：否（最终来源不为 0）。
 - 图片：无。官方 release 页面未提供适合的独立题图，issue 附件不作为可靠配图。
