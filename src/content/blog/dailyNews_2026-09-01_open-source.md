@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-01T00:00:00+08:00"
-updatedAt: "2026-09-01T10:02:00+08:00"
+updatedAt: "2026-09-01T13:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.3"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3"
@@ -48,14 +48,14 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口累计至 **2026-09-01 10:02（Asia/Shanghai）**，已验证技术精选回看 48 小时。窗口内两项明确的一方更新分别是 DeepSeek Harness v0.1.2-alpha.3 与 Cline Desktop v0.0.21：前者继续处理长会话、图片工具与连接状态，后者强化停止操作对子 Agent 的传播、模型目录刷新与认证错误分类。HN 同时出现本地项目记忆、LLM 输出检查点与开放知识发布和多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
+本轮发现窗口累计至 **2026-09-01 13:02（Asia/Shanghai）**，已验证技术精选回看 48 小时、HN 回看 24 小时。窗口内明确的一方更新包括 DeepSeek Harness v0.1.2-alpha.3、Cline Desktop v0.0.21，以及 Cline 桌面端默认启用 Web Search 的主分支变更；其余必查 Harness 未出现新 release。HN 同时出现本地项目记忆、LLM 输出检查点与开放知识发布和多 Agent 协作等早期信号；这些条目按原始日期和证据强度分层，不把 HN 当天提交或 GitHub Trending 上榜误写成当天发布。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 本轮状态 | 关键观察 |
 |---|---|---|
 | DeepSeek Harness / DSH | **窗口内正式发布** | [v0.1.2-alpha.3](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3) 改善长会话分页导航、渲染内存与代码高亮，并修复运行中图片投递、无扩展名图片读取和连接误判；同时移除可选 SQLite Session 后端。 |
-| Cline | **窗口内正式发布；主分支有权限语义修复** | [Desktop v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) 让停止操作向委派子 Agent 与队友传播并持久化取消状态，同时改进实时模型目录、认证错误分类、附件拖放与 Marketplace 浏览；09:39 合入的[工具拒绝语义修复](https://github.com/cline/cline/commit/0852992f3b6843e69a03936b0bc67d2968990168)会明确告诉模型拒绝不是工具或系统故障，应先向用户澄清再继续。 |
+| Cline | **窗口内正式发布；主分支有权限与工具默认值更新** | [Desktop v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) 让停止操作向委派子 Agent 与队友传播并持久化取消状态，同时改进实时模型目录、认证错误分类、附件拖放与 Marketplace 浏览；09:39 合入的[工具拒绝语义修复](https://github.com/cline/cline/commit/0852992f3b6843e69a03936b0bc67d2968990168)会明确告诉模型拒绝不是工具或系统故障，应先向用户澄清再继续；12:23 合入的[桌面端 Web Search 默认值变更](https://github.com/cline/cline/commit/8eb5f3d57f3eb87f21262f6ec2326ce460445dea)只在用户从未设置该工具时默认开启，并保留显式关闭。 |
 | Pi Coding Agent | 已检查，暂无新 release | `badlogic/pi-mono` 已由 GitHub 重定向至当前一方仓库 `earendil-works/pi`；最新 release v0.84.4 已早于本轮 48 小时边界。 |
 | OpenCode | 已检查，暂无新 release | 官方 release 最新仍为 v1.18.25；窗口内有一项 [TUI 首页快捷键对齐修复](https://github.com/anomalyco/opencode/commit/26ff3ed3d3e28830190ef53f2ff4b261852139a4)，属于维护提交，不扩写为产品版本。 |
 | Aider | 已检查 | 官方 release 页未见窗口内新版本。 |
@@ -81,13 +81,19 @@ tags:
 
 **为什么重要：** 终止传播直接影响多 Agent 执行的可控性；实时目录和默认模型变化则影响模型路由的可重复性，自动化环境应显式固定模型并复核升级行为。
 
-### 3. BOOTH 尝试为 LLM 输出增加轻量检查点
+### 3. Cline 桌面端为新用户默认开启 Web Search
+
+[Cline 主分支提交](https://github.com/cline/cline/commit/8eb5f3d57f3eb87f21262f6ec2326ce460445dea)于 2026-09-01 10:23（上海时间）合入：桌面应用会在共享设置中尚未出现 `web_search` 时将其设为开启；用户此前从任一 Cline 应用显式关闭时不会覆盖，设置文件不可写也不会阻塞启动。
+
+**为什么重要：** 这是 Agent 工具默认权限面的实质变化；“仅首次未设置时启用”和“显式关闭优先”限制了影响范围，但桌面自动化用户仍应复核网络访问策略。
+
+### 4. BOOTH 尝试为 LLM 输出增加轻量检查点
 
 [BOOTH](https://github.com/Vedantgitbot/booth) 仓库创建于 2026-08-23 05:25（上海时间），并于本轮窗口内以 Show HN 形式出现。README 将其定位为应用与 LLM 调用之间的检查层，用于决定输出直接通过、重新考虑、标记多义或标记不确定；仓库采用 MIT 许可证。
 
 **为什么重要：** 这类输出门控可以成为 Agent loop 的确定性检查点，但当前项目很早期，尚无独立效果评测，本页不采信泛化质量结论。
 
-### 4. DoltLite Beta 把 Agent 团队构建的 SQLite 分支推进到稳定存储格式
+### 5. DoltLite Beta 把 Agent 团队构建的 SQLite 分支推进到稳定存储格式
 
 [DoltLite Beta](https://www.dolthub.com/blog/2026-08-31-doltlite-beta/) 发布于 2026-08-31。DoltHub 将其描述为替换 SQLite B-tree 层、加入 Git 式分支、合并、差异和远程同步的嵌入式数据库；Beta v0.50.0 承诺后续破坏性存储格式变化提供迁移路径。作者披露该项目最初用于测试 Gas Town Agent 编排，并经过约 2,000 个 Agent PR，但这一数字属于项目方自述。文章同时给出 sqllogictest 与 SQLite 接受测试结果以及公开性能报告入口。
 
@@ -138,8 +144,8 @@ tags:
 
 ## 采集状态
 
-- **采集窗口：** 2026-08-31 07:00 至 2026-09-01 10:02（Asia/Shanghai）；技术精选回看 48 小时。
+- **采集窗口：** 技术精选 2026-08-30 13:02 至 2026-09-01 13:02，HN 2026-08-31 13:02 至 2026-09-01 13:02（Asia/Shanghai）。
 - **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 的官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending（Overall/Python/TypeScript）、HN front/newest/Algolia、arXiv、Hugging Face、Simon Willison 与工程博客。
 - **失败/受限：** Pi 旧入口重定向至当前官方仓库；部分候选缺少可核验原始发布日期；Trending 未稳定提供日增星标；arXiv、Hugging Face 与 Simon Willison 未检出优先级足够的窗口内新增。
-- **初始候选数：** 34；**最终保留来源数：** 18；**二次补搜：** 否（最终来源不为 0）。
+- **初始候选数：** 46；**最终保留来源数：** 19；**二次补搜：** 否（最终来源不为 0）。
 - **图片：** 已配置 DSH release 的公开 GitHub OpenGraph 图片，来源 URL 与正文对应条目一致。
