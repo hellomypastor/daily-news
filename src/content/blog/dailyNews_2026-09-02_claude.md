@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T07:00:00+08:00"
+updatedAt: "2026-09-02T10:03:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.252"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -13,8 +13,10 @@ tags:
   - "Agent"
   - "Alignment"
   - "Anthropic"
+  - "API credits"
   - "Claude"
   - "Claude Code"
+  - "Claude Console"
   - "Claude Platform"
   - "claude.ai"
   - "CLI"
@@ -40,7 +42,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-09-01 07:00—2026-09-02 07:00（Asia/Shanghai）**。窗口内 Anthropic 发布 Claude Fable 5.1 / Mythos 5.1，并上线 Claude Code v2.1.257 与 v2.1.258；最新补丁修复 macOS 12 启动回归，以及远程和定时会话的权限批准重发失败。同时确认两起 platform.claude.com / Microsoft 365 相关短时降级事件；社区样本同时出现对模型能力的认可与对额度、指令遵循的抱怨，样本量有限，不足以代表整体用户。
+采集窗口：**2026-09-01 10:03—2026-09-02 10:03（Asia/Shanghai）**。窗口内 Anthropic 发布 Claude Fable 5.1 / Mythos 5.1，并上线 Claude Code v2.1.257 与 v2.1.258；最新补丁修复 macOS 12 启动回归，以及远程和定时会话的权限批准重发失败。同时确认两起 platform.claude.com / Microsoft 365 相关短时降级事件，以及一起 Claude Console 购买额度到账延迟事件；社区样本同时出现对模型能力的认可与对额度、指令遵循的抱怨，样本量有限，不足以代表整体用户。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -64,6 +66,7 @@ tags:
 | Chrome / browser agent；Desktop / Preview；Marketplace / Connectors / Plugins | 未发现独立功能发布；Fable 5.1 官方报告 OSWorld 2.0 与第三方 browser-agent 评测提升，但不等同于新浏览器产品发布 |
 | 当前官方创意 / 视频模型；Voice Mode | **模型有新增**：Fable 5.1 同时面向写作与知识工作；仍未发现 Anthropic 官方视频模型或 Voice Mode 独立发布 |
 | Microsoft 365 integration | **有短时事件**：Claude for Microsoft Office 365 于 9 月 2 日 00:02—00:22（上海时间）出现 elevated errors，随后恢复。[官方事件](https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3) |
+| Claude Console / 额度购买 | **有短时事件**：零余额用户购买额度后出现到账延迟，部分 API 请求错误提示余额过低；官方于 07:26 进入监控、09:24 宣布解决。[官方事件](https://anthropic.statuspage.io/incidents/620swtqyn24k) |
 
 ## Tier 3：安全与行业场景
 
@@ -79,15 +82,16 @@ Anthropic 在 [Improving our alignment and security practices](https://www.anthr
 
 ## 官方更新（最新在前）
 
-1. **Claude Code v2.1.258**：9 月 2 日 06:33（上海时间）发布，修复 macOS 12 启动回归，以及远程和定时会话在权限批准重发后失败的问题。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)
-2. **platform.claude.com 与 Microsoft Office 365 短时降级后恢复**：9 月 2 日 01:05（上海时间）开始调查，官方称核心推理与 API 未受影响，02:07 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/3g3d55q6vk3h)
-3. **Claude Code v2.1.257**：9 月 2 日 01:53（上海时间）发布，加入 Fable 5.1，并更新 Agent、权限、沙箱、MCP、Remote Control 和 VS Code 等能力。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)
-4. **Claude Fable 5.1 / Mythos 5.1**：Fable 5.1 普遍可用，1M 上下文；Mythos 5.1 通过网络安全与生命科学受信访问计划提供。官方同时发布缓存读取降价、EFS、编码与科研评测等信息。[官方发布](https://www.anthropic.com/claude-fable-and-mythos-5-1)
-5. **Enterprise Frontier Safeguards**：客户侧保存数据并默认自行人工复核的企业安全机制，计划自秋季起分阶段推出。[官方说明](https://www.anthropic.com/news/enterprise-frontier-safeguards)
-6. **Claude for Microsoft Office 365 短时降级后恢复**：9 月 2 日 00:02（上海时间）开始调查 elevated errors，00:22 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3)
-7. **Claude Code v2.1.252**：9 月 1 日 03:46（上海时间）发布，集中修复 CLI、Remote Control 与后台任务可靠性。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)
-8. **claude.ai 与 Claude Code 降级**：9 月 1 日 03:21（上海时间）进入调查；官方称 Claude Code 实际影响时段为 00:55—03:16，03:36 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/r82kdk0m7vqh)
-9. **claude.ai 聊天 elevated errors**：9 月 1 日 01:23（上海时间）开始调查，01:52 恢复。[状态事件](https://anthropic.statuspage.io/incidents/9jrp5rtyzrf6)
+1. **Claude Console 购买额度到账延迟后恢复**：9 月 2 日 07:26（上海时间）官方称已识别并修复问题；零余额用户新购额度延迟可用，导致部分 API 请求错误提示余额过低，09:24 宣布解决。[状态事件](https://anthropic.statuspage.io/incidents/620swtqyn24k)
+2. **Claude Code v2.1.258**：9 月 2 日 06:33（上海时间）发布，修复 macOS 12 启动回归，以及远程和定时会话在权限批准重发后失败的问题。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)
+3. **platform.claude.com 与 Microsoft Office 365 短时降级后恢复**：9 月 2 日 01:05（上海时间）开始调查，官方称核心推理与 API 未受影响，02:07 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/3g3d55q6vk3h)
+4. **Claude Code v2.1.257**：9 月 2 日 01:53（上海时间）发布，加入 Fable 5.1，并更新 Agent、权限、沙箱、MCP、Remote Control 和 VS Code 等能力。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)
+5. **Claude Fable 5.1 / Mythos 5.1**：Fable 5.1 普遍可用，1M 上下文；Mythos 5.1 通过网络安全与生命科学受信访问计划提供。官方同时发布缓存读取降价、EFS、编码与科研评测等信息。[官方发布](https://www.anthropic.com/claude-fable-and-mythos-5-1)
+6. **Enterprise Frontier Safeguards**：客户侧保存数据并默认自行人工复核的企业安全机制，计划自秋季起分阶段推出。[官方说明](https://www.anthropic.com/news/enterprise-frontier-safeguards)
+7. **Claude for Microsoft Office 365 短时降级后恢复**：9 月 2 日 00:02（上海时间）开始调查 elevated errors，00:22 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/nr3h7bw8b3k3)
+8. **Claude Code v2.1.252**：9 月 1 日 03:46（上海时间）发布，集中修复 CLI、Remote Control 与后台任务可靠性。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)
+9. **claude.ai 与 Claude Code 降级**：9 月 1 日 03:21（上海时间）进入调查；官方称 Claude Code 实际影响时段为 00:55—03:16，03:36 宣布恢复。[状态事件](https://anthropic.statuspage.io/incidents/r82kdk0m7vqh)
+10. **claude.ai 聊天 elevated errors**：9 月 1 日 01:23（上海时间）开始调查，01:52 恢复。[状态事件](https://anthropic.statuspage.io/incidents/9jrp5rtyzrf6)
 
 ## Love
 
@@ -100,7 +104,7 @@ Anthropic 在 [Improving our alignment and security practices](https://www.anthr
 
 ## 情绪判断
 
-**偏负面，低置信度。** 证据由两条社区个案与四起官方短时服务事件构成；正面样本只有单个用户对模型能力的认可。官方发布和安全文章不计入正面口碑。由于社区样本少、无统一采样，不能推断 Claude 整体满意度下降。
+**偏负面，低置信度。** 证据由两条社区个案与五起官方短时服务事件构成；正面样本只有单个用户对模型能力的认可。官方发布和安全文章不计入正面口碑。由于社区样本少、无统一采样，不能推断 Claude 整体满意度下降。
 
 ## 比较与 Agent 生态
 
@@ -119,6 +123,7 @@ Anthropic 在 [Improving our alignment and security practices](https://www.anthr
 
 ## 来源链接
 
+- [Claude Console 购买额度到账延迟事件](https://anthropic.statuspage.io/incidents/620swtqyn24k)
 - [Claude Fable 5.1 / Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1)
 - [Enterprise Frontier Safeguards](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 - [Claude Code v2.1.258](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)
@@ -136,4 +141,4 @@ Anthropic 在 [Improving our alignment and security practices](https://www.anthr
 
 - 已检查：Anthropic News / Engineering / Research、Claude Platform 与 Help Center release notes、Claude Status、Claude Code GitHub Releases、Developer Platform、Managed Agents、Agent SDK、Skills、Cowork、Design、Chrome / Desktop / Connectors / Plugins、Voice、Microsoft 365，以及 Reddit、Hacker News、X、YouTube。
 - 失败或受限：X 无可稳定复核的原帖时间和互动数据；YouTube 与 Hacker News 未发现可交叉验证新增；Help Center 搜索索引未显示窗口内版本条目。
-- 初始候选：12；最终保留来源：12；二次补搜：否（最终来源非 0）。
+- 初始候选：13；最终保留来源：13；二次补搜：否（最终来源非 0）。

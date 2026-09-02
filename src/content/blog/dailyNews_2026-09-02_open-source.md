@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T07:01:00+08:00"
+updatedAt: "2026-09-02T10:05:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.4"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"
@@ -26,16 +26,20 @@ tags:
   - "Coding Agent"
   - "DeepSeek Harness"
   - "Education"
+  - "Engineering"
   - "Generative UI"
   - "Git"
   - "GitHub Trending"
   - "LLM"
+  - "LLM Inference"
   - "Long Context"
   - "Memory"
   - "Multi-Agent"
   - "Observability"
   - "Open Source"
   - "OpenCode"
+  - "Performance"
+  - "Prompt Optimization"
   - "Python"
   - "Research"
   - "Science"
@@ -48,7 +52,7 @@ tags:
 
 ## 今日概览
 
-本轮技术亮点窗口为 **2026-08-31 07:01 至 2026-09-02 07:01（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线累计出现 Cline Desktop、DeepSeek Harness 与 OpenCode 的明确发布：Cline 在稳定版之后追加连接器与默认 Web 搜索 beta，DSH 继续迭代长会话和可持续子 Agent 通信，OpenCode 修复跨模型推理回放与工具计时。新研究同时覆盖 coding agent 的 Git 配置执行风险与工作记忆评测。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
+本轮技术亮点窗口为 **2026-08-31 10:05 至 2026-09-02 10:05（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线累计出现 Cline Desktop、DeepSeek Harness 与 OpenCode 的明确发布：Cline 在稳定版之后追加连接器与默认 Web 搜索 beta，DSH 继续迭代长会话和可持续子 Agent 通信，OpenCode 修复跨模型推理回放与工具计时；10:05 复查未发现这些必查项目的新 release。新增的推理工程文章区分了调节延迟—吞吐取舍与整体外推效率边界的技术，多 Agent 研究则用类型化控制对象隔离可优化提示与执行协议。新研究同时覆盖 coding agent 的 Git 配置执行风险与工作记忆评测。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
 
 ## Coding Agent / Harness 雷达
 
@@ -101,6 +105,10 @@ Manifold Security 于 2026-09-02 02:08 +08:00 发布 [GitSpawn 研究](https://w
 
 Simon Willison 在 2026-09-02 03:03 +08:00 的 [运行时拆解](https://simonwillison.net/2026/Sep/1/codex-libreoffice/) 中记录，Codex 桌面应用缓存的 primary runtime 包含完整 Python、Node.js，以及 LibreOffice headless、Poppler、Git 等原生工具；配套 skills 指示 Agent 如何调用这些二进制。这提供了桌面 Agent 处理文档与 PDF 时“技能说明 + 本地开源运行时”的可观察实现样本，也提醒用户关注本地缓存体积和执行面。
 
+### 9. Baseten：区分“沿效率边界移动”与“整体外推边界”
+
+Baseten 于 2026-09-02 07:47 +08:00 发布 [The efficient frontier of LLM inference](https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/)。文章把 batch size、并行策略等视为在延迟—吞吐边界上选择工作点，而量化、内核优化、推测解码等可在特定条件下外推整体效率边界；同时强调真实边界并不平滑，配置拐点需通过 sweep 实测。该分类有助于避免把降低单用户延迟、提高总吞吐和降低成本混成单一“加速”指标。
+
 ## GitHub Trending
 
 以下均为 2026-09-02 01:01 左右抓取的 daily 榜单快照；星数增量是页面当时显示值，只表示当日热度。
@@ -114,13 +122,17 @@ Simon Willison 在 2026-09-02 03:03 +08:00 的 [运行时拆解](https://simonwi
 
 ## HN 讨论
 
-HN front/newest 与 Algolia recent submissions 已检查。GitSpawn 在 2026-09-02 02:06 +08:00 被提交到 HN；本轮抓取时为 2 points、1 条评论，互动仍低，因此不把它描述为热门讨论，其技术事实以上述研究原文为准。
+HN front/newest 与 Algolia recent submissions 已检查。GitSpawn 在 2026-09-02 02:06 +08:00 被提交到 HN；本轮抓取时为 2 points、1 条评论，互动仍低，因此不把它描述为热门讨论，其技术事实以上述研究原文为准。[Baseten 推理效率文章](https://news.ycombinator.com/item?id=49529898) 于 2026-09-02 07:48 +08:00 提交，10:04 抓取时为 42 points、7 条评论；互动数据仅描述当时讨论热度，技术结论仍以原文为准。
 
 ## 论文 / 研究
 
 ### coding agent 工作记忆：相同 token 预算不等于相同有效上下文
 
 [Measure Before You Manage](https://arxiv.org/abs/2608.31057) 于 2026-09-01 00:34 +08:00 提交。作者分析 55 条归档 coding-agent 轨迹，将工作记忆区分为指令、产物、工具输出与 Agent 自建状态，并比较对象感知压缩和检索策略。结果提示校准集增益未必迁移到留出任务，名义 token 预算也不能替代对实际送达上下文、管理开销与任务结果的分层评估；本文未独立复现实验。
+
+### 控制—数据流分离：避免多 Agent 提示优化破坏执行协议
+
+[Control-Data Flow Separation](https://arxiv.org/abs/2609.00621) 于 2026-09-02 04:00 +08:00 提交。论文指出，多 Agent 提示同时承担内容生成和路由、格式、终止信号等执行协议时，自动提示优化可能意外破坏整个流水线；其方案把执行控制表示为带类型且可验证的程序对象，只让自然语言数据流参与优化。作者在合成推理、协作评审和保险评级工作流中报告最终协议有效率达到 100%，但本页未独立复现实验。
 
 ### CAST：用动作级 critique 训练长程工具调用 Agent
 
@@ -166,11 +178,13 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 - [CAST](https://huggingface.co/papers/2608.30147)
 - [Super Library Agent](https://huggingface.co/papers/2608.29310)
 - [EvoGenUI-Bench](https://huggingface.co/papers/2608.29387)
+- [The efficient frontier of LLM inference](https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/)
+- [Control-Data Flow Separation](https://arxiv.org/abs/2609.00621)
 
 ## 采集状态
 
-- **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；Hugging Face Daily Papers、arXiv；Simon Willison。
+- **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；Hugging Face Daily Papers、arXiv；Simon Willison；Baseten 模型性能工程博客。
 - **失败来源**：无。
-- **初始候选数**：31。
-- **保留来源数**：16。
+- **初始候选数**：33。
+- **保留来源数**：18。
 - **二次补搜**：否（最终来源不为 0）。

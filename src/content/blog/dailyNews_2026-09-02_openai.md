@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T07:01:58+08:00"
+updatedAt: "2026-09-02T10:03:17+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.152.1"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.152.1"
@@ -17,18 +17,20 @@ tags:
   - "AI Adoption"
   - "Astra"
   - "ChatGPT"
+  - "ChatGPT Enterprise"
   - "Codex"
   - "Connectors"
   - "Cybersecurity"
   - "Enterprise"
   - "Healthcare"
+  - "Legal"
   - "OpenAI"
   - "Safety"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 07:00 至 2026-09-02 07:00（Asia/Shanghai）**。窗口内共有三条 OpenAI 官方内容：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源，Basis、Clay、Exa Labs 使用 AI Agent 改造工作流，以及 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值并配套更强发布保障。编码主轴累计包括 Codex `0.152.0` 稳定版、`0.152.1` 修复版与四个预发布；`0.152.1` 修复 Guardian 审批审查对模型元数据中 Node REPL 策略的遵循，alpha 页面只给版本标识，不能据此推断具体能力。ChatGPT release notes、Agents SDK Python/TypeScript 及官方 Python/Node SDK 未发现窗口内可核实的独立更新。
+采集窗口：**2026-09-01 08:00 至 2026-09-02 08:00（Asia/Shanghai）**。窗口内共有四条 OpenAI 官方内容：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源，Basis、Clay、Exa Labs 使用 AI Agent 改造工作流，Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值并配套更强发布保障，以及 Gilbert + Tobin 将 ChatGPT Enterprise 与 Codex 扩展到律所工作流的官方案例。编码主轴累计包括 Codex `0.152.0` 稳定版、`0.152.1` 修复版与四个预发布；`0.152.1` 修复 Guardian 审批审查对模型元数据中 Node REPL 策略的遵循，alpha 页面只给版本标识，不能据此推断具体能力。ChatGPT release notes、Agents SDK Python/TypeScript 及官方 Python/Node SDK 未发现窗口内可核实的独立更新。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -71,6 +73,7 @@ tags:
 - **Safety / Cybersecurity**：OpenAI 表示 Astra 是首个达到 Preparedness Framework “Critical” 网络安全能力阈值的 OpenAI 模型，并说明将以更强保障措施约束发布；这是能力与安全框架公告，不把它外推为已普遍开放。[官方安全公告](https://openai.com/index/path-to-astra)
 - **Healthcare / Enterprise**：OpenAI 宣布医疗机构现在可把 EHR 与其他可信行业数据源连接到 ChatGPT，帮助临床人员安全访问患者背景与医学研究。[官方产品公告](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)
 - **AI Adoption / 企业工作流**：OpenAI 总结 Basis、Clay 与 Exa Labs 如何使用 AI Agent 改进客户入驻、客户管理和开发者集成。[官方案例](https://openai.com/index/ai-native-company-workflows)
+- **Legal / Enterprise**：OpenAI 案例介绍澳大利亚律所 Gilbert + Tobin 通过高层推动、治理与人类责任机制，扩展 ChatGPT Enterprise 和 Codex 的使用；这是官方客户案例，不代表独立效果评测。[官方案例](https://openai.com/index/gilbert-tobin)
 - **Business / Edu / Gov / Science**：除上述医疗、企业采用和 Astra 安全公告外，OpenAI News、Help Center 与 Enterprise/Edu release notes 未发现窗口内可核实的独立更新。
 - 本轮未保留日期不明的企业候选；没有把较旧公告重复包装成窗口内动态。
 
@@ -80,6 +83,7 @@ tags:
 - OpenAI 发布企业 AI-native 工作流案例，涵盖 Basis、Clay 与 Exa Labs 的 Agent 实践。
 - OpenAI 发布 Astra 安全公告：该模型达到 Preparedness Framework 的 Critical 网络安全能力阈值，并配套更强发布保障。
 - OpenAI 宣布医疗机构可将 EHR 和其他行业数据源连接到 ChatGPT。
+- OpenAI 发布 Gilbert + Tobin 客户案例，介绍 ChatGPT Enterprise 与 Codex 在律所的治理与扩展方式。
 - Codex `0.153.0-alpha.2`、`0.153.0-alpha.1` 为官方测试通道版本信号；页面没有功能清单。
 - Codex `0.152.0` 为本窗口的稳定版更新，官方 release 披露了交互、凭据、MCP 与安全相关变化。
 - Codex `0.152.0-alpha.7.2` 为较早的官方预发布，页面没有功能清单。
@@ -119,10 +123,11 @@ tags:
 - [Codex 0.153.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)
 - [Codex 0.152.0](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
 - [Codex 0.152.0-alpha.7.2](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2)
+- [How law firm Gilbert + Tobin governs and scales AI with OpenAI](https://openai.com/index/gilbert-tobin)
 
 ## 采集状态
 
 - 已检查：OpenAI News / Research / Product RSS 与索引、开发者文档和平台 changelog、ChatGPT 及 Enterprise/Edu release notes、Codex / Agents SDK / Python / Node 官方 GitHub releases、OpenAI Developer Community、Reddit、Hacker News、X 与 YouTube/播客公开检索。
 - 失败来源：ChatGPT release notes HTML 直连返回 403；X 未得到可直接验证时间戳的窗口内条目；YouTube/播客未发现可核实的新条目。
-- 初始候选：**10**（6 个窗口内 Codex release、3 个窗口内 OpenAI News / Safety 官方条目，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**9**；二次补搜：**否**（最终来源不为 0）。
+- 初始候选：**11**（6 个窗口内 Codex release、4 个窗口内 OpenAI News / Safety 官方条目，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**10**；二次补搜：**否**（最终来源不为 0）。
 - 图片：**未配置**。本轮直连 OpenAI 文章页遇到验证页，未能可靠核验专题原图；GitHub release 页面也没有合适的故事图片，故宁可纯文字展示。

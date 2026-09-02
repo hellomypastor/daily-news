@@ -1,13 +1,13 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T07:08:00+08:00"
+updatedAt: "2026-09-02T10:03:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredTitle: "Claude Code v2.1.258"
-featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.258"
-featuredSummary: "Claude Code 修复 macOS 12 启动回归，以及权限批准重发失败后远程与定时会话出现空用户消息错误的问题。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
-featuredPublishedAt: "2026-09-02 06:33 +08:00"
-featuredTags: ["Anthropic","Claude Code","Reliability","详见 Claude 专题页"]
+featuredTitle: "Introducing agentic video understanding with Gemini"
+featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
+featuredSummary: "Gemini 3.7 Flash、3.6 Flash 与 3.5 Flash-Lite 新增工具驱动的视频主动扫描与复看能力，并在官方测试中降低 token 与成本、提升准确率。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-09-01"
+featuredTags: ["Google","Gemini","Agentic Video","Video Understanding"]
 tags:
   - "观察池"
   - "日期未确认"
@@ -16,6 +16,7 @@ tags:
   - "月度汇总"
   - "Agent"
   - "Agent Safety"
+  - "Agentic Video"
   - "AI"
   - "Anthropic"
   - "Claude Code"
@@ -23,6 +24,7 @@ tags:
   - "Cybersecurity"
   - "Enterprise"
   - "Enterprise Adoption"
+  - "Gemini"
   - "Google"
   - "Healthcare"
   - "Industry"
@@ -34,20 +36,22 @@ tags:
   - "Responsible AI"
   - "Safety"
   - "Security"
+  - "Video Understanding"
 ---
 
 ## 今日概览
 
-采集截止 **2026-09-02 07:00（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 07:00 至 2026-09-02 07:00**。本轮行业信号集中在四条主线：Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
+采集截止 **2026-09-02 10:03（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 10:03 至 2026-09-02 10:03**。本轮行业信号集中在五条主线：Google 推出 Gemini Agentic Video；Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
 
 ## 优先动态（过去 24 小时）
 
-1. **Claude Code v2.1.258 修复平台与远程会话回归**：修复 macOS 12 无法启动，以及重发的权限批准无法应用后，远程和定时会话因空用户消息而失败的问题；体现长期 Agent 会话可靠性仍在快速迭代。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)（详见 Claude 专题页）
-2. **Path to Astra：前沿网络安全能力与发布保障**：OpenAI 表示 Astra 是首个达到 Preparedness Framework “Critical” 网络安全能力阈值的 OpenAI 模型，并将以更强保障措施约束发布；不把能力阈值外推为普遍开放。[OpenAI 原文](https://openai.com/index/path-to-astra)（详见 OpenAI 专题页）
-3. **Claude Code v2.1.257 落地 Fable 5.1 与更完整的 Agent 控制面**：新版本加入 Fable 5.1、跨工作目录读取确认、子 Agent 模型强制设置，以及后台会话、沙箱、MCP、Remote Control 和 VS Code 更新，体现 coding Agent 向长期任务、安全边界与企业控制演进。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)（详见 Claude 专题页）
-4. **OpenAI 汇总 AI-native 企业的 Agent 工作流实践**：Basis、Clay 与 Exa Labs 案例覆盖客户入驻、客户管理、研究和开发者集成，显示 Agent 从单点助手进入企业核心运营流程。[OpenAI 原文](https://openai.com/index/ai-native-company-workflows)（详见 OpenAI 专题页）
-5. **ChatGPT 面向医疗机构连接 EHR 与行业数据**：医疗组织可把 EHR 和其他可信来源接入 ChatGPT，以便临床人员获取患者背景与医学研究，属于受监管行业数据接入的重要产品信号。[OpenAI 原文](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)（详见 OpenAI 专题页）
-6. **Fable 5.1 / Mythos 5.1 发布**：Fable 5.1 面向编码、知识工作和长时间 Agent 任务，Mythos 5.1 通过网络安全与生命科学受信访问计划提供；官方文章未给精确时刻，但 Claude Code v2.1.257 的 01:53 发布记录确认了窗口内产品集成。[Anthropic 原文](https://www.anthropic.com/claude-fable-and-mythos-5-1)（详见 Claude 专题页）
+1. **Gemini 推出 Agentic Video Understanding**：Gemini 3.7 Flash、3.6 Flash 与 3.5 Flash-Lite 可通过内部工具主动搜索、扫描和复看视频片段；Google 报告其测试中 token 消耗最高降低 88%、成本最高降低 66%、准确率最高提升 7%，现已在 Gemini API 与 Gemini Enterprise Agent Platform 提供。[Google 原文](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/)
+2. **Claude Code v2.1.258 修复平台与远程会话回归**：修复 macOS 12 无法启动，以及重发的权限批准无法应用后，远程和定时会话因空用户消息而失败的问题；体现长期 Agent 会话可靠性仍在快速迭代。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)（详见 Claude 专题页）
+3. **Path to Astra：前沿网络安全能力与发布保障**：OpenAI 表示 Astra 是首个达到 Preparedness Framework “Critical” 网络安全能力阈值的 OpenAI 模型，并将以更强保障措施约束发布；不把能力阈值外推为普遍开放。[OpenAI 原文](https://openai.com/index/path-to-astra)（详见 OpenAI 专题页）
+4. **Claude Code v2.1.257 落地 Fable 5.1 与更完整的 Agent 控制面**：新版本加入 Fable 5.1、跨工作目录读取确认、子 Agent 模型强制设置，以及后台会话、沙箱、MCP、Remote Control 和 VS Code 更新，体现 coding Agent 向长期任务、安全边界与企业控制演进。[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)（详见 Claude 专题页）
+5. **OpenAI 汇总 AI-native 企业的 Agent 工作流实践**：Basis、Clay 与 Exa Labs 案例覆盖客户入驻、客户管理、研究和开发者集成，显示 Agent 从单点助手进入企业核心运营流程。[OpenAI 原文](https://openai.com/index/ai-native-company-workflows)（详见 OpenAI 专题页）
+6. **ChatGPT 面向医疗机构连接 EHR 与行业数据**：医疗组织可把 EHR 和其他可信来源接入 ChatGPT，以便临床人员获取患者背景与医学研究，属于受监管行业数据接入的重要产品信号。[OpenAI 原文](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources)（详见 OpenAI 专题页）
+7. **Fable 5.1 / Mythos 5.1 发布**：Fable 5.1 面向编码、知识工作和长时间 Agent 任务，Mythos 5.1 通过网络安全与生命科学受信访问计划提供；官方文章未给精确时刻，但 Claude Code v2.1.257 的 01:53 发布记录确认了窗口内产品集成。[Anthropic 原文](https://www.anthropic.com/claude-fable-and-mythos-5-1)（详见 Claude 专题页）
 
 ## 常规动态
 
@@ -81,12 +85,12 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 一句话总结
 
-Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接和前沿网络安全扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
+Google 的 Agentic Video 把工具驱动的主动检索带入长视频分析；Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接和前沿网络安全扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、文档、API/模型变更、DeepSearch、语音、编码、工具调用和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：部分中国厂商官网/社交入口无可核验窗口内原文；播客无截止时间前新集；部分官方页面仅给日期。
-- 初始候选数：15；保留来源数：9。
+- 初始候选数：16；保留来源数：10。
 - 图片检查：本轮跨主题来源未额外配置页面图片；日期未确认条目不作为首页图片候选。
 - 二次补搜：否（最终来源不为 0）。

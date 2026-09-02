@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-09-02"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T07:08:00+08:00"
+updatedAt: "2026-09-02T10:05:00+08:00"
 description: "2026-09-02 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-02"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -43,7 +43,7 @@ tags:
 
 ## 主流 AI / Agent 厂商技术动态日报
 
-**[Claude Code v2.1.258](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)**。Claude Code 修复 macOS 12 启动回归，以及权限批准重发失败后远程与定时会话出现空用户消息错误的问题。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
+**[Introducing agentic video understanding with Gemini](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/)**。Gemini 3.7 Flash、3.6 Flash 与 3.5 Flash-Lite 新增工具驱动的视频主动扫描与复看能力，并在官方测试中降低 token 与成本、提升准确率。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-02_ai-industry)
 
