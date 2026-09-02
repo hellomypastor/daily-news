@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T13:16:00+08:00"
+updatedAt: "2026-09-02T16:06:58+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Copilot code review can now approve pull requests"
 featuredUrl: "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests"
@@ -16,19 +16,21 @@ tags:
   - "视频创作"
   - "AaaS"
   - "Agent"
+  - "Agent Security"
   - "Cloud Agent"
   - "Enterprise"
   - "GitHub Copilot"
   - "Grok"
   - "Managed Agent"
   - "PR Agent"
+  - "Runtime Governance"
   - "Safety"
   - "xAI"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 04:02 至 2026-09-02 04:02（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-30 04:02 至 2026-09-01 04:02**。本轮确认 1 条新的 AaaS 企业治理能力：GitHub Copilot 托管代码审查进入可批准 PR 的公测；同时在观察窗口保留 1 条可信二手 AaaS 候选，并记录 1 条官方 MaaS/安全邻近信号。Devin 与 xAI/Grok 已按要求独立核查；均未出现新的托管异步执行、远程环境、并发、定价、企业控制面或集成动态。当天早先因确认来源为 0 已完成第二轮搜索，本轮从 GitHub 官方 changelog 补入可核实新增。
+采集窗口：**2026-09-01 04:02 至 2026-09-02 04:02（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-30 04:02 至 2026-09-01 04:02**。本轮确认 1 条新的 AaaS 企业治理能力：GitHub Copilot 托管代码审查进入可批准 PR 的公测；同时在观察窗口保留 1 条可信二手 AaaS 候选，并记录 2 条官方 MaaS/安全邻近信号。Devin 与 xAI/Grok 已按要求独立核查；均未出现新的托管异步执行、远程环境、并发、定价、企业控制面或集成动态。当天早先因确认来源为 0 已完成第二轮搜索，本轮从 GitHub 官方 changelog 补入可核实新增；16:06 滚动复核又补入 CrowdStrike 的 Agent 运行时安全邻近信号。
 
 ## 重点动态
 
@@ -67,6 +69,7 @@ Devin、Grok Bot、Jules、GitHub Copilot cloud agent、Replit Agent、Cursor、
 ## 邻近信号观察池
 
 - **xAI Grok 4.6 生物安全评测（官方、非 AaaS）**：xAI 于 9 月 1 日发布 LatchBio 独立评测解读，涉及 Agent harness 中的文件检查、工具使用与环境推理，但没有新增托管执行、后台任务、远程环境或企业 Agent 服务证据，故仅作为 MaaS/安全邻近信号。[xAI 官方文章](https://x.ai/news/biosafety-at-the-frontier)
+- **CrowdStrike Falcon Guardian（官方、Agent 安全邻近信号）**：CrowdStrike 9 月 1 日宣布 Falcon Guardian，将 Agent 的提示、Skill、工具调用、MCP 与端点执行关联，并支持发现、调查及限制受支持 Agent 类型；原生 AI Gateway 仍处于 pre-beta，计划于第四季度 GA。该产品提供 Agent 运行时安全与托管检测响应，而非托管 Agent 任务、环境或执行生命周期，故不计为 AaaS 发布。[CrowdStrike 官方文章](https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/)
 - 其余普通模型/API 更新、通用执行基础设施与本地/自托管 harness 命中均未出现本窗口内新的“供应商托管 Agent 生命周期”证据。
 
 ## 趋势判断
@@ -78,13 +81,14 @@ GitHub Copilot 的新增表明托管 PR Agent 正从“提出审查意见”延�
 - [Copilot code review can now approve pull requests](https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests)
 - [千问创作推出 Agent Teams（可信二手）](https://www.iimedia.cn/c1088/115562.html)
 - [Biosecurity at the frontier（xAI 官方，邻近信号）](https://x.ai/news/biosafety-at-the-frontier)
+- [Falcon Guardian Defines the Next Generation of AI Security（CrowdStrike 官方，邻近信号）](https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/)
 
 ## 采集状态
 
 - 已检查：Devin 与 xAI/Grok 必查入口；GitHub、Google、Microsoft、Replit、Cursor、Lindy、CrewAI、LangGraph、Amazon Q、Cloudflare、Factory、Amp；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code；字节跳动重点及主要中国厂商。
 - 失败入口：部分产品/文档页无逐条日期；部分社交入口需要登录或仅有摘要；部分 changelog 存在索引延迟。
-- 初始候选：9 条；最终保留：3 条（1 条过去 24 小时官方 AaaS 更新、1 条 24–72 小时可信二手 AaaS 候选、1 条官方 MaaS/安全邻近信号）；过去 24 小时确认的 AaaS 发布为 1 条。
+- 初始候选：10 条；最终保留：4 条（1 条过去 24 小时官方 AaaS 更新、1 条 24–72 小时可信二手 AaaS 候选、2 条官方安全邻近信号）；过去 24 小时确认的 AaaS 发布为 1 条。
 - 二次补搜：是；已扩大中英文关键词并切换官方 changelog、GitHub 与可信二手入口，仍未发现合格新增。
 - 图片：无；观察池与邻近信号均不适合作为首页图片，故不配置页面图片。
 
-今日扫描完成，共 3 条动态，重点：GitHub Copilot code review 新增受企业策略约束的 PR 正式批准能力；千问 Agent Teams 进入日期未确认观察，xAI 生物安全评测仅作邻近信号；Devin 与 xAI/Grok 均已完成专项检查且无 AaaS 新增。
+今日扫描完成，共 4 条动态，重点：GitHub Copilot code review 新增受企业策略约束的 PR 正式批准能力；千问 Agent Teams 进入日期未确认观察，xAI 生物安全评测与 CrowdStrike Falcon Guardian 仅作邻近信号；Devin 与 xAI/Grok 均已完成专项检查且无 AaaS 新增。

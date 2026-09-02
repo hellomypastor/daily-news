@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T13:03:00+08:00"
+updatedAt: "2026-09-02T16:03:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.4"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"
@@ -42,6 +42,7 @@ tags:
   - "Performance"
   - "Prompt Optimization"
   - "Python"
+  - "Reliability"
   - "Research"
   - "Science"
   - "SDK"
@@ -55,12 +56,16 @@ tags:
 
 ## 今日概览
 
-本轮技术亮点窗口为 **2026-08-31 13:03 至 2026-09-02 13:03（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线累计出现 Cline Desktop、SDK/CLI、DeepSeek Harness 与 OpenCode 的明确发布：Cline SDK 0.0.82 与 CLI 3.0.61 新增跨 Claude Code、Codex 与 OpenCode 的会话导入，并修复空 capability 列表导致工具或图像被静默剥离、checkpoint 恢复可覆盖后续提交等风险。DSH 继续迭代长会话和可持续子 Agent 通信，OpenCode 修复跨模型推理回放与工具计时。新增的推理工程文章区分了调节延迟—吞吐取舍与整体外推效率边界的技术，多 Agent 研究则用类型化控制对象隔离可优化提示与执行协议。新研究同时覆盖 coding agent 的 Git 配置执行风险与工作记忆评测。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
+本轮技术亮点窗口滚动至 **2026-08-31 16:03 至 2026-09-02 16:03（Asia/Shanghai，48 小时）**。新增 Cline Desktop 0.0.22 与扩展 4.1.17 两项稳定发布：前者把 Claude Code、Codex 与 OpenCode 历史导入做成可恢复会话，后者修复长会话 Hub 进程因反复广播完整 transcript 而可能膨胀到数十 GB 的问题。新论文 Harness-of-Harness 研究在既有 coding-agent harness 之上组织多轮规划—编码—测试循环；另一项安全研究则系统化描述低权限上下文进入高权限消息角色或跨作用域残留的风险。
+
+Coding Agent / harness 主线累计出现 Cline Desktop、SDK/CLI、DeepSeek Harness 与 OpenCode 的明确发布：Cline SDK 0.0.82 与 CLI 3.0.61 新增跨 Claude Code、Codex 与 OpenCode 的会话导入，并修复空 capability 列表导致工具或图像被静默剥离、checkpoint 恢复可覆盖后续提交等风险。DSH 继续迭代长会话和可持续子 Agent 通信，OpenCode 修复跨模型推理回放与工具计时。新增的推理工程文章区分了调节延迟—吞吐取舍与整体外推效率边界的技术，多 Agent 研究则用类型化控制对象隔离可优化提示与执行协议。新研究同时覆盖 coding agent 的 Git 配置执行风险与工作记忆评测。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 本轮状态 | 技术意义 | 一手来源 |
 |---|---|---|---|
+| Cline | **已验证稳定发布**：[Desktop v0.0.22](https://github.com/cline/cline/releases/tag/desktop-v0.0.22)，2026-09-02 13:20 +08:00 | 导入 Claude Code、Codex 与 OpenCode 历史为可恢复会话；定时任务运行折叠分组，macOS 语音输入修复，Web 搜索默认开启。 | 官方 release |
+| Cline | **已验证稳定发布**：[v4.1.17](https://github.com/cline/cline/releases/tag/v4.1.17)，2026-09-02 13:40 +08:00 | 修复长会话 Hub 完整 transcript 广播导致的内存放大；hook 启动失败不再拖垮扩展核心。 | 官方 release |
 | Cline | **已验证发布**：[SDK v0.0.82](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82) / [CLI v3.0.61](https://github.com/cline/cline/releases/tag/cli-v3.0.61)，2026-09-02 12:40 / 12:49 +08:00 | SDK 增加 Claude Code、Codex、OpenCode 会话的事务式导入；SDK/CLI 共同修复 capability 误判、checkpoint 恢复覆盖后续提交、远程 MCP 启动超时及 Codex 登录刷新等可靠性问题。 | 官方 releases |
 | Cline | **已验证 beta**：[Desktop v0.0.22-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1)，2026-09-02 06:39 +08:00 | 符合资格的内部账号可在桌面运行时直接注册 Composio 工具；OAuth 撤销与连接对账更稳健，新桌面会话默认启用 Web 搜索。beta 身份需明确，不视为稳定版。 | [官方 release](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1) |
 | Cline | **已验证发布**：Desktop v0.0.21，2026-09-01 05:41 +08:00 | Stop 现在会向 delegated subagents 与 teammates 传播取消，避免后台遗留任务；Marketplace 改为双栏浏览，provider 模型目录改为动态刷新，并修正认证错误分类。 | [官方 release](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) |
@@ -76,6 +81,12 @@ tags:
 </figure>
 
 ## 已验证技术亮点
+
+### 新增：Cline Desktop 0.0.22 与扩展 4.1.17
+
+[Cline Desktop v0.0.22](https://github.com/cline/cline/releases/tag/desktop-v0.0.22) 于 2026-09-02 13:20 +08:00 发布，可扫描 Claude Code、Codex 与 OpenCode 本地历史并转换为可搜索、恢复的 Cline 会话；恢复时使用 Cline 当前配置的 provider/model。它还分组显示同一定时任务的多次运行，修复 macOS 语音权限，并默认开启 Web 搜索。
+
+[Cline v4.1.17](https://github.com/cline/cline/releases/tag/v4.1.17) 于 2026-09-02 13:40 +08:00 发布。官方说明此前状态变化会把完整 transcript 广播给所有客户端，大任务可能让 Hub 增长到数十 GB；新版快照只携带状态。hook 启动失败也不再崩溃扩展核心。
 
 ### 1. Cline SDK / CLI：跨 Agent 会话导入与高风险恢复保护
 
@@ -134,6 +145,14 @@ HN front/newest 与 Algolia recent submissions 已检查。GitSpawn 在 2026-09-
 
 ## 论文 / 研究
 
+### Harness-of-Harness：在既有 harness 上组织持续改进循环
+
+[Harness-of-Harness](https://arxiv.org/abs/2609.01481) 于 2026-09-02 00:17 +08:00 提交。框架在既有 coding-agent harness 上组织迭代式规划、编码与测试，并分离实现期测试与独立评估。作者报告三个 harness-model 组合在三套基准上的平均相对增益为 52.25%，但本页未独立复现实验。
+
+### Context Privilege Escalation：上下文装配也是权限边界
+
+[What's in Your Agent's Context?](https://arxiv.org/abs/2609.01222) 于 2026-09-01 21:26 +08:00 提交。论文区分低权限内容进入高权限消息角色的 M-CPE 与攻击内容跨原作用域残留的 X-CPE，并称分析了 12 个真实 harness；后果与覆盖范围均为作者报告。
+
 ### coding agent 工作记忆：相同 token 预算不等于相同有效上下文
 
 [Measure Before You Manage](https://arxiv.org/abs/2608.31057) 于 2026-09-01 00:34 +08:00 提交。作者分析 55 条归档 coding-agent 轨迹，将工作记忆区分为指令、产物、工具输出与 Agent 自建状态，并比较对象感知压缩和检索策略。结果提示校准集增益未必迁移到留出任务，名义 token 预算也不能替代对实际送达上下文、管理开销与任务结果的分层评估；本文未独立复现实验。
@@ -170,6 +189,8 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 
 ## 来源链接
 
+- [Cline Desktop v0.0.22](https://github.com/cline/cline/releases/tag/desktop-v0.0.22)
+- [Cline v4.1.17](https://github.com/cline/cline/releases/tag/v4.1.17)
 - [Cline SDK v0.0.82](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82)
 - [Cline CLI v3.0.61](https://github.com/cline/cline/releases/tag/cli-v3.0.61)
 - [Cline Desktop v0.0.22-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1)
@@ -190,11 +211,13 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 - [EvoGenUI-Bench](https://huggingface.co/papers/2608.29387)
 - [The efficient frontier of LLM inference](https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/)
 - [Control-Data Flow Separation](https://arxiv.org/abs/2609.00621)
+- [Harness-of-Harness](https://arxiv.org/abs/2609.01481)
+- [What's in Your Agent's Context?](https://arxiv.org/abs/2609.01222)
 
 ## 采集状态
 
 - **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；Hugging Face Daily Papers、arXiv；Simon Willison；Baseten 模型性能工程博客。
 - **失败来源**：无。
-- **初始候选数**：35。
-- **保留来源数**：20。
+- **初始候选数**：41。
+- **保留来源数**：24。
 - **二次补搜**：否（最终来源不为 0）。
