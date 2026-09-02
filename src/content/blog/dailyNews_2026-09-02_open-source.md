@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T10:05:00+08:00"
+updatedAt: "2026-09-02T13:03:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-alpha.4"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"
@@ -21,6 +21,7 @@ tags:
   - "Agent Skills"
   - "AI"
   - "Beta"
+  - "CLI"
   - "Cline"
   - "Codex"
   - "Coding Agent"
@@ -43,8 +44,10 @@ tags:
   - "Python"
   - "Research"
   - "Science"
+  - "SDK"
   - "Security"
   - "Session"
+  - "Session Import"
   - "Tool Calling"
   - "Tool Execution"
   - "Video"
@@ -52,12 +55,13 @@ tags:
 
 ## 今日概览
 
-本轮技术亮点窗口为 **2026-08-31 10:05 至 2026-09-02 10:05（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线累计出现 Cline Desktop、DeepSeek Harness 与 OpenCode 的明确发布：Cline 在稳定版之后追加连接器与默认 Web 搜索 beta，DSH 继续迭代长会话和可持续子 Agent 通信，OpenCode 修复跨模型推理回放与工具计时；10:05 复查未发现这些必查项目的新 release。新增的推理工程文章区分了调节延迟—吞吐取舍与整体外推效率边界的技术，多 Agent 研究则用类型化控制对象隔离可优化提示与执行协议。新研究同时覆盖 coding agent 的 Git 配置执行风险与工作记忆评测。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
+本轮技术亮点窗口为 **2026-08-31 13:03 至 2026-09-02 13:03（Asia/Shanghai，48 小时）**。Coding Agent / harness 主线累计出现 Cline Desktop、SDK/CLI、DeepSeek Harness 与 OpenCode 的明确发布：Cline SDK 0.0.82 与 CLI 3.0.61 新增跨 Claude Code、Codex 与 OpenCode 的会话导入，并修复空 capability 列表导致工具或图像被静默剥离、checkpoint 恢复可覆盖后续提交等风险。DSH 继续迭代长会话和可持续子 Agent 通信，OpenCode 修复跨模型推理回放与工具计时。新增的推理工程文章区分了调节延迟—吞吐取舍与整体外推效率边界的技术，多 Agent 研究则用类型化控制对象隔离可优化提示与执行协议。新研究同时覆盖 coding agent 的 Git 配置执行风险与工作记忆评测。GitHub Trending 仍以 Agent skills、交互式多 Agent 与工具安全为主，但 Trending 只证明当日热度，不代表项目当天发布。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 本轮状态 | 技术意义 | 一手来源 |
 |---|---|---|---|
+| Cline | **已验证发布**：[SDK v0.0.82](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82) / [CLI v3.0.61](https://github.com/cline/cline/releases/tag/cli-v3.0.61)，2026-09-02 12:40 / 12:49 +08:00 | SDK 增加 Claude Code、Codex、OpenCode 会话的事务式导入；SDK/CLI 共同修复 capability 误判、checkpoint 恢复覆盖后续提交、远程 MCP 启动超时及 Codex 登录刷新等可靠性问题。 | 官方 releases |
 | Cline | **已验证 beta**：[Desktop v0.0.22-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1)，2026-09-02 06:39 +08:00 | 符合资格的内部账号可在桌面运行时直接注册 Composio 工具；OAuth 撤销与连接对账更稳健，新桌面会话默认启用 Web 搜索。beta 身份需明确，不视为稳定版。 | [官方 release](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1) |
 | Cline | **已验证发布**：Desktop v0.0.21，2026-09-01 05:41 +08:00 | Stop 现在会向 delegated subagents 与 teammates 传播取消，避免后台遗留任务；Marketplace 改为双栏浏览，provider 模型目录改为动态刷新，并修正认证错误分类。 | [官方 release](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) |
 | DeepSeek Harness / DSH | **已验证发布**：v0.1.2-alpha.4，2026-09-01 23:45 +08:00 | 父 Agent 与可持续子 Agent 改用 `send_message` 双向跟进；Python SDK、Headless、ACP 和自定义 Profile 默认提供 `web_fetch`，同时用按需 API 替换整段 `Session.events` 读取。 | [官方 release](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4) |
@@ -73,39 +77,43 @@ tags:
 
 ## 已验证技术亮点
 
-### 1. Cline Desktop beta：连接器工具进入打包运行时，默认开启 Web 搜索
+### 1. Cline SDK / CLI：跨 Agent 会话导入与高风险恢复保护
+
+[Cline SDK v0.0.82](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82) 于 2026-09-02 12:40 +08:00 发布，[CLI v3.0.61](https://github.com/cline/cline/releases/tag/cli-v3.0.61) 于 12:49 +08:00 发布。SDK 新增 `SessionImportService`，可发现并事务式、幂等地导入 Claude Code、Codex 与 OpenCode 会话，转换为可列出和恢复的 Cline 会话。两版共同修复空 capability 列表使 Dify、SAP AI Core、OpenCode 与 Codex CLI 模型的工具定义被静默移除，以及 checkpoint 恢复可能把后续提交移出分支的问题；CLI 还为不可达远程 MCP 增加 10 秒连接预算，并改善 Codex OAuth 端口占用和临时刷新失败处理。
+
+### 2. Cline Desktop beta：连接器工具进入打包运行时，默认开启 Web 搜索
 
 [Cline Desktop v0.0.22-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1) 于 2026-09-02 06:39 +08:00 发布。符合资格的内部账号可让 Composio connectors 在打包桌面运行时直接注册工具，同时改善 OAuth 撤销、连接/断开与状态对账；新桌面会话默认启用 Web 搜索。该版本明确为 beta，本页不将其描述成稳定版普遍可用。
 
-### 2. OpenCode 1.18.26：跨模型推理回放与工具计时可靠性
+### 3. OpenCode 1.18.26：跨模型推理回放与工具计时可靠性
 
 [OpenCode v1.18.26](https://github.com/anomalyco/opencode/releases/tag/v1.18.26) 于 2026-09-02 05:52 +08:00 发布。Claude 5 会话现在能容忍提示或工具变化后残留的 thinking blocks；Bedrock GPT-5.6 接受 `none` reasoning effort，推理与 replay 处理也得到修复。工具运行中元数据更新不再重置起始计时，桌面会话重命名保存可靠性亦有改善。
 
-### 3. Cline Desktop：取消操作覆盖子 Agent 全链路
+### 4. Cline Desktop：取消操作覆盖子 Agent 全链路
 
 [Cline Desktop v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21) 的核心不是界面换肤，而是生命周期控制：父会话停止时会中止 delegated subagents 与 teammates，并将取消状态持久化。这直接减少多 Agent 工作流里“前台已停、后台仍跑”的资源与权限风险。发布说明同时记录模型目录动态刷新、401/403 认证错误归类，以及 Langfuse release build 初始化修复。
 
-### 4. DSH alpha.4：可持续子 Agent 从单向汇报变为双向消息
+### 5. DSH alpha.4：可持续子 Agent 从单向汇报变为双向消息
 
 [DeepSeek Harness v0.1.2-alpha.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4) 让父 Agent 与可持续子 Agent 通过 `send_message` 双向传递后续任务，替代单向 `report`。这为长生命周期子任务提供了更清楚的续作语义；同时默认向 Headless、ACP 与 Python SDK 暴露 `web_fetch`，并收紧 Web PTC Mode 默认工具面。
 
-### 5. DSH alpha.3：长会话导航与图片投递可靠性
+### 6. DSH alpha.3：长会话导航与图片投递可靠性
 
 [DeepSeek Harness v0.1.2-alpha.3](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.3) 补齐未加载分页轮次的预览和跳转，改善长会话内存与代码高亮；图片附件在运行中追加或排队发送时可正确回显并可靠投递。需要注意的是，可选 SQLite Session 持久化后端已移除，官方建议用旧版本导出已有内容。
 
-### 6. wrapture：用 Python 包装器给第三方代码补观测
+### 7. wrapture：用 Python 包装器给第三方代码补观测
 
 Simon Willison 介绍的 [wrapture](https://simonwillison.net/2026/Aug/31/introducing-wrapture/) 于 2026-09-01 07:59 +08:00 发布。它围绕 Python monkey-patching 提供声明式包装，目标是在不修改目标库源代码的情况下附加日志、追踪或测试行为；对 Agent 工程而言，这类低侵入 instrumentation 可用于观察工具调用与第三方 SDK 边界。该条是独立技术博客，不把作者评价扩写为性能结论。
 
-### 7. GitSpawn：仓库 Git 配置可在 coding agent 启动阶段触发宿主执行
+### 8. GitSpawn：仓库 Git 配置可在 coding agent 启动阶段触发宿主执行
 
 Manifold Security 于 2026-09-02 02:08 +08:00 发布 [GitSpawn 研究](https://www.manifold.security/blog/ai-coding-agents-git-hijack)。研究者称，多款 CLI coding agent 在启动或收集仓库上下文时调用 Git，却没有屏蔽仓库级 `core.fsmonitor` 等可执行配置，使不受信任仓库可能在提示发送甚至认证前触发宿主命令。文章逐项标注供应商响应：其中 Claude Code、Codex、Cursor 与 Goose 的相应问题已修补，另一些产品在发布时仍未修补；本页仅转述研究方复测状态，未独立执行攻击样例。
 
-### 8. Codex 桌面运行时捆绑 LibreOffice、Poppler 与完整 Python/Node
+### 9. Codex 桌面运行时捆绑 LibreOffice、Poppler 与完整 Python/Node
 
 Simon Willison 在 2026-09-02 03:03 +08:00 的 [运行时拆解](https://simonwillison.net/2026/Sep/1/codex-libreoffice/) 中记录，Codex 桌面应用缓存的 primary runtime 包含完整 Python、Node.js，以及 LibreOffice headless、Poppler、Git 等原生工具；配套 skills 指示 Agent 如何调用这些二进制。这提供了桌面 Agent 处理文档与 PDF 时“技能说明 + 本地开源运行时”的可观察实现样本，也提醒用户关注本地缓存体积和执行面。
 
-### 9. Baseten：区分“沿效率边界移动”与“整体外推边界”
+### 10. Baseten：区分“沿效率边界移动”与“整体外推边界”
 
 Baseten 于 2026-09-02 07:47 +08:00 发布 [The efficient frontier of LLM inference](https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/)。文章把 batch size、并行策略等视为在延迟—吞吐边界上选择工作点，而量化、内核优化、推测解码等可在特定条件下外推整体效率边界；同时强调真实边界并不平滑，配置拐点需通过 sweep 实测。该分类有助于避免把降低单用户延迟、提高总吞吐和降低成本混成单一“加速”指标。
 
@@ -162,6 +170,8 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 
 ## 来源链接
 
+- [Cline SDK v0.0.82](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82)
+- [Cline CLI v3.0.61](https://github.com/cline/cline/releases/tag/cli-v3.0.61)
 - [Cline Desktop v0.0.22-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.22-beta.1)
 - [OpenCode v1.18.26](https://github.com/anomalyco/opencode/releases/tag/v1.18.26)
 - [Cline Desktop v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21)
@@ -185,6 +195,6 @@ Hugging Face Daily Papers 收录的 [CAST](https://huggingface.co/papers/2608.30
 
 - **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；Hugging Face Daily Papers、arXiv；Simon Willison；Baseten 模型性能工程博客。
 - **失败来源**：无。
-- **初始候选数**：33。
-- **保留来源数**：18。
+- **初始候选数**：35。
+- **保留来源数**：20。
 - **二次补搜**：否（最终来源不为 0）。

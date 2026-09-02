@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-09-02"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T10:05:00+08:00"
+updatedAt: "2026-09-02T13:16:00+08:00"
 description: "2026-09-02 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-02"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -26,7 +26,7 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[Codex 0.152.1](https://github.com/openai/codex/releases/tag/rust-v0.152.1)**。Codex 0.152.1 修复 Guardian approval review，使其遵循模型元数据提供的 Node REPL 策略。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[Codex 0.153.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5)**。Codex 官方仓库发布 0.153.0-alpha.5 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-02_openai)
 
@@ -49,6 +49,6 @@ tags:
 
 ## AaaS（Agent-as-a-Service）行业动态日报
 
-托管 Agent、远程异步执行平台及其商业化与生态动态。
+**[Copilot code review can now approve pull requests](https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests)**。GitHub Copilot code review 在公测中新增 approval assessment；管理员可授权其提交计入合并规则的正式批准，并按企业、组织、仓库和文件路径控制。 托管 Agent、远程异步执行平台及其商业化与生态动态。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-02_aaas)

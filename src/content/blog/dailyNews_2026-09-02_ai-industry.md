@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T10:03:00+08:00"
+updatedAt: "2026-09-02T13:08:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing agentic video understanding with Gemini"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
@@ -22,10 +22,13 @@ tags:
   - "Claude Code"
   - "Coding Agent"
   - "Cybersecurity"
+  - "Deep Learning"
+  - "Earth AI"
   - "Enterprise"
   - "Enterprise Adoption"
   - "Gemini"
   - "Google"
+  - "Google Research"
   - "Healthcare"
   - "Industry"
   - "Microsoft"
@@ -41,7 +44,7 @@ tags:
 
 ## 今日概览
 
-采集截止 **2026-09-02 10:03（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 10:03 至 2026-09-02 10:03**。本轮行业信号集中在五条主线：Google 推出 Gemini Agentic Video；Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
+采集截止 **2026-09-02 13:08（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 13:08 至 2026-09-02 13:08**。本轮行业信号集中在五条主线：Google 推出 Gemini Agentic Video；Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
 
 ## 优先动态（过去 24 小时）
 
@@ -73,6 +76,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 | 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 | 原文 |
 |---|---|---|---|---|---|---|
+| Google Research | Mapping global methane emissions from space with deep learning | 研究 / Earth AI | 2026-09-01，官方日期；时刻未给出 | MAPL-EMIT 用深度学习自动检测、量化并定位卫星高光谱影像中的甲烷羽流；Google 同步开放 Earth Engine 数据库、训练模型、合成数据与推理库，报告对专家标注羽流召回率为 84%。 | 展示机器学习、卫星遥感与开放科研资产如何形成可扩展的气候监测基础设施；指标为官方论文与博客报告，精确发布时间未确认。 | [原文](https://www.research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/) |
 | Anthropic | Developing Enterprise Frontier Safeguards with our customers | 企业安全 / 数据治理 | 2026-09-01，官方日期；时刻未给出 | EFS 让企业在自有云环境保存数据并默认自行完成人工复核，计划覆盖 Claude Code、Claude Enterprise、Claude Platform 与主要云平台。 | 由超过 100 家客户参与开发，显示前沿模型的安全控制与零数据保留需求正在转化为企业级基础设施；详见 Claude 专题页。 | [原文](https://www.anthropic.com/news/enterprise-frontier-safeguards) |
 | Microsoft | Responsible AI in 2026 | 治理 / Agent 安全 | 2026-09-01，官方日期；时刻未给出 | Microsoft 发布第三份年度责任 AI 透明度报告，说明新的 AI Red Teaming Agent、Agent evaluators、RAMPART、ASSERT 与 Agent Control Specification，并强调 Agent 身份、工具权限和动作监控。 | Agent 治理正从发布前模型评估转向覆盖身份、权限、工具链、运行时控制与持续监测的生命周期体系。 | [原文](https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/) |
 
@@ -85,12 +89,12 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 ## 一句话总结
 
-Google 的 Agentic Video 把工具驱动的主动检索带入长视频分析；Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接和前沿网络安全扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
+Google 的 Agentic Video 把工具驱动的主动检索带入长视频分析，Google Research 的 MAPL-EMIT 则将深度学习扩展到全球甲烷羽流监测；Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接和前沿网络安全扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、文档、API/模型变更、DeepSearch、语音、编码、工具调用和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：部分中国厂商官网/社交入口无可核验窗口内原文；播客无截止时间前新集；部分官方页面仅给日期。
-- 初始候选数：16；保留来源数：10。
+- 初始候选数：17；保留来源数：11。
 - 图片检查：本轮跨主题来源未额外配置页面图片；日期未确认条目不作为首页图片候选。
 - 二次补搜：否（最终来源不为 0）。

@@ -1,13 +1,13 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T10:03:17+08:00"
+updatedAt: "2026-09-02T13:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Codex 0.152.1"
-featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.152.1"
-featuredSummary: "Codex 0.152.1 修复 Guardian approval review，使其遵循模型元数据提供的 Node REPL 策略。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-09-02 06:33 +08:00"
-featuredTags: ["Codex","修复版","安全"]
+featuredTitle: "Codex 0.153.0-alpha.5"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5"
+featuredSummary: "Codex 官方仓库发布 0.153.0-alpha.5 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-09-02 11:05 +08:00"
+featuredTags: ["Codex","预发布"]
 tags:
   - "安全"
   - "稳定版"
@@ -21,39 +21,46 @@ tags:
   - "Codex"
   - "Connectors"
   - "Cybersecurity"
+  - "Developer Platform"
   - "Enterprise"
   - "Healthcare"
   - "Legal"
+  - "Node SDK"
   - "OpenAI"
+  - "Python SDK"
+  - "Responses API"
   - "Safety"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 08:00 至 2026-09-02 08:00（Asia/Shanghai）**。窗口内共有四条 OpenAI 官方内容：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源，Basis、Clay、Exa Labs 使用 AI Agent 改造工作流，Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值并配套更强发布保障，以及 Gilbert + Tobin 将 ChatGPT Enterprise 与 Codex 扩展到律所工作流的官方案例。编码主轴累计包括 Codex `0.152.0` 稳定版、`0.152.1` 修复版与四个预发布；`0.152.1` 修复 Guardian 审批审查对模型元数据中 Node REPL 策略的遵循，alpha 页面只给版本标识，不能据此推断具体能力。ChatGPT release notes、Agents SDK Python/TypeScript 及官方 Python/Node SDK 未发现窗口内可核实的独立更新。
+采集窗口：**2026-09-01 08:00 至 2026-09-02 08:00（Asia/Shanghai）**。窗口内共有四条 OpenAI 官方内容：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源，Basis、Clay、Exa Labs 使用 AI Agent 改造工作流，Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值并配套更强发布保障，以及 Gilbert + Tobin 将 ChatGPT Enterprise 与 Codex 扩展到律所工作流的官方案例。编码主轴累计包括 Codex `0.152.0` 稳定版、`0.152.1` 修复版与五个预发布；`0.152.1` 修复 Guardian 审批审查对模型元数据中 Node REPL 策略的遵循，alpha 页面只给版本标识，不能据此推断具体能力。官方 Python SDK `3.7.0` 与 Node SDK `7.9.0` 更新 usage API；Node 版还修复 Responses WebSocket 跟随重定向与浏览器/Jest CommonJS 兼容问题，Python 版避免 embeddings 重复检查 NumPy。ChatGPT release notes 与 Agents SDK Python/TypeScript 未发现窗口内可核实的独立更新。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 方向 | 本轮状态 | 证据与判断 |
 | --- | --- | --- |
-| Codex CLI | **`0.152.1` 修复版 + `0.152.0` 稳定版 + 4 个 alpha 预发布** | [`0.152.1`](https://github.com/openai/codex/releases/tag/rust-v0.152.1) 修复 Guardian / Node REPL 策略处理；[`0.153.0-alpha.4`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)、[`0.153.0-alpha.2`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)、[`0.153.0-alpha.1`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1) 与 [`0.152.0-alpha.7.2`](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2) 仅有版本标识；[`0.152.0`](https://github.com/openai/codex/releases/tag/rust-v0.152.0) 提供完整功能与修复清单。 |
+| Codex CLI | **`0.152.1` 修复版 + `0.152.0` 稳定版 + 5 个 alpha 预发布** | [`0.153.0-alpha.5`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5) 仅有版本标识； [`0.152.1`](https://github.com/openai/codex/releases/tag/rust-v0.152.1) 修复 Guardian / Node REPL 策略处理；[`0.153.0-alpha.4`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)、[`0.153.0-alpha.2`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)、[`0.153.0-alpha.1`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1) 与 [`0.152.0-alpha.7.2`](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2) 仅有版本标识；[`0.152.0`](https://github.com/openai/codex/releases/tag/rust-v0.152.0) 提供完整功能与修复清单。 |
 | VS Code / JetBrains 集成 | 无新增 | 已查 Codex 官方 release、文档与公开检索，未发现窗口内独立更新。 |
 | Codex 云端 / 远程任务 / PR Agent | 无新增 | 未发现窗口内官方独立公告。 |
 | ChatGPT agentic mode / Work | 无新增 | ChatGPT release notes 未检出可核实的新条目。 |
 | 当前官方 Agent 构建产品 | 无新增 | Responses API、Agents SDK Python/TypeScript 与 Apps SDK 未见窗口内可核实发布。 |
-| Responses API | 无新增 | 平台文档、changelog 与 SDK releases 已检查。 |
+| Responses API | **SDK 更新** | [Node SDK `7.9.0`](https://github.com/openai/openai-node/releases/tag/v7.9.0) 修复 Responses WebSocket 跟随重定向，并与 [Python SDK `3.7.0`](https://github.com/openai/openai-python/releases/tag/v3.7.0) 一同更新 usage API；这是 SDK 层变更，不外推为服务端产品发布。 |
 | Assistants API 迁移 / 弃用 | 无新增 | 未发现迁移状态或时间线的窗口内变化。 |
 | Realtime API | 无新增 | 未发现窗口内官方更新。 |
 | GPT / reasoning / Codex 模型家族 | 无新增 | 未发现窗口内官方模型发布或别名变化。 |
 
-### Codex 发布明细（最新在前）
+### Codex 与官方 SDK 发布明细（最新在前）
 
-1. **0.152.1 修复版**：官方 GitHub 于 **2026-09-02 06:33 +08:00** 发布。修复 Guardian approval review，使其遵循模型元数据提供的 Node REPL 策略。[官方 release](https://github.com/openai/codex/releases/tag/rust-v0.152.1)
-2. **0.153.0-alpha.4**：官方 GitHub 于 **2026-09-02 05:02 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)
-3. **0.153.0-alpha.2**：官方 GitHub 于 **2026-09-01 14:15 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)
-4. **0.153.0-alpha.1**：官方 GitHub 于 **2026-09-01 12:40 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)
-5. **0.152.0 稳定版**：官方 GitHub 于 **2026-09-01 09:58 +08:00** 发布。新增 Vim 模式草稿内 `/`、`?` 搜索与 `n`/`N` 导航；限额提示可直达用量、credits、重置和套餐管理；CLI 展示凭据刷新进度；MCP server 名称支持包式字符，并可为单个 MCP 工具设置输出 token 上限。修复覆盖压缩后的审批授权保留、恢复线程工作目录、MCP 缓存刷新、Windows sandbox 与云任务凭据来源限制等。[官方 release 与完整 changelog](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
-6. **0.152.0-alpha.7.2**：官方 GitHub 于 **2026-09-01 08:30 +08:00** 发布。页面只有版本标识，不据此推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2)
+1. **Codex 0.153.0-alpha.5**：官方 GitHub 于 **2026-09-02 11:05 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5)
+2. **Python SDK 3.7.0**：官方 GitHub 于 **2026-09-02 09:30 +08:00** 发布。更新 usage API 与文档，并避免 embeddings 重复检查 NumPy。[官方 release](https://github.com/openai/openai-python/releases/tag/v3.7.0)
+3. **Node SDK 7.9.0**：官方 GitHub 于 **2026-09-02 09:24 +08:00** 发布。更新 usage API，修复 Responses WebSocket 跟随重定向、浏览器导出条件下 CommonJS 加载和 Jest 28 CommonJS 导入等问题。[官方 release](https://github.com/openai/openai-node/releases/tag/v7.9.0)
+4. **0.152.1 修复版**：官方 GitHub 于 **2026-09-02 06:33 +08:00** 发布。修复 Guardian approval review，使其遵循模型元数据提供的 Node REPL 策略。[官方 release](https://github.com/openai/codex/releases/tag/rust-v0.152.1)
+5. **0.153.0-alpha.4**：官方 GitHub 于 **2026-09-02 05:02 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)
+6. **0.153.0-alpha.2**：官方 GitHub 于 **2026-09-01 14:15 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)
+7. **0.153.0-alpha.1**：官方 GitHub 于 **2026-09-01 12:40 +08:00** 发布。页面只有版本标识，应视为测试通道版本信号，不推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1)
+8. **0.152.0 稳定版**：官方 GitHub 于 **2026-09-01 09:58 +08:00** 发布。新增 Vim 模式草稿内 `/`、`?` 搜索与 `n`/`N` 导航；限额提示可直达用量、credits、重置和套餐管理；CLI 展示凭据刷新进度；MCP server 名称支持包式字符，并可为单个 MCP 工具设置输出 token 上限。修复覆盖压缩后的审批授权保留、恢复线程工作目录、MCP 缓存刷新、Windows sandbox 与云任务凭据来源限制等。[官方 release 与完整 changelog](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
+9. **0.152.0-alpha.7.2**：官方 GitHub 于 **2026-09-01 08:30 +08:00** 发布。页面只有版本标识，不据此推断功能变化。[原始 release](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2)
 
 ## Tier 2：消费端功能
 
@@ -79,6 +86,8 @@ tags:
 
 ## 官方更新（最新在前）
 
+- Codex `0.153.0-alpha.5` 为无功能清单的测试通道信号。
+- Python SDK `3.7.0` 与 Node SDK `7.9.0` 更新 usage API；两者分别包含 embeddings NumPy 检查优化，以及 Responses WebSocket / CommonJS 兼容修复。
 - Codex `0.152.1` 修复 Guardian 审批审查对 Node REPL 模型元数据策略的遵循；`0.153.0-alpha.4` 是无功能清单的测试通道信号。
 - OpenAI 发布企业 AI-native 工作流案例，涵盖 Basis、Clay 与 Exa Labs 的 Agent 实践。
 - OpenAI 发布 Astra 安全公告：该模型达到 Preparedness Framework 的 Critical 网络安全能力阈值，并配套更强发布保障。
@@ -114,6 +123,9 @@ tags:
 
 ## 来源链接
 
+- [Codex 0.153.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5)
+- [OpenAI Python SDK 3.7.0](https://github.com/openai/openai-python/releases/tag/v3.7.0)
+- [OpenAI Node SDK 7.9.0](https://github.com/openai/openai-node/releases/tag/v7.9.0)
 - [Codex 0.152.1](https://github.com/openai/codex/releases/tag/rust-v0.152.1)
 - [Codex 0.153.0-alpha.4](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)
 - [AI-native companies turn workflows into operating capability](https://openai.com/index/ai-native-company-workflows)
@@ -129,5 +141,5 @@ tags:
 
 - 已检查：OpenAI News / Research / Product RSS 与索引、开发者文档和平台 changelog、ChatGPT 及 Enterprise/Edu release notes、Codex / Agents SDK / Python / Node 官方 GitHub releases、OpenAI Developer Community、Reddit、Hacker News、X 与 YouTube/播客公开检索。
 - 失败来源：ChatGPT release notes HTML 直连返回 403；X 未得到可直接验证时间戳的窗口内条目；YouTube/播客未发现可核实的新条目。
-- 初始候选：**11**（6 个窗口内 Codex release、4 个窗口内 OpenAI News / Safety 官方条目，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**10**；二次补搜：**否**（最终来源不为 0）。
+- 初始候选：**14**（7 个窗口内 Codex release、2 个窗口内官方 SDK release、4 个窗口内 OpenAI News / Safety 官方条目，1 个确认在窗口外的 ChatGPT release-notes 条目）；保留来源：**13**；二次补搜：**否**（最终来源不为 0）。
 - 图片：**未配置**。本轮直连 OpenAI 文章页遇到验证页，未能可靠核验专题原图；GitHub release 页面也没有合适的故事图片，故宁可纯文字展示。
