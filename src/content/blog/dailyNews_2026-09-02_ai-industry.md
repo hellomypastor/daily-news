@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T16:08:00+08:00"
+updatedAt: "2026-09-02T19:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing agentic video understanding with Gemini"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
@@ -16,10 +16,12 @@ tags:
   - "详见开源专题页"
   - "月度汇总"
   - "Agent"
+  - "Agent Evaluation"
   - "Agent Safety"
   - "Agentic Video"
   - "AI"
   - "Anthropic"
+  - "Biosecurity"
   - "Claude Code"
   - "Cline"
   - "Coding Agent"
@@ -32,6 +34,7 @@ tags:
   - "Gemini"
   - "Google"
   - "Google Research"
+  - "Grok 4.6"
   - "Healthcare"
   - "Industry"
   - "Microsoft"
@@ -43,11 +46,12 @@ tags:
   - "Safety"
   - "Security"
   - "Video Understanding"
+  - "xAI"
 ---
 
 ## 今日概览
 
-采集截止 **2026-09-02 16:08（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 16:08 至 2026-09-02 16:08**。Cline Desktop 0.0.22 的稳定发布新增跨 Claude Code、Codex 与 OpenCode 的本地会话迁移入口，并把定时运行聚合进桌面侧栏，构成桌面分发与用户迁移层面的产品方向信号。本轮行业信号集中在五条主线：Google 推出 Gemini Agentic Video；Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
+采集截止 **2026-09-02 19:02（Asia/Shanghai）**；严格 24 小时窗口为 **2026-09-01 19:02 至 2026-09-02 19:02**。Cline Desktop 0.0.22 的稳定发布新增跨 Claude Code、Codex 与 OpenCode 的本地会话迁移入口，并把定时运行聚合进桌面侧栏，构成桌面分发与用户迁移层面的产品方向信号。本轮行业信号集中在六条主线：Google 推出 Gemini Agentic Video；Anthropic 推出 Fable 5.1 / Mythos 5.1 并由 Claude Code v2.1.257 落地，随后 v2.1.258 修复 macOS 与远程/定时会话回归；OpenAI 展示企业 Agent 工作流、医疗数据连接，并披露 Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值；xAI 公布 Grok 4.6 在生物安全拒绝与病原监测 Agent 评测中的第三方结果；Microsoft 则把 Agent 身份、工具权限和动作监控列为责任 AI 治理重点。
 
 ## 优先动态（过去 24 小时）
 
@@ -83,22 +87,23 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 | Google Research | Mapping global methane emissions from space with deep learning | 研究 / Earth AI | 2026-09-01，官方日期；时刻未给出 | MAPL-EMIT 用深度学习自动检测、量化并定位卫星高光谱影像中的甲烷羽流；Google 同步开放 Earth Engine 数据库、训练模型、合成数据与推理库，报告对专家标注羽流召回率为 84%。 | 展示机器学习、卫星遥感与开放科研资产如何形成可扩展的气候监测基础设施；指标为官方论文与博客报告，精确发布时间未确认。 | [原文](https://www.research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/) |
 | Anthropic | Developing Enterprise Frontier Safeguards with our customers | 企业安全 / 数据治理 | 2026-09-01，官方日期；时刻未给出 | EFS 让企业在自有云环境保存数据并默认自行完成人工复核，计划覆盖 Claude Code、Claude Enterprise、Claude Platform 与主要云平台。 | 由超过 100 家客户参与开发，显示前沿模型的安全控制与零数据保留需求正在转化为企业级基础设施；详见 Claude 专题页。 | [原文](https://www.anthropic.com/news/enterprise-frontier-safeguards) |
 | Microsoft | Responsible AI in 2026 | 治理 / Agent 安全 | 2026-09-01，官方日期；时刻未给出 | Microsoft 发布第三份年度责任 AI 透明度报告，说明新的 AI Red Teaming Agent、Agent evaluators、RAMPART、ASSERT 与 Agent Control Specification，并强调 Agent 身份、工具权限和动作监控。 | Agent 治理正从发布前模型评估转向覆盖身份、权限、工具链、运行时控制与持续监测的生命周期体系。 | [原文](https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/) |
+| xAI / Grok | Biosecurity at the frontier | 安全评测 / 生物 Agent | 2026-09-01，官方日期；时刻未给出 | xAI 汇总 LatchBio 对 Grok 4.6 的独立评测：在 BioSecBench-Refusal 中，Grok 4.6 的危险任务拒绝率为 59.2%、常规任务完成率为 64.8%，综合平均 62.1%；在病原监测 Agent 工作流中平均成功率为 53.5%。 | 结果同时覆盖隐藏风险识别、文件与工具链推理和病原基因组监测，显示前沿 Agent 的生命科学能力与分层防护正被放到同一套第三方评测中；数值为 xAI 转述的 LatchBio 结果，精确发布时间未确认。 | [原文](https://x.ai/news/biosafety-at-the-frontier) |
 
 ## 观察池
 
 - **Google AI 8 月更新汇总（窗口内发布、内容为旧闻回顾）**：Google 于 **2026-09-02 04:45 +08:00** 发布月度汇总，聚合 8 月 Gemini、开发者工具与 DeepMind 等既有公告；作为生态盘点信号保留，不把其中旧条目重报为过去 24 小时新品。[Google 原文](https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/)
-- xAI/Grok 官方新闻、文档、API/模型变更入口和官方仓库已显式检查模型、DeepSearch、语音、编码、工具调用与 Agent 动态；未发现截止时间前的新官方发布，不重复前一日较旧背景。
+- xAI/Grok 官方新闻、文档、API/模型变更入口和官方仓库已显式检查模型、DeepSearch、语音、编码、工具调用与 Agent 动态；新增的 Grok 4.6 生物安全与病原监测 Agent 评测因只有官方日期、无精确时刻，收录于“日期未确认”，其余渠道未见截止时间前新发布。
 - Cline Desktop 0.0.22 的稳定版跨工具历史导入与定时运行侧栏分组已作为桌面分发信号纳入优先动态；Pi Coding Agent 与 DeepSeek Harness/DSH 未见需要跨出开源专题重复的新增产业事件，常规仓库变化详见开源专题页。
 - 其余指定厂商、研究机构与播客入口未见可核验的新原文；日期或来源不足的搜索摘要未写成事实。
 
 ## 一句话总结
 
-Google 的 Agentic Video 把工具驱动的主动检索带入长视频分析，Google Research 的 MAPL-EMIT 则将深度学习扩展到全球甲烷羽流监测；Cline 的跨工具会话导入显示 coding Agent 正争夺桌面迁移入口；Anthropic 与 OpenAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接和前沿网络安全扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
+Google 的 Agentic Video 把工具驱动的主动检索带入长视频分析，Google Research 的 MAPL-EMIT 则将深度学习扩展到全球甲烷羽流监测；Cline 的跨工具会话导入显示 coding Agent 正争夺桌面迁移入口；Anthropic、OpenAI 与 xAI 的新发布显示 Agent 竞争正同时向更强模型、更长任务、会话可靠性、企业控制面、行业数据连接、前沿网络安全与生物安全评测扩展；Microsoft 的治理报告则把身份、权限与运行时监控补成另一条产业主线。
 
 ## 采集状态
 
 - 已检查：全部指定厂商与研究机构；xAI/Grok 新闻、文档、API/模型变更、DeepSearch、语音、编码、工具调用和 GitHub；Cline、Pi、DSH 行业信号；全部指定播客。
 - 失败来源：部分中国厂商官网/社交入口无可核验窗口内原文；播客无截止时间前新集；部分官方页面仅给日期。
-- 初始候选数：18；保留来源数：12。
+- 初始候选数：19；保留来源数：13。
 - 图片检查：本轮跨主题来源未额外配置页面图片；日期未确认条目不作为首页图片候选。
 - 二次补搜：否（最终来源不为 0）。

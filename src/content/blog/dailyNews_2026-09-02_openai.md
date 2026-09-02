@@ -1,16 +1,19 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T16:03:00+08:00"
+updatedAt: "2026-09-02T19:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredTitle: "Codex 0.153.0-alpha.5"
-featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5"
-featuredSummary: "Codex 官方仓库发布 0.153.0-alpha.5 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
-featuredPublishedAt: "2026-09-02 11:05 +08:00"
-featuredTags: ["Codex","预发布"]
+featuredTitle: "The 5-Hour Limit for Plus Users for Codex is Absoolutely Ridiculous"
+featuredUrl: "https://community.openai.com/t/the-5-hour-limit-for-plus-users-for-codex-is-absoolutely-ridiculous/1394239"
+featuredSummary: "一名 Plus 用户称 Codex 五小时限额打断既有工作流，并表示若限制持续将考虑替代方案；这是单一用户反馈。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-09-02 11:12 +08:00"
+featuredTags: ["Codex","社区反馈","限额"]
 tags:
   - "安全"
+  - "容量"
+  - "社区反馈"
   - "稳定版"
+  - "限额"
   - "修复版"
   - "预发布"
   - "Agent"
@@ -19,6 +22,7 @@ tags:
   - "ChatGPT"
   - "ChatGPT Enterprise"
   - "Codex"
+  - "Codex CLI"
   - "Connectors"
   - "Cybersecurity"
   - "Developer Platform"
@@ -31,17 +35,18 @@ tags:
   - "Python SDK"
   - "Responses API"
   - "Safety"
+  - "UX"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 16:03 至 2026-09-02 16:03（Asia/Shanghai）**。当天累计保留五条 OpenAI 官方内容：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源；ChatGPT release notes 另列面向美国合资格临床用户的 Healthcare Public Data 插件，聚合九个只读公共医疗数据应用且不访问患者病历；Basis、Clay、Exa Labs 使用 AI Agent 改造工作流，Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值并配套更强发布保障，以及 Gilbert + Tobin 将 ChatGPT Enterprise 与 Codex 扩展到律所工作流的官方案例。编码主轴累计包括 Codex `0.152.0` 稳定版、`0.152.1` 修复版与五个预发布；`0.152.1` 修复 Guardian 审批审查对模型元数据中 Node REPL 策略的遵循，alpha 页面只给版本标识，不能据此推断具体能力。官方 Python SDK `3.7.0` 与 Node SDK `7.9.0` 更新 usage API；Node 版还修复 Responses WebSocket 跟随重定向与浏览器/Jest CommonJS 兼容问题，Python 版避免 embeddings 重复检查 NumPy。Agents SDK Python/TypeScript 未发现窗口内可核实的独立更新。
+采集窗口：**2026-09-01 19:02 至 2026-09-02 19:02（Asia/Shanghai）**。当天累计保留五条 OpenAI 官方内容：ChatGPT 面向医疗机构接入 EHR 与其他可信行业数据源；ChatGPT release notes 另列面向美国合资格临床用户的 Healthcare Public Data 插件，聚合九个只读公共医疗数据应用且不访问患者病历；Basis、Clay、Exa Labs 使用 AI Agent 改造工作流，Astra 达到 Preparedness Framework 的 Critical 网络安全能力阈值并配套更强发布保障，以及 Gilbert + Tobin 将 ChatGPT Enterprise 与 Codex 扩展到律所工作流的官方案例。编码主轴累计包括 Codex `0.152.0` 稳定版、`0.152.1` 修复版与五个预发布；`0.152.1` 修复 Guardian 审批审查对模型元数据中 Node REPL 策略的遵循，alpha 页面只给版本标识，不能据此推断具体能力。官方 Python SDK `3.7.0` 与 Node SDK `7.9.0` 更新 usage API；Node 版还修复 Responses WebSocket 跟随重定向与浏览器/Jest CommonJS 兼容问题，Python 版避免 embeddings 重复检查 NumPy。Agents SDK Python/TypeScript 未发现窗口内可核实的独立更新。社区侧新增三条时间可核验但样本量很小的 Codex 反馈：两条抱怨 Plus 五小时限额与短时容量过载，一条建议改进 CLI `always allow` 的前缀授权粒度；这些仅代表个别用户陈述，不外推为普遍趋势。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 方向 | 本轮状态 | 证据与判断 |
 | --- | --- | --- |
-| Codex CLI | **`0.152.1` 修复版 + `0.152.0` 稳定版 + 5 个 alpha 预发布** | [`0.153.0-alpha.5`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5) 仅有版本标识； [`0.152.1`](https://github.com/openai/codex/releases/tag/rust-v0.152.1) 修复 Guardian / Node REPL 策略处理；[`0.153.0-alpha.4`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)、[`0.153.0-alpha.2`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)、[`0.153.0-alpha.1`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1) 与 [`0.152.0-alpha.7.2`](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2) 仅有版本标识；[`0.152.0`](https://github.com/openai/codex/releases/tag/rust-v0.152.0) 提供完整功能与修复清单。 |
+| Codex CLI | **`0.152.1` 修复版 + `0.152.0` 稳定版 + 5 个 alpha 预发布；社区反馈补充** | [`0.153.0-alpha.5`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5) 仅有版本标识； [`0.152.1`](https://github.com/openai/codex/releases/tag/rust-v0.152.1) 修复 Guardian / Node REPL 策略处理；[`0.153.0-alpha.4`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4)、[`0.153.0-alpha.2`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2)、[`0.153.0-alpha.1`](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1) 与 [`0.152.0-alpha.7.2`](https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2) 仅有版本标识；[`0.152.0`](https://github.com/openai/codex/releases/tag/rust-v0.152.0) 提供完整功能与修复清单。 |
 | VS Code / JetBrains 集成 | 无新增 | 已查 Codex 官方 release、文档与公开检索，未发现窗口内独立更新。 |
 | Codex 云端 / 远程任务 / PR Agent | 无新增 | 未发现窗口内官方独立公告。 |
 | ChatGPT agentic mode / Work | 无新增 | ChatGPT release notes 未检出可核实的新条目。 |
@@ -106,11 +111,13 @@ tags:
 
 ## Hate
 
-- **无可定性样本**：窗口内没有找到时间可核实、内容可直接打开的新增社区负面反馈。
+- **Plus 限额**：一名 Developer Community 用户称五小时限额打断了此前工作流，并表示若持续将考虑替代方案；这是单一用户陈述，未获独立验证。[原帖](https://community.openai.com/t/the-5-hour-limit-for-plus-users-for-codex-is-absoolutely-ridiculous/1394239)
+- **容量与速度**：另一名用户报告多个并行 Agent 会话出现“servers overloaded”，并批评 GPT-5.6 Sol 输出慢；帖子只描述短时个人体验，不能证明平台级故障。[原帖](https://community.openai.com/t/our-servers-are-currently-overloaded-please-try-again-later/1394229)
+- **CLI 授权体验**：一名用户建议让 `always allow` 支持编辑后的命令前缀，以免真实工作中的长命令导致授权规则过窄；这是可复核的产品建议，不代表官方计划。[原帖](https://community.openai.com/t/codex-always-allow-choice-on-codex-cli-begs-improvement/1394236)
 
 ## 口碑判断
 
-整体情绪：**证据不足，暂不定性**。本轮可保留来源全部为官方发布与官方案例，不能代表用户情绪；Reddit、Developer Community、Hacker News 与公开社交搜索没有提供足够可靠的新样本。
+整体情绪：**偏负面，但置信度低**。新增的三条 Developer Community 样本均指向限额、容量/速度或授权体验摩擦，但样本量很小、来自自选择发帖者，且没有官方状态页或大样本旁证，不能外推为整体用户口碑。
 
 ## 对比与替代工具信号
 
@@ -122,10 +129,14 @@ tags:
 
 ## 观察池
 
-- 本轮没有足够可靠的新观察项。ChatGPT release notes 的 8 月 31 日条目已明确早于窗口，未作为本页来源重复收录。
+- Developer Community 出现三条时间可核验的个体反馈，分别涉及 Plus 五小时限额、短时容量过载/输出速度，以及 CLI `always allow` 前缀粒度；均已在 Hate 小节按低置信度社区证据保留，不作为官方事实或普遍趋势。
+- ChatGPT release notes 的 8 月 31 日条目已明确早于窗口，未作为本页来源重复收录。
 
 ## 来源链接
 
+- [Codex Plus 五小时限额反馈](https://community.openai.com/t/the-5-hour-limit-for-plus-users-for-codex-is-absoolutely-ridiculous/1394239)
+- [Codex 服务器过载与速度反馈](https://community.openai.com/t/our-servers-are-currently-overloaded-please-try-again-later/1394229)
+- [Codex CLI always allow 改进建议](https://community.openai.com/t/codex-always-allow-choice-on-codex-cli-begs-improvement/1394236)
 - [Codex 0.153.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5)
 - [OpenAI Python SDK 3.7.0](https://github.com/openai/openai-python/releases/tag/v3.7.0)
 - [OpenAI Node SDK 7.9.0](https://github.com/openai/openai-node/releases/tag/v7.9.0)
@@ -145,5 +156,5 @@ tags:
 
 - 已检查：OpenAI News / Research / Product RSS 与索引、开发者文档和平台 changelog、ChatGPT 及 Enterprise/Edu release notes、Codex / Agents SDK / Python / Node 官方 GitHub releases、OpenAI Developer Community、Reddit、Hacker News、X 与 YouTube/播客公开检索。
 - 失败来源：ChatGPT release notes HTML 直连返回 403；X 未得到可直接验证时间戳的窗口内条目；YouTube/播客未发现可核实的新条目。
-- 初始候选：**15**（7 个窗口内 Codex release、2 个窗口内官方 SDK release、4 个窗口内 OpenAI News / Safety 官方条目、1 个窗口内 ChatGPT release-notes 条目，1 个确认在窗口外的 release-notes 条目）；累计保留来源：**14**；二次补搜：**否**（最终来源不为 0）。
+- 初始候选：**18**（原有 15 个候选，加 3 条时间可核验的 Developer Community 社区反馈）；累计保留来源：**17**；二次补搜：**否**（最终来源不为 0）。
 - 图片：**未配置**。本轮直连 OpenAI 文章页遇到验证页，未能可靠核验专题原图；GitHub release 页面也没有合适的故事图片，故宁可纯文字展示。

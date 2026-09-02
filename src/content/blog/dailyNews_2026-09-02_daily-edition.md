@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-09-02"
 date: "2026-09-02T00:00:00+08:00"
-updatedAt: "2026-09-02T16:12:33+08:00"
+updatedAt: "2026-09-02T19:02:00+08:00"
 description: "2026-09-02 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-02"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.252"
@@ -26,7 +26,7 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[Codex 0.153.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5)**。Codex 官方仓库发布 0.153.0-alpha.5 预发布；页面未披露功能细节。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[The 5-Hour Limit for Plus Users for Codex is Absoolutely Ridiculous](https://community.openai.com/t/the-5-hour-limit-for-plus-users-for-codex-is-absoolutely-ridiculous/1394239)**。一名 Plus 用户称 Codex 五小时限额打断既有工作流，并表示若限制持续将考虑替代方案；这是单一用户反馈。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
 
 [阅读完整专题日报](/blog/dailynews_2026-09-02_openai)
 
