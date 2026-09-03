@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T14:06:10+08:00"
+updatedAt: "2026-09-03T17:05:02+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Cline Desktop v0.0.23-beta.1"
 featuredUrl: "https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1"
@@ -27,7 +27,9 @@ tags:
   - "Code Review"
   - "Coding Agent"
   - "Community"
+  - "Context"
   - "DeepSeek Harness"
+  - "Developer Tools"
   - "Engineering"
   - "Evaluation"
   - "GitHub Trending"
@@ -38,7 +40,9 @@ tags:
   - "Multi-Agent"
   - "Open Source"
   - "OpenCode"
+  - "Planning"
   - "Post-training"
+  - "Prerelease"
   - "Prompt Optimization"
   - "Reliability"
   - "Research"
@@ -55,21 +59,26 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口为 **2026-09-02 14:06 至 2026-09-03 14:06（Asia/Shanghai）**。当天已有 32 条来源全部保留。新增 GitHub 完整任务成本工程、Repo-To-Skill、EarlyEval、HarnessDev 等研究，以及 HN 新发现的代码审查、会话迁移、语音与权限工具候选。七个必查 harness 没有超出当天既有集合的新 release；日期未确认项目不当作今日首发。
+本轮发现窗口为 **2026-09-02 17:05 至 2026-09-03 17:05（Asia/Shanghai）**，技术补充回溯 48 小时。当天已有 54 条来源全部保留；新增 DSH 0.1.2-rc.1、mex 0.8.0、Pi 待发布修复，以及多人规划、上下文与重试工程候选。日期未确认内容单列，不当作今日首发。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 检查结论 |
 |---|---|
 | Cline | 官方仓库、releases、CHANGELOG 已查；稳定版 Desktop 0.0.22、扩展 4.1.17、SDK 0.0.82、CLI 3.0.61 保留；新增 Desktop 0.0.23-beta.1。 |
-| Pi / pi-mono | 旧地址重定向 earendil-works/pi；官方 packages 与 changelog 已查，最新 release 0.84.4 为 8 月 28 日；Unreleased 包含代理 HTTP 工具调用挂起与字节计数修复，不当作新 release。 |
-| DeepSeek Harness / DSH | 仓库、README/文档入口、releases 已查，当天累积保留 alpha.4 和 alpha.5；alpha.4 已滑出本轮发现窗口，仍属 developer preview。 |
+| Pi / pi-mono | 旧地址重定向 earendil-works/pi；官方 packages 与 changelog 已查，最新 release 0.84.4 为 8 月 28 日；Unreleased 包含代理 HTTP 工具调用挂起、字节计数及 RPC 取消手动压缩修复，不当作新 release。 |
+| DeepSeek Harness / DSH | 仓库、README/文档入口、releases 已查，新增 0.1.2-rc.1，alpha.4/alpha.5 当天累积保留；rc.1 仍是预发布。 |
 | OpenCode | 官方 anomalyco/opencode 仓库与 release changelog 已查，新增 1.18.27，原 1.18.26 继续当天累积保留。 |
 | Aider | 官方仓库、releases、HISTORY 已查；无窗口内 release。 |
 | Continue | 官方仓库、releases、CLI changelog 已查；无窗口内 release。VS Code 旧 changelog 路径 404，已切换仓库 tree 与 CLI 入口。 |
 | Roo Code | 官方仓库、releases、CHANGELOG 已查；无窗口内 release。 |
 
 ## 已验证技术亮点
+
+- **[DeepSeek Harness v0.1.2-rc.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-rc.1)**（2026-09-03 14:06 +08:00）：0.1.2 首个候选版汇总此前 alpha 变更，补齐 ACP 会话、模型、MCP、权限及取消，提供 Windows x64 Python runtime，父子 Agent 改用 send_message 双向通信。会话日志增量上传默认关闭；官方同时声明尚未经安全审计，审批与沙箱不保证隔离。属于本地 harness 预发布，不推断为托管 AaaS。
+
+- **[mex 0.8.0：团队项目记忆](https://github.com/mex-memory/mex/releases/tag/v0.8.0)**（2026-09-03 00:40 +08:00）：将仓库内 Markdown 记忆、代码图、Wiki 和仅限 loopback 的 Project Hub 连接起来；Spec 提案区分预览、审批与应用，Relay 保存交接上下文。提供 Claude Code/Codex skills，索引读取不会隐式迁移；本地 Hub 不等于云托管服务。
+
 
 ### Cline Desktop v0.0.23-beta.1
 
@@ -268,6 +277,28 @@ FrontierHarness 页面提供同模型、相同运行环境的具名比较，但�
 
 - **[ReviewAssist：会话辅助 PR 审查候选](https://reviewassist.dev/)**：HN 于上海 9 月 3 日 12:50 提交，标题描述利用编码会话辅助修复和 PR 导览；原页 web open 返回 Internal Error，能力、开源状态与发布时间未核实。
 
+## 本轮新增日期未确认与观察池
+
+- **[Pi：RPC 取消压缩修复待发布](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md)**（日期未确认）：Unreleased 新见 RPC abort 成功却未取消手动 compaction 的修复记录；最新正式 release 仍为 0.84.4。修复进入记录的具体时间未确认，不写成已发布版本。
+
+- **[Chopin：多人实时 Agent 规划原型](https://githubnext.com/projects/chopin/)**（日期未确认）：官方页面标为 Research Prototype、2026 年 9 月，探索多人和 Agent 共同规划与研究。HN 上海 9 月 3 日 16:58 发现；准确发布日期、开放可用范围未确认，不当作正式产品上线。
+
+- **[PicoLM v1.0-rc1 候选](https://github.com/whoreson/picolm/)**（日期未确认）：HN 新提交指向 RightNow-AI/picolm 的独立 fork；README 列出 C 实现的 SIMD/GPU 推理、GGUF 模型和兼容 API。首次发布日期未确认，作者更快、更简单及 AI 编码占比宣称未独立验证。
+
+- **[GitHub CLI：在议题与 PR 附加媒体](https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments/)**（2026-09-01）：官方 9 月 1 日说明 gh 2.99.0 的 --attach 可用于 issue/pr 创建、编辑和评论，适合自动化提交截图证据；本轮 HN 再发现，属于较早工具补充，不视为今日首发。
+
+- **[Context complexity：Agent API 上下文复杂度](https://mchav.github.io/context-complexity/)**（日期未确认）：HN 上海 9 月 3 日 17:01 提交，标题讨论 Agent API 的上下文复杂度。原页 web open 返回 Internal Error，正文和发布日期未核实，保留工程候选。
+
+- **[Marginal：面向 Coding Agent 的 Markdown 编辑器候选](https://marginal.md/blog.html)**（日期未确认）：HN 上海 9 月 3 日 14:45 提交，标题称为 Coding Agent 重做 Markdown 编辑器；原页 web open 返回 Internal Error，能力、开源状态与日期未核实。
+
+- **[AurumFlux：支付重试语义候选](https://aurumflux.co/retry-safety/)**（日期未确认）：HN 上海 9 月 3 日 14:27 提交，标题讨论回复丢失后的 Agent 支付重试；原页 web open 返回 Internal Error，无法确认代码机制或支付一次保证，仅列观察池。
+
+- **[Mozaik：多 Agent 互操作架构经验](https://mozaik.jigjoy.ai/blog/the-interoperability-triangle)**（日期未确认）：作者以自己的软件工厂描述共享总线、并行 Agent、依赖暂停恢复与边界协商；HN 上海 9 月 3 日 14:00 发现，发布日期未确认，运行案例和最佳架构结论为作者自述。
+
+- **[Catalyst Agent Stack：基础设施接口候选](https://catalyst.zoho.com/agent-stack/)**（日期未确认）：原文描述面向 Coding Agent 的结构化 skills、部署接口、MCP 与预览环境；HN 上海 9 月 3 日 16:48 发现，日期及安全保证未独立核实。此处是开发平台邻近信号，不能据此认定托管 Agent 执行。
+
+- **[LLMs and self-referentiality](https://scottaaronson.blog/?p=10046)**（日期未确认）：作者讨论自指与智能的关系，属理论观点而非具名基准；本轮 HN 首页再讨论，评论显示至少 9 月 1 日已存在，精确发布时间与时区未确认，作为观察池背景。
+
 ## 来源链接
 
 - [Cline Desktop v0.0.23-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1)
@@ -307,9 +338,9 @@ FrontierHarness 页面提供同模型、相同运行环境的具名比较，但�
 
 ## 采集状态
 
-- 已检查来源：Cline 官方仓库、releases 与 changelog；Pi Coding Agent / pi-mono 官方仓库（已重定向至 earendil-works/pi）、packages 与 releases；DeepSeek Harness / DSH 官方仓库、releases 与 README/文档；OpenCode 官方仓库 anomalyco/opencode 与 releases；Aider 官方仓库 Aider-AI/aider、releases 与 changelog；Continue 官方仓库 continuedev/continue、releases 与 changelog；Roo Code 官方仓库 RooCodeInc/Roo-Code、releases 与 changelog；GitHub Trending daily：overall、Python、TypeScript；Hacker News front/newest 与 Algolia recent submissions；Hugging Face Daily Papers/API；arXiv recent AI/Agent/LLM papers；Simon Willison Weblog Atom 与原文；本轮重查七个 harness 官方 releases API；Cline/Pi raw changelog、Pi packages、DSH README/官方文档、Continue CLI tree、Roo CHANGELOG、Aider 仓库；NVIDIA Technical Blog 原文与发布时间 meta；llm-gemini GitHub release / Simon Atom / 原文；DSH discussions/5377 作者更正；zvec-grep、README skill、Brain 原始仓库；Apple Safari 文档入口；本轮七个 harness GitHub releases API；Cline 原始 CHANGELOG/文档；Pi coding-agent CHANGELOG/packages/docs；DSH docs/README/release；Aider HISTORY；Continue CLI tree；Roo CHANGELOG；本轮 HN front/newest、Algolia agent 24h；GitHub 三类 Trending；HF Papers 9/3 API 与 blog；arXiv recent 和八篇原文 submission history；Simon 首页；GitHub Blog 原文发布时间 meta；本轮十二个 HN 项目原仓库与 ReviewAssist 入口；Cline 配图正常 TLS HTTP 200 image/png。
-- 失败来源与原因：MemHub、AI-Memory 2.0、CoOS 原文 web open 失败：保留 HN 窗口内发现证据，未核验正文；Apple Safari 文档仅返回 JavaScript 壳：发布日期与能力细节未核实；ReviewAssist 原页 web open 返回 Internal Error：保留 HN 标题和提交时刻，仅列日期未确认观察池。
-- 初始候选数：80（含 release、HN、论文及重复/邻近候选）。
-- 保留来源数：54（当天原有 32 条全部保留，新增 22 条）。
-- 二次补搜：否；最终来源不为 0，已交叉核验 API、项目原文与 arXiv 时间。
-- 本轮未遇 TLS 或安全检查错误；配图沿用 Cline 官方 beta 发布页 OpenGraph，重查 HTTP 200、image/png。
+- 已检查来源：Cline 官方仓库、releases 与 changelog；Pi Coding Agent / pi-mono 官方仓库（已重定向至 earendil-works/pi）、packages 与 releases；DeepSeek Harness / DSH 官方仓库、releases 与 README/文档；OpenCode 官方仓库 anomalyco/opencode 与 releases；Aider 官方仓库 Aider-AI/aider、releases 与 changelog；Continue 官方仓库 continuedev/continue、releases 与 changelog；Roo Code 官方仓库 RooCodeInc/Roo-Code、releases 与 changelog；GitHub Trending daily：overall、Python、TypeScript；Hacker News front/newest 与 Algolia recent submissions；Hugging Face Daily Papers/API；arXiv recent AI/Agent/LLM papers；Simon Willison Weblog Atom 与原文；本轮重查七个 harness 官方 releases API；Cline/Pi raw changelog、Pi packages、DSH README/官方文档、Continue CLI tree、Roo CHANGELOG、Aider 仓库；NVIDIA Technical Blog 原文与发布时间 meta；llm-gemini GitHub release / Simon Atom / 原文；DSH discussions/5377 作者更正；zvec-grep、README skill、Brain 原始仓库；Apple Safari 文档入口；本轮七个 harness GitHub releases API；Cline 原始 CHANGELOG/文档；Pi coding-agent CHANGELOG/packages/docs；DSH docs/README/release；Aider HISTORY；Continue CLI tree；Roo CHANGELOG；本轮 HN front/newest、Algolia agent 24h；GitHub 三类 Trending；HF Papers 9/3 API 与 blog；arXiv recent 和八篇原文 submission history；Simon 首页；GitHub Blog 原文发布时间 meta；本轮十二个 HN 项目原仓库与 ReviewAssist 入口；Cline 配图正常 TLS HTTP 200 image/png；17 时轮：七个 harness releases API、Cline CHANGELOG/README、Pi packages/CHANGELOG/RPC 文档、DSH master README/docs/agent-lifecycle 与 rc.1 原文、Aider HISTORY、Continue CLI tree、Roo CHANGELOG；17 时轮：HN front/newest 与 Algolia agent 24h；GitHub overall/Python/TypeScript Trending；HF Papers/blog、arXiv recent、Simon Weblog；mex release、Chopin、PicoLM、GitHub CLI、Mozaik、Catalyst 原文；Cline 配图 HTTP 200 image/png。
+- 失败来源与原因：MemHub、AI-Memory 2.0、CoOS 原文 web open 失败：保留 HN 窗口内发现证据，未核验正文；Apple Safari 文档仅返回 JavaScript 壳：发布日期与能力细节未核实；ReviewAssist 原页 web open 返回 Internal Error：保留 HN 标题和提交时刻，仅列日期未确认观察池；DSH main/README 初次 404：已切换实际 master 分支恢复；Continue release body 为 null：已用 release 元数据和 CLI tree 核验；Context complexity、Marginal、AurumFlux 原页 web open 返回 Internal Error：仅保留 HN 提交标题与时刻，正文未确认。
+- 初始候选数：92（含当天既有候选及本轮 release、HN、研究/邻近候选）。
+- 保留来源数：66（原有 54 条全部保留，新增 12 条）。
+- 二次补搜：否；最终来源不为 0，release 已以 GitHub API 和原文交叉核验。
+- 未遇 TLS 或安全检查错误；Cline 官方 beta 发布页配图重查 HTTP 200、image/png。

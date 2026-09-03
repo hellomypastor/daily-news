@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T14:04:38+08:00"
+updatedAt: "2026-09-03T17:01:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT"
 featuredUrl: "https://openai.com/index/atv-big-air-tour"
@@ -37,6 +37,8 @@ tags:
   - "ChatGPT Work"
   - "Codex"
   - "Codex CLI"
+  - "Codex Security"
+  - "Daybreak"
   - "Developer Platform"
   - "DSH"
   - "Enterprise"
@@ -52,15 +54,15 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口：**2026-09-02 14:01 至 2026-09-03 14:01（Asia/Shanghai）**。当天累积保留此前全部 41 个来源，即使已滑出本轮窗口。本轮补入已恢复的 Work Mode 错误率事件、社区反馈和活动观察；当天已收录 Codex 0.153.0 稳定版与 alpha.5.1；当天官方主线还包括 Codex 0.152.1 修复与三个 alpha 版本、Python/Node SDK 更新、API 错误码细分，以及 ChatGPT Work 的 ATV 客户案例。客户效率数字仅按官方案例归因，社区问题均按个体反馈处理。
+本轮发现窗口：**2026-09-02 17:01 至 2026-09-03 17:01（Asia/Shanghai）**。当天累积保留此前全部 51 个来源，即使已滑出本轮窗口。本轮新增 10 条社区反馈/建议及网络安全官方页面的日期未确认候选；此前已收录已恢复的 Work Mode 错误率事件与活动观察。当天已收录 Codex 0.153.0 稳定版与 alpha.5.1；当天官方主线还包括 Codex 0.152.1 修复与三个 alpha 版本、Python/Node SDK 更新、API 错误码细分，以及 ChatGPT Work 的 ATV 客户案例。客户效率数字仅按官方案例归因，社区问题均按个体反馈处理。
 
 ## Tier 1：编码、Agent 与开发者平台
 
 | 方向 | 状态与证据 |
 | --- | --- |
 | Codex CLI | **新增 0.153.0 稳定版与 alpha.5.1**，插件管理、恢复与上下文实验配置见下方；累计保留 0.152.1 修复 Guardian 对模型元数据 Node REPL 策略的遵循；0.153.0-alpha.4/.5/.6 仅版本信号，不推断功能。 |
-| VS Code / JetBrains 集成 | 无窗口内独立新增。 |
-| Codex 云端 / 远程任务 / PR Agent | 无窗口内独立新增。 |
+| VS Code / JetBrains 集成 | 无官方独立新增；Windows VS Code app-server 崩溃个案见观察池。 |
+| Codex 云端 / 远程任务 / PR Agent | 新发现 Codex Security Cloud 官方介绍，发布日期未确认，见观察池；不认定今日上线。 |
 | ChatGPT agentic mode / Work | 官方状态页确认短时错误率事件已恢复；ATV 案例展示定时信息核查、库存与营销工作流。 |
 | Agents SDK Python | 官方 releases 最新 v0.22.0，8 月 19 日，无新增。 |
 | Agents SDK TypeScript | 官方 releases 最新 v0.17.0，8 月 19 日，无新增。 |
@@ -75,14 +77,14 @@ tags:
 | 方向 | 状态 |
 | --- | --- |
 | 浏览器 / Operator；桌面应用 | 无官方独立新增；桌面上下文恢复问题见社区观察池。 |
-| GPTs / GPT Store；Canvas | 无新增。 |
+| GPTs / GPT Store；Canvas | 无官方新增；iPhone 自定义 GPT 入口反馈见观察池。 |
 | Sora / 视频；GPT Image / DALL·E | 无窗口内可核实新增；不重复较旧停用背景。 |
 | Voice | 无官方新增；iOS 朗读入口反馈与会议静默聆听建议见观察池。 |
 | Connectors / MCP | release notes 最新仍是 9 月 1 日医疗插件，本页不跨日重复旧来源。 |
 
 ## Tier 3：企业、教育、安全与行业
 
-ATV 与 AI-native 工作流为本窗口官方企业采用案例。Enterprise、Business、Edu、Gov、Science 与安全方向未发现其他可核实的窗口内独立公告，不将旧 Astra / 医疗新闻重新包装。
+ATV 与 AI-native 工作流为本窗口官方企业采用案例。新发现网络安全解决方案官方页面，但公告日期未确认；Enterprise、Business、Edu、Gov、Science 未发现其他可核实的窗口内独立公告，不将旧 Astra / 医疗新闻重新包装。
 
 ## 官方更新（最新在前）
 
@@ -181,6 +183,20 @@ Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 仍是�
 
 桌面项目消失的新帖与当日既有项目结构缺失事件合并；作者明确尚不清楚项目记录是删除、隐藏还是迁移或索引失败，不把界面不可见写成数据已丢失。
 
+### 17:01 滚动扫描补充
+
+- **Feature Request: Secure Cross-Application Handoff Between ChatGPT Agents in Excel, PowerPoint, and Word**（2026-09-03 16:31 +08:00；观察池）：用户提议 Excel、PowerPoint 与 Word 内的 Agent 在授权下传递选定数据、上下文和来源，并保留审计记录；这是交接协议构想，非已发布能力。 [原文](https://community.openai.com/t/feature-request-secure-cross-application-handoff-between-chatgpt-agents-in-excel-powerpoint-and-word/1394540)
+- **Automatic Chat Organization / Organize All Chats**（2026-09-03 16:06 +08:00；观察池）：用户希望按主题自动整理历史对话、建议项目并先预览再执行；属于功能建议，非官方路线图。 [原文](https://community.openai.com/t/automatic-chat-organization-organize-all-chats/1394538)
+- **ChatGPT Household: 3 Plus Accounts for $29.99 - A Consumer Conversion Strategy Beyond ‘Duo’**（2026-09-03 16:02 +08:00；观察池）：用户提出三账户家庭订阅及分档价格构想；标题价格仅为作者建议，不是 OpenAI 已公布套餐。 [原文](https://community.openai.com/t/chatgpt-household-3-plus-accounts-for-29-99-a-consumer-conversion-strategy-beyond-duo/1394535)
+- **Windows Codex app-server crashes with 0xC000001D**（2026-09-03 15:28 +08:00；观察池）：用户报告 Windows 11 的 Codex 桌面、CLI 与 VS Code app-server 以 0xC000001D 退出，提供硬件与排查步骤；尚未独立复现，不确定根因或影响范围。 [原文](https://community.openai.com/t/windows-codex-app-server-crashes-with-0xc000001d/1394531)
+- **Unacceptable 5-day lockout for a paid $20/month ChatGPT Plus subscription**（2026-09-03 14:45 +08:00；观察池）：Plus 用户称达到额度后需等待五天并要求改善配额或退款选项；具体限制原因和账户情况未经核实，不推断统一限额政策变化。 [原文](https://community.openai.com/t/unacceptable-5-day-lockout-for-a-paid-20-month-chatgpt-plus-subscription/1394519)
+- **Please bring back proper navigation for long conversations**（2026-09-03 14:55 +08:00；观察池）：用户称长对话逐段加载使历史导航困难，建议目录、跳转与整段加载选项；这是个人界面体验与建议，非官方公告。 [原文](https://community.openai.com/t/please-bring-back-proper-navigation-for-long-conversations/1394520)
+- **Missing access to custom gpts on latest iphone app**（2026-09-03 14:41 +08:00；观察池）：用户称 iPhone 应用中除置顶项外自定义 GPT 入口不见，但网页仍可见；不据此认定 GPT 已删除或功能退役。 [原文](https://community.openai.com/t/missing-access-to-custom-gpts-on-latest-iphone-app/1394518)
+- **An integrated live camera mode within voice conversations feature update request**（2026-09-03 14:06 +08:00；观察池）：用户建议语音对话内直接使用实时摄像头并举例视觉问答；帖子只证明功能诉求，不用于判断现有功能覆盖或新发布。 [原文](https://community.openai.com/t/an-integrated-live-camera-mode-within-voice-conversations-feature-update-request/1394514)
+- **Usage does not compute right**（2026-09-03 04:27 +08:00；观察池）：用户称升级套餐后周额度消耗与预期不符；截图与使用量属于个人报告，未核实计费错误或原因。 [原文](https://community.openai.com/t/usage-does-not-compute-right/1394437)
+- **Chat does what it wants to**（2026-09-02 21:47 +08:00；观察池）：付费用户抱怨指令遵循、记忆和响应速度，并表示取消订阅；为个体负面体验，不能外推总体质量趋势。 [原文](https://community.openai.com/t/chat-does-what-it-wants-to/1394363)
+- **Frontier intelligence for cybersecurity**（日期未确认；观察池）：官方页面列出 Daybreak Blue/Red 申请入口及 Codex Security 插件、GitHub 托管持续扫描和 CLI 形态，并预告上海 9 月 4 日 04:00 直播；公告发布日期未确认，不作为今日发布或普遍开放的证据。 [原文](https://openai.com/business/solutions/cybersecurity/)
+
 ## 未证实传闻
 
 - **Astra release incoming?**：社区讨论 Astra 是否即将发布；发布时间猜测未经官方证实，不采纳为正式上线消息。 [讨论](https://www.reddit.com/r/codex/comments/1w529nd/astra_release_incoming/)
@@ -245,9 +261,9 @@ Reddit 和 GitHub Discussion 仅确认页面日期，未推测精确时分；Axi
 
 ## 采集状态
 
-- 已检查：OpenAI News、ChatGPT release notes、API changelog、模型与弃用文档；Codex、Agents SDK Python/TypeScript、Python/Node SDK releases；VS Code/JetBrains、云端/PR Agent、Work、Responses、Realtime。最新 Codex 仍为 0.153.0，API changelog 最新 9 月 2 日，未见新增模型或 SDK 发布。
-- Tier 2/3：浏览器/Operator、桌面、GPTs/Store、Canvas、Sora/视频、Image/DALL·E、Voice、MCP及企业、Business、Edu、Gov、科学和安全定向搜索；官方学院、Forum 与 Codex Meetups 活动目录。
-- 社区：Developer Community latest.json 与 6 个新帖全文；Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding、r/singularity、r/codex，Hacker News、官方 X 与 YouTube 日期检索；未检出可靠新样本的渠道不推断无动态。
-- 失败与限制：web 的 Community latest 列表为旧缓存，curl 官方 JSON 取得最新列表；X/HN/YouTube 日期检索多为旧结果；保留此前 Axios 原文访问失败限制。本轮未发生 TLS 或安全校验失败。
-- 候选口径：此前 41 个来源与本轮 11 个候选共 52；桌面项目缺失帖按同事件合并，新增保留 10 个来源，当天累积 51 个，原有来源全部保留。二次补搜：否（来源非零；仍扩展官方活动与社区入口）。
-- 配图：ATV 官方原文正常打开；保留原有官方配图，公开 URL 本轮返回 HTTP 200 image/png。活动预告、日期未知与社区观察不作为首页配图。
+- 已检查：OpenAI News、ChatGPT release notes、API changelog、模型与弃用文档；Codex、Python/Node SDK、Agents SDK Python/TypeScript 五个官方 GitHub release API。Codex 最新仍为 0.153.0，API changelog 最新仍为 9 月 2 日，无新增 SDK 发布。
+- Tier 1/2/3：VS Code/JetBrains、远程/PR Agent、agentic mode、Agent 构建产品、Responses、Realtime、GPT/reasoning/Codex；浏览器/Operator、桌面、GPTs/Store、Canvas、Sora、Image/DALL·E、Voice、MCP，以及企业、Business、Edu、Gov、科学与安全定向搜索；新增网络安全解决方案原文。
+- 社区：Developer Community latest.json 与 12 个候选原文；Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding、r/singularity、r/codex、Hacker News、官方 X 与 YouTube 日期检索。没有可靠新样本不等于没有动态。
+- 失败与限制：两个 Trusted Access hardware-key 帖子正文已被作者删除，无法核实；Reddit/HN/X/YouTube 主要命中较旧结果，未作为今天新反馈重复加入。保留此前 Axios 原文访问失败限制。本轮未发生 TLS 或安全校验失败。
+- 候选口径：此前 51 个来源与本轮 13 个候选合计 64；新增 10 条社区原帖和 1 条日期未确认官方页面，两个删除帖不据标题推测内容；当天累计 62 个来源，原有来源全部保留。二次补搜：否（来源非零，仍扩展了定向搜索）。
+- 配图：ATV 官方原文正常打开；原有图片公开 URL 本轮返回 HTTP 200 image/png。日期未确认网络安全页、活动与社区观察均不作为首页图片。

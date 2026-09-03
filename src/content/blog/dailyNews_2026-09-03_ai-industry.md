@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T14:05:20+08:00"
+updatedAt: "2026-09-03T17:05:45+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
@@ -15,7 +15,9 @@ tags:
   - "24–48小时补充"
   - "策略文章"
   - "产业观点"
+  - "发布预告"
   - "观察池"
+  - "活动"
   - "可信二手"
   - "培训活动"
   - "日期未确认"
@@ -25,7 +27,6 @@ tags:
   - "详见 OpenAI 专题页"
   - "详见开源专题页"
   - "营销合作"
-  - "正文未核实"
   - "Agent"
   - "Agent Memory"
   - "Agent Payments"
@@ -46,6 +47,7 @@ tags:
   - "Evaluation"
   - "Gemini"
   - "Genesys"
+  - "GitHub"
   - "GLM"
   - "Google"
   - "Industry"
@@ -60,14 +62,16 @@ tags:
   - "Podcast"
   - "Qwen"
   - "Research"
+  - "Research Prototype"
   - "Security"
+  - "Skillnote"
   - "xAI"
   - "Z.ai"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-02 14:01 至 2026-09-03 14:01（Asia/Shanghai）**。本页按当天累积保留早先全部来源；窗口只用于发现新增。新增 Meta Muse Spark 1.3、xAI 图像 API 退役安排及 LangChain 企业与支付工程观察；Google 的新 Flash 模型与受限网络防御计划继续保留；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
+采集窗口：**2026-09-02 17:01 至 2026-09-03 17:01（Asia/Shanghai）**。本页按当天累积保留早先全部23条来源；窗口只用于发现新增。本轮新增Skillnote预告、OpenAI安全产品入口与LayerX活动观察，并恢复CUDA教程正文证据。新增 Meta Muse Spark 1.3、xAI 图像 API 退役安排及 LangChain 企业与支付工程观察；Google 的新 Flash 模型与受限网络防御计划继续保留；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
 
 ## 优先动态（当天累积，含已滑出发现窗口条目）
 
@@ -116,6 +120,12 @@ Mistral、Seed、Kimi 等入口未核实本窗口独立新发布；Meta 新增�
 
 ## 日期未确认
 
+- **GitHub Next Chopin：多人协同规划研究原型**：官方原型探索围绕GitHub仓库的实时协作、评论驱动Agent修改、决策记录与MCP交接。仅标2026年9月；明确尚非产品或完成原型，不建议立即采用。体现编码工具向团队规划延伸的方向，详见开源专题页。 [官方原文](https://githubnext.com/projects/chopin/)
+
+- **Skillnote 预告制造业技能数据 Agent**（2026-09-03）：厂商计划10月向现有云服务客户提供可选Agent，基于权限内技能、资格与教育数据进行搜索分析；人员培养与评价扩展属后续计划，尚非正式上线，效果未独立验证。 [原文](https://prtimes.jp/main/html/rd/p/000000107.000088452.html)
+
+- **Daybreak 与 Codex Security 的安全产品入口**（发布日期未确认）：官方页列出Daybreak Blue/Red申请访问及Codex Security plugin、Cloud和CLI；Cloud用于连接GitHub仓库的托管持续扫描。页面未标发布日期，不能当成今日GA，详见 OpenAI 专题页。 [原文](https://openai.com/business/solutions/cybersecurity/)
+
 - **Muse Spark 1.3：编码与长程 Agent 模型更新**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：官方原文确认向 Muse Code 和 Meta Model API 滚动提供；max reasoning 仍待额外安全测试。编码效率提升为 Meta 内部比较，开放权重仍是后续计划，未把演示原型当作独立产品。 [原文](https://research.meta.ai/blog/introducing-muse-spark-1-3)
 
 - **grok-imagine-image-quality 将于11月2日退役**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：9月2日发布记录宣布11月2日将该 slug 请求转由 grok-imagine-image-2.0 的 low 档处理，请求/响应结构不变；1.0 slug 不受影响。公告时刻未确认，尚未到生效日；属于图像 API 迁移，不是 AaaS 发布。 [原文](https://docs.x.ai/developers/release-notes)
@@ -142,6 +152,8 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 ## 观察池
 
+- **LayerX Bet AI Day：Agent 治理与业务实践活动**：主办方活动索引列9月3日12–18时日本时间主会及此前三场午间分享，讨论Agent业务设计、护栏和内部AI基础设施。原页提取受限，仅核验搜索摘要，不声称已观看或确认会上发布。 [主办方入口](https://layerx.connpass.com/event/399946/)
+
 - **三问AI办公：当智能成为标配，新的稀缺在哪里？**（2026-09-03 08:58 +08:00；观察池）：作者分析中国 AI 办公的工作上下文、权限与分发控制，讨论腾讯、阿里、字节、百度等既有资产；这是产业观点，未将其竞争判断视为已证实市场结论或新产品发布。 [原文](https://www.tmtpost.com/8126197.html)
 
 - **Managing AI Teammates with Agent 365**（2026-09-02；观察池）：伙伴培训页介绍 Agent 身份、所有者/管理者和监控关闭流程；页面公开摘要可读，完整内容需注册登录。仅作企业治理培训观察，不把课程发布日期等同 Agent 365 发布日。 [原文](https://crayon.cloudchampion.dk/c/your-next-hire-might-be-an-ai-agent-managing-ai-teammates-with-agent-365/)
@@ -150,7 +162,7 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 - **MrBeast partners with Gemini to turn impossibly big ideas into reality**（2026-09-02 21:00 +08:00）：Google 宣布与 Beast Industries 开展多年合作，扩展到 Gemini 和 Google Health；属于分发与营销信号，不能当作技术能力验证。 [来源](https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/)
 
-- **The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough**（2026-09-02）：官方 Recent posts 列表确认标题、日期和 CUDA 优化教程主题；独立正文抓取为空，未核实具体技巧或收益。 [来源](https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough/)
+- **The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough**（2026-09-02）：官方原文已恢复可读，逐步演示CCCL与Compute Sanitizer查错、NVTX/Nsight测量、CUB算法、内存池、固定内存及多stream异步传输；附示例代码与Colab。未独立执行，示例加速不能外推所有AI负载；精确时刻未确认。 [来源](https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough/)
 
 ## 一句话总结
 
@@ -158,8 +170,8 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 ## 采集状态
 
-- 已检查：Google DeepMind News、Research Blog、Google Gemini原文；现有Google官方配图原URL打开成功；Meta AI Blog与Research新入口、Meta Engineering：Muse Spark 1.3和组织专家Agent原文可读；Microsoft Research Blog、Source与官方伙伴资讯检索；Agent365伙伴课程摘要可读；xAI News、release-notes、退役迁移指南、github.com/xai-org及DeepSearch/voice/coding/Agent关键词；新增9月2日图像API退役通知，Grok托管能力无新增；Mistral News、Cohere Blog、Hugging Face Blog、NVIDIA Recent posts、LlamaIndex Blog、LangChain Blog与两篇9月3日原文；Qwen Blog与千问AI平台模型日志、百炼new-features入口、DAMO；Seed Blog；百度文心、腾讯混元；DeepSeek API updates；AutoClaw/Z.ai；StepFun；Moonshot/Kimi与MiniMax分别检查；Latent Space、Dwarkesh、No Priors Apple Podcasts、The Cognitive Revolution、a16z Podcast Network及组合日期补搜：未确认新集，不重复旧背景；Anthropic News与Commerce原文、OpenAI News及并行专题核验；Cline、Pi、DSH由开源并行专项复查，无新增企业分发事件。
-- 失败及限制：Qwen Blog、百度文心、腾讯混元、DAMO为零行动态页；StepFun超时；百炼new-features与微软伙伴资讯原页抓取失败，已扩大中英文日期关键词和备用入口；Latent Space只有订阅摘要、Dwarkesh空页；部分厂商索引无可用日期，未确认新动态不代表不存在；Meta、LangChain、xAI及Genesys仅确认日历日，精确时刻/时区未确认；Cloud Champion完整视频需登录，仅引用公开摘要。
-- 本轮候选：10（含重复公告入口）；累计候选口径：原有14 + 本轮10 = 24；新增来源9，当天累计23。
-- 二次补搜：否（非零，已针对不可读入口补查备用来源）。
-- 配图保留Google官方发布图；本轮日期未确认、观察池均不参与首页精选。
+- 已检查：GitHub Next Chopin原文；Google DeepMind/Research官方索引；Meta Research入口及此前Muse原文；Microsoft Research Blog与官方News日期补搜；xAI News、docs release-notes、xai-org组织及grok-build/releases，显式检查Grok模型/API/DeepSearch/voice/coding/tools/Agent；最新仍为9月2日图像退役安排，无新增；Mistral News、Cohere Blog、HF Blog、NVIDIA Recent posts及CUDA教程原文搜索、LlamaIndex与LangChain Blog；Qwen Blog及千问模型日志、DAMO、Seed Blog；百度千帆与腾讯混元官方更新；DeepSeek changelog、Z.ai/AutoClaw、Kimi Blog、MiniMax News、StepFun入口及中英文日期备用检索；Latent Space、Dwarkesh、No Priors Apple Podcasts、Cognitive Revolution、a16z Podcast Network与日期补搜，未核实新集；LayerX官方活动索引；Anthropic与OpenAI同轮专题核查；OpenAI cybersecurity原文；Cline/Pi/DSH同轮专项，DSH rc.1属于harness工程，无新增企业分发事件；Skillnote厂商PR TIMES全文与Google已有配图URL打开成功；旧Gemini video已在前一日收录，不重复背景。
+- 失败及限制：Meta blog旧入口Internal Error，切换Research首页；StepFun博客Internal Error，改日期搜索；Qwen/DAMO动态页无正文；Dwarkesh空页、Latent Space摘要有限；中文组合搜索多数为旧条目，不能据此证明厂商无动态；NVIDIA正文首次可读后再次open失败，同URL搜索恢复完整技术摘要与六步正文；LayerX原页仅3行，保留主办方搜索摘要；Skillnote只采用日历日期，不猜精确时区；OpenAI安全页无发布日期，直播时间不是产品发布日期。
+- 本轮候选7：新增4（含GitHub Next Chopin原文）、既有CUDA证据补全1、重复Google video与既有xAI公告2；累计候选口径23+7=30；当天累计27条。
+- 二次补搜：否（来源非零，已针对失败入口切换搜索）。
+- 保留Google官方可访问配图；日期未确认及观察条目不参与首页精选。
