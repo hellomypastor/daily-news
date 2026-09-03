@@ -1,7 +1,7 @@
 ---
 title: "Daily News 精选日报 · 2026-09-03"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T09:38:36+08:00"
+updatedAt: "2026-09-03T11:00:48+08:00"
 description: "2026-09-03 的 Claude、OpenAI、开源、AI 行业与 AaaS 五大主题精选。"
 featuredTitle: "Daily News 精选日报 · 2026-09-03"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.258"
@@ -26,17 +26,22 @@ tags:
 
 ## OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报
 
-**[The 5-Hour Limit for Plus Users for Codex is Absoolutely Ridiculous](https://community.openai.com/t/the-5-hour-limit-for-plus-users-for-codex-is-absoolutely-ridiculous/1394239)**。一名 Plus 用户称 Codex 五小时限额打断既有工作流，并表示若限制持续将考虑替代方案；这是单一用户反馈。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+**[ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT](https://openai.com/index/atv-big-air-tour)**。官方客户案例介绍 ChatGPT Work 定时检查活动信息、从商品照片整理库存并生成补货建议；效率数字为客户案例自述，不是独立评测。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。
+
+<figure class="source-image">
+  <a href="https://openai.com/index/atv-big-air-tour"><img src="https://images.ctfassets.net/kftzwdyauwt9/49oJo0HsEQBLrr5rWLdYHh/6e651b242ddec9857a2563f1efa24c65/A-seo-og.png?w=1600&amp;h=900&amp;fit=fill" alt="ATV Big Air Tour 官方案例图：轮胎纹理特写，两侧为 OpenAI 与 ATV Big Air Tour 标识" loading="lazy" /></a>
+  <figcaption><a href="https://openai.com/index/atv-big-air-tour">图片来源：OpenAI ATV Big Air Tour 客户案例</a></figcaption>
+</figure>
 
 [阅读完整专题日报](/blog/dailynews_2026-09-03_openai)
 
 ## 今日 AI / Agent 开源项目与技术博客精选
 
-**[DeepSeek Harness v0.1.2-alpha.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4)**。DSH 为父 Agent 与可持续子 Agent 增加双向 send_message，并调整 web_fetch 与 Session API。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。
+**[Cline Desktop v0.0.23-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1)**。beta 新增可选图像生成设置，provider 凭据留在服务端，生成结果留在会话历史。定时运行按本地/SSH runtime 分组，避免同名任务混淆；SSH 环境下明确媒体设置只影响本地 runtime。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。
 
 <figure class="source-image">
-  <a href="https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"><img src="https://opengraph.githubassets.com/df4e2150333f4424187d637a45a96c8cd67b569d7364ad085ee2ea5f66b8a047/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4" alt="DeepSeek Harness v0.1.2-alpha.4 GitHub 发布页预览图" loading="lazy" /></a>
-  <figcaption><a href="https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4">图片来源：DeepSeek Harness GitHub 官方发布页</a></figcaption>
+  <a href="https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1"><img src="https://opengraph.githubassets.com/9595fbf4a2c28b94d021e2ff54f4869662f9848a68240c4b59614e1f77da61d7/cline/cline/releases/tag/desktop-v0.0.23-beta.1" alt="Cline Desktop 0.0.23-beta.1 官方 GitHub 发布页预览图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1">图片来源：Cline 官方 GitHub beta 发布页</a></figcaption>
 </figure>
 
 [阅读完整专题日报](/blog/dailynews_2026-09-03_open-source)

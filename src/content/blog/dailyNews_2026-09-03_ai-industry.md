@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T09:38:16+08:00"
+updatedAt: "2026-09-03T10:08:22+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
@@ -18,23 +18,34 @@ tags:
   - "日期未确认"
   - "商业化"
   - "生效事件"
+  - "详见 OpenAI 专题页"
+  - "详见开源专题页"
   - "营销合作"
   - "正文未核实"
   - "Agent"
   - "Agent Memory"
   - "AI"
   - "Alibaba"
+  - "Arena"
+  - "Cline"
+  - "Codex"
   - "Coding Agent"
   - "Cohere"
+  - "Desktop"
   - "Engineering"
   - "Enterprise"
+  - "Evaluation"
   - "Gemini"
   - "GLM"
   - "Google"
   - "Industry"
   - "Inference"
+  - "Kaggle"
+  - "LlamaIndex"
   - "NVIDIA"
+  - "OpenAI"
   - "Podcast"
+  - "Qwen"
   - "Research"
   - "Security"
   - "Z.ai"
@@ -42,9 +53,17 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-09-02 05:15 至 2026-09-03 05:15（Asia/Shanghai）**。本页为 9 月 3 日新一日集合。Google 的新 Flash 模型与受限网络防御计划是主要发布；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
+采集窗口：**2026-09-02 10:05 至 2026-09-03 10:05（Asia/Shanghai）**。本页按当天累积保留早先全部来源；窗口只用于发现新增。Google 的新 Flash 模型与受限网络防御计划是主要发布；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
 
 ## 优先动态（过去 24 小时）
+
+### Codex 0.153.0：marketplace 分发与账户隔离
+
+稳定版增加远程 marketplace CLI，改善断连恢复、审批记录及 MCP 工具授权的账户作用域；体现扩展分发和企业控制边界的产品方向，详见 OpenAI 专题页。 日期：2026-09-03 09:37 +08:00。[官方发布](https://github.com/openai/codex/releases/tag/rust-v0.153.0)
+
+### Cline Desktop 0.0.22：跨工具会话迁移
+
+稳定版可从 Claude Code、Codex、OpenCode 导入本地历史为可恢复会话，并分组定时运行；导入后使用 Cline 当前模型配置，体现桌面迁移入口竞争，详见开源专题页。 日期：2026-09-02 13:20 +08:00。[官方发布](https://github.com/cline/cline/releases/tag/desktop-v0.0.22)
 
 ### Introducing Gemini 3.8 Flash and 3.8 Flash Cyber
 
@@ -83,9 +102,15 @@ Mistral、Meta、Seed、Kimi 等入口未核实本窗口独立新发布；不跨
 
 ## 日期未确认
 
+- **LlamaIndex and Kaggle Launch a Document Extraction Leaderboard for AI Agents**（2026-09-02）：LlamaIndex 宣布与 Kaggle 推出 ExtractBench 排行榜；完整评测涵盖370份企业文档、14个系统，采用冻结schema及确定性规则。只有日期，无精确时区时刻；厂商结果未独立复现。 [原文](https://www.llamaindex.ai/blog/llamaindex-and-kaggle-launch-a-document-extraction-leaderboard-for-ai-agents)
+
+- **Arena 9月2日榜单收录更新**（2026-09-02）：榜单维护方记录 Gemini 3.8 Flash High、Claude Fable 5.1 Max、Wan3.0及Hy4 preview的新榜单收录；这证明参评或新增榜单覆盖，不证明当天首发或性能领先。精确时刻未确认。 [原文](https://arena.ai/company/leaderboard-changelog)
+
+- **千问AI平台模型发布记录：Qwen3.8-Max-0902**（2026-09-02）：平台将Qwen3.8-Max-0902列为9月2日快照更新，说明编码、协作Agent和视觉理解改进及1M上下文；未给精确时刻，提升描述为厂商声明。 [原文](https://platform.qianwenai.com/docs/changelog/models)
+
 - **GLM-5.3-Flash: More Intelligence with Less Compute**：官方页描述 GLM-5.3-Flash 的原生多模态、混合注意力与开放权重；搜索索引日期为 9 月 2 日而原页显示 9 月 3 日，未给时区时刻，暂放日期未确认。 具体性能数字未独立复现，本页不作领先结论。 [官方原页](https://autoclaw.z.ai/blog/model/glm-5.3-flash/)
 
-Qwen 搜索候选只返回空壳页，尚不足以确认其产品名称与发布事实；已记录失败入口。
+Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Arena 链接核实 Qwen3.8-Max-0902 名称；缺少精确时刻，仍单列日期未确认。
 
 ## 观察池
 
@@ -101,8 +126,8 @@ Qwen 搜索候选只返回空壳页，尚不足以确认其产品名称与发布
 
 ## 采集状态
 
-- 已检查：Google DeepMind News、Google Research Blog、Google Blog（官方 JSON-LD 校验发布时间）；Meta AI Blog（未核实窗口新增）；Microsoft Research Blog、Source、Microsoft 官方 Blog（搜索索引时效有限）；xAI News、docs.x.ai/developers/release-notes、github.com/xai-org：显式检查 Grok 模型/API、DeepSearch、语音、编码、工具调用及 Agent；最新变更页日期 8 月 29 日，新闻最新 9 月 1 日，无本窗口新增；Mistral News / Docs changelog；Cohere Blog；Qwen Research/Blog、阿里云百炼官方资产中心与功能更新、DAMO；ByteDance Seed Blog / Doubao（Seed 最新可读条目 8 月 5 日，无新增）；Baidu 文心、Tencent Hunyuan、DeepSeek News/API Docs；Z.ai/AutoClaw、StepFun、Moonshot/Kimi 与 MiniMax News（分别检查）；NVIDIA Developer Recent posts / Research、Hugging Face Blog、LangChain Blog、LlamaIndex Blog；Latent Space、Dwarkesh、No Priors（转 Apple Podcasts 备用入口）、The Cognitive Revolution、a16z Podcast Network、Google DeepMind podcast 入口；Anthropic、OpenAI、Cline、Pi、DSH：由本轮并行专题扫描交叉核验，待统一合并。
-- 失败及限制：Qwen research 与 qwen3.7- 候选页、StepFun、腾讯混元、百度文心：提取正文为空，不能凭 URL 或搜索词确认新产品；DAMO、Z.ai 主 Blog：抓取失败；Z.ai 改用可访问的官方 AutoClaw 博客；No Priors 猜测域名落入停放页；已改查 Apple Podcasts；Latent Space 仅订阅页、Dwarkesh 空页，补搜未得到窗口新集；NVIDIA 两篇独立正文 web 抓取错误；推测解码文章经 HTTP 直连成功，CUDA 教程直连仍为空，保留官方列表候选；Cohere 正文 web 抓取失败，HTTP 直连成功并核实 JSON-LD 日期；部分中国厂商及播客入口未提供可核验日期，不能把未发现等同于不存在。
-- 初始候选数：12；保留来源数：9。
-- 二次补搜：否（来源非零；已对不可读入口采用备用检索）。
-- 配图：Google 本次发布原文 OG 图，HTTP 200、image/png，已目视核验；日期未确认与观察池来源不作精选图片。
+- 已检查：Google DeepMind News、Google Research Blog、Google Blog（官方 JSON-LD 校验发布时间）；Meta AI Blog（未核实窗口新增）；Microsoft Research Blog、Source、Microsoft 官方 Blog（搜索索引时效有限）；xAI News、docs.x.ai/developers/release-notes、github.com/xai-org：显式检查 Grok 模型/API、DeepSearch、语音、编码、工具调用及 Agent；最新变更页日期 8 月 29 日，新闻最新 9 月 1 日，无本窗口新增；Mistral News / Docs changelog；Cohere Blog；Qwen Research/Blog、阿里云百炼官方资产中心与功能更新、DAMO；ByteDance Seed Blog / Doubao（Seed 最新可读条目 8 月 5 日，无新增）；Baidu 文心、Tencent Hunyuan、DeepSeek News/API Docs；Z.ai/AutoClaw、StepFun、Moonshot/Kimi 与 MiniMax News（分别检查）；NVIDIA Developer Recent posts / Research、Hugging Face Blog、LangChain Blog、LlamaIndex Blog；Latent Space、Dwarkesh、No Priors（转 Apple Podcasts 备用入口）、The Cognitive Revolution、a16z Podcast Network、Google DeepMind podcast 入口；Anthropic News、OpenAI News及并行专题扫描；Cline、Pi、DSH官方发布/文档交叉核查：Cline桌面迁移具有分发意义，Pi与DSH常规harness变化详见开源专题页；本轮追加检查 Arena changelog、千问AI平台模型日志、LlamaIndex/Kaggle ExtractBench公告；Latent Space/Dwarkesh feed、No Priors Apple Podcasts、The Cognitive Revolution与a16z播客。
+- 失败及限制：Qwen research 与 qwen3.7- 候选页、StepFun、腾讯混元、百度文心：提取正文为空，不能凭 URL 或搜索词确认新产品；DAMO、Z.ai 主 Blog：抓取失败；Z.ai 改用可访问的官方 AutoClaw 博客；No Priors 猜测域名落入停放页；已改查 Apple Podcasts；Latent Space 仅订阅页、Dwarkesh 空页，补搜未得到窗口新集；NVIDIA 两篇独立正文 web 抓取错误；推测解码文章经 HTTP 直连成功，CUDA 教程直连仍为空，保留官方列表候选；Cohere 正文 web 抓取失败，HTTP 直连成功并核实 JSON-LD 日期；部分中国厂商及播客入口未提供可核验日期，不能把未发现等同于不存在；本轮 Latent Space 与 Dwarkesh RSS 网页读取失败；其余播客入口未确认新增集。LlamaIndex与Arena只列日历日期；CUDA教程HTTP200但正文0字节，维持观察池。。
+- 初始候选数：17；当天累积保留来源数：14；本轮新增5条来源。
+- 二次补搜：否（来源非零；不可读入口已采用备用检索）。
+- 配图：保留Google本次发布官方OG图，已验证可访问且出处明确；日期未确认与观察池不选作图片来源。

@@ -1,32 +1,38 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T00:33:00+08:00"
+updatedAt: "2026-09-03T10:05:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredTitle: "DeepSeek Harness v0.1.2-alpha.4"
-featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"
-featuredSummary: "DSH 为父 Agent 与可持续子 Agent 增加双向 send_message，并调整 web_fetch 与 Session API。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
-featuredPublishedAt: "2026-09-01 23:45 +08:00"
-featuredTags: ["DeepSeek Harness","Agent Harness","Multi-Agent"]
-featuredImage: "https://opengraph.githubassets.com/df4e2150333f4424187d637a45a96c8cd67b569d7364ad085ee2ea5f66b8a047/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"
-featuredImageAlt: "DeepSeek Harness v0.1.2-alpha.4 GitHub 发布页预览图"
-featuredImageCaption: "图片来源：DeepSeek Harness GitHub 官方发布页"
+featuredTitle: "Cline Desktop v0.0.23-beta.1"
+featuredUrl: "https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1"
+featuredSummary: "beta 新增可选图像生成设置，provider 凭据留在服务端，生成结果留在会话历史。定时运行按本地/SSH runtime 分组，避免同名任务混淆；SSH 环境下明确媒体设置只影响本地 runtime。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-09-03 09:46 +08:00"
+featuredTags: ["Cline","Beta","Agent Harness"]
+featuredImage: "https://opengraph.githubassets.com/9595fbf4a2c28b94d021e2ff54f4869662f9848a68240c4b59614e1f77da61d7/cline/cline/releases/tag/desktop-v0.0.23-beta.1"
+featuredImageAlt: "Cline Desktop 0.0.23-beta.1 官方 GitHub 发布页预览图"
+featuredImageCaption: "图片来源：Cline 官方 GitHub beta 发布页"
 tags:
   - "观察池"
   - "日期未确认"
   - "Agent"
   - "Agent Harness"
+  - "Agent Skills"
   - "AI"
   - "Alpha"
+  - "Beta"
+  - "Browser"
   - "CLI"
   - "Cline"
   - "Coding Agent"
+  - "Community"
   - "DeepSeek Harness"
+  - "Engineering"
   - "Evaluation"
   - "GitHub Trending"
   - "Inference"
   - "LLM"
   - "MCP"
+  - "Memory"
   - "Multi-Agent"
   - "Open Source"
   - "OpenCode"
@@ -34,40 +40,65 @@ tags:
   - "Prompt Optimization"
   - "Reliability"
   - "Research"
+  - "Retrieval"
+  - "Runtime"
   - "SDK"
   - "Security"
   - "Self-hosted LLM"
   - "Session Import"
   - "SRE"
   - "Tool Execution"
+  - "World Model"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-01 00:33 至 2026-09-03 00:33（Asia/Shanghai，48 小时）**。跨日新建本页，不搬运昨日较旧背景和未确认候选。技术主线是 Cline 的会话迁移与运行可靠性、DSH 的双向子 Agent 消息与升级修复，以及上下文权限边界研究；新发现 FrontierHarness 与 AURA 作为带限制的观察信号保留。
+本轮发现窗口为 **2026-09-02 10:05 至 2026-09-03 10:05（Asia/Shanghai）**，技术亮点优先回溯至 **2026-09-01 10:05（48 小时）**。当天既有 17 条来源全部保留，不因窗口滑动删除。新增 Cline Desktop 图像生成 beta、OpenCode 超时与推理绑定修复、llm-gemini 0.34、推测解码工程文章与记忆权限研究。社区 DSH/Pi 比较采用作者最新更正，不能据此断言 Pi 或 Sol 普遍失效。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 检查结论 |
 |---|---|
-| Cline | 官方仓库、releases、CHANGELOG 已查；窗口内稳定版 Desktop 0.0.22、扩展 4.1.17、SDK 0.0.82、CLI 3.0.61。 |
+| Cline | 官方仓库、releases、CHANGELOG 已查；稳定版 Desktop 0.0.22、扩展 4.1.17、SDK 0.0.82、CLI 3.0.61 保留；新增 Desktop 0.0.23-beta.1。 |
 | Pi / pi-mono | 旧地址重定向 earendil-works/pi；官方 packages 与 changelog 已查，最新 release 0.84.4 为 8 月 28 日；Unreleased 包含代理 HTTP 工具调用挂起与字节计数修复，不当作新 release。 |
 | DeepSeek Harness / DSH | 仓库、README/文档入口、releases 已查，alpha.4 和 alpha.5 在窗口内；仍属 developer preview。 |
-| OpenCode | 官方 anomalyco/opencode 仓库与 release changelog 已查，最新 1.18.26 在窗口内。 |
+| OpenCode | 官方 anomalyco/opencode 仓库与 release changelog 已查，新增 1.18.27，原 1.18.26 继续当天累积保留。 |
 | Aider | 官方仓库、releases、HISTORY 已查；无窗口内 release。 |
 | Continue | 官方仓库、releases、CLI changelog 已查；无窗口内 release。VS Code 旧 changelog 路径 404，已切换仓库 tree 与 CLI 入口。 |
 | Roo Code | 官方仓库、releases、CHANGELOG 已查；无窗口内 release。 |
 
 ## 已验证技术亮点
 
+### Cline Desktop v0.0.23-beta.1
+
+beta 新增可选图像生成设置，provider 凭据留在服务端，生成结果留在会话历史。定时运行按本地/SSH runtime 分组，避免同名任务混淆；SSH 环境下明确媒体设置只影响本地 runtime。 日期：2026-09-03 09:46 +08:00。来源：[Cline GitHub](https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1)。
+
+<figure class="source-image">
+  <a href="https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1"><img src="https://opengraph.githubassets.com/9595fbf4a2c28b94d021e2ff54f4869662f9848a68240c4b59614e1f77da61d7/cline/cline/releases/tag/desktop-v0.0.23-beta.1" alt="Cline Desktop 0.0.23-beta.1 官方 GitHub 发布页预览图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1">图片来源：Cline 官方 GitHub beta 发布页</a></figcaption>
+</figure>
+
+### OpenCode v1.18.27
+
+provider 响应头和流式 chunk 默认超时改为五分钟，chunk 超时可关闭；thinking.blockBinding 限制于 Claude 5.1+ 并允许配置退出，修复取消超时 SSE 读取的未处理错误。 日期：2026-09-03 05:41 +08:00。来源：[OpenCode GitHub](https://github.com/anomalyco/opencode/releases/tag/v1.18.27)。
+
+### llm-gemini 0.34
+
+支持 gemini-3.8-flash 的 low/medium/high 思考档位，并修复异步响应未记录实际模型版本的问题。 日期：2026-09-03 00:39 +08:00。来源：[Simon Willison GitHub](https://github.com/simonw/llm-gemini/releases/tag/0.34)。
+
+### llm-gemini 0.34：HTML 工具实验
+
+作者使用 llm-coding-agent 为 Markdown 渲染工具加入 sandboxed iframe HTML 预览；这是个人工程实验，不把单次演示费用或速度写成普适评测。 日期：2026-09-03 00:39 +08:00。来源：[Simon Willison](https://simonwillison.net/2026/Sep/2/llm-gemini/)。
+
+### Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference
+
+在接受长度、draft 成本和验证开销之间选择推测解码机制与长度；比较 MTP、EAGLE-3、DFlash、DSpark 等，建议用真实工作负载测端到端收益，目标模型微调后需重新测量接受率。 日期：2026-09-03 00:04 +08:00。来源：[NVIDIA Technical Blog](https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference/)。
+
+
+
 ### 1. DeepSeek Harness v0.1.2-alpha.4
 
 [官方发布](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4) · 2026-09-01 23:45 +08:00。DSH 为父 Agent 与可持续子 Agent 增加双向 send_message，并调整 web_fetch 与 Session API。该版本仍为 alpha，升级前需阅读兼容性说明。
-
-<figure class="source-image">
-  <a href="https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4"><img src="https://opengraph.githubassets.com/df4e2150333f4424187d637a45a96c8cd67b569d7364ad085ee2ea5f66b8a047/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4" alt="DeepSeek Harness v0.1.2-alpha.4 GitHub 发布页预览图" loading="lazy" /></a>
-  <figcaption><a href="https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4">图片来源：DeepSeek Harness GitHub 官方发布页</a></figcaption>
-</figure>
 
 ### 2. DeepSeek Harness v0.1.2-alpha.5
 
@@ -95,6 +126,16 @@ tags:
 
 ## 论文 / 研究
 
+### Agent Memory Is a Surface for Endogenous Authorization Laundering
+
+EAL-Bench 研究持久记忆误写权限、限制与撤销后，执行 Agent 如何继承虚假授权。有效来源事件绑定和受限事件溯源可缓解，但存在拒绝合法操作的权衡；未独立复现。 日期：2026-09-02 04:12 +08:00。来源：[arXiv](https://arxiv.org/abs/2609.01836)。
+
+### SolarWM：开放数据与长程视频世界模型训练
+
+统一多源视频、相机几何和来源元数据，并适配不同视频模型骨干，以三阶段训练研究长程交互视频生成；论文声称开放数据、权重和训练管线，未独立验证实时性能。 日期：2026-09-03 01:59 +08:00。来源：[arXiv](https://arxiv.org/abs/2609.02886)。
+
+
+
 ### Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement
 
 [论文](https://arxiv.org/abs/2609.01481) · 2026-09-02 00:17 +08:00。在既有 coding-agent harness 之上组织可验证的多轮规划、编码与测试循环。论文结论为作者报告，本页未独立复现。
@@ -113,7 +154,7 @@ tags:
 
 ## GitHub Trending
 
-以下为本轮新抓取的榜单信号，仅表明当期热度；不证明项目当日发布，也不重复昨日未确认候选。
+以下保留当天早轮已记录的榜单快照。本轮已重查 overall/Python/TypeScript，原有项目仍可见；不为小幅星数波动重写历史快照，也不把榜单热度当作发布时间。
 
 - [Atlas：面向 Agent 的源码与会话追踪](https://github.com/pacifio/atlas)：新抓取 Trending 显示 895 stars today；将提交与 Agent 会话、工具调用关联，并共享本地记忆。仅为当期热度，非今日发布。
 - [SIE：Agent 模型推理服务](https://github.com/superlinked/sie)：新抓取 Trending 显示 61 stars today；开源模型推理服务器与生产集群，面向 Agent 所需模型。热度不等于性能验证。
@@ -126,10 +167,46 @@ front/newest 与 Algolia 已查。FrontierHarness 提交于 9 月 3 日 00:14 +0
 
 ## 日期未确认
 
+### zvec-grep：本地优先混合检索
+
+统一 ripgrep、BM25 和向量搜索，面向人和 Agent 的本地工作区检索；窗口内 HN 提交发现，首次发布日期未确认。 证据状态：日期未确认。来源：[zvec-ai GitHub](https://github.com/zvec-ai/zvec-grep)。
+
+### README 证据生成 skill
+
+根据代码、清单、测试与工作流生成 README 的 public beta；作者明确其他宿主尚未完成场景验证，不能因可安装就宣称兼容性已验证。 证据状态：日期未确认。来源：[pekral GitHub](https://github.com/pekral/github-readme-generator)。
+
+### Brain：可扩展 Agent runtime 预览
+
+Agent loop 编译为 Wasm，在运行时中执行，会话事件可观察和回放；属于 early preview，API 可能不兼容变更。项目自报 benchmark 不含模型延迟，本页不据此宣称胜过其他 Agent。 证据状态：日期未确认。来源：[aexhq GitHub](https://github.com/aexhq/brain)。
+
+### Connecting an AI agent to Safari
+
+官方文档标题确认 AI agent 接入 Safari；抓取仅得到 JavaScript 壳，未核实具体能力、版本要求和发布日期，作为窗口内 HN 发现信号。 证据状态：日期未确认。来源：[Apple Developer](https://developer.apple.com/documentation/safari-developer-tools/connecting-an-ai-agent-to-safari)。
+
+
+
 - [FrontierHarness Eval](https://frontierharness.org/)：新发现的 Runta 自发布 harness 评测；宣称以同一 Kimi K3 模型与冷启动环境比较 9 个 harness、12 种配置。网页发布日期未确认，未独立复现，不能据此泛化谁超越谁。
 - [AURA：开源 SRE Agent 平台](https://github.com/mezmo/aura)：新发现的 Rust SRE Agent 平台，提供工具审批、MCP、多 Agent 与可观测性；生产采用为项目方自述，未核实原始发布日期。
 
 ## 观察池
+
+### DSH / Pi 的 Sol 工具调用问题：作者已收窄结论
+
+作者更正：失败证据仅适用于其 DSH 0.1.1-rc.2 / pi-ai 0.82.1 路径；Pi 0.84.4 + Sol 多步工具调用正常。Responses Lite 差异不证明故障因果，已撤回 capability gate 建议，等待 stock DSH alpha.4 复测。 日期：2026-09-02。来源：[GitHub 社区讨论](https://github.com/deepseek-ai/deepseek-harness/discussions/5377)。
+
+### MemHub：共享持久记忆候选
+
+HN 于上海 9 月 3 日 09:43 提交；原页 web open 失败，只有提交标题描述为 coding agent 共享记忆，功能与发布日期未确认。 证据状态：日期未确认。来源：[HN 发现 / 项目入口](https://memhub.simplex.lat/)。
+
+### AI-Memory 2.0：Agent 与团队记忆经验文章
+
+HN 于上海 9 月 3 日 07:03 提交，原文 web open 失败；保留记忆工程候选，不将标题中的最佳系统评价当作事实，原文日期未确认。 证据状态：日期未确认。来源：[HN 发现 / Akita on Rails](https://akitaonrails.com/en/2026/09/02/ai-memory-2-0-best-memory-system-for-agents-and-teams/)。
+
+### CoOS：本地插件式业务应用候选
+
+HN 于上海 9 月 3 日 07:18 提交，标题称 Agent 通过本地插件构建 CRM/ERP；原文 web open 失败，未核验功能、开源状态或发布日期。 证据状态：日期未确认。来源：[HN 发现 / 项目入口](https://pirol.ai/)。
+
+
 
 FrontierHarness 页面提供同模型、相同运行环境的具名比较，但同时由 Runta 发布并引导试用，属于厂商自报；成本表格的“每任务”与“仅成功任务”口径不同，不直接把标题中的倍率作为普适效率结论。AURA 的权限控制和生产采用需要额外验证；Trending 的 Atlas、SIE、Chrome DevTools MCP、WebLLM 只作新热度信号。
 
@@ -138,6 +215,23 @@ FrontierHarness 页面提供同模型、相同运行环境的具名比较，但�
 未确认同时满足原文早于七天、过去24小时 HN 再讨论且原始日期可核验的条目。
 
 ## 来源链接
+
+- [Cline Desktop v0.0.23-beta.1](https://github.com/cline/cline/releases/tag/desktop-v0.0.23-beta.1)
+- [OpenCode v1.18.27](https://github.com/anomalyco/opencode/releases/tag/v1.18.27)
+- [llm-gemini 0.34](https://github.com/simonw/llm-gemini/releases/tag/0.34)
+- [llm-gemini 0.34：HTML 工具实验](https://simonwillison.net/2026/Sep/2/llm-gemini/)
+- [Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference](https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference/)
+- [Agent Memory Is a Surface for Endogenous Authorization Laundering](https://arxiv.org/abs/2609.01836)
+- [SolarWM：开放数据与长程视频世界模型训练](https://arxiv.org/abs/2609.02886)
+- [DSH / Pi 的 Sol 工具调用问题：作者已收窄结论](https://github.com/deepseek-ai/deepseek-harness/discussions/5377)
+- [zvec-grep：本地优先混合检索](https://github.com/zvec-ai/zvec-grep)
+- [README 证据生成 skill](https://github.com/pekral/github-readme-generator)
+- [Brain：可扩展 Agent runtime 预览](https://github.com/aexhq/brain)
+- [Connecting an AI agent to Safari](https://developer.apple.com/documentation/safari-developer-tools/connecting-an-ai-agent-to-safari)
+- [MemHub：共享持久记忆候选](https://memhub.simplex.lat/)
+- [AI-Memory 2.0：Agent 与团队记忆经验文章](https://akitaonrails.com/en/2026/09/02/ai-memory-2-0-best-memory-system-for-agents-and-teams/)
+- [CoOS：本地插件式业务应用候选](https://pirol.ai/)
+
 
 - [DeepSeek Harness v0.1.2-alpha.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.4)
 - [DeepSeek Harness v0.1.2-alpha.5](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-alpha.5)
@@ -159,8 +253,9 @@ FrontierHarness 页面提供同模型、相同运行环境的具名比较，但�
 
 ## 采集状态
 
-- **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 官方仓库、releases/changelog（Pi另查包元数据，DSH另查README与文档入口）；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；arXiv recent/原文；Hugging Face Daily Papers；Simon Willison。
-- **失败来源**：Continue 旧 VS Code CHANGELOG 路径404，已用仓库 tree 找到 CLI CHANGELOG；DSH alpha.5 HTML直连读取超时，release API正常，配图改用已验证 alpha.4 官方 OpenGraph（HTTP 200、image/png）。
-- **初始候选数**：27（七项目最近release及新增研究/社区/榜单候选，去重后）。
-- **保留来源数**：17。
-- **二次补搜**：否（最终来源不为0；失败入口已切换）。
+- 已检查来源：Cline 官方仓库、releases 与 changelog；Pi Coding Agent / pi-mono 官方仓库（已重定向至 earendil-works/pi）、packages 与 releases；DeepSeek Harness / DSH 官方仓库、releases 与 README/文档；OpenCode 官方仓库 anomalyco/opencode 与 releases；Aider 官方仓库 Aider-AI/aider、releases 与 changelog；Continue 官方仓库 continuedev/continue、releases 与 changelog；Roo Code 官方仓库 RooCodeInc/Roo-Code、releases 与 changelog；GitHub Trending daily：overall、Python、TypeScript；Hacker News front/newest 与 Algolia recent submissions；Hugging Face Daily Papers/API；arXiv recent AI/Agent/LLM papers；Simon Willison Weblog Atom 与原文；本轮重查七个 harness 官方 releases API；Cline/Pi raw changelog、Pi packages、DSH README/官方文档、Continue CLI tree、Roo CHANGELOG、Aider 仓库；NVIDIA Technical Blog 原文与发布时间 meta；llm-gemini GitHub release / Simon Atom / 原文；DSH discussions/5377 作者更正；zvec-grep、README skill、Brain 原始仓库；Apple Safari 文档入口。
+- 失败来源与原因：MemHub、AI-Memory 2.0、CoOS 原文 web open 失败：保留 HN 窗口内发现证据，未核验正文；Apple Safari 文档仅返回 JavaScript 壳：发布日期与能力细节未核实。
+- 初始候选数：42（release、论文、社区和相关榜单候选）。
+- 保留来源数：32（既有 17 条全部保留，新增 15 条）。
+- 二次补搜：否；最终来源不为 0，已使用官方 API、Atom、Algolia 与原文交叉核验。
+- 本轮公开 HTTP 请求未遇 TLS 错误；配图来自 Cline 官方 beta 发布页 OpenGraph，HTTP 200、image/png。

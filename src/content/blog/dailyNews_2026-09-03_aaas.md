@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T09:38:36+08:00"
+updatedAt: "2026-09-03T10:05:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Introducing Agent Relay: Cloud-Hosted Agents, Self-Hosted Execution"
 featuredUrl: "https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution"
@@ -15,6 +15,7 @@ tags:
   - "24–72 小时观察"
   - "观察池"
   - "可信二手"
+  - "客户案例"
   - "邻近信号"
   - "日期未确认"
   - "腾讯"
@@ -24,11 +25,20 @@ tags:
   - "Agent"
   - "Agent Lifecycle"
   - "Agent Platform"
+  - "ChatGPT Work"
+  - "Claude Code"
   - "Cloud Agent"
   - "Cloud Operations"
+  - "Commerce"
+  - "Cowork"
   - "Cursor"
+  - "Customer Service"
+  - "Cyber Defense"
+  - "Edge Cloud"
+  - "Enterprise"
   - "Enterprise Automation"
   - "GA"
+  - "Google"
   - "Governance"
   - "Government"
   - "Industrial Agent"
@@ -45,9 +55,15 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-09-02 00:33 至 2026-09-03 00:33（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-31 00:33 至 2026-09-02 00:33**。本日新建页面，不复制昨日旧背景。确认 3 条具有精确时间且落在窗口内的 AaaS 事件：Coder Agent Relay 私有预览、Celigo Ora GA、Automat-it Mate 生产应用。其余有用候选按日期、来源和托管边界分层保留，不能视为同等确认的发布。
+本轮发现窗口：**2026-09-02 10:05 至 2026-09-03 10:05（Asia/Shanghai）**；24–72 小时观察窗口为 **2026-08-31 10:05 至 2026-09-02 10:05**。当天累积保留原有 14 条来源，并增加 7 条：Fairwind 云端防御、ChatGPT Work 客户采用、Claude Code 远程生命周期修复，以及 AWS CX GA、commerce 参考蓝图、Formula E 端云案例和 Cowork 企业控制观察。部分此前事件已滑出新窗口，仍按累计规则保留；日期未确认、案例自述和托管边界不明的条目不冒充同等确认的新服务发布。
 
 ## 重点动态
+
+- **Claude Code 远程执行可靠性与企业控制更新（9 月 3 日 06:33）**：v2.1.259 修复远程 Stop 后后台 Agent 仍运行、旧工作流退出前重复恢复，以及定时/远程会话批准连接器后不继续的问题；组织可统一下发 HTTP/SSE MCP，配置解析失败时拒绝启动。这里只计远程生命周期相关变化，不把整个本地 CLI 当成 AaaS。详见 Claude 专题页。[官方发布](https://github.com/anthropics/claude-code/releases/tag/v2.1.259)
+- **Fairwind 将网络防御 Agent 接入受信组织的云环境（9 月 2 日 23:40）**：Google 将 Gemini 3.8 Flash Cyber 与 CodeMender harness 结合，用于漏洞发现、验证和补丁生成，运行于组织安全云环境；Cyber 访问优先向受信伙伴提供。原文另指出其他 Google Cloud 客户可使用 CodeMender 与公开模型。这里关注云端防御工作流与准入，不把单纯模型 API 视为 AaaS，也不声称全量无条件 GA。详见行业专题页。[官方说明](https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/)
+- **ChatGPT Work 的小团队采用案例（9 月 2 日 20:00）**：ATV Big Air Tour 使用每日定时任务检查活动信息和网站，再生成纠错邮件草稿；商品照片可用于库存表与补货建议，最终订单由负责人审核后发送。案例称库存补货从数天缩短为数小时，属于客户自述，不是独立评测。定时服务是 AaaS 相关证据，文章本身是采用案例而非新产品发布。详见 OpenAI 专题页。[官方案例](https://openai.com/index/atv-big-air-tour)
+
+### 当天此前保留
 
 - **Coder Agent Relay：云端推理与企业自托管执行分离。** 原页元数据为上海 9 月 3 日 00:00:02。首个集成伙伴是 Cursor：供应商继续运行推理循环，工具在客户 Coder 工作区执行，身份归属与策略由企业管理。当前为设计伙伴私有预览，不是全量 GA；推理流量仍经供应商基础设施，不能解释成“所有数据完全不出企业”。[Coder 官方技术说明](https://coder.com/blog/introducing-agent-relay-cloud-hosted-agents-self-hosted-execution)
 - **Celigo Ora 正式可用。** 原页元数据为上海 9 月 2 日 09:36:43；官方 FAQ 明确 GA 日期为 9 月 2 日。Ora 在 Celigo 平台内构建集成流程、映射与代码，排查失败并管理环境等资源；变更先暂存供人工批准，属于平台托管执行和企业控制面，不是仅生成建议的聊天机器人。[Celigo 官方文章](https://www.celigo.com/blog/celigo-ora-ga-launch/)
@@ -66,7 +82,7 @@ Devin 已专项检查异步 session、环境、并发、计划任务、ACU/定�
 
 ## 海外厂商
 
-海外正式新增聚焦于混合远程执行、集成自动化和托管运维，分别见上述 Coder、Celigo、Mate。Google Vertex/Jules、Microsoft Agent服务、Replit、Lindy、CrewAI、LangGraph、GitHub coding agent、Amazon Q、Cloudflare、Factory、Amp 等已检查；当前证据未支持额外窗口内托管Agent发布，不能以“无新增”推断厂商没有在研发。
+海外正式新增聚焦于混合远程执行、集成自动化和托管运维，分别见上述 Coder、Celigo、Mate。Google Vertex/Jules、Microsoft Agent服务、Replit、Lindy、CrewAI、LangGraph、GitHub coding agent、Amazon Q、Cloudflare、Factory、Amp 等已检查；本轮新增 Fairwind 与 AWS CX 设计部署能力，并补充 OpenAI 采用案例与 Anthropic 远程修复；其他入口未核实新事件，不能以“无新增”推断厂商没有在研发。
 
 Cline 的新 SDK 迁移、Pi、DSH 与其 SSH/Cloudflare 社区项目，以及 OpenCode、Aider、Continue、Roo Code 的本地或自部署入口，都按“谁负责托管执行生命周期”划界；本地 harness 变化详见开源专题页。
 
@@ -81,6 +97,11 @@ Cline 的新 SDK 迁移、Pi、DSH 与其 SSH/Cloudflare 社区项目，以及 O
 AaaS 需有托管任务、会话、调度、环境或生命周期证据。模型 API 是 MaaS；通用云平台、数据平台、MCP接入和本地GUI控制是邻近能力。企业自托管工具执行不必排除 AaaS，但必须像 Coder/Cursor 一样明确仍由供应商运行 Agent 循环；纯自部署开源 harness 不属于同一商业服务。
 
 ## 日期未确认
+
+- **AWS Agentic CX designer GA（官方 9 月 2 日，时刻未确认）**：Amazon Connect Customer 宣布可在同一无代码画布设计、测试并部署语音与数字自助体验；支持业务集成、护栏和确定性审批/路由流程。正式可用地区包含北美、东京、首尔、新加坡、悉尼、法兰克福和伦敦。厂商声称上线周期缩短，没有独立实施时长验证。[AWS 公告](https://aws.amazon.com/about-aws/whats-new/2026/09/agentic-cx-designer/)
+- **Commerce Agents（官方索引 9 月 2 日，原文受限）**：购物和商家参考蓝图可选 Managed Agents beta，也可选自行构建的 Messages API 或 Agent SDK；只有托管路径符合 AaaS，开放参考代码不等于供应商维护的端到端商用服务。博客原页抓取失败，保留官方索引证据。详见 Claude 专题页。[官方入口](https://claude.com/blog/claude-for-commerce-agents)
+- **Cowork 企业控制（官方文档，更新日未确认）**：云端会话与 Desktop 内置浏览器使用独立开关。文档说明内置浏览器在 Enterprise 初始关闭，计划9月10日默认开启，组织已经关闭时除外；不能把这项安排解释成所有企业的云端会话自动开启。详见 Claude 专题页。[管理员文档](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans)
+- **Formula E 端云 A2A 采用（9 月 2 日案例文章）**：回顾7月Goodwood试验：赛车内实时工作在设备端执行，赛后才通过A2A向云端Agent交接媒体和工程分析。这是混合Agent采用案例，不是今日赛事或新云产品GA；精确文章时间未核实。详见行业专题页。[Google Cloud 案例](https://cloud.google.com/transform/formula-e-goodwood-record-setting-edge-computing-gemma-ai)
 
 这里的“日期未确认”包含已知日历日期但缺少精确时间/时区的情况，事实与是否严格落入 24 小时窗口分别判断。
 
@@ -107,7 +128,7 @@ AaaS 需有托管任务、会话、调度、环境或生命周期证据。模型
 
 ## 趋势判断
 
-本轮证据支持“执行边界与审批控制变得更明确”这一有限判断：Coder拆分推理与工具执行，Celigo把变更暂存给人审批，Mate把多租户运维组织成持续服务。候选还显示制造、集成、通信和SOC等场景在探索Agent化；没有足够独立数据推导市场份额、收入增速或性能领先。
+当天累积证据支持“执行边界与审批控制变得更明确”这一有限判断：Coder拆分推理与工具执行，Celigo把变更暂存给人审批，Mate把多租户运维组织成持续服务。候选还显示制造、集成、通信和SOC等场景在探索Agent化；新增 Fairwind、ChatGPT Work 与 Formula E 案例分别展示防御工作流、定时运营和赛后端云交接；没有足够独立数据推导市场份额、收入增速或性能领先。
 
 ## 来源链接
 
@@ -125,13 +146,20 @@ AaaS 需有托管任务、会话、调度、环境或生命周期证据。模型
 - [Catalyst by Zoho Solves The Shortfalls of Moving from Coding to Production With an Agent-Ready, Full-Stack Cloud and Built-In Governance](https://ebs.publicnow.com/view/1E0A441FE4FB50BE8FCC1CEB3A8D32E53F81E8F7)
 - [Microsoft Fabric in GCC High: Building the data foundation for AI](https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2026/09/02/microsoft-fabric-in-gcc-high-building-the-data-foundation-for-ai/)
 - [豆包工作双功能升级：多Agents并行上线，Mac端首度支持操作电脑](https://wap.stockstar.com/detail/IG2026090200042496)
+- [Proactive cyber defense for governments and enterprises](https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/)
+- [ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT](https://openai.com/index/atv-big-air-tour)
+- [Claude Code v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259)
+- [Building commerce agents with Claude](https://claude.com/blog/claude-for-commerce-agents)
+- [Amazon Connect Customer announces general availability of agentic CX designer](https://aws.amazon.com/about-aws/whats-new/2026/09/agentic-cx-designer/)
+- [Racers, start your agents: Formula E brings realtime AI to the edge](https://cloud.google.com/transform/formula-e-goodwood-record-setting-edge-computing-gemma-ai)
+- [Use Claude Cowork on Team and Enterprise plans](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans)
 
 ## 采集状态
 
-- 已检查：Devin与xAI/Grok专项；全部规定海外厂商官方入口/定向搜索；Cline、Pi、DSH及OpenCode/Aider/Continue/Roo Code边界；字节重点及主要中国厂商。检查方式和限制已写入scan.checkedSources。
-- 失败与限制：部分动态中文产品页无正文；Continue、腾讯云/WorkBuddy入口提取失败；CrowdStrike原文Access Denied；Zoho分发页及证券之星原文失败；若干官方页仅有日历日期。首轮失败的Coder、Celigo、Mate、Syspro、Bud已通过备用入口恢复。
-- 初始候选：14条；最终保留：14条来源（3条精确窗口官方AaaS事件、4条日期/原文受限候选、2条可信二手生态/语音观察、5条邻近信号）。Cursor与Coder为相互关联的架构事件，不把两条来源宣传成两个独立产品发布。
-- 二次补搜：是。首轮没有新确认事件后，扩大中英文关键词，切换官方changelog、GitHub、科技日报和公告分发入口；随后核实3条窗口事件。
-- 图片：采用Coder已确认事件官方OpenGraph图，来源页元数据可验证，HTTP 200、image/webp；观察池和邻近信号不作首页配图。
+- 已检查：本轮 Cognition Devin：正常打开2026 release notes并查billing、自助/Enterprise计价、企业环境部署、异步sessions、并发、计划任务、集成；最新公告仍为8月28日，无新增，不重复旧源；本轮 xAI/Grok：打开News与Tools Overview，专项查询Grok Bot、Automations、Workflows、/goal、云端/远程执行和企业/API；仅查到窗口外旧公告，无新AaaS事件；本轮海外：Anthropic Claude Code/SDK/Managed Agents/Cowork与Commerce；OpenAI ChatGPT Work/Codex；Google Vertex/Gemini Enterprise/Jules/Fairwind；AWS Amazon Q/Connect；Microsoft Copilot Studio/Azure；GitHub coding agent定向搜索；本轮 Replit、LangChain/LangGraph、Cloudflare、Amp 官方博客已打开；Lindy、CrewAI、Factory 官方域名日期搜索未核实新增；本轮 Cline、Pi/pi-mono、DeepSeek Harness/DSH、OpenCode、Aider、Continue、Roo Code cloud/hosted/remote关键词与官方DSH/Cloudflare文档交叉检查；没有新增供应商托管生命周期证据，本地harness不当AaaS；本轮字节重点：Coze/火山/豆包/Trae/Seed中英文日期关键词；阿里百炼/Qoder/通义/夸克、腾讯、百度/Comate、智谱、Kimi、MiniMax、DeepSeek托管智能体搜索；新候选多数较旧或仅模型API，不跨日重复背景；当日已有14条来源与Coder官方配图完整保留，未因窗口滑动删除；本轮图片仍使用已核验的Coder发布图。
+- 失败与限制：web首次打开Coder/Celigo/Mate/Syspro/Bud出现Internal Error，改用搜索结果入口与curl后恢复；Node直连fetch失败，curl可用。；CrowdStrike两处IR/新闻原文入口返回Internal Error或Access Denied；仅官方索引可读，候选降级至观察池。；Coze、Seed、Trae博客、百炼控制台、Comate动态页正文为空或过少；腾讯云agent入口、WorkBuddy开放平台、Continue changelog提取失败。；Zoho Publicnow正文与证券之星豆包报道原页提取失败，保留索引内容并显式标注；不引用其未经独立核验的性能或行业首创结论。；Cursor、Syspro、Bud等仅核实日历日期，未得到可用精确时间/时区；不把抓取时刻视为发布时间。；本轮Commerce Agents原页web抓取失败，官方搜索索引可读，保留日期未确认观察；本轮中文厂商检索主要返回较旧内容或动态产品页，不能据此声称完整核验所有更新；未将社区转载等同官方公告；AWS CX及Formula E页面只取得日历日期，精确时分未确认；Cowork管理员文档无可靠更新时间。
+- 本轮候选：21（含当前新增、已有事件与窗口外资料）；新增保留：7；当天累积来源：21，原有14条全部保留。
+- 二次补搜：是（当天此前已完成；本轮又扩展中英文日期查询、官方公告与云端案例入口）。
+- 配图：保留此前验证的Coder官方OG图；新增日期未确认材料不配置首页配图。
 
-今日扫描完成，共 14 条来源动态，重点：Coder混合执行架构、Celigo Ora GA与Mate托管运维；Cursor、WorkBuddy等分层观察；Devin及Grok未确认窗口内新增。
+今日扫描完成，共 21 条动态，重点：Fairwind云端防御、ChatGPT Work采用、Claude远程任务修复与AWS CX GA；保留Coder/Celigo/Mate等当天资料，Devin及Grok无新增。
