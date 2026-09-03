@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T17:05:45+08:00"
+updatedAt: "2026-09-03T20:08:19+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
@@ -15,14 +15,17 @@ tags:
   - "24–48小时补充"
   - "策略文章"
   - "产业观点"
+  - "厂商调查"
   - "发布预告"
   - "观察池"
   - "活动"
   - "可信二手"
   - "培训活动"
+  - "企业采用"
   - "日期未确认"
   - "商业化"
   - "生效事件"
+  - "未来计划"
   - "详见 Claude 专题页"
   - "详见 OpenAI 专题页"
   - "详见开源专题页"
@@ -56,6 +59,7 @@ tags:
   - "LangChain"
   - "LlamaIndex"
   - "Meta"
+  - "Microsoft"
   - "Model"
   - "NVIDIA"
   - "OpenAI"
@@ -71,7 +75,7 @@ tags:
 
 ## 今日概览
 
-采集窗口：**2026-09-02 17:01 至 2026-09-03 17:01（Asia/Shanghai）**。本页按当天累积保留早先全部23条来源；窗口只用于发现新增。本轮新增Skillnote预告、OpenAI安全产品入口与LayerX活动观察，并恢复CUDA教程正文证据。新增 Meta Muse Spark 1.3、xAI 图像 API 退役安排及 LangChain 企业与支付工程观察；Google 的新 Flash 模型与受限网络防御计划继续保留；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
+采集窗口：**2026-09-02 20:03 至 2026-09-03 20:03（Asia/Shanghai）**。保留当天已有27条来源，新增微软印度企业Agent采用报告、天猫模型订阅入口报道及JetStream执行前授权预告，共30条。新条目分别注明日期、二手证据和未来可用性限制；此前已核实动态继续保留。
 
 ## 优先动态（当天累积，含已滑出发现窗口条目）
 
@@ -120,6 +124,8 @@ Mistral、Seed、Kimi 等入口未核实本窗口独立新发布；Meta 新增�
 
 ## 日期未确认
 
+- **微软发布印度 Work Trend Index：企业 Agent 采用观察**（仅日历日期2026-09-03）：微软印度报告称，受访AI用户中32%围绕Agent重设计工作，并介绍印度IT企业Copilot及Agent采用案例；这是厂商调查与客户自述，不能外推全体劳动人口或独立证实生产率提升。仅确认日历日期。 [官方原文](https://news.microsoft.com/source/asia/2026/09/03/indias-ai-advantage-is-human-microsoft-work-trend-index-2026-finds-india-among-the-worlds-leading-frontier-workforces/)
+
 - **GitHub Next Chopin：多人协同规划研究原型**：官方原型探索围绕GitHub仓库的实时协作、评论驱动Agent修改、决策记录与MCP交接。仅标2026年9月；明确尚非产品或完成原型，不建议立即采用。体现编码工具向团队规划延伸的方向，详见开源专题页。 [官方原文](https://githubnext.com/projects/chopin/)
 
 - **Skillnote 预告制造业技能数据 Agent**（2026-09-03）：厂商计划10月向现有云服务客户提供可选Agent，基于权限内技能、资格与教育数据进行搜索分析；人员培养与评价扩展属后续计划，尚非正式上线，效果未独立验证。 [原文](https://prtimes.jp/main/html/rd/p/000000107.000088452.html)
@@ -152,6 +158,10 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 ## 观察池
 
+- **天猫上线 Token 充值中心：模型订阅电商化**（2026-09-03 15:04:06 +08:00）：记者报道天猫AI空间站集合阿里云、智谱、Kimi和MiniMax的Token/Coding订阅与充值，支持卡密或直充；未独立登录商城验证，作为可信二手分发信号，不等同托管Agent发布。 [原文](https://tidenews.com.cn/news.html?id=3548296)
+
+- **JetStream Clearance：执行前逐动作授权预告**（2026-09-03 01:00 +08:00）：厂商宣布在AI Gateway中依据身份、工具参数及动作序列进行执行前授权，计划今年秋季GA；安全效果未独立测试，不能视为已经普遍可用。 [原文](https://www.newswire.com/news/jetstream-announces-clearance-an-ai-zero-trust-reasoning-engine)
+
 - **LayerX Bet AI Day：Agent 治理与业务实践活动**：主办方活动索引列9月3日12–18时日本时间主会及此前三场午间分享，讨论Agent业务设计、护栏和内部AI基础设施。原页提取受限，仅核验搜索摘要，不声称已观看或确认会上发布。 [主办方入口](https://layerx.connpass.com/event/399946/)
 
 - **三问AI办公：当智能成为标配，新的稀缺在哪里？**（2026-09-03 08:58 +08:00；观察池）：作者分析中国 AI 办公的工作上下文、权限与分发控制，讨论腾讯、阿里、字节、百度等既有资产；这是产业观点，未将其竞争判断视为已证实市场结论或新产品发布。 [原文](https://www.tmtpost.com/8126197.html)
@@ -170,8 +180,8 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 ## 采集状态
 
-- 已检查：GitHub Next Chopin原文；Google DeepMind/Research官方索引；Meta Research入口及此前Muse原文；Microsoft Research Blog与官方News日期补搜；xAI News、docs release-notes、xai-org组织及grok-build/releases，显式检查Grok模型/API/DeepSearch/voice/coding/tools/Agent；最新仍为9月2日图像退役安排，无新增；Mistral News、Cohere Blog、HF Blog、NVIDIA Recent posts及CUDA教程原文搜索、LlamaIndex与LangChain Blog；Qwen Blog及千问模型日志、DAMO、Seed Blog；百度千帆与腾讯混元官方更新；DeepSeek changelog、Z.ai/AutoClaw、Kimi Blog、MiniMax News、StepFun入口及中英文日期备用检索；Latent Space、Dwarkesh、No Priors Apple Podcasts、Cognitive Revolution、a16z Podcast Network与日期补搜，未核实新集；LayerX官方活动索引；Anthropic与OpenAI同轮专题核查；OpenAI cybersecurity原文；Cline/Pi/DSH同轮专项，DSH rc.1属于harness工程，无新增企业分发事件；Skillnote厂商PR TIMES全文与Google已有配图URL打开成功；旧Gemini video已在前一日收录，不重复背景。
-- 失败及限制：Meta blog旧入口Internal Error，切换Research首页；StepFun博客Internal Error，改日期搜索；Qwen/DAMO动态页无正文；Dwarkesh空页、Latent Space摘要有限；中文组合搜索多数为旧条目，不能据此证明厂商无动态；NVIDIA正文首次可读后再次open失败，同URL搜索恢复完整技术摘要与六步正文；LayerX原页仅3行，保留主办方搜索摘要；Skillnote只采用日历日期，不猜精确时区；OpenAI安全页无发布日期，直播时间不是产品发布日期。
-- 本轮候选7：新增4（含GitHub Next Chopin原文）、既有CUDA证据补全1、重复Google video与既有xAI公告2；累计候选口径23+7=30；当天累计27条。
-- 二次补搜：否（来源非零，已针对失败入口切换搜索）。
-- 保留Google官方可访问配图；日期未确认及观察条目不参与首页精选。
+- 已检查：Google DeepMind与Google Research首页、Meta Research、Microsoft Research及Source Asia印度报告原文；xAI News、官方release-notes、xai-org和grok-build releases：显式检查Grok模型/API/DeepSearch/voice/coding/tools/Agent，未见超出9月2日图像迁移的新公告；Mistral News、Cohere Blog、Hugging Face Blog、NVIDIA recent-posts与日期补搜、LangChain及LlamaIndex索引；Qwen Blog、千问AI模型日志、DAMO、Seed Blog、百度千帆、混元首页、DeepSeek更新日志、AutoClaw、Kimi、StepFun、MiniMax索引与中英文日期补搜；Latent Space、Dwarkesh、No Priors网站及Apple Podcasts备用、Cognitive Revolution、a16z播客与日期搜索；未核实新集；Anthropic/OpenAI与Cline/Pi/DSH同轮专项扫描；未核实额外产业分发事件；Microsoft原文、潮新闻原文、JetStream厂商Newswire公告；既有Google发布配图打开成功。
+- 失败及限制：Qwen/腾讯混元及NVIDIA列表正文为空，DAMO超时、百度千帆和StepFun入口提取失败；已用官方域名中英文关键词和备用日志补搜；Dwarkesh空页、Latent Space内容有限；No Priors无连字符域名是停放页，有连字符入口失败，改Apple Podcasts；不据搜索缺失断言绝对无更新；微软报告仅日历日期；潮新闻商城报道未独立登录核验，配图属于二手观察素材，不用于首页；聚合日报将Orchard写作9月2日发布，Microsoft原文明确8月3日，未据聚合日期重复旧背景；现有受限来源保留此前限制。
+- 本轮候选7：新增3，既有Google/xAI/LangChain事件3，日期误报的旧Orchard1；累计候选口径27+7=34，保留已有27，新增3，累计30条。
+- 二次补搜：否（来源非零，已针对失败入口执行备用关键词检索）。
+- 已主动复查引用来源配图：保留可访问的Google官方发布图；本轮日期未确认、二手与未来计划不作为首页图片。
