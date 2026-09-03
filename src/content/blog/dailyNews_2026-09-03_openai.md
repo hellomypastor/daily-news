@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T11:00:48+08:00"
+updatedAt: "2026-09-03T14:04:38+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT"
 featuredUrl: "https://openai.com/index/atv-big-air-tour"
@@ -13,17 +13,22 @@ featuredImageAlt: "ATV Big Air Tour 官方案例图：轮胎纹理特写，两�
 featuredImageCaption: "图片来源：OpenAI ATV Big Air Tour 客户案例"
 tags:
   - "安全"
+  - "服务状态"
   - "功能建议"
   - "观察池"
+  - "活动"
+  - "活动预告"
   - "可靠性"
   - "可信二手来源"
   - "客户案例"
+  - "日期未确认"
   - "容量"
   - "社区反馈"
   - "未证实传闻"
   - "稳定版"
   - "限额"
   - "修复版"
+  - "已恢复"
   - "预发布"
   - "Agent"
   - "AI Adoption"
@@ -47,7 +52,7 @@ tags:
 
 ## 今日概览
 
-本轮发现窗口：**2026-09-02 10:05 至 2026-09-03 10:05（Asia/Shanghai）**。当天累积保留此前全部 17 个来源，即使已滑出本轮窗口。本轮重点新增 Codex 0.153.0 稳定版与 alpha.5.1；当天官方主线还包括 Codex 0.152.1 修复与三个 alpha 版本、Python/Node SDK 更新、API 错误码细分，以及 ChatGPT Work 的 ATV 客户案例。客户效率数字仅按官方案例归因，社区问题均按个体反馈处理。
+本轮发现窗口：**2026-09-02 14:01 至 2026-09-03 14:01（Asia/Shanghai）**。当天累积保留此前全部 41 个来源，即使已滑出本轮窗口。本轮补入已恢复的 Work Mode 错误率事件、社区反馈和活动观察；当天已收录 Codex 0.153.0 稳定版与 alpha.5.1；当天官方主线还包括 Codex 0.152.1 修复与三个 alpha 版本、Python/Node SDK 更新、API 错误码细分，以及 ChatGPT Work 的 ATV 客户案例。客户效率数字仅按官方案例归因，社区问题均按个体反馈处理。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -56,7 +61,7 @@ tags:
 | Codex CLI | **新增 0.153.0 稳定版与 alpha.5.1**，插件管理、恢复与上下文实验配置见下方；累计保留 0.152.1 修复 Guardian 对模型元数据 Node REPL 策略的遵循；0.153.0-alpha.4/.5/.6 仅版本信号，不推断功能。 |
 | VS Code / JetBrains 集成 | 无窗口内独立新增。 |
 | Codex 云端 / 远程任务 / PR Agent | 无窗口内独立新增。 |
-| ChatGPT agentic mode / Work | ATV 案例展示定时信息核查、库存与营销工作流；不是新产品发布。 |
+| ChatGPT agentic mode / Work | 官方状态页确认短时错误率事件已恢复；ATV 案例展示定时信息核查、库存与营销工作流。 |
 | Agents SDK Python | 官方 releases 最新 v0.22.0，8 月 19 日，无新增。 |
 | Agents SDK TypeScript | 官方 releases 最新 v0.17.0，8 月 19 日，无新增。 |
 | 当前官方 Agent 构建产品 | Agents SDK Python/TypeScript releases 未见窗口内发布。 |
@@ -85,6 +90,8 @@ ATV 与 AI-native 工作流为本窗口官方企业采用案例。Enterprise、B
 - **Codex 0.153.0-alpha.5.1**（2026-09-03 08:41 +08:00）：官方预发布，仅有版本标识，未披露功能清单。 [官方 release](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.5.1)
 
 0.153.0 的上下文管理实验默认关闭，仅面向符合条件、使用 Codex 后端的 ChatGPT Plus、Pro、Pro Lite 会话；API key、自定义 provider 和临时结构化线程不包含在内。远程 marketplace 支持列表、安装与移除插件；MCP 已记住的工具批准绑定到选定应用账号。
+
+- **Work Mode 错误率事件已恢复**（2026-09-03 08:10 +08:00）：官方状态页记录 Work Mode 错误率升高，上海时间 08:04 开始调查、08:10 标记恢复；不能据此解释全部社区报告或断言所有用户受影响。 [官方状态页](https://status.openai.com/incidents/avwnvk1f)
 
 - **ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT**（2026-09-02 20:00 +08:00）：官方客户案例介绍 ChatGPT Work 定时检查活动信息、从商品照片整理库存并生成补货建议；效率数字为客户案例自述，不是独立评测。 [原文](https://openai.com/index/atv-big-air-tour)
 - **Codex 0.153.0-alpha.6**（2026-09-02 19:26 +08:00）：Codex 官方发布新预发布版本；release 只有版本标识，没有披露功能变化。 [原文](https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.6)
@@ -121,7 +128,7 @@ Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 仍是�
 
 ## 日期未确认
 
-未新增需单列的日期未知新闻；API changelog 的具体时分未知，但日期明确。
+新增活动预告与 Codex 社区额度帖的公告/发表日期未确认，集中保留在观察池；活动日程与公告发布日期分别处理。API changelog 的具体时分未知，但日期明确。
 
 ## 观察池
 
@@ -158,6 +165,21 @@ Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 仍是�
 - **Thinking of getting chatgpt plus mainly for codex**（2026-09-02；观察池）：学习和审查用量引发选型讨论；评论对 Pro 价值、速度与限额感受分歧，不能据此推断套餐统一表现。 [原帖或报道](https://www.reddit.com/r/codex/comments/1w52mbp/thinking_of_getting_chatgpt_plus_mainly_for_codex/)
 - **DSH integration failure report corrected after working Pi comparison**（2026-09-02；观察池）：作者把失败限定到 DSH 0.1.1-rc.2 路径，确认 Pi 0.84.4 的 Sol 多步工具可工作；Responses Lite 请求差异不能证明故障因果，撤回 capability gate 建议。 [原帖或报道](https://github.com/deepseek-ai/deepseek-harness/discussions/5377)
 - **OpenAI gets cautious as Anthropic courts customers ahead of IPOs**（2026-09-02；观察池）：可信二手分析讨论 Astra 发布保障与商业沟通；原文打开失败，只核验搜索摘要，不据此断言模型已经普遍上线或 IPO 时间。 [原帖或报道](https://www.axios.com/2026/09/02/openai-anthropic-fable-astra-ipo)
+
+
+### 14:01 滚动扫描补充
+
+- **Assistance with account issues**（2026-09-03 13:53 +08:00；观察池）：用户求助账户系统标记与支持处理，问题自八月持续；这是新发表的个人求助，身份、损失与平台原因未独立验证。 [原文](https://community.openai.com/t/assistance-with-account-issues/1394512)
+- **Add “Lock Task / Protected Archive” to prevent accidental permanent deletion**（2026-09-03 13:21 +08:00；观察池）：用户在迁移与清理归档后称任务疑似被误删，建议任务锁定、回收期和完整导出恢复；非已发布功能。 [原文](https://community.openai.com/t/add-lock-task-protected-archive-to-prevent-accidental-permanent-deletion/1394509)
+- **subscline resubmission still in review after known image authorization issue**（2026-09-03 11:59 +08:00；观察池）：开发者称应用图片授权问题导致重新提交后仍在审核；审查队列与延迟原因仅为作者陈述，非官方确认。 [原文](https://community.openai.com/t/subscline-resubmission-still-in-review-after-known-image-authorization-issue/1394502)
+- **Feature Request: Secure Chat Transfer Code for Instant Cross-Device Conversation Handoff**（2026-09-03 11:12 +08:00；观察池）：用户提议短期、单次使用的跨设备会话转移码；作者承认已有对话同步，这只是主动交接体验建议。 [原文](https://community.openai.com/t/feature-request-secure-chat-transfer-code-for-instant-cross-device-conversation-handoff/1394492)
+- **ChatGPT Business invites randomly failing**（2026-09-03 10:08 +08:00；观察池）：管理员报告 SSO 登录成功后邀请仍待处理且工作区内容加载失败；尚未独立复现，不认定全平台邀请故障。 [原文](https://community.openai.com/t/chatgpt-business-invites-randomly-failing/1394483)
+- **ChatGPT Work for marketing teams**（日期未确认；观察池）：官方预告营销团队 Work 入门演示，安排为上海 9 月 4 日 02:00–02:30；公告发布日期未确认，活动尚未发生，不是产品发布。 [原文](https://academy.openai.com/public/clubs/work-users-ynjqu/events/chatgpt-work-for-marketing-teams-ojz856zm5d)
+- **AI for Economic Opportunity Demo Day**（日期未确认；观察池）：官方活动页预告经济机会基金项目演示与讨论，安排为上海 9 月 4 日 03:00–05:30；公告发布日期未确认，不能当作今日成果。 [原文](https://forum.openai.com/public/events/openai-academy-x-gitlab-foundation-ai-for-economic-opportunity-demo-day-6brhei2k0t)
+- **Codex Meetups: Bengaluru and Stockholm**（日期未确认；观察池）：官方目录列出 9 月 3 日 Bengaluru 与 Stockholm 社区见面会；仅核实活动日期，未核实精确时区时刻或公告发布日期。 [原文](https://developers.openai.com/community/meetups)
+- **What the hell is actually consuming our Codex quota?**（日期未确认；观察池）：用户称上下文压缩消耗大量五小时额度，并询问其他人的情况；原帖已打开但本轮未取得精确发表日期，消耗比例及原因未独立核验。 [原文](https://www.reddit.com/r/codex/comments/1w4rusy/what_the_hell_is_actually_consuming_our_codex/)
+
+桌面项目消失的新帖与当日既有项目结构缺失事件合并；作者明确尚不清楚项目记录是删除、隐藏还是迁移或索引失败，不把界面不可见写成数据已丢失。
 
 ## 未证实传闻
 
@@ -210,10 +232,22 @@ Reddit 和 GitHub Discussion 仅确认页面日期，未推测精确时分；Axi
 - [DSH integration failure report corrected after working Pi comparison](https://github.com/deepseek-ai/deepseek-harness/discussions/5377)
 - [OpenAI gets cautious as Anthropic courts customers ahead of IPOs](https://www.axios.com/2026/09/02/openai-anthropic-fable-astra-ipo)
 
+- [ChatGPT Work Mode High Error Rates](https://status.openai.com/incidents/avwnvk1f)
+- [Assistance with account issues](https://community.openai.com/t/assistance-with-account-issues/1394512)
+- [Add “Lock Task / Protected Archive” to prevent accidental permanent deletion](https://community.openai.com/t/add-lock-task-protected-archive-to-prevent-accidental-permanent-deletion/1394509)
+- [subscline resubmission still in review after known image authorization issue](https://community.openai.com/t/subscline-resubmission-still-in-review-after-known-image-authorization-issue/1394502)
+- [Feature Request: Secure Chat Transfer Code for Instant Cross-Device Conversation Handoff](https://community.openai.com/t/feature-request-secure-chat-transfer-code-for-instant-cross-device-conversation-handoff/1394492)
+- [ChatGPT Business invites randomly failing](https://community.openai.com/t/chatgpt-business-invites-randomly-failing/1394483)
+- [ChatGPT Work for marketing teams](https://academy.openai.com/public/clubs/work-users-ynjqu/events/chatgpt-work-for-marketing-teams-ojz856zm5d)
+- [AI for Economic Opportunity Demo Day](https://forum.openai.com/public/events/openai-academy-x-gitlab-foundation-ai-for-economic-opportunity-demo-day-6brhei2k0t)
+- [Codex Meetups: Bengaluru and Stockholm](https://developers.openai.com/community/meetups)
+- [What the hell is actually consuming our Codex quota?](https://www.reddit.com/r/codex/comments/1w4rusy/what_the_hell_is_actually_consuming_our_codex/)
+
 ## 采集状态
 
-- 已检查：OpenAI News / Research / Product RSS，API changelog、模型与弃用文档，ChatGPT、Enterprise/Edu 和 Business release notes 检索，Codex / Agents SDK Python/TypeScript / Python/Node SDK releases；VS Code/JetBrains、云端任务、PR Agent、Work、Responses、Realtime；Tier 2 浏览器/Operator、桌面、GPTs/Store、Canvas、Sora/视频、Image/DALL·E、Voice、MCP；Tier 3 企业、教育、政府、科学、安全。
-- 社区：Developer Community 最新主题和原帖，Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding、r/singularity 与 r/codex；Hacker News、X 官方账号、YouTube/播客检索。
-- 限制：X、Hacker News、YouTube 未检出可信本轮新样本，不代表无动态；Axios 原文打开失败，以搜索摘要保留在观察池。前轮 OpenAI 图片 HTTP 403 本轮已恢复。
-- 累计候选统计 **42**（既有 17 个来源加本轮 25 个候选，去重前口径）；本轮初始相关候选 **25**：2 个 release、15 篇论坛帖、6 篇 Reddit、1 篇 DSH Discussion、1 篇 Axios；桌面项目两帖合并一个事件，新增 **24** 个来源；当天累计 **41** 个来源，原有 17 个全部保留。二次补搜：**否**（来源不为 0）。
-- 配图：已核验 ATV 官方原文 OpenGraph 图，公开 URL 返回 HTTP 200 image/png，并人工查看 1600×900 图片。
+- 已检查：OpenAI News、ChatGPT release notes、API changelog、模型与弃用文档；Codex、Agents SDK Python/TypeScript、Python/Node SDK releases；VS Code/JetBrains、云端/PR Agent、Work、Responses、Realtime。最新 Codex 仍为 0.153.0，API changelog 最新 9 月 2 日，未见新增模型或 SDK 发布。
+- Tier 2/3：浏览器/Operator、桌面、GPTs/Store、Canvas、Sora/视频、Image/DALL·E、Voice、MCP及企业、Business、Edu、Gov、科学和安全定向搜索；官方学院、Forum 与 Codex Meetups 活动目录。
+- 社区：Developer Community latest.json 与 6 个新帖全文；Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding、r/singularity、r/codex，Hacker News、官方 X 与 YouTube 日期检索；未检出可靠新样本的渠道不推断无动态。
+- 失败与限制：web 的 Community latest 列表为旧缓存，curl 官方 JSON 取得最新列表；X/HN/YouTube 日期检索多为旧结果；保留此前 Axios 原文访问失败限制。本轮未发生 TLS 或安全校验失败。
+- 候选口径：此前 41 个来源与本轮 11 个候选共 52；桌面项目缺失帖按同事件合并，新增保留 10 个来源，当天累积 51 个，原有来源全部保留。二次补搜：否（来源非零；仍扩展官方活动与社区入口）。
+- 配图：ATV 官方原文正常打开；保留原有官方配图，公开 URL 本轮返回 HTTP 200 image/png。活动预告、日期未知与社区观察不作为首页配图。

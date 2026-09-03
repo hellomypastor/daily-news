@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-03T00:00:00+08:00"
-updatedAt: "2026-09-03T10:08:22+08:00"
+updatedAt: "2026-09-03T14:05:20+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
@@ -14,48 +14,62 @@ featuredImageCaption: "图片来源：Google DeepMind 官方发布文章"
 tags:
   - "24–48小时补充"
   - "策略文章"
+  - "产业观点"
   - "观察池"
+  - "可信二手"
+  - "培训活动"
   - "日期未确认"
   - "商业化"
   - "生效事件"
+  - "详见 Claude 专题页"
   - "详见 OpenAI 专题页"
   - "详见开源专题页"
   - "营销合作"
   - "正文未核实"
   - "Agent"
   - "Agent Memory"
+  - "Agent Payments"
   - "AI"
   - "Alibaba"
+  - "Anthropic"
+  - "API Migration"
   - "Arena"
   - "Cline"
   - "Codex"
   - "Coding Agent"
   - "Cohere"
+  - "Customer Experience"
   - "Desktop"
   - "Engineering"
   - "Enterprise"
+  - "Enterprise Adoption"
   - "Evaluation"
   - "Gemini"
+  - "Genesys"
   - "GLM"
   - "Google"
   - "Industry"
   - "Inference"
   - "Kaggle"
+  - "LangChain"
   - "LlamaIndex"
+  - "Meta"
+  - "Model"
   - "NVIDIA"
   - "OpenAI"
   - "Podcast"
   - "Qwen"
   - "Research"
   - "Security"
+  - "xAI"
   - "Z.ai"
 ---
 
 ## 今日概览
 
-采集窗口：**2026-09-02 10:05 至 2026-09-03 10:05（Asia/Shanghai）**。本页按当天累积保留早先全部来源；窗口只用于发现新增。Google 的新 Flash 模型与受限网络防御计划是主要发布；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
+采集窗口：**2026-09-02 14:01 至 2026-09-03 14:01（Asia/Shanghai）**。本页按当天累积保留早先全部来源；窗口只用于发现新增。新增 Meta Muse Spark 1.3、xAI 图像 API 退役安排及 LangChain 企业与支付工程观察；Google 的新 Flash 模型与受限网络防御计划继续保留；NVIDIA 的推测解码文章补充推理效率工程，百炼资产存储进入商用计费。日期或正文不完整的候选单列保留。
 
-## 优先动态（过去 24 小时）
+## 优先动态（当天累积，含已滑出发现窗口条目）
 
 ### Codex 0.153.0：marketplace 分发与账户隔离
 
@@ -90,7 +104,7 @@ Gemini 的性能提升是厂商报告，不能外推为所有任务上的领先�
 
 ## 常规动态
 
-Mistral、Meta、Seed、Kimi 等入口未核实本窗口独立新发布；不跨日重复旧背景以凑数。
+Mistral、Seed、Kimi 等入口未核实本窗口独立新发布；Meta 新增模型与内部工程文章见日期未确认；不跨日重复旧背景以凑数。
 
 ## 播客 / 近两日补充（24–48 小时）
 
@@ -101,6 +115,20 @@ Mistral、Meta、Seed、Kimi 等入口未核实本窗口独立新发布；不跨
 暂无需要新增的已核实条目。
 
 ## 日期未确认
+
+- **Muse Spark 1.3：编码与长程 Agent 模型更新**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：官方原文确认向 Muse Code 和 Meta Model API 滚动提供；max reasoning 仍待额外安全测试。编码效率提升为 Meta 内部比较，开放权重仍是后续计划，未把演示原型当作独立产品。 [原文](https://research.meta.ai/blog/introducing-muse-spark-1-3)
+
+- **grok-imagine-image-quality 将于11月2日退役**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：9月2日发布记录宣布11月2日将该 slug 请求转由 grok-imagine-image-2.0 的 low 档处理，请求/响应结构不变；1.0 slug 不受影响。公告时刻未确认，尚未到生效日；属于图像 API 迁移，不是 AaaS 发布。 [原文](https://docs.x.ai/developers/release-notes)
+
+- **Agents That Pay：Nevermined 与 LangChain 支付集成**（2026-09-03；日期未确认：仅核日历日，精确时刻未知）：合作方教程演示 Fleet Agent 在授权预算内购买和补充 API 服务；支出上限、时限与次数在服务端检查，支付验证和结算进入 LangSmith trace。属集成工程与商业化信号，未独立运行验证，非新模型或全量服务 GA。 [原文](https://www.langchain.com/blog/agents-that-pay-how-nevermined-empowers-langchain-agents-to-buy-and-sell-services)
+
+- **Scaling Agents in Europe & The Middle East**（2026-09-03；日期未确认：仅核日历日，精确时刻未知）：厂商案例综述比较 Schneider 独立 Agent Server 栈、Vodafone 端到端追踪及 monday.com 的权限上下文、分工子 Agent 与沙箱；采用和效率来自客户/厂商自述，不能外推整体市场。 [原文](https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com)
+
+- **An Organizational Second Brain: Building an AI That Learns From Experts**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：Meta 分享合规领域内部专家 Agent，将可审计知识结构与推理分离，并用专家反馈改善知识；这是内部工程架构经验，不是面向客户的新托管服务。 [原文](https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/)
+
+- **Reliable intelligence: Fast-tracking agentic CX to ROI**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：官方文章将规格驱动开发、APT-2 模型升级和语音体验作为 Agentic Virtual Agent 生命周期的改进方向；原文只给日历日期，未独立验证收益或推定每项能力统一 GA。 [原文](https://www.genesys.com/blog/post/reliable-intelligence-fast-tracking-agentic-cx-to-roi)
+
+- **Building commerce agents with Claude**（2026-09-02；日期未确认：仅核日历日，精确时刻未知）：原文现可读：提供购物与商家 Agent 蓝图和 Claude Code 插件，可选 API、SDK 或 Managed Agents beta；付款交现有 checkout，商家主动变更需人批准。合作方生态与分发具有行业意义，详见 Claude 专题页。 [原文](https://claude.com/blog/claude-for-commerce-agents)
 
 - **LlamaIndex and Kaggle Launch a Document Extraction Leaderboard for AI Agents**（2026-09-02）：LlamaIndex 宣布与 Kaggle 推出 ExtractBench 排行榜；完整评测涵盖370份企业文档、14个系统，采用冻结schema及确定性规则。只有日期，无精确时区时刻；厂商结果未独立复现。 [原文](https://www.llamaindex.ai/blog/llamaindex-and-kaggle-launch-a-document-extraction-leaderboard-for-ai-agents)
 
@@ -114,6 +142,10 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 ## 观察池
 
+- **三问AI办公：当智能成为标配，新的稀缺在哪里？**（2026-09-03 08:58 +08:00；观察池）：作者分析中国 AI 办公的工作上下文、权限与分发控制，讨论腾讯、阿里、字节、百度等既有资产；这是产业观点，未将其竞争判断视为已证实市场结论或新产品发布。 [原文](https://www.tmtpost.com/8126197.html)
+
+- **Managing AI Teammates with Agent 365**（2026-09-02；观察池）：伙伴培训页介绍 Agent 身份、所有者/管理者和监控关闭流程；页面公开摘要可读，完整内容需注册登录。仅作企业治理培训观察，不把课程发布日期等同 Agent 365 发布日。 [原文](https://crayon.cloudchampion.dk/c/your-next-hire-might-be-an-ai-agent-managing-ai-teammates-with-agent-365/)
+
 - **How small AI models can make a big impact for enterprises**（2026-09-03 02:06 +08:00）：官方企业策略文章讨论按任务选择小模型、私有部署与用量治理，引用既有 North Mini Code 和 Tiny Aya；不是新模型发布。 [来源](https://cohere.com/blog/how-small-models-can-make-a-big-impact-for-enterprises)
 
 - **MrBeast partners with Gemini to turn impossibly big ideas into reality**（2026-09-02 21:00 +08:00）：Google 宣布与 Beast Industries 开展多年合作，扩展到 Gemini 和 Google Health；属于分发与营销信号，不能当作技术能力验证。 [来源](https://blog.google/company-news/inside-google/company-announcements/mrbeast-gemini-google-health/)
@@ -126,8 +158,8 @@ Qwen 旧研究入口仍为空，本轮已通过千问AI平台模型日志及 Are
 
 ## 采集状态
 
-- 已检查：Google DeepMind News、Google Research Blog、Google Blog（官方 JSON-LD 校验发布时间）；Meta AI Blog（未核实窗口新增）；Microsoft Research Blog、Source、Microsoft 官方 Blog（搜索索引时效有限）；xAI News、docs.x.ai/developers/release-notes、github.com/xai-org：显式检查 Grok 模型/API、DeepSearch、语音、编码、工具调用及 Agent；最新变更页日期 8 月 29 日，新闻最新 9 月 1 日，无本窗口新增；Mistral News / Docs changelog；Cohere Blog；Qwen Research/Blog、阿里云百炼官方资产中心与功能更新、DAMO；ByteDance Seed Blog / Doubao（Seed 最新可读条目 8 月 5 日，无新增）；Baidu 文心、Tencent Hunyuan、DeepSeek News/API Docs；Z.ai/AutoClaw、StepFun、Moonshot/Kimi 与 MiniMax News（分别检查）；NVIDIA Developer Recent posts / Research、Hugging Face Blog、LangChain Blog、LlamaIndex Blog；Latent Space、Dwarkesh、No Priors（转 Apple Podcasts 备用入口）、The Cognitive Revolution、a16z Podcast Network、Google DeepMind podcast 入口；Anthropic News、OpenAI News及并行专题扫描；Cline、Pi、DSH官方发布/文档交叉核查：Cline桌面迁移具有分发意义，Pi与DSH常规harness变化详见开源专题页；本轮追加检查 Arena changelog、千问AI平台模型日志、LlamaIndex/Kaggle ExtractBench公告；Latent Space/Dwarkesh feed、No Priors Apple Podcasts、The Cognitive Revolution与a16z播客。
-- 失败及限制：Qwen research 与 qwen3.7- 候选页、StepFun、腾讯混元、百度文心：提取正文为空，不能凭 URL 或搜索词确认新产品；DAMO、Z.ai 主 Blog：抓取失败；Z.ai 改用可访问的官方 AutoClaw 博客；No Priors 猜测域名落入停放页；已改查 Apple Podcasts；Latent Space 仅订阅页、Dwarkesh 空页，补搜未得到窗口新集；NVIDIA 两篇独立正文 web 抓取错误；推测解码文章经 HTTP 直连成功，CUDA 教程直连仍为空，保留官方列表候选；Cohere 正文 web 抓取失败，HTTP 直连成功并核实 JSON-LD 日期；部分中国厂商及播客入口未提供可核验日期，不能把未发现等同于不存在；本轮 Latent Space 与 Dwarkesh RSS 网页读取失败；其余播客入口未确认新增集。LlamaIndex与Arena只列日历日期；CUDA教程HTTP200但正文0字节，维持观察池。。
-- 初始候选数：17；当天累积保留来源数：14；本轮新增5条来源。
-- 二次补搜：否（来源非零；不可读入口已采用备用检索）。
-- 配图：保留Google本次发布官方OG图，已验证可访问且出处明确；日期未确认与观察池不选作图片来源。
+- 已检查：Google DeepMind News、Research Blog、Google Gemini原文；现有Google官方配图原URL打开成功；Meta AI Blog与Research新入口、Meta Engineering：Muse Spark 1.3和组织专家Agent原文可读；Microsoft Research Blog、Source与官方伙伴资讯检索；Agent365伙伴课程摘要可读；xAI News、release-notes、退役迁移指南、github.com/xai-org及DeepSearch/voice/coding/Agent关键词；新增9月2日图像API退役通知，Grok托管能力无新增；Mistral News、Cohere Blog、Hugging Face Blog、NVIDIA Recent posts、LlamaIndex Blog、LangChain Blog与两篇9月3日原文；Qwen Blog与千问AI平台模型日志、百炼new-features入口、DAMO；Seed Blog；百度文心、腾讯混元；DeepSeek API updates；AutoClaw/Z.ai；StepFun；Moonshot/Kimi与MiniMax分别检查；Latent Space、Dwarkesh、No Priors Apple Podcasts、The Cognitive Revolution、a16z Podcast Network及组合日期补搜：未确认新集，不重复旧背景；Anthropic News与Commerce原文、OpenAI News及并行专题核验；Cline、Pi、DSH由开源并行专项复查，无新增企业分发事件。
+- 失败及限制：Qwen Blog、百度文心、腾讯混元、DAMO为零行动态页；StepFun超时；百炼new-features与微软伙伴资讯原页抓取失败，已扩大中英文日期关键词和备用入口；Latent Space只有订阅摘要、Dwarkesh空页；部分厂商索引无可用日期，未确认新动态不代表不存在；Meta、LangChain、xAI及Genesys仅确认日历日，精确时刻/时区未确认；Cloud Champion完整视频需登录，仅引用公开摘要。
+- 本轮候选：10（含重复公告入口）；累计候选口径：原有14 + 本轮10 = 24；新增来源9，当天累计23。
+- 二次补搜：否（非零，已针对不可读入口补查备用来源）。
+- 配图保留Google官方发布图；本轮日期未确认、观察池均不参与首页精选。
