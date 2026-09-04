@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-04T00:00:00+08:00"
-updatedAt: "2026-09-04T09:04:11+08:00"
+updatedAt: "2026-09-04T12:18:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-rc.1"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-rc.1"
@@ -18,12 +18,14 @@ tags:
   - "AI"
   - "Anthropic"
   - "Cline"
+  - "Coding Agent"
   - "DeepSeek Harness"
   - "Desktop"
   - "GitHub Trending"
   - "Hacker News"
   - "LLM"
   - "MCP"
+  - "Memory"
   - "Multi-Agent"
   - "Open Source"
   - "OpenCode"
@@ -31,13 +33,14 @@ tags:
   - "Plugins"
   - "Release"
   - "Reliability"
+  - "Retrieval"
   - "Timeout"
   - "Tool Execution"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-09-02 09:04 至 2026-09-04 09:04（Asia/Shanghai）**。本轮最有实质性的变化集中在 Coding Agent / Harness：DeepSeek Harness 发布大版本候选版，Cline 桌面端开始由共享 Hub 发现和运行 Agent Plugins，OpenCode 调整慢启动模型与流式响应的超时策略；Pi 则发生官方仓库迁移并继续快速修补工具执行语义。
+采集窗口为 **2026-09-02 12:18 至 2026-09-04 12:18（Asia/Shanghai）**。本轮最有实质性的变化集中在 Coding Agent / Harness：DeepSeek Harness 发布大版本候选版，Cline 桌面端开始由共享 Hub 发现和运行 Agent Plugins，OpenCode 调整慢启动模型与流式响应的超时策略；Pi 则发生官方仓库迁移并继续快速修补工具执行语义。Hugging Face 同时开源了可跨 Claude Code、Codex、Pi 等工具使用的本地可检索记忆层 funes。
 
 ## Coding Agent / Harness 雷达
 
@@ -68,6 +71,10 @@ tags:
 ### 4. Pi 修正被信号终止的工具进程可能被误报成功
 
 Pi 官方仓库迁移后的[提交 c2d3dc5](https://github.com/earendil-works/pi/commit/c2d3dc55b0b20af5aa3bb1d25774968116c9733f)记录了一个关键执行语义修复：子进程被信号（例如 OOM 导致 SIGKILL）终止时，空退出码过去可能被映射成 0；现在会按 shell 约定回退为 `128 + signal`。这能避免 Agent 把实际失败的 bash 工具调用当作成功继续规划。
+
+### 5. funes 把编码 Agent 的会话轨迹变成本地、可追溯的共享记忆
+
+Hugging Face 的 [funes 发布文章](https://huggingface.co/blog/funes)介绍了一套面向 Claude Code、Codex、Pi 和 Hermes 的开源记忆层：它统一解析本机会话轨迹，以向量检索与 BM25 融合、交叉编码器重排和邻近片段补全提供 `recall`/`get`，返回原始文本及 Agent、时间、会话和 turn 级出处，而非先蒸馏成不可追溯的摘要。数据默认留在本机 Lance 数据集中，也可在凭据扫描后同步到用户自有、默认私有的 Hugging Face Dataset。文章还给出 handoff-vs-recall 小型基准，但其成本优势来自作者自建的两个任务，应视为项目证据而非普遍结论。
 
 ## GitHub Trending
 
@@ -103,10 +110,11 @@ Pi 官方仓库迁移后的[提交 c2d3dc5](https://github.com/earendil-works/pi
 - [Pi repository](https://github.com/earendil-works/pi)
 - [There are many agent harnesses, but this one is mine](https://earendil.com/posts/there-are-many-agent-harnesses-but-this-one-is-mine/)
 - [HN discussion](https://news.ycombinator.com/item?id=49548816)
+- [Give Your Coding Agents a Memory You Own](https://huggingface.co/blog/funes)
 
 ## 采集状态
 
 - 已检查来源：Cline、Pi、DeepSeek Harness/DSH 的仓库/release/changelog；OpenCode、Aider、Continue、Roo Code 官方仓库与 releases；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；arXiv；Hugging Face Papers/blog；Simon Willison。
 - 失败来源：无；Pi 旧仓库发生官方重定向，已追踪到新入口。
-- 初始候选数：18；最终保留来源数：7。
+- 初始候选数：19；最终保留来源数：8。
 - 二次补搜：否（已有合格来源）。
