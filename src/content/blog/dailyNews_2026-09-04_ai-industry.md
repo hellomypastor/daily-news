@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-04T00:00:00+08:00"
-updatedAt: "2026-09-04T09:03:00+08:00"
+updatedAt: "2026-09-04T18:04:44+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber"
 featuredUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
@@ -17,7 +17,10 @@ tags:
   - "AaaS"
   - "Agent"
   - "AI"
+  - "Automation"
+  - "Cohere"
   - "Cybersecurity"
+  - "Document AI"
   - "Enterprise"
   - "Gemini"
   - "Google"
@@ -26,19 +29,24 @@ tags:
   - "Industry"
   - "Inference"
   - "LangChain"
+  - "LlamaIndex"
   - "LLM"
   - "Local AI"
   - "M&A"
+  - "MCP"
+  - "Model Platform"
   - "NVIDIA"
+  - "Pricing"
   - "Reliability"
   - "Research"
+  - "Tencent Cloud"
   - "Video"
   - "xAI"
 ---
 
 ## 今日概览
 
-截至 2026-09-04 09:03（Asia/Shanghai），主窗口为过去 24 小时。最重要的产业信号来自持久化 Agent、企业控制面与本地 Agent 基础设施：xAI 连续披露 Grok Bot 的交互设计和企业版，NVIDIA 同时推进本地 Agent 路由生态并宣布收购 Hugging Face。
+截至 2026-09-04 18:04（Asia/Shanghai），主窗口为过去 24 小时。最重要的产业信号来自持久化 Agent、企业控制面与本地 Agent 基础设施：xAI 连续披露 Grok Bot 的交互设计和企业版，NVIDIA 同时推进本地 Agent 路由生态并宣布收购 Hugging Face；Cohere 的大规模 MCP 工具研究则为 Agent 自动化供给提供了新的量化基线。
 
 ## 优先动态（过去 24 小时）
 
@@ -50,6 +58,9 @@ tags:
 | NVIDIA | [Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026](https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/) | 产品/生态；9 月 3 日已核验 | NVIDIA 发布 PAIR 本地路由工具，推进 Hermes、OpenClaw、Perplexity Portable Computer 的简化部署，并披露 llama.cpp/vLLM 优化和 RTX Spark 计划。 | 本地 Agent 从单机模型运行走向多设备任务路由、后台执行与标准化安装；DeepSeek Harness 细节详见开源专题页。 |
 | LangChain | [Scaling Agents in Europe & The Middle East](https://www.langchain.com/blog/scaling-agents-in-europe-the-middle-east-lessons-from-schneider-electric-vodafone-and-monday-com) | 企业采用；9 月 3 日已核验 | 汇总 Schneider Electric、Vodafone 和 monday.com 的生产 Agent 经验；monday.com 将单体 Agent 改为有边界工具与沙箱的分层子 Agent。 | 真实部署表明可观测性、评测、沙箱和能力边界比继续堆叠工具更关键。 |
 | xAI | [Models outage](https://status.x.ai/grok-in-x/INC429d651a) | 运行状态；9 月 3 日 21:30 +08:00 | xAI 状态页记录 Grok in X 模型服务故障并进入调查。 | 官方状态事件提供了 Agent/模型服务可靠性的直接运维信号；未从单次故障外推长期趋势。 |
+| Cohere | [Automation’s Early Footprint](https://cohere.com/blog/automations-early-footprint) | 研究/开放数据；9 月 3 日已核验 | Cohere Labs 汇总约 69.6 万个工具、12.3 万个 MCP server 构成 ATE 数据集；在其严格端到端职业任务匹配标准下，仅 2.6% 工具通过。 | 为 Agent 工具供给、职业覆盖和自动化粒度提供可复核基线，也提示“工具数量”不能直接等同于实际采用或就业影响。 |
+| LlamaIndex | [Introducing Turbo, our fastest extraction tier](https://llamaindex-marketing-website-clone.pr.staging.llamaindex.ai/blog/introducing-turbo-our-fastest-extraction-tier) | 产品 Beta；9 月 3 日已核验 | 发布面向低延迟结构化文档提取的 Turbo 层；官方称 ExtractBench 中位速度约 3.7 秒/页、Value F1 为 0.84，并已在 Extract 上线。 | 文档解析常是企业 Agent 工具调用链的延迟瓶颈；该产品把提取层明确优化为同步 Agent 工作流组件，但性能数字仍是厂商自测。 |
+| 腾讯云 | [大模型服务平台 TokenHub 模型价格](https://cloud.tencent.cn/document/product/1823/130055) | 平台/价格；9 月 4 日 09:28 更新 | 官方价格页更新 DeepSeek V4、GLM、Kimi、MiniMax、Qwen 等模型在 TokenHub 的在售清单、区域价格和峰谷计费说明。 | 这是中国多模型平台供给与企业选型成本的直接信号；仅记录官方目录状态，不据此推断各模型能力。 |
 
 ## 近三日补充（24–72 小时；仅有日历日期）
 
@@ -69,7 +80,7 @@ tags:
 
 ## 常规厂商与研究扫描
 
-Google DeepMind 列表还出现 WeatherNext 3、主动网络防御与 Agentic Video 等 9 月条目，但列表页未为所有项目提供精确日时；其中不能稳妥落入本轮窗口者留在下方“日期未确认”。Meta、Mistral、Cohere、Qwen/Alibaba、Seed、Baidu、Tencent、DeepSeek、Zhipu、Kimi、StepFun、MiniMax、LlamaIndex 以及必查 Coding Agent 厂商入口本轮未发现可独立核验且优先级足够的新产业事件。Anthropic 与 OpenAI 的相关更新分别详见 Claude、OpenAI 专题页。
+Google DeepMind 列表还出现 WeatherNext 3、主动网络防御与 Agentic Video 等 9 月条目，但列表页未为所有项目提供精确日时；其中不能稳妥落入本轮窗口者留在下方“日期未确认”。Meta、Mistral、Qwen/Alibaba、Seed、Baidu、DeepSeek、Zhipu、Kimi、StepFun、MiniMax 以及必查 Coding Agent 厂商入口本轮未发现可独立核验且优先级足够的新产业事件。Cohere、LlamaIndex 与腾讯云的新增信号已列入优先动态；Anthropic 与 OpenAI 的相关更新分别详见 Claude、OpenAI 专题页。
 
 ## 播客
 
@@ -85,12 +96,12 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂�
 
 ## 一句话总结
 
-行业焦点正从“再发一个模型”转向三种控制面：持久化云端 Agent 的企业治理、本地 Agent 的设备与任务路由，以及开放模型平台的资本与基础设施整合。
+行业焦点正从“再发一个模型”转向持久化 Agent 治理、本地任务路由、文档数据通路与多模型平台供给；Cohere 的工具生态数据同时提示，应把可用工具、实际采用和就业影响分开衡量。
 
 ## 采集状态
 
-- 采集窗口：2026-09-03 09:03 至 2026-09-04 09:03（Asia/Shanghai）；另按规范检查 24–48h 与 48–72h 补充。
+- 采集窗口：2026-09-03 18:04 至 2026-09-04 18:04（Asia/Shanghai）；另按规范检查 24–48h 与 48–72h 补充。
 - 已检查：Claude/OpenAI（详见各专题页）、Google/DeepMind、Meta、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/阿里、Seed/字节、百度、腾讯、DeepSeek、智谱、Kimi、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Coding Agent 生态与指定播客。
 - xAI/Grok 显式检查结果：确认两篇 9 月 3 日 Grok Bot 官方文章和一次状态事件；并检查 News、API/模型 changelog、DeepSearch、语音、编码、工具调用、Agent 入口及 xai-org 官方 GitHub repositories。公开组织页列出 grok-build、plugin-marketplace、xai-sdk-python、xai-proto、xai-cookbook、grok-prompts 与 grok-1 等，本窗口未见需新增的独立产业事件，未填充无证据项目。
-- 初始候选 14 条，最终保留 10 条来源（正文 6、24–72h 补充 2、日期未确认 1、观察池 1）；未触发零来源二次补搜。
+- 本轮累计候选 17 条，最终保留 13 条来源（正文 9、24–72h 补充 2、日期未确认 1、观察池 1）；未触发零来源二次补搜。
 - 失败/限制：部分列表页仅给月份；部分播客入口缺少无需登录即可核验的精确时间，均未猜测。xAI Models outage 事件页直接访问返回 HTTP 403，事件标题与开始状态仅沿用官方状态列表证据；GitHub xai-org repositories API 返回 HTTP 403，已改查公开组织与仓库搜索页。

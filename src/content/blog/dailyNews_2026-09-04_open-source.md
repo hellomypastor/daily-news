@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-04T00:00:00+08:00"
-updatedAt: "2026-09-04T15:03:00+08:00"
+updatedAt: "2026-09-04T18:01:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "DeepSeek Harness v0.1.2-rc.1"
 featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-rc.1"
@@ -46,14 +46,14 @@ tags:
 
 ## 今日概览
 
-采集窗口为 **2026-09-02 15:03 至 2026-09-04 15:03（Asia/Shanghai）**。本轮最有实质性的变化集中在 Coding Agent / Harness：DeepSeek Harness 发布大版本候选版，Cline 桌面端开始由共享 Hub 发现和运行 Agent Plugins，OpenCode 调整慢启动模型与流式响应的超时策略并补齐 GitHub Copilot 会话关联头；Pi 则发生官方仓库迁移并继续快速修补工具执行语义。Hugging Face 同时开源了可跨 Claude Code、Codex、Pi 等工具使用的本地可检索记忆层 funes。
+采集窗口为 **2026-09-02 18:01 至 2026-09-04 18:01（Asia/Shanghai）**。本轮最有实质性的变化集中在 Coding Agent / Harness：DeepSeek Harness 发布大版本候选版，Cline 桌面端开始由共享 Hub 发现和运行 Agent Plugins，OpenCode 调整慢启动模型与流式响应的超时策略并补齐 GitHub Copilot 会话关联头；Pi 则完成官方仓库迁移并发布 v0.85.0，集中改进会话恢复、思考力度持久化与工具执行可靠性。Hugging Face 同时开源了可跨 Claude Code、Codex、Pi 等工具使用的本地可检索记忆层 funes。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 本轮状态 | 关键变化 |
 |---|---|---|
 | Cline | 已验证更新 | [Desktop v0.0.23](https://github.com/cline/cline/releases/tag/desktop-v0.0.23) 让共享 Hub 自动发现并运行 `~/.agents/plugins` 下的 Agent Plugins，支持技能与 stdio/HTTP/SSE MCP；同时修复计划任务报告消失和 MCP 进程无法完整退出。 |
-| Pi Coding Agent / pi-mono | 已验证迁移与更新 | 旧入口 `badlogic/pi-mono` 已重定向到官方 [earendil-works/pi](https://github.com/earendil-works/pi)。主分支最新的[进程退出码修复](https://github.com/earendil-works/pi/commit/c2d3dc55b0b20af5aa3bb1d25774968116c9733f)避免被信号杀死的工具进程因空退出码而被误判为成功。 |
+| Pi Coding Agent / pi-mono | 已验证迁移与更新 | 旧入口 `badlogic/pi-mono` 已重定向到官方 [earendil-works/pi](https://github.com/earendil-works/pi)。新打出的 [v0.85.0 标签提交](https://github.com/earendil-works/pi/commit/107d79f11072bbc8a3a757ed7fd69596bee7d68c)加入可恢复的内存会话、Anthropic 单轮思考力度持久化与多项工具/会话可靠性修复；此前的[进程退出码修复](https://github.com/earendil-works/pi/commit/c2d3dc55b0b20af5aa3bb1d25774968116c9733f)也已进入该版本。 |
 | DeepSeek Harness / DSH | 已验证更新 | [v0.1.2-rc.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.2-rc.1) 增加可授权的子代理模型选择、父子 Agent 双向 `send_message`、完整 ACP 会话控制、Inspector/Web Preview，并强化 Headless、插件、会话与连接能力。 |
 | OpenCode | 已验证更新 | [v1.18.27](https://github.com/anomalyco/opencode/releases/tag/v1.18.27) 将 provider header 与流式 chunk 默认超时设为五分钟；随后[提交 c0f09af](https://github.com/anomalyco/opencode/commit/c0f09afef5056cfbebdf5123162267cb6efbd960)让 GitHub Copilot 请求以 OpenCode session ID 填充 `X-Interaction-Id`。 |
 | Aider | 无新增 | 官方 release 最新仍为 2025-08-09 的 v0.86.0，本窗口未见 release 或主分支新提交。 |
@@ -74,9 +74,9 @@ tags:
 
 [OpenCode v1.18.27](https://github.com/anomalyco/opencode/releases/tag/v1.18.27) 将 provider header 和 streamed chunk 的默认超时改为五分钟，chunk timeout 还可显式关闭；它同时限制 Anthropic `thinking.blockBinding` 仅用于 Claude 5.1 及以上版本，并处理取消超时 SSE reader 时的未捕获异常。对自托管或冷启动较慢的推理端点而言，这是稳定性修复而非新能力宣传。
 
-### 4. Pi 修正被信号终止的工具进程可能被误报成功
+### 4. Pi v0.85.0 加强会话恢复、模型控制与工具执行可靠性
 
-Pi 官方仓库迁移后的[提交 c2d3dc5](https://github.com/earendil-works/pi/commit/c2d3dc55b0b20af5aa3bb1d25774968116c9733f)记录了一个关键执行语义修复：子进程被信号（例如 OOM 导致 SIGKILL）终止时，空退出码过去可能被映射成 0；现在会按 shell 约定回退为 `128 + signal`。这能避免 Agent 把实际失败的 bash 工具调用当作成功继续规划。
+Pi 官方仓库的 [v0.85.0 标签提交](https://github.com/earendil-works/pi/commit/107d79f11072bbc8a3a757ed7fd69596bee7d68c)将当天累积的变更正式归入版本：Coding Agent 可恢复外部管理的内存会话，支持 Anthropic 单轮思考力度持久化，并修复并发分享覆盖、导入会话覆盖、fork 丢失压缩边界、工具忽略 `ctx.cwd` 等问题。此前的[信号终止退出码修复](https://github.com/earendil-works/pi/commit/c2d3dc55b0b20af5aa3bb1d25774968116c9733f)也随版本落地，避免失败工具进程被误报成功。
 
 ### 5. funes 把编码 Agent 的会话轨迹变成本地、可追溯的共享记忆
 
@@ -121,6 +121,7 @@ Atlas 与 Proqi 的仓库创建时间均早于七天，且本轮出现 HN 新提
 - [Cline Desktop v0.0.23](https://github.com/cline/cline/releases/tag/desktop-v0.0.23)
 - [OpenCode v1.18.27](https://github.com/anomalyco/opencode/releases/tag/v1.18.27)
 - [Pi signal-killed process exit-code fix](https://github.com/earendil-works/pi/commit/c2d3dc55b0b20af5aa3bb1d25774968116c9733f)
+- [Pi v0.85.0 tag commit](https://github.com/earendil-works/pi/commit/107d79f11072bbc8a3a757ed7fd69596bee7d68c)
 - [Pi repository](https://github.com/earendil-works/pi)
 - [There are many agent harnesses, but this one is mine](https://earendil.com/posts/there-are-many-agent-harnesses-but-this-one-is-mine/)
 - [HN discussion](https://news.ycombinator.com/item?id=49548816)
@@ -134,5 +135,5 @@ Atlas 与 Proqi 的仓库创建时间均早于七天，且本轮出现 HN 新提
 
 - 已检查来源：Cline、Pi、DeepSeek Harness/DSH 的仓库/release/changelog；OpenCode、Aider、Continue、Roo Code 官方仓库与 releases；GitHub Trending overall/Python/TypeScript；HN front/newest/Algolia；arXiv；Hugging Face Papers/blog；Simon Willison。
 - 失败来源：无；Pi 旧仓库发生官方重定向，已追踪到新入口。
-- 初始候选数：31；最终保留来源数：14。
+- 初始候选数：40；最终保留来源数：14。
 - 二次补搜：否（已有合格来源）。
