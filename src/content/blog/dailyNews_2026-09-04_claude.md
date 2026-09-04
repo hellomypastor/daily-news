@@ -1,0 +1,121 @@
+---
+title: "Claude 全家桶过去 24 小时动态与口碑日报"
+date: "2026-09-04T00:00:00+08:00"
+updatedAt: "2026-09-04T09:04:00+08:00"
+description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Getting Started with Claude Design"
+featuredUrl: "https://www.anthropic.com/webinars/getting-started-with-claude-design"
+featuredSummary: "官方活动议程涵盖 Claude Design 的适用场景、品牌系统导入和交付物导出；录播尚未就绪。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-09-04 01:00 +08:00"
+featuredTags: ["Claude Design","Enterprise"]
+featuredImage: "https://cdn.prod.website-files.com/67ed58c92cfedc451ebbbca1/6a9071551bbe02afa2949ea0_2026.09.03-Webinar-Getting-Started-with-Claude-Design.png"
+featuredImageAlt: "Getting Started with Claude Design 官方线上活动封面"
+featuredImageCaption: "图片来源：Anthropic 官方活动页"
+tags:
+  - "日期未确认"
+  - "Agent"
+  - "Agent SDK"
+  - "Anthropic"
+  - "Claude"
+  - "Claude Code"
+  - "Claude Design"
+  - "CLI"
+  - "Community"
+  - "Enterprise"
+  - "Hate"
+  - "Models"
+  - "Sonnet 5"
+  - "Status"
+  - "TypeScript"
+---
+
+## 今日概览
+
+本轮发现窗口：**2026-09-03 09:04—2026-09-04 09:04（Asia/Shanghai）**。官方侧有四项明确动态：Claude Code v2.1.260、TypeScript Agent SDK v0.3.260，以及 Sonnet 5 和多模型两次已解决的错误率事件。Claude Design 官方线上活动已按排期举行，但页面仍称录播尚未就绪。
+
+## Tier 1：编码与 Agent 主轴
+
+| 产品线 | 过去 24 小时状态 |
+|---|---|
+| Claude Code CLI | **有新增**：v2.1.260 加入全屏侧边 diff、prompt-cache miss 原因、headless `/reload-plugins` 与文本 `/advisor`，并集中修复权限、沙箱、远程会话、Agent teams、工作流和自动压缩问题。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.260) |
+| VS Code / JetBrains | **VS Code 有新增**：footer 显示 effort，session 筛选增加 Open/Closed，并修复 Remote Control、tab 与重试渲染问题；JetBrains 未见单列新增。 |
+| Managed Agents：sessions / webhooks / environments / memory stores | 无独立 API 发布；CLI v2.1.260 的远程会话、后台任务与 Agent teams 修复不等同于 Managed Agents API 新版本。 |
+| Skills / marketplaces | v2.1.260 修复 bundled skill alias、嵌套 skill deny rule、组织插件 marketplace 加载及 URL marketplace 安装问题；无独立 Skills 发布。 |
+| Claude Developer Platform | 无 release-note 新条目；状态页记录两次已解决事件，见官方更新。 |
+| Agent SDK | **TypeScript v0.3.260** 新增 thinking progress 与触发消息的关联字段、远程会话延迟分解字段，并改善 structured output 错误和 rate-limit 事件；Python 最新仍为 v0.2.152。[发布说明](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.260) |
+| Cowork | 无独立发布；CLI v2.1.260 修复部分 Cowork Artifact 首次调用参数校验失败。 |
+| Design | 官方 9 月 3 日 10:00–11:00 PT 活动已进入过去时，内容涵盖品牌设计系统与 PowerPoint/Google Slides 导出；页面称录播尚未就绪。[活动页](https://www.anthropic.com/webinars/getting-started-with-claude-design) |
+| Tag / @Claude sessions | 无新增。 |
+| Sonnet / Opus / Haiku；Fable / Mythos | 无新模型发布；状态页记录 Sonnet 5 单独事件及 Mythos/Fable/Opus 多模型事件，均已恢复。 |
+
+<figure class="source-image">
+  <a href="https://www.anthropic.com/webinars/getting-started-with-claude-design"><img src="https://cdn.prod.website-files.com/67ed58c92cfedc451ebbbca1/6a9071551bbe02afa2949ea0_2026.09.03-Webinar-Getting-Started-with-Claude-Design.png" alt="Getting Started with Claude Design 官方线上活动封面" loading="lazy" /></a>
+  <figcaption><a href="https://www.anthropic.com/webinars/getting-started-with-claude-design">图片来源：Anthropic 官方活动页</a></figcaption>
+</figure>
+
+## Tier 2：应用与集成
+
+| 范围 | 过去 24 小时状态 |
+|---|---|
+| Chrome / browser agent；Desktop / Preview | v2.1.260 修复云端会话中连接器变化后 Chrome 工具中途断连，并让 Chrome 工具遵循组织管理员开关；Desktop gateway 增加较新策略键支持。 |
+| Marketplace / Connectors / Plugins | v2.1.260 修复组织插件 marketplace 与 URL marketplace 安装，并调整 Claude apps gateway 的插件设置传递与校验。 |
+| 创意 / 视频模型；Voice Mode | 未确认 Anthropic 独立视频模型，Voice Mode 无新增。 |
+| Microsoft 365 integration | 无窗口内独立发布或新状态事件。 |
+
+## Tier 3：安全与行业场景
+
+Security、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持均已检查，未发现窗口内新的官方独立发布。v2.1.260 的安全修复包括：不再让 zsh 特殊变量赋值隐藏命令替换并被自动批准；文件权限模式错误不再使只读目录可写；缺失路径的 Glob/Grep 检查改到权限决定之后。这些是客户端安全边界修复，不外推为已发生安全事件。
+
+## 官方更新（最新在前）
+
+1. **Claude Code v2.1.260（9 月 4 日 07:48）**：除 diff、cache 诊断和 advisor 等体验改进外，修复权限规则、沙箱、远程/后台会话、Agent teams、工作流、插件、Chrome 与 IDE 多类问题；Fable 5.1 的 1M context 自动压缩和 prompt cache 也获改进。[完整发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.260)
+2. **TypeScript Agent SDK v0.3.260（9 月 4 日 07:48）**：增加 thinking progress 的 `user_message_uuid`、远程会话首帧与 stream latency 字段，修复 managed auto-mode 设置与 rewind 结果，并让重复 429 可刷新 rate-limit 状态。[发布说明](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.260)
+3. **多模型错误率事件（9 月 3 日 21:26—9 月 4 日 00:23）**：官方最初列出 Mythos/Fable 5.1、Mythos/Fable 5、Opus 5、Opus 4.8 与 Opus 4.6，随后范围收窄并部署修复；影响于 00:16 结束，事件已解决。[官方事件](https://stspg.io/9xz4hhmd1jzn)
+4. **Sonnet 5 错误率事件（9 月 3 日 20:37—20:56）**：官方状态页调查后部署修复并宣布恢复；未提供请求比例或地区拆分。[官方事件](https://stspg.io/jt14jk41pjsf)
+5. **Claude Design 活动（9 月 4 日 01:00—02:00）**：议程覆盖适用场景、导入品牌系统及导出交付物。页面仍写录播尚未就绪，因此只记录活动事实，不总结未公开内容。[官方活动页](https://www.anthropic.com/webinars/getting-started-with-claude-design)
+
+## Love
+
+本轮没有取得足够明确、可定位到 Claude 的窗口内正面社区样本。官方发布与修复不计作正面口碑。
+
+## Hate
+
+跨社区停机讨论中，有用户报告 Claude 无法加载回复或 Opus/Max 不工作，也有多名用户同时称 Claude 正常或已恢复，地域与产品表现不一致；这与官方两次错误率事件方向一致，但讨论主要围绕 ChatGPT，不能用来估算 Claude 受影响比例。[日期未确认讨论](https://www.reddit.com/r/ChatGPT/comments/1w69mpk/is_chatgpt_down_everywhere/)
+
+## 情绪判断
+
+**中性偏负面，低置信度。** 负面证据集中于同一时段的可用性反馈，官方已确认并解决两次事件；社区样本混杂其他厂商、地域差异大，且未取得 Claude 专题子版的稳定窗口内样本。新版的官方功能与修复不能作为用户 Love 证据。
+
+## 比较与 Agent 生态
+
+已检索 Codex、Cursor、Cline、Pi Coding Agent 与 DeepSeek Harness / DSH 的关联比较。没有发现本窗口内的受控评测或可复现实验，因此不作“追平/超过”结论；完整 harness 扫描留给开源专题。
+
+## 日期未确认
+
+- **跨产品停机讨论**：搜索索引标注 9 月 3 日，互动中对 Claude 是否受影响说法不一；原帖以 ChatGPT 为主题，无法确认每条 Claude 回复的精确时刻，故不作为统一故障范围证据。[讨论](https://www.reddit.com/r/ChatGPT/comments/1w69mpk/is_chatgpt_down_everywhere/)
+
+## 观察池
+
+- **Claude Design 录播**：活动排期已结束，但官方页仍显示录播未就绪；等待页面发布可公开观看的录像后再提炼实际演示内容。
+- **v2.1.260 大批修复的采用反馈**：等待权限、Agent teams、Remote Control 与 Fable 5.1 cache 修复的真实用户反馈；当前仅有发布说明，不推断效果。
+
+## 未证实传闻
+
+未取得具有独立信息价值的新传闻；不把多厂商同时波动的社区猜测写成共同基础设施故障或攻击。
+
+## 来源链接
+
+- [Claude Code v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260)
+- [Claude Agent SDK TypeScript v0.3.260](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.260)
+- [Elevated errors for multiple models](https://stspg.io/9xz4hhmd1jzn)
+- [Elevated errors for Claude Sonnet 5](https://stspg.io/jt14jk41pjsf)
+- [Getting Started with Claude Design](https://www.anthropic.com/webinars/getting-started-with-claude-design)
+- [Is ChatGPT down everywhere?](https://www.reddit.com/r/ChatGPT/comments/1w69mpk/is_chatgpt_down_everywhere/)
+
+## 采集状态
+
+- 已检查：Anthropic News、Engineering、Research、Claude Blog 与产品公告；Claude Code CLI、VS Code、JetBrains、MCP、Skills、插件及 GitHub releases；Agent SDK Python/TypeScript releases；Claude Platform 与 Claude Apps release notes；Managed Agents、模型、Cowork、Tag/@Claude；Claude Status；Design 活动；Chrome/browser、Desktop/Preview、Marketplace/Connectors/Plugins、创意/视频模型、Voice、Microsoft 365；Reddit、Hacker News、X、YouTube及中英文搜索；Codex、Cursor、Cline、Pi、DSH 比较关键词。
+- 失败及限制：Reddit 专题子版未稳定返回独立窗口内原帖；Hacker News/X/YouTube 无新增可核验原帖；Design 页录播尚未就绪，未推断活动实际内容。
+- 候选数量：9；去重并保留 6 条来源。
+- 二次补搜：否（来源非零）。
+- 配图：已验证 Claude Design 官方 OG 图片公开可访问（HTTP 200），来源页为正文已引用的窗口内活动。
