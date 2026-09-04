@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-04T00:00:00+08:00"
-updatedAt: "2026-09-04T09:04:00+08:00"
+updatedAt: "2026-09-04T15:05:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "GPT-6 Astra Model"
 featuredUrl: "https://developers.openai.com/api/docs/models/gpt-6-astra"
@@ -22,8 +22,11 @@ tags:
   - "状态事件"
   - "Agent"
   - "API"
+  - "Batch API"
   - "ChatGPT"
+  - "ChatGPT Projects"
   - "Codex"
+  - "Codex Cloud"
   - "Daybreak"
   - "Desktop"
   - "Developer Platform"
@@ -40,7 +43,7 @@ tags:
 
 ## 今日概览
 
-发现窗口：**2026-09-03 09:04 至 2026-09-04 09:04（Asia/Shanghai）**。本轮核心是 GPT‑6 Astra 正式发布：先向有限组织推出，未来数日扩展到 ChatGPT Plus、Pro、Business、Enterprise、OpenAI API 与 AWS；Codex 与 Python/Node SDK 随即加入模型支持。官方同时披露 Astra 的长上下文、Agent/工具能力和更严格的网络安全防护，也明确其书面推理可监测性较 GPT‑5.6 Sol 下降。
+发现窗口：**2026-09-03 15:05 至 2026-09-04 15:05（Asia/Shanghai）**。本轮核心仍是 GPT‑6 Astra 正式发布：先向有限组织推出，未来数日扩展到 ChatGPT Plus、Pro、Business、Enterprise、OpenAI API 与 AWS；Codex 与 Python/Node SDK 随即加入模型支持。官方同时披露 Astra 的长上下文、Agent/工具能力和更严格的网络安全防护，也明确其书面推理可监测性较 GPT‑5.6 Sol 下降。15:00 起，官方另在调查 APAC 区域 ChatGPT、Work、图像生成、文件上传、Voice 与 Codex Cloud 错误升高事件，截至本轮截止仍未解决。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -72,6 +75,7 @@ tags:
 Astra 首发覆盖有限组织，未来数日扩展至 Business 与 Enterprise，企业管理员默认需手动启用。OpenAI 另宣布 **Daybreak for Frontline Defenders**：承诺 10 亿美元补贴访问、培训与支持，并称 Daybreak Defense Network 有 35 个以上企业产品或合作方服务。Edu、Gov 与 Science 未见其他可核实窗口内独立公告。
 
 ## 官方更新（最新在前）
+- **APAC 多项服务错误升高，调查中**（2026-09-04 15:00 +08:00）：官方称 APAC 用户可能在 ChatGPT、Work、图像生成、文件上传、Voice 与 Codex Cloud 遇到更多错误；截至 15:05 状态仍为 investigating。 [状态页](https://status.openai.com/incidents/01M1NKFZH5EEYEREC54HNAHY35)
 
 - **Codex 0.154.0-alpha.3**（2026-09-04 08:57 +08:00）：仅披露预发布版本号，无功能清单。 [官方 release](https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.3)
 - **Codex 0.153.2**（2026-09-04 07:53 +08:00）：把 Astra Fast 档展示文案从“1.5x”改为“2x speed, increased usage”；官方明确仅改文字，不改变请求执行。 [官方 release](https://github.com/openai/codex/releases/tag/rust-v0.153.2)
@@ -120,6 +124,8 @@ ChatGPT Release Notes 最新可见条目仍为 9 月 1 日，未发现 Astra 对
 - **Biology safeguards make Codex unusable**（2026-09-04 05:37 +08:00）：生物医学 AI 用户称安全检查造成延迟和拒绝；个人体验不证明统一策略错误。 [原帖](https://community.openai.com/t/biology-safeguards-make-codex-unusable/1394727)
 - **GPT Image 2 商品编辑的面部质感报告**（2026-09-03 23:46 +08:00）：用户称在保持服装与姿态的编辑中，GPT Image 2 比 Image Latest 更易生成塑料感面部；未独立复现。 [原帖](https://community.openai.com/t/gpt-image-2-produces-plastic-looking-faces-in-product-edit/1394653)
 - **iPhone Read Aloud 音频乱码**（2026-09-04 09:01 +08:00）：用户标题报告朗读音频异常；正文证据有限，保留观察，不认定为普遍 Voice 故障。 [原帖](https://community.openai.com/t/garbled-audio-on-read-aloud-on-iphone/1394753)
+- **Batch API 任务停在 InProgress**（2026-09-04 14:36 +08:00）：开发者报告多个 batch 长时间停在队列；单一用户报告，尚未与官方 APAC 事件建立因果关系。 [原帖](https://community.openai.com/t/batches-are-stuck-in-inprogress-queue/1394795)
+- **整个 ChatGPT Project 消失**（2026-09-04 09:22 +08:00）：用户称项目从侧栏消失，搜索仍能找到对话但打开显示已删除或 404；未独立复现。 [原帖](https://community.openai.com/t/entire-chatgpt-project-disappeared-chats-still-searchable-but-show-conversation-deleted-404/1394754)
 
 ## 未证实传闻
 
@@ -152,5 +158,5 @@ ChatGPT Release Notes 最新可见条目仍为 9 月 1 日，未发现 Astra 对
 - 已检查：OpenAI News、Astra 发布/安全/模型文档、Daybreak、API changelog、ChatGPT release notes、模型与弃用文档；Codex、Python/Node SDK、Agents SDK Python/TypeScript release API；状态页、Developer Community 与公共社区搜索。
 - Tier 1/2/3：逐项检查编码与 Agent、消费功能以及企业/教育/政府/科学/安全方向；确认 Astra、SDK、Codex 与 Daybreak 为实质更新，其余无新增项合并呈现。
 - 失败与限制：主站 curl 403，改用公开网页索引打开核验；Reddit/HN/X/YouTube 未获可靠新增样本；社区故障均为个体报告。
-- 候选 24 条，保留 19 个来源；二次补搜：否（来源非零）。
+- 候选 30 条，保留 22 个来源；二次补搜：否（来源非零）。
 - 配图：使用 GPT‑6 Astra 官方模型页的公开 OpenGraph PNG，`sourceUrl` 已进入正文与 sources；图片 URL 可公开访问。
