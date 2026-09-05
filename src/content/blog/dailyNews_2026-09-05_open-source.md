@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T12:02:00+08:00"
+updatedAt: "2026-09-05T15:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Desktop v0.0.23"
 featuredUrl: "https://github.com/cline/cline/releases/tag/desktop-v0.0.23"
@@ -10,6 +10,7 @@ featuredPublishedAt: "2026-09-04 02:33 +08:00"
 featuredTags: ["Cline","Coding Agent","MCP","Plugins"]
 tags:
   - "观察池"
+  - "日期未确认"
   - "Agent"
   - "Agent Harness"
   - "AI"
@@ -22,6 +23,7 @@ tags:
   - "DSH"
   - "Git"
   - "Hacker News"
+  - "Human-in-the-loop"
   - "LLM"
   - "MCP"
   - "Model Routing"
@@ -31,6 +33,7 @@ tags:
   - "OpenCode"
   - "Pi"
   - "Plugins"
+  - "RAG"
   - "Research"
   - "Security"
   - "Sessions"
@@ -38,7 +41,7 @@ tags:
 
 ## 今日概览
 
-本轮截至 2026-09-05 12:02（Asia/Shanghai），重点覆盖过去 48 小时。Coding Agent 赛道出现五项可核验更新：Cline Desktop 把 Agent Plugins 接入共享 Hub，Pi 0.85.0 强化思考力度与可恢复内存会话，DSH 0.1.3-alpha.1 更新 Session 持久化和 Agent Team 投递语义；OpenCode 1.18.28 增加会话级 Copilot 请求关联并修复桌面端设备认证，随后 1.18.29 修复 GPT-6 模型识别。工程侧，Spotify 公布一种将大批量读写委派给较小模型的路由实践；研究侧关注语言模型与非语言专用 Agent 的协作。
+本轮截至 2026-09-05 15:02（Asia/Shanghai），重点覆盖过去 48 小时。Coding Agent 赛道出现五项可核验更新：Cline Desktop 把 Agent Plugins 接入共享 Hub，Pi 0.85.0 强化思考力度与可恢复内存会话，DSH 0.1.3-alpha.1 更新 Session 持久化和 Agent Team 投递语义；OpenCode 1.18.28 增加会话级 Copilot 请求关联并修复桌面端设备认证，随后 1.18.29 修复 GPT-6 模型识别。工程侧，Spotify 公布一种将大批量读写委派给较小模型的路由实践；研究侧关注语言模型与非语言专用 Agent 的协作。
 
 ## Coding Agent / Harness 雷达
 
@@ -89,6 +92,8 @@ tags:
 
 - **窗口外安全研究**：[GitSpawn](https://www.manifold.security/blog/ai-coding-agents-git-hijack) 原文日期为 2026-09-01，因 HN 再次提交而保留；使用从他处获得、携带 `.git` 目录的工作区前，应先审查本地 Git 配置。
 - **低互动 HN 信号**：[GitSpawn HN 条目](https://news.ycombinator.com/item?id=49572279) 采集时仅 3 points / 0 comments，不据此判断行业影响。
+- **早期 Agent 治理工具**：[ActraDeck](https://github.com/actradeck/actradeck) 为 Claude Code 与 Codex 提供本地风险动作审批、凭据遮蔽和可回放审计；项目自己明确说明检测是 best-effort、并非沙箱或绝对安全边界。本轮 [Show HN](https://news.ycombinator.com/item?id=49573255) 提交时仅 2 points / 0 comments，因此只作为新项目曝光信号。
+- **营销表述较重的多 Agent RAG 项目**：[RagLeap Core](https://github.com/antonyrag/ragleap-core) 自述提供多 Agent RAG、语音与 CRM 集成，仓库可核验到 2026-09-03 发布 `ragleap-graph-v0.6.9`；但“46 AI Employees”等说法缺乏本轮独立验证，[Show HN](https://news.ycombinator.com/item?id=49573630) 采集时仅 1 point / 1 comment，故不作为成熟度或采用度结论。
 
 ## 来源链接
 
@@ -102,7 +107,11 @@ tags:
 - [arXiv:2609.00474](https://arxiv.org/abs/2609.00474)
 - [HN：Spotify Portal](https://news.ycombinator.com/item?id=49571465)
 - [HN：GitSpawn](https://news.ycombinator.com/item?id=49572279)
+- [ActraDeck 仓库](https://github.com/actradeck/actradeck)
+- [HN：ActraDeck](https://news.ycombinator.com/item?id=49573255)
+- [RagLeap Core 仓库](https://github.com/antonyrag/ragleap-core)
+- [HN：RagLeap Core](https://news.ycombinator.com/item?id=49573630)
 
 ## 采集状态
 
-已完成必查的 Cline、Pi、DSH 以及 OpenCode、Aider、Continue、Roo Code；并检查 HN front/newest 与 Algolia、GitHub Trending、arXiv、Hugging Face、Simon Willison 和可信工程博客。初始候选 20 条，最终保留 10 个独立来源。由于最终来源不为 0，无需触发第二轮补搜。失败项及原因已记录在 `scan.failedSources`。
+已完成必查的 Cline、Pi、DSH 以及 OpenCode、Aider、Continue、Roo Code；并检查 HN front/newest 与 Algolia、GitHub Trending、arXiv、Hugging Face、Simon Willison 和可信工程博客。初始候选 26 条，最终保留 14 个独立来源。由于最终来源不为 0，无需触发第二轮补搜。失败项及原因已记录在 `scan.failedSources`。

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T12:02:00+08:00"
+updatedAt: "2026-09-05T15:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.153.4"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.4"
@@ -10,14 +10,17 @@ featuredPublishedAt: "2026-09-05 07:25 +08:00"
 featuredTags: ["Codex","GPT-6 Astra","修复版"]
 tags:
   - "安全"
+  - "定价"
   - "观察池"
   - "可靠性"
   - "模型成本"
+  - "日期未确认"
   - "社区反馈"
   - "推理质量"
   - "文件上传"
   - "修复版"
   - "用户体验"
+  - "支持"
   - "状态事件"
   - "Academic Researchers"
   - "Agent"
@@ -30,14 +33,16 @@ tags:
   - "Daybreak"
   - "GPT-5.6"
   - "GPT-6 Astra"
+  - "Memory"
   - "MFA"
   - "OpenAI"
+  - "Trusted Access"
   - "Usage"
 ---
 
 ## 今日概览
 
-发现窗口：**2026-09-04 12:02 至 2026-09-05 12:02（Asia/Shanghai）**。窗口内最明确的产品变化来自 Codex 0.153.3 与 0.153.4：前者把 GPT‑6 Astra 加入 Amazon Bedrock 的 Mantle/Runtime 模型目录并修正异步提问指导，后者修复 Astra 在内置模型选择器中的可见性、在未显式配置时将其设为内置默认，并限定只有会话具备相应工具时才使用异步提问。OpenAI 同时记录 APAC 区域 ChatGPT、Work、图像、文件、Voice 与 Codex Cloud 的错误升高事件，已在 18:46 宣布恢复。社区反馈集中在额度重置、模型成本/重试、跨系统可靠性、编辑历史、文件上传、安全拦截与企业/研究账号访问；这些均未独立复现。
+发现窗口：**2026-09-04 15:02 至 2026-09-05 15:02（Asia/Shanghai）**。窗口内最明确的产品变化来自 Codex 0.153.3 与 0.153.4：前者把 GPT‑6 Astra 加入 Amazon Bedrock 的 Mantle/Runtime 模型目录并修正异步提问指导，后者修复 Astra 在内置模型选择器中的可见性、在未显式配置时将其设为内置默认，并限定只有会话具备相应工具时才使用异步提问。OpenAI 同时记录 APAC 区域 ChatGPT、Work、图像、文件、Voice 与 Codex Cloud 的错误升高事件，已在 18:46 宣布恢复。官方 Developers Blog 另有两篇 9 月 4 日 Astra/Codex 实作文章，但未展示精确时刻，按“日期未确认”保留。社区反馈集中在额度重置、模型成本/重试、跨系统可靠性、编辑历史、文件上传、安全拦截、支持路由、记忆控制、套餐缺口与企业/研究账号访问；这些均未独立复现。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -92,7 +97,7 @@ tags:
 
 ## 日期未确认
 
-ChatGPT Release Notes 在不同缓存入口显示的最新条目不一致，本轮未发现能以页面内明确日期确认落在窗口的新条目，因此不把缓存更新时间当作产品发布时间。OpenAI News 索引也未发现可明确落入窗口的新文章。
+ChatGPT Release Notes 在不同缓存入口显示的最新条目不一致，本轮未发现能以页面内明确日期确认落在窗口的新条目，因此不把缓存更新时间当作产品发布时间。OpenAI News 索引也未发现可明确落入窗口的新文章。OpenAI Developers Blog 的 [Astra 建筑可视化实作](https://developers.openai.com/blog/architectural-visualization-with-astra) 与 [Astra 游戏开发实作](https://developers.openai.com/blog/how-to-build-games-with-astra) 均标注 2026-09-04，但页面未给出时分，无法确认是否落在本轮从 15:02 开始的窗口；两篇分别展示 Codex 驱动 Blender/Unreal Engine 3D 场景迭代，以及以 Astra 构建游戏原型的工作流，作为官方采用案例而非新产品发布保留。
 
 ## 观察池
 
@@ -106,6 +111,10 @@ ChatGPT Release Notes 在不同缓存入口显示的最新条目不一致，本�
 - **Excel 上传后无法读取**（2026-09-05 11:10 +08:00）：用户称持续上传含每日工作表的 Excel 文件后，ChatGPT 的文件处理环境仍无法访问，需改用截图；属于单一个案。 [原帖](https://community.openai.com/t/chatgpt-having-trouble-finding-uploaded-excel-file/1394976)
 - **Academic Researchers 席位未获额度重置**（2026-09-05 11:22 +08:00）：用户询问免费研究席位是否包含已向部分付费方案提供的额度重置，尚无官方答复。 [原帖](https://community.openai.com/t/do-academic-researchers-seats-get-usage-resets-mine-have-never-received-one/1394977)
 - **网络安全请求触发 Daybreak 提示**（2026-09-05 11:33 +08:00）：用户称在 VPS 上执行普通命令生成任务时收到网络安全内容不可显示及 Daybreak 资格提示；请求内容与分类依据不足，无法判断是否误拦截。 [原帖](https://community.openai.com/t/why-am-i-getting-this-content-can-t-be-shown-we-re-especially-careful-with-cybersecurity-requests-if-you-re-a-security-professional-you-may-be-eligible-for-daybreak/1394978)
+- **自动支持工单即时关闭循环**（2026-09-05 13:47 +08:00）：用户称支持请求被自动回复并立即关闭，而邮件入口再次触发同一流程；属于单一支持案例，未确认影响范围。 [原帖](https://community.openai.com/t/bug-automated-support-ticketing-loop-tickets-instantly-closing-case-14407052/1394986)
+- **记忆隔离聊天功能建议**（2026-09-05 14:20 +08:00）：长期用户希望能创建持续保持、但不读取全局记忆的聊天，以恢复可控的“干净上下文”；这是 UX 建议，不是已发布能力。 [原帖](https://community.openai.com/t/feature-request-persistent-memory-isolated-chats/1394992)
+- **个人用户中档套餐建议**（2026-09-05 14:37 +08:00）：重度 ChatGPT/Codex 用户建议在 Plus 与更高价方案之间提供 40–50 美元档位和更高额度；这是价格敏感度样本，不代表产品计划。 [原帖](https://community.openai.com/t/please-consider-a-40-50-mid-tier-plan-for-heavy-individual-users/1394995)
+- **Daybreak 复核生成新待处理验证**（2026-09-05 14:38 +08:00）：安全研究用户称原验证失败已被告知结果最终，但入口随后又生成新的 Persona inquiry；无法核验工单与验证系统状态。 [原帖](https://community.openai.com/t/daybreak-verification-created-a-new-pending-inquiry-after-finalized-failure-case-14228255/1394998)
 
 ## 未证实传闻
 
@@ -126,11 +135,17 @@ ChatGPT Release Notes 在不同缓存入口显示的最新条目不一致，本�
 - [Excel 文件上传反馈](https://community.openai.com/t/chatgpt-having-trouble-finding-uploaded-excel-file/1394976)
 - [Academic Researchers 额度反馈](https://community.openai.com/t/do-academic-researchers-seats-get-usage-resets-mine-have-never-received-one/1394977)
 - [Daybreak 安全拦截反馈](https://community.openai.com/t/why-am-i-getting-this-content-can-t-be-shown-we-re-especially-careful-with-cybersecurity-requests-if-you-re-a-security-professional-you-may-be-eligible-for-daybreak/1394978)
+- [Astra 建筑可视化实作](https://developers.openai.com/blog/architectural-visualization-with-astra)
+- [Astra 游戏开发实作](https://developers.openai.com/blog/how-to-build-games-with-astra)
+- [自动支持工单循环反馈](https://community.openai.com/t/bug-automated-support-ticketing-loop-tickets-instantly-closing-case-14407052/1394986)
+- [记忆隔离聊天建议](https://community.openai.com/t/feature-request-persistent-memory-isolated-chats/1394992)
+- [中档套餐建议](https://community.openai.com/t/please-consider-a-40-50-mid-tier-plan-for-heavy-individual-users/1394995)
+- [Daybreak 验证复核反馈](https://community.openai.com/t/daybreak-verification-created-a-new-pending-inquiry-after-finalized-failure-case-14228255/1394998)
 
 ## 采集状态
 
-- 已检查：OpenAI News、ChatGPT Release Notes、开发者平台 changelog/模型/弃用文档；Codex、Python/Node SDK、Agents SDK releases；OpenAI Status、Developer Community 与公共社区日期检索。
+- 已检查：OpenAI News、Developers Blog、ChatGPT Release Notes、开发者平台 changelog/模型/弃用文档；Codex、Python/Node SDK、Agents SDK releases；OpenAI Status、Developer Community 与公共社区日期检索。
 - Tier 1/2/3：逐项检查编码与 Agent、消费功能和企业/教育/政府/科学/安全方向；确认两枚 Codex 修复版与 APAC 状态事件为窗口内官方变化。
 - 失败与限制：主站部分直连受限；Release Notes 缓存视图不一致；Reddit/HN/X/YouTube 未获可靠新增样本；社区条目均未独立复现。
-- 候选 32 条，保留 13 个来源；二次补搜：否（来源非零）。
+- 候选 38 条，保留 19 个来源；二次补搜：否（来源非零）。
 - 配图：本页不使用图片；GitHub release 与状态页未提供适合正文插入、来源稳定且内容明确的官方题图。
