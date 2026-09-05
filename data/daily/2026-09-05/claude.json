@@ -1,0 +1,63 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-09-05T10:18:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News、Engineering、Research、Claude Blog 与产品公告索引：最新官方文章仍早于本轮窗口",
+      "Claude Code CLI、VS Code、JetBrains、Skills、插件、MCP 与 GitHub releases：核实 v2.1.261",
+      "Claude Agent SDK TypeScript/Python 官方 GitHub releases：TypeScript 新增 v0.3.261，Python 最新仍为 v0.2.152",
+      "Claude Developer Platform、Claude Apps release notes；Managed Agents sessions/webhooks/environments/memory stores；Cowork、Design、Tag/@Claude sessions",
+      "Claude Status incidents API：窗口内未见新事故",
+      "Sonnet、Opus、Haiku、Fable、Mythos 当前官方模型；Chrome/browser、Desktop/Preview、Marketplace/Connectors/Plugins、创意/视频模型、Voice Mode、Microsoft 365 integration",
+      "Security、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育、客户支持关键词及可信二手报道",
+      "Reddit r/ClaudeAI/r/Anthropic/r/ClaudeCode/r/LocalLLaMA、Hacker News、X、YouTube；Codex、Cursor、Cline、Pi Coding Agent、DeepSeek Harness/DSH 比较检索"
+    ],
+    "failedSources": [
+      "Reddit 专题页未稳定提供评论的绝对时间戳，仅能按页面日期收录到日期未确认",
+      "X 搜索未取得无需登录且可核验时间与互动量的独立原帖",
+      "Hacker News 与 YouTube 未发现窗口内可核验、具有独立信息价值的 Claude 新条目",
+      "未找到适合本页且来源明确的公开官方配图，因此不配置 image"
+    ],
+    "candidateCount": 8,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮发现窗口：**2026-09-04 10:18—2026-09-05 10:18（Asia/Shanghai）**。官方产品侧确认两项新增：Claude Code v2.1.261 与同步跟进的 TypeScript Agent SDK v0.3.261。前者集中增强组织策略诊断、输出上限、超长 subagent system prompt、skill 使用诊断，并修复 Remote Control、后台 Agent、插件、连接器、企业代理与 VS Code 会话管理等问题；窗口内未见 Anthropic 新闻稿或状态事故。\n\n## Tier 1：编码与 Agent 主轴\n\n| 产品线 | 过去 24 小时状态 |\n|---|---|\n| Claude Code CLI | **有新增**：v2.1.261 新增组织策略加载失败诊断、`bashOutputMaxChars` / `taskOutputMaxChars`（最高 128K 字符）、`--append-subagent-system-prompt-file` 与 `/skill-doctor`；并修复输入丢字、恢复会话上下文、后台 Agent 高 CPU、Stop/interrupt 时序、远程控制状态与多项企业网络问题。[发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.261) |\n| VS Code / JetBrains | **VS Code 有新增**：加入自定义 output style 引导、MCP server 增删表单、跨客户端打开状态标记、归档和折叠交互，并修复 teleport、模型选择、usage meter、权限提示与多窗口状态问题；JetBrains 未见单列新增。 |\n| Managed Agents：sessions / webhooks / environments / memory stores | 无独立平台发布；v2.1.261 修复云端/SDK 会话的早期 Stop、后台 Agent 恢复与 Remote Control 投递状态，但不外推为 Managed Agents API 新版本。 |\n| Skills / marketplaces | **有 CLI 级新增**：`/skill-doctor` 显示已加载但未使用的 skills 及其上下文成本；同时修复组织强制启用插件被云端会话丢弃的问题。 |\n| Claude Developer Platform | 无独立 release-note 新条目；官方状态 API 在窗口内未列出新事故。 |\n| Agent SDK | **TypeScript v0.3.261** 新增 `pluginDelivery: 'initialize'`，将 plugins 经 stdin 传入以避免大量插件导致 Windows 启动命令过长；并修复缺少原生 `Symbol.dispose` 的运行时错误，版本与 Claude Code v2.1.261 对齐。[发布说明](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.261) Python 最新仍为 v0.2.152，无窗口内新版。 |\n| Cowork | v2.1.261 修复从 Claude Desktop 启动的本地 Cowork 会话里，Claude in Chrome `file_upload` 参数缺失导致失败；无独立 Cowork 发布。 |\n| Design | 无新增。 |\n| Tag / @Claude sessions | 无新增。 |\n| Sonnet / Opus / Haiku；Fable / Mythos | 无新模型发布；窗口内无新的官方状态事件。 |\n\n## Tier 2：应用与集成\n\n| 范围 | 过去 24 小时状态 |\n|---|---|\n| Chrome / browser agent；Desktop / Preview | v2.1.261 修复 Cowork 中 Chrome 文件上传；Desktop/web 会话在仅观察 Artifact 更新时不再错误显示忙碌。 |\n| Marketplace / Connectors / Plugins | v2.1.261 修复受管策略强制启用插件时云端会话丢弃已同步插件，以及启动连接器拉取超时后整轮缺失的问题；后者改为后台重试。 |\n| 创意 / 视频模型；Voice Mode | 未确认 Anthropic 独立创意/视频模型新发布；Voice Mode 无新增。 |\n| Microsoft 365 integration | 无窗口内独立发布。 |\n\n## Tier 3：安全与行业场景\n\nSecurity、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持均已检查，未发现窗口内新的 Anthropic 官方独立发布。Claude Code v2.1.261 将危险 `rm` 提示扩展到位置参数和双引号 `sh -c` 脚本，并收紧公共图表渲染器 URL 的自动批准；这些是客户端安全边界变化，不代表已发生安全事件。\n\n可信二手报道讨论前沿实验室对模型可解释性与对齐审计难度的担忧，并引用 Anthropic 对齐压力测试负责人近期观点；它没有带来新的 Claude 产品发布，作为安全研究邻近信号留在观察池。[Axios 报道](https://www.axios.com/2026/09/04/ai-dangers-risks-superintelligence)\n\n## 官方更新（最新在前）\n\n1. **Claude Agent SDK TypeScript v0.3.261（9 月 5 日 03:58）**：插件可在初始化阶段经 stdin 传递，降低 Windows 因插件数量导致命令行过长而启动失败的风险；同时修复部分 Node/Jest/Vitest 环境的 disposable 兼容问题。[发布说明](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.261)\n2. **Claude Code v2.1.261（9 月 5 日 03:58）**：新增组织策略诊断、可调高至 128K 字符的命令与任务内联输出上限、文件形式的 subagent system prompt 追加参数，以及 `/skill-doctor`；大量修复覆盖 Remote Control、后台任务、插件、企业代理、Cowork/Chrome 与 VS Code。[完整发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.261)\n\n## Love\n\n本轮未取得同时满足“窗口内、可定位到 Claude、可核验绝对时间”的正面社区样本。官方功能发布不计作 Love。\n\n## Hate\n\nReddit 的 Claude 性能与缺陷汇总帖在 9 月 4 日页面段落中出现了对重试分支消失、用量过快、auto mode 异常、旧 Opus 表现下降等零散抱怨；这些评论的绝对时间戳和环境无法稳定核验，且属于自选样本，只能作为低置信度问题线索。[社区汇总帖](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/)\n\n## 情绪判断\n\n**中性偏负面，低置信度。** 可见社区样本偏向性能、用量和交互退化投诉，但来自一个专门汇总问题的帖子，天然存在选择偏差；没有足够正面样本可作平衡，也不能据此推断总体满意度。v2.1.261 的大量修复与功能不能替代真实用户口碑。\n\n## 比较与 Agent 生态\n\n已检索 Codex、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 与 Claude Code 的关联比较。未发现窗口内具名评测或可复现实验，因此不作“追平/超过”判断；Cline、Pi 与 DSH 的完整产品扫描留给开源 harness 专题。\n\n## 日期未确认\n\n- **性能与缺陷评论**：Reddit 汇总页将若干评论标为 9 月 4 日，但搜索入口未稳定返回绝对发布时间和可靠互动快照；保留为低置信度社区线索，不写成已证实的产品回归。[社区汇总帖](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/)\n\n## 观察池\n\n- **对齐审计难度**：Axios 于窗口内刊发分析并引用 Anthropic 研究人员近期观点，但主要是行业综述，未发现同期 Anthropic 原始新公告；等待原始研究或官方文章。[报道](https://www.axios.com/2026/09/04/ai-dangers-risks-superintelligence)\n- **v2.1.261 修复效果**：等待 `/skill-doctor`、远程控制、后台 Agent 与企业代理修复的真实采用反馈，不从发布说明推断效果。\n\n## 未证实传闻\n\n未取得具有独立信息价值且可追溯的新传闻。\n\n## 来源链接\n\n- [Claude Code v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261)\n- [Claude Agent SDK TypeScript v0.3.261](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.261)\n- [Behind the Curtain: AI creators race to understand their creations](https://www.axios.com/2026/09/04/ai-dangers-risks-superintelligence)\n- [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/)\n\n## 采集状态\n\n- 已检查：Anthropic News、Engineering、Research、Claude Blog；Claude Code CLI/IDE/Skills/插件/MCP 与 GitHub releases；Agent SDK TypeScript/Python；Developer Platform、Claude Apps、Managed Agents、Cowork、Design、Tag/@Claude；当前模型；Claude Status；Chrome/browser、Desktop/Preview、Marketplace/Connectors/Plugins、创意/视频模型、Voice、Microsoft 365；九类行业场景；Reddit、Hacker News、X、YouTube及中英文搜索；Codex、Cursor、Cline、Pi、DSH 比较关键词。\n- 失败及限制：Reddit 评论绝对时间戳与互动量未稳定获取；X 无需登录的原帖不足；Hacker News/YouTube 无窗口内可核验新增；未找到可靠官方配图。\n- 候选数量：8；去重并保留 4 条来源。\n- 二次补搜：否（来源非零）。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.261",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-09-05 03:58 +08:00",
+      "summary": "新增组织策略诊断、输出上限、文件形式的 subagent system prompt 与 skill 使用诊断，并修复 Remote Control、后台 Agent、插件及 IDE 多类问题。",
+      "tags": ["Claude Code", "CLI", "Agent", "VS Code"]
+    },
+    {
+      "title": "Claude Agent SDK TypeScript v0.3.261",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.261",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-09-05 03:58 +08:00",
+      "summary": "支持初始化阶段经 stdin 传递插件，并修复缺少原生 Symbol.dispose 的运行时兼容问题。",
+      "tags": ["Agent SDK", "TypeScript", "Plugins"]
+    },
+    {
+      "title": "Behind the Curtain: AI creators race to understand their creations",
+      "url": "https://www.axios.com/2026/09/04/ai-dangers-risks-superintelligence",
+      "source": "Axios",
+      "publishedAt": "2026-09-04 17:59 +08:00",
+      "summary": "行业分析引用 Anthropic 对齐压力测试负责人对可解释性与审计难度的近期观点；未发现同期官方新公告，作为观察池信号。",
+      "tags": ["观察池", "Security", "Alignment"]
+    },
+    {
+      "title": "Performance and Bugs Discussion Hub updated on 3 September 2026",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "",
+      "summary": "9 月 4 日段落汇总若干用量、auto mode、重试分支和模型表现投诉；评论绝对时间与环境未确认，属于低置信度自选样本。",
+      "tags": ["日期未确认", "Community", "Hate"]
+    }
+  ]
+}
