@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T10:18:00+08:00"
+updatedAt: "2026-09-05T12:02:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTitle: "Desktop v0.0.23"
 featuredUrl: "https://github.com/cline/cline/releases/tag/desktop-v0.0.23"
@@ -13,6 +13,7 @@ tags:
   - "Agent"
   - "Agent Harness"
   - "AI"
+  - "Authentication"
   - "Claude Code"
   - "Cline"
   - "Coding Agent"
@@ -37,7 +38,7 @@ tags:
 
 ## 今日概览
 
-本轮截至 2026-09-05 10:18（Asia/Shanghai），重点覆盖过去 48 小时。Coding Agent 赛道出现四项可核验更新：Cline Desktop 把 Agent Plugins 接入共享 Hub，Pi 0.85.0 强化思考力度与可恢复内存会话，DSH 0.1.3-alpha.1 更新 Session 持久化和 Agent Team 投递语义，OpenCode 1.18.29 修复 GPT-6 模型识别。工程侧，Spotify 公布一种将大批量读写委派给较小模型的路由实践；研究侧关注语言模型与非语言专用 Agent 的协作。
+本轮截至 2026-09-05 12:02（Asia/Shanghai），重点覆盖过去 48 小时。Coding Agent 赛道出现五项可核验更新：Cline Desktop 把 Agent Plugins 接入共享 Hub，Pi 0.85.0 强化思考力度与可恢复内存会话，DSH 0.1.3-alpha.1 更新 Session 持久化和 Agent Team 投递语义；OpenCode 1.18.28 增加会话级 Copilot 请求关联并修复桌面端设备认证，随后 1.18.29 修复 GPT-6 模型识别。工程侧，Spotify 公布一种将大批量读写委派给较小模型的路由实践；研究侧关注语言模型与非语言专用 Agent 的协作。
 
 ## Coding Agent / Harness 雷达
 
@@ -46,7 +47,7 @@ tags:
 | Cline | 已验证 · 2026-09-04 02:33 +08:00 | [Desktop v0.0.23](https://github.com/cline/cline/releases/tag/desktop-v0.0.23) 让共享 Hub 自动发现并校验 `~/.agents/plugins`，启动其中的 MCP 服务；同时修复定时任务报告消失和单个 MCP 服务阻塞整体退出 | 插件发现、技能与 MCP 生命周期开始由统一运行时管理，直接影响桌面端的扩展边界与可靠性 |
 | Pi Coding Agent | 已验证 · 2026-09-04 18:18 +08:00 | [v0.85.0](https://github.com/earendil-works/pi/releases/tag/v0.85.0) 增加可持久保持的 Claude thinking effort，并允许 SDK 恢复外部保存的内存会话条目 | 对模型路由和嵌入式 Agent 场景而言，会话恢复不再必须依赖 Pi 自己的文件存储 |
 | DeepSeek Harness / DSH | 已验证 · 2026-09-04 19:34 +08:00 | [v0.1.3-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.3-alpha.1) 引入 SessionHandle 独占锁与 v2 会话格式；Agent Team 的 `send_message` 统一采用 steer 语义并保序 | 会话并发所有权、迁移和跨 Agent 消息顺序属于 Harness 正确性的底层约束；该版本仍标明历史会话加载性能回退 |
-| OpenCode | 已验证 · 2026-09-05 07:47 +08:00 | [v1.18.29](https://github.com/anomalyco/opencode/releases/tag/v1.18.29) 修复 Codex OAuth 对整数代 GPT 版本的过滤，使 GPT-6 Astra 对订阅用户可见 | 属于模型路由兼容性修复，避免有效模型在 OAuth 路径中被错误隐藏 |
+| OpenCode | 已验证 · 2026-09-04 23:38 / 2026-09-05 07:47 +08:00 | [v1.18.28](https://github.com/anomalyco/opencode/releases/tag/v1.18.28) 为 GitHub Copilot 请求附带 Session ID，并修复桌面端 OpenCode 账户设备认证所用客户端 ID；随后 [v1.18.29](https://github.com/anomalyco/opencode/releases/tag/v1.18.29) 修复 Codex OAuth 对整数代 GPT 版本的过滤，使 GPT-6 Astra 对订阅用户可见 | 前者改善跨请求会话追踪与桌面认证正确性，后者避免有效模型在 OAuth 路径中被错误隐藏 |
 | Aider | 已检查 · 无窗口内正式发布 | 官方 Releases 最新条目早于本轮窗口，未制造更新 | — |
 | Continue | 已检查 · 无窗口内正式发布 | 官方 Releases 未见过去 48 小时新版本 | — |
 | Roo Code | 已检查 · 无窗口内正式发布 | 官方 Releases 未见过去 48 小时新版本 | — |
@@ -94,6 +95,7 @@ tags:
 - [Cline Desktop v0.0.23](https://github.com/cline/cline/releases/tag/desktop-v0.0.23)
 - [Pi v0.85.0](https://github.com/earendil-works/pi/releases/tag/v0.85.0)
 - [DSH v0.1.3-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.3-alpha.1)
+- [OpenCode v1.18.28](https://github.com/anomalyco/opencode/releases/tag/v1.18.28)
 - [OpenCode v1.18.29](https://github.com/anomalyco/opencode/releases/tag/v1.18.29)
 - [Spotify Portal 工程文章](https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90)
 - [Manifold Security：GitSpawn](https://www.manifold.security/blog/ai-coding-agents-git-hijack)
@@ -103,4 +105,4 @@ tags:
 
 ## 采集状态
 
-已完成必查的 Cline、Pi、DSH 以及 OpenCode、Aider、Continue、Roo Code；并检查 HN front/newest 与 Algolia、GitHub Trending、arXiv、Hugging Face、Simon Willison 和可信工程博客。初始候选 18 条，最终保留 9 个独立来源。由于最终来源不为 0，无需触发第二轮补搜。失败项及原因已记录在 `scan.failedSources`。
+已完成必查的 Cline、Pi、DSH 以及 OpenCode、Aider、Continue、Roo Code；并检查 HN front/newest 与 Algolia、GitHub Trending、arXiv、Hugging Face、Simon Willison 和可信工程博客。初始候选 20 条，最终保留 10 个独立来源。由于最终来源不为 0，无需触发第二轮补搜。失败项及原因已记录在 `scan.failedSources`。

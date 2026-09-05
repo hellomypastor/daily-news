@@ -1,7 +1,7 @@
 ---
 title: "主流 AI / Agent 厂商技术动态日报"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T10:18:00+08:00"
+updatedAt: "2026-09-05T12:02:00+08:00"
 description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
 featuredTitle: "Building a Memory-Driven Agent with NVIDIA NemoClaw"
 featuredUrl: "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/"
@@ -12,6 +12,7 @@ featuredImage: "https://developer-blogs.nvidia.com/wp-content/uploads/2026/09/ai
 featuredImageAlt: "NVIDIA NemoClaw 记忆驱动 Agent 技术文章的官方架构配图"
 featuredImageCaption: "图片来源：NVIDIA Developer Blog"
 tags:
+  - "产品设计"
   - "观察池"
   - "较旧背景"
   - "企业采用"
@@ -36,7 +37,7 @@ tags:
 
 ## 今日概览
 
-扫描窗口：**2026-09-04 10:18 至 2026-09-05 10:18（Asia/Shanghai）**。本轮最明确的产业信号来自企业 Agent 的可量化落地与可治理内存：xAI 发布 Grok Bot 采购案例，NVIDIA 给出带沙箱边界和可审计记忆的 Agent 方案。由于这些官方页面只公开日期、不公开具体时刻，均保留‘日级日期已核实、是否完全落入 24 小时窗口未确认’的限制。
+扫描窗口：**2026-09-04 12:02 至 2026-09-05 12:02（Asia/Shanghai）**。本轮最明确的产业信号来自企业 Agent 的可量化落地与可治理内存：xAI 发布 Grok Bot 采购案例，NVIDIA 给出带沙箱边界和可审计记忆的 Agent 方案。由于这些官方页面只公开日期、不公开具体时刻，均保留‘日级日期已核实、是否完全落入 24 小时窗口未确认’的限制。
 
 ## 优先动态
 
@@ -65,6 +66,7 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 
 | 厂商 | 动态 | 状态 | 摘要与意义 |
 |---|---|---|---|
+| xAI | [Designing Grok Bot for a world of persistent agents](https://x.ai/news/designing-grok-bot) | 2026-09-03；24–48h 补充 | xAI 将产品基本对象收敛为 Bot、Chat、Prompt/Skill/Routine、Tool 与 Artifact，并说明持久身份和记忆、独立云端计算机、运行状态、人工接管，以及“能力可共享、角色上下文隔离”的边界；这是官方设计复盘，不代表第三方效果验证。 |
 | NVIDIA | [NVIDIA to Acquire Hugging Face](https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/) | 2026-09-03；24–48h 补充 | NVIDIA 宣布以 129.303 亿美元收购 Hugging Face，并称后者将维持开放、多云和多加速器选择。交易与平台承诺均为收购方官方表述，后续仍需观察监管、治理与生态执行。 |
 | Hugging Face 社区博客 | [Give Your Coding Agents a Memory You Own](https://huggingface.co/blog/funes) | 2026-09-03；24–48h 补充 | 介绍本地优先的 funes 记忆层：从 Claude Code、Codex、pi、Hermes 会话构建可追溯检索，并可同步至私有 Hugging Face 数据集。它是社区作者文章，不代表 Hugging Face 产品发布。 |
 
@@ -90,13 +92,14 @@ Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂�
 1. [xAI：Grok Bot 采购案例](https://x.ai/news/grok-bot-procurement)
 2. [NVIDIA：Memory-Driven Agent with NemoClaw](https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/)
 3. [Microsoft：客户自有环境中的 Edge AI 安全](https://www.microsoft.com/en-us/security/blog/2026/09/04/secure-edge-ai-customer-owned-environments/)
-4. [NVIDIA：拟收购 Hugging Face](https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/)
-5. [Hugging Face 社区博客：funes](https://huggingface.co/blog/funes)
-6. [Google DeepMind 新闻列表](https://deepmind.google/blog/)
+4. [xAI：持久 Grok Bot 的产品设计](https://x.ai/news/designing-grok-bot)
+5. [NVIDIA：拟收购 Hugging Face](https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/)
+6. [Hugging Face 社区博客：funes](https://huggingface.co/blog/funes)
+7. [Google DeepMind 新闻列表](https://deepmind.google/blog/)
 
 ## 采集状态
 
 - 已检查：主要海外与中国厂商官方动态页、xAI/Grok 全套必查入口、三组 Coding Agent / Harness 产业信号、六类播客入口。
 - 失败来源：部分动态页依赖客户端渲染；X 未登录时间线不稳定；Google DeepMind 月度列表缺少日级日期。
-- 初始候选：9 条；保留来源：6 条（其中 3 条主窗口日级确认、2 条近两日补充、1 条日期未确认）。
+- 初始候选：11 条；保留来源：7 条（其中 3 条主窗口日级确认、3 条近两日补充、1 条日期未确认）。
 - 二次补搜：否（最终来源不为 0）。

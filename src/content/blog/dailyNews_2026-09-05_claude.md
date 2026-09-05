@@ -1,7 +1,7 @@
 ---
 title: "Claude 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T10:18:00+08:00"
+updatedAt: "2026-09-05T12:02:00+08:00"
 description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Claude Code v2.1.261"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.261"
@@ -20,15 +20,17 @@ tags:
   - "CLI"
   - "Community"
   - "Hate"
+  - "Love"
   - "Plugins"
   - "Security"
   - "TypeScript"
+  - "Usage Limits"
   - "VS Code"
 ---
 
 ## 今日概览
 
-本轮发现窗口：**2026-09-04 10:18—2026-09-05 10:18（Asia/Shanghai）**。官方产品侧确认两项新增：Claude Code v2.1.261 与同步跟进的 TypeScript Agent SDK v0.3.261。前者集中增强组织策略诊断、输出上限、超长 subagent system prompt、skill 使用诊断，并修复 Remote Control、后台 Agent、插件、连接器、企业代理与 VS Code 会话管理等问题；窗口内未见 Anthropic 新闻稿或状态事故。
+本轮发现窗口：**2026-09-04 12:02—2026-09-05 12:02（Asia/Shanghai）**。官方产品侧确认两项新增：Claude Code v2.1.261 与同步跟进的 TypeScript Agent SDK v0.3.261。前者集中增强组织策略诊断、输出上限、超长 subagent system prompt、skill 使用诊断，并修复 Remote Control、后台 Agent、插件、连接器、企业代理与 VS Code 会话管理等问题；窗口内未见 Anthropic 新闻稿或状态事故。社区新增一组关于 Max 周额度被意外重置的集中报告，但未找到官方说明，覆盖范围和原因仍未确认。
 
 ## Tier 1：编码与 Agent 主轴
 
@@ -67,15 +69,15 @@ Security、Science、金融服务、生命科学、医疗、法律、政府、�
 
 ## Love
 
-本轮未取得同时满足“窗口内、可定位到 Claude、可核验绝对时间”的正面社区样本。官方功能发布不计作 Love。
+Claude Code 社区主帖集中报告部分 Max 用户的周额度归零重置，主帖检索快照约 403 票，多数已获重置者表示欢迎；但是否覆盖所有地区和账户、是否属于补偿均无官方确认。[社区主帖](https://www.reddit.com/r/ClaudeCode/comments/1w7fckf/did_we_just_get_a_reset/)
 
 ## Hate
 
-Reddit 的 Claude 性能与缺陷汇总帖在 9 月 4 日页面段落中出现了对重试分支消失、用量过快、auto mode 异常、旧 Opus 表现下降等零散抱怨；这些评论的绝对时间戳和环境无法稳定核验，且属于自选样本，只能作为低置信度问题线索。[社区汇总帖](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/)
+Reddit 的 Claude 性能与缺陷汇总帖在 9 月 4 日页面段落中出现了对重试分支消失、用量过快、auto mode 异常、旧 Opus 表现下降等零散抱怨；这些评论的绝对时间戳和环境无法稳定核验，且属于自选样本，只能作为低置信度问题线索。[社区汇总帖](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/) 新增额度重置帖中也有人抱怨重置恰逢其自然周期，或 Pro/部分地区账户未获重置；这进一步说明事件覆盖并不一致，不能外推为全体用户政策。
 
 ## 情绪判断
 
-**中性偏负面，低置信度。** 可见社区样本偏向性能、用量和交互退化投诉，但来自一个专门汇总问题的帖子，天然存在选择偏差；没有足够正面样本可作平衡，也不能据此推断总体满意度。v2.1.261 的大量修复与功能不能替代真实用户口碑。
+**中性，低置信度。** 额度重置带来明显正面反应，但同一讨论也出现覆盖不一致和时机不佳的抱怨；性能、用量和交互退化投诉仍来自专门汇总问题的帖子，存在选择偏差。不能据此推断总体满意度，v2.1.261 的大量修复与功能也不能替代真实用户口碑。
 
 ## 比较与 Agent 生态
 
@@ -83,6 +85,7 @@ Reddit 的 Claude 性能与缺陷汇总帖在 9 月 4 日页面段落中出现�
 
 ## 日期未确认
 
+- **额度重置**：Claude Code 社区主帖报告部分 Max 用户周额度归零，并出现约 403 票的集中讨论；页面仅能确认 9 月 4/5 日，未取得精确绝对时间，亦无 Anthropic 官方公告。保留为高互动、低事实置信度的社区事件。[社区主帖](https://www.reddit.com/r/ClaudeCode/comments/1w7fckf/did_we_just_get_a_reset/)
 - **性能与缺陷评论**：Reddit 汇总页将若干评论标为 9 月 4 日，但搜索入口未稳定返回绝对发布时间和可靠互动快照；保留为低置信度社区线索，不写成已证实的产品回归。[社区汇总帖](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/)
 
 ## 观察池
@@ -99,11 +102,12 @@ Reddit 的 Claude 性能与缺陷汇总帖在 9 月 4 日页面段落中出现�
 - [Claude Code v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261)
 - [Claude Agent SDK TypeScript v0.3.261](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.261)
 - [Behind the Curtain: AI creators race to understand their creations](https://www.axios.com/2026/09/04/ai-dangers-risks-superintelligence)
+- [Did we just get a reset?](https://www.reddit.com/r/ClaudeCode/comments/1w7fckf/did_we_just_get_a_reset/)
 - [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1w61zed/performance_and_bugs_discussion_hub_updated_on_3/)
 
 ## 采集状态
 
 - 已检查：Anthropic News、Engineering、Research、Claude Blog；Claude Code CLI/IDE/Skills/插件/MCP 与 GitHub releases；Agent SDK TypeScript/Python；Developer Platform、Claude Apps、Managed Agents、Cowork、Design、Tag/@Claude；当前模型；Claude Status；Chrome/browser、Desktop/Preview、Marketplace/Connectors/Plugins、创意/视频模型、Voice、Microsoft 365；九类行业场景；Reddit、Hacker News、X、YouTube及中英文搜索；Codex、Cursor、Cline、Pi、DSH 比较关键词。
 - 失败及限制：Reddit 评论绝对时间戳与互动量未稳定获取；X 无需登录的原帖不足；Hacker News/YouTube 无窗口内可核验新增；未找到可靠官方配图。
-- 候选数量：8；去重并保留 4 条来源。
+- 候选数量：10；去重并保留 5 条来源。
 - 二次补搜：否（来源非零）。

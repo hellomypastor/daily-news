@@ -1,7 +1,7 @@
 ---
 title: "AaaS（Agent-as-a-Service）行业动态日报"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T10:18:00+08:00"
+updatedAt: "2026-09-05T12:02:00+08:00"
 description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
 featuredTitle: "Claude Code v2.1.261"
 featuredUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.261"
@@ -16,7 +16,9 @@ tags:
   - "Claude 专题页"
   - "Cloud Agent"
   - "Enterprise Agent"
+  - "Governance"
   - "Grok Bot"
+  - "Isolated Environment"
   - "Managed Agent"
   - "Persistent Agent"
   - "Remote Execution"
@@ -24,7 +26,7 @@ tags:
 
 ## 今日概览
 
-本轮主窗口：**2026-09-04 10:18—2026-09-05 10:18（Asia/Shanghai）**；并检查 24–72 小时观察窗。确认一项带精确时间的托管 Agent 生命周期更新：Claude Code v2.1.261 修复云端会话、Remote Control、后台 Agent 与跨端状态问题（详见 Claude 专题页）。SpaceXAI 于 9 月 4 日发布 Grok Bot 采购实战，产品具备持久 Agent、自有云端计算机、跨工具执行和无需持续看守的工作方式，明确符合 AaaS 定义；但文章未公开具体时刻，列入“日期未确认”。
+本轮主窗口：**2026-09-04 12:02—2026-09-05 12:02（Asia/Shanghai）**；并检查 24–72 小时观察窗。确认一项带精确时间的托管 Agent 生命周期更新：Claude Code v2.1.261 修复云端会话、Remote Control、后台 Agent 与跨端状态问题（详见 Claude 专题页）。SpaceXAI 于 9 月 4 日发布 Grok Bot 采购实战，产品具备持久 Agent、自有云端计算机、跨工具执行和无需持续看守的工作方式，明确符合 AaaS 定义；但文章未公开具体时刻，列入“日期未确认”。
 
 ## 重点动态
 
@@ -44,7 +46,9 @@ tags:
 
 ## 海外厂商
 
-Google Gemini Enterprise Agent Platform/Vertex Agent/Jules、Microsoft Copilot Studio/Azure Agent、Replit Agent、Cursor、Lindy、CrewAI、LangGraph Platform、GitHub coding agent、Amazon Q Developer、Cloudflare Agents/Sandboxes/Computer/Workers、Factory 与 Sourcegraph/Amp 均已检查。没有发现可在本窗口内同时核验发布日期与托管执行实质变化的新增。
+Google Gemini Enterprise Agent Platform/Vertex Agent/Jules、Microsoft Copilot Studio/Azure Agent、Replit Agent、Cursor、Lindy、CrewAI、LangGraph Platform、GitHub coding agent、Amazon Q Developer、Cloudflare Agents/Sandboxes/Computer/Workers、Factory 与 Sourcegraph/Amp 均已检查。Grok Bot Enterprise 的 9 月 3 日公告明确增加组织级访问、网络与审计控制，并称每个用户在独立隔离环境运行；Grok 与 Cursor Enterprise 客户可获得两周免费使用。该发布超出主窗口，作为 24–72 小时观察项保留。[官方公告](https://x.ai/news/grok-bot-for-enterprise)
+
+没有发现可在本窗口内同时核验发布日期与托管执行实质变化的新增。
 
 Grok Bot 的 24–72 小时设计文章进一步明确其产品对象不是一次性聊天，而是可跨会话持续存在的 Agent：每个 Bot 有自己的计算机，支持无 prompt 启动的工作、状态可见性和多 Bot 协调。这是对 AaaS 形态的直接产品定义，但其官方日期为 9 月 3 日且无具体时刻，因此放入观察池，不冒充 24 小时新闻。[官方设计文章](https://x.ai/news/designing-grok-bot)
 
@@ -72,6 +76,7 @@ Grok Bot 的 24–72 小时设计文章进一步明确其产品对象不是一�
 
 ## 24–72 小时观察池
 
+- **Grok Bot Enterprise**：9 月 3 日开放企业使用，提供访问、网络、审计控制与用户隔离环境，并向 Grok / Cursor Enterprise 客户提供两周免费使用；官方同时给出若干采用规模表述但未提供审计方法，本页只记录产品可用性和控制面。[官方公告](https://x.ai/news/grok-bot-for-enterprise)
 - **Grok Bot 的 persistent-agent 设计**：官方说明产品从聊天历史转向 Bot roster、presence、自有计算机、无需 prompt 启动的工作与多 Agent 协调，强化其“持续托管数字同事”定位；等待后续企业可用性、权限、审计、定价与 SLA 细节。[官方设计文章](https://x.ai/news/designing-grok-bot)
 
 ## 趋势判断
@@ -82,13 +87,14 @@ AaaS 的竞争点正从“能否调用工具”转向“能否可靠地长期运
 
 - [Claude Code v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261)
 - [Setting Grok Bot loose on procurement](https://x.ai/news/grok-bot-procurement)
+- [Grok Bot for Enterprise](https://x.ai/news/grok-bot-for-enterprise)
 - [Designing Grok Bot for a world of persistent agents](https://x.ai/news/designing-grok-bot)
 
 ## 采集状态
 
 - 已检查：Cognition Devin 的托管异步执行、环境、并发、定价、企业接入和集成；xAI/Grok 的 Grok Bot、Automations、Build、Agent Tools API、工具与远程执行；Claude/OpenAI 托管 Agent；Google、Microsoft、Replit、Cursor、Lindy、CrewAI、LangGraph、GitHub、Amazon、Cloudflare、Factory、Amp；Cline、pi-mono、DSH、OpenCode、Aider、Continue、Roo Code 云端边界；中国主要平台。
 - 失败及限制：Grok 采购文章无具体时刻；Devin 官方更新集合未见窗口内稳定新日期；部分中文结果缺少原始托管执行证据；无可靠原始配图。
-- 候选数量：10；去重并保留 3 条来源。
+- 候选数量：11；去重并保留 4 条来源。
 - 二次补搜：是，已扩大中英文关键词并切换官方新闻索引、GitHub、文档与可信二手入口；未为凑数收录纯模型、IDE 或本地 harness 更新。
 
-今日扫描完成，共 3 条动态，重点：Grok Bot 展示持久云端 Agent 的采购执行案例，Claude Code v2.1.261 修复远程与后台 Agent 生命周期。
+今日扫描完成，共 4 条动态，重点：Grok Bot 展示持久云端 Agent 的采购执行案例，Claude Code v2.1.261 修复远程与后台 Agent 生命周期。

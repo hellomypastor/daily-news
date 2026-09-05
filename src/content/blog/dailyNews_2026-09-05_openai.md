@@ -1,7 +1,7 @@
 ---
 title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
 date: "2026-09-05T00:00:00+08:00"
-updatedAt: "2026-09-05T10:18:00+08:00"
+updatedAt: "2026-09-05T12:02:00+08:00"
 description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
 featuredTitle: "Codex 0.153.4"
 featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.153.4"
@@ -9,13 +9,17 @@ featuredSummary: "修复 Astra 在内置模型选择器中的可见性和默认�
 featuredPublishedAt: "2026-09-05 07:25 +08:00"
 featuredTags: ["Codex","GPT-6 Astra","修复版"]
 tags:
+  - "安全"
   - "观察池"
   - "可靠性"
   - "模型成本"
   - "社区反馈"
+  - "推理质量"
+  - "文件上传"
   - "修复版"
   - "用户体验"
   - "状态事件"
+  - "Academic Researchers"
   - "Agent"
   - "Amazon Bedrock"
   - "ChatGPT"
@@ -23,6 +27,8 @@ tags:
   - "ChatGPT Edu"
   - "Codex"
   - "Codex Cloud"
+  - "Daybreak"
+  - "GPT-5.6"
   - "GPT-6 Astra"
   - "MFA"
   - "OpenAI"
@@ -31,7 +37,7 @@ tags:
 
 ## 今日概览
 
-发现窗口：**2026-09-04 10:18 至 2026-09-05 10:18（Asia/Shanghai）**。窗口内最明确的产品变化来自 Codex 0.153.3 与 0.153.4：前者把 GPT‑6 Astra 加入 Amazon Bedrock 的 Mantle/Runtime 模型目录并修正异步提问指导，后者修复 Astra 在内置模型选择器中的可见性、在未显式配置时将其设为内置默认，并限定只有会话具备相应工具时才使用异步提问。OpenAI 同时记录 APAC 区域 ChatGPT、Work、图像、文件、Voice 与 Codex Cloud 的错误升高事件，已在 18:46 宣布恢复。社区反馈集中在额度重置、模型成本/重试、跨系统可靠性、编辑历史与企业账号访问；这些均未独立复现。
+发现窗口：**2026-09-04 12:02 至 2026-09-05 12:02（Asia/Shanghai）**。窗口内最明确的产品变化来自 Codex 0.153.3 与 0.153.4：前者把 GPT‑6 Astra 加入 Amazon Bedrock 的 Mantle/Runtime 模型目录并修正异步提问指导，后者修复 Astra 在内置模型选择器中的可见性、在未显式配置时将其设为内置默认，并限定只有会话具备相应工具时才使用异步提问。OpenAI 同时记录 APAC 区域 ChatGPT、Work、图像、文件、Voice 与 Codex Cloud 的错误升高事件，已在 18:46 宣布恢复。社区反馈集中在额度重置、模型成本/重试、跨系统可靠性、编辑历史、文件上传、安全拦截与企业/研究账号访问；这些均未独立复现。
 
 ## Tier 1：编码、Agent 与开发者平台
 
@@ -74,7 +80,7 @@ tags:
 
 ## Hate
 
-可见负面样本集中在：额度重置后仍显示无剩余额度、Luna/Terra 重试可能推高实际成本、多处 ChatGPT 功能同时失常、编辑后版本切换入口消失，以及 Business/Edu 账号权益问题。它们提供了具体情境，但均为单一或少量用户自述，不能外推为普遍故障。
+可见负面样本集中在：额度重置后仍显示无剩余额度、Luna/Terra 重试可能推高实际成本、长上下文推理被认为难以收敛、多处 ChatGPT 功能同时失常、编辑后版本切换入口消失、Excel 上传不可读、安全请求被拦截，以及 Business/Edu/Academic Researchers 账号权益问题。它们提供了具体情境，但均为单一或少量用户自述，不能外推为普遍故障。
 
 ## 口碑判断
 
@@ -96,6 +102,10 @@ ChatGPT Release Notes 在不同缓存入口显示的最新条目不一致，本�
 - **Sol 成本与 Luna/Terra 重试成本**（2026-09-05 04:23 +08:00）：用户以遗留 MUD 工程为例，认为较便宜模型的重试与恢复上下文可能抵消单次价格优势；缺少统一任务与计量对照。 [原帖](https://community.openai.com/t/sol-is-expensive-but-luna-terra-retries-can-cost-even-more/1394943)
 - **ChatGPT Business 所有者 MFA 锁定**（2026-09-05 06:31 +08:00）：工作区所有者称丢失认证器且无备用方式，已进入人工所有权审核；属于个别账号支持案例。 [原帖](https://community.openai.com/t/chatgpt-business-owner-locked-out-by-mfa-manual-ownership-review-pending/1394959)
 - **CSU ChatGPT Edu Pro 重置日期后移**（2026-09-05 09:41 +08:00）：用户称 Pro 始终不可选，但界面显示的重置日期每日后移；帖子给出连续三天文字记录，尚无官方确认。 [原帖](https://community.openai.com/t/chatgpt-edu-csu-pro-reset-date-moves-forward-by-one-day-every-day-while-pro-remains-unavailable/1394969)
+- **GPT‑5.6 High/Very High 推理质量退化**（2026-09-05 10:56 +08:00）：用户称长上下文开发与调试任务更难收敛，并伴随约 25–26 分钟停止、文件访问与请求审查异常；无法确认后端变化或这些现象是否同源。 [原帖](https://community.openai.com/t/gpt-5-6-high-very-high-now-feels-like-performative-reasoning-rather-than-deep-reasoning/1394975)
+- **Excel 上传后无法读取**（2026-09-05 11:10 +08:00）：用户称持续上传含每日工作表的 Excel 文件后，ChatGPT 的文件处理环境仍无法访问，需改用截图；属于单一个案。 [原帖](https://community.openai.com/t/chatgpt-having-trouble-finding-uploaded-excel-file/1394976)
+- **Academic Researchers 席位未获额度重置**（2026-09-05 11:22 +08:00）：用户询问免费研究席位是否包含已向部分付费方案提供的额度重置，尚无官方答复。 [原帖](https://community.openai.com/t/do-academic-researchers-seats-get-usage-resets-mine-have-never-received-one/1394977)
+- **网络安全请求触发 Daybreak 提示**（2026-09-05 11:33 +08:00）：用户称在 VPS 上执行普通命令生成任务时收到网络安全内容不可显示及 Daybreak 资格提示；请求内容与分类依据不足，无法判断是否误拦截。 [原帖](https://community.openai.com/t/why-am-i-getting-this-content-can-t-be-shown-we-re-especially-careful-with-cybersecurity-requests-if-you-re-a-security-professional-you-may-be-eligible-for-daybreak/1394978)
 
 ## 未证实传闻
 
@@ -112,11 +122,15 @@ ChatGPT Release Notes 在不同缓存入口显示的最新条目不一致，本�
 - [Codex 模型成本反馈](https://community.openai.com/t/sol-is-expensive-but-luna-terra-retries-can-cost-even-more/1394943)
 - [Business MFA 锁定反馈](https://community.openai.com/t/chatgpt-business-owner-locked-out-by-mfa-manual-ownership-review-pending/1394959)
 - [Edu Pro 权益反馈](https://community.openai.com/t/chatgpt-edu-csu-pro-reset-date-moves-forward-by-one-day-every-day-while-pro-remains-unavailable/1394969)
+- [GPT‑5.6 推理质量反馈](https://community.openai.com/t/gpt-5-6-high-very-high-now-feels-like-performative-reasoning-rather-than-deep-reasoning/1394975)
+- [Excel 文件上传反馈](https://community.openai.com/t/chatgpt-having-trouble-finding-uploaded-excel-file/1394976)
+- [Academic Researchers 额度反馈](https://community.openai.com/t/do-academic-researchers-seats-get-usage-resets-mine-have-never-received-one/1394977)
+- [Daybreak 安全拦截反馈](https://community.openai.com/t/why-am-i-getting-this-content-can-t-be-shown-we-re-especially-careful-with-cybersecurity-requests-if-you-re-a-security-professional-you-may-be-eligible-for-daybreak/1394978)
 
 ## 采集状态
 
 - 已检查：OpenAI News、ChatGPT Release Notes、开发者平台 changelog/模型/弃用文档；Codex、Python/Node SDK、Agents SDK releases；OpenAI Status、Developer Community 与公共社区日期检索。
 - Tier 1/2/3：逐项检查编码与 Agent、消费功能和企业/教育/政府/科学/安全方向；确认两枚 Codex 修复版与 APAC 状态事件为窗口内官方变化。
 - 失败与限制：主站部分直连受限；Release Notes 缓存视图不一致；Reddit/HN/X/YouTube 未获可靠新增样本；社区条目均未独立复现。
-- 候选 28 条，保留 9 个来源；二次补搜：否（来源非零）。
+- 候选 32 条，保留 13 个来源；二次补搜：否（来源非零）。
 - 配图：本页不使用图片；GitHub release 与状态页未提供适合正文插入、来源稳定且内容明确的官方题图。
