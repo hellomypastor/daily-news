@@ -1,0 +1,73 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-09-06T09:23:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition Blog、Devin Docs Recent Updates 与 Devin Central",
+      "SpaceXAI News、Grok Bot、Grok API/Agent 文档",
+      "OpenAI Codex cloud/remote 与 ChatGPT agent 更新（详见 OpenAI 专题页）",
+      "Anthropic Claude Code remote/managed agent 更新（详见 Claude 专题页）",
+      "Google Jules 与 Vertex AI Agent 产品",
+      "Microsoft Copilot Studio 与 Azure Agent 服务",
+      "GitHub Copilot coding agent",
+      "Cursor Cloud Agents、Replit Agent、Factory、Sourcegraph Amp",
+      "Cloudflare Agents、Sandboxes、Computer 与 Workers",
+      "Cline、Pi Coding Agent、DeepSeek Harness/DSH、OpenCode、Aider、Continue、Roo Code 云端边界",
+      "字节 Coze/火山/豆包/Trae、阿里百炼/Qoder/通义/夸克、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek"
+    ],
+    "failedSources": [
+      "Devin 官方 Recent Updates 搜索索引未展示 2026-09-05 原始条目，日期明确的 Continuity 候选仅由二手聚合页支持",
+      "部分中国厂商更新页缺少可按发布时间筛选的公开索引",
+      "社区搜索噪声高，未采用无法核验产品边界或发布时间的宣传页"
+    ],
+    "candidateCount": 11,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-09-05 09:23 至 2026-09-06 09:23（Asia/Shanghai）**。严格核验后，窗口内没有可确认的新 AaaS 发布；因此已按规范完成第二轮扩展搜索。24–72 小时观察窗内最清晰的信号来自 SpaceXAI：Grok Bot 展示采购流程中的持续执行案例，并发布持久 Agent 的产品设计与企业治理材料。Cognition Devin 有 9 月 5 日的 Continuity 候选，但原始 changelog 未能直达，仅放入日期未确认/观察池。\n\n## 重点动态\n\n1. **24 小时内：无已验证新增。** 没有把普通模型/API发布、本地 harness 或缺少托管执行证据的产品误归 AaaS。\n2. **24–72 小时观察：Grok Bot 的 AaaS 定位更具体。** [采购案例](https://x.ai/news/grok-bot-procurement)显示 Bot 被授权读取支出、合同与用量数据并持续执行分析和谈判准备；官方声称案例找到超过 10 万美元直接节省，该数值仅作为厂商案例陈述，不作独立效果保证。\n3. **企业化与生命周期管理。** [Grok Bot for Enterprise](https://x.ai/news/grok-bot-for-enterprise)说明 Bot 在独立云端计算机运行，可自主持续执行，并新增访问、网络和审计控制；这满足托管执行与企业治理的 AaaS 边界。\n\n## 远程 / 云端 Agent 执行\n\n| 厂商/产品 | 时间范围 | 托管执行证据 | 判断 |\n|---|---|---|---|\n| SpaceXAI Grok Bot | 24–72 小时 | 独立云端计算机、跨应用执行、持续工作、企业访问/网络/审计控制 | 明确 AaaS，观察池 |\n| Cognition Devin | 日期候选为 9 月 5 日 | Devin 本身是云 Agent，但本轮 Continuity 条目的原始变更内容未核验 | 日期未确认，不作发布事实 |\n| OpenAI Codex cloud/remote | 24 小时 | 本轮未发现新的官方托管执行发布 | 无新增，详见 OpenAI 专题页 |\n| Anthropic managed/remote | 24 小时 | 本轮未发现新的官方托管执行发布 | 无新增，详见 Claude 专题页 |\n| Cursor Cloud Agents / Jules / GitHub coding agent / Replit Agent | 24 小时 | 已核对官方产品与更新入口，未见窗口内新事件 | 无新增 |\n\n## 海外厂商\n\n### SpaceXAI：持久 Agent 的交互与企业治理\n\n[持久 Agent 设计文章](https://x.ai/news/designing-grok-bot)解释 Grok Bot 如何从单次聊天转向长期存在的 Bot：每个 Bot 有自己的计算机、状态与可接管界面，工作可在没有新 prompt 的情况下开始。这是产品设计说明，不是新的性能评测，但为其托管生命周期模型提供了直接证据。\n\n企业版本材料则明确了独立环境、组织访问、网络与审计控制，以及 Bot 之间共享上下文的能力。企业采用数量和“数百万 Bots”等数字均为厂商自述，尚无第三方核验。\n\n### Cognition Devin：强制检查结果\n\n已检查 Cognition Blog、Devin Docs Recent Updates 与可检索的更新聚合。Devin 的托管 VM、异步 session、调度、并发与企业接入属于既有能力；本轮没有找到窗口内可直接引用的官方新公告。二手页面列出 9 月 5 日 “Devin Desktop: Continuity”，但缺少可打开的原始 changelog 与具体变更，故仅列观察候选。\n\n### 其他海外厂商\n\nGoogle Vertex Agent/Jules、Microsoft Copilot Studio/Azure Agent、Replit Agent、Cursor Cloud Agents、Lindy、CrewAI、LangGraph Platform、GitHub coding agent、Amazon Q Developer、Cloudflare Agents/Sandboxes、Factory 与 Sourcegraph/Amp 均完成窗口扫描，未发现可验证的新增 AaaS 事件。\n\n## 中国厂商（字节系重点）\n\n字节 Coze/火山引擎/豆包/Trae/Seed 已重点检查，未见窗口内新的托管 Agent 执行、定价、配额或企业控制公告。阿里百炼/Qoder/通义/夸克、腾讯元宝/混元/云、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax、DeepSeek 也未发现可验证的 24 小时新增。Qoder Cloud Agents 现有页面能证明其全托管运行形态，但不是本窗口新增，因此不重复作为当日动态。\n\n## 开源 Coding Harness 的云端边界\n\n- **Cline、Pi Coding Agent、DeepSeek Harness/DSH、OpenCode、Aider、Continue、Roo Code：** 已逐项检查 hosted/cloud execution、background/scheduled tasks、remote environment、并发、企业控制与定价证据；本窗口没有来自各项目方的新增托管服务公告。\n- 搜索中出现第三方托管网页，声称托管 Codex CLI、OpenCode 与 DSH，但缺少可靠发布日期与成熟度证据，未作为已确认行业动态。\n- 本地 CLI、IDE/桌面功能、自托管 headless 模式和“可部署到 VPS”不等于提供方托管执行，因此留在开源专题，不归入本页正文动态。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- **AaaS：** 服务方托管 Agent 的计算环境、任务队列、生命周期、权限与观测，例如 Grok Bot 的独立云端计算机和企业控制。\n- **MaaS：** 只提供模型推理 API，即使模型擅长 tool use 或长程任务，也不自动成为 AaaS。\n- **PaaS：** 只提供 sandbox、容器或通用云基础设施，若没有托管 Agent 生命周期，属于邻近基础设施。\n\n## 日期未确认\n\n- [Devin Central 的更新索引](https://devincentral.com/)列出 “Devin Desktop: Continuity — 2026-09-05”。该站不是 Cognition 官方来源，本轮也未定位到对应原始 changelog，因此只确认“二手索引存在此候选”，不确认具体功能已发布。\n\n## 未证实传闻\n\n本轮未保留单源泄露或产品传闻。\n\n## 邻近信号观察池\n\n- [Cognition 9 月 3 日更新聚合](https://releases.sh/cognition)称 v3 API 增加增量扫描触发、多仓库摄取与 scan effort 选择，并有 scheduled code scans。它与托管生命周期相关，但来源为第三方聚合且在 24–72 小时观察窗，等待官方原文复核。\n- 模型 API、Grok 4.6 的模型能力和本地 Grok Build/OpenCode 集成本身不满足 AaaS 定义，本页不把它们计为动态。\n\n## 趋势判断\n\n持久 Agent 的竞争正在从“模型会不会调用工具”转向“是否拥有持续在线的计算机、能否跨应用完成闭环，以及企业能否治理访问、网络与审计”。Grok Bot 近 72 小时的三份官方材料集中展示了这条路线；但本轮没有 24 小时内新品，且采购节省与采用规模均是厂商自报，结论置信度为中等。\n\n## 来源链接\n\n全部来源已在对应条目中直接链接。\n\n## 采集状态\n\n- 已检查：Cognition Devin；SpaceXAI Grok Bot/Agent/API；OpenAI 与 Anthropic 托管 Agent；Google、Microsoft、GitHub、Cursor、Replit、Cloudflare 等海外平台；字节系及主要中国厂商；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 云端边界。\n- 失败来源：Devin 9 月 5 日候选缺少可直达官方原文；部分中国厂商页无法按日期可靠筛选；社区搜索噪声高。\n- 初始候选数：11；最终保留来源数：5。\n- 二次补搜：是。由于 24 小时已验证动态为 0，已扩大中英文关键词，并补查官方新闻索引、GitHub/项目入口及可信二手聚合。\n\n**今日扫描完成，共 5 条动态，重点：24 小时内无已验证新增；24–72 小时内 Grok Bot 的持久云端执行、企业治理与采购案例构成主要 AaaS 信号。**",
+  "sources": [
+    {
+      "title": "Setting Grok Bot loose on procurement",
+      "url": "https://x.ai/news/grok-bot-procurement",
+      "source": "SpaceXAI",
+      "publishedAt": "",
+      "summary": "SpaceXAI 展示 Grok Bot 读取支出、合同和用量数据并持续执行采购分析与谈判准备的案例；处于 24–72 小时观察窗。",
+      "tags": ["Grok Bot", "AaaS", "观察池"]
+    },
+    {
+      "title": "Grok Bot for Enterprise",
+      "url": "https://x.ai/news/grok-bot-for-enterprise",
+      "source": "SpaceXAI",
+      "publishedAt": "",
+      "summary": "Grok Bot 企业版增加组织访问、网络和审计控制，每个 Bot 在独立云端计算机中持续执行。",
+      "tags": ["Grok Bot", "Enterprise", "观察池"]
+    },
+    {
+      "title": "Designing Grok Bot for a world of persistent agents",
+      "url": "https://x.ai/news/designing-grok-bot",
+      "source": "SpaceXAI",
+      "publishedAt": "",
+      "summary": "官方设计文章解释 Grok Bot 的持久生命周期、自有计算机、状态可见性与人工接管模式。",
+      "tags": ["Grok Bot", "Persistent Agent", "观察池"]
+    },
+    {
+      "title": "Devin Central — Devin news of record",
+      "url": "https://devincentral.com/",
+      "source": "Devin Central（非官方）",
+      "publishedAt": "",
+      "summary": "二手更新索引列出 Devin Desktop Continuity 的 9 月 5 日候选，但本轮未定位到对应官方原文，具体变更未确认。",
+      "tags": ["Devin", "日期未确认", "二手来源"]
+    },
+    {
+      "title": "Cognition Release Notes & Changelog · September 2026",
+      "url": "https://releases.sh/cognition",
+      "source": "releases.sh（第三方聚合）",
+      "publishedAt": "",
+      "summary": "第三方聚合称 Devin v3 API 和 scheduled code scans 有更新，属于 24–72 小时邻近信号，等待官方原文复核。",
+      "tags": ["Devin", "观察池", "二手来源"]
+    }
+  ]
+}
