@@ -1,0 +1,92 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-09-07T00:00:00+08:00"
+updatedAt: "2026-09-07T10:47:53+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTags: []
+tags:
+  - "24–72h 观察"
+  - "邻近信号"
+  - "日期未确认"
+  - "AaaS"
+  - "Agent"
+  - "Cloud Agent"
+  - "Enterprise"
+  - "MaaS"
+  - "Managed Agent"
+  - "OpenAI"
+---
+
+## 今日概览
+
+主窗口为 **2026-09-06 10:47:53 至 2026-09-07 10:47:53（Asia/Shanghai）**。按“由服务方托管或管理 Agent 执行生命周期”的定义，本轮没有发现可确认落入 24 小时窗口的新动态。已按要求扩大中英文关键词并切换至官方博客、更新日志、GitHub、云厂商与可信二手入口完成第二轮搜索。9 月 4 日 GitHub Copilot 的两项官方更新处于 24–72 小时观察范围，但原文仅给日期、无法确认具体时刻，故放入观察池而不计为今日已验证动态。
+
+## 重点动态
+
+**24 小时已验证动态：0 条。** 不用旧闻填充本栏。当前值得关注的是 GitHub Copilot 托管 coding agent 的模型与治理面扩展，但其发布日期只有日级精度，且处于观察窗口。
+
+## 远程 / 云端 Agent 执行
+
+| 平台 | 本轮结论 | AaaS 证据边界 |
+|---|---|---|
+| GitHub Copilot coding agent | 24–72 小时观察 | 官方 9 月 4 日周更提到 Agent Merge、内容排除和多根工作区等 agent 工作流变化；Copilot coding agent 本身属于 GitHub 托管执行，但本轮不能确认文章发布时间是否落在观察窗 |
+| OpenAI Codex remote/cloud | 无新增 | 检查官方入口；未发现窗口内新的远程任务、并发、定价或企业控制面更新，详见 OpenAI 专题页 |
+| Claude managed agents | 无新增 | 未发现窗口内可核实的托管执行变化，详见 Claude 专题页 |
+| Cursor Cloud Agents | 无新增 | 官方文档确认其云 VM、后台运行和自动化能力，但没有窗口内带时间的新发布，不重复收录背景页 |
+| Google Jules / Gemini Enterprise Agent Platform | 无新增 | 未见窗口内官方发布 |
+| Replit Agent / Factory / Amp | 无新增 | 未见窗口内托管执行、配额或企业能力变化 |
+
+## 海外厂商
+
+### Cognition Devin（必查）
+
+已逐项检查 Devin 的托管异步执行、独立环境、自动化/定时任务、并发队列、定价、企业访问与集成。官方博客与可检索变更记录没有落入本轮 24 小时或 24–72 小时窗口的新条目；不重复引用更早的 cloud agent、Automations、Outposts、OIDC、SCIM 等背景发布来制造“新增”。结论：**无新增**。
+
+### xAI / Grok（必查）
+
+已专门搜索 Grok 的托管 Agent、后台/异步任务、远程环境、工具调用、编码执行、企业与 API Agent 能力。未发现窗口内满足 AaaS 定义的新官方动态。普通 Grok 模型或 API 消息属于 MaaS/行业新闻；本轮未将其误计入 AaaS。较早的 Grok Build `/goal` 是本地/交互式 harness 的长任务模式，现有证据不足以证明由厂商托管远程执行，因此不作为 AaaS 来源重复收录。结论：**无新增**。
+
+### 开源 coding harness 的云托管边界
+
+Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue、Roo Code 均已逐一检查。窗口内未发现由项目方提供托管环境、后台/定时任务、远程生命周期、服务端并发或企业控制面的新证据。其本地 CLI、IDE、桌面、自托管与普通 harness 更新属于开源专题，不进入本页。
+
+## 中国市场（字节重点）
+
+- **字节跳动**：检查 Coze、火山引擎、豆包、Trae、Seed 的托管智能体、异步执行、企业控制与定价入口，未发现窗口内可核实新增。
+- **阿里、腾讯、百度**：百炼/Qoder/通义/夸克、元宝/混元/腾讯云、AgentBuilder/Comate 均未发现窗口内满足 AaaS 门槛的新发布。
+- **智谱、Kimi、MiniMax、DeepSeek 与可信创业公司**：未发现窗口内可由原始来源确认的托管执行动态。
+
+## AaaS vs MaaS / PaaS
+
+本页只把服务方管理执行环境、异步任务、生命周期、编排、可观测、企业权限或远程 coding work 的变化计为 AaaS。单纯新增模型到模型选择器属于 MaaS 分发；通用虚拟机、容器、数据库或 GPU 基础设施属于 PaaS/IaaS。即使模型宣称擅长 agentic coding，也不等于厂商提供了托管 Agent 执行服务。
+
+## 日期未确认
+
+- 9 月 4 日 GitHub Copilot 周更只有日期，没有公开具体时刻；相对于本轮截止点，它可能落入也可能早于 24–72 小时观察窗，故保留为日期未确认候选：[GitHub Copilot weekly releases — August 31](https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31/)。其中 Agent Merge 会处理评审反馈、失败检查和合并冲突，体现托管 agent 生命周期继续向 PR 收尾延伸。
+
+## 未证实传闻
+
+本轮未发现达到“相关且可定位原始说法”的单一来源泄露或传闻；不收录无法追溯的社交媒体转述。
+
+## 邻近信号观察池
+
+- [GPT-6 Astra is generally available in GitHub Copilot](https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/) 标注 9 月 4 日，覆盖 GitHub Copilot coding agent、App、CLI、IDE 和移动端，并提供 Business/Enterprise 管理策略。它对托管 coding agent 的模型供给与企业治理有关，但核心事件是模型可用性，属于 **MaaS 邻近信号**，不计作新的 AaaS 执行能力；详见 OpenAI 专题页。
+
+## 趋势判断
+
+本轮没有新发布支撑趋势拐点。观察项显示托管 coding agent 的竞争继续从“能否后台写代码”向模型选择、内容隔离、评审/CI/冲突闭环和企业策略管理延伸；但在没有新定价、并发、运行环境或执行生命周期证据前，不应夸大为新一轮 AaaS 发布潮。
+
+## 来源链接
+
+1. [GitHub Copilot weekly releases — August 31](https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31/)
+2. [GPT-6 Astra is generally available in GitHub Copilot](https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/)
+
+## 采集状态
+
+- 已检查：Devin（托管异步、环境、并发、定价、企业、集成）、Grok（托管/异步/工具/远程执行）、OpenAI/Claude cloud agents、Google、Microsoft/GitHub、Replit、Cursor、AWS、Cloudflare、Factory、Amp、中国主要平台，以及 Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的云托管边界。
+- 失败来源：X 无法稳定核验；Cognition 最新可检索变更早于观察窗；部分滚动文档无逐项发布时间。
+- 初始候选数：9；保留来源数：2；24 小时已验证数：0。
+- 二次补搜：是；已扩大中英文关键词，并切换官方博客/更新日志、GitHub、云厂商和可信二手入口。
+- 配图：未配置；保留条目均为日期未确认或邻近信号，按规范不得作为页面图片来源。
+
+今日扫描完成，共 2 条动态，重点：24 小时无已验证 AaaS 新发布，GitHub Copilot 的 PR 生命周期与模型治理变化进入观察池。

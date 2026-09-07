@@ -1,0 +1,128 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-09-07T10:47:53+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/1/redhat-et/ripwire",
+    "alt": "Ripwire GitHub 仓库的公开 OpenGraph 项目预览图",
+    "sourceUrl": "https://github.com/redhat-et/ripwire",
+    "caption": "图片来源：Ripwire GitHub 仓库"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline（cline/cline）官方仓库、Releases、Changelog 与最近提交",
+      "Pi Coding Agent / pi-mono（badlogic/pi-mono 已重定向至 earendil-works/pi）官方仓库、Releases、packages 与 Changelog",
+      "DeepSeek Harness / DSH（deepseek-ai/deepseek-harness）官方仓库、Releases、packages 与文档",
+      "OpenCode（anomalyco/opencode）官方仓库、Releases 与最近提交",
+      "Aider（Aider-AI/aider）官方仓库、Releases 与最近提交",
+      "Continue（continuedev/continue）官方仓库、Releases 与最近提交",
+      "Roo Code（RooCodeInc/Roo-Code）官方仓库、Releases 与最近提交",
+      "GitHub Trending 日榜 Overall、Python 与 TypeScript",
+      "Hacker News front/newest 与 Algolia 指定窗口提交",
+      "arXiv cs.AI/cs.LG/cs.SE 最近论文入口",
+      "Hugging Face Papers 与官方 Blog",
+      "Simon Willison Weblog/TIL 与可信模型、基础设施工程博客"
+    ],
+    "failedSources": [
+      "badlogic/pi-mono 旧入口：GitHub API 重定向至 earendil-works/pi，已按当前官方仓库核查",
+      "GitHub Trending：页面混入 sponsor 链接，已只记录可识别的正式仓库行并将榜单数据视为采集快照",
+      "arXiv 与 Hugging Face Papers：未检出可确认落在本轮窗口且优先级足够高的新论文，未以旧条目充数"
+    ],
+    "candidateCount": 31,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮发现窗口为 **2026-09-06 10:47:53 至 2026-09-07 10:47:53（Asia/Shanghai）**；已验证技术重点放宽至近 48 小时。Coding Agent / Harness 方向最实质的变化来自 Pi 将内置工具的严格 JSON Schema 采样转为默认偏好、OpenCode 保留调用方显式指定的 OpenAI service tier；Cline 仅有 Windows 任务栏图标修复。HN 新项目则集中在子 Agent 权限票据、代码库上下文索引和多工具桌面自动化，互动仍较低，应视为早期信号。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 关键观察 |\n|---|---|---|\n| Pi Coding Agent | **近 48 小时有更新** | [严格工具采样提交](https://github.com/earendil-works/pi/commit/fcff255b004a6cde812b5b7a714e0bfe9c540986)让内置 `read`、`bash`、`powershell`、`edit`、`write` 默认偏好严格 JSON Schema；扩展仍可显式关闭。此前 [v0.85.1](https://github.com/earendil-works/pi/releases/tag/v0.85.1) 修复 0.85.0 误发布实验接口造成的 SDK import failure，并增加 GPT-6 Astra 路由。 |\n| OpenCode | **窗口内工程提交** | [提交 ea2d59d](https://github.com/anomalyco/opencode/commit/ea2d59d7ca8028951a16d4ebc558104258440bf9)移除 SDK 中对 flex/priority 能力的静态过滤，使显式指定的 OpenAI service tier 不再被旧能力表静默删除。 |\n| Cline | **窗口内小修复** | [提交 c21b172](https://github.com/cline/cline/commit/c21b17255b228e88a1518c18a73a473ee5876362)仅更新 Windows 任务栏图标，没有 Agent loop、权限、工具或会话层变化。 |\n| DeepSeek Harness / DSH | 已检查，无新增 | 官方最新 release 仍为 2026-09-04 的 v0.1.3-alpha.1，本窗口无新 release 或主分支提交。 |\n| Aider | 已检查，无新增 | 官方最新 release 仍为 2025-08-09 的 v0.86.0，主分支最新活动停留在 2026-05。 |\n| Continue | 已检查，无新增 | 官方 release 与主分支最新活动分别停留在 2026-06 与 2026-07。 |\n| Roo Code | 已检查，无新增 | 官方 release 与主分支活动均停留在 2026-05。 |\n\n## 已验证技术精选\n\n### 1. Pi 默认偏好严格工具参数采样\n\n[Pi 提交 fcff255](https://github.com/earendil-works/pi/commit/fcff255b004a6cde812b5b7a714e0bfe9c540986)在 2026-09-06 05:54（上海时间）落地，将内置文件、编辑与 shell 工具的 `constrainedSampling` 默认设为 `json_schema` / `strict: prefer`，不再要求实验开关；扩展作者仍能用 `constrainedSampling: false` 重新注册工具。\n\n**为什么重要：** 工具调用结构约束直接影响参数解析与执行可靠性；保留扩展级退出开关，也避免把兼容性选择硬编码成不可覆盖的全局行为。\n\n### 2. OpenCode 不再用静态模型表删除显式 service tier\n\n[OpenCode 提交 ea2d59d](https://github.com/anomalyco/opencode/commit/ea2d59d7ca8028951a16d4ebc558104258440bf9)在 2026-09-07 05:48（上海时间）修改其 OpenAI SDK 补丁，移除基于本地 capability 表对 `flex`、`priority` 的拦截。调用方明确传入的 service tier 因而可以继续发给服务端判断，而不会因客户端能力表滞后被清空。\n\n**为什么重要：** 这是模型路由配置的保真修复，尤其适用于服务端支持范围快于本地 SDK 元数据更新的场景；它不等于所有模型都支持这些 tier。\n\n### 3. Pi v0.85.1 修补公共 SDK 发布边界\n\n[Pi v0.85.1](https://github.com/earendil-works/pi/releases/tag/v0.85.1)发布于 2026-09-05 20:29（上海时间）。官方说明确认 0.85.0 意外发布内部实验代码与依赖，可能导致 SDK import failure；修复后实验性 client/plugin 子路径回到仅源码测试范围，已支持的本地 SDK 与 stdio RPC API 不变。版本同时增加 GPT-6 Astra 接入并调整 prompt-cache 参数。\n\n**为什么重要：** 对把 Pi 作为库或 RPC harness 嵌入的使用者而言，公共接口与实验模块的发布隔离比表面功能数量更关键。\n\n## GitHub Trending\n\n- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) 在本轮 Overall/Python 日榜抓取中出现，页面显示 **520 stars today**。该数字是榜单采集快照，只表示当日可见热度，不代表项目今天发布或已通过独立能力评测。\n- GitHub 日榜还出现 `openai/skills`、`humanlayer/skills` 等技能仓库；因其更适合 OpenAI 专题或缺少本轮可验证的技术发布，本页只计入候选，不重复扩写。\n\n## Hacker News 讨论\n\n- [Pigeon](https://github.com/pigeonlabsHQ/pigeon) 是一个为子 Agent 签发有限权限票据的早期仓库，README 将 Pass 表述为可限制能力、资源与时效的委派凭证。对应 [HN 讨论](https://news.ycombinator.com/item?id=49585209) 提交于 2026-09-06 18:47（上海时间），采集时为 8 points、5 comments。仓库当日创建，尚不足以证明安全模型经受了广泛审计。\n- [Ripwire](https://github.com/redhat-et/ripwire) 提供零依赖 C++ CLI 与 MCP server，为代码库生成排序后的上下文地图、影响范围和测试建议。对应 [HN 提交](https://news.ycombinator.com/item?id=49593050) 在 2026-09-07 10:11（上海时间）采集时仅 2 points、0 comments；README 中的 token 节省数字属于作者测量，本轮未独立复现。\n- Simon Willison 的 [Using Blender with coding agents on macOS](https://til.simonwillison.net/llms/blender-coding-agents-macos) 展示通过 AppleScript 与 Blender Python API 让 Claude Code、Codex CLI、Gemini CLI 驱动 3D 工作流；[HN 讨论](https://news.ycombinator.com/item?id=49583457) 采集时为 8 points、0 comments。该文是可复现思路记录，不是通用基准。\n\n## 论文与研究\n\n本轮检查 arXiv 与 Hugging Face Papers 后，没有发现能由原始页面确认在指定窗口首次发布、且相关性和技术信息密度高于上述工程更新的论文；不以日期不明或较旧论文凑数。\n\n## 较旧文章再浮现\n\n本轮未发现同时满足“原文早于七天、过去 24 小时在 HN 重新出现且形成实质讨论”的条目。Simon Willison 的 Blender 文章发表于本周，不属于旧文再热。\n\n## 日期未确认\n\n无。GitHub Trending 项目的 `publishedAt` 留空，因为榜单只能证明采集时热度，不能推断项目发布日期。\n\n## 观察池\n\n- [Cline Windows 图标修复](https://github.com/cline/cline/commit/c21b17255b228e88a1518c18a73a473ee5876362)：**窗口内但影响较小。** 已在雷达如实记录，不提升为技术重点。\n- Pigeon 与 Ripwire 均有官方仓库和窗口内 HN 提交，但互动量有限；权限模型、安全边界和性能数字仍需后续验证。\n- HN newest 还出现浏览器桥接、Agent 上下文管理器与多 Agent 研究工具等低互动项目；因只有作者自述或营销页面，保留在候选计数而不写成已验证事实。\n\n## 来源链接\n\n正文已直接链接官方 GitHub release/commit/仓库、Simon Willison 原文与 Hacker News 讨论页；单页 URL 已去重，没有以搜索结果摘要作为事实来源。\n\n## 采集状态\n\n- **采集窗口：** 2026-09-06 10:47:53 至 2026-09-07 10:47:53（Asia/Shanghai）；已验证重点兼顾近 48 小时。\n- **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending Overall/Python/TypeScript；HN front/newest/Algolia；arXiv；Hugging Face Papers/Blog；Simon Willison。\n- **失败/受限：** Pi 旧入口发生官方重定向，已追踪当前仓库；GitHub Trending 混入 sponsor 链接，未将其误认作仓库；arXiv/Hugging Face 本轮无足够新的高相关论文。\n- **初始候选数：** 31；**最终保留来源数：** 11；**二次补搜：** 否（最终来源不为 0）。\n- **图片：** 使用 Ripwire 官方 GitHub 仓库公开 OpenGraph 图，已验证 HTTP 200；图片来源链接同时出现在正文与 sources。",
+  "sources": [
+    {
+      "title": "Pi: prefer strict sampling for built-in tools by default",
+      "url": "https://github.com/earendil-works/pi/commit/fcff255b004a6cde812b5b7a714e0bfe9c540986",
+      "source": "Pi GitHub",
+      "publishedAt": "2026-09-06 05:54 +08:00",
+      "summary": "Pi 的内置文件、编辑与 shell 工具默认偏好严格 JSON Schema 参数采样，同时允许扩展显式关闭。",
+      "tags": ["Coding Agent", "Tool Execution", "Reliability"]
+    },
+    {
+      "title": "OpenCode: preserve explicit OpenAI service tiers",
+      "url": "https://github.com/anomalyco/opencode/commit/ea2d59d7ca8028951a16d4ebc558104258440bf9",
+      "source": "OpenCode GitHub",
+      "publishedAt": "2026-09-07 05:48 +08:00",
+      "summary": "OpenCode 移除旧能力表对 flex/priority 的客户端过滤，保留调用方显式设置的 OpenAI service tier。",
+      "tags": ["Coding Agent", "Model Routing", "OpenAI"]
+    },
+    {
+      "title": "Pi v0.85.1",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1",
+      "source": "Pi GitHub Releases",
+      "publishedAt": "2026-09-05 20:29 +08:00",
+      "summary": "Pi 修复实验接口误发布造成的 SDK import failure，并增加 GPT-6 Astra 接入。",
+      "tags": ["Coding Agent", "Release", "SDK"]
+    },
+    {
+      "title": "Cline: update Windows taskbar app icon",
+      "url": "https://github.com/cline/cline/commit/c21b17255b228e88a1518c18a73a473ee5876362",
+      "source": "Cline GitHub",
+      "publishedAt": "2026-09-07 09:36 +08:00",
+      "summary": "Cline Desktop 更新 Windows 任务栏图标；属于窗口内小修复，无 Agent 核心行为变化。",
+      "tags": ["Cline", "Desktop", "观察池"]
+    },
+    {
+      "title": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "source": "GitHub Trending",
+      "publishedAt": "",
+      "summary": "本轮日榜显示 520 stars today；仅作为当日可见热度信号，不代表当天发布或性能结论。",
+      "tags": ["Agent", "GitHub Trending", "观察池"]
+    },
+    {
+      "title": "Pigeon",
+      "url": "https://github.com/pigeonlabsHQ/pigeon",
+      "source": "Pigeon GitHub",
+      "publishedAt": "2026-09-06 14:39 +08:00",
+      "summary": "为子 Agent 委派有限权限的早期项目；仓库当日创建，安全边界尚待更广泛验证。",
+      "tags": ["Agent", "Permissions", "Security", "Early Project"]
+    },
+    {
+      "title": "HN: Pigeon, a signed Pass for what a sub-agent may do",
+      "url": "https://news.ycombinator.com/item?id=49585209",
+      "source": "Hacker News",
+      "publishedAt": "2026-09-06 18:47 +08:00",
+      "summary": "Pigeon 的窗口内 HN 讨论；采集时为 8 points、5 comments。",
+      "tags": ["Hacker News", "Agent Permissions", "Community Signal"]
+    },
+    {
+      "title": "Ripwire",
+      "url": "https://github.com/redhat-et/ripwire",
+      "source": "Ripwire GitHub",
+      "publishedAt": "",
+      "summary": "为编码 Agent 生成代码库上下文地图、影响范围与测试建议的 CLI/MCP 工具；性能数字未独立复现。",
+      "tags": ["Coding Agent", "MCP", "Code Context", "观察池"]
+    },
+    {
+      "title": "HN: ripwire, ripgrep of AI context",
+      "url": "https://news.ycombinator.com/item?id=49593050",
+      "source": "Hacker News",
+      "publishedAt": "2026-09-07 10:11 +08:00",
+      "summary": "Ripwire 的窗口内 HN 提交；采集时为 2 points、0 comments，仅作发现信号。",
+      "tags": ["Hacker News", "Coding Agent", "观察池"]
+    },
+    {
+      "title": "Using Blender with coding agents on macOS",
+      "url": "https://til.simonwillison.net/llms/blender-coding-agents-macos",
+      "source": "Simon Willison's TIL",
+      "publishedAt": "2026-09-05",
+      "summary": "通过 AppleScript 与 Blender Python API 让多种 coding agent 操作 3D 工作流的实践记录。",
+      "tags": ["Coding Agent", "Blender", "Automation"]
+    },
+    {
+      "title": "HN: Using Blender with coding agents on macOS",
+      "url": "https://news.ycombinator.com/item?id=49583457",
+      "source": "Hacker News",
+      "publishedAt": "2026-09-06 12:56 +08:00",
+      "summary": "Simon Willison Blender coding-agent 文章的 HN 讨论；采集时为 8 points、0 comments。",
+      "tags": ["Hacker News", "Coding Agent", "Community Signal"]
+    }
+  ]
+}
