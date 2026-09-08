@@ -1,0 +1,55 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-09-08T10:47:54+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/1/deepseek-ai/deepseek-harness",
+    "alt": "DeepSeek Harness GitHub 仓库的公开 OpenGraph 项目预览图",
+    "sourceUrl": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.3-alpha.2",
+    "caption": "图片来源：DeepSeek Harness GitHub 仓库"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline（cline/cline）官方仓库、Releases、Changelog 与最近提交",
+      "Pi Coding Agent / pi-mono（badlogic/pi-mono 已重定向至 earendil-works/pi）官方仓库、Releases、packages 与文档",
+      "DeepSeek Harness / DSH（deepseek-ai/deepseek-harness）官方仓库、Releases、packages 与文档",
+      "OpenCode（anomalyco/opencode）官方仓库、Releases、Changelog 与最近提交",
+      "Aider（Aider-AI/aider）官方仓库、Releases、Changelog 与最近提交",
+      "Continue（continuedev/continue）官方仓库、Releases、Changelog 与最近提交",
+      "Roo Code（RooCodeInc/Roo-Code）官方仓库、Releases、Changelog 与最近提交",
+      "GitHub Trending 日榜 Overall、Python 与 TypeScript",
+      "Hacker News front/newest 与 Algolia 最近提交",
+      "arXiv cs.AI/cs.LG/cs.SE 与原始论文页",
+      "Hugging Face Papers 与官方 Blog",
+      "Simon Willison Weblog/TIL 与可信模型、基础设施工程博客"
+    ],
+    "failedSources": [
+      "badlogic/pi-mono 旧入口：GitHub API 重定向至 earendil-works/pi，已按迁移后的官方仓库核查",
+      "GitHub Trending：页面含赞助链接和动态榜单数据；仅记录可识别仓库与采集时快照，不推断发布日期",
+      "Hugging Face Papers：检索结果夹杂较旧论文；只保留原始日期可核验的候选",
+      "Simon Willison Weblog/TIL：未检出窗口内可报告的新 Agent 开源条目",
+      "TeamAI 与 Agentdesktop：HN 互动很低，且前者仓库许可证字段未声明；降级为早期观察信号"
+    ],
+    "candidateCount": 26,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮发现窗口为 **2026-09-07 10:47:54 至 2026-09-08 10:47:54（Asia/Shanghai）**，技术亮点优先核验近 48 小时。Coding Agent / Harness 的实质变化包括：DeepSeek Harness 发布 alpha 版本并强化可继续子 Agent 与长会话恢复；Pi 增加实现对照型文档评测并统一 GitHub Copilot GPT 路由；Cline 修复静默终端命令误判；OpenCode增加 MCP OAuth 客户端元数据入口。GitHub Trending 的 Agent context 工具和 HN 新项目只表示当前可见度或早期讨论，不构成能力领先证据。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 关键观察 |\n|---|---|---|\n| DeepSeek Harness / DSH | **窗口内发布** | [v0.1.3-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.3-alpha.2) 为可继续子 Agent 增加消息排队、编辑、删除、Steer 与停止操作；改善长会话恢复，并调整 SDK、Headless、ACP 默认编辑工具。 |\n| Pi Coding Agent | **窗口内工程更新** | [文档评测提交](https://github.com/earendil-works/pi/commit/9211da172325117dc59e6f9f25f248dc628b3f81)为每个目录化文档页运行模型审计，再确定性校验目录；[路由提交](https://github.com/earendil-works/pi/commit/7d8ab31a477ecc07b36f56ffcae58c79307a68be)让所有 GitHub Copilot GPT 型号经 Responses API。 |\n| Cline | **窗口内修复** | [提交 afa1b01](https://github.com/cline/cline/commit/afa1b01be1fd4100af7fa4918078e7e2e367fd9e)利用 OSC 633 CommandExecuted 标记，把退出码为 0 且无输出的命令识别为真实成功，而非捕获失败。 |\n| OpenCode | **窗口内工程更新** | [提交 57ef382](https://github.com/anomalyco/opencode/commit/57ef3828431790c53f8f333c7ffbfe88770a1812)发布 OAuth Client ID Metadata Document，供支持该草案的 MCP 授权服务器读取原生客户端信息和 loopback redirect URI。 |\n| Aider | 已检查，无新增 | 官方最新 release 仍为 2025-08-09 的 v0.86.0，窗口内未见主分支更新。 |\n| Continue | 已检查，无新增 | 官方 release 与主分支均未见窗口内更新。 |\n| Roo Code | 已检查，无新增 | 官方 release 与主分支均未见窗口内更新。 |\n\n## 已验证技术精选\n\n### 1. DSH alpha.2 加强可继续子 Agent 和长会话路径\n\n[DeepSeek Harness v0.1.3-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.3-alpha.2)发布于 2026-09-07 21:59（上海时间）。官方说明显示，可继续对话的子 Agent 现在支持消息排队、编辑、删除、单条或全部 Steer 与停止；版本也改善长会话打开、恢复和续聊时的卡顿与内存占用，并修复 Web 断线恢复及 Windows Python SDK 启动问题。SDK、Headless 与 ACP 默认改用 `read`、`write`、`edit` 编辑文件，minimal 配置保持不变。\n\n**为什么重要：** 这些改动同时触及多 Agent 控制、长会话恢复和 headless 工具面，但版本仍为 alpha，采用者应验证 persona 配置拆分及默认工具变化带来的兼容性。\n\n### 2. Pi 用实现对照评测检查文档漂移\n\n[Pi 提交 9211da1](https://github.com/earendil-works/pi/commit/9211da172325117dc59e6f9f25f248dc628b3f81)在 2026-09-08 03:21（上海时间）加入 implementation-backed documentation eval：目录中的每个文档页均可触发一次模型审计，审计工具输出结构化 match/mismatch 结论，同时由确定性逻辑验证目录文件存在、没有重复且不会越出文档根目录。\n\n**为什么重要：** 这把“文档是否符合实现”纳入 harness eval，而不只是 lint 文本格式；不过审计判定仍包含模型步骤，不能等同于形式化证明。\n\n### 3. Pi 统一 Copilot GPT 的 Responses 路由\n\n[Pi 提交 7d8ab31](https://github.com/earendil-works/pi/commit/7d8ab31a477ecc07b36f56ffcae58c79307a68be)在 2026-09-07 19:01（上海时间）把 GitHub Copilot 中所有 `gpt-` 前缀型号统一路由到 Responses API，并添加覆盖全部目录型号的回归测试，替代仅匹配 `gpt-5` 的规则。\n\n**为什么重要：** 模型目录会持续变化，前缀级规则和目录遍历测试可降低新 GPT 型号被错误发送到旧端点的风险；该提交不涉及模型能力比较。\n\n### 4. Cline 不再把静默成功误报为终端捕获失败\n\n[Cline 提交 afa1b01](https://github.com/cline/cline/commit/afa1b01be1fd4100af7fa4918078e7e2e367fd9e)在 2026-09-08 08:45（上海时间）修复 VS Code shell integration：若同一输出流已解析到 OSC 633 CommandExecuted 标记，即便输出为空也视为真实静默成功，不再回退读取终端快照。官方测试覆盖 `$null` 和干净工作区上的 `git add -A` 类场景。\n\n**为什么重要：** 对会自主执行命令的 coding Agent，成功状态误判会制造伪失败和脏快照；这是一项执行可靠性修复，而非新能力发布。\n\n### 5. OpenCode 为 MCP OAuth 暴露客户端元数据文档\n\n[OpenCode 提交 57ef382](https://github.com/anomalyco/opencode/commit/57ef3828431790c53f8f333c7ffbfe88770a1812)在 2026-09-07 14:11（上海时间）增加公开 OAuth Client ID Metadata Document。支持相应草案的 MCP 授权服务器可通过 URL 型 client ID 获取客户端名称、授权类型与 loopback redirect URI，减少动态注册依赖。\n\n**为什么重要：** 这是 MCP 认证互操作性的基础设施变化；其效果仍取决于授权服务器对该规范草案的支持。\n\n## GitHub Trending\n\n采集时，[GitHub Trending 日榜](https://github.com/trending)显示 [mksglu/context-mode](https://github.com/mksglu/context-mode) 位于 Overall/TypeScript 榜单，页面显示 **147 stars today**。仓库把工具输出沙箱化、会话记忆和 MCP/hooks 路由组合为 coding-agent context 层；“98% reduction”是仓库作者描述，本轮未独立复现。榜单仅证明采集时热度，不证明项目当天发布或性能领先。\n\n## Hacker News 讨论\n\n- [Tencent TeamAI CLI](https://github.com/Tencent/teamai-cli) 在 [HN 讨论](https://news.ycombinator.com/item?id=49604925)于 2026-09-08 10:08（上海时间）提交，采集时 2 points、0 comments。仓库提供团队级 Agent 配置和 CLI，但 GitHub API 的 license 字段未声明，本轮仅作早期采用信号。\n- [Agentdesktop](https://github.com/agentdesktop-dev/agentdesktop) 在 [HN 讨论](https://news.ycombinator.com/item?id=49604626)于 2026-09-08 09:15（上海时间）提交，采集时 1 point、1 comment。项目定位为桌面 fleet 中 AI 工具的可见性与管理层；互动和公开采用证据仍很有限。\n\n## 论文与研究\n\n本轮没有发现首次发布落在近 48 小时且优先级足够高的新论文。下方保留一篇今天在 HN 出现、但原论文日期更早的邻近技术信号。\n\n## 较旧文章再浮现\n\n未发现符合“原文早于七天且过去 24 小时在 HN 再度形成讨论”的条目。\n\n## 日期未确认\n\n无。GitHub Trending 条目的 `publishedAt` 留空，因为榜单只表示采集时可见度。\n\n## 观察池\n\n- [Discovery Loop 论文](https://arxiv.org/abs/2609.05093)首次提交于 2026-09-04 20:48（上海时间），早于 48 小时窗口；[HN 提交](https://news.ycombinator.com/item?id=49604782)出现在 2026-09-08 09:42，采集时 1 point、0 comments。论文报告用 LLM 引导程序演化并由独立 verifier 筛选候选，在 circle-packing 问题上刷新 10 个已知解；因原文尚不足七天且 HN 讨论很弱，不列入“较旧文章再浮现”，仅保留邻近研究信号。\n- TeamAI、Agentdesktop 均有可访问的官方仓库，但 HN 互动很低；前者许可字段还需澄清，因此不把作者定位扩写成成熟度或采用结论。\n\n## 来源链接\n\n正文直接链接官方 release、commit、仓库、arXiv 与 Hacker News 讨论页；同页 URL 已去重。没有使用搜索结果缩略图或第三方摘要作为事实来源。\n\n## 采集状态\n\n- **采集窗口：** 2026-09-07 10:47:54 至 2026-09-08 10:47:54（Asia/Shanghai）；技术亮点优先核验近 48 小时。\n- **已检查：** Cline、Pi、DeepSeek Harness 三个 Tier 1 官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending Overall/Python/TypeScript；HN front/newest/Algolia；arXiv；Hugging Face Papers/Blog；Simon Willison。\n- **失败/受限：** Pi 旧入口发生官方重定向，已追踪当前仓库；GitHub Trending 是动态榜单且含赞助链接；Hugging Face 检索夹杂旧论文；Simon Willison 无窗口内高相关新条目；TeamAI/Agentdesktop 社区证据较弱。\n- **初始候选数：** 26；**最终保留来源数：** 13；**二次补搜：** 否（最终来源不为 0）。\n- **图片：** 已验证 DeepSeek Harness 官方 GitHub OpenGraph 图可公开访问（HTTP 200），`sourceUrl` 对应正文首条 release。",
+  "sources": [
+    {"title":"DeepSeek Harness v0.1.3-alpha.2","url":"https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.3-alpha.2","source":"DeepSeek Harness GitHub Releases","publishedAt":"2026-09-07 21:59 +08:00","summary":"DSH 增强可继续子 Agent 的队列与 Steer 操作、长会话恢复和默认编辑工具配置。","tags":["Coding Agent","Harness","Multi-Agent","Release"]},
+    {"title":"Pi: implementation-backed documentation evals","url":"https://github.com/earendil-works/pi/commit/9211da172325117dc59e6f9f25f248dc628b3f81","source":"Pi GitHub","publishedAt":"2026-09-08 03:21 +08:00","summary":"Pi 增加模型驱动、结构化输出且带确定性目录校验的文档实现对照评测。","tags":["Coding Agent","Evaluation","Documentation"]},
+    {"title":"Pi: route Copilot GPT models through Responses","url":"https://github.com/earendil-works/pi/commit/7d8ab31a477ecc07b36f56ffcae58c79307a68be","source":"Pi GitHub","publishedAt":"2026-09-07 19:01 +08:00","summary":"Pi 将全部 GitHub Copilot GPT 型号统一路由到 Responses API，并添加目录级回归测试。","tags":["Coding Agent","Model Routing","GitHub Copilot"]},
+    {"title":"Cline: report silent shell-integration successes as empty output","url":"https://github.com/cline/cline/commit/afa1b01be1fd4100af7fa4918078e7e2e367fd9e","source":"Cline GitHub","publishedAt":"2026-09-08 08:45 +08:00","summary":"Cline 利用 OSC 633 标记区分真实静默成功与终端输出捕获失败。","tags":["Coding Agent","Tool Execution","Reliability"]},
+    {"title":"OpenCode: publish OAuth client metadata document","url":"https://github.com/anomalyco/opencode/commit/57ef3828431790c53f8f333c7ffbfe88770a1812","source":"OpenCode GitHub","publishedAt":"2026-09-07 14:11 +08:00","summary":"OpenCode 为支持相应规范草案的 MCP 授权服务器发布 OAuth 客户端元数据文档。","tags":["Coding Agent","MCP","OAuth"]},
+    {"title":"GitHub Trending","url":"https://github.com/trending","source":"GitHub","publishedAt":"","summary":"采集时的 GitHub 日榜入口；数据为动态快照，不代表项目发布日期。","tags":["GitHub Trending","趋势快照"]},
+    {"title":"mksglu/context-mode","url":"https://github.com/mksglu/context-mode","source":"GitHub Trending","publishedAt":"","summary":"采集时日榜显示 147 stars today；作者的压缩比例主张未独立复现。","tags":["Coding Agent","Context","GitHub Trending","观察池"]},
+    {"title":"Tencent/teamai-cli","url":"https://github.com/Tencent/teamai-cli","source":"Tencent GitHub","publishedAt":"","summary":"团队级 Agent CLI 官方仓库；本轮 GitHub license 字段未声明，作为早期信号保留。","tags":["Agent","CLI","观察池"]},
+    {"title":"TeamAI by Tencent – Hacker News discussion","url":"https://news.ycombinator.com/item?id=49604925","source":"Hacker News","publishedAt":"2026-09-08 10:08 +08:00","summary":"TeamAI 的 HN 提交，采集时 2 points、0 comments。","tags":["Hacker News","Community Signal","观察池"]},
+    {"title":"agentdesktop-dev/agentdesktop","url":"https://github.com/agentdesktop-dev/agentdesktop","source":"GitHub","publishedAt":"","summary":"面向桌面 fleet 的 AI 工具可见性与管理层，采用证据仍有限。","tags":["Agent","Desktop","Management","观察池"]},
+    {"title":"Agentdesktop – Hacker News discussion","url":"https://news.ycombinator.com/item?id=49604626","source":"Hacker News","publishedAt":"2026-09-08 09:15 +08:00","summary":"Agentdesktop 的 HN 提交，采集时 1 point、1 comment。","tags":["Hacker News","Community Signal","观察池"]},
+    {"title":"LLM-Guided Program Evolution for Circle Packing","url":"https://arxiv.org/abs/2609.05093","source":"arXiv","publishedAt":"2026-09-04 20:48 +08:00","summary":"用 LLM 引导程序演化、以独立 verifier 筛选候选的 circle-packing 研究；原文早于窗口。","tags":["Research","Program Evolution","较旧背景"]},
+    {"title":"LLM Guided Evolution for Circle Packing – Hacker News discussion","url":"https://news.ycombinator.com/item?id=49604782","source":"Hacker News","publishedAt":"2026-09-08 09:42 +08:00","summary":"论文的 HN 提交，采集时 1 point、0 comments，未形成实质讨论。","tags":["Hacker News","Research","邻近信号"]}
+  ]
+}
