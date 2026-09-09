@@ -1,0 +1,128 @@
+---
+title: "今日 AI / Agent 开源项目与技术博客精选"
+date: "2026-09-09T00:00:00+08:00"
+updatedAt: "2026-09-09T10:46:00+08:00"
+description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredTitle: "DeepSeek Harness v0.1.5-alpha.1"
+featuredUrl: "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-alpha.1"
+featuredSummary: "DSH 引入会话格式 V3、动态系统提示词、实验性 Sidebar，并调整 Agent/Inbox API 与繁忙会话发送语义。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-09-09 00:16 +08:00"
+featuredTags: ["Coding Agent","Harness","Session","Release"]
+featuredImage: "https://opengraph.githubassets.com/1/deepseek-ai/deepseek-harness"
+featuredImageAlt: "DeepSeek Harness GitHub 仓库的公开 OpenGraph 项目预览图"
+featuredImageCaption: "图片来源：DeepSeek Harness GitHub 仓库"
+tags:
+  - "观察池"
+  - "邻近信号"
+  - "Agent"
+  - "Agent Loop"
+  - "AI"
+  - "Authentication"
+  - "Coding Agent"
+  - "Community Signal"
+  - "Desktop"
+  - "Hacker News"
+  - "Harness"
+  - "Infrastructure"
+  - "LLM"
+  - "Multi-Agent"
+  - "Observability"
+  - "Open Source"
+  - "Queue"
+  - "Release"
+  - "Remote"
+  - "SDK"
+  - "Session"
+  - "Streaming"
+  - "System Prompt"
+  - "VM"
+---
+
+## 今日概览
+
+本轮发现窗口为 **2026-09-08 10:46 至 2026-09-09 10:46（Asia/Shanghai）**，技术精选优先核验近 48 小时。最重要的变化来自 DeepSeek Harness：新 alpha 引入会话格式 V3、动态系统提示词和更明确的队列/插话语义；Pi 修复排队消息绕过输入处理器的问题并放宽命名 fork 的流式序列约束；Cline 增加经过认证的远程 Hub SDK 连接，并修正桌面会话用量加载；OpenCode 则移植 Astra v2 系统提示词。所有内容均是工程事实，不据此作工具能力排名。
+
+## Coding Agent / Harness 雷达
+
+| 项目 | 本轮状态 | 关键观察 |
+|---|---|---|
+| DeepSeek Harness / DSH | **窗口内预发布** | [v0.1.5-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-alpha.1)引入会话格式 V3、动态系统提示词、实验性右侧 Sidebar，并统一繁忙会话中的排队/插话交互；存在日志读取器和插件 API 兼容性变化。 |
+| Pi Coding Agent | **窗口内工程更新** | [排队消息修复](https://github.com/earendil-works/pi/commit/faa9863cb8b54689f1d0c2df9dbab1ee1fa9de19)让 queued messages 同样经过 input handlers；[fork 序列修复](https://github.com/earendil-works/pi/commit/41218b39408bb5f10ffd21c23684d955879c56ab)放宽命名 fork lane 的校验与序列约束。 |
+| Cline | **窗口内工程更新** | [远程 Hub 提交](https://github.com/cline/cline/commit/b63c738c2291490fa9253136d6012e2a2974174c)为 SDK 增加认证远程连接；[会话用量修复](https://github.com/cline/cline/commit/245a7d0ccb0ed57091faaf8cc337c7a1cc2d070b)按当前可见分页加载 token/cost，并限制并发读取。 |
+| OpenCode | **窗口内工程更新** | [提交 5cd8e68](https://github.com/anomalyco/opencode/commit/5cd8e68fdd72b27818d26d168b9c7a06b359567e)移植 Astra v2 system prompt；这是提示词适配更新，不是模型评测结果。 |
+| Aider | 已检查，无新增 | 官方主分支最近提交停在 2026-05-22，窗口内无 release 或提交。 |
+| Continue | 已检查，无新增 | 官方主分支最近提交停在 2026-07-21，窗口内无 release 或提交。 |
+| Roo Code | 已检查，无新增 | 官方主分支最近提交停在 2026-05-15，窗口内无 release 或提交。 |
+
+<figure class="source-image">
+  <a href="https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-alpha.1"><img src="https://opengraph.githubassets.com/1/deepseek-ai/deepseek-harness" alt="DeepSeek Harness GitHub 仓库的公开 OpenGraph 项目预览图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-alpha.1">图片来源：DeepSeek Harness GitHub 仓库</a></figcaption>
+</figure>
+
+## 已验证技术精选
+
+### 1. DSH v0.1.5-alpha.1 升级会话格式并调整 Agent/Inbox API
+
+[DeepSeek Harness v0.1.5-alpha.1](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-alpha.1)发布于 2026-09-09 00:16（上海时间）。官方 release 说明会话格式升级至 V3：恢复受支持的旧会话时生成新版日志并保留原文件，系统提示词进入消息历史，旧 PTC 事件与 `code` preset 引用自动迁移；自定义日志读取器需适配，升级后的会话不可由旧版降级读取。版本还支持在模型显式声明兼容时动态修改 system prompt 而不破坏 KV cache，并将繁忙会话的发送按钮与 Enter 统一到 queue/steer 设置。
+
+**为什么重要：** 这是持久会话、prompt 缓存和人类插话控制同时变化的一次 alpha 发布；原日志保留降低迁移风险，但插件作者仍需审查 Agent 与 Inbox API 的破坏性变更。
+
+### 2. Pi 让排队消息重新经过输入处理器
+
+[Pi 提交 faa9863](https://github.com/earendil-works/pi/commit/faa9863cb8b54689f1d0c2df9dbab1ee1fa9de19)在 2026-09-08 23:18（上海时间）修复 queued messages 的输入路径，使排队内容与直接输入一样运行 input handlers，并补充并发队列测试。
+
+**为什么重要：** 输入处理器通常承载命令解释、转换或策略钩子；排队消息绕开它们会让同一会话因提交时机不同而出现不一致行为。
+
+### 3. Pi 放宽命名 fork 的流式 lane 校验
+
+[Pi 提交 41218b3](https://github.com/earendil-works/pi/commit/41218b39408bb5f10ffd21c23684d955879c56ab)在 2026-09-08 19:34（上海时间）调整 fork lane validation 与 sequence conformance，配合命名 fork streaming 合并路径。
+
+**为什么重要：** fork 流式传递是多 Agent/分支会话的底层协议行为；放宽约束旨在接受合法序列，但仍应以项目测试覆盖为边界，不延伸为吞吐或质量结论。
+
+### 4. Cline SDK 支持认证远程 Hub 连接
+
+[Cline 提交 b63c738](https://github.com/cline/cline/commit/b63c738c2291490fa9253136d6012e2a2974174c)在 2026-09-09 07:59（上海时间）为 SDK 加入 authenticated remote Hub connections。
+
+**为什么重要：** 这扩展了 Agent SDK 从本地进程到受认证远程控制面的连接形态，属于集成面变化；当前依据是已合并提交，尚非单独 release。
+
+### 5. Cline 按可见会话页加载 token 与成本
+
+[Cline 提交 245a7d0](https://github.com/cline/cline/commit/245a7d0ccb0ed57091faaf8cc337c7a1cc2d070b)在 2026-09-09 10:52（上海时间）提交，但晚于本轮 10:46 截止时间，因此列入观察池而非窗口内已确认更新。提交说明显示桌面端改为为当前可见分页请求 token/cost，限制最多四个 transcript 并发读取，并在运行状态变化后重新读取以避免旧统计。
+
+## GitHub Trending
+
+已检查 Overall、Python 和 TypeScript 日榜。榜单为动态页面，本轮无法稳定复核同一时刻的 daily growth 数值，因此不记录星数，也不把当前热度解释为当天发布。
+
+## Hacker News 讨论
+
+[The VMs Powering Mobile Agents](https://rohanadwankar.github.io/2026/09/08/mobile-agent-vms.html)在 [2026-09-08 HN front 快照](https://news.ycombinator.com/front?day=2026-09-08)中出现，快照显示 62 points、23 comments。原文讨论在移动设备上承载 coding-agent 工作负载的 VM/隔离架构；这是独立工程文章与社区讨论信号，不代表相关产品官方架构确认。
+
+## 论文与研究
+
+本轮查阅 arXiv、Hugging Face Papers/Blog，未发现首次发布落在近 48 小时且优先级高于上述 harness 工程变化的新论文。
+
+## 较旧文章再浮现
+
+未发现符合“原文早于七天、过去 24 小时在 HN 再形成讨论”的高相关条目。
+
+## 日期未确认
+
+无。所有进入技术精选的提交或 release 均由 GitHub 官方页面/Atom 时间核验；HN 工程文章以原文日期和日期快照为准。
+
+## 观察池
+
+- [Cline 会话用量提交](https://github.com/cline/cline/commit/245a7d0ccb0ed57091faaf8cc337c7a1cc2d070b)的 GitHub 时间为 10:52（上海时间），比本轮截止晚约 6 分钟；保留为邻近信号，不计入发现窗口。
+- [OpenCode Astra v2 prompt 提交](https://github.com/anomalyco/opencode/commit/5cd8e68fdd72b27818d26d168b9c7a06b359567e)在 2026-09-09 10:27（上海时间）落入窗口，但主要是 provider/system prompt 适配，技术影响需要后续 release 或兼容性反馈验证。
+- Hugging Face 9 月 8 日的工具层社区文章偏观点性，缺少可复现实现或评测，本轮未纳入来源。
+
+## 来源链接
+
+正文直接链接官方 GitHub release/commit、独立工程原文与 HN 日期快照；同页 URL 已去重。没有使用搜索结果缩略图、头像或未确认图片。
+
+## 采集状态
+
+- **采集窗口：** 2026-09-08 10:46 至 2026-09-09 10:46（Asia/Shanghai）；技术亮点优先核验近 48 小时。
+- **已检查：** Cline、Pi、DSH 三个 Tier 1 官方仓库/release/changelog/docs；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 官方入口；GitHub Trending Overall/Python/TypeScript；HN front/newest/日期快照/Algolia；arXiv；Hugging Face Papers/Blog；Simon Willison。
+- **失败/受限：** GitHub REST API 触发未认证 rate limit，改用官方 Atom/HTML；HN Algolia 返回非 JSON 网关内容，改用 HN 日期快照；Trending 动态数据未稳定复核；Aider、Continue、Roo Code 无窗口内更新；Hugging Face 与 Simon Willison 无高优先级新条目。
+- **初始候选数：** 24；**最终保留来源数：** 8；**二次补搜：** 否（最终来源不为 0）。
+- **图片：** 已验证 DeepSeek Harness GitHub OpenGraph 图公开可访问（HTTP 200），`sourceUrl` 对应正文首条 release。

@@ -1,0 +1,84 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-09-09T00:00:00+08:00"
+updatedAt: "2026-09-09T10:46:13+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTags: []
+tags:
+  - "日期未确认"
+  - "AaaS"
+  - "Agent"
+  - "Cloud Agent"
+  - "Enterprise"
+  - "Expansion"
+  - "Managed Agent"
+  - "Replit"
+---
+
+## 今日概览
+
+采集截止：**2026-09-09 10:46:13（Asia/Shanghai）**；主窗口为此前 24 小时，并检查 24–72 小时观察窗。本轮没有发现可凭精确时间确认落入 24 小时的 AaaS 产品发布。保留一条 9 月 8 日的 Replit 国际扩张与企业采用信号；其自然日已确认，但小时边界未披露。
+
+## 重点动态
+
+过去 24 小时暂无可精确划窗的新产品、托管运行时、并发、定价或企业控制面发布。
+
+## 远程 / 云端 Agent 执行
+
+| 平台 | 动态 | 时间与证据 | AaaS 意义 | 来源 |
+|---|---|---|---|---|
+| Replit | 在伦敦开设首个国际办公室 | 2026-09-08；官方公告，精确时间未披露 | 公告称欧洲已有 PwC、EY、Mercedes-Benz、Trustpilot 与 Hg 等客户，并强调平台把 Agent 创建、数据库、部署、安全和企业控制整合在一个云环境中；这是商业化与企业覆盖信号，不是新的运行时功能发布。 | [原文](https://replit.com/news/replit-opens-london-office) |
+
+## 海外厂商
+
+Anthropic、OpenAI、Google、Microsoft、Replit、Cognition、xAI、Cursor、Lindy、CrewAI、LangGraph Platform、GitHub、Amazon、Cloudflare、Factory 与 Sourcegraph/Amp 均已检查。除上述 Replit 商业扩张外，未找到窗口内证据充分的新 AaaS 事件。Claude/OpenAI 的产品动态如有新增详见对应专题页。
+
+## 中国市场（ByteDance 重点）
+
+已分别检查 ByteDance Coze/Volcano/Doubao/Trae/Seed、Alibaba Bailian/Qoder/Tongyi/Quark、Tencent Yuanbao/Hunyuan/Cloud、Baidu AgentBuilder/Comate、Zhipu、Moonshot/Kimi、MiniMax 与 DeepSeek。部分入口依赖登录或客户端渲染；未取得窗口内可核验的托管 Agent 发布，不用二手标题补成事实。
+
+## Cognition Devin 专项检查
+
+已显式检查 Cognition Blog、Devin 2026 Release Notes、API、定价与企业文档，并搜索托管异步执行、环境、并发、定价、企业接入和集成。公开 Release Notes 索引本轮未呈现 9 月新条目，Blog 最新可见业务文章也早于当前窗口；结论为“无新增”，不重复旧的 Scheduled Devins 或 Manage Devins 背景。
+
+## xAI / Grok 专项检查
+
+已显式检查 SpaceXAI News、Grok Bot、Grok Automations、Grok Build 和 developer Release Notes，重点核对托管 Agent、异步任务、工具调用、远程计算机、并行协作与企业接入。最新相关官方内容早于 72 小时；普通模型/API 更新不满足 AaaS 边界，未误收录。
+
+## Coding Agent / Harness 边界检查
+
+Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue 与 Roo Code 已按云托管、后台/定时任务、远程环境、并发、企业控制面和定价检查。本轮没有新的提供方托管执行证据；本地 CLI、IDE 与常规 release 留给开源专题页。
+
+## AaaS 与 MaaS/PaaS 边界
+
+AaaS 必须包含由服务方托管或管理的 Agent 执行生命周期。仅发布模型/API 属于 MaaS，仅提供通用算力或容器属于 PaaS；两者都不自动成为本页动态。
+
+## 日期未确认
+
+Replit 公告确认自然日为 9 月 8 日，但没有精确时分；因此只作为 24–72 小时商业化观察项，不宣称其必然发生在本轮 24 小时内。
+
+## 未证实传闻
+
+本轮未保留单一来源泄露或无法追溯原文的产品传闻。
+
+## 邻近信号观察池
+
+Mistral 的融资属于模型、基础设施和商业扩张综合信号，但公告没有把新增资金对应到新的托管 Agent 运行生命周期，故留在行业专题，不纳入 AaaS 正式来源。
+
+## 趋势判断
+
+本轮证据显示 AaaS 厂商仍在沿企业覆盖与区域运营扩张，但没有足够材料支持“功能或定价发生新一轮变化”的结论。
+
+## 来源链接
+
+- [Replit Opens First International Office in London](https://replit.com/news/replit-opens-london-office)
+
+## 采集状态
+
+- 已检查：全部规定海外与中国平台；Devin 与 Grok 必查入口；七个 coding harness 的托管边界。
+- 失败及限制：Devin 索引未显示 9 月新增；Replit 仅自然日；部分中国厂商入口需登录/客户端渲染；X 无免登录核验。
+- 候选数量：7；单页 URL 去重后保留 1 条。
+- 二次补搜：否（最终来源非零）。
+- 图片：未配置。保留条目的小时边界未确认，按规范不作为页面或首页图片来源。
+
+今日扫描完成，共 1 条动态，重点：Replit 的欧洲运营与企业采用扩张；未发现可精确确认的 24 小时 AaaS 功能发布。
