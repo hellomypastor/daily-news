@@ -1,0 +1,65 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-09-10T10:47:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition / Devin blog, changelog, docs and pricing: hosted async execution, environments, concurrency, pricing, enterprise controls and integrations",
+      "xAI / Grok news and docs: Grok Bot, Automations, Agent Tools API, hosted computers, async work and enterprise access",
+      "OpenAI Codex cloud / remote tasks, ChatGPT agents, Responses API and Agents SDK",
+      "Anthropic managed Agents, Agent SDK, Skills and Claude Code remote execution",
+      "Google Gemini Enterprise Agent Platform, Vertex Agent Runtime and Jules",
+      "Microsoft Copilot Studio, Azure Agent services and GitHub Copilot cloud/coding agent",
+      "Replit Agent, Lindy, CrewAI Enterprise, LangGraph Platform, Amazon Q Developer, Cloudflare Agents/Sandboxes/Computer/Workers, Factory and Sourcegraph/Amp",
+      "ByteDance Coze/Volcano/Doubao/Trae/Seed; Alibaba Bailian/Qoder/Tongyi/Quark; Tencent Yuanbao/Hunyuan/Cloud; Baidu AgentBuilder/Comate; Zhipu, Moonshot/Kimi, MiniMax and DeepSeek",
+      "Cline, Pi Coding Agent / pi-mono, DeepSeek Harness / DSH, OpenCode, Aider, Continue and Roo Code hosted-execution boundary"
+    ],
+    "failedSources": [
+      "多数官方 9 月 9 日页面仅标日期、不标具体发布时间，无法确认严格 24 小时位置",
+      "Cognition 公开页面未发现同轮并发额度或价格变更说明",
+      "xAI / Grok 在 24–72 小时及 24 小时窗口均未发现新 AaaS 公告；旧 Grok Bot 材料未重复收录",
+      "中国平台中英文扩展搜索未找到可核验的窗口内原始发布",
+      "Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 未发现新增由供应商托管执行生命周期的证据"
+    ],
+    "candidateCount": 24,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n主窗口：Asia/Shanghai 2026-09-09 10:47 至 2026-09-10 10:47；观察窗口向前扩展至 72 小时。本轮发现两项与企业 Agent 控制面直接相关的官方更新：Devin Plugins 为本地与云端 Devin 统一分发受治理的 skills、rules、MCP、hooks 与 subagents；GitHub Copilot 新增企业统一管理 Agent 操作权限。两页都只标 9 月 9 日、不标时刻，因此归入“日期未确认”，不冒充严格落入 24 小时。严格可确认的 24 小时动态为 0，已按规范完成中英文第二轮扩展检索。\n\n## 重点动态\n\n| 平台 | 证据状态 | AaaS 判断 |\n|---|---|---|\n| Cognition Devin Plugins | 日期未确认 | 符合。面向企业集中治理本地与云端 Agent 的上下文、能力和运行时策略，属于托管 Agent 控制面。 |\n| GitHub Copilot Agent Host 权限 | 日期未确认 | 符合。企业可统一控制 Agent 的 shell、文件和网络操作，并强制阻断、审批或免提示策略。 |\n| GitHub Copilot for JetBrains sandbox | 24–72h 观察 | 边界项。企业沙箱策略与 Agent Host 集成相关，但主要作用于 IDE/本地会话；保留为远程/托管控制面的邻近观察。 |\n\n## 远程 / 云端 Agent 执行\n\n### Devin：企业插件统一治理本地与云端 Agent\n\n[Cognition / Devin 公告](https://devin.ai/blog/governing-ai-agents-at-scale-with-blackrock)介绍 Devin Plugins：一个可版本化的 Agent 配置包，可组合 skills、rules、MCP servers、hooks 与 subagents，并在 enterprise、org、repo 或个人层级标记为 required、endorsed 或 forbidden。插件可由 Git 仓库承载和审查，且同一配置适用于本地与云端 Agent。BlackRock 的 bread-kit 企业上下文层参与塑造该设计。页面只标 2026-09-09，未披露时刻。\n\n这项更新直接覆盖 AaaS 的企业治理与生命周期边界：组织可强制运行时 hook，例如默认阻止 Agent 访问生产基础设施，同时对特定 SRE 团队设置例外。公告没有披露新并发额度、ACU 定价、云环境规格或可用套餐变化，不能据此推断这些维度发生更新。\n\n### GitHub Copilot：企业统一管理 Agent 操作权限\n\n[GitHub Changelog](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/)称 Copilot Business / Enterprise 管理员可集中决定 shell 命令、文件读写与网络域名操作是阻断、要求人工批准还是免提示执行。组织策略不能被用户/工作区设置、自动批准或既有批准削弱，还可按团队配置不同策略；能力已在 Copilot app、CLI 与使用 Agent Host 的 VS Code 会话 GA。页面只标 9 月 9 日，因此时间状态为“日期未确认”。\n\n## 海外厂商扫描\n\n- **Cognition Devin**：有新增，详见上文。已显式核查托管异步执行、环境、并发、定价、企业接入与集成；本轮只确认企业插件治理更新，未发现并发、环境规格或价格调整。\n- **xAI / Grok**：已显式检查 Grok Bot、Automations、Agent Tools API、托管电脑、异步任务、工具/远程执行和企业接入。现有 Grok Bot 确实满足 AaaS 定义，但本轮及 24–72 小时观察窗没有新公告，按规范不重复较旧背景来源；普通 Grok 模型/API 动态不进入本页。\n- **GitHub Copilot**：企业 Agent 操作权限有新增；9 月 8 日 JetBrains 企业沙箱更新进入 24–72 小时观察。\n- **Anthropic、OpenAI、Google/Jules、Microsoft、Replit、Lindy、CrewAI、LangGraph Platform、Amazon Q、Cloudflare、Factory、Sourcegraph/Amp**：未检出窗口内可核验的新托管执行、定价、并发或企业控制面发布。OpenAI Agents SDK Python v0.22.2 是开发库更新，不等同于供应商托管执行，详见 OpenAI 专题页。\n\n## 中国平台（ByteDance 重点）\n\n- **字节跳动：Coze / 火山引擎 / 豆包 / Trae / Seed**：未检出窗口内可核验的新托管运行、异步任务、并发或企业控制面公告。\n- **阿里：百炼 / Qoder / 通义 / 夸克**：Qoder Cloud Agents 当前公开页面明确描述全托管、长程执行、事件流持久化与弹性并发，符合 AaaS 定义，但页面缺少可核验发布日期，放入邻近观察池，不作为今日发布。\n- **腾讯、百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek 与可信创业公司**：第二轮中英文检索仍未找到窗口内可核验原始发布。\n\n## Harness 的 AaaS 边界\n\nCline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue 与 Roo Code 均已检查其托管/云端执行、后台或定时任务、远程环境、多 Agent 服务、并发、企业控制和定价证据。本轮未发现供应商新增托管执行生命周期的证据；本地 CLI、IDE、桌面或自托管 harness 更新不进入 AaaS 页。\n\n## AaaS vs MaaS / PaaS\n\n- Devin Plugins 与 GitHub 企业 Agent 操作权限都管理 Agent 能力和执行边界，超过单纯模型 API，属于 AaaS 控制面。\n- 仅提供模型推理、Agent Tools API 调用或基础云沙箱而不托管 Agent 生命周期时，分别更接近 MaaS 或 PaaS。\n- IDE 内本地 Agent 的权限/沙箱设置具有企业治理价值，但若执行生命周期仍在用户设备，不能单独证明是托管 AaaS。\n\n## 日期未确认\n\nDevin Plugins 与 GitHub 企业 Agent 操作权限页都标注 2026-09-09，但未给具体发布时间。窗口起点为当日 10:47 +08:00，因此两项均不能证明严格位于主窗口；保留是为了避免漏报。\n\n## 未证实传闻\n\n本轮未发现值得保留且具备明确来源链的 AaaS 泄露或传闻。\n\n## 24–72 小时观察池\n\n[GitHub 9 月 8 日 JetBrains 更新](https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/)加入企业托管沙箱策略，可控制文件系统、网络、代理、开发工具与 macOS Keychain，并改善 MCP / Agent session 可靠性和内置 subagent 模型选择。其执行主要发生在 IDE / 本地环境，暂作为 AaaS 企业控制面的边界信号，而非新的云 Agent 服务。\n\n## 邻近信号观察池\n\n[Qoder Cloud Agents 页面](https://qoder.com.cn/cloud-agents)描述 API 启动云端 Session、长程执行、断点恢复、全程可观测及弹性并发，产品形态符合 AaaS；但页面未见可核验发布日期或本轮变更记录，因此仅作为日期未确认的中国市场信号，不计入今日发布。\n\nOpenAI Agents SDK Python v0.22.2 的沙箱与 session 修复服务于 Agent 构建，但 SDK 本身不托管运行生命周期，故不列为 AaaS 动态（详见 OpenAI 专题页）。\n\n## 趋势判断\n\n本轮信号共同指向“企业控制面先行”：竞争点从 Agent 是否能执行任务，转向组织能否版本化上下文、集中控制工具与网络权限，并让策略跨本地和云端保持一致。证据只有两家厂商的同日公告且时间未确认，趋势置信度为中低，不能外推为全行业同步转向。\n\n## 来源链接\n\n1. [Governing AI agents at scale with BlackRock](https://devin.ai/blog/governing-ai-agents-at-scale-with-blackrock)\n2. [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/)\n3. [Enterprise-managed sandbox in Copilot for JetBrains](https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/)\n4. [Qoder Cloud Agents](https://qoder.com.cn/cloud-agents)\n\n## 采集状态\n\n- 已检查：Cognition Devin 的托管异步执行、环境、并发、定价、企业和集成；xAI Grok 的 Grok Bot、Automations、Agent Tools API、托管电脑、异步、工具与远程执行；以及 OpenAI、Anthropic、Google/Jules、Microsoft/GitHub、Replit、Lindy、CrewAI、LangGraph、Amazon Q、Cloudflare、Factory、Amp 和中国主要平台。另逐一检查 Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的 AaaS 边界。\n- 失败或受限：两项 9 月 9 日强相关官方更新均不披露时刻；Devin 未发现同期价格/并发更新；Grok 无窗口内 AaaS 新公告；中国平台扩展检索未找到窗口内原始发布；harness 未见供应商托管执行新证据。\n- 初始候选：24；保留来源：4；二次补搜：是（严格确认的 24 小时来源为 0，已扩大中英文关键词、替换官方入口并检查可信二手来源）。\n\n今日扫描完成，共 4 条动态，重点：Devin Plugins 与 GitHub Copilot 的企业 Agent 治理控制面同步增强，但两项发布时间均只能确认到日期。",
+  "sources": [
+    {
+      "title": "Governing AI agents at scale with BlackRock",
+      "url": "https://devin.ai/blog/governing-ai-agents-at-scale-with-blackrock",
+      "source": "Cognition / Devin",
+      "publishedAt": "2026-09-09 (具体时间未披露)",
+      "summary": "Devin Plugins 为本地与云端 Agent 提供企业级、分层、可版本化的上下文与能力治理。",
+      "tags": ["Devin", "Enterprise", "Plugins", "Cloud Agent", "日期未确认"]
+    },
+    {
+      "title": "Enterprise managed permissions for GitHub Copilot agent operations",
+      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/",
+      "source": "GitHub Changelog",
+      "publishedAt": "2026-09-09 (具体时间未披露)",
+      "summary": "GitHub Copilot 企业管理员可集中治理 Agent 的 shell、文件与网络操作及人工审批策略。",
+      "tags": ["GitHub Copilot", "Enterprise", "Agent Host", "Governance", "日期未确认"]
+    },
+    {
+      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/",
+      "source": "GitHub Changelog",
+      "publishedAt": "2026-09-08 (具体时间未披露)",
+      "summary": "Copilot for JetBrains 新增企业托管沙箱策略，并改善 MCP、Agent session 与 subagent 配置。",
+      "tags": ["GitHub Copilot", "Sandbox", "Enterprise", "24–72h", "边界信号"]
+    },
+    {
+      "title": "Qoder Cloud Agents",
+      "url": "https://qoder.com.cn/cloud-agents",
+      "source": "Qoder",
+      "publishedAt": "",
+      "summary": "公开产品页描述全托管云端 Agent Session、长程执行、断点恢复、可观测与弹性并发，但未标发布日期。",
+      "tags": ["Qoder", "Cloud Agent", "China", "日期未确认", "邻近信号"]
+    }
+  ]
+}
