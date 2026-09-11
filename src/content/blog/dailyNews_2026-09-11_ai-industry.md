@@ -1,0 +1,86 @@
+---
+title: "主流 AI / Agent 厂商技术动态日报"
+date: "2026-09-11T00:00:00+08:00"
+updatedAt: "2026-09-11T10:47:00+08:00"
+description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredTitle: "Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving"
+featuredUrl: "https://www.alibabacloud.com/blog/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving_603544"
+featuredSummary: "Qwen-Drive-1.0 以 Qwen3.5-4B 为底座，通过外部 BEV 感知头与 Planning Expert 统一驾驶感知、问答和规划。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-09-10 +08:00"
+featuredTags: ["Qwen","Multimodal","Autonomous Driving","Research"]
+featuredImage: "https://yqintl.alicdn.com/9984fb604106356f35a999d39a007a4c732e1a48.png"
+featuredImageAlt: "Qwen-Drive-1.0 自动驾驶视觉语言基础模型文章封面"
+featuredImageCaption: "图片来源：Alibaba Cloud Community / Qwen"
+tags:
+  - "Agent"
+  - "AI"
+  - "Autonomous Driving"
+  - "Coding Agent"
+  - "Developer Tools"
+  - "Enterprise"
+  - "Genomics"
+  - "Google DeepMind"
+  - "Industry"
+  - "Inference"
+  - "Infrastructure"
+  - "Mistral"
+  - "Multimodal"
+  - "NVIDIA"
+  - "Open Source"
+  - "Qwen"
+  - "Research"
+  - "Science"
+  - "Shell"
+---
+
+## 今日概览
+
+采集窗口截至 2026-09-11 10:47（Asia/Shanghai）。过去 24 小时的明确增量集中在阿里/Qwen 生态：一条把通用多模态底座延伸到自动驾驶感知与规划，另一条把 Agent 能力直接嵌入既有 shell 工作流。
+
+## 优先动态（过去 24 小时）
+
+| 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| Qwen / Alibaba Cloud | [Qwen-Drive-1.0：面向自动驾驶的视觉语言基础模型](https://www.alibabacloud.com/blog/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving_603544) | 研究 / 模型 | 2026-09-10，官方 | 基于 Qwen3.5-4B，在不改动预训练 VLM 主体的前提下外挂 BEV 感知头与 Planning Expert，统一 3D 感知、驾驶问答和轨迹规划。 | 展示通用多模态底座向具身/自动驾驶专用系统迁移的一条模块化路线，同时保留可检查的 3D 表征。 |
+| OpenAnolis / Alibaba Cloud | [AI Agent 时代，下一代 Shell 应该是什么样](https://www.alibabacloud.com/blog/in-the-age-of-ai-agents-what-should-the-next-shell-look-like_603542) | 产品方向 / 开源生态 | 2026-09-10，官方社区 | cosh 作为 bash/zsh 上的 AI 能力层，覆盖自然语言接管、失败后提示、登录时健康检查，并以审批卡保留人工控制；文中给出开源仓库与 0.14.0 可复现实录。 | Agent 分发入口从独立聊天/CLI 转向用户既有终端，并把权限确认、诊断技能和运行时观测下沉到操作系统层。 |
+
+<figure class="source-image">
+  <a href="https://www.alibabacloud.com/blog/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving_603544"><img src="https://yqintl.alicdn.com/9984fb604106356f35a999d39a007a4c732e1a48.png" alt="Qwen-Drive-1.0 自动驾驶视觉语言基础模型文章封面" loading="lazy" /></a>
+  <figcaption><a href="https://www.alibabacloud.com/blog/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving_603544">图片来源：Alibaba Cloud Community / Qwen</a></figcaption>
+</figure>
+
+## 近两日补充（24–48 小时）
+
+| 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| Mistral | [Modernizing complex legacy code with AI agents](https://mistral.ai/news/legacy-code-modernization/) | 企业案例 | 2026-09-09，官方 | Mistral 介绍协助欧洲能源运营商把 4 万行 Fortran 77 迁移到 C++ 的方法，强调任务并非逐段翻译，而包含架构重构与迭代验证。 | 为 coding agent 的企业价值提供了超越补全场景的方向性证据，但文章属于厂商案例，效果仍需结合项目约束解读。 |
+| NVIDIA | [When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving](https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/) | 工程 / 推理基础设施 | 2026-09-09，官方 | 讨论把多模态推理中的视觉编码、prefill 与 decode 分离部署的适用条件，以独立伸缩不同阶段。 | 多模态 Agent 工作负载的瓶颈结构不同于纯文本；分阶段调度会直接影响吞吐、延迟和硬件利用率。 |
+
+## 近三日补充（48–72 小时）
+
+| 厂商 | 标题 | 类型 | 日期/状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| Google DeepMind | [AlphaGenome Atlas：覆盖 90 亿种单碱基变异的预测图谱](https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/) | 科学研究 / 数据平台 | 2026-09-08，官方 | 发布约 1 PB 的预计算图谱、AVI 影响评分、网站入口与 API，覆盖人类基因组所有可能的单碱基变异预测。 | 体现基础模型价值从单次推理扩展到可检索的大规模科学基础设施，并已有外部研究者实验验证个别罕见病候选。 |
+
+## 播客
+
+本轮逐一检查 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI、Google DeepMind Podcast 及厂商播客，未发现能够同时核实发布时间且落入三日窗口的新集；不以旧集填充。
+
+## 日期未确认与观察池
+
+- **xAI / Grok（已检查、无窗口内新增）**：官方 News 最新可见更新为 2026-09-04；API 文档、模型/API changelog 与官方仓库未发现截至本轮新增的 Grok 模型、DeepSearch、语音、编码、工具调用或 Agent 公告。
+- **Anthropic / OpenAI（已检查）**：行业页未发现需要跨专题重复的新厂商级事件；对应产品动态详见 Claude 专题页与 OpenAI 专题页。
+- **Harness 生态（已检查）**：Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 以及 OpenCode、Aider、Continue、Roo Code 本轮未出现可核实的融资、合作、企业采用、桌面/IDE 分发或生态级信号；常规提交与 release 详见开源专题页。
+- **DeepMind 月度列表**：列表还展示 WeatherNext 3、主动式网络防御等 2026 年 9 月条目，但本轮未从页面确认具体日，故不进入已确认时间分层。
+
+## 小结
+
+本轮行业信号呈现两条清晰主线：多模态基础模型向物理世界任务延伸，以及 Agent 能力向终端与推理基础设施下沉。
+
+## 采集状态
+
+- 截止时间：2026-09-11 10:47 +08:00；主窗口起点：2026-09-10 10:47 +08:00。
+- 分层：24–48 小时为 2026-09-09 10:47 至 2026-09-10 10:47；48–72 小时为 2026-09-08 10:47 至 2026-09-09 10:47。
+- 初始候选：9；最终保留：5；二次补搜：否（最终来源不为 0）。
+- 已检查来源：见结构化 `scan.checkedSources`，包含全部规定厂商、xAI/Grok 强制入口、harness 行业信号与播客。
+- 失败来源：部分动态页面缺少可核实日期；Latent Space 抓取受订阅弹层限制；部分播客没有稳定公开单集索引；Alibaba Cloud 的 MemOS × PolarDB 详情页超时。

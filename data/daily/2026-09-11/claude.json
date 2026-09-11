@@ -1,0 +1,93 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-09-11T10:47:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom、Claude Blog 与 Anthropic Threat Intelligence",
+      "Claude Code 官方 GitHub Releases/CHANGELOG",
+      "Claude Status（Claude API、Claude Code、Claude Cowork、claude.ai）",
+      "Claude Developer Platform 文档与模型弃用页",
+      "Claude Code CLI、VS Code/JetBrains、Managed Agents、Skills/Marketplace、Agent SDK、Cowork、Design、@Claude sessions 官方入口",
+      "Chrome/浏览器 Agent、Desktop/Preview、Connectors/Plugins、Voice Mode、Microsoft 365 官方入口",
+      "Anthropic Security、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客服入口",
+      "Reddit r/ClaudeAI、r/Anthropic、r/ClaudeCode、r/claude 与 r/LocalLLaMA",
+      "Hacker News、X、YouTube 与开发者/播客搜索"
+    ],
+    "failedSources": [
+      "X：未登录搜索结果不可稳定核验时间与互动量",
+      "YouTube：未发现窗口内可由官方原始页面交叉验证的新视频",
+      "Hacker News：未发现窗口内可确认的 Claude 专项高质量新讨论",
+      "JetBrains/VS Code 独立更新日志：未发现窗口内新版本条目"
+    ],
+    "candidateCount": 9,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-09-10 10:47 至 2026-09-11 10:47（Asia/Shanghai）**。本轮确认一项 Claude Code CLI/IDE 大版本更新、两起服务状态事件，并保留一份发布日期未能从官方页面直接确认的 Anthropic 威胁情报报告。社区样本主要集中在额度消耗、模型体验分化和 Cowork 故障，样本量较小，不能代表整体用户。\n\n## Tier 1：编码与 Agent 主轴\n\n| 产品/入口 | 本轮状态 | 证据与解读 |\n|---|---|---|\n| Claude Code CLI | **有更新** | [v2.1.268](https://github.com/anthropics/claude-code/releases/tag/v2.1.268) 于 2026-09-11 04:30（上海时间）发布：新增网关定价下发、自托管 runner 会话清理、插件管理 JSON 输出；同时修复权限规则、密钥泄露、MCP OAuth、compaction、CPU 占用与第三方兼容端点等问题。 |\n| VS Code 集成 | **有更新** | 与 v2.1.268 同批修复会话列表、模型选择器、Remote Control 状态和配置目录相关显示问题；未发现独立发布。 |\n| JetBrains 集成 | 无新增 | 已检查官方文档、仓库与发布搜索，窗口内未见独立更新。 |\n| Managed Agents（sessions/webhooks/environments/memory stores） | **邻近更新** | v2.1.268 加入 `self-hosted-runner --remove-session-state`，并改善 Remote Control、云会话命令与 session 恢复；未发现 Managed Agents 产品线独立公告。 |\n| Skills 与 marketplaces | **有更新** | v2.1.268 为插件安装/卸载/更新/启停增加 JSON 输出，并修复插件、marketplace 错误中可能暴露 Git 凭据的问题。 |\n| Claude Developer Platform | **有状态事件** | [Claude API 美国中西部入口延迟事件](https://status.claude.com/incidents/2pt83vlkk7x7) 从 2026-09-11 05:43 持续至 07:24（上海时间），官方称部分客户遇到延迟与超时，随后恢复。 |\n| Agent SDK | 无新增 | 已检查官方文档与 GitHub 入口，窗口内未见独立发布。 |\n| Cowork | **有状态事件** | [Windows 上 Cowork 功能降级](https://status.claude.com/incidents/r1pqn1kb4hvk) 于 2026-09-10 23:54（上海时间）确认：9 月 8 日 Windows 更新导致本地命令无法访问电脑磁盘；聊天及多数文件读写仍可用，官方称 Microsoft 正在发布修复。 |\n| Design | 无新增 | 已检查 Claude Blog、帮助中心与产品搜索，窗口内未见独立更新。 |\n| Tag / @Claude sessions | 无新增 | 已检查 GitHub/Claude Code 入口，窗口内未见独立公告。 |\n| 当前官方 Sonnet、Opus、Haiku 编码模型 | 无新增 | 未发现窗口内模型发布或正式能力变更；状态页窗口内事件为区域 API 延迟，不是模型版本更新。 |\n\n## Tier 2：应用与交互入口\n\n| 产品组 | 本轮状态 |\n|---|---|\n| Chrome / 浏览器 Agent | v2.1.268 改善 Claude in Chrome 的长页面读取路径；未见独立产品发布。 |\n| Desktop / Preview | v2.1.268 修复 Desktop Code 标签页缓存模型访问状态；未见独立发布。 |\n| Marketplace / Connectors / Plugins | 插件 CLI JSON 化与凭据遮蔽修复构成窗口内实质更新；Connectors 无独立新增。 |\n| 当前官方创意/视频模型 | 未发现可确认的新模型或版本；不把搜索词中的未证实名称写成产品事实。 |\n| Voice Mode | 无新增。 |\n| Microsoft 365 集成 | 无新增；窗口内状态页未显示 Microsoft 365 事件。 |\n\n## Tier 3：垂直领域雷达\n\n- **安全（日期未确认）**：Anthropic 官方发布的[《Detecting and countering misuse of AI: September 2026》](https://www.anthropic.com/threat-intelligence-report-september-2026)汇总 2025 年 12 月至 2026 年 8 月间被阻断的滥用案例，覆盖网络攻击、影响行动、监控、诈骗、生物与常规武器、模型蒸馏。官方页面可访问，但页面正文未显示精确发布日期，因此不把它作为严格 24 小时内确认项。\n- **Science / 生命科学 / 医疗**：同一报告披露五类潜在生物滥用案例，并强调仅靠分类器难以判断高度专业的双重用途研究；这是安全治理证据，不代表 Claude 发布新的医疗产品。\n- **金融服务、法律、政府、非营利、教育、客服**：均已检查官方入口与新闻搜索，窗口内未见可确认独立更新。\n\n## 官方更新（由新到旧）\n\n1. **Claude Code v2.1.268（已验证）**：企业网关、插件自动化、自托管 runner 与权限/密钥防护是主线；同时包含 VS Code、Chrome、Remote Control、compaction 与多 Agent 体验修复。[原始发布](https://github.com/anthropics/claude-code/releases/tag/v2.1.268)\n2. **Claude API 区域性延迟（已解决）**：部分从美国中西部接入的客户出现延迟和请求超时，约 1 小时 41 分钟后恢复。[官方事件页](https://status.claude.com/incidents/2pt83vlkk7x7)\n3. **Cowork on Windows 功能降级（截至采集截止仍在处理）**：本地命令受 Windows 更新影响，重启或重装无效；等待 Microsoft 修复。[官方事件页](https://status.claude.com/incidents/r1pqn1kb4hvk)\n\n## Love\n\n- [一则“Claude 是否变笨”的讨论](https://www.reddit.com/r/claude/comments/1wcxfjz/is_claude_becoming_dumber/)中，有用户给出相反体验：其 Claude Code 自动化工作流与测试仍能稳定完成任务。这是单一社区样本，互动量低，不上升为产品趋势。\n\n## Hate\n\n- [Max 20 额度讨论](https://www.reddit.com/r/Anthropic/comments/1wc0lua/i_burned_through_my_max_20_weekly_limit_in_25/)称重度 Claude Code 使用在 2.5 天内耗尽周额度；转帖抓取时原讨论约 65 条评论。套餐、用量与临时额度期限均为用户陈述，未由 Anthropic 官方页面在本轮核实。\n- 同一则[体验分化讨论](https://www.reddit.com/r/claude/comments/1wcxfjz/is_claude_becoming_dumber/)的发帖者抱怨推理、搜索主动性与响应速度下降，回复中也有人反驳，说明社区没有形成一致判断。\n- [r/ClaudeAI 性能与故障汇总帖](https://www.reddit.com/r/ClaudeAI/comments/1wbg7k5/performance_and_bugs_discussion_hub_updated_on_9/)在窗口内出现关于 Opus 体验、速度、用量中断以及 Skills/Plugins 选择的零散投诉；该汇总跨多日更新，单条时间可见但无法稳定量化全帖净情绪。\n\n## 情绪判断\n\n**偏负面，低至中等置信度。** 负面样本集中在用量限制、体验波动以及 Cowork/区域 API 故障；正面样本是 Claude Code 自动化仍可靠的个体反馈。官方发布不计入正向口碑，且社区样本少、互动量普遍低，因此不做“整体口碑恶化”的结论。\n\n## 对比与 Coding Agent 雷达\n\n社区额度帖把 Claude Code 与 OpenAI 编码产品作替代性比较，但没有具名、可复现评测。本轮没有找到窗口内对 Cline、Pi Coding Agent、DeepSeek Harness/DSH、Codex、Cursor、OpenCode、Aider、Continue 或 Roo Code 的同条件实测，因此不声称谁追平或超过谁；这些 harness 的完整扫描留给开源专题。\n\n## 日期未确认\n\n- Anthropic 2026 年 9 月威胁情报报告的官方页面未展示精确发布日期。可信二手报道出现在窗口内，但这里保留官方原文并明确降级，待官方元数据或 Newsroom 日期可核验后再升级。\n\n## 观察池\n\n- Cowork Windows 事件等待 Microsoft 修复发布与 Anthropic 状态页更新。\n- 额度消耗与模型质量讨论需要更多独立样本和官方套餐说明交叉验证。\n- v2.1.268 涉及网关、自托管 runner 和权限边界，值得后续观察企业部署反馈。\n\n## 来源链接\n\n- [Claude Code v2.1.268](https://github.com/anthropics/claude-code/releases/tag/v2.1.268)\n- [Claude API 区域延迟事件](https://status.claude.com/incidents/2pt83vlkk7x7)\n- [Claude Cowork Windows 功能降级](https://status.claude.com/incidents/r1pqn1kb4hvk)\n- [Anthropic 2026 年 9 月威胁情报报告](https://www.anthropic.com/threat-intelligence-report-september-2026)\n- [Max 20 周额度社区讨论](https://www.reddit.com/r/Anthropic/comments/1wc0lua/i_burned_through_my_max_20_weekly_limit_in_25/)\n- [Claude 质量体验分化讨论](https://www.reddit.com/r/claude/comments/1wcxfjz/is_claude_becoming_dumber/)\n- [r/ClaudeAI 性能与故障汇总](https://www.reddit.com/r/ClaudeAI/comments/1wbg7k5/performance_and_bugs_discussion_hub_updated_on_9/)\n\n## 采集状态\n\n- **已检查**：Anthropic Newsroom/Blog/Threat Intelligence、Claude Code GitHub、Claude Status、开发者与模型文档、Tier 1/2/3 全部指定产品入口，以及 Reddit、Hacker News、X、YouTube 与开发者/播客搜索。\n- **失败或受限**：X 未登录结果无法稳定核验；YouTube 与 Hacker News 未发现可交叉验证的新条目；JetBrains/VS Code 未见独立更新日志。\n- **初始候选数**：9；**保留来源数**：7；**二次补搜**：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.268",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-09-11 04:30 +08:00",
+      "summary": "Claude Code 更新企业网关、自托管 runner、插件 JSON 接口，并修复权限、凭据泄露、MCP、compaction、IDE 与性能问题。",
+      "tags": ["Claude Code", "CLI", "VS Code", "Plugins", "Security"]
+    },
+    {
+      "title": "Elevated latency on the Claude API for some users",
+      "url": "https://status.claude.com/incidents/2pt83vlkk7x7",
+      "source": "Claude Status",
+      "publishedAt": "2026-09-11 05:43 +08:00",
+      "summary": "美国中西部入口部分 Claude API 客户遭遇延迟与超时，事件于上海时间 07:24 恢复。",
+      "tags": ["Claude API", "Status", "Incident"]
+    },
+    {
+      "title": "Degraded functionality for Claude Cowork on Windows",
+      "url": "https://status.claude.com/incidents/r1pqn1kb4hvk",
+      "source": "Claude Status",
+      "publishedAt": "2026-09-10 23:54 +08:00",
+      "summary": "Windows 更新导致 Cowork 无法运行本地命令；聊天与多数文件读写仍可用，Microsoft 正准备修复。",
+      "tags": ["Claude Cowork", "Windows", "Incident"]
+    },
+    {
+      "title": "Detecting and countering misuse of AI: September 2026",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "source": "Anthropic",
+      "publishedAt": "",
+      "summary": "官方威胁情报报告覆盖七类滥用，并披露网络行动、多 Agent 编排与潜在生物滥用案例；发布日期未确认。",
+      "tags": ["Security", "日期未确认", "Threat Intelligence"]
+    },
+    {
+      "title": "I burned through my Max 20 weekly limit in 2.5 days",
+      "url": "https://www.reddit.com/r/Anthropic/comments/1wc0lua/i_burned_through_my_max_20_weekly_limit_in_25/",
+      "source": "Reddit r/Anthropic",
+      "publishedAt": "2026-09-10（页面仅显示日期）",
+      "summary": "一名重度 Claude Code 用户称 2.5 天耗尽 Max 20 周额度；套餐与额度细节未获官方交叉验证。",
+      "tags": ["Claude Code", "Hate", "Community", "观察池"]
+    },
+    {
+      "title": "Is Claude becoming dumber?",
+      "url": "https://www.reddit.com/r/claude/comments/1wcxfjz/is_claude_becoming_dumber/",
+      "source": "Reddit r/claude",
+      "publishedAt": "2026-09-11（页面仅显示相对时间）",
+      "summary": "低互动讨论呈现模型质量负面抱怨与 Claude Code 自动化仍可靠的相反个体体验。",
+      "tags": ["Claude", "Love", "Hate", "Community"]
+    },
+    {
+      "title": "Performance and Bugs Discussion Hub updated on 9 September 2026",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wbg7k5/performance_and_bugs_discussion_hub_updated_on_9/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-09-10（窗口内有新回复）",
+      "summary": "滚动汇总帖出现 Opus 体验、响应速度、用量中断与 Skills/Plugins 选择的零散反馈。",
+      "tags": ["Claude", "Hate", "Community", "观察池"]
+    }
+  ]
+}
