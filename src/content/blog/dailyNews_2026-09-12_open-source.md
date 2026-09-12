@@ -1,0 +1,126 @@
+---
+title: "今日 AI / Agent 开源项目与技术博客精选"
+date: "2026-09-12T00:00:00+08:00"
+updatedAt: "2026-09-12T10:47:25+08:00"
+description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredTitle: "AIOPE"
+featuredUrl: "https://github.com/XNet-NGO/aiope"
+featuredSummary: "Android 本地 Agent 项目，组合终端、浏览器、SSH、RAG、MCP 与多 Agent 工作流。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-09-12 09:11 +08:00"
+featuredTags: ["Android","On-device Agent","MCP"]
+featuredImage: "https://raw.githubusercontent.com/XNet-NGO/aiope/main/docs/images/screenshot.png"
+featuredImageAlt: "AIOPE Android 端 AI Agent 应用界面截图"
+featuredImageCaption: "图片来源：AIOPE 官方 GitHub 仓库"
+tags:
+  - "观察池"
+  - "ACP"
+  - "Agent"
+  - "AI"
+  - "Android"
+  - "Benchmark"
+  - "C#"
+  - "Cline"
+  - "Coding Agent"
+  - "DeepSeek Harness"
+  - "Documentation"
+  - "DSH"
+  - "Evaluation"
+  - "LLM"
+  - "MCP"
+  - "On-device Agent"
+  - "Open Source"
+  - "OpenCode"
+  - "Pi"
+  - "Release"
+  - "Release Candidate"
+  - "Session"
+  - "Static Analysis"
+---
+
+## 今日概览
+
+本轮采集窗口为 **2026-09-10 10:47 至 2026-09-12 10:47（Asia/Shanghai）**；Hacker News 回流窗口为最近 24 小时。开源 Coding Agent 主线出现两类值得关注的进展：一类是 Cline Desktop 与 DSH 的可验证发行版，另一类是 Pi、OpenCode 围绕评测与会话协议的近期工程提交。HN 同时浮现了移动端 Agent 与面向代码 Agent 的语义索引工具，但早期项目的自报能力与基准仍需独立复现。
+
+## Coding Agent / Harness 雷达
+
+| 项目 | 本轮状态 | 证据与意义 |
+| --- | --- | --- |
+| Cline | 已验证发行 | [Desktop v0.0.26](https://github.com/cline/cline/releases/tag/desktop-v0.0.26) 于 9 月 11 日发布：新增当前分支 PR/CI 状态展示，统一 Tools、Plugins、Skills、Rules 等定制界面，并修复定时会话停滞、检查点分叉状态及本地 CLI 登录提示。尤其值得注意的是，新的重复计划默认使用本地时区，且执行生命周期与容量占用改为原子化处理。 |
+| Pi Coding Agent / pi-mono | 已验证提交 | 项目官方仓库当前重定向至 `earendil-works/pi`；[9 月 11 日提交](https://github.com/earendil-works/pi/commit/b215884021491772a1eb7a9f92c6653a2a52a69d) 为自定义 provider、model 与 extension 文档增加评测，并补充可重复的评测报告，说明维护者正把“文档是否足以让 Agent 完成定制”纳入自动化检验。 |
+| DeepSeek Harness / DSH | 已验证候选版 | [dsh-v0.1.5-rc.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-rc.2) 于 9 月 10 日发布，重点优化反馈提交失败时的内容保留，以及交付文件卡片、对话间距与代码文件图标。它属于候选版，不能等同于稳定版功能承诺。 |
+| OpenCode | 已验证提交 | [9 月 11 日 ACP 修复](https://github.com/anomalyco/opencode/commit/95daf90670b7c039c436c85537da5fbfe2205b41) 恢复 session options 与 reasoning boundaries，并为 ACP service/session 增加测试；这是协议适配与会话边界层面的修复，尚未形成新 release。 |
+| Aider | 无窗口内新增 | 已检查官方 releases 与提交；最新可见 release 仍为 2025 年 8 月的 v0.86.0，本轮不硬凑条目。 |
+| Continue | 无窗口内新增 | 已检查官方 releases、changelog/仓库与提交；窗口内未见新发布。 |
+| Roo Code | 无窗口内新增 | 已检查官方 releases、changelog/仓库与提交；窗口内未见新发布。 |
+
+## 已验证亮点
+
+### 1. Cline Desktop 把 PR/CI 与定时会话可靠性纳入桌面工作流
+
+Cline [Desktop v0.0.26](https://github.com/cline/cline/releases/tag/desktop-v0.0.26) 可直接显示当前分支对应 PR 的合并状态、变更行数与 CI checks，并可展开查看单项日志；同时修复计划任务轮询停止、容量等待被错误计作重试等问题。对 Coding Agent 而言，这让“写代码—查看验证—按计划再次执行”的闭环更接近同一桌面会话内完成。发布时间：2026-09-11 15:46 +08:00。
+
+### 2. Pi 开始用可重复 eval 检查自定义文档
+
+Pi 的[近期提交](https://github.com/earendil-works/pi/commit/b215884021491772a1eb7a9f92c6653a2a52a69d)新增 provider/model 文档评测与可重复报告，并调整 eval harness。这里的信号不是跑分高低，而是把文档可用性变成可回归的工程对象：插件、provider 和模型接入说明是否能被 Agent 正确执行，可以随代码持续验证。提交时间：2026-09-11 23:29 +08:00。
+
+### 3. OpenCode 修补 ACP 会话选项与推理边界
+
+OpenCode 的[ACP 修复提交](https://github.com/anomalyco/opencode/commit/95daf90670b7c039c436c85537da5fbfe2205b41)修改了 config option、event 与 service 层，并新增较完整的 session 测试覆盖。对通过 Agent Client Protocol 接入 IDE/客户端的场景，这类修复直接影响会话选项是否保留、推理内容是否按边界传递。提交时间：2026-09-11 21:16 +08:00。
+
+### 4. DSH v0.1.5-rc.2 改善交付与反馈界面
+
+DeepSeek Harness 的[dsh-v0.1.5-rc.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-rc.2)要求点赞、点踩经弹窗确认，并在提交失败时保留反馈内容；同时改进交付文件卡片和代码文件图标。更新更偏交付体验与可恢复性，且目前仍是 RC。发布时间：2026-09-10 23:09 +08:00。
+
+### 5. Graphify C# 为 Coding Agent 导出编译器级语义关系
+
+新近出现在 HN 的 [graphify-csharp](https://github.com/zachsaw/graphify-csharp) 是基于 Roslyn/MSBuild 的无头索引器，将 callers、references、implementations、inheritance 与 overrides 导出为可查询 JSON，并提供面向 Agent 的 skill。相比纯文本搜索，它的价值在于把重载、泛型和跨项目符号绑定交给编译器解析。仓库创建于 2026-09-08；HN 提交时间为 2026-09-12 08:16 +08:00。
+
+### 6. AIOPE 展示设备本地 Agent 的工具面扩张
+
+[AIOPE](https://github.com/XNet-NGO/aiope) 将 Android 上的终端、浏览器自动化、SSH、设备 API、RAG、MCP 与多 Agent pipeline 放进同一本地 Agent 应用。仓库 README 对工具数量和能力的描述来自项目方，尚不能替代安全审计；但其明确的 on-device agent loop、BYOK 与本地数据路径，使它成为观察移动端权限模型和沙箱边界的具体样本。HN 提交时间为 2026-09-12 09:11 +08:00。
+
+<figure class="source-image">
+  <a href="https://github.com/XNet-NGO/aiope"><img src="https://raw.githubusercontent.com/XNet-NGO/aiope/main/docs/images/screenshot.png" alt="AIOPE Android 端 AI Agent 应用界面截图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/XNet-NGO/aiope">图片来源：AIOPE 官方 GitHub 仓库</a></figcaption>
+</figure>
+
+## GitHub Trending
+
+已检查 daily overall、Python 与 TypeScript 页面，但本轮抓取到的服务端 HTML 未稳定包含榜单条目，因此不记录无法复核的榜单名次、星数或单日增量。上述项目均不是凭 Trending 排名入选。
+
+## Hacker News 新近讨论
+
+24 小时 Algolia newest 检索中，Graphify C# 与 AIOPE 都是刚出现的 Show HN/项目提交，互动量仍低；它们在此作为项目发现入口，而不是采用度证明。Metis 也在窗口内出现，但其比较结论仅保留在观察池。
+
+## 论文与研究
+
+arXiv 最新接口本轮返回限流错误，Hugging Face Papers/Blog 最新列表未发现能在截止时间前同时完成原文与日期核验、且直接对应本页主线的新论文。为避免把搜索摘要当作论文事实，本轮不新增研究条目。
+
+## HN 回流（过去 24 小时）
+
+未发现满足“原文早于 7 天、但在过去 24 小时重新获得明确讨论”的高置信技术文章，因此不以旧文填充本节。
+
+## 日期未确认
+
+本轮保留条目均可从 release、commit、仓库元数据或 HN 提交时间核实日期，无需新增日期未确认项。
+
+## 观察池
+
+- [Metis](https://github.com/Wholiver/metis) 自述采用递归角色、SQLite 持久记忆、Plan/Build 与验证门禁，并公布与 OpenCode 的 Terminal-Bench 2.1 对比。仓库确实提供相关实现与表格，但“提升”数字目前是项目方自报，本轮未找到独立结果或完整可复现实验审计，因此不据此声称其追平或超过其他 harness。HN 提交时间：2026-09-12 09:41 +08:00。
+
+## 来源索引
+
+- Cline：Desktop v0.0.26 release
+- Pi：自定义文档 eval 提交
+- DeepSeek Harness：dsh-v0.1.5-rc.2 release
+- OpenCode：ACP session 修复提交
+- Graphify C#：官方仓库
+- AIOPE：官方仓库
+- Metis：官方仓库（项目方自报，观察池）
+
+## 采集状态
+
+- 已检查：Cline、Pi、DSH 的官方仓库/release/changelog/文档入口；快速检查 OpenCode、Aider、Continue、Roo Code；另检查 HN front/newest 与 Algolia、GitHub Trending 三榜、arXiv、Hugging Face Papers/Blog、Simon Willison feed。
+- 失败入口：GitHub Trending 未稳定返回可解析榜单内容；arXiv API 限流。未使用失败入口推断事实。
+- 初始候选：12；最终保留来源：7（6 条正文亮点/雷达证据，1 条观察池）。
+- 二次补搜：否；最终来源非零。
