@@ -1,0 +1,85 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-09-13T00:00:00+08:00"
+updatedAt: "2026-09-13T10:48:28+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Exclusive: Sam Altman addresses AI doomsday fears in new interview"
+featuredUrl: "https://fortune.com/2026/09/12/sam-altman-interview-ai-doomsday-safety-models-control-ipo-2027/"
+featuredSummary: "原始采访称 Altman 认为安全挑战下 2026 年不宜 IPO；这是管理层表态。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-09-13 00:38 +08:00"
+featuredTags: ["安全","治理","采访"]
+tags:
+  - "安全"
+  - "采访"
+  - "日期未确认"
+  - "社区需求"
+  - "治理"
+  - "Agent"
+  - "API"
+  - "ChatGPT"
+  - "Codex"
+  - "OpenAI"
+---
+
+## 今日概览
+
+采集窗口：2026-09-12 10:46—2026-09-13 10:46（Asia/Shanghai）。官方新闻、API 更新记录和所查官方 GitHub release 未显示窗口内的新产品发布。最明确的新事件是 OpenAI CEO Sam Altman 接受 Fortune 采访谈 AI 安全与上市时点；这是管理层表态，不是产品能力上线。
+
+## Tier 1：编码、Agent 与开发平台
+
+| 独立检查项 | 窗口内状态 |
+|---|---|
+| Codex CLI | 官方 release 无窗口内新稳定版；无新增 |
+| VS Code / JetBrains 集成 | 无可核实新增 |
+| Codex 云端/远程任务与 PR Agent | 无可核实新增 |
+| ChatGPT agentic mode | 无可核实新增 |
+| 官方 Agent 构建产品与 Agents API | 无可核实新增 |
+| Responses API | 官方 API changelog 无窗口内新条目 |
+| Agents SDK Python / TypeScript | 官方 release 无窗口内新版本 |
+| Assistants API 迁移/弃用 | 无窗口内新公告；不推断新的截止日期 |
+| Realtime API | 无窗口内新公告 |
+| GPT、推理与 Codex 模型系列 | 无窗口内新公告 |
+
+## Tier 2：应用与多模态
+
+| 检查项 | 窗口内状态 |
+|---|---|
+| 浏览器/Operator 能力、桌面应用 | 无可核实新增 |
+| GPTs/GPT Store、Canvas | 无可核实新增 |
+| Sora/视频、GPT Image/图像、语音 | 无可核实新增 |
+| Connectors/MCP | 无可核实新增 |
+
+## Tier 3：机构与行业
+
+Enterprise、Business、Edu、Gov、Science、安全及行业方案均已检索，未见本窗口内新的官方产品公告。
+
+## 官方动态与管理层表态
+
+- **安全与上市时点（原始采访，非产品发布）**：Fortune 于 9 月 12 日 12:38 ET 刊发[对 Sam Altman 的采访](https://fortune.com/2026/09/12/sam-altman-interview-ai-doomsday-safety-models-control-ipo-2027/)。采访报道写明，他认为当前安全挑战使上市时点不合适，并表示不会在 2026 年上市。此为采访当时的计划表述，不能视为正式 IPO 时间表或已发生的上市决定。
+
+## Love / Hate 与口碑
+
+- **Love**：未找到足以代表总体用户好评的窗口内可核实样本；不以官方公告代替正面口碑。
+- **Hate / 需求摩擦**：OpenAI 开发者社区有[用户建议让第三方应用使用个人 ChatGPT 订阅额度](https://community.openai.com/t/let-third-party-apps-use-a-user-s-chatgpt-plan-instead-of-developer-funded-api-usage/1396834)，理由是小型开发者难以承担 API 用量费用。这只是单个用户提案，不是已上线的计费或授权功能，也不能推断广泛抱怨。论坛页面只显示 9 月 12 日 03:00，未注明时区，因此列入日期未确认。
+- **情绪判断**：证据不足，置信度低。单个社区提案只说明一种成本诉求，无法量化口碑方向。
+
+## 比较
+
+本窗口没有具名、可复现的 Codex 与 Claude Code、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness/DSH 新对比评测；不作“追平/超过”结论。开源 harness 产品动态由开源专题另行跟踪。
+
+## 日期未确认
+
+- [开发者社区的订阅额度建议](https://community.openai.com/t/let-third-party-apps-use-a-user-s-chatgpt-plan-instead-of-developer-funded-api-usage/1396834)：页面有日期和 03:00 时间但未给时区，不能确认是否落入本次上海时间窗口；仅作需求信号。
+
+## 观察池
+
+- 上述采访涉及安全治理和 IPO 预期，后续应以 OpenAI 正式公告或监管文件核实任何实际安排；此处不把采访表述扩写为产品或融资事实。
+
+## 来源链接
+
+- [Fortune：Sam Altman 原始采访](https://fortune.com/2026/09/12/sam-altman-interview-ai-doomsday-safety-models-control-ipo-2027/)
+- [OpenAI 开发者社区：第三方应用计费建议](https://community.openai.com/t/let-third-party-apps-use-a-user-s-chatgpt-plan-instead-of-developer-funded-api-usage/1396834)
+
+## 采集状态
+
+已检查：OpenAI News、API changelog、ChatGPT release notes、Codex GitHub releases、OpenAI Python/Node SDK releases、Agents SDK Python/TypeScript releases、OpenAI 开发者社区、Reddit r/codex 及 r/OpenAI、Hacker News、X/YouTube 搜索和 Fortune 原始采访。失败来源：Fortune 嵌入视频入口在检索器内打开报错，已核对其文字版原始采访；X 独立实时搜索无法可靠核验发帖时间。初始候选 9 条，留存来源 2 条；最终来源非零，未触发二次补搜。无符合来源条件的官方配图，本页不配置图片。
