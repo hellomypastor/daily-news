@@ -1,0 +1,47 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-09-15T10:46:42+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Research / Engineering / GitHub：截至 10:46 无 24–72 小时新增",
+      "OpenAI News / Research / Developer changelog / GitHub：截至 10:46 无 24–72 小时新增",
+      "Google DeepMind / Google Research / Google AI Blog：无可核实新增",
+      "Meta AI Blog / Microsoft Research & AI / Mistral News / Cohere：无可核实新增",
+      "xAI News / xAI API docs / model changelog / GitHub：已显式检查 Grok 模型、API、DeepSearch、语音、编码、工具调用与 Agent；无 24–72 小时新增",
+      "Qwen / Alibaba DAMO / ByteDance Seed / Doubao / Baidu / Tencent Hunyuan / DeepSeek / Zhipu GLM / Moonshot Kimi / StepFun / MiniMax 官方入口：无可核实新增",
+      "NVIDIA Developer & Research / Hugging Face Blog & Papers / LangChain / LlamaIndex：无可核实新增",
+      "Cline / Pi Coding Agent / DeepSeek Harness：检查产品方向、分发、合作、融资、企业采用和生态信号；无行业级新增",
+      "Latent Space / Dwarkesh / No Priors / Cognitive Revolution / a16z AI 与厂商播客：无可核实新集数",
+      "Reddit r/DeepSeek / r/LocalLLaMA：发现两条当日社区讨论候选"
+    ],
+    "failedSources": [
+      "部分中文厂商动态页依赖客户端渲染或登录，搜索索引未给出可验证发布时间",
+      "X 官方账号时间线未登录时内容不完整，未据此确认任何发布"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n截至 2026-09-15 10:46（Asia/Shanghai），本轮在过去 24 小时主窗口及 24–72 小时补充窗口内，未发现可由厂商官方原文确认的新模型、API、Agent 产品、研究论文或播客发布。xAI / Grok 已按必查项逐项检查模型、API、DeepSearch、语音、编码、工具调用与 Agent 渠道，未发现窗口内新增。\n\n## 优先动态\n\n本轮无经官方原文与发布时间双重确认的优先动态。\n\n## 常规动态\n\n| 厂商/机构 | 状态 | 说明 |\n|---|---|---|\n| Anthropic / OpenAI | 无新增 | 已检查官方新闻、研究、开发者更新与 GitHub；本轮没有窗口内新条目。 |\n| Google / Meta / Microsoft / Mistral / Cohere | 无新增 | 官方列表未见 24–72 小时可核实新发布。 |\n| xAI / Grok | 无新增 | 已显式核查模型、API、DeepSearch、语音、编码、工具调用及 Agent 官方渠道。 |\n| 中国厂商 | 无新增 | 已检查 Qwen、Seed/Doubao、Baidu、Hunyuan、DeepSeek、GLM、Kimi、StepFun、MiniMax 等官方入口。 |\n| Coding Agent / Harness | 无行业级新增 | Cline、Pi Coding Agent、DeepSeek Harness/DSH 未见产品方向、分发、合作、融资、企业采用或生态层面的新信号；常规工程更新详见开源专题页。 |\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客入口未发现可核实的新集数。\n\n## 近两日补充\n\n无。\n\n## 近三日补充\n\n无。\n\n## 日期未确认\n\n无。\n\n## 观察池\n\n- **社区采用讨论（非厂商发布）**：Reddit r/DeepSeek 有用户讨论海外用户把 DeepSeek、Qwen、Kimi、GLM 等作为日常工具的实际体验。该帖是社区问答，不足以证明产品能力或市场份额变化，仅作为采用侧观察信号：[原帖](https://www.reddit.com/r/DeepSeek/comments/1wfvad2/anyone_outside_china_actually_using_deepseek_qwen/)。\n- **成本/效率叙事（非厂商发布）**：另一条 r/DeepSeek 讨论把中国模型的效率与成本取向同其他厂商作主观比较；缺少统一基准与可复现实验，不作性能结论：[原帖](https://www.reddit.com/r/DeepSeek/comments/1wfobfw/deepseek_is_ruthless/)。\n\n## 来源链接\n\n1. [海外用户使用 DeepSeek、Qwen、Kimi 的社区讨论](https://www.reddit.com/r/DeepSeek/comments/1wfvad2/anyone_outside_china_actually_using_deepseek_qwen/)\n2. [围绕模型效率与成本取向的社区讨论](https://www.reddit.com/r/DeepSeek/comments/1wfobfw/deepseek_is_ruthless/)\n\n## 采集状态\n\n- 采集窗口：2026-09-14 10:46 至 2026-09-15 10:46（Asia/Shanghai）；补充检查至 72 小时。\n- 已检查：主要欧美与中国厂商官方新闻/研究/文档入口、xAI/Grok 专项渠道、Coding Agent/Harness 行业信号、主流技术播客及社区入口。\n- 失败来源：部分中文厂商页依赖客户端渲染或登录；X 时间线未登录时不完整。\n- 初始候选：6 条；保留：2 条，均为明确标注的社区观察信号。\n- 二次补搜：否（最终保留来源非 0）。\n\n一句话总结：官方窗口内暂无可核实行业发布，社区讨论仍集中在中国模型的实际可用性与成本效率，但证据不足以支持性能或采用结论。",
+  "sources": [
+    {
+      "title": "Anyone outside China actually using DeepSeek, Qwen, or Kimi as a daily driver?",
+      "url": "https://www.reddit.com/r/DeepSeek/comments/1wfvad2/anyone_outside_china_actually_using_deepseek_qwen/",
+      "source": "Reddit r/DeepSeek",
+      "publishedAt": "2026-09-14",
+      "summary": "社区用户征集 DeepSeek、Qwen、Kimi、GLM 等在中国以外的日常使用体验；仅作为采用侧观察。",
+      "tags": ["观察池", "社区信号", "中国模型"]
+    },
+    {
+      "title": "DeepSeek is ruthless",
+      "url": "https://www.reddit.com/r/DeepSeek/comments/1wfobfw/deepseek_is_ruthless/",
+      "source": "Reddit r/DeepSeek",
+      "publishedAt": "2026-09-14",
+      "summary": "围绕模型成本效率取向的主观社区讨论，缺少统一基准与可复现实验。",
+      "tags": ["观察池", "社区信号", "未验证比较"]
+    }
+  ]
+}
