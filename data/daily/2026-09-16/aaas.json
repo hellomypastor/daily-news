@@ -1,0 +1,85 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": [
+    "AaaS",
+    "Agent",
+    "Cloud Agent",
+    "Managed Agent"
+  ],
+  "order": 50,
+  "updatedAt": "2026-09-16T10:46:45+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Managed Agents / Claude Code",
+      "OpenAI Codex cloud / Agent Platform",
+      "Google Vertex/Gemini/Jules",
+      "Microsoft Copilot Studio/Azure Agent",
+      "Replit Agent",
+      "Cognition Devin official product/docs/async/environments/concurrency/pricing/enterprise integrations",
+      "xAI News/Grok Bot/Agent Tools/hosted async tasks/remote execution",
+      "Cursor Cloud Agents",
+      "Lindy",
+      "CrewAI",
+      "LangGraph Platform",
+      "GitHub coding agent",
+      "Amazon Q Developer",
+      "Cloudflare Workers/Agents",
+      "Factory",
+      "Sourcegraph/Amp",
+      "ByteDance Coze/Volcano/Trae",
+      "Alibaba Bailian/Qoder",
+      "Tencent",
+      "Baidu",
+      "Zhipu",
+      "Moonshot/Kimi",
+      "MiniMax",
+      "DeepSeek",
+      "Cline/Pi/DSH hosted signals",
+      "OpenCode/Aider/Continue/Roo hosted signals"
+    ],
+    "failedSources": [
+      "Cognition 官网定向检索：近期可核实发布列表不清晰",
+      "部分厂商文章仅有日期，无发布时间小时"
+    ],
+    "candidateCount": 6,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-09-15 10:46 至 2026-09-16 10:46（Asia/Shanghai）。下列官方文仅标发布日期，未标小时，故严格 24 小时归属未确认。托管 Agent 与执行底座分列，避免混淆 AaaS 与 PaaS。\n\n## 重点动态与远程/云端 Agent 执行\n\n| 平台 | 动态 | 证据状态 | AaaS 意义 | 原文 |\n| --- | --- | --- | --- | --- |\n| Meta | Meta One Essential 商业方案增加 WhatsApp Meta Business Agent 使用 | 9 月 15 日官方，时刻未确认 | Meta 官方称 Business Agent 可 24/7 回复客户，是托管客户交互 Agent 的订阅与额度信号；尚无新环境、并发或独立 Agent 价格证据。 | [官方原文](https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/) |\n\n## 海外厂商与中国平台\n\n已逐项检查 Anthropic、OpenAI、Google、Microsoft、Replit、Cognition Devin、xAI/Grok、Cursor、Lindy、CrewAI、LangGraph、GitHub、Amazon Q、Cloudflare、Factory、Sourcegraph/Amp 和中国主要平台的官方入口。Devin 的托管异步执行、环境、并发、价格、企业集成定向检索无本窗口核实动态；Grok Bot 官方新闻最近为 9 月 4 日或更早，无本日新托管/异步/远程执行发布。Cline、Pi、DSH 和 OpenCode/Aider/Continue/Roo 的本地 harness 更新未自动计入 AaaS。\n\n## AaaS 与 MaaS/PaaS 边界\n\nMeta Business Agent 的客户回复服务有提供方托管与订阅证据。Google 的 GKE Agent Substrate 是可部署的执行底座；Cloudflare Worker 权限是平台控制能力。两者没有单独证明供应商负责客户 Agent 的完整托管生命周期。\n\n## 日期未确认与未证实传闻\n\n本轮官方来源的小时级发布日期未公开；仅将其列为“日期已确认、小时未确认”。未发现可列入的具名一手泄露；不将论坛诉求解释为发布。\n\n## 邻近信号观察池\n\n| 方向 | 状态与意义 | 原文 |\n| --- | --- | --- |\n| Google GKE Agent Substrate | 9 月 15 日官方，PaaS/执行底座邻近信号；厂商称提供沙箱隔离、快速恢复与高密度，性能未经独立核实。 | [官方原文](https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke) |\n| Cloudflare Worker 权限 | 9 月 15 日官方，PaaS 安全控制邻近信号；Worker 级四角色可约束 Agent 或 CI 的访问范围。 | [官方原文](https://blog.cloudflare.com/workers-granular-authorization/) |\n\n## 趋势与来源链接\n\n本轮主要信号是托管客户交互的订阅额度，以及 Agent 沙箱与权限控制的底层建设。来源：[Meta One](https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/)、[Google Cloud](https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke)、[Cloudflare](https://blog.cloudflare.com/workers-granular-authorization/)。\n\n## 采集状态\n\n已检查：Anthropic Managed Agents/Claude Code、OpenAI Codex cloud/agent platform、Google Vertex/Gemini/Jules、Microsoft Copilot Studio/Azure Agents、Replit、Cognition Devin 官方产品/文档/异步执行/环境/并发/定价/企业集成、xAI News/Grok Bot/Agent Tools/托管异步任务/远程执行、Cursor、Lindy、CrewAI、LangGraph、GitHub、Amazon Q、Cloudflare、Factory、Sourcegraph/Amp；中国方向覆盖 Coze/Volcano/Trae、Bailian/Qoder、腾讯、百度、Zhipu、Kimi、MiniMax、DeepSeek；Cline/Pi/DSH、OpenCode/Aider/Continue/Roo 云托管信号。失败来源：Cognition 官网定向检索未返回可按小时核实的近期列表；部分厂商无精确发布时间。初始候选 6，保留 3，已运行第二轮中英文补搜（官方入口、GitHub 与可信二手来源）。\n\n今日扫描完成，共 3 条动态，重点：Meta Business Agent 商业方案与两项 Agent 平台邻近信号。\n",
+  "sources": [
+    {
+      "title": "Introducing Meta One: A Subscription Service With More Features and AI",
+      "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+      "source": "Meta",
+      "publishedAt": "2026-09-15（原文仅标日期，具体时刻未确认）",
+      "summary": "Meta 商业订阅增加托管在 WhatsApp 的 Meta Business Agent 使用，属于托管客户回复 Agent 的商业化信号；未见新执行环境或并发指标。",
+      "tags": [
+        "AaaS",
+        "Business"
+      ]
+    },
+    {
+      "title": "Agent Substrate brings high-density, scalable, trusted infrastructure to GKE",
+      "url": "https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke",
+      "source": "Google Cloud",
+      "publishedAt": "2026-09-15（原文仅标日期，具体时刻未确认）",
+      "summary": "Google 在 GKE 提供 Agent 沙箱执行底座；本身是基础设施邻近信号，未证实托管客户 Agent 生命周期。",
+      "tags": [
+        "邻近信号",
+        "PaaS"
+      ]
+    },
+    {
+      "title": "Give every teammate and agent the right level of access to your Workers",
+      "url": "https://blog.cloudflare.com/workers-granular-authorization/",
+      "source": "Cloudflare",
+      "publishedAt": "2026-09-15（原文仅标日期，具体时刻未确认）",
+      "summary": "Worker 粒度角色与权限可服务 Agent 运行安全，但文章没有宣称托管 Agent 生命周期。",
+      "tags": [
+        "邻近信号",
+        "PaaS"
+      ]
+    }
+  ]
+}
