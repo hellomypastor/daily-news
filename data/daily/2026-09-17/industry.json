@@ -1,0 +1,76 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-09-17T10:48:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News",
+      "OpenAI News / Research / Product（详见 OpenAI 专题页）",
+      "Google DeepMind / Research / Cloud",
+      "Meta AI Newsroom",
+      "Microsoft Research / AI",
+      "xAI News / Grok Build changelog / API / models / DeepSearch / voice / coding / tool-use / Agent",
+      "Mistral News",
+      "Cohere",
+      "Qwen / Alibaba / DAMO",
+      "ByteDance Doubao / Seed",
+      "Baidu",
+      "Tencent Hunyuan",
+      "DeepSeek",
+      "Zhipu / GLM",
+      "Moonshot / Kimi",
+      "StepFun",
+      "MiniMax",
+      "NVIDIA Developer / Research",
+      "Hugging Face",
+      "LangChain",
+      "LlamaIndex",
+      "Latent Space / Dwarkesh / No Priors / The Cognitive Revolution / a16z AI",
+      "Cline / Pi Coding Agent / DeepSeek Harness industry signals"
+    ],
+    "failedSources": [
+      "部分中国厂商与播客入口：检索结果未提供可核实的 24 小时内新原文",
+      "多数 9 月 16 日官方文章仅标日期，无法确认小时级窗口归属"
+    ],
+    "candidateCount": 7,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-09-16 10:48 至 2026-09-17 10:48（Asia/Shanghai）。本轮核实到 xAI 编码 Agent 记忆能力、Mistral 与 Firefox 的浏览器分发合作，以及 OpenAI 的企业分析与广告 Agent 动态。官方页面只标 9 月 16 日、未给小时者按‘日期确认、小时未确认’处理。\n\n## 优先动态\n\n| 厂商 | 动态与类型 | 日期/证据 | 技术要点与意义 | 原文 |\n| --- | --- | --- | --- | --- |\n| xAI | Grok Build 1.0.34；编码 Agent / Harness | 9 月 16 日官方变更日志，小时未确认 | Memory 由预览状态进入 GA，说明会话记忆成为 Grok 编码 Agent 的正式能力；同版还修正 Markdown 标题主题色。 | [官方变更日志](https://x.ai/build/changelog) |\n| Mistral / Mozilla | Firefox Smart Window 合作；浏览器分发 | 9 月 16 日官方，小时未确认 | Firefox Smart Window beta 在法国与北美使用 Mistral 模型，英国与德国计划随后上线；官方称对话默认不保存在 Mozilla 服务器，Mistral 等合作方承诺零数据保留。 | [官方原文](https://mistral.ai/news/mistral-x-mozilla/) |\n| OpenAI | ChatGPT Work / Codex 管理分析；企业控制面 | 9 月 16 日官方，小时未确认 | Admin Console 汇总使用、成本、任务洞察和结果指标，并可看 Codex 对合并提交、代码行与评审活动的贡献；Admin plugin 与 API 支持报告自动化。厂商案例数字不可视为独立验证。详见 OpenAI 专题页。 | [官方原文](https://openai.com/index/how-to-connect-ai-usage-to-business-value/) |\n| OpenAI | Sponsored Agents 与广告工具；商业化 | 9 月 16 日官方，小时未确认 | 美国部分广告主测试 Sponsored Agents；ChatGPT Work 的 Ads Manager plugin 可用自然语言创建、更新和分析活动，并接入 HubSpot 与 Shopify。详见 OpenAI 专题页。 | [官方原文](https://openai.com/index/reimagining-advertising-with-ai/) |\n\n## 常规更新与播客\n\n已检查 Anthropic、Google、Meta、Microsoft、Cohere、Qwen、ByteDance、百度、腾讯、DeepSeek、智谱、Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex 及主要播客入口，未核实到更多满足本窗口且值得单列的官方动态。xAI/Grok 的 News、API、模型、DeepSearch、语音、编码、工具调用与 Agent 入口均显式检查；本轮可报告新增为 Grok Build 1.0.34。\n\n## 近两日补充\n\n暂无额外 24–48 小时核实候选。\n\n## 近三日补充\n\n暂无额外 48–72 小时核实候选。\n\n## 日期未确认\n\n上述 9 月 16 日页面均缺发布时间小时，因此无法证明严格落入从 10:48 起算的 24 小时窗口；保留官方日期并明确限制。\n\n## 观察池\n\nLangChain Python 1.4.1 的第三方聚合页显示 9 月 16 日修正 Open MCP 对象参数保留，但本轮未取得等价一手 release 页面，暂不列入来源。未发现 Cline、Pi Coding Agent 或 DeepSeek Harness/DSH 在融资、合作、企业采用或生态层面的可核实新信号；常规提交留给开源专题。\n\n## 来源链接\n\n- [xAI：Grok Build changelog](https://x.ai/build/changelog)\n- [Mistral / Mozilla：Firefox Smart Window 合作](https://mistral.ai/news/mistral-x-mozilla/)\n- [OpenAI：AI 使用与业务价值](https://openai.com/index/how-to-connect-ai-usage-to-business-value/)（详见 OpenAI 专题页）\n- [OpenAI：AI 广告与 Sponsored Agents](https://openai.com/index/reimagining-advertising-with-ai/)（详见 OpenAI 专题页）\n\n总体来看，今日信号集中在 Agent 的正式记忆能力、浏览器分发和企业可观测/商业化控制面，而非新的基础模型发布。\n\n## 采集状态\n\n已检查主要国内外厂商、研究机构、Agent 框架、xAI/Grok 全套指定入口、五档播客以及 Coding Agent 企业/生态信号。失败来源：部分中国厂商与播客入口未提供可核实的新原文；多数官方文章缺小时级时间。初始候选 7，保留 4，未运行二次补搜。\n",
+  "sources": [
+    {
+      "title": "Grok Build Changelog — v1.0.34",
+      "url": "https://x.ai/build/changelog",
+      "source": "xAI",
+      "publishedAt": "2026-09-16",
+      "summary": "Grok Build 1.0.34 将 Memory 标记为 generally available。",
+      "tags": ["xAI", "Grok Build", "Memory", "Coding Agent"]
+    },
+    {
+      "title": "Mistral and Mozilla are bringing open, private and multilingual AI to your web browser",
+      "url": "https://mistral.ai/news/mistral-x-mozilla/",
+      "source": "Mistral and Mozilla",
+      "publishedAt": "2026-09-16",
+      "summary": "Firefox Smart Window beta 接入 Mistral 模型，强调区域语言、用户控制与零数据保留。",
+      "tags": ["Mistral", "Mozilla", "Firefox", "Browser AI"]
+    },
+    {
+      "title": "How to connect AI usage to business value",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value/",
+      "source": "OpenAI",
+      "publishedAt": "2026-09-16",
+      "summary": "OpenAI 介绍 ChatGPT Work 与 Codex 的企业使用、成本、任务和结果分析能力。",
+      "tags": ["OpenAI", "Codex", "Enterprise", "Analytics"]
+    },
+    {
+      "title": "Reimagining advertising with AI",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai/",
+      "source": "OpenAI",
+      "publishedAt": "2026-09-16",
+      "summary": "OpenAI 测试 Sponsored Agents 并推出面向广告管理的 AI 工具与集成。",
+      "tags": ["OpenAI", "Sponsored Agents", "Advertising", "ChatGPT Work"]
+    }
+  ]
+}
