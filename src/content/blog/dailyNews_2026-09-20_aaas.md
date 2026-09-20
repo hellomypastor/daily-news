@@ -1,0 +1,61 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-09-20T00:00:00+08:00"
+updatedAt: "2026-09-20T10:48:13+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTags: []
+tags:
+  - "邻近信号"
+  - "日期未确认"
+  - "AaaS"
+  - "Agent"
+  - "Cloud Agent"
+  - "Managed Agent"
+---
+
+## 今日概览
+
+采集窗口：2026-09-19 10:46 至 2026-09-20 10:46（Asia/Shanghai）。本轮没有核实到该窗口内的新 AaaS 发布。
+
+## 重点动态
+
+暂无可确认的 24 小时新项。
+
+## 远程 / 云端 Agent 执行
+
+没有确认的新发布；Cognition Devin 官方博客最近可见的 Code Scans 为 9 月 16 日，已超出本轮 72 小时观察范围，本页不重复收录。
+
+## 海外厂商
+
+已检查 Grok Bot 的托管执行、异步任务、工具与企业控制面，以及 Devin 环境、并发、定价和集成；未见窗口内可核实新增。
+
+## 国内厂商（含字节跳动）
+
+字节 Coze/火山/Trae/Seed 官方入口未核到本窗口内相关新项。腾讯 WorkBuddy Enterprise 的[产品页](https://cloud.tencent.com/product/workbuddy-enterprise)描述云端智能体托管，但页面未显示可确认发布日期，列入下方日期未确认。
+
+## AaaS 与 MaaS/PaaS 边界
+
+仅模型 API 或基础云资源更新不构成 AaaS 动态；Grok 语音模型更新归行业页。
+
+## 日期未确认
+
+- [腾讯 WorkBuddy Enterprise 产品页](https://cloud.tencent.com/product/workbuddy-enterprise)：官方页面描述企业云端智能体托管；页面日期未核实，不能称为今日发布。
+- [Cursor Cloud Agents 帮助页](https://prod.cursor.com/help/ai-features/background-agents)：官方文档说明远程 VM、后台执行及定时触发；原始发布日期未确认，仅作能力观察。
+
+## 未证实传闻
+
+本轮未保留具备可追溯单一来源的传闻。
+
+## 邻近信号观察池
+
+[xAI 新闻列表](https://x.ai/news)列出 9 月 18 日 Grok Voice Transcribe 2.0；这是语音模型动态，缺少托管 Agent 执行证据，详见行业专题页。
+
+## 趋势
+
+现有官方文档继续强调远程执行和企业控制，但没有足够的新证据推断本轮市场变化。
+
+## 采集状态
+
+已检查：Cognition Devin 新闻/变更/文档（托管异步执行、环境、并发、价格、企业与集成）；xAI/Grok 新闻、Bot、Build、API（托管、异步、工具、编码与远程执行）；Anthropic、OpenAI、Google Vertex/Jules、Microsoft Copilot Studio/Azure Agent、Replit、Cursor、Lindy、CrewAI、LangGraph、GitHub、AWS、Cloudflare、Factory、Sourcegraph/Amp；字节 Coze/火山/Trae/Seed、阿里百炼/Qoder、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的托管线索检索。失败：部分厂商缺少可按日期排序的公开更新入口，日期无法确认。初始候选 4，保留来源 3，已进行中英文关键词、官方备用入口、GitHub 与可信二手结果的二次补搜。
+
+今日扫描完成，共 0 条已核实窗口动态，重点：腾讯和 Cursor 能力页面保留为日期未确认观察。

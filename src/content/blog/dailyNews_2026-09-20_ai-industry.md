@@ -1,0 +1,65 @@
+---
+title: "主流 AI / Agent 厂商技术动态日报"
+date: "2026-09-20T00:00:00+08:00"
+updatedAt: "2026-09-20T10:47:27+08:00"
+description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredTitle: "GitHub Copilot weekly releases — September 14"
+featuredUrl: "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/"
+featuredSummary: "Copilot 代码评审可在后续评审中解决已处理评论；自动模型选择增加三种权衡档位，VS Code Agents 窗口提供企业使用指标。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-09-18"
+featuredTags: ["近两日补充"]
+featuredImage: "https://github.blog/wp-content/uploads/2026/09/654230582-47ce4ae9-1aa0-4b70-988a-f6b3a47a6762.jpg"
+featuredImageAlt: "GitHub Copilot 周更文章配图"
+featuredImageCaption: "图片来源：GitHub Blog"
+tags:
+  - "观察池"
+  - "近两日补充"
+  - "日期未确认"
+  - "原文细节待核"
+  - "Agent"
+  - "AI"
+  - "Industry"
+  - "Research"
+---
+
+## 今日概览
+
+采集窗口：2026-09-19 10:46 至 2026-09-20 10:46（Asia/Shanghai）。当前官方入口未核到可确认落在该窗口的新发布。
+
+## 优先动态
+
+本轮暂无已确认的 24 小时内动态。
+
+## 常规动态与播客
+
+本轮未核到符合时间窗且可确认日期的新增播客或常规发布。
+
+## 近两日补充
+
+| 厂商 | 标题 | 类型 | 日期/状态 | 摘要与意义 | 来源 |
+|---|---|---|---|---|---|
+| GitHub | Copilot 周更 | 产品更新 | 2026-09-18，近两日 | 代码评审后续可解决已处理评论，自动模型选择新增档位，企业可见 Agents 使用指标；体现编码 Agent 的评审与管理面继续完善。 | [原文](https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/) |
+| xAI | Grok Voice Transcribe 2.0 | 模型更新 | 2026-09-18，近两日；详情待核 | [官方新闻列表](https://x.ai/news)列出语音转录更新；尚未核到详情，不推断性能或 API 条款。 | [入口](https://x.ai/news) |
+
+<figure class="source-image">
+  <a href="https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/"><img src="https://github.blog/wp-content/uploads/2026/09/654230582-47ce4ae9-1aa0-4b70-988a-f6b3a47a6762.jpg" alt="GitHub Copilot 周更文章配图" loading="lazy" /></a>
+  <figcaption><a href="https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/">图片来源：GitHub Blog</a></figcaption>
+</figure>
+
+## 近三日补充
+
+暂无额外确认项。
+
+## 日期未确认
+
+暂无值得单列的候选。
+
+## 观察池
+
+Google DeepMind 首页列出数项 2026 年 9 月模型与研究，但仅标月份，无法判定本轮时效，待查详情：[官方入口](https://deepmind.google/)。
+
+## 采集状态
+
+已检查：xAI 新闻及 Grok 模型/API/DeepSearch/语音/编码/工具调用/Agent 检索、Google DeepMind、Google Blog、Meta AI、Microsoft AI/Research、GitHub Changelog、Hugging Face、LangChain、Anthropic、OpenAI，以及 Mistral、Cohere、Qwen、豆包/Seed、百度、腾讯、DeepSeek、智谱、Kimi、阶跃、MiniMax、NVIDIA、LlamaIndex 与 Latent Space、Dwarkesh、No Priors、Cognitive Revolution、a16z AI 播客检索。部分入口仅完成搜索结果级检查，未逐一打开全文。失败：xAI 语音转录详情页未定位，故仅据新闻列表保留候选。初始候选 7，保留来源 3，二次补搜：否。
+
+今日行业主线：可核实的近两日补充集中在编码 Agent 管理面与语音模型，24 小时窗口尚无确认发布。
