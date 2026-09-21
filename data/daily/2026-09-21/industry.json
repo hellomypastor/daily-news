@@ -1,0 +1,58 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Industry",
+    "Research"
+  ],
+  "order": 40,
+  "updatedAt": "2026-09-21T10:48:12+08:00",
+  "scan": {
+    "checkedSources": [
+      "xAI/Grok 官方新闻、模型/API/DeepSearch/语音/编码/工具调用/Agent 搜索",
+      "Anthropic Newsroom",
+      "OpenAI News",
+      "Google Research Blog",
+      "Meta AI Blog",
+      "Microsoft Blog",
+      "Mistral News",
+      "NVIDIA Developer Blog",
+      "Hugging Face Blog",
+      "LangChain 与播客搜索",
+      "Cline/Pi/DeepSeek Harness 产业信号搜索"
+    ],
+    "failedSources": [
+      "部分厂商与播客页面缺少可核实的当日时间信息，未作窗口内确认"
+    ],
+    "candidateCount": 9,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口为 2026-09-20 10:46 至 2026-09-21 10:46（Asia/Shanghai）。已检查的官方入口暂无可核实的窗口内行业发布；以下保留近两至三日的相关报道，分别说明证据边界。\n\n## 优先动态与常规更新\n\n本轮未确认 24 小时内的官方产品、模型或 Agent 平台更新。xAI/Grok 的官方新闻入口最近可见 9 月 18 日语音转写发布，未发现窗口内模型、API、DeepSearch、语音、编码、工具调用或 Agent 新公告；不重复旧背景来源。\n\n## 播客\n\n所检查的播客入口未找到可核实的窗口内相关新集。\n\n## 近两日补充\n\n| 厂商 | 标题与类型 | 日期/状态 | 摘要与意义 | 来源 |\n| --- | --- | --- | --- | --- |\n| Anthropic、OpenAI、SpaceXAI、Google | AI 研发放缓相关反垄断诉讼；法律/产业 | AP 报道发表于 2026-09-20 00:32 +08:00，早于本轮 24h 窗口；诉状主张尚未经法院认定 | 美联社报道，一项诉讼指控多家实验室协调放慢 AI 研发。这里只记录诉讼及其指控，不把涉嫌共谋当成已证实事实；关系到前沿模型研发治理。 | [AP 报道](https://apnews.com/article/antitrust-lawsuit-ai-slowdown-anthropic-openai-spacexai-google-960af4308161eaf4ed13c383b0ce1c1b)；涉及 Claude/OpenAI，详见 Claude 专题页与 OpenAI 专题页 |\n\n## 近三日补充\n\n| 厂商 | 标题与类型 | 日期/状态 | 摘要与意义 | 来源 |\n| --- | --- | --- | --- | --- |\n| Google | Gemini 安全测试中意外访问真实公司系统；安全/Agent | Axios 报道发表于 2026-09-19；事件发生在更早的 5 月，属于较早事件的新近披露 | Axios 引述 Google 与测试方 Irregular 的说明，称测试环境意外联网导致三个真实公司系统被访问。原始测试报告未在本轮核得，故按可信二手报道呈现。反映 Agent 评测隔离与外部连接控制的重要性。 | [Axios 报道](https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks) |\n\n## 日期未确认\n\n本轮未发现需要保留但发布时间无法核定的独立候选。\n\n## 观察池\n\n已检查的 Google Research、Meta AI、Microsoft、Mistral、NVIDIA、Hugging Face 等官方列表最近可见内容较旧或不在本轮行业窗口；未以旧闻填充正文。Cline、Pi、DeepSeek Harness 的常规仓库变化留给开源专题；本轮未核实具产业意义的新事件。中国厂商与播客入口暂未见可核实的本轮更新。\n\n## 来源链接\n\n- [AP：AI 研发放缓相关诉讼](https://apnews.com/article/antitrust-lawsuit-ai-slowdown-anthropic-openai-spacexai-google-960af4308161eaf4ed13c383b0ce1c1b)\n- [Axios：Gemini 测试隔离事件](https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks)\n\n## 采集状态\n\n已检查：xAI/Grok 新闻与 Grok 模型、API、DeepSearch、语音、编码、工具调用和 Agent 关键词；Anthropic 与 OpenAI 新闻入口；Google Research、Meta AI、Microsoft Blog、Mistral、NVIDIA Developer、Hugging Face 列表；LangChain 与 AI 播客搜索；Cline、Pi、DeepSeek Harness 产业信号搜索。失败来源：部分厂商与播客页面缺少可核实的当日时间信息，因此未作窗口内确认。初始候选 9 条，留存来源 2 条；二次补搜：未触发（来源非零）。\n\n今日判断：窗口内暂无可核实官方行业发布；近两至三日的治理与安全报道值得跟踪。",
+  "sources": [
+    {
+      "title": "Antitrust lawsuit filed against AI companies challenges coordinated slowdown efforts",
+      "url": "https://apnews.com/article/antitrust-lawsuit-ai-slowdown-anthropic-openai-spacexai-google-960af4308161eaf4ed13c383b0ce1c1b",
+      "source": "Associated Press",
+      "publishedAt": "2026-09-20 00:32 +08:00",
+      "summary": "AP 报道涉及 Anthropic、OpenAI、SpaceXAI、Google 的反垄断诉讼；指控尚待审理。",
+      "tags": [
+        "近两日补充",
+        "可信二手来源"
+      ]
+    },
+    {
+      "title": "Google Gemini accessed three companies during AI hacking test",
+      "url": "https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks",
+      "source": "Axios",
+      "publishedAt": "2026-09-19",
+      "summary": "Axios 报道 Google AI 安全测试意外触及三个真实公司系统，引用 Google 与测试方说明。",
+      "tags": [
+        "近三日补充",
+        "可信二手来源"
+      ]
+    }
+  ]
+}

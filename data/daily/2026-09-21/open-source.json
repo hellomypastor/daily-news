@@ -1,0 +1,113 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Open Source",
+    "LLM"
+  ],
+  "order": 30,
+  "updatedAt": "2026-09-21T10:48:22+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cline 官方仓库 commits、releases、changelog、文档",
+      "Pi badlogic/pi-mono（跳转 earendil-works/pi）官方仓库 commits、releases、packages、文档",
+      "DeepSeek Harness / DSH 官方仓库 commits、releases、packages、文档",
+      "OpenCode 官方仓库 commits、releases、changelog",
+      "Aider 官方仓库 commits、releases、文档",
+      "Continue 官方仓库 commits、releases、文档",
+      "Roo Code 官方仓库 commits、releases、文档",
+      "Hacker News 首页与 Algolia recent submissions",
+      "GitHub Trending 总榜、Python、TypeScript",
+      "arXiv cs.AI",
+      "Hugging Face Papers 与博客",
+      "Simon Willison 博客"
+    ],
+    "failedSources": [],
+    "candidateCount": 20,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-09-20 10:46 至 2026-09-21 10:46（Asia/Shanghai）。Pi v0.86.1 是本轮可核实的正式发行；其余条目均为官方仓库提交，尚不能视作正式发布。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 |\n|---|---|\n| Cline | 官方提交、releases、changelog 与文档已查；最新可见桌面正式版为 9 月 18 日的 0.0.32，本轮无新增正式发行。 |\n| Pi Coding Agent / pi-mono | 原 badlogic/pi-mono 指向 earendil-works/pi；v0.86.1 已发行，另有图像输入、扩展诊断、模型工具模式与缓存预热提交。 |\n| DeepSeek Harness / DSH | 官方仓库、packages、release、文档已查；最新可见 dsh-v0.1.6-alpha.2 为 9 月 17 日，本轮无新增。 |\n| OpenCode | Together AI 用量上报修复为代码提交；未见新正式发行。 |\n| Aider、Continue、Roo Code | 各官方仓库、release 和文档快速检查；未见本轮新增。 |\n\n## 已验证技术动态\n\n- **Pi Coding Agent v0.86.1**（2026-09-20 19:19 +08:00，正式发行）：加入 Meta Muse 提供方与 `/login meta`，并修复部分上下文溢出识别、工具 schema 与终端剪贴板问题。模型路由和跨环境可用性是主要影响。[原始来源](https://github.com/earendil-works/pi/releases/tag/v0.86.1)。\n\n- **Pi 增加图像输入限制**（2026-09-21 04:59 +08:00，代码提交）：修改 AI 与 coding-agent 包中的图像输入限制处理，关系到多模态请求的边界控制；尚未核实进入正式版。[原始来源](https://github.com/earendil-works/pi/commit/f5c946480c575604c50d810adc88b11679d6aecb)。\n\n- **Pi 扩展崩溃诊断**（2026-09-21 07:00 +08:00，代码提交）：在崩溃堆栈中标识扩展，帮助定位插件问题；尚未核实进入正式版。[原始来源](https://github.com/earendil-works/pi/commit/63787ee6bae459fea74e5d846c81a5835f7b3f44)。\n\n- **Pi 未知提供方工具模式**（2026-09-21 07:14 +08:00，代码提交）：未知提供方默认采用非严格工具模式，降低 OpenAI 兼容接口的 schema 不兼容风险；尚未核实进入正式版。[原始来源](https://github.com/earendil-works/pi/commit/890f920884f6)。\n\n- **Pi 缓存预热时序修复**（2026-09-20 21:53 +08:00，代码提交）：跳过迟到的缓存预热刷新，针对长会话中的异步刷新时序；尚未核实进入正式版。[原始来源](https://github.com/earendil-works/pi/commit/3390bd936309)。\n\n- **OpenCode 用量上报修复**（2026-09-21 10:01 +08:00，代码提交）：升级 Together AI 依赖，使流式输出报告用量；目前只能确认仓库提交。[原始来源](https://github.com/anomalyco/opencode/commit/8bf288ecb15263f6a6bf4a82fa806975c6261046)。\n\n## GitHub Trending\n\n已检查当日总榜、Python 与 TypeScript；榜单只能说明当前关注，未将其当成今日发布证明。\n\n## HN 讨论\n\n已检查 HN 首页与 Algolia 最近投稿；未找到同时具备足够原始证据和讨论数据、需要独立列出的新项目。\n\n## 论文与研究\n\n已检查 arXiv cs.AI、Hugging Face Papers 与博客；本轮未核实到适合突出报道的新论文。\n\n## 旧文再受关注\n\n未发现同时核实原文超过七日且近 24 小时被 HN 重新讨论的条目。\n\n## 日期未确认\n\n暂无值得单独保留、且日期无法核实的候选。\n\n## 观察池\n\n- Cline 桌面 nightly 标签与播报流程有仓库提交，但属于内部发布流程，未当成面向用户的能力发布。\n- 未证实传闻：没有具备可引述出处的具体候选；邻近信号：未单独列项。\n\n## 来源链接\n\n- [Pi Coding Agent v0.86.1](https://github.com/earendil-works/pi/releases/tag/v0.86.1)\n\n- [Pi 增加图像输入限制](https://github.com/earendil-works/pi/commit/f5c946480c575604c50d810adc88b11679d6aecb)\n\n- [Pi 在崩溃堆栈中标识扩展](https://github.com/earendil-works/pi/commit/63787ee6bae459fea74e5d846c81a5835f7b3f44)\n\n- [Pi 未知提供方默认使用非严格工具模式](https://github.com/earendil-works/pi/commit/890f920884f6)\n\n- [Pi 跳过迟到的缓存预热刷新](https://github.com/earendil-works/pi/commit/3390bd936309)\n\n- [OpenCode 更新 Together AI 依赖以恢复用量上报](https://github.com/anomalyco/opencode/commit/8bf288ecb15263f6a6bf4a82fa806975c6261046)\n\n## 采集状态\n\n- 已检查来源：Cline 官方仓库 commits、releases、changelog、文档；Pi badlogic/pi-mono（跳转 earendil-works/pi）官方仓库 commits、releases、packages、文档；DeepSeek Harness / DSH 官方仓库 commits、releases、packages、文档；OpenCode 官方仓库 commits、releases、changelog；Aider 官方仓库 commits、releases、文档；Continue 官方仓库 commits、releases、文档；Roo Code 官方仓库 commits、releases、文档；Hacker News 首页与 Algolia recent submissions；GitHub Trending 总榜、Python、TypeScript；arXiv cs.AI；Hugging Face Papers 与博客；Simon Willison 博客。\n\n- 失败来源：无；上述入口均可访问。\n\n- 初始候选数量：约 20（七个 harness 的近期提交及 release，并复查聚合入口）；保留原始 URL：6。\n\n- 二次补搜：否，最终来源不为 0。",
+  "sources": [
+    {
+      "title": "Pi Coding Agent v0.86.1",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v0.86.1",
+      "source": "Pi / earendil-works",
+      "publishedAt": "2026-09-20 19:19 +08:00",
+      "summary": "正式发行新增 Meta Muse 提供方和登录方式，并修复上下文溢出识别、工具 schema 与剪贴板等问题。",
+      "tags": [
+        "Pi",
+        "Release",
+        "Provider"
+      ]
+    },
+    {
+      "title": "Pi 增加图像输入限制",
+      "url": "https://github.com/earendil-works/pi/commit/f5c946480c575604c50d810adc88b11679d6aecb",
+      "source": "Pi / earendil-works",
+      "publishedAt": "2026-09-21 04:59 +08:00",
+      "summary": "代码提交在 AI 与 coding-agent 包中增加图像输入限制；尚未核实进入正式发行。",
+      "tags": [
+        "Pi",
+        "Multimodal",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Pi 在崩溃堆栈中标识扩展",
+      "url": "https://github.com/earendil-works/pi/commit/63787ee6bae459fea74e5d846c81a5835f7b3f44",
+      "source": "Pi / earendil-works",
+      "publishedAt": "2026-09-21 07:00 +08:00",
+      "summary": "代码提交在崩溃日志与交互模式中标识扩展，便于定位扩展导致的问题；尚未核实进入正式发行。",
+      "tags": [
+        "Pi",
+        "Extension",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Pi 未知提供方默认使用非严格工具模式",
+      "url": "https://github.com/earendil-works/pi/commit/890f920884f6",
+      "source": "Pi / earendil-works",
+      "publishedAt": "2026-09-21 07:14 +08:00",
+      "summary": "代码提交使未知提供方默认使用非严格工具模式，涉及 OpenAI 兼容 API 工具调用。",
+      "tags": [
+        "Pi",
+        "Tool Calling",
+        "Commit"
+      ]
+    },
+    {
+      "title": "Pi 跳过迟到的缓存预热刷新",
+      "url": "https://github.com/earendil-works/pi/commit/3390bd936309",
+      "source": "Pi / earendil-works",
+      "publishedAt": "2026-09-20 21:53 +08:00",
+      "summary": "代码提交修正缓存预热任务的时序处理；尚未核实进入正式发行。",
+      "tags": [
+        "Pi",
+        "Cache",
+        "Commit"
+      ]
+    },
+    {
+      "title": "OpenCode 更新 Together AI 依赖以恢复用量上报",
+      "url": "https://github.com/anomalyco/opencode/commit/8bf288ecb15263f6a6bf4a82fa806975c6261046",
+      "source": "OpenCode / anomalyco",
+      "publishedAt": "2026-09-21 10:01 +08:00",
+      "summary": "代码提交升级 Together AI 依赖以让流式输出报告用量；尚未核实进入正式发行。",
+      "tags": [
+        "OpenCode",
+        "Usage",
+        "Commit"
+      ]
+    }
+  ],
+  "image": {
+    "url": "https://opengraph.githubassets.com/561ecc8e5558a8921f061a182df92387db4853124b520c37cca3d56b2b88072b/earendil-works/pi/releases/tag/v0.86.1",
+    "alt": "Pi Coding Agent v0.86.1 GitHub 官方发行卡片，显示 Meta Muse provider 更新",
+    "sourceUrl": "https://github.com/earendil-works/pi/releases/tag/v0.86.1",
+    "caption": "图片来源：Pi v0.86.1 官方 GitHub Release OpenGraph 卡片"
+  }
+}
