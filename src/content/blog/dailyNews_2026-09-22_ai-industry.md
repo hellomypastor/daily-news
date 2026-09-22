@@ -1,0 +1,55 @@
+---
+title: "主流 AI / Agent 厂商技术动态日报"
+date: "2026-09-22T00:00:00+08:00"
+updatedAt: "2026-09-22T10:46:18+08:00"
+description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredTags: []
+tags:
+  - "日期未确认"
+  - "Agent"
+  - "AI"
+  - "Coding"
+  - "Grok"
+  - "Industry"
+  - "Research"
+---
+
+## 今日概览
+
+本轮窗口为 2026-09-21 10:46 至 2026-09-22 10:46（Asia/Shanghai）。xAI/SpaceXAI 在 9 月 21 日发布 Grok 4.7，但官方页面只给出日期、没有精确时刻，因此该条保留在“日期未确认”，不将其写成已确认落在本轮窗口内的事实。其余已检查厂商与播客入口未发现可独立核验的窗口内行业发布。
+
+## 优先动态与常规更新
+
+本轮没有发布时间可精确核验为 24 小时内的官方动态。Anthropic 与 OpenAI 的相关更新由对应专题页展开；本页未用未核实时刻的条目填充主区。
+
+## 播客
+
+Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 等入口未找到可核验为本轮窗口内的新集。
+
+## 近两日补充
+
+本轮没有新增的、日期明确落在 24–48 小时区间的独立来源。
+
+## 近三日补充
+
+本轮没有新增的、日期明确落在 48–72 小时区间的独立来源。
+
+## 日期未确认
+
+| 厂商 | 标题与类型 | 日期/状态 | 摘要与意义 | 来源 |
+| --- | --- | --- | --- | --- |
+| xAI / SpaceXAI | Grok 4.7；模型/API/编码 Agent | 官方标注 2026-09-21，未给时分，无法判定是否落入从 10:46 开始的窗口 | 官方称 Grok 4.7 面向编码与知识工作，改进长任务、自检与长上下文管理；API 发布说明给出 `grok-4.7`、500k 上下文、图文输入和分档价格。属于明确的模型/API 与 Agent 能力信号，但并非托管 AaaS 发布。 | [官方公告](https://x.ai/news/grok-4-7) |
+
+## 观察池
+
+已检查 Google、Meta、Microsoft、Mistral、Cohere、NVIDIA、Hugging Face、Qwen/阿里云、ByteDance Seed、DeepSeek、腾讯混元、Kimi、MiniMax、GLM、LangChain 与 LlamaIndex 等入口；可见候选要么早于近三日，要么缺乏足以确认日期和关键事实的原始材料，未提升为正文事实。Cline、Pi Coding Agent 与 DeepSeek Harness/DSH 的常规仓库变化留给开源专题；本轮未核得需要跨页重复的产业级事件。
+
+## 来源链接
+
+- [xAI / SpaceXAI：Introducing Grok 4.7](https://x.ai/news/grok-4-7)
+
+## 采集状态
+
+已检查：xAI/Grok 官方新闻、API 发布说明、GitHub，以及 Anthropic、OpenAI、Google、Meta、Microsoft、Mistral、Cohere、国内厂商、开发框架和主要 AI 播客入口；xAI/Grok 的模型、API、DeepSearch、语音、编码、工具调用和 Agent 方向均显式覆盖。失败来源：部分列表没有精确发布时间，部分中文官方入口抓取不稳定。初始候选 8 条，留存来源 1 条；二次补搜：未触发（来源非零）。
+
+今日判断：Grok 4.7 是最值得跟踪的新信号，但因官方仅给日期，当前按日期未确认处理。
