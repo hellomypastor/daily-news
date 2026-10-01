@@ -1,0 +1,121 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": [
+    "AaaS",
+    "Agent",
+    "Cloud Agent",
+    "Managed Agent"
+  ],
+  "order": 50,
+  "updatedAt": "2026-10-01T10:07:14+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition Devin 官方 News、Release Notes 与文档：显式检查托管异步执行、环境、并发、定价/ACU、企业权限及集成；最新公开 Release Notes 为 9 月 25 日，本轮主窗口及 24–72 小时内无新增",
+      "xAI / SpaceXAI News、Grok Bot、Grok Build 与开发者文档：显式检查托管 Agent、异步任务、工具、编码/远程执行、企业与 API 能力；发现 9 月 28 日 Team Bots，仅标日期，按 72 小时边界候选收录",
+      "Google Cloud Gemini Enterprise Agent Platform、Agent Gallery、Agent Gateway/Registry 与安全博客：发现 9 月 29 日 partner security agents，列入 24–72 小时观察池",
+      "MongoDB Atlas Agent Engine 官方产品博客与 public preview 入口",
+      "Slalom Agentic Managed Services / Traverse 官方发布稿",
+      "CoreWeave Forge、ARIA、Agent Lens、Sandboxes 与 Registry 官方公告",
+      "Union.ai / Flyte 2、AWS Marketplace、BYOC 与 managed orchestration 官方发布稿",
+      "AWS Bedrock AgentCore、Microsoft Foundry Agent Service / Copilot Studio、GitHub coding agent、Cursor、Replit、Cloudflare Agents/Sandboxes、Factory、Sourcegraph/Amp 官方更新入口",
+      "Cline 官方 Releases/文档：检查 cloud、background、scheduled、remote environment、concurrency、enterprise 与 pricing；v4.1.22 为本地/自管 harness 与模型路由更新，不构成 AaaS",
+      "Pi Coding Agent / pi-mono 官方 Releases/文档：v0.99.2 涉及 MCP 工具暴露和认证，但没有厂商托管执行生命周期证据",
+      "DeepSeek Harness / DSH 官方 Releases/文档：v0.2.0-rc.2 为桌面端 CLI/插件管理，不构成厂商托管 AaaS",
+      "OpenCode、Aider、Continue、Roo Code 官方仓库与 Releases：快速检查 AaaS 边界，未发现主窗口内厂商托管异步/远程执行新证据",
+      "字节 Coze/火山/豆包/Trae/Seed（重点）、阿里百炼/Qoder/通义/夸克、腾讯元宝/混元/云、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax、DeepSeek 官方与公开更新入口：未发现主窗口内可核实的新 AaaS 公告"
+    ],
+    "failedSources": [
+      "部分厂商更新中心只显示日期而无精确发布时间；同日条目按日期未确认处理，不推断进入严格 24 小时窗口",
+      "Cognition Devin 站内搜索未返回 9 月 29 日以后更新；以官方 Recent Updates 索引的最新日期 9 月 25 日为准",
+      "xAI/Grok Team Bots 官方页仅标 9 月 28 日、无精确发布时间，无法确认是否严格位于 72 小时内",
+      "部分中国厂商更新中心缺少可索引正文或精确时间，未将聚合摘要提升为事实"
+    ],
+    "candidateCount": 15,
+    "secondPass": false
+  },
+  "content": "## 今日重点\n\n采集窗口为 **2026-09-30 09:55 至 2026-10-01 09:55（Asia/Shanghai）**，另保留 24–72 小时、日期未确认和邻近信号。本轮确认 Slalom 一条明确的 AaaS/托管 Agent 服务更新；MongoDB Atlas Agent Engine 与 xAI Team Bots 因官方仅标日期，分别按日期未确认和 72 小时边界候选收录。Union.ai 的 managed control plane + 客户云 data plane 耐久执行平台兼具多 Agent 用途与更广义 AI workflow PaaS 属性；CoreWeave Forge 更接近 Agent 开发与基础设施 PaaS，单列为邻近信号。\n\n## 远程 / 云端 Agent 执行\n\n### Slalom 推出 Agentic Managed Services\n\n[Slalom Agentic Managed Services](https://www.globenewswire.com/news-release/2026/09/30/3372236/0/en/slalom-unveils-new-agentic-managed-services-offering-that-puts-business-outcomes-first.html) 于 9 月 30 日 12:00 ET（10 月 1 日 00:00 上海时间）发布并宣称当日可用。该服务让 AI agents 在人工监督下执行工作，合同围绕业务结果、SLO 与绩效指标；底层 Traverse 平台把 agents、人工专家与客户系统置于统一治理环境，可运行在 Slalom 云或客户环境。它符合“服务方管理执行与交付生命周期”的 AaaS 定义，但成本与效果主张仍来自厂商发布稿。\n\n### Union.ai 以 managed control plane + BYOC data plane 自助上架\n\n[Union.ai on AWS Marketplace](https://www.globenewswire.com/news-release/2026/09/30/3371934/0/en/union-ai-launches-self-service-access-on-aws-marketplace-to-enable-sovereign-ai.html) 于 9 月 30 日 09:00 ET（21:00 上海时间）发布。团队可订阅后在自己的 AWS 账户连接集群；Union 管理的控制面保存 run IDs、schedules 与 artifact references，而输入、输出、日志、代码、密钥与加密密钥留在客户 data plane。工作负载中断可从已完成步骤恢复，平台支持多云/多集群执行，并给出 30 天试用及每月 950 美元最低消费抵扣用量的公开价格。它既覆盖 Agent/多 Agent 工作流，也覆盖训练、评估和 serving，因此更准确的定位是 AaaS 邻近的耐久执行 / AI workflow PaaS，而非纯粹托管 Agent 服务。\n\n## 海外厂商\n\n### MongoDB Atlas Agent Engine：生产 Agent 的托管控制面\n\n[MongoDB Atlas Agent Engine](https://www.mongodb.com/company/blog/product-release-announcements/how-atlas-agent-engine-powers-mongodbs-internal-ai-strategy) 官方文章标注 9 月 30 日但未披露时刻，因此列为“日期未确认”。文章称该 public preview 提供 runtime、security、identity、orchestration、state、observability 与 lifecycle management，并内置 memory/retrieval。MongoDB 内部 Holly 工作区以约 30 个 agents 连接 Salesforce、Teams、Drive、Meet、Calendar 等系统；这是厂商自用案例，不等于外部客户已验证相同规模或收益。\n\n### Cognition Devin 与 xAI/Grok 必查结果\n\n- **Devin**：已核对 News、Recent Updates、托管 session/VM、自动化、共享 Outpost、并发/企业权限、定价与集成入口。官方 Recent Updates 最新公开日期为 9 月 25 日，主窗口与 24–72 小时均无新增；不重复旧条目。\n- **xAI/Grok**：已核对 xAI/SpaceXAI News、Grok Bot、Grok Build 与开发者文档。官方 [Team Bots](https://x.ai/news/team-bots) 页面仅标 9 月 28 日，描述共享 Bot 在 Grok Bot 计算机上运行、接入 Slack、插件与凭据，并可协调 Cloud Agents，符合托管 Agent/AaaS 候选；但缺少精确时刻，按 09:55 截止可能位于 72 小时边界内外，故不声称严格落入近三日。普通模型/API 信息不提升为 AaaS。\n\n## 中国厂商（字节重点）\n\n已重点检查字节跳动 Coze、火山引擎、豆包、Trae 与 Seed 的托管运行、异步任务、远程环境、企业治理和商业化入口；主窗口内没有可核实的新 AaaS 公告。阿里百炼/Qoder/通义/夸克、腾讯元宝/混元/云、百度 AgentBuilder/Comate、智谱、Kimi、MiniMax 与 DeepSeek 同样未发现主窗口内带可验证日期的新增。本轮不以搜索摘要或产品名存在推断产品发布。\n\n## AaaS 与 MaaS / PaaS 边界\n\nCline v4.1.22、Pi v0.99.2、DSH v0.2.0-rc.2 以及 OpenCode 的近期版本属于本地、桌面或自部署 harness 更新；没有证据显示其厂商接管远程执行生命周期，详见开源专题页。Aider、Continue 与 Roo Code 也未见主窗口内托管执行证据。模型 API 本身属于 MaaS；沙箱、训练、评估、registry 与 observability 若不管理具体 Agent 生命周期，则更接近 PaaS。\n\n## 日期未确认\n\n- **官方仅标日期 / 符合 AaaS**：[MongoDB Atlas Agent Engine](https://www.mongodb.com/company/blog/product-release-announcements/how-atlas-agent-engine-powers-mongodbs-internal-ai-strategy) 标注 9 月 30 日，未给时刻；因此无法证明严格晚于窗口起点。\n- **官方仅标日期 / 72 小时边界 AaaS 候选**：[xAI Team Bots](https://x.ai/news/team-bots) 标注 9 月 28 日，具备托管计算机、工具、Slack 协作与 Cloud Agent 协调能力；按本轮截止可能在 72 小时边界内外。\n- **官方仅标日期 / 邻近 PaaS**：[CoreWeave Forge](https://coreweave.com/news/coreweave-forge-launches-turning-the-ai-loop-production-run-into-a-better-model-and-agent) 标注 9 月 30 日，未给时刻；内容覆盖 Agent 开发、观测与沙箱，但不等同于代客户运营具体 Agent。\n\n## 未证实传闻\n\n本轮没有保留单一来源的 AaaS 泄露或传闻。没有把搜索结果中的产品名、招聘描述或路线图猜测写成发布事实。\n\n## 邻近信号观察池\n\n- **Agent PaaS / 日期未确认**：[CoreWeave Forge](https://coreweave.com/news/coreweave-forge-launches-turning-the-ai-loop-production-run-into-a-better-model-and-agent) 把训练、推理、评估、Agent traces、registry 与 sandbox 接成一体；ARIA coding agent、Agent Lens 和 Sandboxes 已宣布可用。其核心仍是帮助团队开发和改进 models/agents，而非托管业务任务交付。\n- **24–72 小时 / 托管 Agent 生态**：[Google Cloud partner security agents](https://cloud.google.com/blog/products/identity-security/google-cloud-partners-deliver-new-security-agents-and-ai-defenses-with-gemini-enterprise) 标注 9 月 29 日。Gemini Enterprise 增加多家 partner security agents，并通过 Agent Gateway/Registry 提供治理与保护；因日期超出主窗口且无精确时刻，保留观察。\n\n## 趋势判断\n\n1. **控制面与数据面分离成为商业包装重点**：Union 明确托管 orchestration 元数据、把数据与计算留在客户云；Slalom 也允许在服务商云或客户环境交付。\n2. **Agent 生命周期平台开始吸收数据库与可观测基础设施**：MongoDB 把 memory、retrieval、identity、state 和 orchestration 合并到 Atlas；CoreWeave 将 traces、evaluation、sandbox 与 registry 合并。\n3. **AaaS 边界仍需逐条辨认**：能构建 Agent、提供模型或沙箱不自动等于服务方托管执行；本页继续把纯 harness、MaaS 与通用 PaaS 分开。\n\n## 来源链接\n\n- [Slalom Agentic Managed Services](https://www.globenewswire.com/news-release/2026/09/30/3372236/0/en/slalom-unveils-new-agentic-managed-services-offering-that-puts-business-outcomes-first.html)\n- [Union.ai on AWS Marketplace](https://www.globenewswire.com/news-release/2026/09/30/3371934/0/en/union-ai-launches-self-service-access-on-aws-marketplace-to-enable-sovereign-ai.html)\n- [MongoDB Atlas Agent Engine](https://www.mongodb.com/company/blog/product-release-announcements/how-atlas-agent-engine-powers-mongodbs-internal-ai-strategy)\n- [xAI Team Bots](https://x.ai/news/team-bots)\n- [CoreWeave Forge](https://coreweave.com/news/coreweave-forge-launches-turning-the-ai-loop-production-run-into-a-better-model-and-agent)\n- [Google Cloud partner security agents](https://cloud.google.com/blog/products/identity-security/google-cloud-partners-deliver-new-security-agents-and-ai-defenses-with-gemini-enterprise)\n\n## 采集状态\n\n- **已检查来源**：Devin 与 xAI/Grok 必查入口；Google、Microsoft、AWS、GitHub、MongoDB、CoreWeave、Union、Slalom 等海外 AaaS/平台；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的托管边界；字节系重点及主要中国厂商。\n- **失败来源**：部分官方页无精确发布时间；Devin 9 月 25 日后无 release note；xAI/Grok Team Bots 缺精确发布时间、只能作为 72 小时边界候选；部分中国厂商正文不可索引。\n- **候选数量**：15；**保留来源**：6。\n- **二次补搜**：否（主窗口内已有可验证来源）。\n\n**今日扫描完成，共 6 条动态，重点：Slalom 托管 Agent 服务、xAI Team Bots 的 72 小时边界信号、Union.ai BYOC 耐久执行、MongoDB Atlas Agent Engine，以及 CoreWeave/Google 的平台邻近信号。**",
+  "sources": [
+    {
+      "title": "Slalom Unveils New Agentic Managed Services Offering That Puts Business Outcomes First",
+      "url": "https://www.globenewswire.com/news-release/2026/09/30/3372236/0/en/slalom-unveils-new-agentic-managed-services-offering-that-puts-business-outcomes-first.html",
+      "source": "Slalom / GlobeNewswire",
+      "publishedAt": "2026-10-01 00:00 +08:00",
+      "summary": "Slalom 推出以业务结果和 SLO 为中心、由 agents 与人工共同交付的 Agentic Managed Services。",
+      "tags": [
+        "AaaS",
+        "Managed Agent",
+        "Human-in-the-loop",
+        "Enterprise"
+      ]
+    },
+    {
+      "title": "Union.ai Launches Self-Service Access on AWS Marketplace to Enable Sovereign AI",
+      "url": "https://www.globenewswire.com/news-release/2026/09/30/3371934/0/en/union-ai-launches-self-service-access-on-aws-marketplace-to-enable-sovereign-ai.html",
+      "source": "Union.ai / GlobeNewswire",
+      "publishedAt": "2026-09-30 21:00 +08:00",
+      "summary": "Union.ai 将 managed control plane 与客户 AWS data plane 组合的耐久执行平台自助上架，并披露试用与最低消费。",
+      "tags": [
+        "AaaS",
+        "BYOC",
+        "Managed Orchestration",
+        "Pricing"
+      ]
+    },
+    {
+      "title": "How Atlas Agent Engine Powers MongoDB’s Internal AI Strategy",
+      "url": "https://www.mongodb.com/company/blog/product-release-announcements/how-atlas-agent-engine-powers-mongodbs-internal-ai-strategy",
+      "source": "MongoDB",
+      "publishedAt": "2026-09-30（官方仅标日期，具体时刻未披露）",
+      "summary": "日期未确认：Atlas Agent Engine public preview 提供 runtime、身份、编排、状态、可观测性与生命周期管理。",
+      "tags": [
+        "日期未确认",
+        "AaaS",
+        "Agent Runtime",
+        "Governance"
+      ]
+    },
+    {
+      "title": "CoreWeave Forge Launches, Turning the AI Loop Production Run Into a Better Model and Agent",
+      "url": "https://coreweave.com/news/coreweave-forge-launches-turning-the-ai-loop-production-run-into-a-better-model-and-agent",
+      "source": "CoreWeave",
+      "publishedAt": "2026-09-30（官方仅标日期，具体时刻未披露）",
+      "summary": "邻近信号：Forge 整合 Agent traces、evaluation、sandbox 与 registry，更接近 Agent 开发和基础设施 PaaS。",
+      "tags": [
+        "邻近信号",
+        "PaaS",
+        "Agent Observability",
+        "Sandbox"
+      ]
+    },
+    {
+      "title": "Google Cloud partners deliver new security agents and AI defenses with Gemini Enterprise",
+      "url": "https://cloud.google.com/blog/products/identity-security/google-cloud-partners-deliver-new-security-agents-and-ai-defenses-with-gemini-enterprise",
+      "source": "Google Cloud",
+      "publishedAt": "2026-09-29（官方仅标日期，具体时刻未披露）",
+      "summary": "24–72 小时观察池：Gemini Enterprise 增加 partner security agents，并通过 Agent Gateway/Registry 提供治理和防护。",
+      "tags": [
+        "观察池",
+        "24–72 小时",
+        "Managed Agent",
+        "Security"
+      ]
+    },
+    {
+      "title": "Team Bots: AI coworkers that learn from your team",
+      "url": "https://x.ai/news/team-bots",
+      "source": "xAI / SpaceXAI",
+      "publishedAt": "2026-09-28（官方仅标日期，具体时刻未披露）",
+      "summary": "日期未确认/72 小时边界：Team Bots 在托管计算机上运行，支持团队共享上下文、插件、凭据、Slack 协作及 Cloud Agent 协调。",
+      "tags": [
+        "日期未确认",
+        "72 小时边界",
+        "AaaS",
+        "Managed Agent",
+        "xAI",
+        "Grok"
+      ]
+    }
+  ]
+}

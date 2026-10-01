@@ -1,0 +1,167 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-10-01T10:05:52+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/63ab6386c652173d5afd007352fa2aaa27c9c5ffa50390b0d948e6c403759985/anthropics/claude-code/releases/tag/v2.1.286",
+    "alt": "GitHub 生成的 Anthropic Claude Code v2.1.286 发布页预览图",
+    "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+    "caption": "图片来源：Anthropic GitHub 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom、Research 与 Events",
+      "Claude Blog",
+      "Claude Platform Docs 与 changelog：Managed Agents、Agent SDK、Agent Skills、模型与弃用信息",
+      "Claude Help Center：Skills、Claude Code、Cowork、Desktop、Connectors、Microsoft 365",
+      "Anthropic GitHub：claude-code releases、skills",
+      "Claude Code CLI、VS Code 与 JetBrains 集成",
+      "Managed Agents：sessions、webhooks、environments、memory stores",
+      "Skills、marketplaces、plugins、MCP 与 Claude Developer Platform",
+      "Cowork、Design、Claude Tag/@Claude sessions",
+      "Claude Opus、Sonnet、Haiku、Fable、Mythos 当前模型",
+      "Chrome/browser agent、Desktop/Preview、Voice Mode、Microsoft 365 integration",
+      "Security、Science、financial services、life sciences、healthcare、legal、government、nonprofits、education、customer support",
+      "Anthropic Webinars：Claude in Microsoft Foundry tool integrations EMEA rebroadcast",
+      "Reddit：r/ClaudeAI、r/Anthropic、r/ClaudeCode、r/LocalLLaMA",
+      "Hacker News、X、YouTube 与公开 Web 搜索"
+    ],
+    "failedSources": [
+      "X：未登录搜索结果不可稳定核验原帖时间与互动量",
+      "YouTube：本轮未找到可明确归属窗口且可由原始来源交叉核验的新发布",
+      "Anthropic GitHub API：匿名请求返回 403，改用公开 releases 页面核验",
+      "Reddit：页面仅显示日期、没有精确时刻，窗口归属按日期未确认处理"
+    ],
+    "candidateCount": 13,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-09-30 09:55 至 2026-10-01 09:55（Asia/Shanghai）**。窗口内可精确确认的官方产品更新是 [Claude Code v2.1.286](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)：重点修复并行工具调用后会话丢失、云会话唤醒、Remote Control 消息与策略、MCP 凭据脱敏、插件同步、子 Agent 与工作流恢复等问题，并为 VS Code 增加书签与问答记录能力。另有一场 [Claude in Microsoft Foundry: Tool Integrations in Practice](https://www.anthropic.com/webinars/claude-in-microsoft-foundry-tool-integrations-in-practice-emea-rebroadcast) 官方 EMEA webinar 于上海时间 9 月 30 日 16:00 重播；它是 9 月 3 日内容的预录重播，不代表新功能发布。Anthropic Newsroom、Claude Blog 与开发者文档未发现同窗口内另一条独立产品公告。社区反馈高度分裂：既有用户称 Opus 5.5 降低了用量焦虑，也有高互动帖子质疑故障后质量下降；后者没有官方确认或可复现实验，不能写成模型被降级的事实。\n\n## Tier 1\n\n| 产品/能力 | 过去 24 小时状态 | 证据与说明 |\n|---|---|---|\n| Claude Code CLI | **有新增** | [v2.1.286](https://github.com/anthropics/claude-code/releases/tag/v2.1.286) 于上海时间 10 月 1 日 03:10 发布，集中改善会话恢复、云端唤醒、Remote Control、权限、安全脱敏与 Agent 协作可靠性。 |\n| VS Code / JetBrains | **VS Code 有新增；JetBrains 无独立新增** | v2.1.286 为 VS Code 增加响应书签侧栏、问题与回答记录、选项预览，并修复 API key 登录识别；未见 JetBrains 独立公告。 |\n| Managed Agents（sessions / webhooks / environments / memory stores） | **邻近维护，无独立 API 公告** | v2.1.286 修复超大历史云会话无法唤醒、工作流子 Agent 中断恢复和 Remote Control 消息投递；未发现 sessions、webhooks、environments、memory stores 独立版本公告。 |\n| Skills 与 marketplaces | **有维护更新** | v2.1.286 修复 claude.ai 启用插件短暂消失、marketplace 错误提示，并改进 Skills/Plugin 相关列表和权限流。 |\n| Claude Developer Platform | **有官方活动，无独立产品新增** | [Microsoft Foundry tool integrations EMEA webinar](https://www.anthropic.com/webinars/claude-in-microsoft-foundry-tool-integrations-in-practice-emea-rebroadcast) 于上海时间 9 月 30 日 16:00 重播，演示 tool search、MCP connector、web search/web fetch 与 structured outputs；这是 9 月 3 日内容的预录重播，不是新功能发布。 |\n| Agent SDK | **有修复** | v2.1.286 修复 headless 会话 MCP 认证提醒、前台子 Agent 缺少任务工具、工作流子 Agent 因连接停顿被错误重启等问题。 |\n| Cowork | **无独立新增** | 已查 Claude Blog、帮助中心与官方活动入口；窗口内未见产品发布。 |\n| Design | **无新增** | 已按产品名检查 Anthropic 官方入口，未发现窗口内更新。 |\n| Tag / @Claude sessions | **无独立新增** | 本轮 release 未列出 Tag 专属新功能；官方博客与帮助中心亦未见独立公告。 |\n| 当前官方编码模型：Opus / Sonnet / Haiku | **无新模型；Opus 5.5 口碑分裂** | 未见窗口内新模型发布；社区正负体验均为自述，见 Love/Hate。 |\n\n## Tier 2\n\n| 产品组 | 状态 |\n|---|---|\n| Chrome/browser agent；Desktop/Preview | **维护更新**；v2.1.286 修复多窗口登录刷新与 Remote Control 投递/策略断开，未见 Chrome agent 独立公告。 |\n| Marketplace / Connectors / Plugins | **有维护更新**；v2.1.286 修复插件同步、MCP connectors 工具列表与认证链接、错误信息中的凭据脱敏。 |\n| 当前官方创意/视频模型；Voice Mode；Microsoft 365 integration | **无新增**；未发现窗口内 Anthropic 官方公告。 |\n\n## Tier 3\n\n- **Security**：v2.1.286 修复 MCP 错误中 Bearer/Basic 凭据、百分号编码 token、带不可见字符的密钥名与 URL 密码可能脱敏不完整的问题，并修复反馈压缩包 transcript 在脱敏后产生无效 JSON lines。\n- **Education / customer enablement（日期未确认）**：Anthropic 的 [Hands-on with Claude](https://www.anthropic.com/events/build-with-claude) 页面列出 9 月 30 日巴黎 Coworkshop、纽约 Claude Workshop 与 Claude Code Workshop；页面没有各场精确时间，本轮只作为日期未确认的生态信号。\n- **Science、financial services、life sciences、healthcare、legal、government、nonprofits、education、customer support**：已逐项检查；除上述活动外，窗口内未见可由 Anthropic 官方原文确认的新公告。\n\n## 官方更新与活动（新到旧）\n\n### Claude Code v2.1.286：会话恢复、远程协作与凭据脱敏\n\n官方 [GitHub release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286) 显示发布时间为 2026-09-30 19:10 UTC（上海时间 10 月 1 日 03:10）。与编码 Agent 主轴最相关的变化包括：修复进程异常退出后并行工具调用造成的历史丢失、超大历史云会话无法唤醒、Remote Control 消息丢失或策略关闭后仍连接、工作流子 Agent 意外重启，以及 MCP/日志/反馈包中的敏感信息脱敏问题；VS Code 侧增加书签、问答记录和选项预览。\n\n### Microsoft Foundry tool integrations：官方重播活动\n\nAnthropic 官方 [webinar 页面](https://www.anthropic.com/webinars/claude-in-microsoft-foundry-tool-integrations-in-practice-emea-rebroadcast) 标注活动为 2026 年 9 月 30 日 09:00–09:30 BST（上海时间 16:00–16:30）。内容展示在 Microsoft Foundry 中配置 tool search、MCP connector、web search、web fetch 和 structured outputs，并说明 MCP connector 的数据范围控制。页面同时明确这是 9 月 3 日场次的预录重播、Anthropic 团队在线答疑，因此这里只记录为落窗的官方生态活动，不视为新产品或新功能发布。\n\n## Love\n\n- [一名 r/ClaudeAI 用户](https://www.reddit.com/r/ClaudeAI/comments/1wu6sfs/since_opus_55_ive_stopped_obsessively_checking_my/) 称 Opus 5.5 medium 让其不再频繁查看 Max 计划用量，并能同时推进多个项目；抓取时显示 94 票。页面只有 9 月 30 日日期、无精确时刻，因此属于“日期未确认”的单一用户自述。\n- [r/ClaudeCode 一则短帖](https://www.reddit.com/r/ClaudeCode/comments/1wtsqcm/tuesday/) 称作者使用 Opus 5.5 后仍持续产出代码，而当周用量明显低于其惯常水平；抓取时显示 6 票。样本小、无法审计其工作负载，不能外推为普遍效率提升。\n\n## Hate\n\n- [Opus 5.5 comparison to last week](https://www.reddit.com/r/ClaudeAI/comments/1wtzzm4/opus_55_comparison_to_last_week/) 抓取时显示 547 票，作者称在相同设置与同一项目中观察到输出差异；帖子承认素材并非完全相同，且未提供可复现测试，因此只能作为高互动负面口碑。\n- [另一则高互动帖子](https://www.reddit.com/r/ClaudeAI/comments/1wtrf5y/opus_55_feels_way_dumber_after_todays_outage/) 抓取时显示 383 票，作者报告故障后出现遗忘、编造细节、更多返工等体验；评论中也有人表示性能正常。将差异归因于“降级”“A/B 测试”或路由变化均为未证实推测。\n\n## 情绪判断\n\n**分裂偏负面，置信度中低。** 负面样本互动量高，集中在质量波动、遗忘和返工；正面样本强调 Opus 5.5 medium 的用量效率与持续编码表现。同一天、同一讨论中存在明确反例，且帖子只有日期、缺少精确时间和可复现实验。官方 release 不计入正面情绪，因此不能据此推断整体用户满意度或模型发生了服务端变化。\n\n## 比较观察\n\n- 社区比较主要围绕 Opus 5.5 与其上一周表现、Fable、Sonnet 以及 OpenAI 编码体验；本轮没有具名评测或可复现实验足以支持“被降级”“追平”或“超过”的结论。\n- 一篇 [Claude Code context window 自测](https://www.reddit.com/r/ClaudeCode/comments/1wu2ch6/i_measured_what_actually_reaches_claude_codes/) 描述作者基于 61 天个人 transcript 测量 memory、hooks、skills、subagents 与 compaction 的进入路径；作者明确限定为单一操作者和单一安装。它可作为 Agent harness 工程信号，但不是模型横向基准。\n- Cline、Pi Coding Agent、DeepSeek Harness/DSH 等 harness 的完整扫描归开源专题；本轮 Claude 社区未出现足以支持直接优劣结论的新证据。\n\n## 日期未确认\n\n- [Hands-on with Claude](https://www.anthropic.com/events/build-with-claude)：官方页面列出 9 月 30 日多场 Cowork 与 Claude Code 工作坊，但没有精确开始时刻，无法确认是否在 09:55 之后。\n- 本页三则 9 月 30 日 Reddit 口碑帖与一则 context window 自测均缺少精确时刻，保留为当天候选，不冒充精确落窗新闻。\n\n## 观察池\n\n- [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1wtzzbs/performance_and_bugs_discussion_hub_updated_on_30/) 是志愿版主维护的聚合入口，页面明确说明不是 Anthropic 官方；可用于观察问题报告，但不能把其中汇总视为厂商确认故障。\n- 社区关于 Opus 5.5 在故障后被“nerf”、进行 A/B 测试或秘密路由的说法目前没有官方说明、可复现实验或具名独立评测支持，统一视为**未证实传闻**。\n\n## 来源链接\n\n1. [Claude Code v2.1.286](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)\n2. [Claude in Microsoft Foundry: Tool Integrations in Practice (EMEA Rebroadcast)](https://www.anthropic.com/webinars/claude-in-microsoft-foundry-tool-integrations-in-practice-emea-rebroadcast)\n3. [Hands-on with Claude](https://www.anthropic.com/events/build-with-claude)\n4. [Since Opus 5.5 I've stopped obsessively checking my usage](https://www.reddit.com/r/ClaudeAI/comments/1wu6sfs/since_opus_55_ive_stopped_obsessively_checking_my/)\n5. [Tuesday：Opus 5.5 用量与编码体验](https://www.reddit.com/r/ClaudeCode/comments/1wtsqcm/tuesday/)\n6. [Opus 5.5 Comparison to last week](https://www.reddit.com/r/ClaudeAI/comments/1wtzzm4/opus_55_comparison_to_last_week/)\n7. [Opus 5.5 feels way dumber after today's outage](https://www.reddit.com/r/ClaudeAI/comments/1wtrf5y/opus_55_feels_way_dumber_after_todays_outage/)\n8. [Claude Code context window 61-day self-measurement](https://www.reddit.com/r/ClaudeCode/comments/1wu2ch6/i_measured_what_actually_reaches_claude_codes/)\n9. [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1wtzzbs/performance_and_bugs_discussion_hub_updated_on_30/)\n\n## 采集状态\n\n- **已检查来源**：Anthropic Newsroom/Research、Events、Webinars、Claude Blog、Platform Docs/changelog、Help Center、GitHub `anthropics/claude-code` releases 与 `anthropics/skills`，以及 Reddit 的 r/ClaudeAI、r/Anthropic、r/ClaudeCode、r/LocalLLaMA、Hacker News、X、YouTube 和公开 Web 搜索。Tier 1/2/3 所列产品与行业词均逐项检索。\n- **失败来源**：X 未登录时无法稳定核验原帖时间与互动量；YouTube 未找到可明确归属窗口并由原始来源交叉核验的新发布；GitHub API 匿名请求返回 403，已改查公开 release 页面；Reddit 缺少精确时刻。\n- **初始候选数**：13；**保留来源数**：9；**二次补搜**：否（最终来源不为 0）。\n- **窗口结论**：1 条官方 release 与 1 场官方重播活动可由精确时间确认；重播活动明确不是新产品发布，其余生态活动与社区内容均按日期未确认、观察池或未证实传闻降级标注。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.286",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-10-01 03:10 +08:00",
+      "summary": "Claude Code 修复会话恢复、云端唤醒、Remote Control、MCP 脱敏、插件同步和子 Agent/工作流可靠性问题，并增强 VS Code 体验。",
+      "tags": [
+        "Claude Code",
+        "Agent SDK",
+        "MCP",
+        "Security",
+        "VS Code"
+      ]
+    },
+    {
+      "title": "Claude in Microsoft Foundry: Tool Integrations in Practice (EMEA Rebroadcast)",
+      "url": "https://www.anthropic.com/webinars/claude-in-microsoft-foundry-tool-integrations-in-practice-emea-rebroadcast",
+      "source": "Anthropic Webinars",
+      "publishedAt": "2026-09-30 16:00 +08:00",
+      "summary": "Anthropic 与 Microsoft 的官方重播演示在 Microsoft Foundry 中配置 tool search、MCP connector、web search、web fetch 与 structured outputs；内容为 9 月 3 日场次重播，不代表新功能发布。",
+      "tags": [
+        "Claude Developer Platform",
+        "MCP",
+        "Microsoft Foundry",
+        "官方活动"
+      ]
+    },
+    {
+      "title": "Hands-on with Claude",
+      "url": "https://www.anthropic.com/events/build-with-claude",
+      "source": "Anthropic Events",
+      "publishedAt": "2026-09-30",
+      "summary": "官方活动页列出巴黎 Coworkshop 与纽约 Claude、Claude Code 工作坊；页面缺少精确开始时刻。",
+      "tags": [
+        "Claude Code",
+        "Cowork",
+        "Education",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Since Opus 5.5 I've stopped obsessively checking my usage",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wu6sfs/since_opus_55_ive_stopped_obsessively_checking_my/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-09-30",
+      "summary": "用户称 Opus 5.5 medium 改善多项目工作时的用量体验；为单一用户自述且缺少精确时刻。",
+      "tags": [
+        "Opus 5.5",
+        "Love",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Tuesday",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wtsqcm/tuesday/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-09-30",
+      "summary": "用户称使用 Opus 5.5 持续编码时的周用量低于其惯常水平；样本小且无法审计。",
+      "tags": [
+        "Claude Code",
+        "Opus 5.5",
+        "Love",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Opus 5.5 Comparison to last week",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wtzzm4/opus_55_comparison_to_last_week/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-09-30",
+      "summary": "高互动社区帖称相同设置下输出质量较前一周变化，但素材不完全相同且测试不可复现。",
+      "tags": [
+        "Opus 5.5",
+        "Hate",
+        "日期未确认",
+        "未证实传闻"
+      ]
+    },
+    {
+      "title": "Opus 5.5 feels way dumber after today's outage, anyone else noticing this?",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wtrf5y/opus_55_feels_way_dumber_after_todays_outage/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-09-30",
+      "summary": "用户报告故障后遗忘、编造与返工增多；评论存在反例，降级或路由解释均未经证实。",
+      "tags": [
+        "Opus 5.5",
+        "Hate",
+        "日期未确认",
+        "未证实传闻"
+      ]
+    },
+    {
+      "title": "I measured what actually reaches Claude Code's context window over 61 days of my own transcripts",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wu2ch6/i_measured_what_actually_reaches_claude_codes/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-09-30",
+      "summary": "独立开发者以个人 transcript 测量 memory、hooks、skills、subagents 与 compaction；明确限定为单人单安装。",
+      "tags": [
+        "Claude Code",
+        "Context",
+        "Memory",
+        "观察池",
+        "日期未确认"
+      ]
+    },
+    {
+      "title": "Performance and Bugs Discussion Hub updated on 30 September 2026",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wtzzbs/performance_and_bugs_discussion_hub_updated_on_30/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-09-30",
+      "summary": "志愿版主维护的性能问题聚合入口，非 Anthropic 官方状态或故障确认。",
+      "tags": [
+        "Performance",
+        "Hate",
+        "观察池",
+        "日期未确认"
+      ]
+    }
+  ]
+}
