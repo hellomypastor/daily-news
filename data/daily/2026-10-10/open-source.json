@@ -1,0 +1,103 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Open Source",
+    "LLM"
+  ],
+  "order": 30,
+  "updatedAt": "2026-10-10T12:00:00+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/f282d339c2f2a8c7233bd3ead81ec0125de217eccc120fc8af0a62703307ca4e/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2",
+    "alt": "DeepSeek Harness v0.2.1-alpha.2 官方 GitHub 发布页预览图",
+    "sourceUrl": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2",
+    "caption": "图片来源：DeepSeek Harness GitHub 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline：cline/cline 官方仓库、Releases Atom 与最新发布页",
+      "Pi Coding Agent：badlogic/pi-mono 原入口、earendil-works/pi 当前官方仓库与 Releases Atom",
+      "DeepSeek Harness / DSH：deepseek-ai/deepseek-harness 官方仓库、Releases Atom、发布说明与文档",
+      "OpenCode：anomalyco/opencode 官方仓库与 Releases Atom",
+      "Aider：Aider-AI/aider 官方仓库与 Releases Atom",
+      "Continue：continuedev/continue 官方仓库、Releases Atom 与维护状态",
+      "Roo Code：RooCodeInc/Roo-Code 官方仓库、Releases Atom、归档与停止维护声明",
+      "Hacker News front/newest 与近期 Show HN / Algolia 候选",
+      "GitHub Trending：overall、Python、TypeScript daily",
+      "arXiv cs.AI / cs.LG 最近提交",
+      "Hugging Face Blog / Papers / Community Articles",
+      "Simon Willison 与模型、Agent、推理基础设施工程博客"
+    ],
+    "failedSources": [
+      "arXiv 站内检索：公开搜索结果未稳定返回 10 月 8–10 日可核验的 Agent 论文；未把不确定候选写成事实",
+      "Hacker News Algolia 精确时窗候选较少；部分搜索摘要时间与 HN 原帖时间不一致，已以原帖为准并剔除过期候选",
+      "OpenCode v2.0.26：官方 Release 仅写版本号，未提供可核验的技术变更说明"
+    ],
+    "candidateCount": 27,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-10-08 12:00 至 2026-10-10 12:00（Asia/Shanghai）**。本轮最明确的 harness 变化来自 DeepSeek Harness：worktree 隔离、共享 `AGENTS.md`、会话状态接口、远程 SSH helper 和多 Agent 消息语义进入同一预发布版本；Agent Memory 则把 Pi、DSH 与 OpenCode 纳入统一记忆接入。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 技术意义 |\n| --- | --- | --- |\n| Cline | 已检查官方仓库、release feed 与最新发布；48 小时窗口内无可报告的主产品发布 | 不制造更新；最新 feed 条目是窗口前的 SDK 包发布。 |\n| Pi Coding Agent | 已检查原 `badlogic/pi-mono` 入口及当前 `earendil-works/pi` 官方 release；v1.1.0 已超出 48 小时窗口 | 该版本涉及终端状态、工具选择和 classifier 路由，作为较旧背景保留观察，不冒充本轮新闻。 |\n| DeepSeek Harness / DSH | [v0.2.1-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2)，10 月 9 日 23:10 +08:00 | 新增实验性 Git Worktrees 插件、共享 `AGENTS.md`、工作目录工具、插件 Session 状态和独立 SSH helper；并调整子代理与 Agent Team 投递语义。 |\n| OpenCode | [v2.0.26](https://github.com/anomalyco/opencode/releases/tag/v2.0.26)，10 月 9 日 03:45 +08:00 | 官方 release 仅注明版本号，未给出足够变更说明；确认发布存在，但不推断功能。 |\n| Aider | 已检查官方仓库与 release feed；48 小时内无新发布 | 不制造更新。 |\n| Continue | 已检查官方仓库与 release feed；仓库已声明停止活跃维护 | 48 小时内无发布，不把普通 issue/PR 当正式版本。 |\n| Roo Code | 已检查官方仓库与 release feed；官方仓库已于 2026-05-15 归档并停止扩展 | 48 小时内无发布，不以社区 fork 代替官方入口。 |\n\n## 已验证技术亮点\n\n### 1. DSH 把隔离 checkout、共享指令和远程执行接入同一 harness\n\nDeepSeek Harness 的 [v0.2.1-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2) 新增实验性 Git Worktrees 插件，使 Agent 能创建并进入独立 checkout；全局指令可从共享 agents 目录加载 `AGENTS.md`，并加入工作目录读写接口与插件级 Session 状态。SSH helper 则覆盖远程文件、进程、终端、沙箱与 Node PTC，说明本地会话、隔离工作区和远程执行正在被统一到一套运行时抽象中。\n\n该版本还统一子代理执行/完成通知，让工具先返回 child ID，再通过 session/wait 协调；Agent Team 消息直接投递目标 Inbox。它们属于预发布接口变化，自定义 SDK runtime 与依赖旧 outbox 语义的集成需要先核对迁移要求。\n\n### 2. TencentDB Agent Memory v2.0.2 扩展 Pi、DSH 与 OpenCode 接入\n\n[TencentDB Agent Memory v2.0.2](https://github.com/TencentCloud/TencentDB-Agent-Memory/releases/tag/v2.0.2) 于 10 月 9 日发布，新增 OpenCode 2.0 provider 配置、DSH 桌面端适配及 Pi 客户端接入，并补齐外部任务、私有代码仓与 Wiki 导入。对 coding agent 而言，这是一项跨 harness 的持久记忆与技能资产接入变化；项目宣称的使用效果仍需结合部署配置和实际召回质量验证。\n\n### 3. LightOnOCR-3 提供可复现的开放文档理解流水线\n\n[LightOnOCR-3](https://huggingface.co/blog/lightonai/lightonocr-3) 于 10 月 8 日发布 0.8B、1B、4B 三种 Apache 2.0 模型，把 OCR、布局框、图片描述和图表数据抽取合在一个模型中，并公开评测脚本与训练数据构建方法。文章给出 olmOCR-Bench、ParseBench 等结果，但这些数字主要来自发布方自评；其更直接的工程价值，是为 RAG / Agent 的文档解析链路提供可本地运行、可复查的基础模型和后处理代码。\n\n## GitHub Trending\\n\\nGitHub daily overall、Python 与 TypeScript 榜单的实际抓取发生在 12:00 截止后，因此本版不保留榜单项目或增长数字，避免把截止后的快照倒填到本轮。\\n\\n## HN 讨论\\n\\nHN front/newest 与 Algolia 的实际复核发生在 12:00 截止后；本版不保留其候选或互动数据，仅在采集状态记录入口已检查。\\n\\n## 论文 / 研究\n\n本轮 arXiv 公开检索未稳定返回可在截止前确认提交时间的高相关 Agent 新论文，因此不填充未经核验的条目。Hugging Face 方面保留了日期明确且提供复现材料的 LightOnOCR-3，作为 Agent/RAG 文档工具链研究信号。\n\n## 旧文重新浮现\n\n截止前未确认同时满足“原文早于 7 天”且“过去 24 小时在 HN 重新形成可量化讨论”的高相关条目。\n\n## 日期未确认\n\n本轮没有保留发布日期完全无法确认且价值足以进入正文的候选；对搜索摘要与原页日期冲突的条目以原页为准。\n\n## 观察池\n\n- [Pi v1.1.0](https://github.com/earendil-works/pi/releases/tag/v1.1.0) 发布于 10 月 8 日 06:26 +08:00，略早于本轮 48 小时窗口。版本加入终端 OSC 7501 状态、默认工具增减语法、classifier 路由与 MCP 登录修复；作为邻近信号保留，不计入窗口内亮点。\n- [OpenCode v2.0.26](https://github.com/anomalyco/opencode/releases/tag/v2.0.26) 虽处于窗口内，但官方说明只有版本号；在出现 changelog 或可核验提交映射前，不推断具体能力变化。\n\n## 来源链接\n\n- [DeepSeek Harness v0.2.1-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2)\n- [OpenCode v2.0.26](https://github.com/anomalyco/opencode/releases/tag/v2.0.26)\n- [TencentDB Agent Memory v2.0.2](https://github.com/TencentCloud/TencentDB-Agent-Memory/releases/tag/v2.0.2)\n- [LightOnOCR-3](https://huggingface.co/blog/lightonai/lightonocr-3)\n- [Pi v1.1.0](https://github.com/earendil-works/pi/releases/tag/v1.1.0)\n\n## 采集状态\n\n- 已检查：Cline、Pi、DeepSeek Harness、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；HN front/newest；GitHub Trending overall、Python、TypeScript；arXiv；Hugging Face；Simon Willison 与工程博客。\n- 失败来源：arXiv 精确时窗结果不稳定，未保留无法核验提交日的候选；HN 搜索摘要曾与原帖日期冲突，已以原帖为准；OpenCode release 缺少技术说明。\n- 初始候选数：27；最终保留来源：5。\n- 二次补搜：否（最终来源非 0）。\n- 截止时间：2026-10-10 12:00 +08:00。",
+  "sources": [
+    {
+      "title": "DeepSeek Harness v0.2.1-alpha.2",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.2",
+      "source": "DeepSeek Harness GitHub",
+      "publishedAt": "2026-10-09 23:10 +08:00",
+      "summary": "新增 Git Worktrees、共享 AGENTS.md、Session 状态、SSH helper，并调整子代理与 Agent Team 协作语义。",
+      "tags": [
+        "Agent Harness",
+        "Worktree",
+        "Multi-Agent"
+      ]
+    },
+    {
+      "title": "OpenCode v2.0.26",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.0.26",
+      "source": "OpenCode GitHub",
+      "publishedAt": "2026-10-09 03:45 +08:00",
+      "summary": "官方确认版本发布，但 release 未提供足够技术变更说明。",
+      "tags": [
+        "Coding Agent",
+        "观察池"
+      ]
+    },
+    {
+      "title": "TencentDB Agent Memory v2.0.2",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory/releases/tag/v2.0.2",
+      "source": "Tencent Cloud GitHub",
+      "publishedAt": "2026-10-09 19:19 +08:00",
+      "summary": "新增 OpenCode 2.0、DSH 与 Pi 接入，并扩展外部资产导入和记忆存储。",
+      "tags": [
+        "Memory",
+        "Coding Agent",
+        "Integration"
+      ]
+    },
+    {
+      "title": "LightOnOCR-3: High-Performance OCR and Layout Extraction in One Model",
+      "url": "https://huggingface.co/blog/lightonai/lightonocr-3",
+      "source": "Hugging Face Community Blog",
+      "publishedAt": "2026-10-08",
+      "summary": "发布三种开放 OCR / 布局模型及可复现评测与数据流水线。",
+      "tags": [
+        "OCR",
+        "RAG",
+        "Research"
+      ]
+    },
+    {
+      "title": "Pi v1.1.0",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v1.1.0",
+      "source": "Pi GitHub",
+      "publishedAt": "2026-10-08 06:26 +08:00",
+      "summary": "邻近窗口的 Pi 发布，涉及终端状态、工具选择、classifier 路由与 MCP 修复。",
+      "tags": [
+        "较旧背景",
+        "Coding Agent"
+      ]
+    }
+  ]
+}
