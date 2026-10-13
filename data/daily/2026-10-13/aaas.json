@@ -1,0 +1,65 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-10-13T10:44:13+08:00",
+  "image": {
+    "url": "https://doimages.nyc3.cdn.digitaloceanspaces.com/002Blog/mysql.png",
+    "alt": "DigitalOcean Agent Data Services 官方文章的数据库主题配图",
+    "sourceUrl": "https://www.digitalocean.com/blog/introducing-agent-data-services",
+    "caption": "图片来源：DigitalOcean 官方文章 OpenGraph 图片"
+  },
+  "scan": {
+    "checkedSources": [
+      "DigitalOcean 官方博客、文档与社区教程：Managed Agents、Harness Runtime、Agent Data Services、Learning Services、环境隔离、暂停恢复、网络控制、按秒成本与生产实测",
+      "Cognition Devin 官方产品新闻、changelog、文档、定价、Enterprise、API 与集成入口：显式检查托管异步执行、环境、并发、定价、企业接入与集成，24 小时及 24–72 小时无新增",
+      "xAI / SpaceXAI Grok Bot、Cloud Agents、Grok Build、新闻与开发者文档：显式检查托管执行、异步任务、工具、编码/远程执行、企业与 API Agent 能力；最新 Bot changelog 仍为 10 月 7 日，本轮无新增",
+      "Anthropic Managed Agents / Agent SDK / Claude Code cloud；OpenAI Codex cloud / ChatGPT agents / agent-building products",
+      "Google Gemini Enterprise Agent Platform、Agent Runtime、Jules 与 Agent AI Use Guidelines；Microsoft Copilot Studio / Azure Agent Service；GitHub Copilot cloud agent",
+      "AWS Bedrock AgentCore / DevOps Agent / Amazon Q Developer；Cloudflare Agents / Sandboxes / Computer / Workers",
+      "Replit Agent、Cursor Cloud Agents、Lindy、CrewAI、LangGraph Platform、Factory、Sourcegraph Amp",
+      "Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH：hosted/cloud、后台/定时、远程环境、多 Agent、并发、企业控制与定价边界",
+      "OpenCode、Aider、Continue、Roo Code：供应商托管执行、远程环境与企业控制边界",
+      "字节跳动 Coze/扣子、火山引擎、豆包、Trae、Seed；阿里百炼/Qoder/通义/夸克；腾讯元宝/混元/云；百度 AgentBuilder/Comate；智谱、Kimi、MiniMax、DeepSeek 与可信创业公司入口",
+      "GitHub、Hacker News、Reddit、中文科技媒体与可信二手来源交叉补搜"
+    ],
+    "failedSources": [
+      "Cognition 部分 changelog 为动态页面，改查官方博客、文档与可索引更新记录；未发现窗口内新增",
+      "xAI/Grok 官方 Bot changelog 可访问，但最近条目为 10 月 7 日；普通模型/API 更新未提升为 AaaS",
+      "DigitalOcean 官方页面仅标 10 月 12 日而无时刻；以 09:33 EDT 发布的同源 Business Wire 公告交叉确认其处于主窗口，但 sources 优先保留官方原文",
+      "部分中国厂商更新中心缺少稳定、可索引的精确发布时间；未把搜索摘要或产品名当作发布事实",
+      "X 公开搜索无法稳定取得带可核验时间戳的原帖"
+    ],
+    "candidateCount": 13,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n主采集窗口：**2026-10-12 10:44:13 至 2026-10-13 10:44:13（Asia/Shanghai）**；同时检查此前 24–72 小时信号。本轮确认 DigitalOcean 两条窗口内 AaaS 动态：Agent Data Services 进入 private preview，把托管 Agent 的上下文、执行轨迹和评测闭环接到同一受管数据层；另一篇生产实测披露 Managed Agents Harness Runtime 的隔离环境、暂停恢复、网络白名单、按秒计费与无人值守运行边界。Google 10 月 12 日修订 Agent AI Use Guidelines，属于治理邻近信号，不写成新的托管执行产品。\n\n## 今日重点\n\n| 层级 | 动态 | AaaS 判断 |\n|---|---|---|\n| 24 小时已验证 | DigitalOcean Agent Data Services private preview | 与 Managed Agents 集成，托管上下文、执行轨迹、索引、访问控制及评测数据闭环，属于 Agent 生命周期平台扩展 |\n| 24 小时已验证 | DigitalOcean 发布 Harness Runtime 生产运行实测 | 明确展示每会话 microVM、暂停/恢复/检查点、网络出口白名单和无人值守长任务，直接符合远程托管执行定义 |\n| 邻近治理信号 | Google 更新 Agent AI Use Guidelines | 约束高风险动作、资源支出、权限和多 Agent 监督；影响 AaaS 治理，但不是产品发布 |\n\n## 远程 / 云端 Agent 执行\n\nDigitalOcean 的 [生产 Agent 实测](https://www.digitalocean.com/community/tutorials/ai-customer-support-agent-human-in-the-loop) 使用 Managed Agents Harness Runtime 连续运行 1 小时 48 分钟，处理 99 个合成工单；运行环境为每会话硬件隔离的 microVM，支持 pause、resume、fork 与 checkpoints。文章同时说明默认网络出口并不受限，生产部署必须显式配置 egress allowlist；本次演示把发送回复的权限从 Agent 凭据中移除，并保留人工审批。文中披露该规格计算成本约 0.11 美元、按秒计费，但模型 token 另计。该数据是一次厂商自测，不应外推为通用可靠性或成本承诺。\n\n[Agent Data Services](https://www.digitalocean.com/blog/introducing-agent-data-services) 于 10 月 12 日进入 private preview。它托管多模态数据流、向量索引、结构化记录、数据血缘与 SQL/API 查询，并接收 Agent session、tool call 和 execution trace；这些数据再连接 Insights、Signals、Evaluations 与 Simulations。它可与 DigitalOcean Managed Agents 集成，也可独立使用。由于 private preview 无 SLA、标准支持或常规合规认证，当前更适合验证，而非被描述为已具备稳定生产承诺。\n\n## 海外厂商\n\n- **Cognition Devin（必查）：**已核对官方 product news、changelog、docs、定价、Enterprise、API 与集成入口，逐项检查异步会话、远程环境、并发、自动化、企业控制、价格和集成；主窗口与 24–72 小时内均无新增，不重复旧来源。\n- **xAI / Grok（必查）：**已核对 Grok Bot、Cloud Agents、Grok Build、新闻和开发者文档，覆盖托管 Agent、异步任务、工具、编码/远程执行、企业和 API 能力。Bot changelog 最近仍为 10 月 7 日；普通 Grok 模型/API 变化不算 AaaS。\n- **Anthropic / OpenAI：**托管 Agent、Claude Code cloud、Codex cloud 与 ChatGPT agents 本轮无新的 AaaS 发布；如后续重复引用，需注明详见 Claude / OpenAI 专题页。\n- **Google / Microsoft / GitHub / AWS：**除 Google 治理规范更新外，未核实到窗口内新的托管运行、远程环境、并发或定价发布。\n- **Replit、Cursor、Lindy、CrewAI、LangGraph、Cloudflare、Factory、Amp：**未发现主窗口内新的 hosted runtime 或远程执行商业化动态。\n\n## 中国市场（字节重点）\n\n- **字节跳动：**Coze / 扣子、火山引擎、豆包、Trae 与 Seed 均已检查，本轮未发现可由一手来源确认的托管执行、异步任务、云环境或企业控制面新增。Trae 的本地 / IDE 更新不自动等于 AaaS。\n- **阿里、腾讯、百度：**百炼、Qoder、通义、夸克、元宝、混元、腾讯云智能体、AgentBuilder 与 Comate 未见窗口内可核验的 AaaS 新发布。\n- **智谱、Moonshot / Kimi、MiniMax、DeepSeek 与创业公司：**未发现一手来源确认的 24 小时托管 Agent 动态。\n\n## Coding Harness 的 hosted / cloud 边界\n\nCline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 已逐项检查 hosted/cloud、后台或定时任务、远程环境、多 Agent 服务、并发、企业控制与定价；本轮没有供应商托管执行生命周期的新证据。OpenCode、Aider、Continue、Roo Code 同样未发现窗口内新的远程托管执行。其本地 CLI、IDE、桌面或自托管 harness 更新属于开源专题，不因支持工具调用或多 Agent 就自动进入 AaaS。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- **AaaS：**供应商管理 Agent 的运行环境、会话、异步队列、生命周期、并发、可观测性或企业治理。DigitalOcean Harness Runtime 与 Agent Data Services 的组合符合该定义。\n- **MaaS：**模型 API 或推理路由即使支持 tool calling，若不管理 Agent 执行生命周期，仍属于模型服务。\n- **PaaS：**通用 microVM、数据库、向量索引或对象存储本身不构成 AaaS；本轮 Agent Data Services 之所以相关，是因为它明确接入 Managed Agents 的 session、tool call、trace 与评测闭环。\n\n## 日期未确认\n\n- DigitalOcean 两篇官方原文仅标 10 月 12 日，不显示具体时刻；同源新闻稿在 09:33 EDT（21:33 上海时间）发布，交叉证明整组发布位于主窗口。为避免把新闻稿时刻错误套到每篇博客，sources 中保留日期并注明具体时刻未披露。\n\n## 未证实传闻\n\n本轮没有保留达到相关性门槛的单源泄露或新品传闻；社区比较、搜索摘要和路线图猜测均未写成发布事实。\n\n## 邻近信号观察池\n\nGoogle [Agent AI Use Guidelines](https://cloud.google.com/terms/agentic-ai-use-guidelines) 于 10 月 12 日修订，要求部署方管理 Agent 权限、资源消耗和高风险动作，并反对用多 Agent 通信规避人工监督。它是 AaaS 采购和治理的重要边界信号，但没有宣布新的 runtime、异步队列或托管产品，因此不列为 AaaS 产品发布。\n\n## 趋势判断\n\n1. **托管执行正在向闭环运营扩展。** 竞争不再只看能否启动 sandbox，而是能否把执行轨迹、上下文、评测和改进连成可治理的数据回路。\n2. **权限与网络边界比提示词更关键。** DigitalOcean 的实测把“不能发送”落实为凭据范围和 egress allowlist，而非仅写进 system prompt。\n3. **预览期能力必须和生产承诺分开。** private preview 无 SLA、标准支持与常规合规认证，实际采用需要额外验证。\n4. **厂商实测不等于普遍基准。** 99 个合成工单和约 0.11 美元计算成本说明一种实现方式，但不能证明其他任务、模型或持续时间下表现相同。\n\n## 来源链接\n\n1. [DigitalOcean：Introducing Agent Data Services](https://www.digitalocean.com/blog/introducing-agent-data-services)\n2. [DigitalOcean：Agents in Production, Part 1](https://www.digitalocean.com/community/tutorials/ai-customer-support-agent-human-in-the-loop)\n3. [Google Cloud：Agent AI Use Guidelines](https://cloud.google.com/terms/agentic-ai-use-guidelines)\n\n## 采集状态\n\n- **已检查：**Cognition Devin 与 xAI / Grok 两项必查已逐维度完成；DigitalOcean、Anthropic、OpenAI、Google、Microsoft、GitHub、AWS、Replit、Cursor、Lindy、CrewAI、LangGraph、Cloudflare、Factory、Amp，以及字节、阿里、腾讯、百度、智谱、Moonshot、MiniMax、DeepSeek均已覆盖。Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的 hosted/cloud 边界已检查。\n- **失败来源：**Devin 动态 changelog 改用可索引官方入口；xAI 最近 Bot 更新早于观察窗；部分中国厂商更新页缺稳定精确时间；X 无可靠公开时间戳。\n- **图片尝试：**检查 DigitalOcean 两篇官方原文；页面可见插图，但未能从公开 HTML 稳定取得可直接验证的原始 OG 图片 URL，因此本页不配置图片，避免使用搜索缩略图或不明资源。\n- **初始候选：**13 条；**最终保留来源：**3 条（2 条 AaaS 动态、1 条治理邻近信号）。\n- **二次补搜：**否（主窗口内已有可验证来源）。\n\n**今日扫描完成，共 3 条动态，重点：DigitalOcean 将托管 Agent 从隔离运行时延伸到数据、轨迹和评测闭环，并用生产实测强调凭据、网络出口与人工审批边界。**",
+  "sources": [
+    {
+      "title": "Introducing DigitalOcean Agent Data Services: The Data Foundation for Agents",
+      "url": "https://www.digitalocean.com/blog/introducing-agent-data-services",
+      "source": "DigitalOcean",
+      "publishedAt": "2026-10-12（官方仅标日期，具体时刻未披露）",
+      "summary": "Agent Data Services 进入 private preview，为 Managed Agents 提供托管多模态数据、执行轨迹、索引、治理及评测反馈闭环。",
+      "tags": ["DigitalOcean", "Agent Data Services", "Private Preview", "Managed Agent"]
+    },
+    {
+      "title": "Agents in Production, Part 1: Build an Overnight AI Support Agent using Managed Agents",
+      "url": "https://www.digitalocean.com/community/tutorials/ai-customer-support-agent-human-in-the-loop",
+      "source": "DigitalOcean",
+      "publishedAt": "2026-10-12（官方仅标日期，具体时刻未披露）",
+      "summary": "DigitalOcean 披露 Managed Agents Harness Runtime 的隔离 microVM、暂停恢复、检查点、网络白名单、按秒计费和 108 分钟无人值守实测。",
+      "tags": ["DigitalOcean", "Harness Runtime", "Remote Execution", "Human-in-the-loop"]
+    },
+    {
+      "title": "Agent AI Use Guidelines",
+      "url": "https://cloud.google.com/terms/agentic-ai-use-guidelines",
+      "source": "Google Cloud",
+      "publishedAt": "2026-10-12（页面最后修改日期）",
+      "summary": "邻近治理信号：Google 更新 Agent 使用规范，强调高风险动作、资源支出、权限控制与多 Agent 人工监督责任。",
+      "tags": ["邻近信号观察池", "Agent Governance", "Google Cloud", "Enterprise"]
+    }
+  ]
+}

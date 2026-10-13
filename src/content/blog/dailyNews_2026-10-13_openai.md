@@ -1,0 +1,111 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-10-13T00:00:00+08:00"
+updatedAt: "2026-10-13T10:44:13+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Who’s using Dots? Are they connecting the dots for you?"
+featuredUrl: "https://community.openai.com/t/who-s-using-dots-are-they-connecting-the-dots-for-you/1402360"
+featuredSummary: "讨论在窗口内新增 Dots 用户实测，涉及跨项目协调、转交 Codex、经测试的游戏修复、账号安全提醒及远程审批摩擦。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-10-12"
+featuredTags: ["Dots","Codex","社区口碑","Love","Hate"]
+tags:
+  - "可信二手来源"
+  - "评论"
+  - "社区口碑"
+  - "未获官方确认"
+  - "Agent"
+  - "AI 编程"
+  - "ChatGPT"
+  - "Claude 比较"
+  - "Codex"
+  - "Dots"
+  - "Hate"
+  - "Love"
+  - "OpenAI"
+---
+
+## 今日概览
+
+采集窗口：**2026-10-12 10:44:13 至 2026-10-13 10:44:13（Asia/Shanghai）**。窗口内未发现 OpenAI News、ChatGPT Release Notes、API changelog、Codex CLI 正式版或 Agents SDK 正式版的新发布。新增信息主要来自社区：一名 Dots 用户分享跨项目协调、转交 Codex 与安全提醒的正向体验；与此同时，r/codex 多个帖子集中报告任务长时间停滞、流中断和模型不可用。OpenAI Status 未检索到对应事故页，因此本文把这些保留为社区口碑和邻近信号，而不宣称已发生官方确认的服务事故。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 产品线 | 本轮结论 | 证据状态 |
+|---|---|---|
+| Codex CLI | 无新增正式 release；最新可见正式版早于窗口 | 已检查官方仓库 releases |
+| VS Code / JetBrains 集成 | 无新增 | 已检查官方更新入口；JetBrains 名称与可用性未作额外推断 |
+| Codex cloud / remote tasks / PR agents | 无新增官方公告；社区有卡顿、断流和长任务未完成报告 | 社区小样本，未获状态页确认 |
+| ChatGPT agentic mode / Dots | 无新增发布；出现跨项目协调与安全提醒的用户实测 | Developer Community 用户报告 |
+| 官方 Agent 构建产品 | 无新增 | 已检查官方新闻、文档与社区公告入口 |
+| Responses API | 无新增 | 已检查 API changelog |
+| Agents SDK Python | 无新增正式 release | 已检查 releases 与 changelog |
+| Agents SDK TypeScript | 无新增正式 release | 已检查 releases 与 changelog |
+| Assistants API 迁移 / 弃用状态 | 窗口内无状态变化 | 已检查 deprecations 文档；不推断新截止日期 |
+| Realtime API | 无新增 | 已检查 changelog 与 SDK release |
+| GPT、reasoning、Codex 模型家族 | 无新增官方型号或可用性公告 | 已检查官方模型与 release notes |
+
+## Tier 2：ChatGPT 产品面
+
+| 产品线 | 本轮结论 | 备注 |
+|---|---|---|
+| 浏览器 / Operator 能力 | 无新增 | 未发现窗口内官方条目 |
+| 桌面应用 | 无新增 | ChatGPT / Codex 桌面入口均已检查 |
+| GPTs / GPT Store | 无新增 | 未发现窗口内官方条目 |
+| Canvas | 无新增 | 未发现窗口内官方条目 |
+| Sora / 视频 | 无新增 | 未发现窗口内官方条目 |
+| GPT Image / DALL·E | 无新增 | 未发现窗口内官方条目 |
+| Voice | 无新增 | 未发现窗口内官方条目 |
+| Connectors / MCP | 无新增发布；Dots 用户提到邮件、账号提醒与跨工具工作流 | 用户实测，不等同于新功能公告 |
+
+## Tier 3：企业、教育、安全与行业采用
+
+Enterprise、Business、Edu、Gov、Science、安全及行业方案在窗口内未发现新的官方发布。Developer Community 的 Dots 讨论包含符合企业协作场景的个体使用经验，但样本不足，不能外推为采用趋势。
+
+## 官方更新（由新到旧）
+
+- **本轮无窗口内官方更新。** OpenAI News、ChatGPT Release Notes、API changelog、模型 / deprecations 文档，以及 Codex、Agents SDK Python / TypeScript 的正式 releases 均已检查。
+
+## Love：社区正向信号
+
+- OpenAI Developer Community 的 Dots 讨论在 10 月 12 日新增一则较完整实测：用户称可在同一对话中推进不同项目、把工作转交给 Codex，并在回到会话时查看结果；其 Android 游戏修复经用户测试确认，Dots 还提示了 Google 账号安全警报。发帖者同时强调仍会审查和测试结果，且远程审批仍有摩擦。这是单一用户报告，不代表普遍表现：[Dots 使用讨论](https://community.openai.com/t/who-s-using-dots-are-they-connecting-the-dots-for-you/1402360)。
+
+## Hate：社区负向信号
+
+- r/codex 一则当日帖子汇集了任务耗时异常、容量提示、computer-use bridge / sandbox 失败等抱怨；这些是用户自报，未能与官方事故页交叉验证：[Codex problems 讨论](https://www.reddit.com/r/codex/comments/1x45x52/codex_with_problems_10122026/)。
+- 另一则当日讨论中，多名用户报告 `stream disconnected before completion`、反复重试或 Sol 6.1 无法提交请求，也有人称同一设置可顺利完成任务，说明体验并不一致：[Codex 运行异常讨论](https://www.reddit.com/r/codex/comments/1x45cci/this_is_a_new_release_from_codex/)。
+- r/codex 的周期性用量与性能集中帖出现用户表示将因体验下降转向 Claude；这是强烈负面意向，但只有少量可见样本，不能据此推断流失规模：[用量与性能集中讨论](https://www.reddit.com/r/codex/comments/1x45q9b/codex_usage_and_operation_discussion_last_updated/)。
+
+## 情绪判断
+
+- **总体：负面偏谨慎；置信度中低。**
+- **证据：**负向证据来自多个同日 r/codex 帖子，主题较一致，集中在停滞、断流、错误与完成时间；正向证据来自一则细节充分的 Dots 实测。由于社区样本存在选择偏差，且没有状态页事故交叉验证，只能判断“当日可见讨论偏负面”，不能判断总体用户满意度或服务可用率。官方公告不计入正向情绪。
+
+## 横向比较
+
+- 社区集中帖中出现用户计划把订阅转向 Claude 的表态，但没有统一任务、版本、提示词或可复现基准，因此不能据此判定 Codex 相对 Claude Code 的能力变化。
+- 窗口内一篇评论文章回顾作者用 ChatGPT 进行迭代式编程的创造性收益，同时批评产品越来越引导用户转向自动化工具、削弱直接文件编辑体验；它反映的是产品哲学与个人工作流冲突，而非性能基准：[The Atlantic 评论](https://www.theatlantic.com/ideas/2026/10/ai-programming-big-tech-regulations/688960/)。
+- 未发现可复现证据比较 Codex 与 Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH、OpenCode、Aider、Continue 或 Roo Code；Cline、Pi 与 DSH 的完整产品扫描留给开源 Agent Harness 专题。
+
+## 日期未确认
+
+- 未发现值得保留且发布日期无法确认的新增官方候选；搜索结果中被重新抓取的旧 release 和旧安全材料均未误记为窗口内发布。
+
+## 观察池
+
+- 10 月 12 日多则 Codex 社区报告时间接近、问题描述相似，但 OpenAI Status 未检索到对应事故记录。后续应观察是否出现官方事故回填、RCA 或产品修复说明；在此之前仅视为**未获官方确认的社区异常信号**。
+- 继续观察 Dots 的远程审批摩擦、跨项目协调可靠性与账号安全提醒能力是否在更多独立用户案例中复现。
+
+## 来源链接
+
+1. [OpenAI Developer Community：Dots 跨项目协调与 Codex 实测](https://community.openai.com/t/who-s-using-dots-are-they-connecting-the-dots-for-you/1402360)
+2. [Reddit r/codex：10 月 12 日 Codex problems 讨论](https://www.reddit.com/r/codex/comments/1x45x52/codex_with_problems_10122026/)
+3. [Reddit r/codex：断流与重试讨论](https://www.reddit.com/r/codex/comments/1x45cci/this_is_a_new_release_from_codex/)
+4. [Reddit r/codex：用量与性能集中讨论](https://www.reddit.com/r/codex/comments/1x45q9b/codex_usage_and_operation_discussion_last_updated/)
+5. [The Atlantic：The Tragedy of AI Coding](https://www.theatlantic.com/ideas/2026/10/ai-programming-big-tech-regulations/688960/)
+
+## 采集状态
+
+- **已检查：**OpenAI News / Product / Research / Safety，ChatGPT Release Notes，API changelog、模型与 deprecations 文档，OpenAI Status，Codex、Agents SDK Python / TypeScript GitHub releases / changelog，OpenAI Developer Community；Reddit r/OpenAI、r/ChatGPT、r/codex、r/ChatGPTCoding、r/singularity，Hacker News、YouTube 与可信媒体 / 评论来源。
+- **失败来源：**X 公开搜索未稳定返回可核验原帖；YouTube 未找到可与官方来源交叉验证的窗口内发布；部分 GitHub release 动态页加载不完整，已改查索引条目与 changelog；状态页未找到社区所述异常的对应事故页。
+- **图片尝试：**检查了已引用来源；Developer Community 与 Reddit 主要为用户上传截图，The Atlantic 配图的公开复用与原始图地址未能可靠确认，故本页不配置图片。
+- **候选数：**12；**最终保留来源：**5；**二次补搜：**否（最终来源非 0）。

@@ -1,0 +1,53 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Industry",
+    "Research"
+  ],
+  "order": 40,
+  "updatedAt": "2026-10-13T10:44:13+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom / Platform release notes（详见 Claude 专题页）",
+      "OpenAI News / Research / Product（详见 OpenAI 专题页）",
+      "Google DeepMind News / Google Research Blog",
+      "Meta AI Blog / Meta Research",
+      "Microsoft Research Blog / Microsoft AI Blog / Tech Community",
+      "xAI News / Grok 产品页 / xAI API docs 与 changelog / xai-org GitHub（模型、API、DeepSearch、voice、coding、tool-use、Agent）",
+      "Mistral News / Cohere Blog 与 Research",
+      "Qwen / Alibaba Cloud / DAMO",
+      "ByteDance Doubao / Seed",
+      "Baidu ERNIE / Tencent Hunyuan",
+      "DeepSeek 官网与 GitHub",
+      "Zhipu / GLM、Moonshot / Kimi、StepFun、MiniMax",
+      "NVIDIA Developer / Research",
+      "Hugging Face Blog / Research",
+      "LangChain Blog / Changelog",
+      "LlamaIndex Blog / Changelog",
+      "Cline 官方站、博客与 GitHub（行业级信号）",
+      "Pi Coding Agent / pi-mono 官方仓库（行业级信号）",
+      "DeepSeek Harness / DSH 官方仓库与讨论（行业级信号）",
+      "OpenCode、Aider、Continue、Roo Code（行业级交叉检查）",
+      "Latent Space / Dwarkesh Podcast / No Priors",
+      "The Cognitive Revolution / a16z AI / 厂商官方播客",
+      "第二轮：中英文扩展关键词、厂商备用列表页、GitHub Releases/commits 与可信二手报道"
+    ],
+    "failedSources": [
+      "ByteDance Seed、Baidu、Tencent Hunyuan、Zhipu/GLM、StepFun：公开列表页和搜索索引未稳定返回带可核验窗口日期的条目",
+      "Moonshot/Kimi、MiniMax：部分官方产品页面缺少可核验发布时间，且未找到本窗口对应公告",
+      "xAI API changelog：可访问的最新明确日期仍早于本窗口；GitHub 结果以文档和例行活动为主，未发现本窗口正式发布",
+      "Latent Space、Dwarkesh、No Priors、a16z AI：未检出带明确窗口内发布日期的新节目",
+      "The Cognitive Revolution：最新可核验节目仅标 2026-10-10、无具体时刻；该条已在前一日日报记录，本日不重复充当新来源",
+      "部分搜索结果只显示抓取时间、月份或二手摘要，不能据此推断发布时间",
+      "配图检查：本轮没有保留新闻来源，因此没有可与正文条目绑定的合规官方配图"
+    ],
+    "candidateCount": 7,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n主窗口为 **2026-10-12 10:44:13 至 2026-10-13 10:44:13（Asia/Shanghai）**；24–48 小时层为 **2026-10-11 10:44:13 至 2026-10-12 10:44:13**，48–72 小时层为 **2026-10-10 10:44:13 至 2026-10-11 10:44:13**。本轮逐项检查厂商、研究机构、Coding Agent 生态与指定播客入口，未找到发布时间和事实均可核验、且尚未在前一日日报作为同一旧候选记录的新增条目。日期只精确到日的页面没有被假定为当天 00:00，也没有被强行放入某一小时分层。\n\n## 优先动态（过去 24 小时）\n\n无已验证新增。\n\n## 常规雷达\n\n| 厂商组 | 本轮状态 | 说明 |\n|---|---|---|\n| Anthropic / OpenAI | 无行业级新增 | 已检查官方新闻与产品/研究入口；相关专题详见 Claude 专题页与 OpenAI 专题页。 |\n| Google DeepMind / Research、Meta AI、Microsoft Research / AI | 无窗口内正式发布 | 列表页没有显示可明确落入主窗口的新条目；仅有月份或抓取日期的结果不作为发布证据。 |\n| xAI / Grok | 强制专项检查完成，无新增 | 已逐项检查 News、产品页、API docs/changelog 与官方 GitHub，并覆盖模型/API、DeepSearch、voice、coding、tool-use、Agent；没有确认本窗口正式发布。 |\n| Mistral、Cohere、NVIDIA | 无窗口内新增 | 可核验的重要发布早于分层窗口，不跨日重复作为今日动态。 |\n| Qwen / Alibaba / DAMO、ByteDance Seed、Baidu、Tencent Hunyuan | 无已验证新增 | 已检查官方列表和备用搜索入口；未把搜索摘要或抓取时间当发布日期。 |\n| DeepSeek、Zhipu/GLM、Moonshot/Kimi、StepFun、MiniMax | 无已验证新增 | 部分产品页发布日期不足，保留在扫描记录而不写成今日事实。 |\n| Hugging Face、LangChain、LlamaIndex | 无窗口内官方重大发布 | 未发现满足时间与证据要求的新产品、研究或生态公告。 |\n| Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH | 无行业级新增 | 未发现产品方向、桌面/IDE 分发、合作、融资、企业采用、具名基准或生态增长的新证据；例行提交留给开源专题页，详见开源专题页。 |\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商官方播客入口均已检查。没有找到发布日期可明确落入主窗口的新节目；The Cognitive Revolution 的 2026-10-10 节目只有日级日期，且已在前一日日报记录，本页不跨日重复包装为新内容。\n\n## 近两日补充（24–48 小时）\n\n无。候选页面缺少足以落入这一小时分层的发布时间，或已经是前一日记录过的同一事件。\n\n## 近三日补充（48–72 小时）\n\n无。对于仅标 2026-10-10 的候选，无法判断其是在 10:44:13 前还是后，因此没有猜测午夜或强行归层。\n\n## 日期未确认\n\n本轮发现的日期不足候选均为前一日日报已记录的相同页面或较旧背景；根据跨日不重复旧背景的规则，本页不再次收录为来源。其证据限制已保留在 `scan.failedSources`。\n\n## 观察池\n\n- xAI/Grok 官方 API 与 GitHub 入口存在持续文档和仓库活动，但没有与截止时间内正式 News/changelog 相互印证的模型、DeepSearch、语音、编码、工具调用或 Agent 发布。**状态：邻近信号，不升级为新闻。**\n- Cline、Pi/pi-mono、DSH 以及 OpenCode、Aider、Continue、Roo Code 未发现合作、融资、企业采用或分发层面的新证据。**状态：行业信号未形成；日常工程变化详见开源专题页。**\n\n## 一句话总结\n\n截至上海时间 10:44:13，行业官方发布面安静；两轮扫描均未得到可按小时窗口确认的新来源，宁可留空也不以旧闻、抓取时间或日期不明页面补位。\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba/DAMO、ByteDance Seed、Baidu、Tencent Hunyuan、DeepSeek、Zhipu/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，Cline、Pi/pi-mono、DSH 与 OpenCode/Aider/Continue/Roo Code 行业信号，以及指定播客入口。\n- xAI/Grok 专项：News、产品页、API docs/changelog、官方 GitHub，以及模型/API、DeepSearch、voice、coding、tool-use、Agent 关键词均已覆盖；无窗口内正式发布。\n- 失败来源：部分中国厂商列表未返回可核验窗口日期；若干页面只有月份、日级日期或抓取时间；播客没有明确窗口内新集；xAI changelog 最新明确日期早于窗口；没有可绑定至保留新闻条目的合规配图。\n- 初始候选数：7；保留来源数：0。候选均因超窗、日期/时刻不足、仅属例行活动，或与前一日日报相同而未跨日重复收录。\n- 二次补搜：是。已扩大中英文关键词，切换厂商备用入口、GitHub 与可信二手来源；仍无可保留新来源。",
+  "sources": []
+}
