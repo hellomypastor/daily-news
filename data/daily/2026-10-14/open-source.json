@@ -1,0 +1,132 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-10-14T10:43:00+08:00",
+  "image": {
+    "url": "https://opengraph.githubassets.com/c0b163dc07d4a52768103d31b118ed9cc3a109da4432625c35c8ef865bc0f723/cline/cline/releases/tag/v4.1.24",
+    "alt": "GitHub 为 Cline v4.1.24 发布页生成的项目预览图",
+    "sourceUrl": "https://github.com/cline/cline/releases/tag/v4.1.24",
+    "caption": "图片来源：Cline 官方 GitHub Release"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline 官方仓库 cline/cline、Releases 与变更记录",
+      "Pi Coding Agent 官方仓库 badlogic/pi-mono（已迁移至 earendil-works/pi）、packages 文档与 Releases",
+      "DeepSeek Harness / DSH 官方仓库 deepseek-ai/deepseek-harness、Releases 与 docs",
+      "OpenCode 官方仓库 anomalyco/opencode、Releases 与主分支提交",
+      "Aider 官方仓库 Aider-AI/aider、Releases 与 changelog",
+      "Continue 官方仓库 continuedev/continue、Releases 与 changelog",
+      "Roo Code 官方仓库 RooCodeInc/Roo-Code、Releases 与 changelog",
+      "Hacker News front/newest 与 Algolia 最近 24 小时 submissions",
+      "GitHub Trending 日榜：Overall、Python、TypeScript",
+      "arXiv cs.AI/cs.LG 候选与原始论文页",
+      "Hugging Face Papers 与 Blog",
+      "Simon Willison Weblog 与独立模型/基础设施工程博客"
+    ],
+    "failedSources": [],
+    "candidateCount": 19,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：技术高亮优先核验 **2026-10-12 10:43 至 2026-10-14 10:43（Asia/Shanghai）**；HN 发现窗口为 **2026-10-13 10:43 至 2026-10-14 10:43**。本轮最值得关注的是两个正式 harness 版本：Cline 修正 auto-compaction、MCP/hook 稳定性与跨工具 skills 发现；Pi 1.2.0 则把工具可达性、MCP 资源、扩展触发的 agent run 和配置 schema 一起推进。OpenCode 的权限声明仍是主分支提交，尚不等同于正式版本。另有一个可复现的 coding-agent 部署评测，但当前样本只覆盖单一 agent/model 组合，不能据此作工具间优劣结论。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 技术意义 |\n|---|---|---|\n| Cline | **已发布** v4.1.24（10 月 13 日） | 修复图片 token 估算导致过早压缩、按已选模型 context window 压缩、MCP/hook 提前退出崩溃，并发现 `.claude/skills`。 |\n| Pi Coding Agent | **已发布** v1.2.0（10 月 13 日上海时间） | 工具可达性元数据、扩展触发 run 的一致生命周期、MCP 资源处理与 compaction 输入控制一起更新。官方仓库已由 `badlogic/pi-mono` 迁移到 `earendil-works/pi`。 |\n| DeepSeek Harness / DSH | 已检查，窗口内无新 Release | 官方最新 Release 为 10 月 9 日的 v0.2.1-alpha.2，本轮不跨日重复作为背景新闻。 |\n| OpenCode | **主分支信号，未发布** | 新提交允许插件声明权限；适合继续观察何时进入 Release。 |\n| Aider | 已检查，无新增 | 官方 Release 未出现窗口内更新。 |\n| Continue | 已检查，无新增 | 官方 Release/changelog 未出现窗口内更新。 |\n| Roo Code | 已检查，无新增 | 官方 Release/changelog 未出现窗口内更新。 |\n\n## 已验证技术高亮\n\n### 1. Cline v4.1.24：压缩预算、MCP 稳定性和 skills 发现一起修正\n\n- **是什么**：Cline 的正式版本更新。\n- **为什么重要**：截图此前会按 base64 文本估算 token，可能让 auto-compaction 过早触发；新版改用图片固定估算，并在目录条目缺少限制时使用所选模型的 context window。版本还修复 MCP server 或 hook 未读完输入即退出后导致扩展宿主崩溃的问题，并加入 `.claude/skills` 发现。\n- **来源与日期**：[Cline v4.1.24 官方 Release](https://github.com/cline/cline/releases/tag/v4.1.24)，发布于 2026-10-13 23:02（上海时间）。\n\n### 2. Pi Coding Agent v1.2.0：强化工具路由、扩展并发与 MCP 边界\n\n- **是什么**：Pi 迁移后的官方仓库发布 v1.2.0。\n- **为什么重要**：工具定义新增 `reachesTools`，让 codemode/tool search 明示可触达的下游工具；扩展触发的 run 统一经过 `before_agent_start`，启动期间 session 也被视为 busy。版本同时修复 MCP structured content 非对象、资源枚举阻塞工具注册，以及把 thinking block 写入 compaction/branch summary 可能反向撑爆上下文的问题。\n- **来源与日期**：[Pi v1.2.0 官方 Release](https://github.com/earendil-works/pi/releases/tag/v1.2.0)，发布于 2026-10-13 07:03（上海时间）。\n\n### 3. OpenCode：插件可声明权限，但仍是未发布主分支变更\n\n- **是什么**：OpenCode 主分支加入插件权限声明能力。\n- **为什么重要**：权限成为插件边界的一等信息，有助于宿主在加载和执行前表达、审查插件所需能力；但该证据只证明代码已合入主分支，不能写成正式版本已经交付。\n- **来源与日期**：[OpenCode 官方提交](https://github.com/anomalyco/opencode/commit/6a7cedcbf1823eeb1c8dfc4baf5a7951854f578b)，提交于 2026-10-14 09:28（上海时间）。\n\n### 4. ai-deploy-bench：把 coding agent 的“部署成功”拆成可检查的端到端指标\n\n- **是什么**：一个在 GitHub Actions 中让 Claude Code 构建五类应用并部署到四家云平台、再由独立 verifier 检查线上结果的开源 harness。\n- **为什么重要**：仓库保留任务规范、工作流、结果 JSON、验证器与方法说明，测量成功率、人工步骤、时间、token、成本和安全评分，比单纯 demo 更接近可复现实验。最新全量运行标为 2026-10-13。当前只覆盖 Claude Code 2.1.296 / Opus 5.5，且安全评分本身由另一轮 Claude Code review 给出，因此不能外推为 coding-agent 横向排名。\n- **来源与日期**：[ai-deploy-bench 仓库与结果](https://github.com/cloudishai/ai-deploy-bench)，仓库创建于 2026-10-12 23:09（上海时间），最新运行日期为 10 月 13 日。\n\n### 5. Agents as end users：为 agent 设计接口时要把“可观察失败”当成产品能力\n\n- **是什么**：Railcode 的工程文章，从 agent 作为软件终端用户的角度讨论确定性接口、结构化错误和可恢复工作流。\n- **为什么重要**：它把“agent-friendly”从额外文档推进到接口契约：稳定结构、明确失败状态和可重复操作会直接影响 agent loop 能否恢复，而不是只影响人类开发体验。\n- **来源与日期**：[Agents as end users](https://railcode.dev/blog/agents-as-end-users)，原文元数据标注 2026-10-13。\n\n### 6. Linear CI playbook：把 CI 优化拆成可交给 coding agent 的窄任务\n\n- **是什么**：StarSling 将 Linear 的 CI 实践整理为 15 个带具体交付边界的 agent prompt。\n- **为什么重要**：其价值不在“让 agent 自动优化一切”，而在于把依赖缓存、job 拆分等改动限定为可审阅、可测试的单元；这是把工程博客转成 agent task contract 的实用样例。文章带明显产品导流，以下仅保留其任务拆分方法。\n- **来源与日期**：[Linear's CI playbook, ready to hand to your agent](https://starsling.dev/blog/linear-ci)，发布于 2026-10-13 08:00（上海时间）。\n\n## GitHub Trending\n\n- [mksglu/context-mode](https://github.com/mksglu/context-mode) 出现在本轮 GitHub Trending Overall 与 TypeScript 日榜。项目通过 MCP/hooks 对工具输出做隔离、会话记忆和上下文路由。Trending 只表示当前热度快照，不代表项目今天发布；页面未稳定展示可核验的日增 star，因此不记录增长数字。\n\n## HN 讨论\n\n- **部署评测**：ai-deploy-bench 在 [HN 条目](https://news.ycombinator.com/item?id=50080712) 于 2026-10-14 08:07（上海时间）被提交；截止采集时为 3 points / 1 comment。互动量尚低，保留为发现信号，不将其视为社区共识。\n- **本地 LLM 持久记忆**：Membrane 项目在 [HN 条目](https://news.ycombinator.com/item?id=50081677) 于 2026-10-14 10:33（上海时间）出现，截止采集时为 2 points / 0 comments。项目本身不是当天创建，详见“旧文/旧项目再浮现”。\n- **长程研究 Agent**：MIRA 论文在 [HN 条目](https://news.ycombinator.com/item?id=50081199) 于 2026-10-14 09:16（上海时间）出现，截止采集时为 5 points / 0 comments；这是发现证据，不是复现实验或效果共识。\n\n## 论文 / 研究\n\n本轮 48 小时内未核验到适合作为“新论文发布”的原始论文；下面这篇由 HN 在 24 小时窗口内重新带回讨论，按原始日期归入再浮现。\n\n## 旧文 / 旧项目再浮现\n\n- **MIRA：为长程研究 Agent 学习“下一步调查什么”**：论文将外层 meta-reasoner 与每次重新初始化的内层 executor 分开，用持久研究记录决定下一份 work order 或停止。作者报告其在定理证明与开放式神经架构研究中改善长程推理与算力分配，但这里仅转述论文结论，未独立复现。原始论文 [Learning What to Investigate Next](https://arxiv.org/abs/2610.02525) 提交于 2026-10-01；本轮 HN 数据见上。\n- **Membrane：带可测“记忆形状”的本地 LLM memory seat**：项目不是简单向量块检索，而是用 hypervector entity field 表达实体、关系与生命周期，并作为包含 REST/SSE、聊天与 Home Assistant 集成的常驻进程运行。原始仓库 [chedim/membrane](https://github.com/chedim/membrane) 创建于 2026-08-22，10 月 14 日仍有更新；本轮因 HN 提交重新进入视野。其吸收/升级策略与资源需求仍需独立评测。\n\n## 日期未确认\n\n- 本轮没有保留“无法确认原始日期”的来源。只有 HN 提交时间、但原始项目较旧的候选已明确放入“旧文 / 旧项目再浮现”，未伪装为当天发布。\n\n## 观察池\n\n- **OpenCode 插件权限**：已进入主分支但尚无对应 Release，等待正式发布说明与兼容边界。\n- **context-mode Trending**：当前热度成立，但项目创建于 2026-02-23；缺少稳定日增 star 数据，不把热度写成增长趋势。\n- **ai-deploy-bench**：方法与产物可检查，但当前 agent/model 样本单一，安全评分还依赖模型 review；等待更多 agent、模型和重复试验。\n\n## 来源链接\n\n- [Cline v4.1.24](https://github.com/cline/cline/releases/tag/v4.1.24)\n- [Pi v1.2.0](https://github.com/earendil-works/pi/releases/tag/v1.2.0)\n- [OpenCode 插件权限提交](https://github.com/anomalyco/opencode/commit/6a7cedcbf1823eeb1c8dfc4baf5a7951854f578b)\n- [ai-deploy-bench](https://github.com/cloudishai/ai-deploy-bench) 与 [HN 讨论](https://news.ycombinator.com/item?id=50080712)\n- [Agents as end users](https://railcode.dev/blog/agents-as-end-users)\n- [Linear's CI playbook](https://starsling.dev/blog/linear-ci)\n- [context-mode](https://github.com/mksglu/context-mode)\n- [Membrane](https://github.com/chedim/membrane) 与 [HN 讨论](https://news.ycombinator.com/item?id=50081677)\n- [MIRA 论文](https://arxiv.org/abs/2610.02525) 与 [HN 讨论](https://news.ycombinator.com/item?id=50081199)\n\n## 采集状态\n\n- **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/Release/changelog；HN front/newest 与 Algolia；GitHub Trending Overall/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison 与独立工程博客。\n- **失败来源**：无。\n- **初始候选数**：19。\n- **最终保留来源数**：12（按单页 URL 计；跨栏目重复展示但 URL 在 `sources` 中唯一）。\n- **二次补搜**：否；本页最终来源不为 0。",
+  "sources": [
+    {
+      "title": "Cline v4.1.24",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.24",
+      "source": "Cline / GitHub",
+      "publishedAt": "2026-10-13 23:02 +08:00",
+      "summary": "修复 auto-compaction 的图片 token 与 context-window 估算、MCP/hook 稳定性，并发现 .claude/skills。",
+      "tags": ["Cline", "Coding Agent", "MCP", "Context"]
+    },
+    {
+      "title": "Pi Coding Agent v1.2.0",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v1.2.0",
+      "source": "Pi / GitHub",
+      "publishedAt": "2026-10-13 07:03 +08:00",
+      "summary": "加入工具可达性元数据并更新扩展 run 生命周期、MCP 资源处理、compaction 和配置 schema。",
+      "tags": ["Pi", "Coding Agent", "MCP", "Tools"]
+    },
+    {
+      "title": "OpenCode: let plugins assert permissions",
+      "url": "https://github.com/anomalyco/opencode/commit/6a7cedcbf1823eeb1c8dfc4baf5a7951854f578b",
+      "source": "OpenCode / GitHub",
+      "publishedAt": "2026-10-14 09:28 +08:00",
+      "summary": "主分支提交允许插件声明权限；尚无对应正式 Release。",
+      "tags": ["OpenCode", "Plugins", "Permissions", "Watchlist"]
+    },
+    {
+      "title": "ai-deploy-bench",
+      "url": "https://github.com/cloudishai/ai-deploy-bench",
+      "source": "cloudishai / GitHub",
+      "publishedAt": "2026-10-12 23:09 +08:00",
+      "summary": "用可检查任务、工作流、线上 verifier 与结果文件评测 coding agent 构建和部署应用。",
+      "tags": ["Coding Agent", "Benchmark", "Deployment", "Evaluation"]
+    },
+    {
+      "title": "Show HN: Benchmark coding agents on deploying apps",
+      "url": "https://news.ycombinator.com/item?id=50080712",
+      "source": "Hacker News",
+      "publishedAt": "2026-10-14 08:07 +08:00",
+      "summary": "ai-deploy-bench 的 HN 发现条目；采集时 3 points、1 comment。",
+      "tags": ["HN", "Coding Agent", "Benchmark"]
+    },
+    {
+      "title": "Agents as end users",
+      "url": "https://railcode.dev/blog/agents-as-end-users",
+      "source": "Railcode",
+      "publishedAt": "2026-10-13",
+      "summary": "讨论为 agent 设计确定性接口、结构化错误与可恢复工作流。",
+      "tags": ["Agent", "API Design", "Engineering"]
+    },
+    {
+      "title": "Linear's CI playbook, ready to hand to your agent",
+      "url": "https://starsling.dev/blog/linear-ci",
+      "source": "StarSling",
+      "publishedAt": "2026-10-13 08:00 +08:00",
+      "summary": "将 CI 优化实践拆成 15 个具有明确边界、可交给 coding agent 的任务。",
+      "tags": ["Coding Agent", "CI", "Engineering Blog"]
+    },
+    {
+      "title": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "source": "mksglu / GitHub",
+      "publishedAt": "2026-02-23 13:56 +08:00",
+      "summary": "通过 MCP 和 hooks 管理 coding agent 工具输出与会话上下文；本轮进入 GitHub Trending 日榜。",
+      "tags": ["GitHub Trending", "Context", "MCP", "Watchlist"]
+    },
+    {
+      "title": "Membrane",
+      "url": "https://github.com/chedim/membrane",
+      "source": "chedim / GitHub",
+      "publishedAt": "2026-08-22 16:13 +08:00",
+      "summary": "以 hypervector entity field 为基础的本地 LLM 持久记忆进程；旧项目经 HN 再浮现。",
+      "tags": ["LLM Memory", "Ollama", "Resurfaced"]
+    },
+    {
+      "title": "Membrane – Structured persistent memory for local LLMs",
+      "url": "https://news.ycombinator.com/item?id=50081677",
+      "source": "Hacker News",
+      "publishedAt": "2026-10-14 10:33 +08:00",
+      "summary": "Membrane 的 HN 再发现条目；采集时 2 points、0 comments。",
+      "tags": ["HN", "LLM Memory", "Resurfaced"]
+    },
+    {
+      "title": "Learning What to Investigate Next: Meta-Reasoning for Long-Horizon Research Agents",
+      "url": "https://arxiv.org/abs/2610.02525",
+      "source": "arXiv",
+      "publishedAt": "2026-10-01",
+      "summary": "提出把外层研究分配与内层执行分开的 MIRA 架构；论文经 HN 再浮现。",
+      "tags": ["Research Agent", "Meta-Reasoning", "Paper", "Resurfaced"]
+    },
+    {
+      "title": "HN: Learning What to Investigate Next",
+      "url": "https://news.ycombinator.com/item?id=50081199",
+      "source": "Hacker News",
+      "publishedAt": "2026-10-14 09:16 +08:00",
+      "summary": "MIRA 论文的 HN 再发现条目；采集时 5 points、0 comments。",
+      "tags": ["HN", "Research Agent", "Resurfaced"]
+    }
+  ]
+}

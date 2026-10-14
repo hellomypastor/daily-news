@@ -1,0 +1,106 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-10-14T00:00:00+08:00"
+updatedAt: "2026-10-14T10:43:00+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTitle: "OpenAI's AI agent platform is used by twice as many companies as Anthropic's, new VentureBeat survey finds"
+featuredUrl: "https://venturebeat.com/orchestration/openais-ai-agent-platform-is-used-by-twice-as-many-companies-as-anthropics-new-venturebeat-survey-finds"
+featuredSummary: "VentureBeat Intelligence 的企业调查显示 OpenAI、Anthropic 与 Google Agent 编排平台均已进入受访企业采用范围，同时模型替换通常伴随工程返工；样本不可外推为全市场份额。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-10-14 01:05 +08:00"
+featuredTags: ["企业采用","Agent 编排","调查"]
+tags:
+  - "安全"
+  - "调查"
+  - "邻近信号"
+  - "企业采用"
+  - "日期未确认"
+  - "AaaS"
+  - "Agent"
+  - "Agent 编排"
+  - "Cloud Agent"
+  - "Managed Agent"
+  - "OpenHands"
+  - "Remote Execution"
+---
+
+## 今日概览
+
+采集窗口为 **2026-10-13 10:43 至 2026-10-14 10:43（Asia/Shanghai）**，并向前扩展 24–72 小时观察窗口。本轮确认 1 条窗口内行业采用数据：VentureBeat Intelligence 的企业调查显示，受访的 Agent 编排平台用户中，OpenAI、Anthropic 与 Google 平台均已进入企业生产采用，但样本仅覆盖特定企业和顾问，不能外推为全市场份额。另有 1 条日期未精确到时刻的官方产品更新：OpenHands Agent Canvas 接入 DigitalOcean Managed Agents。
+
+## 重点动态
+
+### 企业 Agent 编排平台进入多厂商并用阶段
+
+[VentureBeat 10 月 13 日调查报道](https://venturebeat.com/orchestration/openais-ai-agent-platform-is-used-by-twice-as-many-companies-as-anthropics-new-venturebeat-survey-finds) 发布于北京时间 10 月 14 日 01:05。其 9 月调查中，107 家正在使用 Agent 编排平台的合格受访组织里，43% 使用 OpenAI、22% 使用 Anthropic、21% 使用 Google；允许多选。调查还显示，替换生产应用内模型的受访者中多数需要返工或回退。这里应解读为“平台层、模型层与云层正在解耦，多厂商共存增加迁移验证成本”，不是总体市场份额结论。OpenAI 与 Claude 具体产品动态分别详见 OpenAI、Claude 专题页。
+
+## 远程 / Cloud Agent 执行
+
+| 平台 | 本轮状态 | AaaS 判断 |
+| --- | --- | --- |
+| OpenHands × DigitalOcean | 官方页面日期为 10 月 13 日，但无时刻，列入日期未确认 | 满足：托管隔离 microVM、持久磁盘、终端与浏览器、暂停/恢复、空闲自动暂停以及远程会话管理。 |
+| OpenAI Agents / Codex remote | 无窗口内新公告 | 已有托管执行能力；本轮调查只提供采用信号，详见 OpenAI 专题页。 |
+| Anthropic managed agents / Claude Code | 无窗口内新公告 | 调查提供采用信号，产品细节详见 Claude 专题页。 |
+| Google Vertex Agent / Jules | 无窗口内新公告 | 调查覆盖 Google 企业 Agent 平台，但无本轮功能发布。 |
+| Microsoft / GitHub / AWS / Cloudflare | 无已核实新增 | 已检查 Copilot Studio、Azure Agent、GitHub coding agent、Amazon Q、Bedrock AgentCore、Cloudflare Agents/Sandboxes。 |
+
+## 海外厂商
+
+### Cognition Devin（必查）
+
+已专项检查 Cognition 官方 news/blog、Devin docs 与可检索的变更线索，覆盖托管异步执行、独立环境、并发/多 Devin、定价、企业权限以及 Slack/Linear/Jira/GitHub 等集成。截止本轮未发现 24 小时或 24–72 小时内可核实的新公告；不重复引用更旧背景来源。
+
+### xAI / Grok（必查）
+
+已专项检查 xAI News、Grok Bot、Grok Build、Remote MCP 与 headless 工具入口。Grok Bot 的持久云电脑、后台工作、审批与企业控制符合 AaaS 定义，但本轮没有窗口内新增；普通 Grok 模型/API 与本地 CLI 更新不计入 AaaS。
+
+### Coding Agent / Harness 边界检查
+
+Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue 与 Roo Code 均已按“是否由提供方托管执行生命周期”检查。本轮未发现窗口内新证据证明这些项目新增提供方托管的异步任务、远程环境、并发控制面或企业定价；本地 IDE/CLI、自托管和普通 harness 版本更新留给开源专题。
+
+## 中国市场（字节系重点）
+
+- **字节跳动：** 已检查 Coze/扣子、火山引擎、豆包、Trae 与 Seed；未发现窗口内可核实的托管 Agent 新发布。
+- **阿里：** 已检查百炼、Qoder Cloud Agents、通义与夸克；Qoder 既有全托管 Session、Sandbox、长时运行与可观测能力符合 AaaS，但无本轮新增。
+- **腾讯：** 已检查 ADP、WorkBuddy、元宝、混元与腾讯云；既有云端 Agent Harness 能力符合 AaaS，但无窗口内新增。
+- **百度、智谱、Moonshot/Kimi、MiniMax、DeepSeek：** 未发现窗口内满足托管执行定义且能由一手来源核验的新事件。
+
+## 日期未确认
+
+[OpenHands 官方博客](https://hub.openhands.dev/blog/run-digitalocean-managed-agents-with-openhands) 标注 2026-10-13，但没有具体发布时间，无法判断是否晚于本轮起点 10:43。文章确认 OpenHands Agent Canvas v1.27.0 起可直接创建和管理 DigitalOcean-hosted OpenHands agents；每个会话运行在独立 microVM 中，可连接、暂停、恢复，空闲时自动暂停以控制费用，当前为 public preview。该条满足 AaaS 定义，但在日期精度确认前不作为严格 24 小时事实。
+
+<figure class="source-image">
+  <a href="https://hub.openhands.dev/blog/run-digitalocean-managed-agents-with-openhands"><img src="https://hub.openhands.dev/assets/notion-blog/run-digitalocean-managed-agents-with-openhands/cover.png" alt="OpenHands 与 DigitalOcean 托管 Agent 集成官方文章封面" loading="lazy" /></a>
+  <figcaption><a href="https://hub.openhands.dev/blog/run-digitalocean-managed-agents-with-openhands">图片来源：OpenHands 官方博客</a></figcaption>
+</figure>
+
+## 未证实传闻
+
+本轮没有保留达到最低相关性的一源泄露或传闻；不以产品名搜索命中推断新产品存在。
+
+## 邻近信号观察池
+
+- 普通模型 API、Serverless Inference 与模型价格属于 MaaS；只有与托管执行环境、会话生命周期或 Agent 控制面结合时才进入 AaaS 正文。OpenHands 页面明确区分模型配置与执行后端，因此 DigitalOcean Serverless Inference 本身不是本条的 AaaS 依据。
+- 24–72 小时观察窗口内的 [Agent 安全综述](https://www.tomsguide.com/ai/ai-agents-are-going-rogue-heres-what-you-need-to-know-if-you-use-chatgpt-gemini-or-claude) 汇总了此前研究和厂商披露的越权执行案例。报道本身不是新漏洞披露，但提醒托管 Agent 服务必须把网络隔离、权限审批、审计和环境配置作为产品能力，而非附加项。涉及 OpenAI 与 Claude 的原始事件详见对应专题页。
+
+## 趋势判断
+
+1. **执行后端可替换。** OpenHands 将 Agent Canvas 与 DigitalOcean 托管运行时连接，模型提供方与运行环境可分别选择，说明 AaaS 正从单体产品走向可插拔控制面。
+2. **暂停/恢复与持久状态成为成本能力。** 远程会话能保留文件、工具与对话，同时停止空闲算力计费，是托管 Agent 商业化的重要分界线。
+3. **企业采用不是单选题。** 调查中的多选使用与模型替换返工共同表明，评测、可观测和迁移回归将成为平台竞争核心。
+4. **安全边界向运行环境上移。** 24–72 小时安全讨论再次强化最小权限、网络隔离、人工审批与审计日志的重要性。
+
+## 来源链接
+
+1. [VentureBeat：OpenAI's AI agent platform is used by twice as many companies as Anthropic's](https://venturebeat.com/orchestration/openais-ai-agent-platform-is-used-by-twice-as-many-companies-as-anthropics-new-venturebeat-survey-finds)
+2. [OpenHands：Run Cloud-Hosted AI Coding Agents with OpenHands and DigitalOcean](https://hub.openhands.dev/blog/run-digitalocean-managed-agents-with-openhands)
+3. [Tom's Guide：AI agents are going rogue](https://www.tomsguide.com/ai/ai-agents-are-going-rogue-heres-what-you-need-to-know-if-you-use-chatgpt-gemini-or-claude)
+
+## 采集状态
+
+- 已检查：海外托管 Agent、远程 coding agent、Agent runtime/control plane，以及中国主要平台；Devin 与 Grok 已完成专项检查并记录于 `scan.checkedSources`。
+- 失败来源：Cognition 缺少可按窗口排序的官方 changelog 入口；GitHub API DNS 失败；X 实时帖与部分中国厂商更新流无法取得可核验时刻；HN/YouTube 无可交叉验证新增。
+- 初始候选数：31。
+- 保留来源数：3（严格 24 小时 1 条、日期未确认 1 条、24–72 小时邻近安全信号 1 条）。
+- 二次补搜：否；最终来源不为 0。
+
+**今日扫描完成，共 3 条动态，重点：企业 Agent 编排多厂商采用、OpenHands 接入 DigitalOcean 托管运行时，以及托管执行的安全控制面。**
