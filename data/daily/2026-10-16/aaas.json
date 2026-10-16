@@ -1,0 +1,82 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": [
+    "AaaS",
+    "Agent",
+    "Cloud Agent",
+    "Managed Agent"
+  ],
+  "order": 50,
+  "updatedAt": "2026-10-16T10:54:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition / Devin 官方博客、产品页、文档、X 与 LinkedIn：托管异步执行、环境、并发、定价、企业接入和集成",
+      "xAI / Grok 官方开发者文档、release notes、X：托管 Agent、异步任务、工具调用、代码执行与远程执行",
+      "Anthropic Claude Code / managed agents 官方新闻与文档",
+      "OpenAI Codex Cloud / remote tasks / ChatGPT agents 官方新闻与文档（详见 OpenAI 专题页）",
+      "Google Vertex AI Agent Engine / Gemini / Jules 官方更新",
+      "Microsoft Copilot Studio / Azure AI Agent Service 官方更新",
+      "Replit Agent、Cursor、Lindy、CrewAI、LangGraph Platform、GitHub coding agent、Amazon Q Developer",
+      "Cloudflare Agents / Sandboxes / Workers、Factory、Sourcegraph / Amp",
+      "Cline 官方仓库与文档：托管、后台、定时、远程环境、并发与企业控制面信号",
+      "Pi Coding Agent / pi-mono 官方仓库与文档：托管、后台、定时、远程环境与并发信号",
+      "DeepSeek Harness / DSH 官方仓库、release 与文档：托管、后台、定时、远程环境与并发信号",
+      "OpenCode、Aider、Continue、Roo Code 官方仓库与文档：托管、后台、定时与远程执行信号",
+      "字节跳动 Coze / Volcano / Doubao / Trae / Seed 官方入口",
+      "阿里云百炼 / Qoder / 通义 / 夸克官方入口",
+      "腾讯元宝 / 混元 / 腾讯云、百度 AgentBuilder / Comate、智谱、Kimi、MiniMax、DeepSeek 官方入口"
+    ],
+    "failedSources": [
+      "Cognition 官方 X 原帖：X 页面返回 403；通过可访问的原帖镜像与 Cognition LinkedIn 同文交叉核验",
+      "Devin Oncall 产品页：devin.ai/oncall 对研究抓取器不可访问",
+      "xAI X 搜索：未登录入口不稳定；官方 release notes 未见窗口内新增的托管执行产品",
+      "部分中国厂商新闻中心：搜索结果未提供可核验到小时的窗口内 AaaS 更新"
+    ],
+    "candidateCount": 7,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-10-15 10:54 至 2026-10-16 10:54（Asia/Shanghai）**。本轮确认 1 条符合 AaaS 定义的窗口内发布：Cognition 推出 Devin Oncall，让托管 Agent 从远程编码扩展到持续的生产告警调查与修复。另有 Devin × Pylon 集成和 Qoder Cloud Agents 文档候选因精确发布日期不足，分别保留在“日期未确认”和“邻近信号观察池”。\n\n## 重点动态\n\n### Cognition 推出 Devin Oncall：托管 Agent 进入生产事故响应\n\nCognition 于 **2026-10-16 01:49（Asia/Shanghai；原帖 2026-10-15 17:49 UTC）**发布 [Devin Oncall](https://x.com/cognition/status/2110790097369010292)。官方称它能自动调查告警和缺陷、帮助团队诊断并解决生产事故，并已为部分大型企业处理每日数千条告警。Cognition 的 LinkedIn 同步说明其可直接连接 Datadog、Dynatrace、Sentry 等可观测系统。\n\n这属于明确的 AaaS：执行由供应商托管，生命周期从接收生产信号延伸到调查和修复，而不是仅提供模型 API。关于“数千条告警”的规模是厂商自述，本轮未找到独立审计；产品价格也未公开。\n\n## 远程 / 云端 Agent 执行\n\n| 平台 | 本轮状态 | AaaS 判定 |\n| --- | --- | --- |\n| Devin | **有新增**：Oncall 自动接入告警并开展调查、诊断与修复；托管执行和外部系统集成明确。 | AaaS |\n| OpenAI Codex Cloud / remote tasks | 无可核实窗口内新增，详见 OpenAI 专题页。 | 既有产品符合 AaaS，本轮无新增 |\n| Anthropic managed Agents / Claude Code | 未发现窗口内新的托管执行发布，详见 Claude 专题页。 | 本轮不新增条目 |\n| Google Jules / Vertex Agent Engine | 未发现窗口内可核实的新发布。 | 既有托管能力，本轮无新增 |\n| GitHub coding agent / Microsoft Copilot Studio / Azure Agent Service | 未发现窗口内可核实的新发布。 | 既有托管能力，本轮无新增 |\n| Replit Agent / Cursor background agents / Factory / Amp | 未发现窗口内可核实的新发布。 | 本轮无新增 |\n\n## 海外厂商\n\n- **Cognition / Devin：**本轮唯一确认的 24 小时正式动态是 Devin Oncall。另发现 [Devin in Pylon](https://devin.ai/blog/devin-in-pylon) 集成候选：支持团队可从 Pylon 发起 Devin 调查，工程团队接手时已有第一轮工作，最终从客户问题流转到 PR；公开索引只显示相对时间，未能可靠锁定精确发布时间，故放入“日期未确认”。\n- **xAI / Grok 强制检查：**已专门检查 Grok API、server-side tools、Remote MCP、代码执行和 Grok Build 相关入口。本轮未发现新的“由 xAI 托管完整 Agent 执行生命周期、异步任务或远程编码环境”的正式发布。普通模型、API 与工具调用仍属 MaaS / Agent building blocks，不升级为 AaaS。\n- **Cline / Pi Coding Agent / DSH / OpenCode / Aider / Continue / Roo Code 强制检查：**未发现上述项目在窗口内推出由项目方托管的云端执行、远程环境、并发控制、企业控制面或定价。DSH 的本地 background jobs / schedule / subagent 能力属于 Harness 能力，不等于供应商托管服务。\n\n## 中国市场（字节跳动重点）\n\n- **字节跳动：**已检查 Coze、火山引擎、豆包、Trae 与 Seed 的官方入口；本轮未发现可核实的窗口内托管 Agent / 异步远程执行新发布。\n- **阿里生态：**[Qoder Cloud Agents 官方概览](https://docs.qoder.com/cloud-agents/overview) 明确描述全托管沙箱、长时间异步任务、批处理并发 Session、API / SDK / MCP 接入，符合 AaaS 定义；但页面没有可核验发布日期，本轮只作日期未确认的产品能力候选，不宣称今天发布。\n- **腾讯、百度、智谱、Kimi、MiniMax、DeepSeek：**已检查元宝、混元 / 腾讯云、AgentBuilder / Comate 等入口，未发现可核实的窗口内 AaaS 正式更新。DeepSeek Harness 的本地和自托管能力留在邻近信号，不作为 DeepSeek 托管服务。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- **AaaS：**Devin Oncall 和 Qoder Cloud Agents 的公开描述都覆盖托管运行、任务生命周期、环境或外部系统集成；前者是本轮正式更新，后者日期未确认。\n- **MaaS：**Grok 模型 API、Remote MCP、server-side tools 或单纯代码执行工具让开发者构建 Agent，但若没有供应商代管完整执行生命周期，本页只视为 MaaS / Agent building block。\n- **PaaS：**Vercel / Cloudflare 等平台的容器、后台进程或 Sandbox 是运行基础设施；除非与可管理的 Agent 生命周期产品绑定，否则不单独算 AaaS。\n- **本地 Harness：**Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的本地 CLI、IDE、后台 job 或自托管功能不因“能长时间运行”自动成为 AaaS。\n\n## 日期未确认\n\n1. [Devin in Pylon](https://devin.ai/blog/devin-in-pylon)：Cognition 官方索引与社交渠道显示近期上线，支持从客户问题到调查、代码修复和 PR 的托管工作流；精确时间未能从原文核验。\n2. [Qoder Cloud Agents 概览](https://docs.qoder.com/cloud-agents/overview)：官方文档证实全托管沙箱、异步长任务、批量并发 Session 与多种接入方式，但未标页面发布日期。\n\n## 未证实传闻\n\n本轮没有保留单一来源的 AaaS 发布传闻。搜索结果中关于 Grok Build 云端化的社区推测缺少 xAI 官方托管执行证据，未作为产品发布陈述。\n\n## 邻近信号观察池\n\n- xAI 官方文档已有 Grok API 的 server-side tools、Remote MCP 和代码执行能力；这些是 Agent 构建组件。因未发现窗口内新增且缺少托管完整生命周期证据，本轮仅记录“已检查、无新增”。\n- DSH 的 background jobs、scheduled reminders 与 background subagents 属于本地 / 自托管 Harness 编排；没有供应商托管环境和商业控制面证据，不能写成 AaaS。\n- Cloudflare Sandboxes、Workers，以及通用云容器和后台任务能力属于 PaaS 邻近基础设施；本轮没有与新的托管 Agent 产品发布绑定。\n\n## 趋势\n\n1. **托管 Agent 正从“接任务写代码”延伸到“监听生产系统并持续响应”。** Devin Oncall 把可观测信号、调查与修复串为一个供应商托管流程。\n2. **集成面成为 AaaS 的产品边界。** Datadog、Dynatrace、Sentry 与 Pylon 这类入口把 Agent 放进现有告警、支持和工程协作流程，而不只是提供聊天界面。\n3. **必须继续区分“工具丰富”与“执行托管”。** Grok 的工具调用和 DSH 的后台 job 都提升 Agent 能力，但不自动意味着供应商承担环境、生命周期和企业控制面。\n\n## 来源链接\n\n- Cognition：[Introducing Devin Oncall](https://x.com/cognition/status/2110790097369010292)\n- Cognition：[Devin in Pylon](https://devin.ai/blog/devin-in-pylon)\n- Qoder：[Cloud Agents Overview](https://docs.qoder.com/cloud-agents/overview)\n\n## 采集状态\n\n- 已检查：Devin 与 Grok 的指定产品维度；Anthropic、OpenAI、Google、Microsoft、GitHub、Replit、Cursor、Lindy、CrewAI、LangGraph、Amazon、Cloudflare、Factory、Amp；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code；以及字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 的官方入口。\n- 失败来源：Cognition X 原帖返回 403，改用可访问的原帖索引和 Cognition LinkedIn 同文交叉核验；Devin Oncall 产品页无法由抓取器访问；xAI X 未登录搜索不稳定；部分中国厂商结果缺少可核验到小时的时间。\n- 初始候选数：7；保留来源数：3；二次补搜：否（最终来源不为 0）。\n\n**今日扫描完成，共 3 条动态，重点：Devin Oncall 将托管 Agent 扩展到生产告警调查与修复；Devin × Pylon 与 Qoder Cloud Agents 因发布日期不足留在候选区。**",
+  "sources": [
+    {
+      "title": "Introducing Devin Oncall",
+      "url": "https://x.com/cognition/status/2110790097369010292",
+      "source": "Cognition",
+      "publishedAt": "2026-10-16 01:49 +08:00",
+      "summary": "Cognition 推出 Devin Oncall，自动调查告警和缺陷并帮助诊断、修复生产事故。",
+      "tags": [
+        "Devin",
+        "AaaS",
+        "Managed Agent",
+        "SRE"
+      ]
+    },
+    {
+      "title": "Devin in Pylon: Driving faster Median Time To Fix",
+      "url": "https://devin.ai/blog/devin-in-pylon",
+      "source": "Cognition / Devin",
+      "publishedAt": "",
+      "summary": "支持团队可从 Pylon 发起 Devin 调查并把客户问题流转到修复 PR；精确发布日期未确认。",
+      "tags": [
+        "日期未确认",
+        "Devin",
+        "Integration",
+        "AaaS"
+      ]
+    },
+    {
+      "title": "Qoder Cloud Agents Overview",
+      "url": "https://docs.qoder.com/cloud-agents/overview",
+      "source": "Qoder",
+      "publishedAt": "",
+      "summary": "官方文档描述全托管 Agent 沙箱、异步长任务、批处理并发 Session 及 API、SDK、MCP 接入；发布日期未确认。",
+      "tags": [
+        "日期未确认",
+        "Qoder",
+        "Cloud Agent",
+        "China"
+      ]
+    }
+  ]
+}
