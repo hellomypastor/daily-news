@@ -1,0 +1,106 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-10-17T10:47:00+08:00",
+  "image": {
+    "url": "https://cdn.sanity.io/images/sp40emik/production/37175c28e561d381092b671c59496c17b6f134e2-5424x3048.png",
+    "alt": "Reflection AI Beam 发布页的官方主视觉",
+    "sourceUrl": "https://reflection.ai/blog/beam-is-available",
+    "caption": "图片来源：Reflection AI 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Research（详见 Claude 专题页；本轮未发现需跨页重复的新增）",
+      "OpenAI News / Research（详见 OpenAI 专题页；本轮未发现需跨页重复的新增）",
+      "Google DeepMind News / Google Research Blog",
+      "Meta AI Blog / Meta AI GitHub",
+      "Microsoft Research Blog / Publications / Videos",
+      "xAI/SpaceXAI News（模型、DeepSearch、Voice、Build、Automations）",
+      "xAI API docs / Models and Pricing / Release Notes",
+      "xAI official GitHub repositories and releases",
+      "Mistral News / Research",
+      "Cohere Blog / Research",
+      "Qwen/Alibaba/DAMO official blogs, model pages and GitHub",
+      "ByteDance Doubao/Seed official pages and GitHub",
+      "Baidu ERNIE official news and PaddlePaddle GitHub",
+      "Tencent Hunyuan official pages and GitHub",
+      "DeepSeek official news, API docs and GitHub",
+      "Zhipu/GLM official news, docs and GitHub",
+      "Moonshot/Kimi official news, docs and GitHub",
+      "StepFun official news and model pages",
+      "MiniMax official news, docs and GitHub",
+      "NVIDIA Developer Blog / Research / GitHub",
+      "Hugging Face Blog / Papers / model releases",
+      "LangChain Blog / Changelog / GitHub releases",
+      "LlamaIndex Blog / Changelog / GitHub releases",
+      "Cline company blog, marketplace and official GitHub（仅检查行业意义；常规更新详见开源专题页）",
+      "Pi Coding Agent / pi-mono official GitHub（仅检查行业意义；常规更新详见开源专题页）",
+      "DeepSeek Harness / DSH official repository and docs（仅检查行业意义；常规更新详见开源专题页）",
+      "Latent Space, Dwarkesh, No Priors, The Cognitive Revolution, a16z AI and official vendor podcast feeds",
+      "Reflection AI official blog / model card",
+      "Google Cloud AI Infrastructure Blog"
+    ],
+    "failedSources": [
+      "部分中国厂商官网列表页依赖客户端渲染或登录，公开搜索未返回可核实的 72 小时内原文",
+      "部分播客站点未提供稳定的按发布时间检索入口；已核对公开节目列表，未发现窗口内可确认新集",
+      "xAI API changelog/官方仓库未检出窗口内新版本；新闻页可访问但无 72 小时内新条目",
+      "Google DeepMind 10 月条目只显示月份，无法可靠归入 72 小时窗口"
+    ],
+    "candidateCount": 12,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-10-16 10:47 至 2026-10-17 10:47（Asia/Shanghai）**；近两日补充窗口为 2026-10-15 10:47 至 2026-10-16 10:47，近三日补充窗口为 2026-10-14 10:47 至 2026-10-15 10:47。主窗口内确认到 Reflection AI 正式开放 Beam 权重：这不仅是模型发布，也同时打通托管推理、开源 Agent harness、部署与微调生态。微软研究在 10 月 16 日公开了多项推理基础设施与多语言研究，但页面没有时刻，故保守放入“日期未确认”。\n\n## 优先动态\n\n| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |\n|---|---|---|---|---|---|\n| Reflection AI | [Beam is now available](https://reflection.ai/blog/beam-is-available) | 开放权重模型 / Agent 生态 | 2026-10-16；主窗口（可信二手报道给出 06:00 PT） | Beam 1.0 的 BF16、FP8、NVFP4 权重以 Apache 2.0 发布；官方称其为 501B 总参数、23B 激活的稀疏 MoE，面向编码、推理与长时 Agent 工作负载，并同步公布模型卡、安全报告、Mirror CLI 和 40 多家合作生态。为核对发布时间，参考了 [VentureBeat 的 06:00 PT 报道](https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens)。 | 从单一模型扩展到权重、harness、推理、微调和多云分发的一体化发布，显示开放模型竞争正转向可直接部署的 Agent 技术栈。 |\n\n## 常规动态\n\n本轮未确认到其他厂商在主窗口内、同时具备可靠日期与行业意义的新增原文。Anthropic 与 OpenAI 已显式检查；若需了解其各自产品动态，详见 Claude 专题页与 OpenAI 专题页。xAI/Grok 的官方新闻、模型/API 文档、DeepSearch、Voice、Build、Automations、工具调用及官方仓库也已逐项核对，未发现 72 小时内的新发布。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商官方播客公开节目列表均已检查；本轮没有找到可由节目原页确认落在 72 小时内的新集，未用聚合站或社交转述硬凑条目。\n\n## 近两日补充\n\n未发现需要新增的 24–48 小时已确认条目。Mistral 的 Timestral 页面标注 10 月 15 日但缺少时刻，已作为候选核对；因无法可靠判断是否落入近两日窗口，且与本轮核心 Agent 行业信号关联有限，未写成已确认事实。\n\n## 近三日补充\n\n未发现需要新增的 48–72 小时已确认条目。\n\n## 日期未确认\n\n以下官方页面均明确标注 **2026-10-16**，但没有公开具体时刻，无法判断是否晚于主窗口起点 10:47，因此保留为日期未确认候选。\n\n| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |\n|---|---|---|---|---|---|\n| Microsoft Research | [MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference](https://www.microsoft.com/en-us/research/publication/meshrt-compile-time-governed-wafer-scale-runtime-for-low-latency-high-throughput-inference/) | 推理系统论文 | 2026-10-16；时刻未公开 | MeshRT 把 LLM 推理中的动态事件编译为逐核调度，论文报告在晶圆级加速器上兼顾低延迟与高吞吐。 | 推理优化正从 GPU 软件栈延伸到晶圆级硬件的编译期治理。 |\n| Microsoft Research | [Wavel: A Fast and Efficient Compilation System for Wafer-Scale Accelerators](https://www.microsoft.com/en-us/research/publication/wavel-a-fast-and-efficient-compilation-system-for-wafer-scale-accelerators/) | 编译系统论文 | 2026-10-16；时刻未公开 | Wavel 以 MeshIR、CUT 与 TUNE 显式处理晶圆级布局、通信和执行顺序，官方页给出 WSE-3 上的吞吐提升结果。 | 与 MeshRT 一起构成晶圆级 AI 推理从编译到运行时的系统化路线。 |\n| Microsoft Research | [Latent Core Tokenizer: Compress, but Meaningfully](https://www.microsoft.com/en-us/research/publication/latent-core-tokenizer-compress-but-meaningfully/) | 多语言研究 | 2026-10-16；时刻未公开 | LCT 用最小描述长度、熵边界和形态约束先发现语言结构，再构建共享词表；官方页报告其在 104 种语言及四项多语言下游基准上的改进。 | 提醒行业不能只用压缩率衡量 tokenizer，多语言表示质量与词表资源分配同样关键。 |\n| Microsoft Research | [Breaking the Language Barrier — How AI Speech Translation Is Rewriting Our Digital Lives](https://www.microsoft.com/en-us/research/video/breaking-the-language-barrier-how-ai-speech-translation-is-rewriting-our-digital-lives/) | 研究视频 | 2026-10-16；时刻未公开 | 微软研究发布 Jinyu Li 关于 AI 语音翻译的公开视频；页面只提供标题、讲者和研究领域，未附可核实的详细技术摘要。 | 属于语音翻译应用趋势信号，但证据细节有限，故不提升为技术发布。 |\n\n## 观察池\n\n- Google DeepMind 新闻页出现多条 2026 年 10 月内容，但列表只标月份，无法可靠判定是否属于 72 小时窗口；保留为后续观察，不将其写成当日事实。\n- Cline、Pi Coding Agent / pi-mono 与 DeepSeek Harness / DSH 已按“仅行业意义”标准检查；没有发现窗口内融资、合作、企业采用、桌面/IDE 分发或生态级公告。常规仓库动态详见开源专题页。\n- xAI/Grok 未发现窗口内模型、API、DeepSearch、语音、编码、工具调用或 Agent 新公告；旧条目不跨日重复。\n\n**一句话总结：** 本轮最明确的行业信号，是 Reflection 将开放权重模型发布推进为覆盖 Agent harness、推理部署、微调与多云分发的完整生态动作。\n\n## 采集状态\n\n- 已检查来源：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft Research/AI、xAI/Grok 新闻与 API/文档/仓库、Mistral、Cohere、Qwen/Alibaba/DAMO、Doubao/Seed、Baidu、Tencent Hunyuan、DeepSeek、Zhipu/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Cline、Pi/pi-mono、DSH，以及六组播客入口；另核对 Reflection 与 Google Cloud。\n- 失败来源：部分中国厂商官网依赖客户端渲染或登录；部分播客缺少稳定按日期入口；Google DeepMind 只给月份；xAI API/仓库本轮没有可核实的窗口内更新。\n- 初始候选数：12；保留来源数：6（其中主窗口事件由 2 个来源交叉核实，日期未确认 4 个）。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Beam is now available",
+      "url": "https://reflection.ai/blog/beam-is-available",
+      "source": "Reflection AI",
+      "publishedAt": "2026-10-16 21:00 +08:00",
+      "summary": "Reflection 正式发布 Beam 开放权重、模型卡、安全报告、Mirror CLI 与合作生态。",
+      "tags": ["Beam", "Open Weights", "Agent", "Coding"]
+    },
+    {
+      "title": "Reflection's Beam aims to undercut Chinese open models with fewer tokens, not cheaper tokens",
+      "url": "https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens",
+      "source": "VentureBeat",
+      "publishedAt": "2026-10-16 21:00 +08:00",
+      "summary": "可信二手报道提供 06:00 PT 的发布时间，用于确认 Beam 发布落在本轮主窗口。",
+      "tags": ["Beam", "时间核验", "二手来源"]
+    },
+    {
+      "title": "MeshRT: Compile-Time Governed Wafer-Scale Runtime for Low-Latency High-Throughput Inference",
+      "url": "https://www.microsoft.com/en-us/research/publication/meshrt-compile-time-governed-wafer-scale-runtime-for-low-latency-high-throughput-inference/",
+      "source": "Microsoft Research",
+      "publishedAt": "",
+      "summary": "官方页标注 2026-10-16，但未给时刻；论文提出晶圆级 LLM 推理运行时 MeshRT。",
+      "tags": ["日期未确认", "Inference", "Systems"]
+    },
+    {
+      "title": "Wavel: A Fast and Efficient Compilation System for Wafer-Scale Accelerators",
+      "url": "https://www.microsoft.com/en-us/research/publication/wavel-a-fast-and-efficient-compilation-system-for-wafer-scale-accelerators/",
+      "source": "Microsoft Research",
+      "publishedAt": "",
+      "summary": "官方页标注 2026-10-16，但未给时刻；Wavel 聚焦晶圆级加速器的布局与调度编译。",
+      "tags": ["日期未确认", "Compiler", "AI Infrastructure"]
+    },
+    {
+      "title": "Latent Core Tokenizer: Compress, but Meaningfully",
+      "url": "https://www.microsoft.com/en-us/research/publication/latent-core-tokenizer-compress-but-meaningfully/",
+      "source": "Microsoft Research",
+      "publishedAt": "",
+      "summary": "官方页标注 2026-10-16，但未给时刻；研究提出形态驱动的多语言 tokenizer 构建方法。",
+      "tags": ["日期未确认", "Tokenizer", "Multilingual"]
+    },
+    {
+      "title": "Breaking the Language Barrier — How AI Speech Translation Is Rewriting Our Digital Lives",
+      "url": "https://www.microsoft.com/en-us/research/video/breaking-the-language-barrier-how-ai-speech-translation-is-rewriting-our-digital-lives/",
+      "source": "Microsoft Research",
+      "publishedAt": "",
+      "summary": "官方页标注 2026-10-16，但未给时刻；内容为 AI 语音翻译主题研究视频。",
+      "tags": ["日期未确认", "Speech Translation", "Video"]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-10-17T00:00:00+08:00"
+updatedAt: "2026-10-17T10:44:52+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Codex CLI 0.164.0-alpha.2"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2"
+featuredSummary: "Codex CLI 0.164.0-alpha.2 预发布；页面只列版本、提交与资产，未提供功能 changelog。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-10-17 01:37 +08:00"
+featuredTags: ["Codex","CLI","Pre-release"]
+tags:
+  - "日期未确认"
+  - "Agent"
+  - "ChatGPT"
+  - "CLI"
+  - "Codex"
+  - "GPT-6 Pro"
+  - "OpenAI"
+  - "Pre-release"
+  - "Slides"
+---
+
+## 今日概览
+
+采集窗口：2026-10-16 10:44 至 2026-10-17 10:44（Asia/Shanghai）。本轮最明确的开发者动态是 Codex CLI 连续发布两个 `0.164.0` alpha 预发布；GitHub 发布页只给出版本与构建信息，没有变更说明，故不扩写功能结论。ChatGPT 官方发布说明另新增 Slides，以及 GPT-6 Pro 的工具使用与并行多代理能力，但页面只标注 10 月 16 日、没有时分，是否落入精确 24 小时窗口无法确认，列入“日期未确认”。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 产品线 | 过去 24 小时状态 | 证据 |
+| --- | --- | --- |
+| Codex CLI | `0.164.0-alpha.1` 与 `0.164.0-alpha.2` 连续发布；均为预发布，页面未列功能变更 | [alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1) · [alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2) |
+| Codex IDE（VS Code / JetBrains） | 无新增 | 已检查官方发布与文档入口 |
+| Codex Cloud / 远程任务 / PR Agent | 无新增 | 已检查官方发布与产品入口 |
+| ChatGPT agentic mode / GPT-6 Pro | 官方发布说明新增并行多代理与更强插件、工具执行描述；精确发布时间未确认 | [ChatGPT 发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) |
+| Agents API / Responses API | 无新增 | 已检查 API changelog 与官方文档 |
+| Agents SDK（Python / TypeScript） | 无新增 | 已检查官方文档与 GitHub 发布入口 |
+| Assistants API 迁移 / 弃用 | 无新增 | 已检查官方迁移与弃用文档 |
+| Realtime API | 无新增 | 已检查 API changelog 与 Realtime 文档 |
+| 当前 GPT / reasoning / Codex 模型家族 | 除下方 GPT-6 Pro 发布说明外无新增 | 已检查模型文档与发布说明 |
+
+## Tier 2：ChatGPT 产品面
+
+| 产品面 | 状态 |
+| --- | --- |
+| Browser / Operator 类能力 | 无新增 |
+| Desktop apps | 无新增 |
+| GPTs / GPT Store | 无新增 |
+| Canvas | 无新增 |
+| Sora / 视频 | 无新增 |
+| GPT Image / DALL·E | 无新增 |
+| Voice | 无新增 |
+| Connectors / MCP | 无独立新增；GPT-6 Pro 发布说明笼统提到插件与工具能力改进 |
+| Slides / Space 协作 | 官方发布说明新增 ChatGPT Slides，可创建、编辑、协作、演示及导出；精确发布时间未确认 |
+
+## Tier 3：企业、教育、科学与安全
+
+- Enterprise / Business：Slides 正向具备 Space 访问资格的 Pro、Business、Enterprise 用户滚动开放；GPT-6 Pro 更新在受管工作区仍取决于管理员设置与灰度资格。精确发布时间未确认，详见下方。
+- Edu / Gov / Science / safety：本轮未发现可核实的新官方动态。
+
+## 官方更新（最新在前）
+
+### Codex CLI 0.164.0 alpha 预发布
+
+OpenAI 的 Codex 仓库先后发布 [0.164.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1) 与 [0.164.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2)。两页均明确标为 Pre-release，且只显示版本、提交与资产信息；在官方补充 changelog 前，不据此推断新增功能或稳定性变化。
+
+## Love
+
+本轮没有找到发布时间与原帖均可核实、且能代表具体用户体验的正向社区样本。官方公告不计作正向口碑。
+
+## Hate
+
+本轮没有找到发布时间与原帖均可核实、且能与具体版本或功能可靠关联的负向社区样本；搜索结果中的旧帖与已删除帖子未用于形成结论。
+
+## 口碑判断
+
+- 情绪：中性 / 证据不足。
+- 置信度：低。窗口内可核实材料以官方发布为主，没有足够独立社区样本，不能外推整体口碑。
+
+## 对比与生产力观察
+
+Codex 本轮只有 alpha 构建信号，缺少可验证的性能或工作流说明，因此不能据此声称追平或超过 Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 等产品。后五者的完整扫描留给开源 Harness 专题；本页仅记录它们仍是评估 CLI、IDE、权限、沙箱、上下文与多 Agent 工作流时的相关对照。
+
+## 日期未确认
+
+[ChatGPT 10 月 16 日发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)包含两项更新：一是 ChatGPT Slides，可从对话、文件或提纲创建演示文稿，在 Space 中协作，并在支持的平台导出 PowerPoint、PDF 或 Google Slides；二是 GPT-6 Pro 在 Chat 标签中提高响应速度、改进插件和工具使用，并允许多个代理并行处理任务。页面只标注日期而无精确时分，10 月 16 日与本轮窗口部分重叠，因此保留为日期未确认候选，不把它断言为完整落入 24 小时窗口。
+
+## 观察池
+
+- Codex `0.164.0` alpha 后续若出现正式版或完整 changelog，再核对其配置、并发工具、权限、沙箱及模型选择变化；当前只记录发布事实。
+- 社区搜索出现关于 Codex 限额、性能与模型成本的讨论，但可见结果多为窗口外、已删除或缺少可复核原帖，未作为事实或情绪样本。
+
+## 未证实传闻
+
+本轮未保留具备足够来源链的未证实传闻。
+
+## 来源链接
+
+1. [Codex CLI 0.164.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2)
+2. [Codex CLI 0.164.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1)
+3. [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
+
+## 采集状态
+
+- 已检查来源：OpenAI News / Research、API changelog、模型与弃用文档、ChatGPT release notes、Codex GitHub releases、Agents SDK Python/TypeScript 文档与发布入口、OpenAI status，以及 Reddit、Hacker News 和可信二手报道搜索。
+- 失败来源：X 缺少可靠公开时间线；YouTube 未找到有独立原始证据的窗口内候选；npm 包详情页渲染失败，因此未保留其搜索摘要中的版本断言。
+- 初始候选：6；保留来源：3。
+- 二次补搜：否（最终来源不为 0）。

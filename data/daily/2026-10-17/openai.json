@@ -1,0 +1,54 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-10-17T10:44:52+08:00",
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Research index",
+      "OpenAI API changelog and model/deprecation documentation",
+      "ChatGPT release notes",
+      "OpenAI Codex GitHub releases",
+      "OpenAI Agents SDK Python/TypeScript documentation and releases",
+      "OpenAI status page",
+      "Reddit r/OpenAI, r/ChatGPT, r/ChatGPTCoding, r/codex and r/singularity",
+      "Hacker News and reputable secondary coverage searches"
+    ],
+    "failedSources": [
+      "X OpenAI/Developer/Codex accounts: public search did not expose a reliable chronological feed",
+      "YouTube recent search: no candidate with a verifiable publication time and distinct primary evidence",
+      "npm package detail page: direct page returned an internal rendering error; package claims were not retained"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-10-16 10:44 至 2026-10-17 10:44（Asia/Shanghai）。本轮最明确的开发者动态是 Codex CLI 连续发布两个 `0.164.0` alpha 预发布；GitHub 发布页只给出版本与构建信息，没有变更说明，故不扩写功能结论。ChatGPT 官方发布说明另新增 Slides，以及 GPT-6 Pro 的工具使用与并行多代理能力，但页面只标注 10 月 16 日、没有时分，是否落入精确 24 小时窗口无法确认，列入“日期未确认”。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品线 | 过去 24 小时状态 | 证据 |\n| --- | --- | --- |\n| Codex CLI | `0.164.0-alpha.1` 与 `0.164.0-alpha.2` 连续发布；均为预发布，页面未列功能变更 | [alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1) · [alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2) |\n| Codex IDE（VS Code / JetBrains） | 无新增 | 已检查官方发布与文档入口 |\n| Codex Cloud / 远程任务 / PR Agent | 无新增 | 已检查官方发布与产品入口 |\n| ChatGPT agentic mode / GPT-6 Pro | 官方发布说明新增并行多代理与更强插件、工具执行描述；精确发布时间未确认 | [ChatGPT 发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) |\n| Agents API / Responses API | 无新增 | 已检查 API changelog 与官方文档 |\n| Agents SDK（Python / TypeScript） | 无新增 | 已检查官方文档与 GitHub 发布入口 |\n| Assistants API 迁移 / 弃用 | 无新增 | 已检查官方迁移与弃用文档 |\n| Realtime API | 无新增 | 已检查 API changelog 与 Realtime 文档 |\n| 当前 GPT / reasoning / Codex 模型家族 | 除下方 GPT-6 Pro 发布说明外无新增 | 已检查模型文档与发布说明 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品面 | 状态 |\n| --- | --- |\n| Browser / Operator 类能力 | 无新增 |\n| Desktop apps | 无新增 |\n| GPTs / GPT Store | 无新增 |\n| Canvas | 无新增 |\n| Sora / 视频 | 无新增 |\n| GPT Image / DALL·E | 无新增 |\n| Voice | 无新增 |\n| Connectors / MCP | 无独立新增；GPT-6 Pro 发布说明笼统提到插件与工具能力改进 |\n| Slides / Space 协作 | 官方发布说明新增 ChatGPT Slides，可创建、编辑、协作、演示及导出；精确发布时间未确认 |\n\n## Tier 3：企业、教育、科学与安全\n\n- Enterprise / Business：Slides 正向具备 Space 访问资格的 Pro、Business、Enterprise 用户滚动开放；GPT-6 Pro 更新在受管工作区仍取决于管理员设置与灰度资格。精确发布时间未确认，详见下方。\n- Edu / Gov / Science / safety：本轮未发现可核实的新官方动态。\n\n## 官方更新（最新在前）\n\n### Codex CLI 0.164.0 alpha 预发布\n\nOpenAI 的 Codex 仓库先后发布 [0.164.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1) 与 [0.164.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2)。两页均明确标为 Pre-release，且只显示版本、提交与资产信息；在官方补充 changelog 前，不据此推断新增功能或稳定性变化。\n\n## Love\n\n本轮没有找到发布时间与原帖均可核实、且能代表具体用户体验的正向社区样本。官方公告不计作正向口碑。\n\n## Hate\n\n本轮没有找到发布时间与原帖均可核实、且能与具体版本或功能可靠关联的负向社区样本；搜索结果中的旧帖与已删除帖子未用于形成结论。\n\n## 口碑判断\n\n- 情绪：中性 / 证据不足。\n- 置信度：低。窗口内可核实材料以官方发布为主，没有足够独立社区样本，不能外推整体口碑。\n\n## 对比与生产力观察\n\nCodex 本轮只有 alpha 构建信号，缺少可验证的性能或工作流说明，因此不能据此声称追平或超过 Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 等产品。后五者的完整扫描留给开源 Harness 专题；本页仅记录它们仍是评估 CLI、IDE、权限、沙箱、上下文与多 Agent 工作流时的相关对照。\n\n## 日期未确认\n\n[ChatGPT 10 月 16 日发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)包含两项更新：一是 ChatGPT Slides，可从对话、文件或提纲创建演示文稿，在 Space 中协作，并在支持的平台导出 PowerPoint、PDF 或 Google Slides；二是 GPT-6 Pro 在 Chat 标签中提高响应速度、改进插件和工具使用，并允许多个代理并行处理任务。页面只标注日期而无精确时分，10 月 16 日与本轮窗口部分重叠，因此保留为日期未确认候选，不把它断言为完整落入 24 小时窗口。\n\n## 观察池\n\n- Codex `0.164.0` alpha 后续若出现正式版或完整 changelog，再核对其配置、并发工具、权限、沙箱及模型选择变化；当前只记录发布事实。\n- 社区搜索出现关于 Codex 限额、性能与模型成本的讨论，但可见结果多为窗口外、已删除或缺少可复核原帖，未作为事实或情绪样本。\n\n## 未证实传闻\n\n本轮未保留具备足够来源链的未证实传闻。\n\n## 来源链接\n\n1. [Codex CLI 0.164.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2)\n2. [Codex CLI 0.164.0-alpha.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1)\n3. [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)\n\n## 采集状态\n\n- 已检查来源：OpenAI News / Research、API changelog、模型与弃用文档、ChatGPT release notes、Codex GitHub releases、Agents SDK Python/TypeScript 文档与发布入口、OpenAI status，以及 Reddit、Hacker News 和可信二手报道搜索。\n- 失败来源：X 缺少可靠公开时间线；YouTube 未找到有独立原始证据的窗口内候选；npm 包详情页渲染失败，因此未保留其搜索摘要中的版本断言。\n- 初始候选：6；保留来源：3。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Codex CLI 0.164.0-alpha.2",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-10-17 01:37 +08:00",
+      "summary": "Codex CLI 0.164.0-alpha.2 预发布；页面只列版本、提交与资产，未提供功能 changelog。",
+      "tags": ["Codex", "CLI", "Pre-release"]
+    },
+    {
+      "title": "Codex CLI 0.164.0-alpha.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.1",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-10-16 22:49 +08:00",
+      "summary": "Codex CLI 0.164.0-alpha.1 预发布；页面只列版本、提交与资产，未提供功能 changelog。",
+      "tags": ["Codex", "CLI", "Pre-release"]
+    },
+    {
+      "title": "ChatGPT release notes — October 16, 2026",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI Help Center",
+      "publishedAt": "",
+      "summary": "官方发布说明新增 ChatGPT Slides 与 GPT-6 Pro 的插件、工具和并行多代理更新；只有日期、没有精确发布时间。",
+      "tags": ["ChatGPT", "Slides", "GPT-6 Pro", "日期未确认"]
+    }
+  ]
+}
