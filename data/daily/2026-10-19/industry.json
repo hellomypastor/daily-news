@@ -1,0 +1,99 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-10-19T09:18:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Research（相关跨主题项详见 Claude 专题页）",
+      "OpenAI News / Research（相关跨主题项详见 OpenAI 专题页）",
+      "Google DeepMind News / Google Research Blog",
+      "Meta AI Research Blog / Meta AI GitHub",
+      "Microsoft Research Blog / Publications / Videos",
+      "xAI/SpaceXAI official News（Grok models, DeepSearch, Voice, coding, tool use, Build and Agents）",
+      "xAI API docs / Models and Pricing / Release Notes",
+      "xAI official GitHub repositories and releases",
+      "Mistral News / Research",
+      "Cohere Blog / Research",
+      "Qwen/Alibaba/DAMO official blogs, model pages and GitHub",
+      "ByteDance Doubao/Seed official pages and GitHub",
+      "Baidu ERNIE official news and PaddlePaddle GitHub",
+      "Tencent Hunyuan official pages and GitHub",
+      "DeepSeek official news, API docs, Hugging Face and GitHub",
+      "Zhipu/GLM official news, docs and GitHub",
+      "Moonshot/Kimi official news, docs and GitHub",
+      "StepFun official news and model pages",
+      "MiniMax official news, docs and GitHub",
+      "NVIDIA Developer / Research / official blog and Hugging Face",
+      "Hugging Face Blog / Papers / model releases",
+      "LangChain Blog / Changelog / GitHub releases",
+      "LlamaIndex Blog / Changelog / GitHub releases",
+      "Cline company blog and GitHub（仅检查行业意义；常规更新详见开源专题页）",
+      "Pi Coding Agent / pi-mono official GitHub（仅检查行业意义；常规更新详见开源专题页）",
+      "DeepSeek Harness / DSH official repository and docs（仅检查行业意义；常规更新详见开源专题页）",
+      "Latent Space, Dwarkesh, No Priors, The Cognitive Revolution, a16z AI and official vendor podcast feeds",
+      "TechCrunch and The AI Wire industry coverage"
+    ],
+    "failedSources": [
+      "部分中国厂商官网列表页依赖客户端渲染或登录，公开搜索未返回可核实的 72 小时内原文",
+      "部分播客站点未提供稳定的按发布时间检索入口；公开节目列表未见窗口内可确认新集",
+      "xAI 官方 X 时间线无法可靠按时间抓取；已改查官方 News、API release notes、docs 与 GitHub",
+      "TechCrunch 文章可访问但公开抓取结果未暴露原始题图 URL，因此没有把缩略图或推测 URL 写入 image"
+    ],
+    "candidateCount": 14,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-10-18 01:31 至 2026-10-19 01:31（Asia/Shanghai）**；近两日补充窗口为 2026-10-17 01:31 至 2026-10-18 01:31，近三日补充窗口为 2026-10-16 01:31 至 2026-10-17 01:31。主窗口内最具行业意义的变化，是 TechCrunch 在更新稿中确认 Replit 已把 OpenAI 设为 Replit Agent 的默认 / 首选提供方，同时仍允许用户选择 Claude；这比早先“终止合作”的表述更准确。详见 OpenAI 专题页与 Claude 专题页。另一条窗口内行业信号来自开放权重生态的集中讨论，但所涉及模型多在此前 24–72 小时发布，以下按时间与证据状态分层。\n\n## 优先动态\n\n| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |\n|---|---|---|---|---|---|\n| Replit / OpenAI / Anthropic | [Replit makes OpenAI its default over Anthropic, CEO says](https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/) | Coding Agent 商业合作 / 默认模型 | 2026-10-18 02:48 +08:00；主窗口更新稿 | Replit CEO 向 TechCrunch 澄清：平台仍可选择 Claude 等模型，但 OpenAI 现在是 Replit Agent 的默认与首选提供方；他把选择归因于性能、经济性与合作关系。报道也保留了知情人士对“合作终止”说法的反驳。详见 OpenAI 专题页与 Claude 专题页。 | Coding Agent 平台的默认模型会直接影响流量、成本和厂商收入；同时说明“默认切换”与“移除模型”必须区分。 |\n\n## 常规动态\n\n本轮没有确认到其他厂商在主窗口内发布新的官方模型、API 或研究原文。Anthropic 与 OpenAI 已显式检查；相关产品面细节分别详见 Claude 专题页与 OpenAI 专题页。Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 没有发现窗口内融资、合作、企业采用、桌面 / IDE 分发或生态级公告；常规仓库更新详见开源专题页。\n\n## xAI / Grok 专项检查\n\n逐项检查了 xAI/SpaceXAI 官方 News、API release notes、模型与价格文档、官方 GitHub，以及 Grok 模型/API、DeepSearch、Voice、编码、工具调用、Build 和 Agent/Grok Bot 能力。本轮未发现 72 小时内新增；最近可核实的官方动态仍是 10 月 14 日 Grok Voice 3.0 及相应 API / 弃用说明，已超出 72 小时，不重复包装成新新闻。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商官方播客的公开节目列表均已核对；未发现能由节目原页确认落在 72 小时内的新集。未用聚合站或社交转述硬凑条目。\n\n## 近两日补充\n\n| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |\n|---|---|---|---|---|---|\n| DeepSeek | [DeepSeek-V4.1-Flash-1017](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017) | 开放权重多模态 / Agent 模型 | 2026-10-17；精确时刻未公开 | 官方 Hugging Face 模型卡称这是 V4.1 Flash 的小版本更新，改进推理、编码、Agent 与视觉任务，同时缩短任务时间与输出；权重和仓库采用 MIT 许可。模型卡给出的 77% DeepSWE 1.1 等分数属于厂商评测。 | 同一模型同时覆盖 Responses 风格请求、工具调用、图像与长上下文，反映开放模型正在向完整 Agent 工作负载靠拢。 |\n\n## 近三日补充\n\n未发现需要新增的 48–72 小时、且日期和原文均可确认的官方条目。\n\n## 日期未确认\n\n- [DeepSeek-V4.1-Flash-1017 模型卡](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017)只从型号与活动记录确认 10 月 17 日，缺少精确发布时间；因此不把它断言为落入近两日窗口的某个具体时段，厂商基准亦不作独立结论。\n\n## 观察池\n\n| 来源 | 状态 | 摘要 |\n|---|---|---|\n| [The AI Wire 10 月 18 日行业简报](https://wire.rundatarun.io/briefs/2026-10-18) | 可信二手汇总 / 主窗口 | 汇总 DeepSeek、Meta、StepFun 与 NVIDIA 开放权重模型，并把 Agent 工具的关注点概括为验证、安全与会话日志风险；其中具体参数仍应回到各厂商模型卡核对。 |\n| [r/LocalLLaMA 开放权重集中发布讨论](https://www.reddit.com/r/LocalLLaMA/comments/1x9d23j/72_hours_four_big_open_weights_drops_the_only_one/) | 社区样本 / 主窗口 | 高互动讨论对比 Meta Muse Spark Open、NVIDIA Nemotron 3.5 Bolt、Reflection Beam 与其他近期模型的本地部署门槛；评论对许可证、“开放”定义和 24GB 显存可用性存在明显分歧，不能当作基准结论。 |\n| [Meta Muse Spark Open 官方发布](https://research.meta.ai/blog/muse-spark-open) | 较旧背景（2026-10-15） | 官方称模型为 816B 总参数、42B 激活、1M 上下文的原生多模态开放权重模型，并采用带商业限制的 Muse Model License；已超出 72 小时，只作为本轮行业讨论的背景证据。 |\n| [NVIDIA Nemotron 3.5 Super VL 官方技术博客](https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/) | 较旧背景（2026-10-15） | 官方介绍 120B 总参数、12B 激活的多模态 Agent 模型及单 GPU 吞吐主张；已超出 72 小时，不作为当日发布。 |\n\n## 未证实传闻\n\n本轮未保留具备足够来源链的新品传闻；社交平台上对尚未发布模型名称和版本号的猜测没有官方文档支持，未写成事实。\n\n**一句话总结：** 本轮最重要的行业信号不是新模型，而是 Replit 把 OpenAI 设为 Agent 默认提供方所体现的模型供应商重新定价与默认入口竞争；开放权重生态则继续围绕 Agent 能力、许可证和本地部署门槛展开。\n\n## 采集状态\n\n- 已检查来源：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft Research/AI、xAI/Grok News + API release notes + docs + GitHub、Mistral、Cohere、Qwen/Alibaba/DAMO、Doubao/Seed、Baidu、Tencent Hunyuan、DeepSeek、Zhipu/GLM、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Cline、Pi/pi-mono、DSH，以及 Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客。\n- 失败来源：部分中国厂商官网依赖客户端渲染或登录；部分播客缺少稳定按日期入口；xAI 官方 X 时间线不可可靠按时序核对；TechCrunch 抓取结果没有暴露可安全引用的原始题图 URL。\n- 初始候选数：14；保留来源数：6。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+      "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-10-18 02:48 +08:00",
+      "summary": "更新稿确认 OpenAI 成为 Replit Agent 的默认与首选提供方，但 Claude 等模型仍可选择；报道保留了对合作关系状态的不同说法。",
+      "tags": ["Replit", "OpenAI", "Anthropic", "Coding Agent", "Partnership"]
+    },
+    {
+      "title": "DeepSeek-V4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "source": "DeepSeek on Hugging Face",
+      "publishedAt": "",
+      "summary": "官方模型卡介绍 V4.1 Flash 的 1017 小版本更新、MIT 权重、Agent/编码/视觉改进与厂商基准；精确发布时间未公开。",
+      "tags": ["DeepSeek", "Open Weights", "Agent", "日期未确认"]
+    },
+    {
+      "title": "Daily AI Brief — Sunday, October 18, 2026",
+      "url": "https://wire.rundatarun.io/briefs/2026-10-18",
+      "source": "The AI Wire",
+      "publishedAt": "2026-10-18",
+      "summary": "窗口内行业简报汇总开放权重模型、Agent 验证与安全信号；具体参数仍需回到厂商原文核对。",
+      "tags": ["Industry", "Open Weights", "Agent", "二手来源"]
+    },
+    {
+      "title": "72 hours, four big open weights drops",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x9d23j/72_hours_four_big_open_weights_drops_the_only_one/",
+      "source": "Reddit r/LocalLLaMA",
+      "publishedAt": "2026-10-18",
+      "summary": "社区高互动讨论对比近期开放权重模型的本地部署、许可证与显存门槛；属于社区观察，不作独立基准结论。",
+      "tags": ["Community", "Open Weights", "观察池"]
+    },
+    {
+      "title": "Introducing Muse Spark Open, The Most Capable US Open-Weight Model to Date",
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "source": "Meta AI Research",
+      "publishedAt": "2026-10-15",
+      "summary": "Meta 发布 Muse Spark Open 权重、模型能力与带商业限制的许可证；已超出 72 小时，仅作行业讨论背景。",
+      "tags": ["Meta", "Open Weights", "较旧背景"]
+    },
+    {
+      "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+      "source": "NVIDIA Technical Blog",
+      "publishedAt": "2026-10-15",
+      "summary": "NVIDIA 介绍 Nemotron 3.5 Super VL 的多模态 Agent 能力与厂商吞吐数据；已超出 72 小时，仅作背景。",
+      "tags": ["NVIDIA", "Nemotron", "Multimodal", "较旧背景"]
+    }
+  ]
+}
