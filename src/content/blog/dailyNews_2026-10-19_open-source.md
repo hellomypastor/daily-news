@@ -1,7 +1,7 @@
 ---
 title: "今日 AI / Agent 开源项目与技术博客精选"
 date: "2026-10-19T00:00:00+08:00"
-updatedAt: "2026-10-19T09:18:00+08:00"
+updatedAt: "2026-10-19T14:14:00+08:00"
 description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
 featuredTags: []
 tags:
@@ -11,22 +11,26 @@ tags:
   - "Agent State"
   - "AI"
   - "Aider"
+  - "CLI"
+  - "Cline"
   - "Coding Agent"
+  - "Compaction"
   - "Context"
   - "LLM"
   - "Open Source"
+  - "Plugins"
   - "Research"
 ---
 
 ## 今日概览
 
-采集窗口为 **2026-10-18 01:31 至 2026-10-19 01:31（Asia/Shanghai）**。本轮逐一检查了七个 Coding Agent / Harness 的官方仓库、release、changelog 或文档入口；没有发现能同时确认发布时间落在窗口内、且属于正式发布的更新。为避免过严过滤，保留 2 组 10 月 18 日日期级 GitHub 问题信号，并将一篇稍早但直接讨论 coding-agent 上下文选择的论文放入观察池。
+采集窗口为 **2026-10-18 14:14 至 2026-10-19 14:14（Asia/Shanghai）**。本轮逐一检查了七个 Coding Agent / Harness 的官方仓库、release、changelog 或文档入口；没有发现能同时确认发布时间落在窗口内、且属于正式发布的更新。新增保留 Cline 在 10 月 19 日出现的 2 条开放 PR 信号，它们分别涉及重压缩判断与 CLI 插件运行时，但尚未合并或发布；同时延续此前 2 条 Aider 日期级问题信号，并将一篇稍早但直接讨论 coding-agent 上下文选择的论文放入观察池。
 
 ## Coding Agent / Harness 雷达
 
 | 项目 | 本轮状态 | 证据与判断 |
 |---|---|---|
-| Cline | 无可报告 release | 官方仓库显示 10 月 18 日有更新活动，但未取得窗口内正式 release 的可核实时间与说明，不据此推断功能变化。 |
+| Cline | 日期未确认候选 | 官方 Pull Requests 列表显示 10 月 19 日出现重压缩判断修复与 CLI 插件 worker/SDK 打包相关 PR；均仍为开放 PR，不能视作已上线功能。 |
 | Pi / pi-mono | 无可报告 release | 已检查官方仓库、Releases 与包入口；未发现窗口内可核实发布。 |
 | DeepSeek Harness / DSH | 无可报告 release | 官方 Releases 可核实的近期版本早于窗口；未重复收录旧版本。 |
 | OpenCode | 无可报告 release | 已检查官方仓库、Releases 与容器包版本；未发现窗口内可核实发布。 |
@@ -56,6 +60,20 @@ tags:
 
 ## 日期未确认
 
+### Cline：按 API 安全投影消息估算再次压缩的开放 PR
+
+- **是什么**：Cline 官方仓库 PR #15193 拟调整再次压缩判断，改用面向 API 安全的投影消息估算。
+- **为什么重要**：上下文压缩触发过早或反复触发会影响长任务连续性与成本；该改动直指 agent loop 的 compaction 判定，但当前仍是开放 PR。
+- **状态**：官方 PR 列表确认 opened on 2026-10-19；未取得精确时分，且尚未合并或发布。
+- **原始来源**：[cline/cline #15193](https://github.com/cline/cline/pull/15193)
+
+### Cline：从编译后的 CLI 二进制提供插件 worker 与 SDK 的开放 PR
+
+- **是什么**：Cline 官方仓库 PR #15191 提议由编译后的 CLI 二进制直接提供插件 worker 和 SDK。
+- **为什么重要**：若最终合并，这可能简化 CLI 插件运行时的分发和版本一致性；目前不能据标题推断完整实现范围。
+- **状态**：官方 PR 列表确认 opened on 2026-10-19；未取得精确时分，且尚未合并或发布。
+- **原始来源**：[cline/cline #15191](https://github.com/cline/cline/pull/15191)
+
 ### Aider：patch 编辑格式新建文件失败报告
 
 - **是什么**：Aider 官方 Issue 报告称，`patch` 编辑格式处理 `*** Add File` 时可能先留下空文件，随后把目标判断为已存在而失败。
@@ -80,15 +98,17 @@ tags:
 
 ## 来源链接
 
-1. [Aider-AI/aider #5875](https://github.com/Aider-AI/aider/issues/5875)
-2. [Aider-AI/aider #5874](https://github.com/Aider-AI/aider/issues/5874)
-3. [Skip the Compressor](https://arxiv.org/abs/2610.21073)
+1. [cline/cline #15193](https://github.com/cline/cline/pull/15193)
+2. [cline/cline #15191](https://github.com/cline/cline/pull/15191)
+3. [Aider-AI/aider #5875](https://github.com/Aider-AI/aider/issues/5875)
+4. [Aider-AI/aider #5874](https://github.com/Aider-AI/aider/issues/5874)
+5. [Skip the Compressor](https://arxiv.org/abs/2610.21073)
 
 ## 采集状态
 
 - **已检查来源**：Cline、pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库及 release/changelog/文档入口；另检查 HN front/newest、GitHub Trending overall/Python/TypeScript、arXiv、Hugging Face Papers/Blog、Simon Willison 与工程博客。
 - **失败来源**：GitHub REST API 因本地 DNS 失败不可用；部分 GitHub 动态页公开抓取 cache miss 或加载错误；Trending 与 HN Algolia 未取得稳定的窗口清单。
-- **初始候选数**：11。
-- **保留来源数**：3（2 条日期未确认问题报告，1 条较旧研究观察）。
+- **初始候选数**：15。
+- **保留来源数**：5（4 条日期未确认的 PR/问题报告，1 条较旧研究观察）。
 - **二次补搜**：否；最终来源非 0。
-- **配图**：未配置。候选均为问题页或论文摘要页，没有发现适合且能明确归属正文条目的官方公开题图。
+- **配图**：已检查上述官方页面。候选均为 PR、问题页或论文摘要页，没有发现适合且能明确归属正文条目的官方公开题图。
