@@ -1,0 +1,107 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-10-20T00:00:00+08:00"
+updatedAt: "2026-10-20T15:38:11+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTags: []
+tags:
+  - "观察池"
+  - "日期未确认"
+  - "社区"
+  - "Agent"
+  - "ChatGPT"
+  - "Codex"
+  - "Coding"
+  - "GPT-6"
+  - "GPT-6.1"
+  - "Hate"
+  - "OpenAI"
+  - "Research"
+---
+
+## 今日概览
+
+采集窗口：2026-10-19 15:38 至 2026-10-20 15:38（Asia/Shanghai）。本轮发现一篇 10 月 19 日的 OpenAI 官方编码研究：新评测覆盖低资源编程语言与 COBOL 迁移，并公布 GPT-6 Astra、GPT-6 Luna 和 GPT-6.1 Sol 的结果。由于官方页面只给日期、不提供时分，无法严格确认它是否落入本轮 24 小时窗口，故放入“日期未确认”，不把它包装成已核实的窗口内发布。Codex 社区同日出现使用量与模型表现集中讨论，但属于自选样本，也按日期未确认与观察池处理。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 产品线 | 过去 24 小时状态 | 证据 |
+| --- | --- | --- |
+| Codex CLI | 无可核实版本新增 | 已检查官方 GitHub 仓库与 releases；动态页面未稳定暴露带时分的新版本元数据 |
+| Codex IDE（VS Code / JetBrains） | 无新增 | 已检查官方产品、文档与发布入口 |
+| Codex Cloud / 远程任务 / PR Agent | 无新增 | 已检查官方产品、文档与 ChatGPT release notes |
+| ChatGPT agentic mode | 无新增 | 已检查 ChatGPT release notes |
+| 当前官方 Agent 构建产品 | 无新增 | 已检查官方开发者文档与 changelog |
+| Responses API | 无新增 | 已检查 API changelog 与官方文档 |
+| Agents SDK（Python / TypeScript） | 无可核实窗口内新增 | 已检查两个官方仓库、release 与 changelog；未把缺少可靠日期的动态页面内容计为新版本 |
+| Assistants API 弃用 / 迁移 | 无新增 | 已检查弃用与迁移文档 |
+| Realtime API | 无新增 | 已检查 API changelog、Realtime 文档与 SDK 入口 |
+| 当前 GPT / reasoning / Codex 模型家族 | 有日期未确认研究信号 | OpenAI 10 月 19 日发布低资源语言编码评测，但原文无时分，详见下文 |
+
+## Tier 2：ChatGPT 产品面
+
+| 产品面 | 状态 |
+| --- | --- |
+| Browser / Operator 类能力 | 无新增 |
+| Desktop apps | 无新增 |
+| GPTs / GPT Store | 无新增 |
+| Canvas | 无新增 |
+| Sora / 视频 | 无新增 |
+| GPT Image / DALL·E | 无新增 |
+| Voice | 无新增 |
+| Connectors / MCP | 无新增 |
+
+## Tier 3：企业、教育、科学、安全与行业方案
+
+- Enterprise / Business：低资源语言研究明确指向遗留系统维护和迁移场景，但没有宣布新的企业产品、定价或可用性变化。
+- Edu / Gov / Science / safety：本轮未发现可核实的新官方动态。
+
+## 官方更新（最新在前）
+
+OpenAI 在 [低资源编程语言研究](https://openai.com/index/low-resource-programming-languages/)中发布 MultiLangBench 与 COBOL 迁移评测。官方称 MultiLangBench 要求模型在 20 种语言中从零构建 SQLite 兼容数据库；GPT-6 Astra 平均测试通过率为 87.4%，GPT-6 Luna 为 40.3%，而 GPT-5.6 Sol 为 26.8%。另一项 COBOL 迁移评测中，GPT-6.1 Sol 在低推理强度下为 86.6%，高推理强度下为 97.9%。这些都是 OpenAI 自建评测结果，虽已开放 MultiLangBench 测试设置与结果，但仍不等同于独立生产环境验证。原文仅标注 10 月 19 日，未给出精确时间。
+
+## Love
+
+本轮没有足够独立、可核实的正向用户样本。官方评测发布不计作社区正面口碑。
+
+## Hate
+
+10 月 19 日的 [Codex 使用量与运行讨论串](https://www.reddit.com/r/codex/comments/1xa0sqf/codex_usage_and_operation_discussion_last_updated/)集中收集使用限制和模型表现问题；可见评论包括重置额度期待、额度消耗过快和访问 ChatGPT 对话异常。这是 Reddit 集中讨论中的少量自选报告，不代表整体服务质量，也没有与具体 Codex 客户端版本或官方故障公告建立因果关系。
+
+## 口碑判断
+
+- 情绪：证据不足，有限样本偏负。
+- 正向证据：无独立用户样本；官方研究结果不计入口碑。
+- 负向证据：1 个社区集中讨论串，包含额度消耗、访问与模型可用性抱怨。
+- 置信度：低。样本来自单一 subreddit、自选且缺乏官方状态或复现实验佐证。
+
+## 对比与生产力观察
+
+官方低资源语言评测提供了具名任务、测试通过率与成本比较，可作为模型代际变化的厂商证据；但在独立复现前，不据此宣布对 Claude Code、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH 的领先。Cline、Pi 与 DSH 的完整产品和 release 扫描留给开源 Harness 专题。
+
+## 日期未确认
+
+- [OpenAI 低资源编程语言编码研究](https://openai.com/index/low-resource-programming-languages/)：官方标注 2026 年 10 月 19 日，没有精确时分；内容可信，但是否落入 10 月 19 日 15:38 之后的窗口未能从原文确认。
+- [Codex 使用量与运行讨论串](https://www.reddit.com/r/codex/comments/1xa0sqf/codex_usage_and_operation_discussion_last_updated/)：搜索索引标注 10 月 19 日，帖子没有可稳定核对的精确时分，且评论会持续变化。
+
+## 观察池
+
+- Codex 讨论串的额度与访问抱怨需要结合 OpenAI Status、客户端版本及更多独立报告再判断；本轮未发现相匹配的官方事故说明。
+- OpenAI 已公开 MultiLangBench 测试设置与逐语言结果，后续可观察第三方复现、企业遗留系统迁移案例，以及这些能力是否进入 Codex 的明确产品发布说明。
+
+## 未证实传闻
+
+本轮未发现具备足够来源链、值得单列的 OpenAI 产品发布传闻。
+
+## 来源链接
+
+1. [OpenAI：Advancing coding in low-resource programming languages](https://openai.com/index/low-resource-programming-languages/)
+2. [Reddit r/codex：Codex Usage and Operation Discussion](https://www.reddit.com/r/codex/comments/1xa0sqf/codex_usage_and_operation_discussion_last_updated/)
+
+## 采集状态
+
+- 已检查来源：OpenAI News / Research、API changelog、模型与弃用文档、ChatGPT release notes、Codex GitHub、Agents SDK Python / TypeScript、OpenAI Python SDK、Realtime 文档、OpenAI Status、Developer Community，以及 Reddit、Hacker News、YouTube、X 公共搜索和可信中英文二手报道。
+- 失败来源：X 未暴露可靠公开时间线；YouTube 未找到具备独立原始证据的窗口内候选；GitHub 动态 release 页面在索引结果中没有稳定提供足够日期元数据。
+- 初始候选：6；保留来源：2。
+- 二次补搜：否（最终来源不为 0）。
+- 配图检查：已检查官方研究页的公开页面图片入口，但未获得可稳定验证、可直接公开访问的原图 URL，因此本页不配置图片；未使用搜索缩略图、社交头像或二手配图。

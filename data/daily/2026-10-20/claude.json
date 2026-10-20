@@ -1,0 +1,110 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-10-20T15:37:31+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom（新闻与研究）",
+      "Claude Help Center Release Notes（Claude apps、Cowork、Desktop、Voice、Connectors、Microsoft 365）",
+      "Claude Developer Platform docs/release notes（API、Agent SDK、Managed Agents、Skills、memory stores）",
+      "anthropics/claude-code GitHub Releases（CLI、VS Code、JetBrains、plugins、sessions）",
+      "anthropics/claude-code GitHub Issues（CLI、Desktop、IDE、Agent、权限与安全）",
+      "Claude Status（claude.ai、Platform、API、Claude Code、Cowork、Government）",
+      "Claude 产品页与官方模型页（Sonnet 5.5、Opus 5.5、Haiku 5.5）",
+      "Claude Code docs（CLI、IDE、GitHub @Claude、cloud sessions、skills/plugins）",
+      "Claude.ai 产品入口（Design、Cowork、Chrome/browser、Desktop/Preview）",
+      "Reddit r/ClaudeCode（按新帖抽样）",
+      "Reddit r/ClaudeAI（性能与故障讨论抽样）",
+      "Reddit r/Anthropic（按新帖抽样）",
+      "Hacker News 搜索（Claude、Anthropic、Claude Code）",
+      "YouTube 搜索（Anthropic、Claude Code 最近上传）",
+      "X 搜索（Anthropic、Claude、Claude Code）",
+      "Google News/可信媒体搜索（Claude、Anthropic）",
+      "垂直领域关键词：security、science、financial services、life sciences、healthcare、legal、government、nonprofits、education、customer support"
+    ],
+    "failedSources": [
+      "X：公开搜索结果不稳定且常要求登录，未取得可独立核验的时间戳与互动量",
+      "YouTube：本轮搜索未找到窗口内可核实的 Anthropic 官方新视频",
+      "Hacker News：本轮未检出窗口内可核实的 Claude 产品新发布",
+      "Claude Help Center Release Notes：搜索快照只显示月份级信息，未发现可确认在窗口内发布的条目",
+      "部分 Claude Developer Platform 文档：页面不提供精确更新时间，不能据此判定为 24 小时更新"
+    ],
+    "candidateCount": 11,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-10-19 15:37 至 2026-10-20 15:37（Asia/Shanghai）。本轮确认 1 项官方产品更新：Claude Code v2.1.304 增加一条与插件 hook 跳过有关的转录提示。Claude 状态页显示 10 月 19 日和截至本轮截止时的 10 月 20 日均无事故报告。社区讨论呈现明显的“能力强但需要人工把关”双面评价，同时出现对用量消耗、会话保留和云端 Projects 本地能力差异的反馈。\n\n## Tier 1：编码与 Agent 主轴\n\n| 产品/能力 | 本轮状态 | 证据与判断 |\n|---|---|---|\n| Claude Code CLI | **有更新** | [v2.1.304](https://github.com/anthropics/claude-code/releases/tag/v2.1.304) 在窗口内发布：当优先运行的插件跳过某个 mod hook 时，转录会新增一行并标出事件与插件，提升 hook 行为的可观察性。 |\n| VS Code 集成 | 无新增 | 已查官方 release 与 issue；本轮未见独立的 VS Code 发布。 |\n| JetBrains 集成 | 无新增 | 已查官方文档、release 与搜索入口；未见窗口内更新。 |\n| Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 已查开发者平台文档与发布入口；页面更新时间不足以证明 24 小时内变化。 |\n| Skills 与 marketplaces | 无新增 | v2.1.304 涉及插件 hook 转录，但不是新 Skill 或市场发布。 |\n| Claude Developer Platform | 无新增 | 状态正常，未发现窗口内官方功能发布。 |\n| Agent SDK | 无新增 | 已查官方文档、GitHub 与社区；没有可核实的新版本公告。 |\n| Cowork | 无新增 | 已查帮助中心与状态页；状态正常，无窗口内发布。 |\n| Design | 无新增 | 已查产品入口与 Claude Code release；未见窗口内功能公告。 |\n| Tag / @Claude sessions | 无新增 | 已查 Claude Code 文档与 release；未见独立更新。 |\n| Sonnet 5.5 | 无新增 | 当前官方 Sonnet 编码模型；本轮未见新模型或模型卡更新。 |\n| Opus 5.5 | 无新增 | 当前官方 Opus 编码模型；本轮未见新模型或模型卡更新。 |\n| Haiku 5.5 | 无新增 | 当前官方 Haiku 模型；本轮未见新模型或模型卡更新。 |\n\n## Tier 2：客户端、创作与集成\n\n| 产品组 | 本轮状态 |\n|---|---|\n| Chrome / browser agent | 无新增；已查产品页、帮助中心和社区新帖。 |\n| Desktop / Preview | 无新增；GitHub issue 中有零散 bug 报告，但不等同官方发布。 |\n| Marketplace / Connectors / Plugins | Claude Code v2.1.304 仅增加插件跳过 hook 时的转录说明，详见官方更新；未见新 marketplace 或 connector。 |\n| 当前官方创作 / 视频模型 | 未发现 Anthropic 官方在窗口内发布独立视频模型；相关名称不得据搜索词推定为产品。 |\n| Voice Mode | 无新增；已查帮助中心和产品入口。 |\n| Microsoft 365 集成 | 无新增；已查帮助中心与官方搜索入口。 |\n\n## Tier 3：行业场景\n\n安全、科学、金融服务、生命科学、医疗、法律、政府、非营利、教育和客户支持均完成官方新闻、研究与产品关键词检查。本轮没有核实到窗口内的新公告。[Claude Status](https://anthropic.statuspage.io/) 同时显示 Claude for Government 等所列组件正常，10 月 19 日及截至采集截止时的 10 月 20 日无事故。\n\n## 官方更新（最新在前）\n\n### Claude Code v2.1.304：补强插件 hook 可观察性\n\n官方 [GitHub Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304) 显示该版本于 10 月 19 日 21:34 发布（GitHub 页面时间未明确展示时区；对应日期处于本轮窗口）。更新仅包含一项：当首先运行的插件跳过 mod 的某个 hook 时，转录新增提示行，列出事件和插件名称。这是诊断透明度改进，不应解读为新的插件运行机制。\n\n## Love\n\n- 一则当天高互动讨论以具体案例描述 Claude Code 能完成车载软件逆向分析、表单构建与小游戏原型，同时也会提出明显低效的对象设计；该帖在抓取时显示约 172 票。它支持的结论是“能力上限高，但人工架构判断仍关键”，而非稳定基准或普遍性能结论：[The duality of Claude](https://www.reddit.com/r/ClaudeCode/comments/1xae2nw/the_duality_of_claude/)。\n- 当天关于订阅价值的讨论中，有评论将 Pro 称作 20 美元档的高性价比选择；这是低样本社区观点，不能视作定价横评：[Is it worth paying for Claude Pro?](https://www.reddit.com/r/ClaudeCode/comments/1xajsgi/is_it_worth_paying_for_claude_pro/)。\n\n## Hate\n\n- 当天有用户称近期在更少工作量下更快触及用量限制，抓取时帖子约 13 票；评论也有相同感受，但没有账单或官方遥测可验证，因此只记录为负面信号：[fast consuming rates](https://www.reddit.com/r/ClaudeCode/comments/1xadv35/something_most_be_done_with_this_fast_consuming/)。\n- 性能讨论汇总帖中，10 月 19 日新增回复涉及上下文增大后的质量下降、异常用量、账户删除与图像理解问题；该帖由社区志愿者维护，样本自选择且多数回复互动低：[Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1x8yiff/performance_and_bugs_discussion_hub_updated_on_18/)。\n\n## 口碑判断\n\n**情绪：分化；置信度：中低。** 正面证据来自一条高互动的具体开发案例和少量订阅价值评论；负面证据集中在用量消耗、长上下文质量和账户体验。它们都是社区自报，缺少统一任务、版本、计划与遥测控制。官方状态页未报告同期服务事故，因此不能把这些体验直接归因于全局故障。\n\n## 比较与编码 Agent 雷达\n\n窗口内未找到具名、可复现的新评测，不能宣称 Claude Code 追平或超过 Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH。当天“双面性”讨论更值得保留的产品判断是：复杂代码与工具任务仍能展现很高能力，但人在数据结构、成本和边界条件上的审核仍不可替代。Cline、Pi 与 DSH 的完整产品扫描归开源 harness 专题。\n\n## 日期未确认\n\n- Claude Developer Platform、Managed Agents、Agent SDK、memory stores 以及部分帮助中心页面没有可用于本轮的精确更新时间；页面内容虽公开可访问，但不能当作 24 小时新增。\n- GitHub release 页面显示 v2.1.304 为“19 Oct 21:34”，未在页面文本中明确时区；本页保留原始显示，并只确认其处于按常见 GitHub 时间呈现计算的本轮窗口。\n\n## 观察池\n\n- 当天用户报告 Claude Code 本地会话默认 30 天清理，并分享 `cleanupPeriodDays` 配置；这是社区提示，尚未在本轮找到与当前版本完全对应的官方文档核验，暂不写成已确认默认行为：[session history PSA](https://www.reddit.com/r/ClaudeCode/comments/1xaejai/psa_claude_code_deletes_your_local_session/)。\n- 一位用户称获得新的云端 Projects beta，并反馈云端环境无法使用部分本地 Skills；单一账户的灰度体验无法证明全面发布或计费规则：[New cloud project beta?](https://www.reddit.com/r/ClaudeCode/comments/1xafc1p/new_cloud_project_beta/)。\n\n## 未证实传闻\n\n本轮未保留具备足够可追溯证据的未证实发布传闻。搜索中出现的未获 Anthropic 官方确认的模型名、IPO时间点和功能猜测不作为产品事实。\n\n## 来源链接\n\n- [Claude Code v2.1.304](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)\n- [Claude Status](https://anthropic.statuspage.io/)\n- [The duality of Claude](https://www.reddit.com/r/ClaudeCode/comments/1xae2nw/the_duality_of_claude/)\n- [Is it worth paying for Claude Pro?](https://www.reddit.com/r/ClaudeCode/comments/1xajsgi/is_it_worth_paying_for_claude_pro/)\n- [fast consuming rates](https://www.reddit.com/r/ClaudeCode/comments/1xadv35/something_most_be_done_with_this_fast_consuming/)\n- [Performance and Bugs Discussion Hub](https://www.reddit.com/r/ClaudeAI/comments/1x8yiff/performance_and_bugs_discussion_hub_updated_on_18/)\n- [session history PSA](https://www.reddit.com/r/ClaudeCode/comments/1xaejai/psa_claude_code_deletes_your_local_session/)\n- [New cloud project beta?](https://www.reddit.com/r/ClaudeCode/comments/1xafc1p/new_cloud_project_beta/)\n\n## 采集状态\n\n- 已检查来源：Anthropic Newsroom、Claude Help Center、Claude Developer Platform 文档与发布说明、Claude Code GitHub releases/issues、Claude Status、官方模型与产品页、Reddit r/ClaudeCode / r/ClaudeAI / r/Anthropic、Hacker News、X、YouTube、Google News 与九类垂直行业关键词。\n- 失败来源：X 公开搜索受登录与时间戳限制；YouTube 和 Hacker News 未找到窗口内官方新增；帮助中心与部分开发者文档缺少精确更新时间，无法判定为 24 小时变化。\n- 初始候选 11 条；去重和证据分层后保留 8 个来源（官方 2、社区 6）。\n- 二次补搜：否。最终来源不为 0，且已完成官方、GitHub、社区和可信媒体的多入口覆盖。\n- 图片检查：逐一检查本页引用的官方 release、状态页及社区帖子；未找到同时满足公开直链、明确归属、非头像/非搜索缩略图且适合作为新闻配图的素材，因此本页不配置 `image`，避免使用较旧背景或观察池来源作图。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.304",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-10-19 21:34（GitHub 页面显示，时区未注明）",
+      "summary": "Claude Code 增加转录提示，用于说明优先插件跳过 mod hook 的事件与插件名称。",
+      "tags": ["Claude Code", "Plugin", "Hooks"]
+    },
+    {
+      "title": "Claude Status",
+      "url": "https://anthropic.statuspage.io/",
+      "source": "Anthropic",
+      "publishedAt": "",
+      "summary": "状态页显示 2026-10-19 与截至采集时的 2026-10-20 无事故报告。",
+      "tags": ["状态", "可靠性"]
+    },
+    {
+      "title": "The duality of Claude",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xae2nw/the_duality_of_claude/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-10-20（页面仅显示日期）",
+      "summary": "高互动用户案例同时展示 Claude Code 的复杂任务能力与需要人工纠正的低效设计判断。",
+      "tags": ["社区口碑", "Love", "人工审核"]
+    },
+    {
+      "title": "Is it worth paying for Claude Pro?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xajsgi/is_it_worth_paying_for_claude_pro/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-10-20（页面仅显示日期）",
+      "summary": "低样本社区讨论中出现对 Claude Pro 订阅价值的正面评价。",
+      "tags": ["社区口碑", "Love", "订阅"]
+    },
+    {
+      "title": "something most be done with this fast consuming rates",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xadv35/something_most_be_done_with_this_fast_consuming/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-10-20（页面仅显示日期）",
+      "summary": "用户自报近期用量消耗更快；缺少官方遥测，只作为负面情绪信号。",
+      "tags": ["社区口碑", "Hate", "用量"]
+    },
+    {
+      "title": "Performance and Bugs Discussion Hub updated on 18 October 2026",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1x8yiff/performance_and_bugs_discussion_hub_updated_on_18/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-10-18；窗口内含 2026-10-19 新回复",
+      "summary": "社区汇总帖的窗口内回复涉及上下文质量、异常用量、账户与图像理解体验，属于自选择样本。",
+      "tags": ["社区口碑", "Hate", "观察池"]
+    },
+    {
+      "title": "PSA: Claude Code deletes your local session history after 30 days by default",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xaejai/psa_claude_code_deletes_your_local_session/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-10-20（页面仅显示日期）",
+      "summary": "用户提示本地会话清理周期与配置项；尚缺本轮官方文档核验，列入观察池。",
+      "tags": ["观察池", "Session", "Memory"]
+    },
+    {
+      "title": "New cloud project beta?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xafc1p/new_cloud_project_beta/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-10-20（页面仅显示日期）",
+      "summary": "单一用户报告云端 Projects beta 及本地 Skills 不可用，尚不能证明全面发布。",
+      "tags": ["观察池", "Cloud", "Projects"]
+    }
+  ]
+}

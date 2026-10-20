@@ -1,0 +1,53 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-10-20T15:40:29+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition Devin 官方产品新闻、Docs、更新日志、定价与企业入口：显式检查托管异步执行、环境、并发、定价、企业访问和集成；无窗口内新增",
+      "xAI / Grok 官方 News 与 Docs：显式检查 Grok Bot、Automations、托管电脑、异步任务、工具调用、远程代码执行和企业/API Agent 能力；无窗口内新增",
+      "Anthropic News、Claude Agent SDK / Skills / Claude Code 托管能力与官方入口：无窗口内 AaaS 正式发布（相关产品信息详见 Claude 专题页）",
+      "OpenAI News、ChatGPT Agent、Codex cloud/remote 与官方开发者入口：无窗口内 AaaS 正式发布（相关产品信息详见 OpenAI 专题页）",
+      "Google Cloud / Vertex AI Agent Builder / Gemini Enterprise / Jules、Microsoft Copilot Studio / Azure AI Foundry Agent、GitHub Copilot coding agent 官方入口",
+      "AWS What's New、Bedrock AgentCore release notes / pricing、AWS DevOps Agent 更新日志与 AWS Japan 周报",
+      "Cursor Cloud Agents、Replit Agent、Lindy、CrewAI、LangGraph Platform、Cloudflare Agents / Sandboxes / Workers、Factory、Sourcegraph/Amp 官方入口",
+      "ByteDance Coze / 火山引擎 AgentKit / 方舟 / 豆包 / Trae / Seed，以及阿里云百炼 / Qoder / 通义 / 夸克、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 官方入口",
+      "Cline 官方仓库、PR、CLI 文档与博客：发现一个未合并的云会话编排 PR，仅作观察池信号",
+      "Pi Coding Agent / pi-mono 官方仓库：未发现厂商托管执行生命周期、远程环境、后台任务、并发、企业控制或定价新增",
+      "DeepSeek Harness / DSH 官方仓库和文档：确认仍是本地开源 harness；未发现 DeepSeek 官方托管服务新增",
+      "OpenCode、Aider、Continue、Roo Code 官方仓库、release 与文档：未发现新的厂商托管/远程执行证据；本地服务、CLI 与 CI 工作流未计入 AaaS",
+      "第二轮：扩大中英文托管智能体、远程 Agent、异步任务、background agent、cloud coding agent、managed runtime、sandbox、enterprise agent 关键词，并切换 GitHub、官方文档、更新日志与可信二手入口"
+    ],
+    "failedSources": [
+      "Cognition Devin：公开新闻与文档入口未提供可按发布时间完整枚举的统一 changelog，搜索索引未返回 10 月 19–20 日新增",
+      "Aider GitHub Releases：动态页面局部加载错误；通过公开 release 索引交叉检查，未见窗口内托管执行信号",
+      "部分中国厂商产品页：缺少可核实的精确发布时间，未将页面抓取时间当作发布时间",
+      "Cline PR #15205 正文抓取信息有限；仅依据官方 PR 标题与未合并状态作观察，不推断已发布功能",
+      "未找到适合作为本页配图的窗口内正式发布；未使用观察池或较旧背景来源配图"
+    ],
+    "candidateCount": 7,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n主采集窗口为 **2026-10-19 15:40 至 2026-10-20 15:40（Asia/Shanghai）**，24–72 小时观察窗下探至 2026-10-17 15:40。本轮没有找到同时具备原始来源、明确发布时间且能确认落入主窗口的 AaaS 正式发布。由于已验证 24 小时动态为 0，已完成第二轮扩展检索；最终保留 2 条证据受限信号，分别放入“日期未确认”和“观察池”，不写成已发布事实。\n\n## 重点动态\n\n本轮无已验证的 24 小时重点动态。\n\n## 远程 / 云端 Agent 执行\n\n已检查托管 sandbox、远程环境、异步/后台任务、并发、执行生命周期、定价、可观测性和企业控制面。AWS 官方周报在 10 月 19 日回顾了前一周两项 AaaS 相关变化：AgentCore Memory 短期记忆改为按写入、读取和存储数据量计费，以及 Resilience Hub 接入 AWS DevOps Agent 进行测试调查与故障分析。两项事件本身分别发生在 10 月 12 日和 15 日，不属于今日 24 小时正式发布，只作为较旧的官方汇总信号保留：[AWS 官方周报](https://aws.amazon.com/jp/blogs/news/aws-weekly-20261012/)。\n\n## 海外厂商\n\n### Devin 与 Grok 强制检查\n\n- **Cognition Devin**：已显式检查官方产品新闻、Docs、更新日志、定价和企业入口，覆盖托管异步执行、环境、并发、定价、企业访问与集成；本轮未发现可核实新增，不重复旧背景。\n- **xAI / Grok**：已显式检查官方 News 与 Docs 中的 Grok Bot、Automations、托管电脑、异步任务、工具调用、编码/远程执行和企业/API Agent 能力；本轮没有新的 AaaS 公告。普通 Grok 模型/API 新闻属于 MaaS 或行业动态，不写入本页。\n\n### 其他海外平台\n\n已检查 Anthropic、OpenAI、Google、Microsoft、GitHub、AWS、Cursor、Replit、Cloudflare、Lindy、CrewAI、LangGraph Platform、Factory 与 Sourcegraph/Amp。没有发现可确认落入主窗口的 AaaS 正式发布。Anthropic 与 OpenAI 的相关信息若有交叉引用，应分别详见 Claude 专题页与 OpenAI 专题页。\n\n## 中国市场（ByteDance / 火山引擎重点）\n\n已重点检查字节系 Coze、火山引擎 AgentKit/方舟、豆包、Trae 与 Seed，并检查阿里云百炼/Qoder/通义/夸克、腾讯元宝/混元/云、百度千帆 AgentBuilder/Comate、智谱、Kimi、MiniMax 与 DeepSeek。窗口内未找到具备原始发布日期、且明确涉及托管执行、远程环境、后台任务、并发、企业控制面或定价的新公告。\n\n## Coding Agent / Harness 托管边界检查\n\n- **Cline**：官方仓库出现未合并 PR“move desktop cloud session orchestration into the hub”。标题显示它涉及 desktop cloud session orchestration，但 PR 尚未合并，正文抓取信息有限，不能视为产品发布；保留在观察池：[Cline PR #15205](https://github.com/cline/cline/pull/15205)。\n- **Pi Coding Agent / pi-mono**：未发现由供应商托管执行生命周期、远程环境、后台任务、并发、企业控制或定价的新增证据。\n- **DeepSeek Harness / DSH**：官方仓库仍将其描述为可本地运行的开源 agent harness；未找到 DeepSeek 官方托管服务新增。\n- **OpenCode、Aider、Continue、Roo Code**：检查了官方仓库、release 和文档；本地后台服务、CLI/headless 模式、CI 工作流或自托管能力不等于供应商托管 Agent，本轮没有符合 AaaS 定义的新证据。\n\n## AaaS vs MaaS / PaaS\n\n- **AaaS**：供应商托管或管理 Agent 的执行、状态、环境、生命周期、编排、可观测性或企业控制面。\n- **MaaS**：仅有模型、API、推理价格或上下文窗口变化，不构成 AaaS。\n- **PaaS**：通用容器、Serverless、sandbox 或云计算资源也不自动构成 AaaS；需要明确的 Agent 专用运行与治理层。\n\n## 日期未确认\n\n### AWS 官方周报汇总前一周 AgentCore 与 DevOps Agent 更新\n\n- **证据状态：官方来源，事件较旧；周报仅标注发布日期，未提供时分**。AWS Japan 于 10 月 19 日发布周报，但页面没有可用于判断是否落入 15:40 边界的精确时间。\n- 周报所述 AgentCore Memory 计费变化和 Resilience Hub × DevOps Agent 集成分别发生于 10 月 12 日与 15 日，因此不是今日新发布；它们仍说明托管 Agent 的成本模型和运维调查工作流在持续产品化。\n- 来源：[週刊AWS – 2026/10/12週](https://aws.amazon.com/jp/blogs/news/aws-weekly-20261012/)。\n\n## 未证实传闻\n\n本轮没有保留单一来源泄露或传闻。\n\n## 邻近信号观察池\n\n### Cline 云会话编排 PR 尚未合并\n\n- **证据状态：官方代码仓库、开发中、未合并**。PR #15205 于 10 月 19 日打开，标题指向把桌面端 cloud session orchestration 移入 hub。\n- 这可能是 Cline 托管/远程会话控制面的开发信号，但在合并状态、产品可用性、托管责任、定价与企业控制均未确认前，只能作为观察项，不能写成 Cline 已发布云 Agent 服务。\n- 来源：[Cline PR #15205](https://github.com/cline/cline/pull/15205)。\n\n## 趋势判断\n\n1. **托管 Agent 的竞争继续下沉到生命周期与成本治理**：AWS 周报同时覆盖记忆计费和运维调查编排，显示平台差异化已不止模型本身。\n2. **开源 harness 正在出现云会话控制面开发信号**：Cline PR 值得后续跟踪，但未合并代码不能提前视作正式能力。\n3. **边界判断仍需克制**：本地后台进程、headless CLI、自托管部署和模型 API 都不自动等于 AaaS。\n\n## 来源链接\n\n- [AWS 官方周报：2026 年 10 月 12 日周](https://aws.amazon.com/jp/blogs/news/aws-weekly-20261012/)\n- [Cline PR #15205：move desktop cloud session orchestration into the hub](https://github.com/cline/cline/pull/15205)\n\n## 采集状态\n\n- **已检查来源**：Devin、xAI/Grok、Anthropic、OpenAI、Google、Microsoft、GitHub、AWS、Cursor、Replit、Cloudflare、Lindy、CrewAI、LangGraph Platform、Factory、Sourcegraph/Amp；中国主要厂商；Cline、pi-mono、DeepSeek Harness/DSH、OpenCode、Aider、Continue、Roo Code。\n- **失败来源**：Devin 缺少可按日期完整枚举的统一 changelog；Aider Releases 动态页局部加载错误；部分中国厂商页面缺少精确发布时间；Cline PR 正文抓取有限。\n- **初始候选数**：7。\n- **保留来源数**：2（1 条日期/边界未确认官方汇总，1 条未合并开发观察）。\n- **二次补搜**：是；因已验证 24 小时正式动态为 0，已扩大中英文关键词并切换官方更新日志、GitHub、产品文档与可信二手入口。\n- **配图**：未配置。保留项均不是窗口内正式发布，按规范不用于页面或首页图片。\n\n今日扫描完成，共 2 条动态，重点：24 小时内无已验证 AaaS 正式发布；AWS 官方周报提供较旧平台信号，Cline 云会话编排 PR 仍待合并。",
+  "sources": [
+    {
+      "title": "週刊AWS – 2026/10/12週",
+      "url": "https://aws.amazon.com/jp/blogs/news/aws-weekly-20261012/",
+      "source": "Amazon Web Services Japan",
+      "publishedAt": "2026-10-19",
+      "summary": "AWS 官方周报汇总 AgentCore Memory 短期记忆按数据量计费，以及 Resilience Hub 接入 AWS DevOps Agent；事件发生于 10 月 12–15 日，按较旧且边界时间未确认信号保留。",
+      "tags": ["日期未确认", "较旧背景", "AWS", "AgentCore", "DevOps Agent"]
+    },
+    {
+      "title": "refactor(core): move desktop cloud session orchestration into the hub",
+      "url": "https://github.com/cline/cline/pull/15205",
+      "source": "Cline GitHub",
+      "publishedAt": "2026-10-19",
+      "summary": "Cline 官方仓库未合并 PR 指向云会话编排重构；因未合并且产品可用性未确认，仅作为开发中观察信号。",
+      "tags": ["观察池", "未合并", "Cline", "Cloud Agent"]
+    }
+  ]
+}
