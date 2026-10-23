@@ -1,0 +1,134 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-10-23T00:00:00+08:00"
+updatedAt: "2026-10-23T10:43:00+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Build more responsive apps with the Decisions API"
+featuredUrl: "https://openai.com/index/decisions-api/"
+featuredSummary: "OpenAI 宣布 Decisions API 正式可用，披露三类有界答案、GPT-Live 集成、缓存、批量上限与区域处理能力；官方未给出精确时分。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-10-22"
+featuredTags: ["API","GPT-6 Luna","Realtime"]
+featuredImage: "https://openai.com/_next/static/immutable/media/neutral.0e2e43zp24lhc.webp"
+featuredImageAlt: "OpenAI Decisions API 实时语音演示中的中性表情示例"
+featuredImageCaption: "图片来源：OpenAI Decisions API 官方发布页"
+tags:
+  - "预发布"
+  - "Agent"
+  - "API"
+  - "ChatGPT"
+  - "ChatGPT Work"
+  - "Codex"
+  - "Codex CLI"
+  - "Enterprise"
+  - "GPT-6 Luna"
+  - "MCP"
+  - "OpenAI"
+  - "Realtime"
+---
+
+## 今日概览
+
+采集窗口为 **2026-10-22 10:43 至 2026-10-23 10:43（Asia/Shanghai）**。本轮最重要的产品变化是 Decisions API 正式 GA；Codex CLI 同时出现 4 个窗口内预发布构建。OpenAI 还发布了两篇企业采用内容，分别披露 FDE 团队如何把 Codex、skills、plugins 与 MCP 用于可重复部署，以及 Uber 面向全员部署 ChatGPT Work。OpenAI 三篇文章只标注 10 月 22 日而未披露时分，因此日期已确认，但无法严格判定其在窗口起点前后。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 产品线 | 本轮状态 | 证据 |
+| --- | --- | --- |
+| Codex CLI | **有更新**：窗口内发布 4 个预发布构建；GitHub release 页面未给出变更说明，不能据版本号推断功能 | [0.164.0-alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11)、[0.163.0-alpha.11.2](https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11.2)、[0.164.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.12)、[0.164.0-alpha.11.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11.1) |
+| Codex VS Code / JetBrains | 无新增：未发现窗口内独立官方公告或可核实 release note | 官方新闻、发布说明与 Codex 仓库已检查 |
+| Codex cloud / remote tasks / PR agents | 无新增；企业实践文章提供了 Codex 作为统一 harness 的采用信号 | [OpenAI FDE 实践](https://openai.com/index/forward-deployed-engineering-means/) |
+| ChatGPT agentic mode / 当前官方 Agent 产品 | 无新增产品公告；FDE 文中提及 Codex、Agents API 与 OpenAI Presence 的部署路径 | [OpenAI FDE 实践](https://openai.com/index/forward-deployed-engineering-means/) |
+| Responses API | 无独立新增；Decisions API 被官方用于与 Responses API 比较延迟与适用任务边界 | [Decisions API](https://openai.com/index/decisions-api/) |
+| Agents SDK Python / TypeScript | 无新增：两仓库最新正式 release 均早于窗口 | 官方 GitHub releases 已检查 |
+| Assistants API 弃用 / 迁移 | 无新增：未发现窗口内官方状态变化 | API changelog 与弃用文档已检查 |
+| Realtime API | **邻近更新**：Decisions API 已原生集成 GPT-Live，可由实时转录事件触发有界决策 | [Decisions API](https://openai.com/index/decisions-api/) |
+| 当前 GPT / reasoning / Codex 模型家族 | 无独立模型发布；Decisions API 官方称由 GPT-6 Luna 驱动 | [Decisions API](https://openai.com/index/decisions-api/) |
+
+<figure class="source-image">
+  <a href="https://openai.com/index/decisions-api/"><img src="https://openai.com/_next/static/immutable/media/neutral.0e2e43zp24lhc.webp" alt="OpenAI Decisions API 实时语音演示中的中性表情示例" loading="lazy" /></a>
+  <figcaption><a href="https://openai.com/index/decisions-api/">图片来源：OpenAI Decisions API 官方发布页</a></figcaption>
+</figure>
+
+### Codex CLI 预发布构建
+
+- [0.164.0-alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11) 发布于 2026-10-22 12:22 +08:00。
+- [0.163.0-alpha.11.2](https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11.2) 发布于 2026-10-22 14:41 +08:00。
+- [0.164.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.12) 发布于 2026-10-22 19:11 +08:00。
+- [0.164.0-alpha.11.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11.1) 发布于 2026-10-23 09:58 +08:00。
+
+这些页面均由 OpenAI 官方 GitHub 仓库发布，但正文只有版本与构建资产，没有 changelog。它们是活跃开发信号，不应被解读为稳定版功能上线。
+
+## Tier 2：ChatGPT 体验面
+
+| 产品线 | 本轮状态 |
+| --- | --- |
+| 浏览器 / Operator 能力 | 无新增 |
+| 桌面应用 | 无新增 |
+| GPTs / GPT Store | 无新增 |
+| Canvas | 无新增 |
+| Sora / 视频 | 无新增 |
+| GPT Image / DALL·E | 无新增 |
+| Voice | 无独立发布；Decisions API 与 GPT-Live 的原生集成属于开发者平台邻近信号 |
+| Connectors / MCP | 无独立发布；FDE 文章披露通过 connectors / MCP servers 扩展企业用例 |
+
+ChatGPT release notes 的最新条目早于本轮窗口，因此没有把旧条目重复包装为今日更新。
+
+## Tier 3：企业、教育、安全与行业方案
+
+### OpenAI FDE 披露 Codex 企业部署方法
+
+[OpenAI 的 FDE 文章](https://openai.com/index/forward-deployed-engineering-means/)称，团队把多个定制应用迁移到以 Codex 为核心的共同 harness，并将能力整理为 plugins 与 skills，通过 connectors / MCP servers、评测和集中控制扩大复用。文章还披露半导体、农业、税务与客服案例指标；这些是 OpenAI 自述的客户实践，并非独立第三方评测。官方页面日期为 2026-10-22，但未给出精确发布时间。
+
+### Uber 面向全员部署 ChatGPT Work
+
+[OpenAI 与 Uber 的官方客户故事](https://openai.com/index/uber-chatgpt-work-rollout/)称 Uber 正把 ChatGPT Work 提供给全体员工，属于企业采用与组织级分发信号。该页面同样只标注 2026-10-22，未提供时分；具体采用效果应按官方客户故事口径理解。
+
+## 官方更新（新到旧）
+
+1. **Codex CLI 0.164.0-alpha.11.1**：窗口内最新预发布构建，发布页没有功能说明。
+2. **Codex CLI 0.164.0-alpha.12 / 0.163.0-alpha.11.2 / 0.164.0-alpha.11**：均为窗口内预发布构建，不能从版本号推断功能变化。
+3. **Decisions API 正式 GA**：[官方公告](https://openai.com/index/decisions-api/)称，该 API 由 GPT-6 Luna 驱动，面向 predicate、choice、score 三类有界答案；支持文本、图像和原生 JSON，一次最多 400 个问题，并加入 GPT-Live 原生集成、提示缓存以及美欧推理驻留。官方给出的“最高 10 倍更快”是相对经 Responses API 调用 GPT-6 Luna 的厂商口径，具体效果仍取决于任务与评测。页面日期为 2026-10-22，精确时分未披露。
+
+## Love
+
+本轮没有采集到足够数量、时间可核实且包含实际使用细节的独立正面讨论。官方公告和客户引语不作为社区正向口碑计数。
+
+## Hate
+
+本轮也没有采集到足够稳健的窗口内负面样本。搜索结果中的少量低互动转载和窗口外配额抱怨不宜外推为整体情绪。
+
+## 情绪判断
+
+**中性，低置信度。** 证据主要是官方发布与 GitHub 构建，缺少可复核的窗口内用户体验样本；因此只能确认产品供给侧活跃，不能据此判断用户满意度。
+
+## 对比与产品边界
+
+- Decisions API 把有界分类、路由与评分从通用生成请求中拆出；官方强调低延迟和低成本，但仍需用业务数据与 Responses API 或其他决策模型做同口径评测。
+- Codex 的企业案例强调共同 harness、skills、plugins、MCP 与评测复用。Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 等编码 Agent 的完整更新由开源与行业专题负责，本页未发现窗口内可支持“追平”或“超过”的具名独立评测。
+
+## 日期未确认
+
+- Decisions API、FDE 实践和 Uber 客户故事的**发布日期均确认是 2026-10-22**，但官方页面没有时分；由于窗口起点是当日 10:43，无法确认它们严格位于窗口内的哪一侧。保留为重要候选并明确限制。
+
+## 观察池
+
+- Codex CLI 的 4 个预发布构建确认在窗口内，但 release 页面没有 changelog。后续若出现稳定版或官方变更说明，再评估功能影响。
+- Decisions API GA 后的独立生产实测、失败案例和与其他轻量决策模型的可复现比较仍不足，继续观察。
+
+## 来源链接
+
+- [Build more responsive apps with the Decisions API — OpenAI](https://openai.com/index/decisions-api/)
+- [What FDE means at OpenAI — OpenAI](https://openai.com/index/forward-deployed-engineering-means/)
+- [Uber brings ChatGPT Work to all employees with OpenAI — OpenAI](https://openai.com/index/uber-chatgpt-work-rollout/)
+- [Codex CLI 0.164.0-alpha.11](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11)
+- [Codex CLI 0.163.0-alpha.11.2](https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11.2)
+- [Codex CLI 0.164.0-alpha.12](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.12)
+- [Codex CLI 0.164.0-alpha.11.1](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11.1)
+
+## 采集状态
+
+- **已检查来源**：OpenAI News（产品、工程、公司）、API changelog / 模型 / 弃用文档、ChatGPT release notes、Codex 与 Agents SDK Python/TypeScript GitHub releases、Reddit 相关社区、Hacker News、OpenAI 官方 X 与 YouTube 搜索入口。
+- **失败来源**：OpenAI 官方 X 未登录搜索不能稳定返回完整时间线；YouTube 未发现窗口内可核实的新官方视频；Reddit 命中多为低互动转载或窗口外讨论。
+- **初始候选数**：10。
+- **最终保留来源数**：7。
+- **二次补搜**：否（最终来源不为 0）。

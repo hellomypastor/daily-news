@@ -1,0 +1,96 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-10-23T10:43:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom（All/Product/Research/Announcements）与官方模型页",
+      "Claude Developer Platform docs/release notes、Managed Agents（sessions/webhooks/environments/memory stores）与 Agent SDK 文档",
+      "anthropics/claude-code GitHub Releases（Claude Code CLI、VS Code、JetBrains、cloud sessions、Skills/plugins、Claude Tag、Code Review）",
+      "anthropics/claude-agent-sdk-python 与 anthropics/claude-agent-sdk-typescript GitHub Releases",
+      "Claude Help Center release notes（Claude apps、Cowork、Design、Desktop/Preview、Voice Mode、Connectors、Microsoft 365）",
+      "Claude Status（Claude.ai、Developer Platform/API、Claude Code、Cowork、Connectors）",
+      "Tier 1：Claude Code CLI、VS Code/JetBrains、Managed Agents、Skills/marketplace、Developer Platform、Agent SDK、Cowork、Design、Tag/@Claude sessions、Sonnet/Opus/Haiku",
+      "Tier 2：Chrome/browser agent、Desktop/Preview、Marketplace/Connectors/Plugins、creative/video models、Voice Mode、Microsoft 365",
+      "Tier 3：Security、Science、financial services、life sciences、healthcare、legal、government、nonprofits、education、customer support",
+      "Reddit r/ClaudeCode、r/ClaudeAI、r/Anthropic、r/LocalLLaMA；Hacker News；X；YouTube；可信媒体与开发者/播客搜索",
+      "对比检索：Codex、Cursor、Cline、Pi Coding Agent、DeepSeek Harness/DSH"
+    ],
+    "failedSources": [
+      "X：公开搜索要求登录或结果不稳定，无法可靠核验原帖时间与互动量",
+      "YouTube：窗口内未找到可确认发布时间且与必查项直接相关的 Anthropic 官方新视频",
+      "Hacker News：窗口内未检出可核验的 Claude 产品新发布或高信号讨论",
+      "Claude Help Center 与部分 Developer Platform 文档：页面未提供精确更新时间，不能据此判定为窗口内更新",
+      "Reddit r/Anthropic 与 r/LocalLLaMA：窗口内未检出可保留的独立新增信息"
+    ],
+    "candidateCount": 14,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-10-22 10:43 至 2026-10-23 10:43（Asia/Shanghai）**。本轮明确增量集中在 Claude Code：窗口内连续发布 v2.1.308 与 v2.1.309，后者以沙箱、权限、MCP 配置和隔离会话修复为主；Python/TypeScript Agent SDK 也同步跟进版本。Claude Connectors 在窗口前段发生并解决一次错误升高。社区讨论的主轴则是 Max 套餐额度透明度和一次性免费重置的截止时间表达，但两者均只有用户侧证据，不能当作官方政策结论。\n\n## Tier 1：编码、Agent 与核心模型\n\n| 必查项 | 本轮状态 | 证据与判断 |\n|---|---|---|\n| Claude Code CLI | **有更新** | [v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309) 集中修复沙箱启动文件、符号链接下的写入规则、MCP 配置保护、权限检查与 worktree 隔离问题；[v2.1.308](https://github.com/anthropics/claude-code/releases/tag/v2.1.308) 为可靠性修复。 |\n| VS Code 集成 | **有更新** | v2.1.309 增加启动 hooks 状态提示并改善超时错误信息，详见同一 [v2.1.309 发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)。 |\n| JetBrains 集成 | 无新增 | 已检查官方 release notes 与文档，窗口内未见单独更新。 |\n| Managed Agents：sessions / webhooks / environments / memory stores | **有更新** | v2.1.309 修复 Cloud environments 保存误拒绝并改善自托管环境删除提示；未见 webhooks 或 memory stores 的独立更新。 |\n| Skills 与 marketplace | 无新增 | 已检查官方文档、release notes 与插件/技能相关条目，窗口内未见独立发布。 |\n| Claude Developer Platform | 无新增 | 文档页面缺少可用于窗口判断的精确更新时间；未发现窗口内正式公告。 |\n| Agent SDK | **有更新** | Python [v0.2.173](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.173) 与 TypeScript [v0.3.309](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.309) 在窗口内发布；公开 release 页面只提供版本标记，未附足够独立变更说明，不扩写未证实功能。 |\n| Cowork | 无新增 | 已检查帮助中心、产品入口与 Claude Code 发布说明，未见窗口内独立发布。 |\n| Design | 无新增 | 已检查产品入口与 release notes，未见窗口内独立发布。 |\n| Tag / @Claude sessions | **有更新** | v2.1.309 改善 Slack 公共频道添加、仓库迁移后的 access bundle、thread routine 投递及大型组织管理页加载行为，详见 [发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)。 |\n| 当前官方 Sonnet 编码模型 | 无新增 | 已检查 Anthropic Newsroom、模型页与 API release notes，窗口内无新模型公告。 |\n| 当前官方 Opus 编码模型 | 无新增 | 已检查 Anthropic Newsroom、模型页与 API release notes，窗口内无新模型公告。 |\n| 当前官方 Haiku 编码模型 | 无新增 | 已检查 Anthropic Newsroom、模型页与 API release notes，窗口内无新模型公告。 |\n\n## Tier 2：应用、浏览器与协作入口\n\n| 必查项 | 本轮状态 |\n|---|---|\n| Chrome / browser agent | 无新增；已检查官方产品、帮助中心与发布说明。 |\n| Desktop / Preview | 无新增；v2.1.309 仅出现 Desktop 挂载插件权限行为调整，未见独立产品发布。 |\n| Marketplace / Connectors / Plugins | **运行事件**；[Claude Status](https://stspg.io/4dcr8c005yxc) 记录 Connectors 错误升高，2026-10-22 11:50（上海时间）开始、16:07 解决。 |\n| 官方 creative / video models | 未确认；官方入口未发现窗口内发布，也不据搜索词推断产品存在。 |\n| Voice Mode | 无新增；已检查帮助中心和应用 release notes。 |\n| Microsoft 365 integration | 无新增；已检查官方帮助中心、Connectors 相关入口。 |\n\n## Tier 3：垂直领域雷达\n\nSecurity、Science、金融服务、生命科学、医疗、法律、政府、非营利、教育与客户支持均完成官方关键词扫描。窗口内未发现可核实的新正式发布。Claude Code v2.1.309 的沙箱、MCP 配置与权限边界修复具有安全相关性，已在 Tier 1 记录，不重复制造独立事件。\n\n## 官方更新（由新到旧）\n\n1. **Claude Code v2.1.309（2026-10-23 06:18，上海时间）**：修复一组沙箱与权限边界问题，并覆盖 VS Code、Cloud environments、Claude Tag 与 Code Review 的可靠性改进。原文：[GitHub Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)。\n2. **Agent SDK 同步版本（2026-10-23 06:18–07:15）**：TypeScript [v0.3.309](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.309) 和 Python [v0.2.173](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.173) 发布；版本页没有足够独立说明，故只确认版本事实。\n3. **Claude Code v2.1.308（2026-10-22 12:34）**：官方仅概括为 bug fixes and reliability improvements。原文：[GitHub Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)。\n4. **Connectors 错误升高（2026-10-22 11:50–16:07）**：官方状态页标记事件已解决。原文：[Claude Status](https://stspg.io/4dcr8c005yxc)。\n\n## Love\n\n- 未找到足以构成稳定正向趋势、且可同时核验时间和互动量的社区样本。GitHub release 的少量 reaction 只能反映发布页互动，不等价于产品口碑，因此不纳入 Love 结论。\n\n## Hate\n\n- r/ClaudeAI 用户报告一次性免费 usage-limit reset 在仅显示日期的情况下于 16:00 UTC 消失，并质疑截止时刻不透明；帖子与评论能证明用户困惑，但不能证明官方承诺了“当地日终”。原帖：[Did anyone else's reset just disappear?](https://www.reddit.com/r/ClaudeAI/comments/1xcmyvl/did_anyone_elses_reset_just_disappear/)。\n- r/ClaudeCode 有高互动帖子指控 Max 5x 与 20x 的月度额度相同、购买流程不透明；同帖评论又有人称 20x 实际额度更高，互相冲突。该说法没有 Anthropic 官方说明或可复现实验支持，只能作为争议观察，不能写成产品事实。原帖：[We should be furious about this](https://www.reddit.com/r/ClaudeCode/comments/1xcnrxk/we_should_be_furious_about_this_lets_see_if_we/)。\n\n## 情绪判断\n\n**偏负面，低至中等置信度。** 依据是两组窗口内社区讨论都围绕额度与表达透明度；其中套餐帖互动较高，但核心额度主张存在评论内反证，免费重置帖也只是用户侧体验。官方发布本身不计正向情绪，且本轮没有可核实的正向社区样本，因此不能把“偏负面”外推为全体用户趋势。\n\n## 对比与 Agent 生产力信号\n\n本轮官方变化重心是 Claude Code 的执行边界和企业运行可靠性，而非模型能力跃迁。与 Codex、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH 的搜索对比中，未发现窗口内具名评测或可复现实验足以支持“追平/超过”结论；这些产品的完整扫描留给开源 harness 专题。\n\n## 日期未确认\n\n- [Did anyone else's reset just disappear?](https://www.reddit.com/r/ClaudeAI/comments/1xcmyvl/did_anyone_elses_reset_just_disappear/) 页面显示相对时间，搜索索引给出 2026-10-22，但无法从公开页面稳定取得精确绝对时间；保留为窗口附近用户体验信号。\n- [We should be furious about this](https://www.reddit.com/r/ClaudeCode/comments/1xcnrxk/we_should_be_furious_about_this_lets_see_if_we/) 同样缺少稳定可核验的绝对发布时间；核心主张存在相互矛盾的用户回复，证据状态为“日期未确认 + 未独立验证”。\n\n## 观察池\n\n- 免费 reset 截止时刻与界面文案是否会得到官方澄清。\n- Max 5x / 20x 的五小时、周度或月度额度定义是否出现官方可引用说明；在此之前不采信社区单边数字。\n- v2.1.309 的安全修复是否会有后续 advisory；当前 release notes 未给出漏洞编号或受影响范围，不自行推断严重度。\n\n## 来源链接\n\n- [Claude Code v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)\n- [Claude Code v2.1.308](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)\n- [Claude Agent SDK Python v0.2.173](https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.173)\n- [Claude Agent SDK TypeScript v0.3.309](https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.309)\n- [Claude Status：Elevated errors affecting Connectors](https://stspg.io/4dcr8c005yxc)\n- [Reddit：免费 reset 消失讨论](https://www.reddit.com/r/ClaudeAI/comments/1xcmyvl/did_anyone_elses_reset_just_disappear/)\n- [Reddit：Max 套餐额度透明度争议](https://www.reddit.com/r/ClaudeCode/comments/1xcnrxk/we_should_be_furious_about_this_lets_see_if_we/)\n\n## 采集状态\n\n- 已检查来源：Anthropic Newsroom/Research、官方模型与产品页、Developer Platform 与 Agent SDK 文档、Claude Help Center、Claude Status、Claude Code 与两套 Agent SDK GitHub Releases，以及 Reddit、Hacker News、X、YouTube、可信媒体和开发者/播客搜索。\n- 失败来源：X 受登录与结果稳定性限制；YouTube、Hacker News、r/Anthropic、r/LocalLLaMA 未得到可保留的窗口内新增；帮助中心与部分文档缺少精确更新时间。\n- 初始候选数：14；保留来源数：7。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.309",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-10-23 06:18 +08:00",
+      "summary": "Claude Code 修复沙箱、权限、MCP 配置、worktree 隔离，并改进 VS Code、Cloud environments、Claude Tag 与 Code Review。",
+      "tags": ["Claude Code", "Security", "Agent", "VS Code"]
+    },
+    {
+      "title": "Claude Agent SDK for Python v0.2.173",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.173",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-10-23 07:15 +08:00",
+      "summary": "Python Agent SDK 发布 v0.2.173；公开版本页未附足够独立变更说明。",
+      "tags": ["Agent SDK", "Python"]
+    },
+    {
+      "title": "Claude Agent SDK for TypeScript v0.3.309",
+      "url": "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.309",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-10-23 06:18 +08:00",
+      "summary": "TypeScript Agent SDK 发布 v0.3.309；公开版本页未附足够独立变更说明。",
+      "tags": ["Agent SDK", "TypeScript"]
+    },
+    {
+      "title": "Claude Code v2.1.308",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-10-22 12:34 +08:00",
+      "summary": "Claude Code 发布 bug fixes and reliability improvements。",
+      "tags": ["Claude Code", "Reliability"]
+    },
+    {
+      "title": "Elevated errors affecting Connectors",
+      "url": "https://stspg.io/4dcr8c005yxc",
+      "source": "Claude Status",
+      "publishedAt": "2026-10-22 11:50 +08:00",
+      "summary": "Claude Connectors 错误升高事件在约四小时后解决。",
+      "tags": ["Connectors", "Incident"]
+    },
+    {
+      "title": "Did anyone else's reset just disappear?",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xcmyvl/did_anyone_elses_reset_just_disappear/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "",
+      "summary": "日期未确认：用户报告免费 usage-limit reset 在只显示日期的情况下消失，反映截止时刻表达困惑。",
+      "tags": ["日期未确认", "Hate", "Usage Limits"]
+    },
+    {
+      "title": "We should be furious about this. Let's see if we can move the giant.",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xcnrxk/we_should_be_furious_about_this_lets_see_if_we/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "",
+      "summary": "日期未确认、未独立验证：围绕 Max 5x/20x 额度与购买流程透明度的高互动争议，评论中存在反证。",
+      "tags": ["日期未确认", "观察池", "Hate", "Pricing"]
+    }
+  ]
+}

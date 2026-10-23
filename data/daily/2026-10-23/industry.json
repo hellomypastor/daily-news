@@ -1,0 +1,88 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-10-23T10:55:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News/Research/Engineering",
+      "OpenAI News/Research/Developer changelog",
+      "Google AI/DeepMind/Research blogs",
+      "Meta AI blog",
+      "Microsoft Research/AI blog",
+      "xAI/Grok official news, docs, API/model changelog and repositories (mandatory; no new item in window)",
+      "Mistral News",
+      "Cohere Blog",
+      "Qwen/Alibaba/DAMO official channels",
+      "ByteDance Seed/Doubao official channels",
+      "Baidu Research",
+      "Tencent Hunyuan",
+      "DeepSeek official channels",
+      "Zhipu/GLM, Moonshot/Kimi, StepFun and MiniMax official channels",
+      "NVIDIA Developer/Research",
+      "Hugging Face Blog/Papers",
+      "LangChain and LlamaIndex blogs",
+      "Cline, pi-mono and DeepSeek Harness/DSH company/ecosystem channels",
+      "Latent Space, Dwarkesh, No Priors, Cognitive Revolution and a16z AI feeds"
+    ],
+    "failedSources": [
+      "部分中国厂商页面依赖客户端渲染或登录，改用官方索引与搜索快照交叉检查",
+      "部分播客订阅源未提供可核实到小时的发布时间，未纳入 24 小时正文"
+    ],
+    "candidateCount": 11,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n截至 2026-10-23 10:43（Asia/Shanghai），本轮确认 5 条 24 小时内动态，并保留 1 条近两日补充。主线是 OpenAI 将轻量决策 API、企业 Agent 落地方法和大规模知识工作部署同时推进；Microsoft 与 Hugging Face 展示了用可执行数据库状态为 Agent 后训练提供奖励的路径。\n\n## 优先动态（过去 24 小时）\n\n| 厂商 | 动态 | 类型 | 日期 | 摘要与意义 |\n|---|---|---|---|---|\n| OpenAI | [Decisions API 正式可用](https://openai.com/index/decisions-api/) | API / Agent 基础设施 | 2026-10-22 | 面向分类、路由和下一步动作等有界决策，支持文本、图像与结构化输入，并原生接入 GPT-Live。它把 Agent 工作流中的低延迟决策从通用生成调用中拆出；详见 OpenAI 专题页。 |\n| OpenAI | [FDE 如何把客户难题沉淀为可复用产品](https://openai.com/index/forward-deployed-engineering-means/) | 工程 / 企业采用 | 2026-10-22 | 官方案例说明 Codex、skills、plugins、MCP 与评测如何替代一次性胶水代码，体现 Agent 从试点走向可维护生产系统；详见 OpenAI 专题页。 |\n| OpenAI / Uber | [Uber 向全员推广 ChatGPT Work](https://openai.com/index/uber-chatgpt-work-rollout/) | 企业采用 | 2026-10-22 | 覆盖超过 3 万名员工，并连接 Drive、Gmail、Calendar 与 Slack；这是知识工作 Agent 大规模企业部署信号，详见 OpenAI 专题页。 |\n| Microsoft / Hugging Face | [ThinkingBox：把数据库验收变成 RL 奖励](https://huggingface.co/blog/microsoft/thinkingbox-training) | Agent 训练 / 评测 | 2026-10-22 | 用任务结束后的真实数据库状态执行检查并形成奖励；文章公开了训练与评测方法，也报告了可靠性与覆盖率之间的权衡。 |\n| Ai2 / Hugging Face | [OlmoEarth v1.3 全球卫星嵌入](https://huggingface.co/blog/allenai/olmoearth-v1-3) | 开放模型 / 科学 | 2026-10-22 | 发布模型、数据、代码和全球预计算嵌入，并在 27 项评测中报告结果；显示专用基础模型正通过可复用嵌入降低下游应用门槛。 |\n\n## 例行扫描\n\n- Anthropic、Google DeepMind/Research、Meta AI、Cohere、Qwen/Alibaba/DAMO、ByteDance Seed、百度、腾讯混元、DeepSeek、智谱、Moonshot/Kimi、阶跃星辰、MiniMax、NVIDIA、LangChain 与 LlamaIndex：官方入口已检查，本窗口未确认需要进入优先区的新发布。\n- xAI/Grok：已显式检查官方新闻、API/模型文档、DeepSearch、语音、编码、工具调用与 Agent 入口；过去 24 小时未发现可核实的新动态，不以旧条目填充。\n- Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH：公司、合作、融资、企业采用和生态入口已检查；例行代码/版本更新留给开源专题，本页未发现额外行业级事件。\n\n## 近两日补充\n\n| 厂商 | 动态 | 状态 | 摘要与意义 |\n|---|---|---|---|\n| Mistral / NVIDIA | [面向工程领域的 AI 合作](https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/) | 官方，2026-10-21 | 双方宣布开发由 NVIDIA 加速计算支持的 AI 原生工程工作流；发布时间落在 24–48 小时区间，因此单列补充。 |\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商官方播客均已检查；未发现能在截止时刻前确认发布日期且具有新增技术信息的节目。\n\n## 日期未确认\n\n本轮未保留日期无法确认但足以成条的候选。\n\n## 观察池\n\n- 多个社区讨论继续预测 10 月底会出现新一轮前沿模型，但目前缺少厂商原文；不将预测写成发布事实。\n- 部分厂商页面只显示相对时间或客户端内容，本轮仅记录检查失败原因，不据此推断产品更新。\n\n## 来源链接\n\n1. [OpenAI：Decisions API](https://openai.com/index/decisions-api/)\n2. [OpenAI：Forward Deployed Engineering](https://openai.com/index/forward-deployed-engineering-means/)\n3. [OpenAI：Uber 推广 ChatGPT Work](https://openai.com/index/uber-chatgpt-work-rollout/)\n4. [Microsoft / Hugging Face：ThinkingBox Training](https://huggingface.co/blog/microsoft/thinkingbox-training)\n5. [Ai2 / Hugging Face：OlmoEarth v1.3](https://huggingface.co/blog/allenai/olmoearth-v1-3)\n6. [Mistral：与 NVIDIA 推进工程 AI](https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/)\n\n## 采集状态\n\n- 窗口：2026-10-22 10:43 至 2026-10-23 10:43（Asia/Shanghai）；近两日补充向前延伸至 48 小时。\n- 已检查来源：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok、Mistral、Cohere、中外主要模型厂商、NVIDIA、Hugging Face、LangChain/LlamaIndex、Coding Agent 厂商与指定播客入口。\n- 失败来源：部分动态渲染/登录页面及缺少绝对时间的播客订阅源，原因已写入 scan.failedSources。\n- 初始候选 11 条，保留 6 条；最终来源非 0，未触发二次补搜。\n\n今日结论：Agent 产业的新增信号集中在低延迟决策组件、可复用企业交付方法、全员级知识工作部署，以及可执行环境驱动的训练与评测。",
+  "sources": [
+    {
+      "title": "Build more responsive apps with the Decisions API",
+      "url": "https://openai.com/index/decisions-api/",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-22",
+      "summary": "OpenAI 宣布 Decisions API 正式可用，聚焦 Agent 和应用中的低延迟有界决策。",
+      "tags": ["OpenAI", "API", "Agent"]
+    },
+    {
+      "title": "What FDE means at OpenAI",
+      "url": "https://openai.com/index/forward-deployed-engineering-means/",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-22",
+      "summary": "OpenAI 介绍 FDE 团队将客户问题、评测与 Codex primitives 沉淀为生产系统的方法。",
+      "tags": ["OpenAI", "Codex", "Enterprise"]
+    },
+    {
+      "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+      "url": "https://openai.com/index/uber-chatgpt-work-rollout/",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-22",
+      "summary": "Uber 向超过 3 万名员工部署 ChatGPT Work，并接入常用企业工具。",
+      "tags": ["OpenAI", "Enterprise", "Agent"]
+    },
+    {
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Microsoft / Hugging Face",
+      "publishedAt": "2026-10-22",
+      "summary": "ThinkingBox 使用数据库终态执行检查作为 Agent 后训练奖励，并公开训练与评测结果。",
+      "tags": ["Agent", "RL", "Evaluation"]
+    },
+    {
+      "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+      "source": "Ai2 / Hugging Face",
+      "publishedAt": "2026-10-22",
+      "summary": "Ai2 发布开放的全球卫星嵌入模型、预计算数据、代码与浏览器探索工具。",
+      "tags": ["Open Source", "Research", "Earth AI"]
+    },
+    {
+      "title": "Mistral Advances AI for Engineering with NVIDIA",
+      "url": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/",
+      "source": "Mistral",
+      "publishedAt": "2026-10-21",
+      "summary": "Mistral 与 NVIDIA 宣布面向工程工作流的 AI 合作，作为 24–48 小时补充。",
+      "tags": ["Mistral", "NVIDIA", "Engineering"]
+    }
+  ]
+}
