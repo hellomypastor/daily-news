@@ -1,0 +1,100 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-10-24T00:00:00+08:00"
+updatedAt: "2026-10-24T10:41:35+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTitle: "Codex CLI 0.164.0"
+featuredUrl: "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+featuredSummary: "Codex CLI 为受支持的远程命令与 Zsh 快照增加凭据遮蔽，并加强企业 MCP 连接的账户授权和 OAuth 客户端支持；详见 OpenAI 专题页。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-10-23 12:48 +08:00"
+featuredTags: ["Remote Execution","Enterprise MCP","Credential Security"]
+featuredImage: "https://opengraph.githubassets.com/ba656cc0bd038b25cbe4a796df2128ddddc2d520420582c4622037575b17a466/openai/codex/releases/tag/rust-v0.164.0"
+featuredImageAlt: "OpenAI Codex GitHub 仓库 0.164.0 release 页面预览图"
+featuredImageCaption: "图片来源：OpenAI Codex 官方 GitHub release 页面"
+tags:
+  - "AaaS"
+  - "Agent"
+  - "Cloud Agent"
+  - "Credential Security"
+  - "Enterprise MCP"
+  - "Managed Agent"
+  - "Remote Execution"
+---
+
+## 今日概览
+
+采集主窗口为 **2026-10-23 10:41 至 2026-10-24 10:41（Asia/Shanghai）**，并回看 24–72 小时候选。本轮确认 1 条与 AaaS 直接相关的窗口内更新：Codex CLI 0.164.0 为供应商管理的远程命令执行增加凭据遮蔽，并加强企业 MCP 连接鉴权。它不是新的托管 Agent 平台发布，但补强了 Codex 远程/企业执行链路的安全控制。其余候选要么是普通 MaaS/PaaS，要么是本地或自托管 harness 更新，均未被误写为 AaaS。
+
+## 重点动态
+
+- **Codex 远程执行安全与企业 MCP 鉴权增强：** 0.164.0 支持在受支持的远程 Bash 命令和 Zsh 快照会话中遮蔽凭据，并支持符合条件的 Codex 账户授权或专用登录完成企业 MCP 连接鉴权。**详见 OpenAI 专题页。**
+- **Devin 强制检查：** 官方产品新闻、changelog、文档、定价、企业与集成入口未发现主窗口内新增。
+- **Grok 强制检查：** 未发现新的托管 Agent、异步任务、云端电脑或远程执行发布；普通 Grok 模型/API 动态不满足本页定义。
+
+## 远程 / 云端 Agent 执行
+
+### Codex CLI 0.164.0：远程凭据保护与企业 MCP 连接
+
+OpenAI 的 [Codex CLI 0.164.0 release](https://github.com/openai/codex/releases/tag/rust-v0.164.0) 发布于 2026-10-23 12:48 +08:00。官方说明该版本可在受支持的远程 Bash 命令和 Zsh 快照会话中遮蔽凭据，包括自定义 provider 提供的凭据；企业 MCP 连接可复用符合条件的 Codex 账户授权或使用专用登录，并支持需要 client secret 的 OAuth 客户端。
+
+<figure class="source-image">
+  <a href="https://github.com/openai/codex/releases/tag/rust-v0.164.0"><img src="https://opengraph.githubassets.com/ba656cc0bd038b25cbe4a796df2128ddddc2d520420582c4622037575b17a466/openai/codex/releases/tag/rust-v0.164.0" alt="OpenAI Codex GitHub 仓库 0.164.0 release 页面预览图" loading="lazy" /></a>
+  <figcaption><a href="https://github.com/openai/codex/releases/tag/rust-v0.164.0">图片来源：OpenAI Codex 官方 GitHub release 页面</a></figcaption>
+</figure>
+
+这条更新符合 AaaS 关联边界，是因为它直接作用于供应商管理的远程执行和企业连接授权链路；但 release 没有宣布新的后台任务、并发额度或定价，不能扩大解读为新的云 Agent 产品。**详见 OpenAI 专题页。**
+
+Cognition Devin 已显式检查托管异步执行、隔离环境、并发、定价、企业接入和集成，本窗口无新增。xAI/Grok 已显式检查持久 Agent、异步任务、工具、编码、云端电脑和远程执行，本窗口无满足 AaaS 定义的新增。
+
+Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH、OpenCode、Aider、Continue、Roo Code 均逐项检查官方仓库、release 和文档；未发现供应商在本窗口新增托管执行生命周期、后台/定时任务、远程环境、并发、企业控制面或云端定价。它们的本地 CLI、IDE、桌面端、多 Agent 或自托管更新归开源专题，不进入本页。
+
+## 海外厂商
+
+除 Codex 远程执行安全更新外，本轮未发现 Google Vertex/Gemini Agent、Microsoft Copilot Studio/Foundry/GitHub coding agent、AWS Bedrock AgentCore、Cloudflare Agents/Sandboxes、Replit Agent、Cursor、Lindy、CrewAI、LangGraph Platform、Factory 或 Sourcegraph/Amp 在主窗口内发布可核验的托管执行、生命周期、并发、定价或企业控制更新。
+
+搜索命中的 AWS 10 月 22 日多 Agent 生产实践、普通模型与语音更新不在主窗口，且部分只属于应用案例或 MaaS；未为凑数重复昨日背景来源。
+
+## 中国：字节系与云端托管能力
+
+本轮突出检查火山引擎 AgentKit、方舟托管智能体与 Coze，并覆盖阿里云百炼/Qoder、腾讯云、百度智能云、智谱、Kimi、MiniMax、DeepSeek 等公开官方入口。未发现主窗口内可核验的新 AaaS 发布。站内文档更新时间、普通模型 API、IDE 或本地 Agent 更新不等于供应商托管执行服务。
+
+## AaaS 与 MaaS / PaaS 边界
+
+- **AaaS：** 服务方托管或管理 Agent 的远程执行、异步任务、环境、生命周期、编排、观测、权限、审计或企业接入。本轮 Codex 条目保留的是远程命令凭据保护和企业 MCP 授权部分。
+- **MaaS：** 仅提供模型推理、普通工具调用或批处理 API。普通 Grok 模型/API 更新仍属行业或 MaaS，即使可被开发者用于构建 Agent。
+- **PaaS：** 通用 VM、容器、沙箱、函数、CI 或设备云只有在明确嵌入 Agent 专属执行和管理闭环时才进入本页。
+- **Harness：** Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的本地执行、插件、MCP 或多 Agent 能力本身不构成 AaaS。
+
+## 日期未确认
+
+本轮没有保留日期无法确认但证据质量足够的新候选。搜索摘要、页面抓取时间和文档更新时间均未被当作发布时间。
+
+## 未证实传闻
+
+本轮未发现达到最低证据要求的 AaaS 传闻；没有把匿名社交帖、无原文转载或单一搜索摘要写成产品发布。
+
+## 邻近信号观察池
+
+- Codex 0.164.0 同时包含本地 TUI、预设提示、图片预览和沙箱修复；本页只保留其中与远程执行及企业连接控制直接相关的部分。
+- Grok 的模型、推理 API、DeepSearch、语音、编码或普通工具调用，只有出现服务方托管的持续执行、异步任务、远程环境或完整企业控制面时才升级为 AaaS。
+- 通用云平台的多 Agent 架构文章、客户案例或基础设施更新，若没有新的托管产品能力、可用性、控制面或商业化变化，只作为邻近信号，不计入今日动态。
+
+## 趋势判断
+
+1. **远程 Agent 的差异化正从“能执行”转向“安全地携带权限执行”。** 凭据遮蔽、可续期授权与企业 MCP 登录是远程任务进入生产环境的基础控制。
+2. **AaaS 与本地 harness 的边界仍然清晰。** Agent loop、MCP、多 Agent 或 CLI 功能并不自动代表服务方托管了任务生命周期。
+3. **强制供应商检查有助于避免模型新闻污染 AaaS。** Devin 的既有托管属性和 Grok 的模型/API 能力都不能在没有窗口内新事件时被重复包装。
+
+## 来源链接
+
+- [Codex CLI 0.164.0 — OpenAI GitHub](https://github.com/openai/codex/releases/tag/rust-v0.164.0)（详见 OpenAI 专题页）
+
+## 采集状态
+
+- **已检查来源：** Cognition Devin 官方产品新闻/changelog/文档/定价/企业与集成；xAI News、Grok Bot/Grok Build changelog 与 API 文档；OpenAI Codex release 与远程执行入口；Google、Microsoft、GitHub、AWS、Cloudflare、Replit 及海外 AaaS 厂商；字节、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库与文档。
+- **失败来源：** Devin changelog 公开索引未返回近期条目；部分厂商 changelog 依赖客户端渲染或登录；X 时间线不稳定；部分中国厂商站内搜索无法可靠按发布时间排序。
+- **初始候选数：** 8。
+- **最终保留来源数：** 1。
+- **二次补搜：** 否（已验证主窗口来源不为 0）。
+
+今日扫描完成，共 1 条动态，重点：Codex 远程执行增加凭据保护，并强化企业 MCP 连接鉴权。

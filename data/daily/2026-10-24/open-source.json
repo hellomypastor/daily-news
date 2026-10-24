@@ -1,0 +1,152 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-10-24T10:41:38+08:00",
+  "image": {
+    "url": "https://cdn-uploads.huggingface.co/production/uploads/64b8491203124195cd795cad/oS8I8qx7iBS8EcNIXR3q9.png",
+    "alt": "ThinkingBox 将数据库评分转化为 Agent 强化学习奖励的官方文章配图",
+    "sourceUrl": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+    "caption": "图片来源：Microsoft / Hugging Face"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline：cline/cline 官方仓库、GitHub Releases、最近提交与官方 changelog",
+      "Pi Coding Agent：badlogic/pi-mono 跳转后的 earendil-works/pi 官方仓库、Releases 与最近提交",
+      "DeepSeek Harness / DSH：deepseek-ai/deepseek-harness 官方仓库、Releases、README 与最近提交",
+      "OpenCode：anomalyco/opencode 官方仓库、Releases 与最近提交",
+      "Aider：Aider-AI/aider 官方仓库、Releases 与 changelog",
+      "Continue：continuedev/continue 官方仓库与 Releases",
+      "Roo Code：RooCodeInc/Roo-Code 官方仓库与 Releases",
+      "Hacker News front/newest 与 Algolia 最近 24 小时提交",
+      "GitHub Trending 日榜：总榜、Python、TypeScript",
+      "arXiv 最近提交：Coding Agent、Agent harness、tool execution 与 recovery",
+      "Hugging Face Papers 与 Blog RSS",
+      "Simon Willison Weblog 及可信模型/基础设施工程博客"
+    ],
+    "failedSources": [
+      "Cline 官方 changelog 页面：HTTP 403；改用官方 GitHub Releases 与提交记录核验",
+      "Aider HISTORY 页面：HTTP 403；改用官方 GitHub Releases 核验",
+      "DeepSeek Harness 的 main 分支 README：404；确认默认分支为 master 后完成核验"
+    ],
+    "candidateCount": 22,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-10-22 10:41 至 2026-10-24 10:41（Asia/Shanghai）**；Hacker News 讨论窗口取最近 24 小时。本轮最明确的发布是 DeepSeek Harness `v0.2.1-rc.3`，它补充插件入口并修复跨会话草稿恢复。Cline、Pi 与 OpenCode 还在官方主分支合入了直接影响交互、重试、工具 schema 与模型目录的改动；这些是已合并代码，不冒充正式版本发布。研究侧出现了安全执行 harness 与长程编码 Agent 恢复训练两条值得跟踪的路线。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 状态 | 技术变化与意义 |\n|---|---|---|\n| DeepSeek Harness / DSH | **已验证发布** | [v0.2.1-rc.3](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.3) 于 10 月 23 日 23:26（上海时间）发布：侧栏、会话视图和右侧栏增加浏览/创建插件的“更多”入口，修复切换会话后新会话无法找回未发送草稿，并统一 API Key 与账号登录模式的模型列表更新方式。它仍是 RC，不能把体验优化外推为稳定版成熟度。 |\n| Cline | **主分支已合并，非 Release** | 10 月 24 日的[交互与并行工具上下文修复](https://github.com/cline/cline/commit/59f219fad961dfc0602d4d8fc59f08a029ef600f)让纯附件也可作为问题回答，并隔离已停止 run 的迟到工具上下文；另一项[推理流中断重试修复](https://github.com/cline/cline/commit/5e854953783d791395c55929629b5a1d2418ef11)允许只流出 reasoning 后断线的 turn 安全重试。官方 Release 仍早于窗口，因此这里只报告已合并代码。 |\n| Pi Coding Agent / pi-mono | **主分支已合并，非 Release** | [Gemini tool schema 修复](https://github.com/earendil-works/pi/commit/a7b94a03f09f20f4937fa1a76339014c60d261ad)保留 schema 中的字面量数据与 `__proto__` 名称，降低 provider schema 改写破坏工具定义的风险；原 `badlogic/pi-mono` 已跳转至当前官方仓库。本轮没有新正式 Release。 |\n| OpenCode | **主分支已合并，非 Release** | [模型目录过滤修复](https://github.com/anomalyco/opencode/commit/df6fb9a4602b8984426ac04477cc9426086c6df2)把 realtime、embedding 与 reranking 模型排除出可对话模型目录，减少错误路由；正式 Release 最新仍为窗口内较早的 v1.19.4，本页不重复跨日背景。 |\n| Aider / Continue / Roo Code | 已检查、无可报告更新 | 三者当前官方 Release 最新条目均早于本轮 48 小时窗口；未把仓库活跃时间或页面更新时间写成发布。 |\n\n## 已验证技术亮点\n\n### ThinkingBox：把数据库 grader 变成 Agent 后训练奖励\n\nMicrosoft 在 Hugging Face 发布的 [Turning Database Grading into RL Rewards](https://huggingface.co/blog/microsoft/thinkingbox-training) 于 10 月 23 日 06:24（上海时间）进入官方 RSS。文章讨论把数据库任务的结果验证转化为强化学习奖励，用可执行环境与 grader 约束 Agent 后训练。它提供的是工程方法与作者实验，不把文章中的效果陈述视为跨任务通用结论。\n\n### llm-d v1.0：面向多租户与 Agent 会话的推理编排\n\n[llm-d v1.0.0](https://github.com/llm-d/llm-d/releases/tag/v1.0.0) 原始发布于 10 月 20 日，已超出 48 小时高亮窗口，但在最近 24 小时重新进入 HN。版本说明聚焦多租户优先级/公平性流控、热备路由与滚动升级，并加入 session-state producer、会话亲和和 Responses API 状态复用等 Agent-aware serving 能力；因此保留为**较旧背景 / 当前讨论信号**，不写成今日发布。\n\n## GitHub Trending\n\n本轮检查总榜、Python 与 TypeScript 日榜。TypeScript 榜出现 [ds-harness-remote](https://github.com/liguobao/ds-harness-remote)：项目自述通过 DSH 插件提供 PC、Android 与 Web 远程访问，并强调端到端加密和 P2P 优先。本节只记录它出现在今日榜单及仓库当前自述，不把 Trending 当作今日发布证明，也不记录易波动的星数。\n\n## Hacker News 讨论（最近 24 小时）\n\n- [task-view 仓库](https://github.com/gtindo/task-view) 的 [Show HN 讨论](https://news.ycombinator.com/item?id=50217069) 于 10 月 24 日 08:11（上海时间）提交。它把编码 Agent 的变更描述、Git 校验后的代码与调用关系生成离线 HTML 变更地图；仓库刚创建且讨论样本很低，作为日期已确认的新项目保留，不据此评价采用度。\n- [llm-d v1.0 的 HN 帖](https://news.ycombinator.com/item?id=50213960)于 10 月 24 日 03:13（上海时间）出现，但原 Release 日期是 10 月 20 日；因此正文按较旧背景处理，而非“今日发布”。\n- 多个关于模型路由、Agent 状态和自动化运行的 Show HN 候选只有作者自述与极低样本互动，已放入观察池，未把营销或 benchmark 摘要提升为事实。\n\n## 论文 / 研究\n\n- [Certified Execution Harness for Agentic AI](https://arxiv.org/abs/2610.31376) 于 10 月 22 日 22:48（上海时间）提交。论文用 Petri net 把能力、审批与预算表示为执行条件，并把工具结果视作不可控事件，研究 prompt injection 下的安全监督与重规划成本。价值在于把“工具调用前的权限检查”表述成可分析的控制问题；安全结论依赖论文列出的假设，仍待独立复现。\n- [RIPPLE](https://arxiv.org/abs/2610.31276) 于 10 月 22 日 21:45（上海时间）提交，针对长程编码 Agent 能诊断失败却继续错误轨迹的“critique-to-action handoff gap”，用 prefix-only teacher、轻量蒸馏与分阶段奖励训练自恢复策略。论文报告四个仓库级 benchmark 的平均提升，但这里只记录作者结果，不将其视为普遍领先证明。\n\n## 旧文重新浮现\n\n最近 24 小时未发现同时满足“原文超过 7 天、HN 讨论显著、且与本页主轴直接相关”的候选。llm-d v1.0 仅早于窗口约四天，不满足本节定义，故放入已验证亮点中的较旧背景。\n\n## 日期未确认\n\n本轮没有必须保留却无法核实日期的高优先级候选；主分支 commit 均有官方时间戳，但已明确标为“非 Release”。\n\n## 观察池\n\n- **ds-harness-remote**：今日 GitHub Trending 提供的是当前关注信号，仓库本身创建于 8 月；后续关注远程授权边界、relay 威胁模型及与 DSH 官方 Host Remote 插件的兼容验证。\n- **task-view**：项目把 Agent 自述与真实 Git diff 对照，适合探索新的 review 界面；目前仓库和讨论都很新，缺少独立使用证据。\n- **Token Beggar**：最近 24 小时的 [Show HN 候选](https://github.com/Arthur031221/Token-Beggar)自述按任务把 coding-agent 子任务路由到更便宜模型，并给出 18 个 bug-fix 样本；这是作者自测与很小样本，暂不把成本/质量结论写成可推广 benchmark。\n\n## 来源链接\n\n正文已直接链接全部 14 个来源 URL；同页按 URL 去重。优先采用官方 Release、commit、仓库、论文与工程博客；HN 链接只用于证明讨论时间，Trending 只证明当前榜单可见性。\n\n## 采集状态\n\n- 已检查：Cline、Pi、DeepSeek Harness / DSH、OpenCode、Aider、Continue、Roo Code 官方仓库/Release/changelog；HN front/newest 与 Algolia；GitHub Trending 总榜/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison 与可信工程博客。\n- 失败来源：Cline changelog、Aider HISTORY 自动访问返回 403，均已改查官方 GitHub；DSH `main` README 为 404，确认默认分支 `master` 后完成核验。\n- 初始候选数：22；最终保留来源：14；二次补搜：否（最终来源不为 0）。\n- 配图检查：已核验 ThinkingBox 官方文章 OpenGraph 图片为公开 HTTPS PNG，返回 HTTP 200；来源文章已在正文与 sources 中引用。",
+  "sources": [
+    {
+      "title": "DeepSeek Harness v0.2.1-rc.3",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.3",
+      "source": "DeepSeek AI / GitHub Releases",
+      "publishedAt": "2026-10-23 23:26 +08:00",
+      "summary": "DSH 增加插件浏览/创建入口，修复跨会话草稿恢复，并统一模型列表更新方式。",
+      "tags": ["Coding Agent", "Harness", "Plugin"]
+    },
+    {
+      "title": "Cline ask_question and parallel tool context fixes",
+      "url": "https://github.com/cline/cline/commit/59f219fad961dfc0602d4d8fc59f08a029ef600f",
+      "source": "Cline / GitHub Commit",
+      "publishedAt": "2026-10-24 10:09 +08:00",
+      "summary": "Cline 修复问题回答语义、附件回答与并行工具迟到上下文污染。",
+      "tags": ["Coding Agent", "Tool Execution", "Session"]
+    },
+    {
+      "title": "Cline retry reasoning-only interrupted turns",
+      "url": "https://github.com/cline/cline/commit/5e854953783d791395c55929629b5a1d2418ef11",
+      "source": "Cline / GitHub Commit",
+      "publishedAt": "2026-10-24 10:04 +08:00",
+      "summary": "Cline 允许在只流出 reasoning 后连接中断的 turn 安全重试。",
+      "tags": ["Coding Agent", "Retry", "Reliability"]
+    },
+    {
+      "title": "Pi preserves literal data in Gemini tool schemas",
+      "url": "https://github.com/earendil-works/pi/commit/a7b94a03f09f20f4937fa1a76339014c60d261ad",
+      "source": "Pi / GitHub Commit",
+      "publishedAt": "2026-10-24 03:42 +08:00",
+      "summary": "Pi 修复 Gemini tool schema 转换，保留字面量数据与特殊属性名。",
+      "tags": ["Coding Agent", "Tool Schema", "Gemini"]
+    },
+    {
+      "title": "OpenCode excludes non-chat models from catalog",
+      "url": "https://github.com/anomalyco/opencode/commit/df6fb9a4602b8984426ac04477cc9426086c6df2",
+      "source": "OpenCode / GitHub Commit",
+      "publishedAt": "2026-10-24 06:03 +08:00",
+      "summary": "OpenCode 从对话模型目录过滤 realtime、embedding 与 reranking 模型。",
+      "tags": ["Coding Agent", "Model Routing"]
+    },
+    {
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Microsoft / Hugging Face",
+      "publishedAt": "2026-10-23 06:24 +08:00",
+      "summary": "介绍将数据库任务结果验证转化为 Agent 强化学习奖励的工程方法。",
+      "tags": ["Agent Training", "RL", "Evaluation"]
+    },
+    {
+      "title": "llm-d v1.0.0",
+      "url": "https://github.com/llm-d/llm-d/releases/tag/v1.0.0",
+      "source": "llm-d / GitHub Releases",
+      "publishedAt": "2026-10-20 10:30 +08:00",
+      "summary": "面向多租户、零停机与 Agent 会话状态的分布式推理编排版本；因较旧列背景。",
+      "tags": ["Inference", "Agent Serving", "较旧背景"]
+    },
+    {
+      "title": "DeepSeek Harness Remote",
+      "url": "https://github.com/liguobao/ds-harness-remote",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "今日 TypeScript Trending 可见的 DSH 远程访问插件；榜单只证明当前关注度。",
+      "tags": ["GitHub Trending", "Remote Access", "观察池"]
+    },
+    {
+      "title": "task-view",
+      "url": "https://github.com/gtindo/task-view",
+      "source": "GitHub",
+      "publishedAt": "2026-10-24 05:48 +08:00",
+      "summary": "把 coding-agent 变更、关系与 Git 校验结果生成离线 HTML 变更地图。",
+      "tags": ["Code Review", "Coding Agent"]
+    },
+    {
+      "title": "Show HN: Task-view – review a coding agent’s change as a map instead of a diff",
+      "url": "https://news.ycombinator.com/item?id=50217069",
+      "source": "Hacker News",
+      "publishedAt": "2026-10-24 08:11 +08:00",
+      "summary": "task-view 的 HN 提交时间与低样本讨论证据。",
+      "tags": ["Hacker News", "讨论"]
+    },
+    {
+      "title": "Certified Execution Harness for Agentic AI",
+      "url": "https://arxiv.org/abs/2610.31376",
+      "source": "arXiv",
+      "publishedAt": "2026-10-22 22:48 +08:00",
+      "summary": "用 Petri-net supervisory control 形式化 prompt injection 下的 Agent 工具安全执行。",
+      "tags": ["Paper", "Agent Harness", "Security"]
+    },
+    {
+      "title": "RIPPLE: Recovery Internalization through Process-Level Policy Learning and Effect-Aware Credit for Long-Horizon Agentic Coding",
+      "url": "https://arxiv.org/abs/2610.31276",
+      "source": "arXiv",
+      "publishedAt": "2026-10-22 21:45 +08:00",
+      "summary": "提出面向长程编码 Agent 的过程级恢复训练与分阶段 credit assignment。",
+      "tags": ["Paper", "Coding Agent", "Recovery"]
+    },
+    {
+      "title": "Token Beggar",
+      "url": "https://github.com/Arthur031221/Token-Beggar",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "按任务路由 coding-agent 子任务的实验性插件；成本与质量结果仅为作者小样本自测。",
+      "tags": ["Model Routing", "观察池"]
+    },
+    {
+      "title": "LLM-d v1.0.0 is out",
+      "url": "https://news.ycombinator.com/item?id=50213960",
+      "source": "Hacker News",
+      "publishedAt": "2026-10-24 03:13 +08:00",
+      "summary": "llm-d v1.0 在最近 24 小时重新出现于 HN 的讨论时间证据。",
+      "tags": ["Hacker News", "较旧背景"]
+    }
+  ]
+}
