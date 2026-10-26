@@ -1,0 +1,57 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": [
+    "AaaS",
+    "Agent",
+    "Cloud Agent",
+    "Managed Agent"
+  ],
+  "order": 50,
+  "updatedAt": "2026-10-26T10:41:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition Devin 官网、新闻、changelog、文档与定价：异步执行、环境、并发、企业接入、Slack/Teams 等集成",
+      "xAI / Grok 新闻与开发者 release notes：托管 Agent、异步任务、工具调用、编码与远程执行",
+      "Anthropic Managed Agents / Agent SDK / Skills / Claude Code 官方入口",
+      "OpenAI ChatGPT agents、Codex cloud / remote 与 agent-building 产品官方入口",
+      "Google Vertex AI Agent Engine、Gemini 与 Jules 官网、changelog、任务和限额文档",
+      "Microsoft Copilot Studio、Foundry Agent Service 与 GitHub coding agent 官方入口",
+      "Replit Agent、Cursor Cloud Agents、Lindy、CrewAI AMP、LangGraph Platform、Amazon Q Developer",
+      "Cloudflare Agents / Sandboxes / Workers、Factory、Sourcegraph / Amp",
+      "字节跳动扣子 / 火山 / 豆包 / Trae / Seed 官方入口",
+      "阿里云百炼 / Qoder / 通义 / 夸克官方入口",
+      "腾讯元宝 / 混元 / 腾讯云、百度 AgentBuilder / Comate、智谱、Kimi、MiniMax、DeepSeek",
+      "Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH：托管执行、后台任务、远程环境与定价",
+      "OpenCode、Aider、Continue、Roo Code：托管执行边界检查",
+      "第二轮扩搜：中英文 hosted agent、云端 Agent、异步任务、remote execution、concurrency、pricing、enterprise integration",
+      "第二轮备用入口：GitHub releases / discussions、产品文档索引与可信行业二手来源"
+    ],
+    "failedSources": [
+      "Cognition Devin 独立 changelog 搜索：官网公开索引仅显示最新动态至 2026-10-22，未发现窗口内条目",
+      "xAI / Grok：release notes 最新 AaaS 相关条目早于窗口，普通模型/API 动态不满足本页定义",
+      "部分产品文档只有抓取时间或页面更新时间，没有可核实的首次发布时间，不能据此认定为本轮更新",
+      "X / 社交平台：未登录搜索无法稳定取得完整时间线和精确发布时间",
+      "中文平台更新页：搜索结果未提供窗口内明确日期的新条目"
+    ],
+    "candidateCount": 21,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n主采集窗口为 **2026-10-25 10:41 至 2026-10-26 10:41（Asia/Shanghai）**，并检查 24–72 小时观察窗口。两轮检索后，**没有发现发布时间可确认落在主窗口内的 AaaS 官方动态**。唯一保留候选是一篇 2026-10-25 发布、但没有时分信息的托管编程 Agent 并发限制对比；其 Devin、Jules、Cursor 等关键数字通过厂商官方页面交叉核对，但文章的精确发布时间无法确认，因此只进入“日期未确认”和“观察池”，不作为今日已验证发布。\n\n## 重点动态\n\n本轮没有 24 小时内已验证的发布、GA / beta、定价调整、融资并购或企业落地事件。重点观察方向是：托管编程 Agent 的竞争正在从“是否能后台运行”转向**并发任务额度、每日/每周限额、超额后的排队或计费方式，以及企业组织是否能获得独立控制面**。\n\n## 远程 / 云端 Agent 执行\n\n- 一篇 [10 月 25 日的并发限制对比](https://www.sinatra.dev/blog/coding-agent-tasks-at-once-limits) 汇总 Jules、Devin、Codex、Copilot、Cursor、Factory 等产品的公开限制。文章由同类产品 Sinatra 发布，存在商业竞争利益，且没有精确发布时间；只能作为二手观察信号。\n- 交叉核对显示，Google Jules 官方限额页公开免费 / Pro / Ultra 分别为 3 / 15 / 60 个并发任务；Cursor 官方文档称 Cloud Agents 可并行运行多个 Agent，首次使用需设置支出上限；Devin 官网确认其是关机后继续工作的云端并行 Agent，并提供团队/企业接入与消息平台集成。以上均是既有能力核对，不是本轮新增。\n- 对 OpenAI Codex cloud / remote 和 Anthropic 托管 Agent 的相关官方入口也已检查，未发现主窗口内新增；若在其他专题引用其既有资料，应标注“详见 OpenAI / Claude 专题页”。\n\n## 海外平台\n\n| 平台 | AaaS 边界检查 | 本轮结果 |\n| --- | --- | --- |\n| Cognition Devin | 云端异步执行、并行 Agent、环境、并发、定价、Teams / Enterprise、Slack / Teams 等集成 | **显式检查，无窗口内新增**；官网公开动态最新可见至 10 月 22 日 |\n| xAI / Grok | 托管 Agent、持久云电脑、异步 / 定时任务、工具与远程执行 | **显式检查，无窗口内新增**；普通 Grok 模型/API 更新属于 MaaS 或行业动态，不纳入 |\n| Google Vertex / Jules | 托管运行时、独立 VM、后台任务、并发额度 | 无窗口内新增；并发数字仅用于交叉核对观察候选 |\n| Microsoft Copilot Studio / Foundry / GitHub coding agent | 托管部署、企业身份、治理、PR Agent | 无窗口内新增 |\n| Cursor Cloud Agents | 隔离 VM、云端 Agent loop、环境和支出控制 | 无可确认发布日期的新公告；现有文档可能近期改版，列入观察但不当作发布 |\n| Replit Agent / Lindy / CrewAI AMP / LangGraph Platform | 托管执行、工作流、运行与观测 | 无窗口内新增 |\n| Amazon Q / Cloudflare / Factory / Sourcegraph Amp | 远程环境、沙箱、任务生命周期与企业能力 | 无窗口内新增 |\n\n### Cognition Devin 必查结论\n\nDevin 官网公开页面继续描述：大任务可拆给并行云端 Agent，笔记本关闭后仍运行，并能通过 Slack、Teams 等入口接收任务；团队和企业方案提供组织级能力。本轮对新闻、公开 changelog、产品页、文档、定价与集成入口的检查没有发现 10 月 25 日 10:41 之后的新变更。二手文章列出的并发与用量数字虽可追溯到 Devin 公开方案，但没有证据表明它们在本轮刚刚调整。\n\n### xAI / Grok 必查结论\n\nGrok 的官方资料中存在满足 AaaS 定义的既有信号，例如持久云电脑上的 durable AI teammates、消息与连接器、审批和 routines，以及 Grok Build 的长时任务控制；但相关官方发布日期早于本轮，未重复列为来源。窗口内未发现新的托管 Agent、异步任务、远程执行、企业控制面或定价变化。Grok 模型、API、语音或普通工具调用更新若没有托管执行生命周期证据，归入行业专题而不是 AaaS。\n\n## 中国平台（字节系重点）\n\n### 字节跳动：扣子 / 火山 / 豆包 / Trae / Seed\n\n扣子官方文档继续可见异步工作流、任务中心、并发限制和企业网络接入等 AaaS 特征，但页面没有窗口内可核实的新增日期，因此未收录为动态。火山、豆包、Trae 与 Seed 的入口也未发现新的托管执行生命周期公告。\n\n### 其他国内平台\n\n阿里云百炼 / Qoder、腾讯元宝 / 混元 / 腾讯云、百度 AgentBuilder / Comate，以及智谱、Kimi、MiniMax、DeepSeek 的官方与可信二手入口均已检查，未找到主窗口内日期明确的新发布。Qoder Cloud Agents 等既有托管长时异步与批量并发能力不因页面近期被抓取而视为今日更新。\n\n## Coding Agent / Harness 的 AaaS 边界\n\n- **Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH**：逐项检查托管或云端执行、后台 / 定时任务、远程环境、多 Agent 服务、并发、企业控制与定价；未发现窗口内满足定义的新动态。\n- **OpenCode、Aider、Continue、Roo Code**：未发现厂商托管执行生命周期的新证据。普通本地 CLI、IDE、桌面或自托管 harness 更新应进入开源专题，不进入 AaaS。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- **AaaS**：提供 Agent 执行托管、异步任务、运行环境、生命周期、编排、观测、企业访问或远程编码工作。\n- **MaaS**：仅提供模型 API、上下文、推理或工具调用接口，不等于托管 Agent。\n- **PaaS**：仅提供容器、虚拟机、函数、数据库或通用工作流基础设施，不等于管理 Agent 生命周期。\n\n本轮没有把 Grok 普通模型/API、国内模型服务更新或本地 coding harness release 错写为 AaaS。\n\n## 日期未确认\n\n- [Run multiple coding agents at once: the limits by vendor](https://www.sinatra.dev/blog/coding-agent-tasks-at-once-limits) 标注发布日期为 2026-10-25，但未提供时分，无法判断是在主窗口起点 10:41 之前还是之后。文章数字来自厂商公开页面，适合做采购侧横向观察；作者同时销售 Sinatra，比较结论需考虑利益相关性。\n\n## 未证实传闻\n\n本轮没有保留一手来源不足的泄露、路线图或融资传闻。\n\n## 邻近信号观察池\n\n- Cursor 文档索引近期可见 Cloud Agents / Projects 的隔离 VM、远程桌面、并行委派和定时订阅描述，但缺少可核实的首次发布日期，不能认定为 24–72 小时新品。\n- Coze / 扣子更新页可见异步工作流与任务中心能力，但没有窗口内明确日期。\n- Grok 普通模型、API、语音和工具调用消息若缺少托管执行生命周期，只作为行业或 MaaS 信号，不进入本页动态计数。\n\n## 趋势判断\n\n1. **并发成为商业包装核心**：任务并发数、每日额度、超额计费与排队行为比单一模型名称更直接影响团队吞吐。\n2. **“无限并发”不等于无限成本**：部分平台不公开硬并发上限，而用支出上限、模型费率或组织 compute limit 控制资源。\n3. **企业差异化移向运行控制面**：身份、私网、秘密管理、审计、环境快照和消息 / 工单入口正成为 AaaS 的采购边界。以上是基于既有官方能力和本轮二手比较形成的观察，不代表今日发布。\n\n## 来源链接\n\n- [Run multiple coding agents at once: the limits by vendor — Sinatra](https://www.sinatra.dev/blog/coding-agent-tasks-at-once-limits)\n\n## 采集状态\n\n- **已检查来源**：Devin 新闻 / changelog / 文档 / 定价 / 企业与集成；xAI / Grok 新闻和开发者 release notes；Anthropic、OpenAI、Google / Jules、Microsoft / GitHub、Replit、Cursor、Lindy、CrewAI、LangGraph、Amazon、Cloudflare、Factory、Sourcegraph / Amp；字节系、阿里、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek；Cline、Pi / pi-mono、DSH、OpenCode、Aider、Continue、Roo Code。\n- **失败来源**：Devin 最新公开动态停在 10 月 22 日；Grok AaaS 相关官方条目早于窗口；部分文档只有抓取或更新时间而无首次发布时间；X 未登录时间线不稳定；中文平台更新页未返回日期明确的新条目。\n- **初始候选数**：21。\n- **最终保留来源数**：1（日期未确认的二手观察）。\n- **24 小时已验证动态数**：0。\n- **二次补搜**：是；已扩大中英文关键词，并改查官方文档索引、GitHub releases / discussions 与可信二手来源。\n\n今日扫描完成，共 **1** 条动态，重点：托管编程 Agent 的并发与额度竞争值得持续跟踪，但本轮没有 24 小时内可确认的官方 AaaS 发布。",
+  "sources": [
+    {
+      "title": "Run multiple coding agents at once: the limits by vendor",
+      "url": "https://www.sinatra.dev/blog/coding-agent-tasks-at-once-limits",
+      "source": "Sinatra（行业二手来源，利益相关）",
+      "publishedAt": "2026-10-25",
+      "summary": "文章汇总 Jules、Devin、Codex、Cursor 等托管编程 Agent 的并发与用量限制；日期只有日级精度，且作者销售同类产品，因此作为日期未确认的观察信号保留。",
+      "tags": [
+        "并发",
+        "定价",
+        "日期未确认",
+        "观察池"
+      ]
+    }
+  ]
+}
