@@ -1,0 +1,70 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-10-28T14:32:00+08:00",
+  "image": {
+    "url": "https://media.x.ai/cdn-cgi/image/fit%3Dscale-down%2Conerror%3Dredirect%2Cf%3Dauto/v1/website/sales-bot-diagram-light-6-b66d2e51.png",
+    "alt": "Grok Shared Bots 在销售流程中分工协作的示意图",
+    "sourceUrl": "https://x.ai/news/grok-bot-sales",
+    "caption": "图片来源：xAI / SpaceX Super Intelligence 官方文章"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic News、Research 与官方动态",
+      "OpenAI News、Research、API changelog 与官方动态",
+      "Google DeepMind News 与 Google Research",
+      "Meta AI Blog、Microsoft Research / AI、NVIDIA Developer / Research",
+      "xAI News、Grok Bot、xAI API 文档与 release notes（模型、API、DeepSearch、语音、编码、工具调用、Agent）",
+      "Mistral News / Docs、Cohere 官方动态",
+      "Qwen / Alibaba / DAMO、ByteDance Seed / Doubao、Baidu、Tencent Hunyuan / CodeBuddy",
+      "DeepSeek、Zhipu / GLM、Moonshot / Kimi、StepFun、MiniMax 官方入口",
+      "Hugging Face Blog / Releases、LangChain / LangGraph、LlamaIndex",
+      "Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 的行业级信号",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客"
+    ],
+    "failedSources": [
+      "部分 X 官方账号：未登录环境只能通过公开索引交叉确认，未采用无法打开的帖子",
+      "若干厂商列表页只显示月份而无日级时间：仅作为已检查入口，不据此写成 24 小时事实"
+    ],
+    "candidateCount": 12,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口为 **2026-10-27 14:32 至 2026-10-28 14:32（Asia/Shanghai）**。确认到 xAI/Grok Bot、腾讯 CodeBuddy、LangGraph 与 Runway 的一手更新；OpenAI/Anthropic 的同窗动态由各自专题页展开，本页不重复铺陈。\n\n## 优先动态\n\n| 厂商 | 动态 | 类型 / 日期 | 摘要 | 为什么重要 |\n|---|---|---|---|---|\n| xAI / SpaceXSI | [Your next sales teammate should be a Grok Bot](https://x.ai/news/grok-bot-sales) | 官方产品实践 · 10 月 27 日 | 官方披露销售团队部署 Account Intel、Quote、Deal 三类 Shared Bots，连接 Salesforce、CPQ、Ironclad、Gong 与 Slack；工作流可定时运行，敏感动作受用户权限、速率限制和人工复核约束。 | 这是 Grok 从模型/API 走向共享、可调度、带企业权限边界的 Agent 工作系统的直接证据，也为托管 Agent 商业化提供实例。 |\n| 腾讯 CodeBuddy | [CodeBuddy Code v2.176.0](https://www.codebuddy.cn/docs/cli/release-notes/v2.176.0) | 官方发布 · 10 月 27 日 | 新增从远程控制 Web UI 打开 SSH 主机的桌面深链、会话级 SDK 选项，并修复安全审查作用域、Hook 清理和大图载荷等问题。 | 把远程开发、SDK 与安全控制继续拉到同一 Coding Agent 产品面。 |\n| LangChain | [LangGraph CLI 0.4.40](https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.40) | GitHub Release · 10 月 26 日 | CLI 开始转发控制平面返回的上传请求头，补齐部署链路中的控制面协议。 | 属于托管 LangGraph 部署的基础设施改进，虽小但直接影响自动化发布可靠性。 |\n| Runway | [Runway API changelog](https://docs.dev.runwayml.com/api-details/api_changelog/) | 官方变更日志 · 10 月 27 日发现 | Kling 4.0 已进入 Runway Dev API，覆盖文生视频、图生视频、参考图与视频编辑，并给出时长、分辨率和计费规则。 | 视频模型继续被平台化为标准 API 能力，便于进入 Agent 媒体工作流。 |\n\n## 常规厂商扫描\n\n- Google DeepMind 本轮检查了 News 与 Research 列表；列表中的 10 月条目缺少日级日期，未强行归入 24 小时更新。\n- Mistral、Meta、Microsoft、NVIDIA、Cohere、Qwen、Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、阶跃星辰、MiniMax、Hugging Face、LlamaIndex 均检查公开入口；除上表外未找到能在截止时间前以一手页面同时确认日期与关键事实的新条目。\n- Anthropic 与 OpenAI 均已显式检查；相关更新分别 **详见 Claude 专题页** 与 **详见 OpenAI 专题页**。\n\n## xAI / Grok 专项\n\n本轮逐项检查 xAI News、Grok Bot、API 模型与 release notes，以及 DeepSearch、Voice、Coding、Tool-use 和 Agent 相关入口。唯一可确认的新动态为上述 Shared Bots 销售实践；未发现截止时间内新的 Grok 模型或普通 API 发布，未用旧条目填充。\n\n## Coding Agent / Harness 行业信号\n\nCline、Pi Coding Agent / pi-mono 与 DeepSeek Harness / DSH 已检查产品方向、桌面/IDE 分发、合作、融资、企业采用、评测与生态信号；本轮没有需要跨页重复的新增行业事件，日常仓库和版本变化 **详见开源专题页**。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客均已检查；未发现同时满足窗口和主题相关性的已核实新节目。\n\n## 近两日补充\n\n无需要从 24–48 小时窗口补入、且尚未被昨日页面记录的一手事件。\n\n## 近三日补充\n\n无需要从 48–72 小时窗口补入的新事件。\n\n## 日期未确认\n\nGoogle DeepMind 的 10 月列表出现多项新内容，但公开列表仅标示月份；在未核实文章日级时间前，不将其写成当日发布。\n\n## 观察池\n\n- Cohere 对 Qwen 安全评测的公开说法引发社区讨论，但本轮能稳定打开的主要是社交帖子与二手复述；等待可复核的完整技术报告。\n- 多个新闻聚合页列出 10 月 27 日模型与产品候选，仅用于发现，不替代厂商原始来源。\n\n## 今日结论\n\n本轮最明确的方向信号，是 Grok Bot 用共享知识、连接器、权限边界、人工审批与定时工作流进入企业销售流程；其余更新更多是 Coding Agent 远程控制、Agent 控制面和多媒体 API 的持续工程化。\n\n## 采集状态\n\n- 已检查：主流中外厂商官方新闻、研究、文档、GitHub release、xAI/Grok 专项、Coding Agent 行业信号与六类播客入口。\n- 失败来源：部分 X 页面受登录限制；部分列表只给月份，无法核实日级时间。\n- 初始候选：12 条；最终保留：4 条来源。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Your next sales teammate should be a Grok Bot",
+      "url": "https://x.ai/news/grok-bot-sales",
+      "source": "xAI / SpaceX Super Intelligence",
+      "publishedAt": "2026-10-27",
+      "summary": "xAI 披露用于销售研究、报价和交易审批的 Shared Bots，以及定时工作流、连接器、权限和人工复核机制。",
+      "tags": ["xAI", "Grok Bot", "Agent", "Enterprise"]
+    },
+    {
+      "title": "CodeBuddy Code v2.176.0 发布",
+      "url": "https://www.codebuddy.cn/docs/cli/release-notes/v2.176.0",
+      "source": "腾讯 CodeBuddy",
+      "publishedAt": "2026-10-27",
+      "summary": "版本加入远程 SSH 桌面深链与会话 SDK 选项，并改进安全审查和工具执行可靠性。",
+      "tags": ["Tencent", "CodeBuddy", "Coding Agent"]
+    },
+    {
+      "title": "LangGraph CLI 0.4.40",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.40",
+      "source": "LangChain / GitHub",
+      "publishedAt": "2026-10-26",
+      "summary": "LangGraph CLI 开始转发控制平面提供的上传请求头，改进托管部署链路。",
+      "tags": ["LangGraph", "Agent Platform", "Release"]
+    },
+    {
+      "title": "Runway API Changelog",
+      "url": "https://docs.dev.runwayml.com/api-details/api_changelog/",
+      "source": "Runway",
+      "publishedAt": "2026-10-27",
+      "summary": "Runway Dev API 增加 Kling 4.0 视频生成与编辑能力，并公开分辨率、时长和计费信息。",
+      "tags": ["Runway", "Video API", "Agent Workflow"]
+    }
+  ]
+}

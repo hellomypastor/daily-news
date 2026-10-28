@@ -1,0 +1,104 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Open Source",
+    "LLM"
+  ],
+  "order": 30,
+  "updatedAt": "2026-10-28T14:32:42+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cline 官方仓库、GitHub Releases 与提交记录（cline/cline）",
+      "Pi Coding Agent 原 badlogic/pi-mono 入口及迁移后的 earendil-works/pi 官方仓库、Releases 与文档",
+      "DeepSeek Harness / DSH 官方仓库、GitHub Releases、提交记录与 release notes（deepseek-ai/deepseek-harness）",
+      "OpenCode 官方仓库、GitHub Releases 与 changelog（anomalyco/opencode）",
+      "Aider 官方仓库与 GitHub Releases（Aider-AI/aider）",
+      "Continue 官方仓库与 GitHub Releases（continuedev/continue）",
+      "Roo Code 官方仓库与 GitHub Releases（RooCodeInc/Roo-Code）",
+      "Hacker News newest 与 Algolia 最近 24 小时检索：AI agent、coding agent、LLM、open source AI、Cline、OpenCode、DeepSeek Harness",
+      "GitHub Trending overall、Python、TypeScript 当日入口与相关项目仓库",
+      "arXiv AI / Agent / coding-agent 近期检索",
+      "Hugging Face Papers 与 Blog",
+      "Simon Willison 技术博客",
+      "Liquid AI 官方博客"
+    ],
+    "failedSources": [
+      "GitHub Trending：页面为动态榜单，本轮未能稳定取得可复核的当日语言榜星增量，因此不记录 Trending 数字",
+      "badlogic/pi-mono：旧仓库入口已重定向至 earendil-works/pi；已跟随重定向核验新的一方仓库",
+      "DeepSeek Harness 的独立文档站：未发现比 GitHub release notes 更明确的新版本时间证据，改用官方 Release 原文"
+    ],
+    "candidateCount": 15,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮高亮窗口为 **2026-10-26 14:32 至 2026-10-28 14:32（Asia/Shanghai）**，HN 讨论窗口为最近 24 小时。Coding Agent / Harness 是今天最密集的主线：DSH 发布覆盖子代理、worktree、权限与上下文的 alpha 版本；OpenCode 2.2.0 扩展桌面插件和持久会话指令；Cline 4.1.26 则集中修复云任务、压缩、工具执行与模型路由。Pi 最新正式版已超过 48 小时，作为较旧背景保留。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 状态 | 本轮观察 |\n|---|---|---|\n| DeepSeek Harness / DSH | 已验证，高亮 | [v0.2.2-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-alpha.2) 于 2026-10-28 10:50 +08:00 发布：加入实验性 `subagent_oar`、独立 worktree 会话、SDK/Session API 扩展、Headless Auto 审核，并修复权限、压缩与工具限制问题。alpha 状态意味着仍应评估兼容性。 |\n| OpenCode | 已验证，高亮 | [v2.2.0](https://github.com/anomalyco/opencode/releases/tag/v2.2.0) 于 2026-10-27 17:04 +08:00 发布，实验性 Desktop 插件、可跨 compaction/revert 保留的会话指令、prompt cache TTL 与新版桌面工作流是重点；[v1.19.5](https://github.com/anomalyco/opencode/releases/tag/v1.19.5) 于 2026-10-28 14:17 +08:00 修复 TUI worker 请求失败后调用方一直挂起。 |\n| Cline | 已验证，高亮 | [v4.1.26](https://github.com/cline/cline/releases/tag/v4.1.26) 于 2026-10-26 17:06 +08:00 发布：云任务新增 Local/Cloud 模型选择与 sandbox 启动进度，修复自动压缩重复触发、Plan/Act 首条提示丢失、命令焦点与空命令误报成功。 |\n| Pi Coding Agent / pi | 较旧背景 | 旧入口 `badlogic/pi-mono` 已重定向至 `earendil-works/pi`；[v1.4.0](https://github.com/earendil-works/pi/releases/tag/v1.4.0) 原始时间为 2026-10-22 06:49 +08:00，已超高亮窗口。它改进 compaction/branch summary、并行 Codemode worker 排队、模型配置文档和分类器图片输入。 |\n| Aider | 无新增 | 官方 Release 最新仍为 2025-08-10（上海时间），本轮无 48 小时内可报告版本。 |\n| Continue | 无新增 | 官方 Release 与默认分支未见 48 小时内可验证的发布动态。 |\n| Roo Code | 无新增 | 官方 Release 与默认分支未见 48 小时内可验证的发布动态。 |\n\n## 已验证技术亮点\n\n### 1. DSH 把子代理、worktree 与上下文治理压进同一轮 alpha\n\n[DSH v0.2.2-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-alpha.2) 的变化不只是 UI：实验性 `subagent_oar` 可把独立任务交给本机 Codex 或 Claude CLI；“变更请求与工作树”可在独立 Git worktree 运行会话；切换到小上下文模型前先压缩历史；委派工具遵循当前 Agent 的工具限制。它还为 SDK 增补文件交付、问答、调度、技能、上下文及审批能力，并提供更细的 Session 快照与事件订阅接口。对 harness 设计者而言，这是一组围绕隔离、恢复、权限继承和多 Agent 调度的具体实现信号；但版本仍为 alpha，不能据此推断生产稳定性。\n\n### 2. OpenCode 2.2.0 将插件从工具扩展推向桌面 UI 与持久会话状态\n\n[OpenCode v2.2.0](https://github.com/anomalyco/opencode/releases/tag/v2.2.0) 允许创建、安装和分享实验性 Desktop 插件，并开放 toast、dialog、notification、tab、composer 控件与自定义 UI API。插件还可写入带 key 的会话指令：更新在下一 step 以小增量加入，可跨 compaction 和 revert 保留，避免每次直接改 system prompt 导致 prompt cache 失效。版本同时加入 provider/model 级 prompt-cache TTL，并改变 `@opencode/ai` 根导出、移除 GitHub Action，升级前需要检查 breaking changes。\n\n### 3. Cline 4.1.26 加强云任务可见性，也修补本地 Agent loop 边界\n\n[Cline v4.1.26](https://github.com/cline/cline/releases/tag/v4.1.26) 为云任务加入独立模型选择和 sandbox 启动进度卡，并让云会话隐藏不适用的 Plan/Act 与 auto-approve 控件。更关键的可靠性修复包括：连接只输出 reasoning 后断开时重试、未知 context limit 不再自动压缩、首次压缩后避免每几次工具调用重复压缩、空 `run_commands` 返回错误，以及 Plan/Act 切换不再丢首条提示。\n\n### 4. OpenCode 1.19.5 修复 TUI worker 失败后的悬挂\n\n[OpenCode v1.19.5](https://github.com/anomalyco/opencode/releases/tag/v1.19.5) 是一个小而明确的可靠性版本：TUI worker 请求失败时，现在会把错误返回给调用方，而不是让调用方无限等待。它与 2.2.0 属于不同发布线，本页分别记录，避免把错误修复误归到大版本。\n\n### 5. LFM3 发布多模态开放权重家族，HN 形成高互动讨论\n\nLiquid AI 的官方文章 [Introducing LFM3](https://www.liquid.ai/blog/lfm3) 标注日期 2026-10-27，并在 HN 最近 24 小时检索中达到约 136 points / 53 comments。官方页面将其描述为面向 specialized intelligence 的多模态模型家族；本页只把“官方发布且有开放获取路径”作为事实，不把 HN 热度解释为质量或性能领先证据。\n\n## GitHub Trending\n\n本轮检查了 overall、Python 和 TypeScript 当日入口，但动态榜单未稳定提供可复核的每日星增量，因此不抄录榜单数字。与榜单相关的项目只在其官方 Release 或仓库证据足够时进入正文。\n\n## HN 讨论\n\n- **本地离线 LLM 工具获得高讨论度**：HN 提交 [Survival LLM](https://www.brangus.io/survival-llm) 在采集时约为 284 points / 123 comments。项目主张在个人电脑上运行助手与应急资料库；互动数字是采集快照，不代表技术结论，故列为社区讨论信号。\n- **coding-agent sandbox 交叉测试**：作者发布 [sandbox-conformance](https://github.com/carlostapiacl/sandbox-conformance)，称用各 sandbox 自身测试交叉验证其他实现。HN 采集时仅约 2 points / 1 comment，样本与方法仍需独立复核，因此列入观察池而非性能结论。\n\n## 论文 / 研究\n\n本轮检查 arXiv 与 Hugging Face Papers，未发现能同时满足 48 小时、主题高度相关且原始日期可核验的新论文。未用旧论文填充高亮。\n\n## 较旧文章重新浮现\n\n本轮未发现满足“原文超过 7 天、但最近 24 小时在 HN 重新形成明确讨论”的合格条目。\n\n## 日期未确认\n\n无。候选若无法核验原始日期则不进入“已验证技术亮点”；本轮保留的低证据候选均有发现时间，但不具备足够技术验证，已放入观察池。\n\n## 观察池\n\n- **Pi v1.4.0（较旧背景）**：[官方 Release](https://github.com/earendil-works/pi/releases/tag/v1.4.0) 已超 48 小时，但其 compaction、Codemode worker 排队与扩展工具恢复修复仍值得后续版本跟踪。\n- **sandbox-conformance（社区实验，未独立复核）**：[仓库](https://github.com/carlostapiacl/sandbox-conformance) 提供交叉测试思路，但当前 HN 互动低，不能用于宣称任一 sandbox 追平或超过另一实现。\n\n## 来源链接\n\n- [DSH v0.2.2-alpha.2](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-alpha.2)\n- [OpenCode v2.2.0](https://github.com/anomalyco/opencode/releases/tag/v2.2.0)\n- [OpenCode v1.19.5](https://github.com/anomalyco/opencode/releases/tag/v1.19.5)\n- [Cline v4.1.26](https://github.com/cline/cline/releases/tag/v4.1.26)\n- [Pi v1.4.0](https://github.com/earendil-works/pi/releases/tag/v1.4.0)\n- [Liquid AI：Introducing LFM3](https://www.liquid.ai/blog/lfm3)\n- [Survival LLM](https://www.brangus.io/survival-llm)\n- [sandbox-conformance](https://github.com/carlostapiacl/sandbox-conformance)\n\n## 采集状态\n\n- **已检查**：Cline、Pi（含旧入口重定向）、DeepSeek Harness / DSH 三个 Tier 1 的仓库、Release、提交与文档；OpenCode、Aider、Continue、Roo Code 四个 Tier 2 的官方仓库与 Release；HN newest/Algolia、GitHub Trending、arXiv、Hugging Face Papers/Blog、Simon Willison 与 Liquid AI。\n- **失败 / 限制**：GitHub Trending 动态榜单未稳定取得可复核星增量；Pi 旧入口已迁移；DSH 独立文档未提供比 Release 更清晰的新时间证据。\n- **初始候选数**：15；**保留来源数**：8。\n- **二次补搜**：否。最终来源非 0，且强制入口均已检查。",
+  "sources": [
+    {
+      "title": "DeepSeek Harness v0.2.2-alpha.2",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-alpha.2",
+      "source": "DeepSeek Harness / GitHub Releases",
+      "publishedAt": "2026-10-28 10:50 +08:00",
+      "summary": "DSH alpha 版本加入实验性子代理、worktree、SDK/Session API、Headless Auto 审核，并修复上下文、权限和工具执行问题。",
+      "tags": ["Coding Agent", "Harness", "Subagent", "Worktree"]
+    },
+    {
+      "title": "OpenCode v2.2.0",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.0",
+      "source": "OpenCode / GitHub Releases",
+      "publishedAt": "2026-10-27 17:04 +08:00",
+      "summary": "OpenCode 2.2.0 增加实验性桌面插件、持久会话指令、prompt cache TTL，并包含 API breaking changes。",
+      "tags": ["Coding Agent", "Plugin", "Desktop", "Context"]
+    },
+    {
+      "title": "OpenCode v1.19.5",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+      "source": "OpenCode / GitHub Releases",
+      "publishedAt": "2026-10-28 14:17 +08:00",
+      "summary": "修复 TUI worker 请求失败后调用方一直挂起的问题。",
+      "tags": ["Coding Agent", "TUI", "Reliability"]
+    },
+    {
+      "title": "Cline v4.1.26",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+      "source": "Cline / GitHub Releases",
+      "publishedAt": "2026-10-26 17:06 +08:00",
+      "summary": "Cline 增加云任务模型选择和 sandbox 进度，并修复压缩、Plan/Act、命令与工具执行边界问题。",
+      "tags": ["Coding Agent", "Cloud Task", "Compaction", "Tool Use"]
+    },
+    {
+      "title": "Pi v1.4.0",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+      "source": "Pi Coding Agent / GitHub Releases",
+      "publishedAt": "2026-10-22 06:49 +08:00",
+      "summary": "较旧背景：Pi 改进 compaction、Codemode worker 排队、模型配置文档与分类器图片输入。",
+      "tags": ["Coding Agent", "较旧背景", "Compaction", "Codemode"]
+    },
+    {
+      "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "source": "Liquid AI",
+      "publishedAt": "2026-10-27",
+      "summary": "Liquid AI 发布 LFM3 多模态开放权重模型家族；HN 最近 24 小时形成高互动讨论。",
+      "tags": ["Open Weights", "Multimodal", "HN"]
+    },
+    {
+      "title": "Survival LLM",
+      "url": "https://www.brangus.io/survival-llm",
+      "source": "项目官网 / Hacker News",
+      "publishedAt": "2026-10-28 03:55 +08:00",
+      "summary": "本地运行的 AI 助手与应急资料库项目；HN 采集快照约 284 points / 123 comments。",
+      "tags": ["Local LLM", "Offline", "HN"]
+    },
+    {
+      "title": "sandbox-conformance",
+      "url": "https://github.com/carlostapiacl/sandbox-conformance",
+      "source": "GitHub / Hacker News",
+      "publishedAt": "2026-10-28 11:35 +08:00",
+      "summary": "观察池：以各 coding-agent sandbox 自带测试做交叉验证的社区实验，尚未独立复核。",
+      "tags": ["观察池", "Coding Agent", "Sandbox", "Evaluation"]
+    }
+  ]
+}
