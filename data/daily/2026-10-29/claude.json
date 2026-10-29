@@ -1,0 +1,76 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-10-29T10:48:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom（含 Science、Security、Healthcare、Life Sciences、Legal、Government、Nonprofits、Education、Customer Support）",
+      "Claude Code 官方 GitHub releases/changelog",
+      "Claude Developer Platform 文档与 release notes",
+      "Anthropic Agent SDK 官方 GitHub 与文档",
+      "Managed Agents：sessions、webhooks、environments、memory stores 文档",
+      "Claude Code CLI、VS Code 与 JetBrains 集成入口",
+      "Skills、marketplace、plugins、connectors 与 MCP 文档",
+      "Claude Cowork、Design、Tag/@Claude sessions 帮助中心",
+      "Claude in Chrome、Desktop、Preview 与 browser/computer-use 帮助中心",
+      "Voice Mode 与 Microsoft 365 集成帮助中心",
+      "Claude Opus 5.5、Sonnet 5.5、Haiku 5.5 官方模型页",
+      "Reddit r/ClaudeAI、r/Anthropic、r/ClaudeCode 近期帖子",
+      "Hacker News Claude/Claude Code 近期讨论",
+      "X、YouTube 与开发者播客搜索入口"
+    ],
+    "failedSources": [
+      "X：未登录搜索结果不稳定，未取得可核验原帖时间与互动量",
+      "YouTube：未发现窗口内可由官方页面交叉验证的新发布",
+      "部分 Anthropic 文档仅显示 Updated this week，无法确认精确更新时间"
+    ],
+    "candidateCount": 7,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-10-28 10:48 至 2026-10-29 10:48（Asia/Shanghai）。本轮未发现可同时确认具体发布时间且落在窗口内的 Claude Code、模型或开发平台重大官方发布。Anthropic 在 10 月 28 日发布 AI for Science 扩展，但官方只标注日期、未提供时刻，故列入‘日期未确认’，不把它写成已核实的 24 小时事实。社区讨论的主要信号是 Claude Code 用量效率争议；该结论来自用户自测，不代表 Anthropic 官方结论。\n\n## Tier 1：编码、Agent 与开发平台\n\n| 入口 | 状态 | 本轮结论 |\n|---|---|---|\n| Claude Code CLI | 无 24h 已确认新增 | 最新可核验 release 为 10 月 27 日的 v2.1.312，已超出主窗口，见观察池。 |\n| VS Code 集成 | 无新增 | 已检查官方 release；窗口内未见单独发布。 |\n| JetBrains 集成 | 无新增 | 已检查官方 release；窗口内未见单独发布。 |\n| Managed Agents | 无新增 | sessions、webhooks、environments、memory stores 均完成检索，未见窗口内公告。 |\n| Skills / marketplaces | 无新增 | 官方标准、目录和插件入口未见窗口内实质更新。 |\n| Claude Developer Platform | 无新增 | 文档与 release notes 未见窗口内可确认的新版本公告。 |\n| Agent SDK | 无新增 | Python/TypeScript SDK 与官方仓库未见窗口内可确认 release。 |\n| Cowork | 无新增 | 帮助中心存在近期更新痕迹，但仅标‘本周更新’，无法确定落入本窗口。 |\n| Design | 无新增 | 未见窗口内官方发布。 |\n| Tag / @Claude sessions | 无新增 | 未见窗口内官方发布。 |\n| Opus 5.5 / Sonnet 5.5 / Haiku 5.5 | 无新增 | 当前官方模型家族页面已检查，窗口内未见新模型。 |\n\n## Tier 2：客户端与创作能力\n\n| 入口 | 状态 | 本轮结论 |\n|---|---|---|\n| Claude in Chrome / browser agent | 日期未确认 | 帮助中心页面显示‘本周更新’，但无精确日期，不能认定为本轮新增。 |\n| Desktop / Preview | 无新增 | macOS、Windows 与预览能力入口未见窗口内公告。 |\n| Marketplace / Connectors / Plugins | 无新增 | 目录与官方帮助入口未见窗口内实质公告。 |\n| 创作 / 视频模型 | 无新增 | 未见 Anthropic 官方发布新的创作或视频模型。 |\n| Voice Mode | 无新增 | 官方帮助页仍显示既有 beta 能力，未见窗口内变化。 |\n| Microsoft 365 集成 | 无新增 | 已检查连接器与 Cowork 帮助入口。 |\n\n## Tier 3：垂直领域\n\n- **Science / Life Sciences（日期未确认）**：Anthropic 的 [AI for Science 扩展公告](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions) 标注 2026-10-28，宣布与 20 家科学基金会、机构和研究团队合作，并向研究者提供 Claude credits；其中还提到 Allen Institute 使用多 Agent 团队分析开放科学数据，以及 Model Hardware Standard 仍处于 research preview。页面没有具体时刻，因此无法确认是否落入本轮 24 小时窗口。\n- **Security、金融服务、Healthcare、Legal、Government、Nonprofits、Education、Customer Support**：完成官方新闻与帮助入口检索，未见窗口内可确认新增；不重复跨日背景条目。\n\n## 官方更新（按时间倒序）\n\n本轮无‘精确时刻已确认且位于 24 小时窗口内’的官方更新。10 月 28 日 AI for Science 公告保留在‘日期未确认’，避免把日历日期误当作精确发布时间。\n\n## Love\n\n- **可扩展工作流的采用信号（日期未确认、第三方项目）**：Reddit 用户展示了一个 [以未修改 Claude Code CLI 为执行核心的持久 Agent 桌面项目](https://www.reddit.com/r/ClaudeAI/comments/1xgtcvj/i_built_an_opensource_app_that_runs_claude_code/)，包含受限记忆重写、浏览器、审批收件箱与定时任务。它说明社区在尝试把 Claude Code 包装成长时运行系统，但项目能力和安全边界来自作者自述，未作独立审计。\n\n## Hate\n\n- **用量效率与输出质量争议（社区证据）**：一名用户在 [ClaudeAI 讨论帖](https://www.reddit.com/r/ClaudeAI/comments/1xguw7r/claude_is_performing_38x_poorer_compared_to_last/) 中公开了基于本地会话日志的比较方法，称 10 月 25–27 日每个耗尽窗口记录到的 API 等价成本中位数比 10 月 7–22 日低约 38%，并把 API 成本明确称作订阅额度的代理指标。评论中有相似体验，也有人未复现。该数据不是受控评测，不能据此断言模型被降级、额度被暗改或性能下降 3.8 倍。\n\n## 口碑判断\n\n整体为 **中性偏负，低到中等置信度**。负面证据集中在单一 Reddit 线程的用量/质量体验，虽有方法与多名跟帖者，但缺少同任务、同版本、同模型的对照实验；正面信号主要是第三方项目展示，不等同于独立用户口碑。官方公告不计作正向情绪。\n\n## 对比与 Coding Agent 观察\n\n社区争议提醒评估 Claude Code、Codex、Cursor、Cline、Pi Coding Agent 与 DeepSeek Harness/DSH 时，应以固定任务、客户端版本、模型、上下文长度和返工次数做可复现实验。当前没有具名评测支持‘追平’或‘超过’结论；Cline、Pi 与 DSH 的完整扫描留给开源专题页。\n\n## 日期未确认\n\n1. [AI for Science expands to foundations and research institutions](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions)：官方日期为 10 月 28 日，但无具体时刻，保留为可能落入窗口的官方候选。\n2. [Claude in Chrome troubleshooting](https://support.claude.com/en/articles/12902405-claude-in-chrome-troubleshooting)：页面只标‘Updated this week’，无法把 Cowork side panel 等说明认定为本轮新变化。\n\n## 观察池\n\n- **较旧背景 / Claude Code v2.1.312**：[官方 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312) 发布于 2026-10-27 20:24（GitHub 页面时区未在摘要中明示），包含 CLAUDE.md 防覆盖修复、skill 发现修复、cloud routine effort 设置与多项 cloud/remote-control 修复。它对 Agent harness 很重要，但已不作为本轮 24 小时确认项。\n- **第三方 Agent 包装层**：[Godmode 项目帖](https://www.reddit.com/r/ClaudeAI/comments/1xgtcvj/i_built_an_opensource_app_that_runs_claude_code/) 的发布日期在搜索/页面呈现中不够一致，且安全性主要为作者自述，故仅观察。\n\n## 来源链接\n\n- [Anthropic：AI for Science 扩展](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions)\n- [Claude Code v2.1.312 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)\n- [Reddit：Claude Code 用量效率讨论](https://www.reddit.com/r/ClaudeAI/comments/1xguw7r/claude_is_performing_38x_poorer_compared_to_last/)\n- [Reddit：持久 Claude Code Agent 项目](https://www.reddit.com/r/ClaudeAI/comments/1xgtcvj/i_built_an_opensource_app_that_runs_claude_code/)\n- [Claude in Chrome troubleshooting](https://support.claude.com/en/articles/12902405-claude-in-chrome-troubleshooting)\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Claude Code GitHub releases、Developer Platform/Agent SDK/Managed Agents 文档、Claude 应用帮助中心、当前模型页，以及 Reddit、HN、X、YouTube和开发者播客搜索入口。\n- 失败来源：X 未登录结果不稳定；YouTube 未找到可交叉验证的新发布；多份帮助文档仅给‘本周更新’而无精确时间。\n- 初始候选数：7；最终保留来源：5；二次补搜：否（最终 sources 非 0）。\n",
+  "sources": [
+    {
+      "title": "AI for Science expands to foundations and research institutions",
+      "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "source": "Anthropic",
+      "publishedAt": "2026-10-28（具体时刻未公开）",
+      "summary": "Anthropic 宣布扩展 AI for Science 合作至 20 家科学基金会、机构与研究团队；因无具体发布时间，列为日期未确认。",
+      "tags": ["Science", "日期未确认"]
+    },
+    {
+      "title": "Claude Code v2.1.312",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-10-27 20:24（GitHub 页面显示，时区未明示）",
+      "summary": "Claude Code 的较旧 release，覆盖 CLAUDE.md 防覆盖、skill 发现及 cloud/remote-control 稳定性修复。",
+      "tags": ["Claude Code", "较旧背景"]
+    },
+    {
+      "title": "Claude is performing 3.8x poorer compared to last week based on my claude code token analysis",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xguw7r/claude_is_performing_38x_poorer_compared_to_last/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-10-27（页面日期）",
+      "summary": "用户用本地日志比较 API 等价成本并报告用量效率下降；属单用户代理指标，不足以证明官方模型或额度变化。",
+      "tags": ["社区口碑", "Hate", "观察池"]
+    },
+    {
+      "title": "I built an open-source app that runs Claude Code as persistent agents with their own browser and a 2FA vault",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xgtcvj/i_built_an_opensource_app_that_runs_claude_code/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "",
+      "summary": "第三方项目展示用 Claude Code CLI 构建持久 Agent、记忆、浏览器、审批与调度能力；日期和安全性均未独立确认。",
+      "tags": ["Community", "日期未确认", "观察池"]
+    },
+    {
+      "title": "Claude in Chrome troubleshooting",
+      "url": "https://support.claude.com/en/articles/12902405-claude-in-chrome-troubleshooting",
+      "source": "Claude Help Center",
+      "publishedAt": "（仅标注 Updated this week）",
+      "summary": "帮助页描述 Claude in Chrome 的 Cowork side panel 与企业开关，但缺少精确更新时间。",
+      "tags": ["Claude in Chrome", "日期未确认"]
+    }
+  ]
+}
