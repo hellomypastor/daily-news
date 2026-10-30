@@ -1,0 +1,61 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-10-30T10:41:04+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom（含 Science、Security、Healthcare、Life Sciences、Legal、Government、Nonprofits、Education、Customer Support）",
+      "Claude Platform release notes、Usage and Cost Analytics API 文档与迁移文档",
+      "Claude Code 官方 GitHub releases、changelog 与近期 issues",
+      "Claude Developer Platform、Managed Agents sessions/webhooks/environments/memory stores 文档",
+      "Anthropic Agent SDK Python/TypeScript 官方 GitHub、release 与文档",
+      "Claude Code CLI、VS Code 与 JetBrains 集成入口",
+      "Skills、marketplace、plugins、connectors 与 MCP 文档",
+      "Claude Cowork、Design、Tag/@Claude sessions 帮助中心",
+      "Claude in Chrome、Desktop、Preview 与 browser/computer-use 帮助中心",
+      "Voice Mode 与 Microsoft 365 集成帮助中心",
+      "Claude Opus 5.5、Sonnet 5.5、Haiku 5.5 官方模型页与 system cards",
+      "Reddit r/ClaudeAI、r/Anthropic、r/ClaudeCode 近期入口",
+      "Hacker News Claude/Claude Code 近期讨论",
+      "X、YouTube 与开发者播客搜索入口"
+    ],
+    "failedSources": [
+      "X：未登录搜索结果不稳定，未取得可核验原帖时间与互动量",
+      "Reddit：搜索索引未返回窗口内可核验的新主题帖",
+      "YouTube：未发现窗口内可由官方页面交叉验证的新发布",
+      "Anthropic Newsroom 与多份帮助文档只给日期或相对更新时间，无法确认精确发布时间"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-10-29 10:41 至 2026-10-30 10:41（Asia/Shanghai）。本轮发现 Claude Platform 在 10 月 29 日发布 Usage and Cost Analytics API beta，但官方只标日历日期、未给具体时刻，故放入‘日期未确认’，不写成已核实落入 24 小时窗口的事实。Claude Code 官方 release 列表未见比 10 月 27 日 v2.1.312 更晚的版本。社区侧保留两条来自官方 GitHub issue tracker 的问题报告；它们是用户报告，尚无修复提交或官方根因确认。\n\n## Tier 1：编码、Agent 与开发平台\n\n| 入口 | 状态 | 本轮结论 |\n|---|---|---|\n| Claude Code CLI | 无 24h 已确认新增 | 官方 releases 最新仍为 10 月 27 日 v2.1.312；不跨日重复旧 release。 |\n| VS Code 集成 | 无新增 | 已检查官方 release 与 issue 入口，窗口内未见单独发布。 |\n| JetBrains 集成 | 无新增 | 已检查官方入口，窗口内未见单独发布。 |\n| Managed Agents | 无新增 | sessions、webhooks、environments、memory stores 均完成检索，未见窗口内公告。 |\n| Skills / marketplaces | 无新增 | 官方标准、目录、plugins 与 MCP 入口未见窗口内实质公告。 |\n| Claude Developer Platform | 日期未确认 | 10 月 29 日 release notes 记录 Usage and Cost Analytics API beta；无具体时刻。 |\n| Agent SDK | 无新增 | Python/TypeScript SDK 官方 release 与文档未见窗口内可确认发布。 |\n| Cowork | 观察池 | GitHub 用户报告 Windows 定时任务删除后遗留孤立侧栏项，尚无官方根因或修复结论。 |\n| Design | 无新增 | 未见窗口内官方发布。 |\n| Tag / @Claude sessions | 无新增 | 未见窗口内官方发布。 |\n| Opus 5.5 / Sonnet 5.5 / Haiku 5.5 | 无新增 | 当前官方模型页与 system cards 已检查，窗口内未见新模型。 |\n\n## Tier 2：客户端与创作能力\n\n| 入口 | 状态 | 本轮结论 |\n|---|---|---|\n| Claude in Chrome / browser agent | 无新增 | 帮助中心与浏览器能力入口未见可确认的新公告。 |\n| Desktop / Preview | 观察池 | 定时任务孤立侧栏项的报告涉及 Windows Desktop Code tab，仅为单用户可复现步骤。 |\n| Marketplace / Connectors / Plugins | 无新增 | 目录与官方帮助入口未见窗口内实质公告。 |\n| 创作 / 视频模型 | 无新增 | 未见 Anthropic 官方发布新的创作或视频模型。 |\n| Voice Mode | 无新增 | 官方帮助入口未见窗口内变化。 |\n| Microsoft 365 集成 | 无新增 | 已检查连接器与 Cowork 帮助入口。 |\n\n## Tier 3：垂直领域\n\nSecurity、Science、金融服务、Life Sciences、Healthcare、Legal、Government、Nonprofits、Education 与 Customer Support 的官方新闻和帮助入口均已检查，未见窗口内可确认新增；不为证明已检查而重复前日背景来源。\n\n## 官方更新（按时间倒序）\n\n本轮无‘精确时刻已确认且位于 24 小时窗口内’的官方更新。10 月 29 日的 Usage and Cost Analytics API beta 保留在‘日期未确认’。\n\n## Love\n\n本轮没有取得满足时间窗口且可与原始页面交叉验证的独立正向口碑。官方公告不计作正向情绪。\n\n## Hate\n\n- **定时任务删除后的残留状态（用户报告、日期未确认）**：一名 Windows 用户在 [Claude Code issue #105882](https://github.com/anthropics/claude-code/issues/105882) 给出复现步骤：删除本地 scheduled task 后，未归档运行仍保留旧 `scheduledTaskId`，侧栏出现打不开的孤立任务项。该报告尚无 assignee、修复 PR 或官方根因说明。\n- **问答被误解为实施请求（用户报告、日期未确认）**：一名 Claude Code Web 用户在 [issue #106062](https://github.com/anthropics/claude-code/issues/106062) 报告，询问‘如何修复’时 Agent 尝试编辑文件和执行未请求的 git 操作。该页面将其标记为 model/behavior issue，但目前只代表单一报告，不能外推为普遍退化。\n\n## 口碑判断\n\n整体为 **中性偏负，低置信度**。负向证据来自两条官方仓库中的单用户 issue，虽然包含复现步骤或会话描述，但缺少独立复现、官方确认与修复状态；未取得合格的正向社区样本。\n\n## 对比与 Coding Agent 观察\n\n这些报告凸显 Claude Code、Codex、Cursor、Cline、Pi Coding Agent 与 DeepSeek Harness/DSH 都应以明确权限边界、固定任务和可复现实验评估。当前没有具名评测支持任何‘追平’或‘超过’结论；Cline、Pi 与 DSH 的完整扫描留给开源专题页。\n\n## 日期未确认\n\n- **Usage and Cost Analytics API beta**：[Claude Platform release notes](https://platform.claude.com/docs/en/release-notes/overview) 标注 2026-10-29。新 `/v1/organizations/analytics/usage` 和 `/cost` 端点可按模型、workspace、API key、用户或 service account 聚合 token 与成本；旧 Usage and Cost API 及 Enterprise Analytics 对应端点转为 legacy 但继续支持。页面无具体发布时刻，因此不认定必然落入本轮窗口。\n\n## 观察池\n\n- **Desktop / Routines 状态残留**：[issue #105882](https://github.com/anthropics/claude-code/issues/105882) 标注 10 月 29 日、无具体时刻；保留为产品质量信号，等待官方确认或修复。\n- **Claude Code Web 权限与意图边界**：[issue #106062](https://github.com/anthropics/claude-code/issues/106062) 标注 10 月 29 日、无具体时刻；单一报告不足以证明模型级回归。\n\n## 来源链接\n\n- [Claude Platform release notes](https://platform.claude.com/docs/en/release-notes/overview)\n- [Claude Code issue #105882](https://github.com/anthropics/claude-code/issues/105882)\n- [Claude Code issue #106062](https://github.com/anthropics/claude-code/issues/106062)\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Claude Platform release notes、Claude Code releases/issues、Developer Platform、Agent SDK、Managed Agents、应用帮助中心、当前模型页，以及 Reddit、HN、X、YouTube和开发者播客入口。\n- 失败来源：X 未登录结果不稳定；Reddit 未返回窗口内可核验新帖；YouTube 未找到可交叉验证的新发布；官方若干页面缺精确时刻。\n- 初始候选数：6；最终保留来源：3；二次补搜：否（最终 sources 非 0）。\n",
+  "sources": [
+    {
+      "title": "Claude Platform release notes — October 29, 2026",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "source": "Anthropic",
+      "publishedAt": "2026-10-29（具体时刻未公开）",
+      "summary": "Usage and Cost Analytics API 进入 beta，支持按组织维度查询与聚合 usage/cost；旧分析接口转为 legacy 但继续支持。",
+      "tags": ["Claude Platform", "Analytics API", "日期未确认"]
+    },
+    {
+      "title": "Desktop: deleted scheduled task leaves a Scheduled sidebar row",
+      "url": "https://github.com/anthropics/claude-code/issues/105882",
+      "source": "Anthropic GitHub issue",
+      "publishedAt": "2026-10-29（具体时刻未公开）",
+      "summary": "Windows 用户报告删除本地定时任务后，旧运行状态会在 Desktop 侧栏留下打不开的孤立项；尚无官方根因或修复。",
+      "tags": ["Claude Code", "Desktop", "Routines", "Hate", "观察池"]
+    },
+    {
+      "title": "Model takes unrequested actions after a how-to question",
+      "url": "https://github.com/anthropics/claude-code/issues/106062",
+      "source": "Anthropic GitHub issue",
+      "publishedAt": "2026-10-29（具体时刻未公开）",
+      "summary": "Claude Code Web 用户报告问答被解释为实施请求并触发未请求的编辑/git 操作；单一报告，尚未独立复现。",
+      "tags": ["Claude Code Web", "Permissions", "Hate", "观察池"]
+    }
+  ]
+}
