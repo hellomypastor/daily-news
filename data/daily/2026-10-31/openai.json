@@ -1,0 +1,62 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-10-31T10:56:56+08:00",
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Product / Research / Safety 官方列表",
+      "OpenAI Developers API changelog、models、deprecations、Responses API、Agents API、Agents SDK Python/TypeScript、Realtime API 文档",
+      "OpenAI Help Center ChatGPT release notes",
+      "openai/codex GitHub releases 与 changelog",
+      "OpenAI/Codex 官方产品入口与官方社交账号的公开索引",
+      "Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding、r/codex、r/OpenaiCodex",
+      "Hacker News newest/Algolia、YouTube 与可信开发者检索"
+    ],
+    "failedSources": [
+      "OpenAI 官方社交账号：公开搜索结果未稳定返回可核验的当日帖文时间线",
+      "Reddit 当日检索：未找到可同时核验发布时间与具体产品体验的有效样本",
+      "Hacker News 当日检索：未找到与本轮新增直接对应且可核验的讨论",
+      "OpenAI 页面 OpenGraph 图片：本轮入选页面未暴露可确认出处的公开题图"
+    ],
+    "candidateCount": 9,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-10-30 10:56:56 至 2026-10-31 10:56:56（Asia/Shanghai）。本轮确认 1 条具备精确发布时间、严格落在窗口内的 Codex CLI 更新；另有 3 条 OpenAI 官方页面仅标注 10 月 30 日而未给出时刻，保留在‘日期未确认’而不冒充严格窗口事实。API changelog 在本窗口内未见新条目。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品 | 本轮状态 | 证据与说明 |\n|---|---|---|\n| Codex CLI | **有更新** | [openai/codex 0.166.0](https://github.com/openai/codex/releases/tag/rust-v0.166.0) 于 2026-10-30 01:44:31 +08:00 发布，新增键盘驱动的 transcript 选择与搜索、`codex queue --resume`、`codex doctor --network-only`，并改善安全阻断说明；同时修复 resume/fork 权限、线程恢复、重连与 reasoning-token 计数等问题。 |\n| VS Code / JetBrains 集成 | 无新增 | 检查官方 Codex 入口、GitHub release 与公开 changelog，未见窗口内独立发布。 |\n| Codex cloud / remote tasks / PR agents | 无新增 | 检查官方产品入口、帮助文档与发布说明，未见窗口内新公告。 |\n| ChatGPT agentic mode / Work / dots | 无新增 | 官方 release notes 未见窗口内 Agent 能力更新。 |\n| Agents API / 当前 Agent 构建产品 | 无新增 | API changelog 最近可见条目早于窗口；本轮未新增托管会话、沙箱或编排能力。 |\n| Responses API | 无新增 | API changelog 未见窗口内新条目。 |\n| Agents SDK（Python / TypeScript） | 无新增 | 检查官方文档、SDK 与公开 release 索引，未见窗口内可核验发布。 |\n| Assistants API 迁移 / 弃用 | 无新增 | 检查官方 deprecations 与迁移文档，未见窗口内状态变化。 |\n| Realtime API | 无新增 | API changelog 未见窗口内新条目。 |\n| 当前 GPT / reasoning / Codex 模型族 | 无新增 | 官方模型与 API changelog 未见窗口内新模型发布；CLI 0.166.0 只是把既有 GPT-6.1 Terra 加入更多内置模型目录。 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品面 | 本轮状态 |\n|---|---|\n| 浏览器 / Operator 能力、Desktop apps、GPTs / GPT Store、Canvas、Sora / video、GPT Image / DALL·E、Voice、Connectors / MCP | 未见窗口内可核验的独立能力更新。 |\n| iOS / Android 账户切换 | OpenAI [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) 标注 2026-10-30，称移动端开始滚动推出双账户登录与切换；页面未给具体发布时间，故列入下方‘日期未确认’。 |\n\n## Tier 3：企业、安全与行业产品\n\n本轮未见 Enterprise、Business、Edu、Gov、Science 或行业方案的严格窗口内产品发布。OpenAI 在 10 月 30 日发布两篇训练数据与版权政策文章，但都缺少具体时刻，见‘日期未确认’。\n\n## 官方更新（已核验，按时间倒序）\n\n### Codex CLI 0.166.0：transcript 操作、队列恢复与网络诊断\n\n[官方 GitHub release](https://github.com/openai/codex/releases/tag/rust-v0.166.0) 给出精确发布时间 2026-10-29 17:44:31 UTC（上海时间 10 月 30 日 01:44:31），严格落在本轮窗口。对日常编码最直接的变化是 transcript 可用键盘按词/行/页选择并搜索、队列消息可恢复未加载线程、网络诊断可单独运行；恢复/分叉权限、线程恢复与重连等修复则降低长任务中断后的状态错乱风险。\n\n## Love\n\n本轮没有发现同时满足‘当日、可核验、独立用户体验’条件的正向社区样本；官方发布不计作正向口碑。\n\n## Hate\n\n本轮没有发现同时满足‘当日、可核验、独立用户体验’条件的负向社区样本。搜索命中的配额、复制和桌面端体验讨论均明显早于窗口，不据此推断今日口碑。\n\n## 情绪判断\n\n**中性，低置信度。** 依据是窗口内缺少可核验社区样本，而不是正负反馈相互抵消。唯一严格窗口内的官方变更主要改善 Codex CLI 操作与恢复可靠性；这能说明产品方向，不能代表用户满意度。\n\n## 比较与竞品信号\n\n本轮未发现具名评测或可复现实验足以比较 Codex 与 Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH。较旧社区帖中的主观迁移建议不作为‘追平’或‘超过’证据；相关 harness 的完整扫描见开源专题页。\n\n## 日期未确认\n\n- **ChatGPT 移动端账户切换**：OpenAI [发布说明](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) 标注 2026-10-30，称 iOS 与 Android 正在滚动推出账户切换，可同时保持最多两个账户登录；未提供具体发布时间，无法确认是否严格晚于窗口起点。\n- **网站 AI 训练偏好通用信号**：OpenAI [官方文章](https://openai.com/index/helping-websites-express-ai-training-preferences/) 标注 2026-10-30，宣布未来数月将尊重 robots.txt 中由 IETF AI Preferences 工作组推动的通用训练偏好信号；现有 crawler controls 继续适用。文章未给具体时刻。\n- **合理使用立场材料**：OpenAI [官方汇编](https://openai.com/index/fair-use-benefits-everyone/) 标注 2026-10-30，集中呈现多方在相关诉讼中支持 AI 训练适用合理使用的材料。这是公司政策/法律立场，不是产品发布，且页面未给具体时刻。\n\n## 观察池\n\n- API changelog 最近可见的 10 月 26 日 GPT-6.1 Terra 条目已超出 24 小时窗口，本轮仅用于核对‘当前模型族’，不重复收录为今日动态。\n- 搜索命中的 Codex 配额、终端复制、桌面端性能和 Work/Codex 差异讨论均早于本轮窗口；没有新事件改变其解释，因此不列入 `sources`，避免把旧口碑伪装成今日趋势。\n\n## 来源链接\n\n1. [openai/codex 0.166.0 release](https://github.com/openai/codex/releases/tag/rust-v0.166.0)\n2. [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)\n3. [Making it easier for websites to express AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences/)\n4. [Fair use benefits everyone](https://openai.com/index/fair-use-benefits-everyone/)\n\n## 采集状态\n\n- 已检查：OpenAI News/Product/Research/Safety，Developers API changelog、models、deprecations、Responses API、Agents API、Agents SDK Python/TypeScript、Realtime API，ChatGPT release notes，openai/codex GitHub releases，官方产品与社交公开索引；并抽样 Reddit、Hacker News、YouTube 与可信开发者检索。\n- 失败/受限：官方社交公开时间线无法稳定核验；Reddit 与 Hacker News 未取得当日有效体验样本；入选页面未发现可确认出处的公开 OpenGraph 配图，因此本页不配置图片。\n- 初始候选 9 条；保留 4 个来源（1 条精确落窗、3 条日期内但时刻未确认）；未运行二次补搜（最终来源不为 0）。\n",
+  "sources": [
+    {
+      "title": "Codex CLI 0.166.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-10-30 01:44 +08:00",
+      "summary": "Codex CLI 新增 transcript 键盘选择与搜索、队列恢复和网络诊断，并修复恢复、分叉与重连可靠性问题。",
+      "tags": ["Codex", "CLI", "Agent"]
+    },
+    {
+      "title": "ChatGPT release notes：移动端账户切换",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI Help Center",
+      "publishedAt": "",
+      "summary": "页面标注 2026-10-30，称 iOS 与 Android 正在滚动推出最多两个账户的登录与切换；具体时刻未确认。",
+      "tags": ["ChatGPT", "日期未确认"]
+    },
+    {
+      "title": "Making it easier for websites to express AI training preferences",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences/",
+      "source": "OpenAI",
+      "publishedAt": "",
+      "summary": "OpenAI 宣布计划尊重 robots.txt 中的通用 AI 训练偏好信号；页面仅标注 2026-10-30，具体时刻未确认。",
+      "tags": ["Policy", "Safety", "日期未确认"]
+    },
+    {
+      "title": "Fair use benefits everyone",
+      "url": "https://openai.com/index/fair-use-benefits-everyone/",
+      "source": "OpenAI",
+      "publishedAt": "",
+      "summary": "OpenAI 汇编多方在相关诉讼中支持 AI 训练适用合理使用的材料；属于公司立场，页面具体时刻未确认。",
+      "tags": ["Policy", "Legal", "观察池", "日期未确认"]
+    }
+  ]
+}

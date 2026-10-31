@@ -1,0 +1,92 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": [
+    "AI",
+    "Agent",
+    "Industry",
+    "Research"
+  ],
+  "order": 40,
+  "updatedAt": "2026-10-31T11:24:00+08:00",
+  "image": {
+    "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_ConnectedApps_1027_2.width-1300.png",
+    "alt": "Google Connected Apps Platform 在 Search 与 Gemini 间连接应用的界面示意图",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+    "caption": "图片来源：Google 官方博客"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Engineering / Research（行业交叉检查；相关内容详见 Claude 专题页）",
+      "OpenAI News / Research / Developer Changelog（行业交叉检查；相关内容详见 OpenAI 专题页）",
+      "Google DeepMind、Google Research、Google AI 官方博客",
+      "Meta AI 官方博客与 Meta Newsroom",
+      "Microsoft Research / Microsoft AI / Official Microsoft Blog",
+      "xAI/Grok 官方 News、开发者 Release Notes、Grok Bot Changelog、xai-org GitHub（强制检查；本窗口无新增）",
+      "Mistral News 与 Hugging Face 官方集成文章",
+      "Cohere 官方博客",
+      "Qwen / Alibaba / DAMO 官方博客与 Qwen Code 更新",
+      "ByteDance Seed / Doubao 官方入口",
+      "Baidu Research / 文心官方入口",
+      "Tencent Hunyuan 官方入口",
+      "DeepSeek API 更新与官方 GitHub",
+      "Zhipu / GLM、Moonshot / Kimi、StepFun、MiniMax 官方新闻与状态入口",
+      "NVIDIA Developer / Research 与 NVIDIA Hugging Face 组织",
+      "Hugging Face Blog / Papers",
+      "LangChain Blog / Changelog 与 LlamaIndex Blog",
+      "Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 的产品与生态信号（常规更新详见开源专题页）",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客最新列表"
+    ],
+    "failedSources": [
+      "部分中国厂商官方新闻列表依赖客户端渲染，搜索索引只能用于确认入口，未据此虚构条目",
+      "X 官方账号时间线在未登录环境不可稳定逐条读取",
+      "部分播客站点没有可机器读取的精确发布时间，未发现可核实的 24 小时新集"
+    ],
+    "candidateCount": 14,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-10-30 10:56 至 2026-10-31 10:56（Asia/Shanghai）**。严格 24 小时窗口内暂未发现能同时确认发布日期与具体时刻的重大厂商发布；本页保留 3 条可确认在 24–72 小时内的一手补充、1 条只有日历日期的 NVIDIA 技术案例，以及 1 条可能略超 72 小时边界的 Google 邻近信号。\n\n## 优先动态（过去 24 小时）\n\n本轮没有可用公开时间戳严格证明落入窗口的重大厂商发布。仅显示日期、无法判断当天具体时刻的候选移入“日期未确认”，避免把边界候选写成已确认的 24 小时新闻。\n\n## 例行扫描\n\n| 厂商 / 机构 | 状态 | 说明 |\n|---|---|---|\n| Anthropic、OpenAI | 已检查 | 未在本页重复无新增内容；交叉内容分别详见 Claude 专题页、OpenAI 专题页。 |\n| Google、Meta、Microsoft、Mistral、Cohere | 已检查 | 未发现可严格落入 24 小时窗口、且有公开原文时间证据的新发布。 |\n| xAI / Grok | 已强制检查 | 已查官方 News、API Release Notes、Grok Bot Changelog 与官方 GitHub；窗口内无新的模型、API、DeepSearch、语音、编码、工具调用或 Agent 发布。 |\n| Qwen / Alibaba、ByteDance、Baidu、Tencent、DeepSeek | 已检查 | 本窗口无可核实新发布。 |\n| Zhipu、Moonshot / Kimi、StepFun、MiniMax | 已检查 | 本窗口无可核实新发布；状态页事故不等同产品发布，未作为正文动态。 |\n| NVIDIA、Hugging Face、LangChain、LlamaIndex | 已检查 | NVIDIA / Hugging Face 有日期边界候选，见下文。 |\n| Cline、Pi、DeepSeek Harness / DSH | 已检查行业信号 | 未发现合作、融资、企业采用或生态级新信号；常规仓库动态详见开源专题页。 |\n\n## 近两日补充（24–48 小时）\n\n当前没有仅凭公开日期即可稳定归入 24–48 小时区间的条目。\n\n## 近三日补充（48–72 小时）\n\n| 厂商 / 机构 | 标题 | 类型 | 日期 / 状态 | 摘要与意义 |\n|---|---|---|---|---|\n| IBM Granite / Hugging Face | [Granite Switch 4.1.1：像软件一样更新模型](https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1) | 模型补丁 / 架构 | 2026-10-29，已核实 | 4.1.1 在不重训基础模型的前提下更新语音识别与 Decision adapter，并预告 Adapter SDK。意义在于把模型能力拆成可独立迭代、测试和部署的适配器版本。 |\n| Hugging Face 等 | [Project ProtoStar：让公共资助科学成果变得 AI-ready](https://huggingface.co/blog/announcing-project-protostar) | 开放科学 / 数据基础设施 | 2026-10-29，已核实 | 高校、研究机构与 Hugging Face 合作推动数据集、模型和代码以机器可操作格式发布，首个挑战聚焦气候风险情报。它补足了科学 Agent 所需的可发现、可复用研究资产层。 |\n| Mistral / Hugging Face | [Welcome Le Chonk：Mistral Large 4 登陆 Hugging Face](https://huggingface.co/blog/mistral-large4) | 模型生态 / 推理集成 | 2026-10-29，已核实 | Hugging Face 介绍 Mistral Large 4 的模型与 Transformers/vLLM 生态接入；这是发布后的工程可用性信号，而非本窗口新模型首发。 |\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 和厂商播客入口均已检查；未找到同时具备公开原文与可核实 24 小时发布时间的新集，不以搜索摘要补条目。\n\n## 日期未确认\n\n- **NVIDIA Nemotron 本地语音 Agent 案例**：NVIDIA 团队在 Hugging Face 发布 [Building a Haunted House with NVIDIA Nemotron Open Models](https://huggingface.co/blog/nvidia/nemotron-halloween)，页面标注 2026-10-30，但无具体时刻，因此无法确认是在本轮 10:56 截止前的 24 小时内，暂不计入“优先动态”。文章展示 ASR、Nemotron 3.5 Bolt、Magpie TTS 与 Audio2Face-3D 在单工作站上的级联 Agent，属于可复现架构案例，不等同新模型发布。\n\n## 观察池\n\n- **Google Connected Apps Platform**：Google 于 2026-10-28 发布 [Build and manage Connected Apps in one place](https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/)，允许开发者通过云端 MCP 或 Android MCP 一次接入 Search 与 Gemini，并在控制台查看流量、延迟和错误。因原文只有日期、缺少具体时刻，在本轮截止点可能略超 72 小时，故作为边界观察信号而非近三日确认项。\n\n## 一句话总结\n\n严格 24 小时内没有可精确落窗的重大发布；近三日的主线是模块化模型更新、开放科学数据基础设施和大模型工程生态接入，xAI/Grok 强制入口本轮无新增。\n\n## 采集状态\n\n- 已检查来源：19 组，覆盖规范要求的全球厂商、国内厂商、研究机构、harness 行业信号和播客；xAI/Grok 已单独检查 News、API Release Notes、Bot Changelog 与 GitHub。\n- 失败来源：部分中国厂商列表依赖客户端渲染；X 时间线需登录；部分播客缺少机器可读精确时间。以上入口仅记录限制，没有据此编造事实。\n- 初始候选：14 条。\n- 最终保留：5 条来源（3 条近三日、1 条日期未确认、1 条观察池）。\n- 二次补搜：否；最终来源不为 0。",
+  "sources": [
+    {
+      "title": "Granite Switch 4.1.1 — Update models like you update software",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "source": "IBM Granite / Hugging Face",
+      "publishedAt": "2026-10-29",
+      "summary": "IBM Granite 发布兼容性补丁，独立更新语音识别和 Decision adapter，并预告 Adapter SDK。",
+      "tags": ["模型", "Adapter", "近三日补充"]
+    },
+    {
+      "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+      "url": "https://huggingface.co/blog/announcing-project-protostar",
+      "source": "Hugging Face",
+      "publishedAt": "2026-10-29",
+      "summary": "跨机构开放科学计划推动公共资助研究的数据、模型和代码以 AI-ready 形式发布。",
+      "tags": ["开放科学", "数据", "近三日补充"]
+    },
+    {
+      "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+      "url": "https://huggingface.co/blog/mistral-large4",
+      "source": "Hugging Face / Mistral",
+      "publishedAt": "2026-10-29",
+      "summary": "Hugging Face 说明 Mistral Large 4 的模型发布与 Transformers、vLLM 工程接入。",
+      "tags": ["Mistral", "推理", "近三日补充"]
+    },
+    {
+      "title": "Building a Haunted House with NVIDIA Nemotron Open Models",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "source": "NVIDIA / Hugging Face",
+      "publishedAt": "2026-10-30",
+      "summary": "NVIDIA 展示由语音识别、小语言模型、TTS 和面部动画组成的本地交互 Agent；具体发布时间不明。",
+      "tags": ["NVIDIA", "Voice Agent", "日期未确认"]
+    },
+    {
+      "title": "Build and manage Connected Apps in one place",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+      "source": "Google",
+      "publishedAt": "2026-10-28",
+      "summary": "Google 推出 Connected Apps Platform 预览，用统一控制台将应用接入 Search 与 Gemini。",
+      "tags": ["Google", "MCP", "观察池"]
+    }
+  ]
+}
