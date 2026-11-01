@@ -1,0 +1,111 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-11-01T00:00:00+08:00"
+updatedAt: "2026-11-01T10:50:48+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "OpenAI Java SDK 4.95.0"
+featuredUrl: "https://github.com/openai/openai-java/releases/tag/v4.95.0"
+featuredSummary: "Java SDK 新增 Agent context compaction、session review / tool settings、实验性 time awareness 与 Responses hosted-tool usage accessors。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-10-31 08:55 +08:00"
+featuredTags: ["Developer Platform","Java SDK","Agent"]
+tags:
+  - "观察池"
+  - "日期未确认"
+  - "社区反馈"
+  - "Agent"
+  - "ChatGPT"
+  - "Codex"
+  - "Codex Desktop"
+  - "Developer Platform"
+  - "Java SDK"
+  - "OpenAI"
+  - "Policy"
+  - "Python SDK"
+  - "Responses API"
+  - "Web"
+  - "Windows"
+---
+
+## 今日概览
+
+采集窗口：**2026-10-31 10:50:48 至 2026-11-01 10:50:48（Asia/Shanghai）**。本轮没有发现发布时间可明确落入窗口的 OpenAI 官方产品发布。近两日背景中，OpenAI Python SDK `3.42.0` 与 Java SDK `4.95.0` 同步加入 Agent context compaction、Agent session review / tool settings、实验性 Agent time awareness，以及 Responses hosted-tool usage 访问能力；但两者均在窗口开始前约两小时发布，因此只进入观察池，不包装成 24 小时新增。Codex 稳定版最近一次公开 release 为 10 月 29 日，同样不列作新增。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 方向 | 本轮状态 | 证据与判断 |
+| --- | --- | --- |
+| Codex CLI | 无新增 | 已查官方 releases；最新稳定版 `0.166.0` 发布于窗口前。 |
+| VS Code / JetBrains 集成 | 无新增 | 官方 release、文档和社区检索未见窗口内独立发布。 |
+| Codex 云端 / 远程任务 / PR Agent | 无新增 | 未发现窗口内官方公告。 |
+| ChatGPT agentic mode | 无新增 | ChatGPT release notes 未见窗口内可核实条目。 |
+| 当前官方 Agent 构建产品 | 窗口内无新增 | 近两日 SDK 背景见观察池。 |
+| Responses API | 窗口内无新增 | SDK hosted-tool usage accessor 在窗口前发布，不外推服务端发布范围。 |
+| Agents SDK Python / TypeScript | 无新增 | 官方 releases / changelog 未发现窗口内独立版本。 |
+| Assistants API 弃用 / 迁移 | 无新增 | 官方 deprecation 与 migration 文档未发现窗口内变化。 |
+| Realtime API | 无窗口内新增 | Python SDK 的 SIP / WebSocket 支持属于窗口前近两日背景。 |
+| GPT、reasoning 与 Codex 模型家族 | 无新增 | 官方 models / release notes 未发现窗口内新模型、别名或退役变化。 |
+
+## Tier 2：消费端功能
+
+| 方向 | 本轮状态 |
+| --- | --- |
+| 浏览器 / Operator 能力 | 无新增 |
+| 桌面应用 | 无官方新增；社区仍有 Windows 连续性反馈，见 Hate |
+| GPTs / GPT Store | 无新增 |
+| Canvas | 无新增 |
+| Sora / 视频 | 无新增 |
+| GPT Image / DALL·E | 无新增 |
+| Voice | 无新增 |
+| Connectors / MCP | 无新增 |
+
+## Tier 3：企业、教育、安全与行业
+
+- **出版与训练偏好（日期未确认）**：OpenAI 在 10 月 30 日公告称，将在未来数月实现对 robots.txt 中跨提供商共同训练偏好信号的支持；页面只有日期、没有时刻，无法确认是否落入 24 小时窗口，故不列为已验证窗口动态。[官方公告](https://openai.com/index/helping-websites-express-ai-training-preferences/)
+- Business、Enterprise、Edu、Gov、Science 与安全公告入口未发现窗口内可核实的独立发布。
+
+## 官方更新（最新在前）
+
+- **窗口内无可确认官方更新**。两项 SDK release 均早于窗口起点，见观察池。
+
+## Love
+
+- **配额调整撤回的正向反馈（低置信度）**：Developer Community 一名 Pro 用户在 10 月 30 日更新旧帖，称官方帮助页显示原计划的 Pro 额度下调已取消，并表示这一决定对重度 Codex 用户有帮助；这是单一用户的转述与感受，不替代官方条款核验。[社区帖](https://community.openai.com/t/pro-200-cut-from-20x-to-10x-how-can-customers-verify-what-these-multipliers-actually-mean/1402804)
+
+## Hate
+
+- **长任务目标漂移**：一名用户在 10 月 31 日更新旧帖，称 Pro 长任务会偏离原始目标、增加监督成本；回复者建议把不可编辑目标和验收条件作为检查点依据。属于个体体验，不能外推为整体质量趋势。[社区帖](https://community.openai.com/t/i-can-t-trust-codex-with-long-tasks-anymore-it-keeps-moving-the-goalposts/1407513)
+- **Windows Desktop 历史与任务连续性**：一名用户在 10 月 31 日继续报告可见历史缺失、compaction 后回复旧请求等问题，并提供版本和关联 issue；OpenAI Support 在 10 月 30 日回复建议保留证据、更新并重启应用，同时说明 AGENTS.md 提示不能强制审批。这是有详细材料的社区报告，但根因与影响范围仍未由官方确认。[社区帖](https://community.openai.com/t/codex-desktop-on-windows-missing-messages-stale-task-responses-and-unexpected-new-chat-creation-anyone-else-seeing-this/1396266)
+
+## 口碑判断
+
+整体情绪：**混合偏负面，置信度低**。一条样本肯定额度下调被撤回，另外两条聚焦长任务漂移与 Windows 会话连续性；样本来自自选择发帖者，不能代表总体用户。官方发布不计作正面口碑。
+
+## 对比与替代工具信号
+
+本轮检索了 Claude Code、Cursor、Cline、Pi Coding Agent 与 DeepSeek Harness / DSH 对比关键词，没有发现具名基准或可复现实验，因此不作“追平”或“超过”判断；后三者完整产品扫描归开源 Harness 雷达。
+
+## 日期未确认
+
+- [OpenAI 支持跨提供商 robots.txt 训练偏好信号](https://openai.com/index/helping-websites-express-ai-training-preferences/)：官方日期为 2026-10-30，但未给出时刻，无法判断是否落在本轮 24 小时窗口；公告称计划未来数月实施，现有 crawler 控制仍继续生效。
+
+## 观察池
+
+- **近两日 SDK 背景**：[Java SDK `4.95.0`](https://github.com/openai/openai-java/releases/tag/v4.95.0) 于 **2026-10-31 08:55 +08:00**发布；[Python SDK `3.42.0`](https://github.com/openai/openai-python/releases/tag/v3.42.0) 于 **08:26 +08:00**发布。两者同步扩展 Agent compaction、session review / tool settings、实验性 time awareness 与 hosted-tool usage；Python 版另含图像编辑、外部密钥、SIP / Realtime 和 WebSocket 支持。它们均早于 10:50:48 的窗口起点。
+- Developer Community 的配额透明度、长任务目标漂移与 Windows Desktop 连续性讨论均为低置信度个体信号；互动和更新时间不等同于问题首次发生时间。
+- Codex `0.166.0` 稳定版发布于 10 月 29 日，已超出窗口，仅用于确认版本入口。
+
+## 来源链接
+
+- [OpenAI Java SDK 4.95.0](https://github.com/openai/openai-java/releases/tag/v4.95.0)
+- [OpenAI Python SDK 3.42.0](https://github.com/openai/openai-python/releases/tag/v3.42.0)
+- [OpenAI 支持网站表达 AI 训练偏好](https://openai.com/index/helping-websites-express-ai-training-preferences/)
+- [Pro 额度与透明度讨论](https://community.openai.com/t/pro-200-cut-from-20x-to-10x-how-can-customers-verify-what-these-multipliers-actually-mean/1402804)
+- [Codex 长任务目标漂移反馈](https://community.openai.com/t/i-can-t-trust-codex-with-long-tasks-anymore-it-keeps-moving-the-goalposts/1407513)
+- [Codex Desktop Windows 连续性反馈](https://community.openai.com/t/codex-desktop-on-windows-missing-messages-stale-task-responses-and-unexpected-new-chat-creation-anyone-else-seeing-this/1396266)
+
+## 采集状态
+
+- 已检查：OpenAI News / Research / Company、开发者文档 / changelog / models / deprecations、ChatGPT 与 Enterprise / Edu release notes、Codex、Agents SDK Python / TypeScript、Python / Node / Java SDK、Developer Community、Reddit、Hacker News、X、YouTube / 播客，以及主流 Coding Agent 对比关键词。
+- 失败来源：X 未得到可直接核验时间戳的窗口条目；Reddit / HN 没有独立有用候选；YouTube / 播客没有可核实新增；OpenAI 文章未核验到可靠配图，GitHub OpenGraph endpoint 返回 429。
+- 初始候选：**14**；累计保留来源：**6**；二次补搜：**否**（最终来源不为 0）。
+- 图片：**未配置**，因为未能确认公开可访问且来源明确的故事图片。
