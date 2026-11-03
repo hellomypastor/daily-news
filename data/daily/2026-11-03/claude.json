@@ -1,0 +1,74 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": [
+    "Claude",
+    "Claude Code",
+    "Anthropic",
+    "Agent"
+  ],
+  "order": 10,
+  "updatedAt": "2026-11-03T10:43:05+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom / Announcements / Research",
+      "Claude Help Center release notes",
+      "Anthropic Claude Code GitHub releases",
+      "Anthropic Claude Code Action GitHub releases",
+      "Claude Platform docs：模型与弃用状态",
+      "Claude Developer Platform / Agent SDK / Managed Agents 文档",
+      "Claude Code CLI、VS Code 与 JetBrains 官方入口",
+      "Claude Skills、Plugins、Connectors、Cowork、Design、Tag/@Claude 官方入口",
+      "Claude Chrome / Desktop / Voice / Microsoft 365 官方入口",
+      "SEC EDGAR：Anthropic 公司申报",
+      "Reddit r/ClaudeAI、r/Anthropic、r/LocalLLaMA",
+      "Hacker News、X、YouTube 与可信媒体检索"
+    ],
+    "failedSources": [
+      "X：未登录搜索结果不稳定，无法系统核验原帖时间与互动量",
+      "Reddit：搜索未返回采集窗口内可独立核实、且具代表性的 Claude 口碑样本",
+      "Hacker News：未发现采集窗口内可确认的 Claude 产品讨论"
+    ],
+    "candidateCount": 5,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-11-02 10:43 至 2026-11-03 10:43（Asia/Shanghai）**。过去 24 小时未发现 Anthropic 官方新产品发布、模型发布或 Claude Code 新版；窗口内最明确的新信号是 Anthropic 向 SEC 提交 S-1/A 修订文件，属于公司与生态层面的披露，不等同于 Claude 产品更新。\n\n## Tier 1：编码、Agent 与模型主轴\n\n| 产品 / 入口 | 状态 | 结论 |\n|---|---|---|\n| Claude Code CLI | 无新增 | 官方 GitHub releases 最新可见版本早于本轮 24 小时窗口。 |\n| VS Code 集成 | 无新增 | 未核实到窗口内独立发布。 |\n| JetBrains 集成 | 无新增 | 未核实到窗口内独立发布。 |\n| Managed Agents（sessions、webhooks、environments、memory stores） | 无新增 | 已检查相关官方文档与产品入口，未发现窗口内公告。 |\n| Skills 与 marketplaces | 无新增 | 已检查官方帮助与产品入口。 |\n| Claude Developer Platform | 无新增 | 未发现窗口内平台公告或变更日志条目。 |\n| Agent SDK | 无新增 | 未发现窗口内官方发布。 |\n| Cowork | 无新增 | 未发现窗口内官方发布。 |\n| Design | 无新增 | 未发现窗口内官方发布。 |\n| Tag / @Claude sessions | 无新增 | 未发现窗口内官方发布。 |\n| 当前官方 Sonnet、Opus、Haiku 编码模型 | 无新增 | 未发现窗口内新模型或可用性变更；名称与状态以官方模型页为准。 |\n\n## Tier 2：客户端与创作入口\n\nChrome / browser agent、Desktop / Preview、Marketplace / Connectors / Plugins、创意与视频能力、Voice Mode、Microsoft 365 集成均已检索；本轮没有核实到过去 24 小时内的新官方发布，合并标记为 **无新增**。\n\n## Tier 3：行业应用观察\n\n安全、科学、金融服务、生命科学、医疗、法律、政府、非营利、教育和客户支持入口均已检查。窗口内没有新的官方垂直产品公告；生命科学近期进展保留在下方“观察池”，明确标记为较旧背景。\n\n## 官方与生态动态（最新在前）\n\n### Anthropic 提交 S-1/A 修订文件\n\n美国 SEC 的 [Anthropic S-1/A 申报索引](https://www.sec.gov/Archives/edgar/data/2130357/0001628280-26-068676-index.htm) 显示文件于 2026-11-02 09:24:24（美国监管披露时间）获接收。它更新了公司上市申报材料，是 Anthropic 公司治理、资本与基础设施投入的第一手披露，但不代表 Claude 产品、模型或定价在本轮发生变化。\n\n[AP 对修订申报的当日报道](https://apnews.com/article/anthropic-ipo-revenue-ai-claude-0cbd1a649a4cce904be59af8f6b30179) 提炼了收入、亏损和算力承诺等信息。该文属于可信二手解读；具体数字应以 SEC 原文口径为准，不把媒体归纳外推为产品采用或用户口碑。\n\n## Love\n\n本轮没有找到采集窗口内、时间和上下文均可核实的代表性正向社区样本。官方公告不计作正向口碑。\n\n## Hate\n\n本轮没有找到采集窗口内、时间和上下文均可核实的代表性负向社区样本。\n\n## 口碑判断\n\n**结论：证据不足，置信度低。** 当前可确认的新材料主要是公司监管披露，而非用户体验讨论；因此不对 Claude Code 稳定性、模型质量、限额或价格趋势下结论。\n\n## 对比与竞争观察\n\n本轮未发现可以支持 Claude Code 与 Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH 之间“追平”或“超过”结论的具名评测或可复现实验。Cline、Pi 与 DSH 的完整版本扫描由开源专题负责。\n\n## 日期未确认\n\n未保留日期无法确认却可能被误写为本轮新品的候选。搜索结果中出现的产品名均未在缺少官方原文时当作事实。\n\n## 观察池\n\n- **较旧背景｜生命科学：** Anthropic 于 2026-10-27 发布 [Claude 加速药物研发的早期进展](https://www.anthropic.com/research/early-progress-drug-development)，记录 Claude Code 与多 Agent 工作流在药物研发中的早期、以临床前研究为主的案例。该页面早于本轮窗口，仅用于解释近期媒体再次讨论的来源，不作为今日新品或已验证临床成果。\n\n## 来源链接\n\n1. [SEC：Anthropic Form S-1/A（2026-11-02）](https://www.sec.gov/Archives/edgar/data/2130357/0001628280-26-068676-index.htm)\n2. [AP：Anthropic 修订 IPO 申报报道](https://apnews.com/article/anthropic-ipo-revenue-ai-claude-0cbd1a649a4cce904be59af8f6b30179)\n3. [Anthropic Research：药物研发早期进展（较旧背景）](https://www.anthropic.com/research/early-progress-drug-development)\n\n## 采集状态\n\n- 已检查来源：Anthropic Newsroom / Research、Claude 帮助中心发布说明、Claude Code 与 Claude Code Action GitHub releases、Claude Platform / Agent SDK / Managed Agents 文档、CLI / IDE / Skills / Cowork / Design / Tag / 浏览器 / Desktop / Voice / Microsoft 365 入口、SEC EDGAR，以及 Reddit、Hacker News、X、YouTube 和可信媒体。\n- 失败来源：X 未登录搜索不稳定；Reddit 与 Hacker News 未返回窗口内可独立核实且具代表性的口碑样本。\n- 初始候选数：5；保留来源数：3。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Form S-1/A - Anthropic, PBC",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/0001628280-26-068676-index.htm",
+      "source": "U.S. Securities and Exchange Commission",
+      "publishedAt": "2026-11-02 09:24:24 -05:00",
+      "summary": "SEC 申报索引确认 Anthropic 于 2026-11-02 提交并获接收 S-1/A 修订文件。",
+      "tags": [
+        "Anthropic",
+        "企业动态"
+      ]
+    },
+    {
+      "title": "Anthropic posts $17B quarterly revenue but losses continue ahead of IPO",
+      "url": "https://apnews.com/article/anthropic-ipo-revenue-ai-claude-0cbd1a649a4cce904be59af8f6b30179",
+      "source": "Associated Press",
+      "publishedAt": "2026-11-03 01:06 +08:00",
+      "summary": "AP 对 Anthropic 当日 S-1/A 修订申报中的收入、亏损和基础设施承诺作了二手归纳。",
+      "tags": [
+        "Anthropic",
+        "可信二手来源"
+      ]
+    },
+    {
+      "title": "Early progress on accelerating drug development with Claude",
+      "url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "source": "Anthropic Research",
+      "publishedAt": "2026-10-27",
+      "summary": "较旧背景：Anthropic 总结 Claude 与 Claude Code 在生命科学和药物研发合作中的早期、主要为临床前的应用。",
+      "tags": [
+        "Claude Code",
+        "生命科学",
+        "较旧背景",
+        "观察池"
+      ]
+    }
+  ]
+}

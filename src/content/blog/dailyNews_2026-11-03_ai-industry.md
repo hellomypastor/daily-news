@@ -1,0 +1,80 @@
+---
+title: "主流 AI / Agent 厂商技术动态日报"
+date: "2026-11-03T00:00:00+08:00"
+updatedAt: "2026-11-03T10:43:05+08:00"
+description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredTitle: "美团发布LongCat-2.5大模型，“国模国芯”实现新突破"
+featuredUrl: "https://www.meituan.com/news/NN261102280001343"
+featuredSummary: "美团官方确认 LongCat-2.5 于 11 月 2 日发布，定位为面向长程 Agent 任务的原生多模态模型，并披露 1.6 万亿总参数及软件开发方向。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-11-02 00:00 +08:00"
+featuredTags: ["LongCat","Agent","Coding","Multimodal"]
+featuredImage: "https://img.meituan.net/smartvenus/3fbd39b4a272c11aa24455684cb78adc1719594.png@100w"
+featuredImageAlt: "美团 LongCat-2.5 官方发布配图"
+featuredImageCaption: "图片来源：美团官方新闻稿"
+tags:
+  - "Agent"
+  - "AI"
+  - "Coding"
+  - "Industry"
+  - "LongCat"
+  - "Multimodal"
+  - "Research"
+---
+
+## 今日概览
+
+采集窗口：**2026-11-02 10:43 至 2026-11-03 10:43（Asia/Shanghai）**。本轮确认 1 条窗口内厂商技术动态：美团 LongCat-2.5 完成正式发布与 API 上线。其余必查厂商、研究入口和播客在窗口内未发现可核验新增；未用旧闻填充。
+
+## 优先动态
+
+| 厂商 | 动态 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| 美团 LongCat | [美团发布 LongCat-2.5 大模型](https://www.meituan.com/news/NN261102280001343) | 模型 / Agent 编码 | 2026-11-02，官方确认 | 官方称 LongCat-2.5 是面向长程 Agent 任务的原生多模态模型，总参数 1.6 万亿，并强化商业分析与软件开发；能力与指标目前主要来自厂商材料。 | 把视觉理解、长程工具使用和复杂代码库任务放入同一模型，是中国厂商在 coding-agent 底座方向的明确信号。 |
+
+<figure class="source-image">
+  <a href="https://www.meituan.com/news/NN261102280001343"><img src="https://img.meituan.net/smartvenus/3fbd39b4a272c11aa24455684cb78adc1719594.png@100w" alt="美团 LongCat-2.5 官方发布配图" loading="lazy" /></a>
+  <figcaption><a href="https://www.meituan.com/news/NN261102280001343">图片来源：美团官方新闻稿</a></figcaption>
+</figure>
+
+## 常规更新
+
+本窗口未发现其他可由一手来源确认的常规产品、研究或平台更新。Anthropic 与 OpenAI 的相关动态分别详见 Claude 专题页、OpenAI 专题页；Coding Agent / Harness 的常规 release 详见开源专题页。
+
+## xAI / Grok 专项检查
+
+已检查 xAI News、API Changelog 与 Developer Release Notes，覆盖 Grok 模型/API、DeepSearch、语音、编码、工具调用和 Agent 能力。本窗口内无新增；未重复收录较旧的 Grok Voice 3.0 或既有工具能力。
+
+## 播客
+
+Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客本窗口内未发现可由节目官网确认的新集。
+
+## 近两日补充
+
+美团 LongCat-2.5 官方博客标注 11 月 1 日、API 变更日志标注 11 月 2 日；本页采用 11 月 2 日正式上线新闻稿作为主证据，避免把预告日期与可用日期混为一谈。
+
+## 近三日补充
+
+无新增。
+
+## 日期未确认
+
+无保留项。
+
+## 观察池
+
+- 搜索结果出现若干 11 月 2 日的聚合追踪条目，但无法替代厂商原文；仅用于发现，不列为来源。
+- LongCat-2.5 的厂商基准与同类模型对比尚待独立评测，本页不据此下“追平”或“超过”结论。
+
+## 来源链接
+
+- [美团发布 LongCat-2.5 大模型](https://www.meituan.com/news/NN261102280001343)
+
+## 一句话总结
+
+本轮行业主线是美团把原生多模态、长程 Agent 与编码能力合并到 LongCat-2.5；其他主流厂商在采集窗口内未见可核验新增。
+
+## 采集状态
+
+- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba、ByteDance、百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及指定播客；另查 Cline、Pi 与 DSH 的行业级信号。
+- 失败来源：部分社交时间线未登录不可稳定访问；部分动态列表缺少精确时间；部分播客平台需客户端。均改查官网、文档或公开索引，并未把无法核实内容写成事实。
+- 初始候选数：7；保留来源数：1；二次补搜：否（最终来源非 0）。
