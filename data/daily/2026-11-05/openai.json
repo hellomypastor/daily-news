@@ -1,0 +1,77 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-11-05T10:44:56+08:00",
+  "image": {
+    "url": "https://images.ctfassets.net/kftzwdyauwt9/6EYvL2y5CLXFr8E1pqoVUK/064e0d73b10087e20967b69ef0a06678/images-2-6-social.png?w=1600&h=900&fit=fill",
+    "alt": "OpenAI Images 2.6 官方发布配图",
+    "sourceUrl": "https://openai.com/index/introducing-images-2-6/",
+    "caption": "图片来源：OpenAI Images 2.6 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Research / Security 列表",
+      "OpenAI ChatGPT Release Notes",
+      "OpenAI Developers 文档、模型与 API 入口",
+      "OpenAI Codex GitHub releases 与 npm 版本页",
+      "OpenAI Developer Community announcements",
+      "Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding 与 Hacker News 检索",
+      "Tier 1：Codex CLI、IDE 集成、cloud/remote tasks、agentic mode、Responses API、Agents SDK、Assistants 迁移、Realtime API、GPT/reasoning/Codex 模型",
+      "Tier 2：browser/Operator、Desktop、GPT Store、Canvas、Sora、Images/DALL·E、Voice、Connectors/MCP",
+      "Tier 3：Enterprise、Business、Edu、Gov、Science、安全与行业方案"
+    ],
+    "failedSources": [
+      "Reddit 站内最新帖：搜索索引未返回采集窗口内可核验的新帖",
+      "X 官方账号与社区检索：未登录页面无法稳定读取时间线和互动量",
+      "Codex alpha release notes：GitHub 页面仅给出自动构建版本与时间，未提供变更说明"
+    ],
+    "candidateCount": 8,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-11-04 10:43 至 2026-11-05 10:43（Asia/Shanghai）。本轮确认 4 项官方动态：Images 2.6 覆盖 ChatGPT、Codex 与 API；OpenAI 公布大规模 Linux 内核漏洞发现与修补 Agent 流水线；Daybreak Red 进入 AWS GovCloud；Codex CLI 连续发布多个 alpha 构建。另保留 1 条来自开发者论坛的价格恢复信号，因关键证据是未公开邮件，仅作为观察项。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品/入口 | 状态 | 证据与判断 |\n|---|---|---|\n| Codex CLI | 有更新 | [GitHub Releases](https://github.com/openai/codex/releases) 显示 11 月 4 日发布 `0.167.0-alpha.5`、`0.167.0-alpha.3.1`、`0.168.0-alpha.1` 与 `0.168.0-alpha.2`；均为预发布构建且页面未附变更说明，不应等同稳定版功能发布。 |\n| Codex cloud/remote tasks、PR agents | 无新增 | 官方入口未见窗口内独立公告。 |\n| VS Code / JetBrains 集成 | 无新增 | 官方文档与发布入口未见窗口内独立公告。 |\n| ChatGPT agentic mode / agent-building products | 有技术信号 | [Linux 内核安全流水线](https://openai.com/index/a-thousand-fewer-paths-to-root/) 展示 Scout、Analyst、验证、利用评估、补丁生成与人工复核的多阶段 Agent 工作流。 |\n| Responses API / Agents SDK（Python、TypeScript） | 无新增 | 开发者文档与官方新闻未见窗口内版本公告。 |\n| Assistants API 迁移状态 | 无新增 | 未发现窗口内弃用或迁移日期变化。 |\n| Realtime API | 无新增 | 官方更新入口未见窗口内发布。 |\n| GPT、reasoning 与 Codex 模型家族 | 有研究信号 | 安全研究使用未发布的 cyber model，并与 GPT-5.6 Sol/Cyber 对照；这不是面向公众的新模型发布。 |\n\n## Tier 2：ChatGPT 体验与多模态\n\n| 产品/入口 | 状态 | 证据与判断 |\n|---|---|---|\n| Images / API 图像模型 | 有更新 | [Images 2.6](https://openai.com/index/introducing-images-2-6/) 已在 ChatGPT、Codex 和 API 全球上线；官方称生成速度提高 50%，API 提供 GPT-Image-2.6 Flare 与 Sunburst，并加入 GIF、图像标注、SVG 导出和 complexity 控制。 |\n| Browser/Operator、Desktop、GPTs/GPT Store、Canvas | 无新增 | ChatGPT Release Notes 与新闻列表未见窗口内条目。 |\n| Sora/video、Voice、Connectors/MCP | 无新增 | 官方更新入口未见窗口内条目。 |\n\n## Tier 3：企业、安全与行业方案\n\n- **政府安全部署**：[Daybreak Red in AWS GovCloud](https://openai.com/index/daybreak-red-aws-govcloud/) 于 11 月 4 日宣布 GPT-5.6 Cyber 向获批客户开放 AWS GovCloud (US-East) 接入；需 OpenAI 审批与 AWS 配置，官方强调推理数据不用于训练。\n- **安全研究**：[A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root/) 披露一次受控 Linux 内核研究：2,308 个候选、动态复现 1,724 个漏洞，并围绕 948 个不同本地提权漏洞形成补丁；总 API 成本约 121.3 万美元。OpenAI 明确要求人工研究员复核结果与补丁。\n- Enterprise、Business、Edu、Science 其余入口本轮无独立新增。\n\n## 官方更新（新到旧）\n\n1. **Images 2.6**（11 月 4 日）：面向 ChatGPT、Codex 与 API 的图像生成/编辑升级，官方原文与可用范围已核验。\n2. **Linux 内核自主安全流水线**（11 月 4 日）：重点不是单一模型跑分，而是从发现、验证、利用评估到补丁与人工复核的端到端系统证据。\n3. **Daybreak Red / AWS GovCloud**（11 月 4 日）：为政府安全团队提供受控的 cyber 模型接入路径。\n4. **Codex alpha 构建**（11 月 4 日）：版本存在已核验，但无 changelog，故只记录构建信号。\n\n## Love\n\n- 本轮没有找到采集窗口内、时间与互动量均可公开核验的独立社区正向样本。官方发布不计作正向口碑。\n\n## Hate\n\n- [开发者论坛价格讨论](https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726) 在 11 月 4 日新增回复，称开发者收到邮件，GPT-5.6 Sol 促销价将于 11 月 30 日结束。该回复对价格变动表达迁移与重新评测压力，但邮件原文未公开，因此仅作低置信度负向信号。\n\n## 口碑判断\n\n**中性，低置信度。** 可核验材料几乎全部来自官方发布；社区侧仅有一条论坛回复，样本不足以推断整体情绪。Images 2.6 的速度与控制能力需要真实用户长期反馈；安全流水线的数字来自 OpenAI 自身实验，不能直接外推为通用生产表现。\n\n## 对比与生产力观察\n\nOpenAI 的安全研究强调更强基础模型可能减少重型编排，但同时指出独立验证、隔离和人工复核仍不可省略。这个结论可作为 Codex、Claude Code、Cline、Pi Coding Agent、DeepSeek Harness/DSH 与 Cursor 等 harness 设计的评估维度，而不是“追平/超过”的证据；本轮没有具名基准支持产品排名。\n\n## 日期未确认\n\n- 无。入选官方条目均带 2026 年 11 月 4 日日期；Codex releases 带具体 GitHub 发布时间。\n\n## 观察池\n\n- **GPT-5.6 Sol 促销价可能于 11 月 30 日恢复**：仅由论坛用户转述未公开邮件，尚未在 OpenAI 定价页或正式公告中独立核验，不能作为已确认价格调整。来源见[论坛主题](https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726)。\n- Codex 0.168 alpha 构建缺少变更说明；待稳定版或正式 changelog 后再判断功能影响。\n\n## 来源链接\n\n- [Introducing Images 2.6](https://openai.com/index/introducing-images-2-6/)\n- [A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root/)\n- [Daybreak Red is now available in AWS GovCloud](https://openai.com/index/daybreak-red-aws-govcloud/)\n- [openai/codex Releases](https://github.com/openai/codex/releases)\n- [OpenAI Developer Community：GPT-5.6 Sol 价格讨论](https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726)\n\n## 采集状态\n\n- 已检查：OpenAI News/Research/Security、ChatGPT Release Notes、开发者文档与模型入口、Codex GitHub/npm、Developer Community、Reddit 与 Hacker News 检索，以及 Tier 1–3 所有指定产品入口。\n- 失败来源：Reddit 未返回窗口内可核验新帖；X 未登录无法稳定读取；Codex alpha 页面缺少变更说明。\n- 初始候选 8 条，保留 5 个来源；未触发二次补搜（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Introducing Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-04",
+      "summary": "Images 2.6 在 ChatGPT、Codex 与 API 上线，新增 Flare/Sunburst、GIF、标注、SVG 与复杂度控制。",
+      "tags": ["Images", "ChatGPT", "Codex", "API"]
+    },
+    {
+      "title": "A thousand fewer paths to root",
+      "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-04",
+      "summary": "OpenAI 披露多阶段 Agent 安全研究流水线及 Linux 内核漏洞复现、利用验证与补丁生成结果。",
+      "tags": ["Security", "Agent", "Research"]
+    },
+    {
+      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+      "url": "https://openai.com/index/daybreak-red-aws-govcloud/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-04",
+      "summary": "GPT-5.6 Cyber 经 Daybreak Red 向获批的 AWS GovCloud 客户开放。",
+      "tags": ["Daybreak", "Gov", "Security", "Enterprise"]
+    },
+    {
+      "title": "Releases · openai/codex",
+      "url": "https://github.com/openai/codex/releases",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-11-04",
+      "summary": "Codex 仓库发布多个 0.167/0.168 alpha 构建；无附带 changelog，按预发布信号处理。",
+      "tags": ["Codex", "CLI", "Pre-release"]
+    },
+    {
+      "title": "20% price reduction for GPT 5.6 Sol: API, Codex credits and ChatGPT Work",
+      "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726",
+      "source": "OpenAI Developer Community",
+      "publishedAt": "2026-11-04 01:41 +00:00",
+      "summary": "论坛新增回复转述促销定价将结束，但缺少公开邮件原文，作为观察池与低置信度口碑信号。",
+      "tags": ["观察池", "Pricing", "Community"]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-05T10:55:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News/Research/Engineering（详见 Claude 专题页）",
+      "OpenAI News/Research/Developers（详见 OpenAI 专题页）",
+      "Google Blog / DeepMind / Google Research",
+      "Meta AI Blog",
+      "Microsoft Research / Microsoft AI Blog",
+      "xAI News、API 文档/模型入口、官方仓库（Grok 模型、API、DeepSearch、语音、编码、工具调用、Agent：本轮未见 24 小时内可确认新增）",
+      "Mistral News / Docs changelog",
+      "Cohere Blog",
+      "Qwen Blog / Alibaba DAMO",
+      "ByteDance Seed / Doubao",
+      "Baidu Research / Wenxin",
+      "Tencent Hunyuan",
+      "DeepSeek 官方仓库/新闻",
+      "Zhipu GLM / Z.ai",
+      "Moonshot Kimi Blog / 官方 GitHub / Hugging Face",
+      "StepFun",
+      "MiniMax",
+      "NVIDIA Developer / Research Blog",
+      "Hugging Face Blog / Papers",
+      "LangChain Blog / changelog",
+      "LlamaIndex Blog",
+      "Cline、Pi Coding Agent、DeepSeek Harness/DSH 产品与生态信号（详见开源专题页）",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客"
+    ],
+    "failedSources": [
+      "部分厂商动态列表依赖客户端渲染，搜索索引可能滞后；已交叉检查官方博客、文档与仓库入口",
+      "X 官方账号时间线需要登录，无法稳定逐条核验互动量",
+      "Kimi K3.1 Pro 权重：官方文章承诺 11 月 4 日前发布，但扫描时未找到可确认的官方权重仓库或后续公告"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-11-04 10:55 至 2026-11-05 10:55（Asia/Shanghai）。本轮未发现能够用厂商原文确认、且明确发布在最近 24 小时内的主流厂商重大技术发布；因此不以搜索摘要或预告填充“今日发布”。下表保留近两日官方补充与证据状态明确的候选。\n\n## 优先动态（过去 24 小时）\n\n| 厂商 | 结果 | 说明 |\n|---|---|---|\n| xAI / Grok | 无新增 | 已显式检查官方 News、API/模型文档入口与官方仓库，覆盖模型/API、DeepSearch、语音、编码、工具调用及 Agent；未发现窗口内可确认新公告。 |\n| 其他主流厂商 | 无重大新增 | 官方动态列表、研究入口、文档 changelog 与公开仓库未出现可由原文确认的窗口内重大更新。 |\n\n## 近两日补充\n\n| 厂商 | 标题 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| Google | [The latest AI news we announced in October 2026](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/) | 官方月度回顾 | 2026-11-02（近三日） | 汇总 Gemini 4 Argon、Carbon、Genie 4、EmbeddingGemma 2 等十月进展。它不是 24 小时内新品，但可作为 Google 当前产品线的官方校准入口。 |\n| Google | [Expanding AI educator training to new countries](https://blog.google/products-and-platforms/products/education/google-ai-educator-series-global-expansion-november-2026/) | 行业应用 | 2026-11-03（近两日） | Google 将 AI Educator Series 扩展至更多地区，并说明 11 月课程模块；属于教育采用信号，而非基础模型发布。 |\n\n## 研究补充\n\n- [Can Benign Skills Induce Misaligned Behavior in LLM Agents?](https://arxiv.org/abs/2611.04299)（arXiv，2026-11-03）：论文研究向 Agent 添加看似良性的 skill 后，是否可能诱发违反安全要求的外部行动。该结果仍需同行评审，但对技能市场、权限边界和执行审计具有直接提示。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口均已检查；本轮没有保留日期与主题均可由原始节目页确认的新一期。\n\n## 日期未确认\n\n- Moonshot 官方在 [Introducing Kimi K3.1 Pro](https://www.kimi.com/en/blog/kimi-k3-1-pro) 中写明完整权重将于 2026-11-04 前发布。扫描截止时未找到可确认的官方权重仓库或补充公告，因此这里只记录“承诺日期已到、履约状态未确认”，不写成已经开源。\n\n## 观察池\n\n- 搜索索引出现 11 月 4 日的第三方模型/API 条目，但未找到相应厂商原文，暂不作为事实收录。\n- Cline、Pi Coding Agent 与 DeepSeek Harness/DSH 的常规仓库变化留在开源专题页；本轮未发现足以构成融资、合作、企业采用或分发战略变化的独立行业事件。\n\n## 来源链接\n\n- [Google 十月 AI 更新官方回顾](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/)\n- [Google AI Educator Series 扩展](https://blog.google/products-and-platforms/products/education/google-ai-educator-series-global-expansion-november-2026/)\n- [Skill-induced behavioral misalignment 论文](https://arxiv.org/abs/2611.04299)\n- [Kimi K3.1 Pro 官方介绍](https://www.kimi.com/en/blog/kimi-k3-1-pro)\n\n## 采集状态\n\n已检查 Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/阿里、字节、百度、腾讯、DeepSeek、智谱、Moonshot、阶跃、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Coding Agent/Harness 生态与六组播客入口。初始候选 6 条，保留 4 条（其中 2 条近两/三日官方补充、1 篇研究、1 条日期未确认）；未执行二次补搜（最终来源非 0）。失败入口与限制已记录在 scan.failedSources。\n\n一句话总结：过去 24 小时主流厂商官方面较平静，值得继续追踪的是 Kimi K3.1 Pro 权重承诺的实际落地，以及 Agent skills 的权限与行为安全问题。",
+  "sources": [
+    {
+      "title": "The latest AI news we announced in October 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "source": "Google",
+      "publishedAt": "2026-11-02",
+      "summary": "Google 官方汇总十月的 Gemini、Genie、EmbeddingGemma 等 AI 更新。",
+      "tags": ["Google", "近三日补充"]
+    },
+    {
+      "title": "Expanding AI educator training to new countries",
+      "url": "https://blog.google/products-and-platforms/products/education/google-ai-educator-series-global-expansion-november-2026/",
+      "source": "Google",
+      "publishedAt": "2026-11-03",
+      "summary": "Google 扩展 AI Educator Series，并公布 11 月课程方向。",
+      "tags": ["Google", "Education", "近两日补充"]
+    },
+    {
+      "title": "Can Benign Skills Induce Misaligned Behavior in LLM Agents?",
+      "url": "https://arxiv.org/abs/2611.04299",
+      "source": "arXiv",
+      "publishedAt": "2026-11-03",
+      "summary": "研究 Agent skills 可能引发的行为错位与外部行动风险。",
+      "tags": ["Agent Safety", "Research", "近两日补充"]
+    },
+    {
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+      "source": "Moonshot AI",
+      "publishedAt": "2026-10-24",
+      "summary": "官方文章承诺 11 月 4 日前发布完整权重，但本轮未确认实际发布状态。",
+      "tags": ["Kimi", "日期未确认", "较旧背景"]
+    }
+  ]
+}
