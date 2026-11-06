@@ -1,0 +1,113 @@
+---
+title: "Claude 全家桶过去 24 小时动态与口碑日报"
+date: "2026-11-06T00:00:00+08:00"
+updatedAt: "2026-11-06T10:44:00+08:00"
+description: "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "AI for scientific discovery: How researchers use Claude"
+featuredUrl: "https://www.anthropic.com/research/how-researchers-use-claude"
+featuredSummary: "Anthropic 分析 207,000 次 Claude 与 Claude Code 科研会话，描述不同学科与任务的使用分布。 Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-11-05"
+featuredTags: ["Science","Claude Code","Research"]
+featuredImage: "https://www-cdn.anthropic.com/images/4zrzovbb/website/0c1a04cc7042949252ee54565755780fe21d5ecf-1200x630.jpg"
+featuredImageAlt: "Anthropic 关于研究人员如何使用 Claude 的报告配图"
+featuredImageCaption: "图片来源：Anthropic Research"
+tags:
+  - "近两日补充"
+  - "日期未确认"
+  - "Agent"
+  - "AI R&D"
+  - "Anthropic"
+  - "Claude"
+  - "Claude Code"
+  - "Community"
+  - "Evaluation"
+  - "Research"
+  - "Safety"
+  - "Science"
+  - "Sentiment"
+---
+
+## 今日概览
+
+采集窗口：2026-11-05 10:44 至 2026-11-06 10:44（Asia/Shanghai）。窗口内最明确的官方更新来自科学研究：Anthropic 分析了 20.7 万次 Claude 与 Claude Code 科研会话；独立评估机构 METR 同日发布对 Anthropic AI 研发加速的评估。Claude Code 最近一个可核实版本 v2.1.318 发布于窗口开始前约 2 小时 43 分钟，因此仅列入近两日补充。
+
+## Tier 1：编码、Agent 与模型主轴
+
+| 产品 / 入口 | 状态 | 证据与判断 |
+|---|---|---|
+| Claude Code CLI | 近两日补充 | [v2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318) 增加认证到期字段和提前 10 天警告、跨 AWS 账户角色与成本归因、fork effort，并修复退出后 shell 残留等问题；GitHub 标记为 11 月 4 日，略超本轮 24 小时窗口。 |
+| VS Code 集成 | 无新增 | 已检查官方发布页与文档，未发现窗口内独立发布。 |
+| JetBrains 集成 | 无新增 | 未发现可核实的窗口内更新。 |
+| Managed Agents（sessions / webhooks / environments / memory stores） | 无新增 | 官方入口未见窗口内产品公告；不把科研会话统计误写成托管 Agent 发布。 |
+| Skills 与 marketplaces | 无新增 | 官方入口未见窗口内新版本或市场公告。 |
+| Claude Developer Platform | 无新增 | 文档与变更入口未发现窗口内可独立报告的更新。 |
+| Agent SDK | 无新增 | 官方文档与代码入口未见窗口内发布。 |
+| Cowork | 无新增 | 官方产品与更新入口未见窗口内发布。 |
+| Design | 无新增 | 官方入口未发现窗口内独立动态。 |
+| Tag / @Claude sessions | 无新增 | 官方入口未发现窗口内独立动态。 |
+| 当前 Opus / Sonnet / Haiku 编码模型 | 无新增 | 未发现窗口内新模型发布或官方别名变更；不沿用搜索结果中的未核实名称。 |
+
+## Tier 2：应用与多模态入口
+
+Chrome / browser agent、Desktop / Preview、Marketplace / Connectors / Plugins、创意或视频能力、Voice Mode 与 Microsoft 365 集成均已检查；本轮未发现可由官方原文确认的 24 小时新增，因此合并标记为“无新增”。
+
+## Tier 3：行业与社会应用
+
+### Science：研究人员如何使用 Claude
+
+Anthropic 在 [AI for scientific discovery: How researchers use Claude](https://www.anthropic.com/research/how-researchers-use-claude) 中使用隐私保护方法分析 207,000 次 Claude 与 Claude Code 科研会话。报告称，相对各领域研究者规模，Claude 在计算机科学、数学、统计等形式科学中使用更集中，在健康和实验型物理科学中较少。这里是使用模式研究，不等同于证明 Claude 已直接提升所有学科的科研产出。
+
+<figure class="source-image">
+  <a href="https://www.anthropic.com/research/how-researchers-use-claude"><img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/0c1a04cc7042949252ee54565755780fe21d5ecf-1200x630.jpg" alt="Anthropic 关于研究人员如何使用 Claude 的报告配图" loading="lazy" /></a>
+  <figcaption><a href="https://www.anthropic.com/research/how-researchers-use-claude">图片来源：Anthropic Research</a></figcaption>
+</figure>
+
+### Safety / 研发治理：METR 的高访问评估
+
+METR 在 [Independent Assessment of AI R&D Acceleration at Anthropic](https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/) 中基于 8 月 12 日至 10 月 29 日的高访问评估，判断 Anthropic 在定义清晰任务上的模型能力改进速度可能约为此前阶段的两倍，并认为当前加速多数可能来自公司用 AI 做研发。METR 同时强调不确定性，且 Anthropic 对非公开证据作了大量删节；因此本页将它作为独立评估结论，而非无条件事实。
+
+金融、生命科学、医疗、法律、政府、非营利、教育与客服入口也已检查；除上述 Science 与研发治理内容外，未发现窗口内需单列的官方新增。
+
+## 官方更新（由新到旧）
+
+1. **11 月 5 日，科研使用报告。** 20.7 万次会话样本给出 Claude 在科研任务中的使用分布，重点价值是提供可量化的采用结构，而不是单一能力榜单：[Anthropic 原文](https://www.anthropic.com/research/how-researchers-use-claude)。
+2. **11 月 5 日，外部评估 Anthropic 研发加速。** METR 给出“约两倍”但带较大不确定性的估计，并披露评估访问和删节限制：[METR 原文](https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/)。
+
+## Love
+
+- 社区对 Claude Code 自动记忆的可审计性给出正向反馈：在 [r/ClaudeCode 讨论](https://www.reddit.com/r/ClaudeCode/comments/1xo174j/new_claude_code_instructions_by_anthropic/) 中，有用户说明记忆以项目目录中的 Markdown 文件保存，可以人工查看、编辑和删除。该帖始于 11 月 4 日，窗口内仍有讨论；这是社区经验，不代表官方保证。
+
+## Hate
+
+- 同一 [r/ClaudeCode 讨论](https://www.reddit.com/r/ClaudeCode/comments/1xo174j/new_claude_code_instructions_by_anthropic/) 中也有用户称自动记忆噪声较大、会重复记录，因而选择关闭。样本很小，不能外推为整体质量趋势。
+
+## 口碑判断
+
+**中性、低置信度。** 本轮可直接核实的社区证据主要集中在一条自动记忆讨论，既有“可直接审计 Markdown 文件”的认可，也有重复和噪声投诉；缺少足够独立帖子与稳定互动量，不能得出整体转好或转差结论。官方科研与产品公告不计入正面口碑。
+
+## 对比与生态观察
+
+本轮没有具名、可复现实验支持 Claude Code 已追平或超过 Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH。Claude Code v2.1.318 的 fork effort、认证到期信息和企业网关控制体现的是运维与治理能力补强；其他 Coding Agent / Harness 的完整扫描留给开源专题页。
+
+## 日期未确认
+
+- 搜索结果出现关于 Claude Code 系统提示大幅精简和自动记忆的 Anthropic 社交帖转述，但原始 Instagram 页面在本环境无法稳定核对发布时间与全文；目前仅以 [社区讨论](https://www.reddit.com/r/ClaudeCode/comments/1xo174j/new_claude_code_instructions_by_anthropic/) 记录，不将“精简比例”等转述写成已独立确认的产品事实。
+
+## 观察池
+
+- [Claude Code v2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318) 距窗口边界仅约 2 小时 43 分钟，保留用于近两日连续性观察；它不是本轮 24 小时内发布。
+- METR 对研发加速的估计引发治理讨论，但核心数据部分非公开且经 Anthropic 删节，后续应关注方法、复核与新披露，不把单点估计当作稳定趋势。
+
+## 来源链接
+
+- [Anthropic：AI for scientific discovery](https://www.anthropic.com/research/how-researchers-use-claude)
+- [METR：Independent Assessment of AI R&D Acceleration at Anthropic](https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/)
+- [Claude Code v2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)
+- [Reddit：New Claude Code instructions by Anthropic](https://www.reddit.com/r/ClaudeCode/comments/1xo174j/new_claude_code_instructions_by_anthropic/)
+
+## 采集状态
+
+- 已检查：Anthropic Newsroom、Research、开发者平台文档、Claude Code GitHub releases，以及 Tier 1/2/3 所列产品入口；抽样 Reddit 与 Hacker News。
+- 失败来源：X 时间线受登录限制；Instagram 原帖无法稳定抓取；JetBrains 插件市场未给出可核实的窗口内变更。
+- 初始候选 9 条，最终保留 4 个独立 URL；未执行二次补搜（最终来源不为 0）。
+- 截止时间：2026-11-06 10:44（Asia/Shanghai）。
