@@ -1,0 +1,61 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-08T10:50:48+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News/Research/Docs：检查；窗口内相关 Claude 动态详见 Claude 专题页，本页不重复填充",
+      "OpenAI News/Research/Developers：检查；窗口内相关动态详见 OpenAI 专题页，本页不重复填充",
+      "Google DeepMind/Google Research 官方列表：检查，无近 72 小时可稳定核验新增",
+      "Meta AI 官方博客/研究列表：检查，无近 72 小时可稳定核验新增",
+      "Microsoft Research、Microsoft AI 与 Azure Architecture Blog：检查，保留 2 个候选",
+      "xAI News、xAI API 文档/Release Notes 与官方仓库：强制检查 Grok 模型/API、DeepSearch、语音、编码、工具调用和 Agent；近 72 小时无新增",
+      "Mistral News、Docs Release Notes：检查，最近可核验更新为 11 月 5 日，已超近 72 小时窗口",
+      "Cohere Blog/Research：检查，无近 72 小时可稳定核验新增",
+      "Qwen/Alibaba Cloud/DAMO 官方博客：检查，保留 11 月 6 日 Agent 数据基础设施补充",
+      "ByteDance Seed/Doubao、Baidu、Tencent Hunyuan、DeepSeek、Zhipu/GLM、Moonshot/Kimi、StepFun、MiniMax 官方入口：检查，无近 72 小时可稳定核验新增",
+      "NVIDIA Developer/Research、Hugging Face Blog/Papers：检查，无新的 24 小时厂商级动态；技术项目由开源专题处理",
+      "LangChain、LlamaIndex 官方博客/更新：检查，无近 72 小时可稳定核验新增",
+      "Cline、Pi Coding Agent/pi-mono、DeepSeek Harness/DSH 公司与生态信号：检查；常规发布详见开源专题页",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客：检查，无近 72 小时且日期可核验新集"
+    ],
+    "failedSources": [
+      "X 官方账号：未登录公开页无法稳定核验发布时间与互动量",
+      "部分中国厂商新闻列表：搜索索引仅返回旧条目或缺少精确发布时间",
+      "Microsoft Research PersonaTeaming 落地页：仅标 November 2026，无法独立确认索引所示 11 月 7 日为原始发布日期",
+      "部分播客 feed：只给相对时间或播放器元数据，无法证明落入窗口"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-11-07 10:50 至 2026-11-08 10:50（Asia/Shanghai）**；近两日与近三日补充分别回溯 48/72 小时。本轮保留 1 条发布时间明确的 24 小时 Azure Agent 架构文章、1 条 Microsoft Research 日期粒度不足的研究候选，以及 1 条 24–48 小时的阿里云 Agent 数据基础设施补充。xAI/Grok 已按要求专项检查，近 72 小时无新增。\n\n## 优先动态（过去 24 小时）\n\n| 厂商/机构 | 动态 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| Microsoft Azure Architecture | [The Model Isn’t the Boss: An Azure Architecture for Accountable AI Agents](https://techcommunity.microsoft.com/blog/azurearchitectureblog/the-model-isn%E2%80%99t-the-boss-an-azure-architecture-for-accountable-ai-agents/4571335) | Agent 架构 / 治理 | 2026-11-07，已核验 | 以住房维修流程展示把模型推理、可信动作和分析治理拆成三层：工具调用需服务端授权，异步动作先对账再重试，并以人工审批、最小权限和可回滚边界约束自治。它提供的是可迁移的工程模式，而非产品发布或合规保证。 |\n\n## 常规更新\n\nAnthropic 与 OpenAI 官方入口均已检查；相关窗口内动态分别**详见 Claude 专题页**与**详见 OpenAI 专题页**。本轮没有发现需要在行业页再次重复的独立厂商级事件。\n\n## 近两日补充（24–48 小时）\n\n| 厂商 | 动态 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|\n| Alibaba Cloud | [SLS Unveils a Major Upgrade to Build the Intelligent Data Engine for the Agent Era](https://www.alibabacloud.com/blog/alibaba-cloud-sls-unveils-a-major-upgrade-to-build-the-intelligent-data-engine-for-the-agent-era_603736) | 2026-11-06，官方日期；未披露时分 | SLS 介绍 SessionStore、语义层、MCP Server、Skills 编排和 DataAgent，用 session/trajectory 组织 Agent 运行事实。它反映生产 Agent 的数据基础设施正从普通日志转向任务级轨迹、语义层与治理。 |\n\n## 近三日补充（48–72 小时）\n\n未发现日期与技术事实均可由原始来源稳定核验、且尚未由近两日栏目覆盖的新条目。Mistral Managed Agents 的最近官方记录为 11 月 5 日，已不在本轮近 72 小时范围内，因此不跨日重复。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已检查；没有发现近 72 小时且可核验发布日期的新集，不以旧节目填充。\n\n## 日期未确认\n\n- **Microsoft Research PersonaTeaming**：[研究落地页](https://www.microsoft.com/en-us/research/publication/personateaming-supporting-persona-driven-red-teaming-for-generative-ai/)介绍将 persona 加入对抗提示生成，并提供人类红队人员参与的 Playground；Microsoft Research 列表在本轮显示 11 月 7 日，但落地页仅标“November 2026”，因此只作为日期未确认候选。论文报告其相对 RainbowPlus 的攻击成功率提升，但本页不把列表日期或比较结论外推为通用产品事实。\n\n## 观察池\n\n- 11 月 6 日 Alibaba Cloud 社区还出现代码评审 Agent、多 Agent 研发协作等工程文章；其发布方与产品边界需要逐篇复核，本轮先记录检查，不用营销摘要替代已核实技术事实。\n- NVIDIA Developer、Hugging Face 的近期项目与研究条目由开源专题按项目级证据处理；没有发现足以在本页单独提升为厂商级发布的新事件。\n\n## xAI / Grok 专项检查\n\nxAI News、API 文档与 Release Notes、官方仓库均已显式检查，覆盖 Grok 模型/API、DeepSearch、语音、编码、工具调用与 Agent 能力。最近可见官方发布均早于近 72 小时窗口，本轮结论为 **无新增**；普通模型/API旧闻未被误写成当日 Agent 动态。\n\n## 今日小结\n\n今日最清晰的产业信号不是新模型，而是生产 Agent 的责任边界：推理、授权动作、任务状态与分析治理需要分层设计。\n\n## 采集状态\n\n- **窗口**：2026-11-07 10:50 至 2026-11-08 10:50（Asia/Shanghai）；补充窗口延展至 48/72 小时。\n- **已检查**：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot/Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、指定播客与 coding-agent 生态入口。\n- **失败来源**：X 登录限制；部分中国厂商页面缺精确时间；PersonaTeaming 落地页日期粒度不足；部分播客 feed 元数据不足。\n- **初始候选数**：6；**最终保留来源数**：3；**二次补搜**：否（最终来源非 0）。",
+  "sources": [
+    {
+      "title": "The Model Isn’t the Boss: An Azure Architecture for Accountable AI Agents",
+      "url": "https://techcommunity.microsoft.com/blog/azurearchitectureblog/the-model-isn%E2%80%99t-the-boss-an-azure-architecture-for-accountable-ai-agents/4571335",
+      "source": "Microsoft Azure Architecture Blog",
+      "publishedAt": "2026-11-07",
+      "summary": "用分层架构说明 Agent 推理、可信动作、异步状态、治理与评测边界。",
+      "tags": ["Microsoft", "Agent Architecture", "Governance"]
+    },
+    {
+      "title": "Alibaba Cloud SLS Unveils a Major Upgrade to Build the Intelligent Data Engine for the Agent Era",
+      "url": "https://www.alibabacloud.com/blog/alibaba-cloud-sls-unveils-a-major-upgrade-to-build-the-intelligent-data-engine-for-the-agent-era_603736",
+      "source": "Alibaba Cloud Native Community",
+      "publishedAt": "2026-11-06",
+      "summary": "介绍 SessionStore、语义层、MCP、Skills 与 DataAgent 等 Agent-native 数据能力。",
+      "tags": ["Alibaba Cloud", "Observability", "近两日补充"]
+    },
+    {
+      "title": "PersonaTeaming: Supporting Persona-Driven Red-Teaming for Generative AI",
+      "url": "https://www.microsoft.com/en-us/research/publication/personateaming-supporting-persona-driven-red-teaming-for-generative-ai/",
+      "source": "Microsoft Research",
+      "publishedAt": "",
+      "summary": "以 persona 驱动自动与人机协作红队测试；落地页仅标月份，归入日期未确认。",
+      "tags": ["AI Safety", "Red Teaming", "日期未确认"]
+    }
+  ]
+}
