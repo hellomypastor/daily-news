@@ -1,0 +1,54 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-11-09T10:45:36+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition News / Blog、Devin Docs / Changelog、定价与企业集成入口（无 24h 新增）",
+      "xAI News、API changelog、Grok Build changelog、官方文档与仓库（无 24h AaaS 新增）",
+      "Anthropic Managed Agents / Agent SDK / Claude Code hosted channels（无 24h 新增）",
+      "OpenAI Agents API、Codex cloud / remote、Agents SDK（SDK 更新详见 OpenAI 专题页）",
+      "Google Vertex AI Agent、Gemini / Jules / Antigravity",
+      "Microsoft Copilot Studio / Azure Agent services、GitHub coding agent",
+      "Replit Agent、Cursor cloud agents、Lindy、CrewAI、LangGraph Platform、Factory、Sourcegraph / Amp",
+      "Cloudflare Agents / Sandboxes / Workers / Computer、Amazon Q Developer",
+      "Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 的 hosted / cloud / remote / background / pricing 入口",
+      "OpenCode、Aider、Continue、Roo Code 的托管、后台、定时和远程执行入口",
+      "ByteDance Coze / Volcano / Doubao / Trae / Seed",
+      "Alibaba Bailian / Qoder Cloud Agents / Tongyi / Quark",
+      "Tencent Yuanbao / Hunyuan / Cloud、Baidu AgentBuilder / Comate",
+      "Zhipu、Moonshot / Kimi、MiniMax、DeepSeek 与可信创业公司",
+      "第二轮：中英文 hosted agent / 托管智能体 / async / remote environment / concurrency / pricing / enterprise 组合检索、GitHub 与可信二手来源"
+    ],
+    "failedSources": [
+      "Cognition Devin：公开搜索未返回窗口内可核实的 changelog / news 条目，部分文档页未提供清晰逐条日期",
+      "xAI / Grok：官方 changelog 最新可见条目早于本窗口，未发现新的托管 Agent / 异步远程执行公告",
+      "X：未登录状态下无法稳定核对帖文全文与精确时间",
+      "部分中国厂商更新页：搜索索引仅显示较旧条目，未发现窗口内独立公告"
+    ],
+    "candidateCount": 5,
+    "secondPass": true
+  },
+  "content": "## 今日概览\n\n采集主窗口：**2026-11-08 10:45 至 2026-11-09 10:45（Asia/Shanghai）**。本轮在官方渠道中**未确认 24 小时内新的 AaaS 发布**。按规范完成扩大中英文关键词、备用入口、GitHub 与可信二手来源的第二轮补搜；保留两条较旧但有边界价值的候选，均不作为今日上线事实或首页精选。\n\n## 今日重点\n\n- **无已验证的 24 小时新发布。** 未发现新的托管执行、异步任务、远程环境、并发、企业控制面或定价公告。\n- OpenAI 两个 Agents SDK alpha 在窗口内更新了会话存储、托管工具、A2A 与预算等开发能力，但这不是一个新的 AaaS 商业服务发布，故仅在边界说明中提及，**详见 OpenAI 专题页**。\n- Cognition Devin 与 xAI/Grok 均已显式检查；没有为了满足必查要求而复用昨日较旧背景来源。\n\n## 远程 / 云端 Agent 执行\n\n| 平台 | 24h 状态 | 证据边界 |\n|---|---|---|\n| Cognition Devin | 无新增 | 已检查官方 News/Blog、Devin 文档/changelog、环境、并发、定价、企业接入与集成入口；未见窗口内可核实新条目。 |\n| xAI / Grok | 无新增 | 已检查 xAI News、API 与 Grok Build changelog、工具/编码/远程执行入口；普通模型/API 变化不自动构成 AaaS，本轮亦未见满足定义的新公告。 |\n| OpenAI Codex / Agents | 无独立 AaaS 发布 | 窗口内 SDK alpha 更新属于开发框架能力，未据此宣称新托管服务上线；详见 OpenAI 专题页。 |\n| Anthropic managed / hosted Agents | 无新增 | 已检查托管 Agent、Agent SDK、Skills 与 Claude Code 云端入口；无窗口内新公告。 |\n| Google / Microsoft / GitHub / Replit / Cursor | 无新增 | 已检查云端异步执行与 PR Agent 入口；未见窗口内可核实的新发布。 |\n| Cloudflare / LangGraph / CrewAI / Factory / Amp | 无新增 | 已检查托管运行时、后台任务、沙箱与企业控制入口；未见窗口内新公告。 |\n\n## 海外厂商\n\nCognition Devin 的托管异步执行、环境、并发、定价、企业访问和集成渠道均已逐项搜索；本轮没有发现可验证的新条目。xAI/Grok 也已按 AaaS 定义检查：其较旧 Grok Build 工作流与长任务能力说明产品具备相关方向，但因不是本窗口新动态，且昨日已记录过 xAI 背景来源，本页不重复收录旧链接。\n\n## 中国厂商（字节系重点）\n\n字节 Coze / 火山引擎 / 豆包 / Trae / Seed 已重点检查，未见窗口内新的托管执行、配额、定价或企业控制公告。阿里百炼 / Qoder、腾讯云 / 混元、百度 AgentBuilder / Comate、智谱、Kimi、MiniMax、DeepSeek 也未发现可验证的 24 小时新增。\n\n## 开源 Coding Harness 的云端边界\n\nCline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 已检查 hosted、cloud、background、remote environment、concurrency、enterprise 与 pricing 证据；OpenCode、Aider、Continue、Roo Code 也完成快速检查。本轮没有发现能证明服务商托管其执行生命周期的新发布。普通本地 CLI、IDE、桌面或自托管 harness 更新不进入 AaaS。\n\n## 日期未确认\n\n无。本轮检索到的近期二手线索若缺少官方交叉验证，均未提升为确认事实。\n\n## 未证实传闻\n\n无。没有发现值得保留且至少能说明单一来源的窗口内产品泄露。\n\n## 邻近信号观察池\n\n- 阿里云官方 [`Qoder Cloud Agents 更新日志`](https://changelog.qoder.com/zh/cloud-agents) 显示 2026-10-30 的 1.0 更新提供全托管 Agents API、Batch 异步处理与长时任务。它符合 AaaS 定义，但已超过本轮 72 小时范围，仅作为**较旧背景**；不代表今日更新，也不用于页面图片或首页精选。\n- 可信二手报道 [`Google shutters Jules`](https://www.techradar.com/pro/google-kills-off-jules-its-ai-coding-agent-which-promised-to-do-all-the-jobs-you-didnt-want-to) 发布于 2026-11-02，称 Google 将 Jules 的异步编码经验整合到统一 Agent 方向。该信息已超过 72 小时且本轮未找到同日官方页面，故标为**较旧、二手来源观察**，不作为今日事实标题。\n\n## AaaS 与 MaaS / PaaS 边界\n\n- 模型或 API 上新本身是 MaaS，不进入 AaaS，除非同时出现托管 Agent 生命周期、后台任务、环境或治理证据。\n- 通用沙箱、云主机或容器是 PaaS；只有服务替用户管理 Agent 会话、工具、执行与恢复时才计入 AaaS。\n- SDK 增加工具封装或会话接口是重要邻近信号，但不能自动等同于一个可购买、可托管的 Agent 服务正式发布。\n\n## 趋势\n\n今天的有效信号不是“又有一个平台上线”，而是托管 Agent 产品正在围绕持久会话、批处理、异步恢复、权限和企业治理形成共同能力栈；但本轮没有新的 24 小时证据足以更新市场判断。\n\n## 来源链接\n\n1. [Qoder Cloud Agents 更新日志（较旧背景）](https://changelog.qoder.com/zh/cloud-agents)\n2. [TechRadar：Google shutters Jules（较旧、二手来源观察）](https://www.techradar.com/pro/google-kills-off-jules-its-ai-coding-agent-which-promised-to-do-all-the-jobs-you-didnt-want-to)\n\n## 采集状态\n\n- 已检查：Cognition Devin 与 xAI/Grok 的指定官方渠道；海外主要托管 Agent、国内厂商、远程执行平台，以及 Cline / Pi / DSH 和 OpenCode / Aider / Continue / Roo Code 的云端边界。\n- 失败来源：Cognition 未出现带明确窗口日期的新条目；xAI 最新可见 AaaS 相关 changelog 早于窗口；X 未登录无法稳定复核；部分中国厂商索引只返回较旧更新。\n- 初始候选：5；保留来源：2；已验证 24h 动态：0；二次补搜：是。\n\n今日扫描完成，共 2 条背景/观察动态，重点：24 小时内无可确认 AaaS 新发布，Devin 与 Grok 已完成强制检查。\n",
+  "sources": [
+    {
+      "title": "Qoder Cloud Agents 更新日志",
+      "url": "https://changelog.qoder.com/zh/cloud-agents",
+      "source": "Qoder 官方",
+      "publishedAt": "2026-10-30",
+      "summary": "较旧背景：Qoder Cloud Agents 1.0 提供全托管 Agents API、Batch 异步处理与长时任务；不代表今日更新。",
+      "tags": ["较旧背景", "Qoder", "Hosted Agent"]
+    },
+    {
+      "title": "Google shutters Jules AI coding agent",
+      "url": "https://www.techradar.com/pro/google-kills-off-jules-its-ai-coding-agent-which-promised-to-do-all-the-jobs-you-didnt-want-to",
+      "source": "TechRadar Pro",
+      "publishedAt": "2026-11-02 22:05 +08:00",
+      "summary": "较旧、二手来源观察：Google 调整 Jules，并把异步编码 Agent 经验转向统一产品方向；本轮未找到同日官方页面。",
+      "tags": ["观察池", "二手来源", "Jules"]
+    }
+  ]
+}
