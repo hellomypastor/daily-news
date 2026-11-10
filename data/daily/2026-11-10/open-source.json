@@ -1,0 +1,73 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-11-10T10:43:47+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cline 官方仓库与 GitHub Releases（cline/cline）",
+      "Pi Coding Agent / pi-mono 官方仓库与 GitHub Releases（badlogic/pi-mono，发布页重定向至 earendil-works/pi）",
+      "DeepSeek Harness / DSH 官方仓库与 GitHub Releases（deepseek-ai/deepseek-harness）",
+      "OpenCode 官方仓库与 GitHub Releases（anomalyco/opencode）",
+      "Aider 官方仓库与 GitHub Releases（Aider-AI/aider）",
+      "Continue 官方仓库与 GitHub Releases（continuedev/continue）",
+      "Roo Code 官方仓库与 GitHub Releases（RooCodeInc/Roo-Code）",
+      "Hacker News newest 与 Algolia 过去 24 小时 Agent 检索",
+      "GitHub Trending overall / Python / TypeScript 与候选仓库元数据",
+      "arXiv API 按 submittedDate 排序的 Agent 检索",
+      "Hugging Face Papers / Blog",
+      "Simon Willison Weblog"
+    ],
+    "failedSources": [
+      "GitHub Trending 部分榜单为动态页面，未能可靠获得可复核的当日增长数字，因此不记录 star 日增",
+      "Hugging Face Papers 页面未提供与当前扫描截止时间一致的精确发布时间，相关候选未提升为时效已验证正文"
+    ],
+    "candidateCount": 11,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口截至 2026-11-10 10:43（Asia/Shanghai）。开源 Coding Agent / Harness 主轴确认到一条明确的窗口内正式发布：Pi v1.5.1。Cline、DeepSeek Harness、OpenCode、Aider、Continue 与 Roo Code 的官方 release 渠道均已检查，但没有发现过去 48 小时内的新正式 release。另保留三个在 Hacker News / GitHub 出现的新工具信号；其中项目创建或提交时间可核验，但不能等同于正式发布日期。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 关键变化 / 结论 |\n|---|---|---|\n| Pi Coding Agent / pi-mono | **已验证更新** | [v1.5.1](https://github.com/earendil-works/pi/releases/tag/v1.5.1) 于 2026-11-10 07:47（+08:00）发布：新增 shell 登录/登出、空闲提示缓存预热、Anthropic message threads、包更新摘要，并改进远程 grep、MCP/OAuth 与大文件工具执行。 |\n| Cline | 无新增 | 官方仓库与 release 已查；最新可见正式 release 为 10 月 26 日，不作为今日新闻重复。 |\n| DeepSeek Harness / DSH | 无新增 | 官方仓库与 release 已查；最新可见 release candidate 为 11 月 4 日，超出 48 小时主窗口。 |\n| OpenCode | 无新增 | 官方 release 已查；最新可见正式版本为 11 月 6 日，超出 48 小时主窗口。 |\n| Aider | 无新增 | 官方 release 已查，未见窗口内更新。 |\n| Continue | 无新增 | 官方 release 已查，未见窗口内更新。 |\n| Roo Code | 无新增 | 官方 release 已查，未见窗口内更新。 |\n\n## 已验证精选\n\n### Pi v1.5.1：会话连续性、缓存与自动化入口一起推进\n\n[官方发布说明](https://github.com/earendil-works/pi/releases/tag/v1.5.1)显示，这一版让 Anthropic 请求只发送新增消息、在上下文变化时回退为完整请求；缓存预热默认转向 idle 策略，并提供 `pi auth login/logout` 的非会话入口。对把 Pi 嵌入 headless、RPC 或远程执行流程的团队，价值主要在认证、长会话成本和工具可靠性，而不是单一模型能力。发布说明还包含 grep/read 的内存占用、MCP 响应上限和 OAuth 刷新等修复。\n\n## GitHub Trending / 新项目观察\n\n本轮没有采用无法复核的 Trending 日增数字。以下项目均直接打开官方仓库核查；仓库活跃或被 HN 发现不等同于当日正式发布。\n\n- [agent-email-guard](https://github.com/agentisend/agent-email-guard)：仓库元数据可核验为 11 月 10 日（上海时间）新建，提供邮件 Agent 的预算、速率上限、循环检测、kill switch 与审批暂挂。项目很新、采用信号有限，先作为安全控制面候选。\n- [OpenRing](https://github.com/elifalanrocha/openring)：自托管语音 Agent 与 Vapi 兼容 API，覆盖多家电话通道及本地 Whisper/Ollama/Kokoro 组合。仓库早于主窗口创建，本轮仅观察其被社区重新发现，不能视为今日发布。\n- [Vork](https://github.com/voyager-so/vork)：面向 Agent 的 headless 3D/VFX 引擎 research preview，仓库早于主窗口创建；适合关注“Agent 操作专业创作工具”的开发者，但成熟度和真实采用仍待观察。\n\n## HN 讨论\n\nHN newest / Algolia 的 24 小时检索出现了上述 OpenRing、Vork 和邮件 blast-radius 控制项目，但提交时的互动量较低且波动快，本页不把即时 points/comments 固化为趋势结论。\n\n## 论文 / 研究\n\n近期 arXiv Agent 检索中，[Video-Coder](https://arxiv.org/abs/2611.09894)提供代码驱动视频生成 Agent、执行/渲染 Harness 与开源数据/模型/代码的组合；原始提交时间为 11 月 7 日 02:59（+08:00），已超出 48 小时精选窗口，因此放入观察池而非今日已验证亮点。其意义在于把 Harness-native 强化学习从通用编码扩展到 3D 场景构建和视频生成。\n\n## 旧文再热\n\n未发现同时满足“原文早于 7 天、过去 24 小时在 HN 明显再热且互动数据可复核”的候选。\n\n## 日期未确认\n\n- OpenRing 与 Vork 的仓库创建/推送时间可见，但没有找到与本轮发现相匹配的正式发布日期；仅按社区发现信号记录。\n\n## 观察池\n\n- agent-email-guard：时间新，但维护历史和用户反馈不足，暂不做成熟度判断。\n- Video-Coder：原始论文日期明确，但已超出 48 小时主窗口；等待代码采用、复现实验或后续版本。\n- HN 中还出现多个商业落地页与缺少源码/技术细节的 Show HN 项目，因证据薄弱仅计入候选数，未扩写为技术结论。\n\n## 来源链接\n\n1. [Pi v1.5.1 官方 release](https://github.com/earendil-works/pi/releases/tag/v1.5.1)\n2. [agent-email-guard 官方仓库](https://github.com/agentisend/agent-email-guard)\n3. [OpenRing 官方仓库](https://github.com/elifalanrocha/openring)\n4. [Vork 官方仓库](https://github.com/voyager-so/vork)\n5. [Video-Coder 论文](https://arxiv.org/abs/2611.09894)\n\n## 采集状态\n\n- **已检查来源**：Cline、Pi、DeepSeek Harness/DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库和 release；HN newest/Algolia；GitHub Trending 与候选仓库元数据；arXiv；Hugging Face Papers/Blog；Simon Willison。\n- **失败来源**：GitHub Trending 动态榜单未能稳定复核日增数字；Hugging Face 的部分候选缺少与截止时间一致的精确发布时间，因此未写成已验证时效新闻。\n- **候选数量**：11；**最终保留来源**：5。\n- **二次补搜**：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Pi v1.5.1",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v1.5.1",
+      "source": "Pi / GitHub Releases",
+      "publishedAt": "2026-11-10 07:47 +08:00",
+      "summary": "Pi 正式发布 v1.5.1，加入 shell 认证入口、空闲缓存预热、Anthropic message threads，并修复多项工具执行与 MCP/OAuth 问题。",
+      "tags": ["Coding Agent", "Harness", "Pi"]
+    },
+    {
+      "title": "agent-email-guard",
+      "url": "https://github.com/agentisend/agent-email-guard",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "新建开源仓库，为发送邮件的 Agent 提供 blast-radius 限制；正式发布日期未确认。",
+      "tags": ["日期未确认", "Agent Safety", "Open Source"]
+    },
+    {
+      "title": "OpenRing",
+      "url": "https://github.com/elifalanrocha/openring",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "自托管语音 Agent 与 Vapi 兼容 API；本轮为社区重新发现信号，非今日发布。",
+      "tags": ["观察池", "Voice Agent", "Open Source"]
+    },
+    {
+      "title": "Vork",
+      "url": "https://github.com/voyager-so/vork",
+      "source": "GitHub",
+      "publishedAt": "",
+      "summary": "面向 Agent 的 headless 3D/VFX 引擎 research preview；正式发布日期未确认。",
+      "tags": ["观察池", "Agent Tooling", "3D"]
+    },
+    {
+      "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
+      "url": "https://arxiv.org/abs/2611.09894",
+      "source": "arXiv",
+      "publishedAt": "2026-11-07 02:59 +08:00",
+      "summary": "代码驱动的视频生成 Agent 与统一执行/渲染 Harness，已超出 48 小时主窗口，作为研究观察项保留。",
+      "tags": ["观察池", "Research", "Agent Harness"]
+    }
+  ]
+}
