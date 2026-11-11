@@ -1,0 +1,23 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-11-11T10:55:00+08:00",
+  "scan": {
+    "checkedSources": ["Anthropic Newsroom / Events / Engineering / Research / Alignment Science", "Claude Help Center 与 Claude Platform release notes", "anthropics/claude-code GitHub releases", "Claude Code CLI、VS Code、JetBrains", "Managed Agents sessions/webhooks/environments/memory stores", "Skills / marketplaces、Developer Platform、Agent SDK、Cowork、Design、Tag/@Claude sessions", "Chrome/browser、Desktop、Connectors/Plugins、Voice、Microsoft 365", "Reddit r/ClaudeAI、r/ClaudeCode、r/Anthropic、r/claude、Hacker News", "Axios Claude Meetings 报道"],
+    "failedSources": ["X 官方账号：未登录环境无法稳定核验原帖时间与互动", "YouTube：未找到可独立核验的活动回放元数据", "Claude Meetings：未找到 Anthropic 独立官方产品页"],
+    "candidateCount": 7,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-11-10 10:49 至 2026-11-11 10:49（Asia/Shanghai）**。本轮确认一场 Anthropic 企业活动；一项官方对齐研究因页面仅标日期进入“日期未确认”；Claude Meetings 仅有可信二手报道，保留在观察池。\n\n## Tier 1\n\n| 产品 / 入口 | 本轮状态 |\n|---|---|\n| Claude Code CLI | v2.1.322 位于窗口边界，见“日期未确认” |\n| VS Code / JetBrains | 无新增 |\n| Managed Agents / Developer Platform / Agent SDK | 无新增 |\n| Skills / marketplaces / Cowork / Design / Tag sessions | 无新增 |\n| 当前 Sonnet / Opus / Haiku 编码模型 | 无新增；未用未确认名称补位 |\n\n## Tier 2\n\nChrome/browser、Desktop、Marketplace/Connectors/Plugins、creative/video、Voice 与 Microsoft 365 均已检查，本轮无可核实新增。\n\n## Tier 3 与官方动态\n\n- **已验证：企业知识工作活动。** Anthropic 官方活动页显示 [The Briefing: Work at the Frontier](https://www.anthropic.com/events/the-briefing-work-at-the-frontier-ls) 于 11 月 10 日 09:30–11:00 PST 举行，涉及销售、法律和财务等企业演示；活动本身不等同于新品发布。\n\n## Love / Hate 与情绪\n\nLove 侧没有足够独立用户证据。Hate 侧，一则 Reddit [高互动单帖](https://www.reddit.com/r/ClaudeCode/comments/1xssfs1/21322_anthropics_copyright_paranoia_is_leaking/)批评 v2.1.322 后出现版权提醒；这是单帖社区证据，不能推断普遍回归。另有[零散质量反馈](https://www.reddit.com/r/claude/comments/1xsu4j6/a_lot_is_happening_this_week_ai_is_moving_so_fast/)，互动与主题聚焦度较低。综合判断：负面信号存在，但样本不足，置信度低至中。\n\n## 比较\n\n本轮没有具名基准或可复现实验支持 Claude Code 与 Codex、Cursor、Cline、Pi 或 DSH 的新强弱结论，因此不作“追平/超过”判断。\n\n## 日期未确认\n\n- Anthropic Alignment Science 的[对齐研究](https://alignment.anthropic.com/2026/homeopathic-learning/)标注 11 月 10 日，研究稀释式投毒微调数据与后门行为；页面无具体时分，故不写成严格 24 小时事实。\n- [Claude Code v2.1.322](https://github.com/anthropics/claude-code/releases/tag/v2.1.322)显示 11 月 10 日 02:29，但页面展示时区不明确；若按 UTC 换算会比窗口起点早约 20 分钟，因此只作边界观察。\n\n## 观察池\n\n- Axios 在[具名采访报道](https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work)中称 Claude Meetings 可作为 Google Meet 参与者记录、答疑并启动任务；尚无 Anthropic 独立官方产品页，不据此推断 GA、定价或覆盖范围。\n\n## 采集状态\n\n已检查全部 Tier 1/2/3 入口、官方研究与社区渠道；失败入口与限制已记录。初始候选 7 条，保留 6 个唯一来源；二次补搜：否。",
+  "sources": [
+    {"title":"The Briefing: Work at the Frontier","url":"https://www.anthropic.com/events/the-briefing-work-at-the-frontier-ls","source":"Anthropic","publishedAt":"2026-11-11 01:30 +08:00","summary":"Anthropic 企业知识工作活动，包含多个业务职能演示。","tags":["Enterprise","已验证"]},
+    {"title":"Homeopathic learning","url":"https://alignment.anthropic.com/2026/homeopathic-learning/","source":"Anthropic Alignment Science","publishedAt":"2026-11-10","summary":"官方对齐研究；页面无精确时分。","tags":["Research","日期未确认"]},
+    {"title":"Claude Code v2.1.322","url":"https://github.com/anthropics/claude-code/releases/tag/v2.1.322","source":"Anthropic GitHub","publishedAt":"2026-11-10 02:29（页面时区未明确）","summary":"Vertex fast mode 与回退相关更新，处于窗口边界。","tags":["Claude Code","日期未确认"]},
+    {"title":"Anthropic brings Claude into meetings","url":"https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work","source":"Axios","publishedAt":"2026-11-11 01:30 +08:00","summary":"具名采访披露 Claude Meetings；缺少独立官方产品页。","tags":["观察池","可信二手"]},
+    {"title":"2.1.322 copyright reminder discussion","url":"https://www.reddit.com/r/ClaudeCode/comments/1xssfs1/21322_anthropics_copyright_paranoia_is_leaking/","source":"Reddit r/ClaudeCode","publishedAt":"2026-11-10","summary":"单帖高互动负面反馈，不代表普遍趋势。","tags":["Hate","社区证据"]},
+    {"title":"Community discussion on recent Claude quality","url":"https://www.reddit.com/r/claude/comments/1xsu4j6/a_lot_is_happening_this_week_ai_is_moving_so_fast/","source":"Reddit r/claude","publishedAt":"2026-11-10","summary":"低置信度零散质量反馈。","tags":["观察池","低置信度"]}
+  ]
+}
