@@ -1,0 +1,75 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-13T10:51:25+08:00",
+  "image": {
+    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/ResearchFocus-BlogHeroFeature-1400x788-1-scaled-1.jpg",
+    "alt": "Microsoft Research Focus 播客的蓝色研究主题封面图",
+    "sourceUrl": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+    "caption": "图片来源：Microsoft Research"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic News/Research/Docs（本窗动态详见 Claude 专题页）",
+      "OpenAI News/Research/Developer Docs（本窗动态详见 OpenAI 专题页）",
+      "Google DeepMind News/Research",
+      "Meta AI Blog/Research",
+      "Microsoft Research Blog/Podcast 与 Microsoft 官方博客",
+      "xAI News、Grok API/模型文档与 xAI 官方仓库（强制检查：24–72h 无新增）",
+      "Mistral News/Docs changelog/status",
+      "Cohere Blog/Research",
+      "Qwen/Alibaba Cloud Community/DAMO",
+      "ByteDance Seed/Doubao、Baidu、Tencent Hunyuan、DeepSeek、Zhipu/GLM、Moonshot/Kimi、StepFun、MiniMax 官方入口",
+      "NVIDIA Developer/Research、Hugging Face Blog",
+      "LangChain Blog 与 LlamaIndex Blog",
+      "Cline、Pi Coding Agent/pi-mono、DeepSeek Harness/DSH 官方仓库与生态信号",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客"
+    ],
+    "failedSources": [
+      "xAI API changelog：公开搜索未返回带 2026-11-12/13 精确日期的新条目",
+      "部分中国厂商官网列表：搜索索引仅返回聚合摘要，无法稳定取得原文发布时间",
+      "Latent Space、Dwarkesh、No Priors、a16z AI：RSS/搜索未发现窗口内可核实新集",
+      "GitHub Trending：页面动态渲染，本主题仅记录厂商级信号，不采用不稳定榜单数据"
+    ],
+    "candidateCount": 11,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-11-12 10:48–2026-11-13 10:48（Asia/Shanghai）**。本轮核实到 4 条可保留动态：微软同时出现研究播客与企业落地信号，DeepSeek Harness 则在阿里云开发者生态中形成可观测性和插件工程两条实践线索。xAI/Grok 已按要求独立检查，窗口内未发现官方模型、API、DeepSearch、语音、编码、工具调用或 Agent 新发布。\n\n## 优先动态（过去 24 小时）\n\n| 厂商/机构 | 动态 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| Microsoft Research | [Research Focus 第 98 期](https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/) | 官方播客 | 2026-11-12，已核实 | 本期串联通用语音翻译、KLS 猜想以及提升 AI coding agent 效率等研究；对行业的意义在于把 Agent 工程效率与基础研究放进同一官方研究脉络。 |\n| Microsoft | [From AI ambition to business impact](https://blogs.microsoft.com/blog/2026/11/12/from-ai-ambition-to-business-impact/) | 企业采用 | 2026-11-12，已核实 | 微软称其 Frontier Company 已参与近 500 个项目、覆盖 28 个国家的 200 多家客户，并列出多家复购客户；这是厂商自述的企业落地规模信号，不能等同于独立审计。 |\n| Alibaba Cloud / DeepSeek Harness 生态 | [DeepSeek Harness 可观测性实践](https://www.alibabacloud.com/blog/deepseek-harness-a-practical-guide-to-comprehensive-observability_603771) | 工程生态 | 2026-11-12，已核实 | 阿里云社区给出基于 LoongSuite 与 OpenTelemetry GenAI 语义的 DSH trace、metrics 和成本分析方案，体现 coding harness 从本地工具走向可审计运维生态。**详见开源专题页**。 |\n| Alibaba Cloud / DeepSeek Harness 生态 | [一切皆插件的 Agent 工程范式](https://www.alibabacloud.com/blog/after-everything-becomes-a-plugin-a-new-paradigm-for-agent-engineering_603769) | 架构解读 | 2026-11-12，已核实 | 文章系统拆解 DSH 的可替换 loop、session、sandbox、UI、调度与插件层，并与 Pi 的极简核心路线比较；属于厂商社区的技术解读，不是新版本发布。**详见开源专题页**。 |\n\n## 常规扫描\n\n- **Google DeepMind / Google Research**：官方 News 列表出现多项 2026 年 11 月内容，但列表未提供可核实到日的窗口内时间，本轮不据此写成 24 小时新增。\n- **Meta AI、Mistral、Cohere、NVIDIA、Hugging Face、LangChain、LlamaIndex**：检查官方列表、研究页或 changelog；未发现同时满足窗口、原文和行业意义的新增。\n- **Qwen/阿里、ByteDance Seed、百度、腾讯混元、DeepSeek、智谱、Kimi、StepFun、MiniMax**：检查官方/可信索引入口；若仅有聚合站声称模型变化而无法回到原始发布，本轮不作为已确认事实。\n- **Cline、Pi Coding Agent / pi-mono**：官方仓库/发布入口未见需要跨到行业页的合作、融资、企业采用或生态级新信号；常规提交留给开源专题。\n\n## 播客\n\n- Microsoft Research Focus 第 98 期是本窗唯一可从发布方页面核实日期的新节目。\n- The Cognitive Revolution 的多 Agent 协议相关节目在二手索引中出现，但本轮未稳定取得节目官方页及精确发布时间，暂不列为已确认来源。\n- Latent Space、Dwarkesh、No Priors、a16z AI 与厂商播客未发现窗口内可核实新增。\n\n## 近两日补充（24–48 小时）\n\n本轮没有需要与 24 小时主表分列、且可从原始来源核实的新增。\n\n## 近三日补充（48–72 小时）\n\n本轮没有需要补录的 48–72 小时官方动态。\n\n## 日期未确认\n\n- Google DeepMind 的官方新闻列表包含多条仅标为“November 2026”的模型与研究内容；因无法核实到日，保留为检查记录，不推断落入本窗。\n\n## 观察池\n\n- 若干聚合索引声称 Kimi、百度、MiniMax、ByteDance 等在 11 月 11–12 日存在模型/API 变化，但本轮未找到对应官方原文，故不将产品名、版本或发布日期写成确认事实。\n- xAI/Grok 官方 News 最新可见内容早于本轮窗口；普通模型/API 旧闻不重复。官方入口、API 文档与仓库已检查，无新增。\n\n## 一句话总结\n\n今天的可核实信号集中在**企业 AI 落地规模、研究传播，以及 Coding Agent Harness 的可观测与插件化工程生态**，而非新一轮基础模型发布。\n\n## 采集状态\n\n- 已检查：Anthropic、OpenAI、Google DeepMind/Research、Meta AI、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/Alibaba/DAMO、ByteDance、百度、腾讯、DeepSeek、智谱、Moonshot、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex，以及列明播客和三项 Harness 生态入口。\n- 失败/受限：xAI changelog 未返回精确日期新增；部分中国厂商列表只能取得聚合摘要；部分播客官方 feed 搜索不稳定；GitHub Trending 动态渲染。\n- 初始候选：11；最终保留：4；二次补搜：否（最终来源非 0）。",
+  "sources": [
+    {
+      "title": "Microsoft Research Focus – Edition #98",
+      "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+      "source": "Microsoft Research",
+      "publishedAt": "2026-11-12",
+      "summary": "微软研究播客汇总语音翻译、数学研究与 AI coding agent 效率议题。",
+      "tags": ["Microsoft", "Research", "Podcast", "Coding Agent"]
+    },
+    {
+      "title": "From AI ambition to business impact",
+      "url": "https://blogs.microsoft.com/blog/2026/11/12/from-ai-ambition-to-business-impact/",
+      "source": "Microsoft",
+      "publishedAt": "2026-11-12",
+      "summary": "微软披露 Frontier Company 的客户项目规模与复购信号。",
+      "tags": ["Microsoft", "Enterprise", "Adoption"]
+    },
+    {
+      "title": "DeepSeek Harness: A Practical Guide to Comprehensive Observability",
+      "url": "https://www.alibabacloud.com/blog/deepseek-harness-a-practical-guide-to-comprehensive-observability_603771",
+      "source": "Alibaba Cloud Community",
+      "publishedAt": "2026-11-12",
+      "summary": "基于 LoongSuite 和 OpenTelemetry GenAI 语义为 DSH 增加 trace、metrics 与成本分析。",
+      "tags": ["DeepSeek Harness", "Observability", "OpenTelemetry", "Agent"]
+    },
+    {
+      "title": "After Everything Becomes a Plugin: A New Paradigm for Agent Engineering",
+      "url": "https://www.alibabacloud.com/blog/after-everything-becomes-a-plugin-a-new-paradigm-for-agent-engineering_603769",
+      "source": "Alibaba Cloud Community",
+      "publishedAt": "2026-11-12",
+      "summary": "拆解 DSH 的插件化架构、可替换 Agent loop 与透明执行路线。",
+      "tags": ["DeepSeek Harness", "Agent Harness", "Plugin", "Architecture"]
+    }
+  ]
+}
