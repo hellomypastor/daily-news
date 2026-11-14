@@ -1,0 +1,62 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-11-14T10:55:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Index",
+      "OpenAI API changelog",
+      "ChatGPT release notes",
+      "OpenAI Codex GitHub releases and release API",
+      "OpenAI Developer Community announcements",
+      "OpenAI developer documentation: Responses API, Agents SDK, Realtime API and deprecations",
+      "Reddit r/OpenAI, r/ChatGPT, r/ChatGPTCoding and r/codex",
+      "Hacker News recent submissions"
+    ],
+    "failedSources": [
+      "OpenAI 官方社交账号：公开搜索结果未稳定返回可核验的逐条发布时间与互动量",
+      "部分 Reddit 搜索结果：仅能看到搜索摘要，缺少足够互动样本，未据此推断整体口碑",
+      "OpenAI Developer Community 企业版 beta 公告：页面只显示日期，未显示可核验的精确发布时间"
+    ],
+    "candidateCount": 8,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口为 **2026-11-13 10:49 至 2026-11-14 10:49（Asia/Shanghai）**。本轮可确认的重点集中在 Codex CLI：两个稳定版在窗口内连续发布，0.168.0 增加模型提供方与侧聊工作区能力，0.169.0 继续补齐多侧聊、历史任务搜索、终端内自定义模型提供方和 Cloud 会话管理，并收紧不受信任目录中的非交互执行。OpenAI 新闻页、API changelog 与 ChatGPT release notes 在窗口内未发现可核验的新条目。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品 / 能力 | 状态 | 本轮结论 |\n|---|---|---|\n| Codex CLI | **有更新** | [0.168.0](https://github.com/openai/codex/releases/tag/rust-v0.168.0) 与 [0.169.0](https://github.com/openai/codex/releases/tag/rust-v0.169.0) 均在窗口内发布，详见下文。 |\n| VS Code 集成 | 无新增 | 检查官方 Codex 仓库、文档与发布说明，未发现独立的 24 小时更新。 |\n| JetBrains 集成 | 无新增 | 检查官方 Codex 文档与发布说明，未发现独立的 24 小时更新。 |\n| Codex cloud / remote tasks / PR agents | **随 CLI 改进** | 0.169.0 的 opt-in Cloud connection 支持从终端发送图片、选择模型与推理强度，并归档或恢复 Cloud 会话。 |\n| ChatGPT agentic mode | 无新增 | ChatGPT release notes 在窗口内无新条目。 |\n| Agents API / hosted sandboxes | 无新增 | 检查开发者文档与 changelog，未发现窗口内更新。 |\n| Responses API | 无新增 | API changelog 在窗口内未列出新条目。 |\n| Agents SDK（Python / TypeScript） | 无新增 | 检查官方文档与仓库入口，未发现窗口内发布说明。 |\n| Assistants API 迁移 / 弃用 | 无新增 | 未发现窗口内迁移或弃用状态变化；不据旧资料外推。 |\n| Realtime API | 无新增 | API changelog 与官方文档未见窗口内更新。 |\n| GPT / reasoning / Codex 模型族 | 无新增 | 未发现窗口内经官方确认的新模型或别名变化。 |\n\n## Tier 2：ChatGPT 体验\n\n| 范围 | 状态 | 说明 |\n|---|---|---|\n| 浏览器 / Operator 能力、桌面应用、GPTs / GPT Store、Canvas、Sora / 视频、GPT Image / DALL·E、Voice、Connectors / MCP | 无新增 | 已检查 OpenAI News、ChatGPT release notes 与开发者 changelog；窗口内没有可核验的新发布。Codex 0.169.0 的 MCP 等待问题修复属于 CLI 更新，已归入 Tier 1。 |\n\n## Tier 3：企业与行业场景\n\n窗口内没有精确时间可核验的 Enterprise、Business、Edu、Gov、Science 或安全产品更新。OpenAI Developer Community 的 [Businesses in ChatGPT beta 公告](https://community.openai.com/t/introducing-businesses-in-chatgpt-in-beta/1414865) 标为 11 月 13 日，但页面未提供精确发布时间，故仅列入“日期未确认”。\n\n## 官方更新（由新到旧）\n\n### Codex CLI 0.169.0：多侧聊、任务搜索、模型提供方与 Cloud 会话\n\n[官方 release](https://github.com/openai/codex/releases/tag/rust-v0.169.0) 的 GitHub API 时间为 2026-11-13 08:37:05 UTC（上海时间 16:37:05）。主要变化包括：可选终端工作区支持多个侧聊标签并在重启后恢复；Agent command center 可按名称、提示预览或工作目录搜索旧任务；终端可新增或编辑自定义模型提供方；macOS / Linux 的可选 Cloud connection 可发送图片、选择模型和推理强度、归档或恢复云端会话。安全上，`codex exec` 即使使用 `--sandbox workspace-write`，在不受信任目录也会保持项目配置与 MCP server 禁用，需显式 `--trust`。\n\n### Codex CLI 0.168.0：模型提供方选择与侧聊工作区\n\n[官方 release](https://github.com/openai/codex/releases/tag/rust-v0.168.0) 的 GitHub API 时间为 2026-11-13 03:54:29 UTC（上海时间 11:54:29）。该版允许在 Sessions 中浏览模型提供方并为新聊天设默认值；实验性 `tui_workspace` 可在主聊天旁显示侧聊；音频模型可附加录音；同时修复恢复聊天时模型提供方、工具调用中断渲染与运行中 steering 等问题。两次稳定版连续推进，显示 Codex 正在把终端从单会话 CLI 扩展为多会话、可切换后端的 Agent 工作台。\n\n## Love\n\n- 一条当日社区摘要帖逐项整理了 0.168 / 0.169 的侧聊、提供方控制、任务搜索与信任边界变化：[Reddit 帖子](https://www.reddit.com/r/CodexAutomation/comments/1xvak96/codex_cli_0168_and_0169_add_terminal_side_chats/)。该帖互动量很低，适合作为“变化被开发者注意到”的弱信号，不足以代表广泛正向口碑。\n\n## Hate\n\n本窗口没有找到同时满足“时间可核验、内容具体、互动量足够”的负向社区样本。搜索中出现的速度、额度和模型选择抱怨多为更早帖子，本页不把它们冒充本轮口碑。\n\n## 情绪判断\n\n**中性偏正，低置信度。** 正向依据是稳定版连续交付并解决会话组织、后端选择和安全边界等具体问题；社区样本仅一条低互动摘要，且官方发布不能计作用户正面情绪，因此不做趋势性结论。\n\n## 对比与生产力观察\n\n0.168 / 0.169 的多侧聊、任务检索、后端切换和 Cloud 会话操作，进一步把 Codex 的竞争面从“模型回答质量”推向 Agent harness 的会话管理、运行边界和远程协作。与 Claude Code、Cline、Pi Coding Agent、DeepSeek Harness / DSH、Cursor 等工具的高下仍需具名评测或可复现实验；本轮没有发现足以支持“追平”或“超过”的新证据。Cline、Pi 与 DSH 的完整扫描见开源专题页。\n\n## 日期未确认\n\n- [Introducing Businesses in ChatGPT in beta](https://community.openai.com/t/introducing-businesses-in-chatgpt-in-beta/1414865)：OpenAI Developer Community 列表显示 2026-11-13，但未暴露精确发布时间，无法确认是否落入本轮从 10:49 开始的窗口。保留为企业产品候选，不写成过去 24 小时已确认发布。\n\n## 观察池\n\n- Codex 仓库在窗口内还有多个 0.171.0 alpha 预发布标签，但 release 页面没有足够变更说明；本页以两个有完整 changelog 的稳定版为主，不把无说明 alpha 标签扩写成产品能力。\n- OpenAI 首页仍展示 11 月 12 日的 Daybreak 活动入口，已早于精确窗口且属于安全主题背景，本轮不重复列为当日更新。\n\n## 来源链接\n\n1. [Codex CLI 0.169.0 官方 release](https://github.com/openai/codex/releases/tag/rust-v0.169.0)\n2. [Codex CLI 0.168.0 官方 release](https://github.com/openai/codex/releases/tag/rust-v0.168.0)\n3. [OpenAI Developer Community：Businesses in ChatGPT beta](https://community.openai.com/t/introducing-businesses-in-chatgpt-in-beta/1414865)\n4. [Reddit：Codex CLI 0.168 / 0.169 变化摘要](https://www.reddit.com/r/CodexAutomation/comments/1xvak96/codex_cli_0168_and_0169_add_terminal_side_chats/)\n\n## 采集状态\n\n- 已检查：OpenAI News / Index、API changelog、ChatGPT release notes、Codex GitHub releases 与 API、Developer Community announcements、Responses API / Agents SDK / Realtime / deprecations 文档入口、Reddit 相关社区及 Hacker News recent。\n- 失败或受限：官方社交搜索未稳定返回逐条时间与互动量；部分 Reddit 结果只有摘要且样本过少；企业版 beta 公告无精确时间。\n- 初始候选：8 条；最终保留来源：4 条。\n- 二次补搜：否（最终来源不为 0）。\n",
+  "sources": [
+    {
+      "title": "Codex CLI 0.169.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+      "source": "OpenAI / GitHub",
+      "publishedAt": "2026-11-13 16:37 +08:00",
+      "summary": "Codex CLI 稳定版加入多侧聊、历史任务搜索、终端自定义模型提供方、Cloud 会话管理，并强化不受信任目录的执行边界。",
+      "tags": ["Codex", "CLI", "Agent", "Cloud"]
+    },
+    {
+      "title": "Codex CLI 0.168.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+      "source": "OpenAI / GitHub",
+      "publishedAt": "2026-11-13 11:54 +08:00",
+      "summary": "Codex CLI 稳定版新增模型提供方浏览与默认值、实验性侧聊工作区、录音附件，并修复恢复会话与 steering 等问题。",
+      "tags": ["Codex", "CLI", "Agent"]
+    },
+    {
+      "title": "Introducing Businesses in ChatGPT in beta",
+      "url": "https://community.openai.com/t/introducing-businesses-in-chatgpt-in-beta/1414865",
+      "source": "OpenAI Developer Community",
+      "publishedAt": "",
+      "summary": "官方社区列表标为 2026-11-13，但缺少精确时间；作为企业产品候选保留在日期未确认区。",
+      "tags": ["日期未确认", "ChatGPT", "Business"]
+    },
+    {
+      "title": "Codex CLI 0.168 and 0.169 add terminal side chats, provider controls and task search",
+      "url": "https://www.reddit.com/r/CodexAutomation/comments/1xvak96/codex_cli_0168_and_0169_add_terminal_side_chats/",
+      "source": "Reddit r/CodexAutomation",
+      "publishedAt": "2026-11-13（精确时间未显示）",
+      "summary": "低互动社区摘要整理两个稳定版变化，只作为开发者关注的弱信号，不代表整体口碑。",
+      "tags": ["观察池", "Community", "Codex"]
+    }
+  ]
+}

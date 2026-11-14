@@ -1,0 +1,77 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-11-14T11:12:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Cognition Devin official release notes, product docs, automations, scheduled sessions, environments, billing and integrations",
+      "xAI official news, Grok Bot docs/changelog, developer release notes and Batch API docs",
+      "Anthropic news and Managed Agents documentation",
+      "OpenAI news, developer changelog, Agents API and Codex cloud/remote release channels",
+      "Google Cloud Vertex AI / Gemini Enterprise / Agent Compute Engine and Google Cloud Blog",
+      "Microsoft Azure AI / Copilot Studio / Foundry agent channels",
+      "AWS Bedrock AgentCore, AWS DevOps Agent and Amazon Q Developer channels",
+      "Cloudflare Agents, Workers, Sandboxes and Cloudflare Blog",
+      "Replit Agent, GitHub coding agent, Cursor, Factory, Sourcegraph/Amp, Lindy, CrewAI and LangGraph Platform channels",
+      "China: Coze/Volcano/Doubao/Trae/Seed, Bailian/Qoder/Tongyi/Quark, Tencent Cloud/Yuanbao/Hunyuan, Baidu AgentBuilder/Comate, Zhipu, Kimi, MiniMax and DeepSeek",
+      "Cline official repository/changelog/releases",
+      "Pi Coding Agent / badlogic pi-mono official repository and packages",
+      "DeepSeek Harness / DSH official repository and documentation",
+      "OpenCode, Aider, Continue and Roo Code official repositories/releases/changelogs"
+    ],
+    "failedSources": [
+      "Cognition 官方 release notes 只给日历日期，未给精确发布时间；最新条目为 11 月 12 日，无法纳入精确 24 小时正文",
+      "Grok Bot 文档标注 Last updated: 2026-11-13，但没有精确更新时间，无法确认是否落入从 10:49 开始的窗口",
+      "部分厂商社交账号和动态页面依赖登录或动态渲染，公开搜索未返回可复核的时间与原文",
+      "Cline/Pi/DSH/OpenCode/Aider/Continue/Roo Code 检查到的本地 CLI、IDE 或仓库变化没有新的托管执行生命周期证据"
+    ],
+    "candidateCount": 9,
+    "secondPass": true
+  },
+  "content": "## 今日结论\n\n采集窗口为 **2026-11-13 10:49 至 2026-11-14 10:49（Asia/Shanghai）**。本轮没有发现同时满足“落入精确 24 小时窗口”与“AaaS 托管执行生命周期定义”的已验证新发布。由于已验证 24 小时动态为 0，已按规范完成第二轮扩展搜索：扩大中英文关键词，检查官方文档、GitHub、云厂商博客和可信二手入口。\n\n值得继续跟踪的信号有三类：Grok Bot 官方文档在 11 月 13 日更新并明确描述持久云电脑、计划任务与多 Bot 协作，但缺少精确时间；Devin 11 月 12 日更新继续强化计划任务、审批、企业权限和自动化可见性；Google Cloud 11 月 13 日发布 HPC Agent Skills 相关内容，但更接近托管云基础设施与技能封装，尚不足以单独证明新 AaaS 产品发布。\n\n## 重点动态\n\n| 状态 | 厂商 / 产品 | 结论 | 证据限制 |\n|---|---|---|---|\n| 日期未确认 | xAI / Grok Bot | [官方文档](https://docs.x.ai/grok-bot/overview) 明确 Grok Bot 使用持久云电脑，可跨应用工作、保存技能并按计划运行，多 Bot 还能协作；产品本身符合 AaaS 定义。 | 页面标注 11 月 13 日更新，但无精确时间，不能写成已确认的过去 24 小时发布。 |\n| 24–72h 观察 | Cognition Devin | [11 月 12 日官方 release notes](https://docs.devin.ai/release-notes/overview) 加强会话请求合并、提醒/计划可见性、Devin Review 自动修复开关、企业权限与 MCP 工具权限。 | 日历日期已确认，但已早于本轮精确 24 小时窗口。 |\n| 日期未确认 / 邻近 | Google Cloud | [SC26 官方博客](https://cloud.google.com/blog/topics/hpc/whats-new-in-hpc-and-ai-at-sc26) 介绍把 HPC 专业知识封装为可复用 Agent Skills，服务于架构、部署与优化工作流。 | 仅显示 11 月 13 日，缺少精确时间；文章未证明一个新的独立托管 Agent 生命周期产品。 |\n\n## 远程 / 云端 Agent 执行\n\n### Grok Bot：符合 AaaS 定义，但本轮只作日期未确认候选\n\n[xAI Grok Bot 文档](https://docs.x.ai/grok-bot/overview) 表明 Bot 底层共享一台带浏览器、文件系统与终端的持久云电脑，可连接 Slack、Notion、Drive、Teams、MCP 与 API；用户示范一次后可保存为技能并按计划重复运行，多 Bot 可分工后请求人工审批。这些特征覆盖托管环境、持久状态、工具执行、计划任务和多 Agent 协作，明确超出普通模型 API。\n\n本轮也检查了 xAI news、Grok Bot changelog、开发者 release notes 与 Batch API。Batch API 虽支持后台异步模型请求，但它仍是 MaaS 批处理，不等同于托管 Agent 执行；普通 Grok 模型/API 更新不进入 AaaS 正文。Grok Bot 在精确窗口内没有可确认的新发布，不硬凑条目。\n\n### Devin：11 月 12 日更新继续补企业控制面\n\n[Cognition Devin 官方 release notes](https://docs.devin.ai/release-notes/overview) 的 11 月 12 日条目显示：同类凭据、审批和网络访问请求会合并为请求卡；Devin 设置提醒后，会话会显示时间/日程与链接；Devin Review 增加独立的自动修复开关；企业管理员可裁剪 GitHub 权限，并按 MCP 工具设置 Allow、Needs approval 或 Block。自动化卡片还把 RRULE 转为可读日程。\n\n这些变化直接关联托管异步执行的审批、计划任务、企业权限和集成控制面，符合 AaaS 关注范围；但发布日期在本轮 24 小时窗口之前，因此只放入 24–72 小时观察池，不冒充今日发布。Cognition 产品新闻、环境、并发、计费、企业接入和集成入口均已显式检查，未发现 11 月 13 日 10:49 之后可精确确认的新条目。\n\n## 海外厂商扫描\n\n| 厂商 / 平台 | 本轮状态 | AaaS 边界判断 |\n|---|---|---|\n| Anthropic Managed Agents | 无精确窗口新增 | 已检查托管 sessions、harness、sandboxes、credentials 与 tracing；社区出现“self-hosted private beta”单源说法，放入未证实传闻。详见 Claude 专题页。 |\n| OpenAI Agents / Codex cloud | 无独立 AaaS 新发布 | Codex CLI 0.169.0 改进 Cloud 会话操作，但本轮未发现新的托管服务、并发或定价发布；详见 OpenAI 专题页。 |\n| Google Vertex / Gemini / Jules | 日期未确认候选 | HPC Agent Skills 是云端 Agent 工程信号，但不单独证明新托管生命周期服务。 |\n| Microsoft Copilot Studio / Azure Agent services | 无新增 | 未发现窗口内可核验的 GA、计费、配额或远程执行更新。 |\n| AWS AgentCore / DevOps Agent / Amazon Q | 无新增 | 最近可见更新早于窗口；未把历史能力重复包装成今日新闻。 |\n| Replit、GitHub、Cursor、Factory、Amp | 无新增 | 已查远程任务、后台 Agent、PR Agent、环境和企业控制面入口，无窗口内可确认的新条目。 |\n| Lindy、CrewAI、LangGraph Platform | 无新增 | 未发现窗口内可核验的托管运行、并发、定价或企业控制更新。 |\n| Cloudflare Agents / Sandboxes / Workers | 邻近安全信号 | 11 月 13 日官方文章讨论自主渗透编排框架对客户的攻击，但不是 Cloudflare 新 AaaS 发布，见邻近信号。 |\n\n## 中国市场\n\n| 范围 | 本轮状态 | 说明 |\n|---|---|---|\n| 字节跳动 Coze / Volcano / Doubao / Trae / Seed | 无新增 | 已查托管 Agent、远程环境、后台任务、企业接入与计费关键词，未发现窗口内可核验新发布。 |\n| 阿里 Bailian / Qoder / Tongyi / Quark | 无新增 | 未发现窗口内符合 AaaS 定义的新托管执行或控制面更新。 |\n| 腾讯 Cloud / Yuanbao / Hunyuan | 无新增 | 未发现窗口内符合定义的新条目。 |\n| 百度 AgentBuilder / Comate | 无新增 | 未发现窗口内符合定义的新条目。 |\n| Zhipu、Kimi、MiniMax、DeepSeek | 无新增 | 普通模型/API 或本地 harness 动态不计为 AaaS。 |\n\n## Coding Agent / Harness 的云端托管边界\n\n本轮逐一检查 Cline、Pi Coding Agent / `badlogic/pi-mono`、DeepSeek Harness / DSH，以及 OpenCode、Aider、Continue、Roo Code 的官方仓库、release、changelog 与文档。没有发现可确认的新云端托管、后台/定时任务、远程环境、并发服务、企业控制面或定价证据。\n\n这些项目的本地 CLI、IDE、桌面、模型路由、会话和工具调用更新属于开源专题；即使能调用云模型，也不自动成为 AaaS。Pi 的 GPU pod 管理包、普通 CI/headless 运行或用户自行部署同样不等于提供商托管 Agent 生命周期。\n\n## AaaS vs MaaS / PaaS\n\n- **AaaS**：服务方托管或管理 Agent 的会话、环境、异步/计划任务、工具执行、生命周期、审批、可观测性或企业控制。Grok Bot 与 Devin 的既有能力符合这一定义。\n- **MaaS**：仅提供模型推理、Responses/Chat API 或异步 Batch API；即使支持 tool calling，也不能单凭这一点归为 AaaS。\n- **PaaS**：提供通用 VM、容器、GPU、sandbox 或工作流基础设施，但没有托管 Agent 生命周期。\n\n## 日期未确认\n\n- [Grok Bot 官方文档](https://docs.x.ai/grok-bot/overview)：页面标注 2026-11-13 更新，内容明确描述持久云电脑、routines 与多 Bot 协作；因无精确时间，保留为日期未确认。\n- [Google Cloud SC26：HPC 与 Agent Skills](https://cloud.google.com/blog/topics/hpc/whats-new-in-hpc-and-ai-at-sc26)：标注 2026-11-13，未给精确时间；作为 Agent 技能与云基础设施结合的候选，不写成新 AaaS 产品发布。\n\n## 未证实传闻\n\n- [Reddit 单源帖](https://www.reddit.com/r/ClaudeAI/comments/1xuwdfs/claude_managed_agents_can_now_be_selfhosted/) 声称 Claude Managed Agents self-hosted private beta 可把 harness、sandbox、凭据和 session history 部署在客户云或本地。当前只找到这一条社区来源，Anthropic News 与公开 Managed Agents 文档未检索到对应正式公告；来源数 **1**，状态为未证实，不作为产品发布事实。详见 Claude 专题页。\n\n## 邻近信号观察池\n\n- [Cloudflare：Adapting to AI penetration testing orchestrators](https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/)（2026-11-13）：官方称近三天观察到 50 多个自动化渗透框架家族扫描客户，反映托管 Agent/编排器带来的身份、网络与执行治理压力。这是 AaaS 安全需求信号，不是 Cloudflare AaaS 新品。\n- xAI Batch API 支持排队、后台处理和稍后取回结果，但对象是批量模型推理，不提供 Agent 环境与生命周期，因此归为 MaaS 邻近信号，不列入来源正文。\n\n## 趋势判断\n\n本轮没有新的“平台发布”可确认，但 Grok Bot 与 Devin 文档共同显示 AaaS 竞争点正在从“能否异步执行”转向持久环境、可读日程、审批合并、工具级权限、多 Agent 协作与企业治理；同时 Cloudflare 的安全观察提醒，远程执行规模化会把身份、网络和沙箱边界推到产品核心。\n\n## 来源链接\n\n1. [xAI：Grok Bot overview](https://docs.x.ai/grok-bot/overview)\n2. [Cognition：Devin Recent Updates](https://docs.devin.ai/release-notes/overview)\n3. [Google Cloud：What’s new in HPC and AI at SC26](https://cloud.google.com/blog/topics/hpc/whats-new-in-hpc-and-ai-at-sc26)\n4. [Reddit：Claude Managed Agents self-hosted private beta 单源说法](https://www.reddit.com/r/ClaudeAI/comments/1xuwdfs/claude_managed_agents_can_now_be_selfhosted/)\n5. [Cloudflare：Adapting to AI penetration testing orchestrators](https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/)\n\n## 采集状态\n\n- 已检查：Cognition Devin 官方产品、release notes、文档、环境、自动化、计划任务、计费、企业与集成；xAI news、Grok Bot 文档/changelog、API release notes；Anthropic/OpenAI/Google/Microsoft/AWS/Cloudflare；海外托管 Agent 平台；中国主要厂商；Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 官方入口。\n- 失败或受限：Devin 与 Grok 部分页面只有日历日期或最后更新日期，无精确时间；部分社交入口需登录或动态渲染；开源 harness 未发现新的提供商托管生命周期证据。\n- 初始候选：9 条；最终保留来源：5 条。\n- 二次补搜：**是**。因精确 24 小时已验证动态为 0，已扩大中英文关键词并切换官方博客、文档、GitHub、云厂商与可信二手入口。\n\n今日扫描完成，共 **5** 条来源信号，重点：Grok Bot 的持久云电脑与计划任务文档更新待确认精确日期，Devin 的 24–72 小时更新继续强化审批、日程与企业工具权限。\n",
+  "sources": [
+    {
+      "title": "Grok Bot overview",
+      "url": "https://docs.x.ai/grok-bot/overview",
+      "source": "xAI",
+      "publishedAt": "",
+      "summary": "页面标注 2026-11-13 更新但无精确时间；文档说明 Grok Bot 使用持久云电脑、支持计划 routines、多 Bot 协作和 MCP/API 工具。",
+      "tags": ["日期未确认", "Grok Bot", "Cloud Agent", "Scheduled Tasks"]
+    },
+    {
+      "title": "Devin Recent Updates — November 12, 2026",
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "source": "Cognition",
+      "publishedAt": "2026-11-12（精确时间未显示）",
+      "summary": "Devin 更新请求卡、提醒日程、Review 自动修复、企业权限和 MCP 工具级审批，属于 24–72 小时观察项。",
+      "tags": ["观察池", "Devin", "Enterprise", "Automation"]
+    },
+    {
+      "title": "Where supercomputing meets agentic AI: What’s new in Google Cloud HPC and AI at SC26",
+      "url": "https://cloud.google.com/blog/topics/hpc/whats-new-in-hpc-and-ai-at-sc26",
+      "source": "Google Cloud",
+      "publishedAt": "",
+      "summary": "官方博客标注 2026-11-13 但无精确时间，介绍将 HPC 专业知识封装为可复用 Agent Skills；作为邻近平台信号保留。",
+      "tags": ["日期未确认", "邻近信号", "Google Cloud", "Agent Skills"]
+    },
+    {
+      "title": "Claude Managed Agents can now be self-hosted (private beta): community claim",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xuwdfs/claude_managed_agents_can_now_be_selfhosted/",
+      "source": "Reddit r/ClaudeAI",
+      "publishedAt": "2026-11-13（精确时间未显示）",
+      "summary": "单一社区来源声称 Managed Agents self-hosted private beta，尚无公开官方公告佐证，仅列未证实传闻。",
+      "tags": ["未证实传闻", "Claude Managed Agents", "Self-hosted"]
+    },
+    {
+      "title": "Adapting to AI penetration testing orchestrators: The Modern Security Model",
+      "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/",
+      "source": "Cloudflare",
+      "publishedAt": "2026-11-13（精确时间未显示）",
+      "summary": "Cloudflare 观察到自主渗透编排框架快速扩散，构成托管 Agent 身份、网络与执行治理的邻近安全信号。",
+      "tags": ["邻近信号", "Security", "Agent Orchestration"]
+    }
+  ]
+}

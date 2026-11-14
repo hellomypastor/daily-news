@@ -1,0 +1,84 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-14T11:31:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom, research, docs and Claude Code releases",
+      "OpenAI News, Research, platform changelog and official GitHub",
+      "Google DeepMind News, model cards and Google Research Blog",
+      "Meta AI blog and Muse product channels",
+      "Microsoft Research, Microsoft AI and Azure AI channels",
+      "xAI News, Grok docs, API/model changelog and official repositories",
+      "Mistral news, docs and official repositories",
+      "Cohere research, blog and changelog",
+      "Qwen, Alibaba Cloud Model Studio and DAMO channels",
+      "ByteDance Doubao and Seed official channels",
+      "Baidu Research, ERNIE and official product channels",
+      "Tencent Hunyuan and Tencent Cloud official channels",
+      "DeepSeek news, docs and official repositories",
+      "Zhipu AI and GLM official channels",
+      "Moonshot AI and Kimi official channels",
+      "StepFun official channels",
+      "MiniMax news, docs and official repositories",
+      "NVIDIA Developer and NVIDIA Research",
+      "Hugging Face blog and papers",
+      "LangChain blog and changelog",
+      "LlamaIndex blog and changelog",
+      "Cline official company, changelog and repository channels",
+      "Pi Coding Agent / pi-mono official repository and package channels",
+      "DeepSeek Harness / DSH official repository and documentation",
+      "Latent Space podcast",
+      "Dwarkesh Podcast",
+      "No Priors podcast",
+      "The Cognitive Revolution podcast",
+      "a16z AI podcast",
+      "Official vendor podcast feeds"
+    ],
+    "failedSources": [
+      "xAI/X social timeline: full recent timeline was not publicly accessible without login; official xAI news/docs/changelog/repositories were used instead",
+      "ByteDance Seed English news index: recent entries were inconsistently indexed; Chinese official channels were also checked",
+      "Several podcast RSS pages: search indexing exposed episode titles but no new episode with a verifiable publish time in the window"
+    ],
+    "candidateCount": 17,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-11-13 11:31 至 2026-11-14 11:31（Asia/Shanghai）。严格 24 小时窗口内未发现足够明确的新厂商发布；本页按规范保留近 48 小时与近 72 小时的官方补充。重点是 Google DeepMind 面向快速编码与 Agent 工作流的 Gemini 4 Hydrogen、Microsoft Research 对长时编码 Agent 上下文压缩的生产级研究，以及 Google DeepMind AlphaGenome 2 与阿里云 Qwen4-Max 预览。\n\n## 优先动态（过去 24 小时）\n\n本轮未发现能由官方原文和明确时间共同确认、且落在严格 24 小时窗口内的新发布。Anthropic 与 OpenAI 仍已完整检查；Claude Code 更新及服务事故详见 Claude 专题页，OpenAI 相关动态详见 OpenAI 专题页。\n\n## 近两日补充（24–48 小时）\n\n| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |\n|---|---|---|---|---|---|\n| Google DeepMind | [Gemini 4 Hydrogen 模型卡](https://deepmind.google/models/model-cards/gemini-4-hydrogen/) | 模型 / Agent | 2026-11-12，官方 | Hydrogen 定位于快速、低延迟的编码与 Agent 工作流，支持四档思考强度；官方模型卡披露 Agent 编码、知识工作、计算机使用与安全评测。 | 它展示 Google 将前沿模型家族细分为长时推理与快速执行层，尤其强调作为子 Agent 被编排的用途；具体分数均为厂商评测，不能直接外推为通用领先。 |\n| Microsoft Research | [Research Focus #98](https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/) | 研究播客 | 2026-11-12，官方 | 节目介绍 CompactionBench 与 APEC：对 1,350 万次编码会话的研究显示仅 7.8% 触发压缩，却占 44.2% token 消耗；异步渐进压缩在实验中最高降低 25.4% 成本和 9.6% 执行时间。 | 这是 Agent harness 的系统效率问题，而非单纯模型能力比较；大规模生产轨迹让 context compaction 的延迟、缓存与成本权衡更可测。 |\n\n## 近三日补充（48–72 小时）\n\n| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |\n|---|---|---|---|---|---|\n| Google DeepMind | [AlphaGenome 2](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/) | 科学模型 / API | 2026-11-11，官方 | 新一代 DNA 序列模型以细胞类型或状态作为条件，基于超过 1 亿个单细胞档案训练；已向非商业研究开放 API，商业研究为私有预览。 | 它把基础模型与专业科研 Agent 工具衔接起来；官方称稍后会在 Google Antigravity 中提供 AlphaGenome 2 Skills，但尚未把“即将提供”写成已上线。 |\n| Alibaba Cloud / Qwen | [Qwen4-Max-Preview](https://docs.modelstudio.console.alibabacloud.com/en/model-studio/qwen4-max-preview) | 多模态模型预览 | 2026-11-11，官方 | 预览模型支持文本、图像和视频理解、深度推理、联网搜索、工具调用与结构化输出；仅在 Token Plan 提供，预览至 11 月 25 日 24:00（UTC+8）后退役。 | 这是限时、限定套餐的预览而非正式 GA；其 OpenAI / Anthropic API 兼容与工具调用能力值得 Agent 开发者评估。 |\n\n## 例行扫描\n\n| 范围 | 结果 |\n|---|---|\n| Anthropic / OpenAI | 已检查。Claude Code 与服务状态详见 Claude 专题页；OpenAI 动态详见 OpenAI 专题页，本页不重复常规产品条目。 |\n| Meta、Mistral、Cohere | 官方新闻、研究与更新入口未发现窗口内可核实新增。 |\n| 百度、腾讯、DeepSeek、智谱、Moonshot/Kimi、StepFun、MiniMax | 已逐项检查官方入口；未将聚合站点传言或无明确日期条目升级为事实。 |\n| NVIDIA、Hugging Face、LangChain、LlamaIndex | 官方博客、研究与变更入口未见本轮需单列的新发布。 |\n| Cline、Pi Coding Agent、DeepSeek Harness / DSH | 已检查公司、仓库与文档；本轮未发现融资、合作、企业采用、分发或生态级信号。常规提交与版本留给开源专题页。 |\n\n## xAI / Grok 专项检查\n\n已显式检查 xAI News、Grok 文档、API 与模型变更入口、官方仓库，并覆盖模型 / API、DeepSearch、语音、编码、工具调用与 Agent 能力。窗口内无新的官方可报告动态。旧的 Voice Agent Builder 与 Grok Code 资料未为证明检查而重复收录。\n\n## 播客\n\nMicrosoft Research Focus #98 是本轮唯一保留的官方研究播客。Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客均已检查，窗口内未找到发布日期清晰且与本页主题高度相关的新一期。\n\n## 日期未确认\n\n未发现值得保留且仅缺发布日期的高相关官方候选。\n\n## 观察池\n\n- 若干二手摘要声称 11 月 13 日有更多模型和公司人事变化，但未能在对应厂商官方入口完成核对，未列入确认动态。\n- Google DeepMind 表示 AlphaGenome 2 Skills 将在 Antigravity 中推出；目前是路线信号，不是已上线功能。\n- Gemini 4 Hydrogen 模型卡的横向分数来自 Google 自测；需等待独立、可复现实验后再作跨模型强弱结论。\n\n## 一句话总结\n\n本轮没有严格 24 小时新发布，近三日信号显示厂商继续沿着“快速执行型子 Agent、可测的上下文压缩、专业科研 Skills 与多模态工具调用”推进。\n\n## 来源链接\n\n- [Gemini 4 Hydrogen 模型卡](https://deepmind.google/models/model-cards/gemini-4-hydrogen/)\n- [Microsoft Research Focus #98](https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/)\n- [AlphaGenome 2](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/)\n- [Qwen4-Max-Preview](https://docs.modelstudio.console.alibabacloud.com/en/model-studio/qwen4-max-preview)\n\n## 采集状态\n\n已检查 30 组厂商、研究、Coding Agent 公司与播客入口，包括强制的 xAI/Grok news、docs、API/model changelog 与官方仓库。初始候选 17 条，经官方原文、发布时间和主题边界核对后保留 4 个页面内唯一 URL；严格 24 小时为 0 条，近两日 2 条、近三日 2 条。最终来源不为 0，未触发二次补搜。失败入口及原因已记录在 `scan.failedSources`。",
+  "sources": [
+    {
+      "title": "Gemini 4 Hydrogen Model Card",
+      "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-11-12",
+      "summary": "Google 将 Gemini 4 Hydrogen 定位为面向快速编码、子 Agent 编排和多模态知识工作的高效模型，并披露能力与安全评测。",
+      "tags": ["Gemini", "Agent", "Coding", "近两日补充"]
+    },
+    {
+      "title": "Microsoft Research Focus – Edition #98",
+      "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
+      "source": "Microsoft Research",
+      "publishedAt": "2026-11-12",
+      "summary": "研究播客介绍 CompactionBench 与 APEC，量化长时编码 Agent 上下文压缩的成本、延迟和缓存影响。",
+      "tags": ["Research", "Coding Agent", "Context Compaction", "Podcast", "近两日补充"]
+    },
+    {
+      "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-11-11",
+      "summary": "AlphaGenome 2 用细胞状态条件化 DNA 变异预测，并开放非商业研究 API；Antigravity Skills 尚待推出。",
+      "tags": ["Science", "Genomics", "Agent Skills", "近三日补充"]
+    },
+    {
+      "title": "Qwen4-Max-Preview",
+      "url": "https://docs.modelstudio.console.alibabacloud.com/en/model-studio/qwen4-max-preview",
+      "source": "Alibaba Cloud Model Studio",
+      "publishedAt": "2026-11-11 10:00 +08:00",
+      "summary": "Qwen4-Max 限时预览支持多模态理解、深度推理、联网搜索、工具调用和结构化输出，仅通过 Token Plan 提供。",
+      "tags": ["Qwen", "Multimodal", "Tool Use", "Preview", "近三日补充"]
+    }
+  ]
+}
