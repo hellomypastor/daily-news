@@ -1,0 +1,74 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-11-15T11:39:29+08:00",
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / RSS",
+      "OpenAI Status API 与事件页",
+      "ChatGPT Release Notes",
+      "OpenAI Developer Platform 文档与 changelog",
+      "OpenAI Models / Deprecations 文档",
+      "openai/codex GitHub releases",
+      "openai/openai-python GitHub releases",
+      "openai/openai-node GitHub releases",
+      "OpenAI Developer Community announcements",
+      "Reddit r/OpenAI / r/ChatGPT / r/ChatGPTCoding / r/singularity",
+      "Hacker News Algolia",
+      "OpenAI / Developer / Codex 官方社交账号的公开检索结果"
+    ],
+    "failedSources": [
+      "X 实时搜索：未登录环境无法稳定读取完整时间线与互动量",
+      "YouTube 官方频道：搜索结果未发现可核实落在窗口内的新视频",
+      "部分 GitHub releases 网页资源区加载失败：改用 GitHub API 核对发布时间"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-11-14 11:39 至 2026-11-15 11:39（Asia/Shanghai）**。本窗口内确认到 1 条官方运行状态事件：ChatGPT 账单与 Ads 账单出现错误，约 1 小时 17 分后恢复。未发现 OpenAI News、ChatGPT Release Notes、开发者 changelog 或稳定版 Codex CLI 在窗口内发布新的可核实产品公告。接近窗口但已越界的 Codex 预发布版、SDK 更新与 ChatGPT Wallet 保留在观察区，不把它们写成过去 24 小时新品。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品/渠道 | 状态 | 本轮结论 |\n|---|---|---|\n| Codex CLI | 无窗口内新增 | [0.171.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5) 发布于 11 月 14 日 09:20（上海时间），比窗口起点早约 2 小时 19 分，列入观察池而非 24 小时更新。 |\n| VS Code / JetBrains 集成 | 无新增 | 官方文档、发布页与公开检索未见窗口内独立公告。 |\n| Codex cloud / remote tasks / PR agents | 无新增 | 未见窗口内官方发布；现有能力不重复当作新动态。 |\n| ChatGPT agentic mode | 运行事件 | [OpenAI Status](https://status.openai.com/incidents/01M7C40W0N5MZHNW0YM09QV962) 记录 ChatGPT billing 与 Ads billing 错误，上海时间 11 月 14 日 12:11 开始监控恢复，13:27 解决。状态页未标记具体受影响组件，不能外推为所有 ChatGPT 会话故障。 |\n| 当前官方 Agent 构建产品 | 无新增 | Agents 相关 SDK 类型更新在窗口外，见观察池。 |\n| Responses API | 无新增 | 开发者文档与 changelog 未见窗口内可核实变更。 |\n| Agents SDK Python / TypeScript | 无新增 | 官方仓库未见窗口内新 release；较早的通用 SDK 类型更新列入观察池。 |\n| Assistants API 迁移/弃用 | 无新增 | 本轮未发现官方迁移日期或状态变化，沿用官方文档，不猜测。 |\n| Realtime API | 无新增 | 未见窗口内官方公告。 |\n| 当前 GPT / reasoning / Codex 模型族 | 无新增 | 模型目录与官方新闻未见窗口内已确认发布。 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品面 | 状态 | 说明 |\n|---|---|---|\n| 浏览器 / Operator 能力 | 无新增 | 未见窗口内官方公告。 |\n| Desktop apps | 无新增 | 未见窗口内官方发行说明。 |\n| GPTs / GPT Store | 无新增 | 未见窗口内官方公告。 |\n| Canvas | 无新增 | 未见窗口内官方公告。 |\n| Sora / 视频 | 无新增 | 未见窗口内官方公告。 |\n| GPT Image / DALL·E | 无新增 | 未见窗口内官方公告。 |\n| Voice | 无新增 | 未见窗口内官方公告。 |\n| Connectors / MCP | 无新增 | 未见窗口内官方公告。 |\n\n## Tier 3：企业、教育、安全与行业\n\n本轮未发现窗口内可核实的 Enterprise、Business、Edu、Gov、Science、安全或行业方案新公告。OpenAI News 最新可见产品文章为 11 月 13 日的 ChatGPT Wallet；由于原文只有日期、没有足以判断是否进入本轮起点之后的时间戳，放入“日期未确认”。\n\n## 官方动态（窗口内）\n\n### ChatGPT billing 与 Ads billing 错误已解决\n\nOpenAI [状态页](https://status.openai.com/incidents/01M7C40W0N5MZHNW0YM09QV962) 显示，11 月 14 日 12:11（上海时间）进入恢复监控，影响描述限定为 ChatGPT billing（含 checkout）与 Ads invoice retrieval；13:27 宣布恢复正常。本条反映支付/账单可靠性，不等同于模型或 Agent 能力更新。\n\n## Love / Hate 与社区口碑\n\n- **Love：证据不足。** 本轮公开社区检索没有获得同时具备可核验时间、具体产品版本与足够上下文的正向样本；官方公告不计入正面口碑。\n- **Hate：低置信度。** 检索到对 Codex 使用额度与发布节奏的零散抱怨，但样本时间/代表性不足，未收入来源或量化趋势。\n- **情绪判断：中性，低置信度。** 可确认事实主要是已解决的账单事件，不能用一条运行事件推断整体用户情绪。\n\n## 比较与竞品信号\n\n本轮没有发现可复现实验或具名评测支持 Codex 相对 Claude Code、Cline、Pi Coding Agent、DeepSeek Harness/DSH、Cursor 等“追平”或“超过”的新结论。相关 harness 的完整扫描见开源专题页；此处不以社区轶事替代评测。\n\n## 日期未确认\n\n- **ChatGPT Wallet（官方原文日期为 11 月 13 日）**：OpenAI [产品文章](https://openai.com/index/introducing-chatgpt-wallet/) 说明 Wallet 初期通过 dots 面向美国 ChatGPT Pro 用户，让 Agent 使用替代支付凭证完成支付，并要求每笔购买由用户安全验证。页面未给出精确发布时间，无法确认是否落在 11 月 14 日 11:39 之后，因此不计入本轮 24 小时已验证更新。\n\n## 观察池\n\n- **Codex 0.171.0-alpha.5（窗口前约 2 小时 19 分）**：[GitHub release](https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5) 仅给出预发布版本与构建资产，页面没有可用的详细变更说明；它是邻近版本信号，不等同于稳定版功能发布。\n- **OpenAI Python SDK 3.51.0（窗口前约 6 小时 27 分）**：[官方 release](https://github.com/openai/openai-python/releases/tag/v3.51.0) 的摘要为扩展 Agent、Image、Live 与 external key 支持；这是 SDK API 表面更新，且时间在窗口外。\n- **OpenAI Node SDK 7.57.0（窗口前约 6 小时 26 分）**：[官方 release](https://github.com/openai/openai-node/releases/tag/v7.57.0) 更新 Agents、Live、Images 与 admin 类型；同样在窗口外，未据此宣称底层服务新增能力。\n\n## 来源链接\n\n1. [OpenAI Status：ChatGPT billing 与 Ads billing 错误](https://status.openai.com/incidents/01M7C40W0N5MZHNW0YM09QV962)\n2. [OpenAI：Introducing ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/)\n3. [openai/codex 0.171.0-alpha.5](https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5)\n4. [openai/openai-python 3.51.0](https://github.com/openai/openai-python/releases/tag/v3.51.0)\n5. [openai/openai-node 7.57.0](https://github.com/openai/openai-node/releases/tag/v7.57.0)\n\n## 采集状态\n\n- 已检查：OpenAI News/RSS、Status、ChatGPT Release Notes、开发者文档/changelog、模型与弃用文档、Codex/Python/Node 官方 GitHub releases、开发者社区公告、HN，以及 Reddit 四个相关社区的公开结果。\n- 失败/受限：X 未登录无法稳定读取完整时间线和互动量；YouTube 未找到窗口内可核实新视频；GitHub 网页部分资源加载失败，已用 API 复核发布时间。\n- 初始候选：6 条；保留来源：5 条（窗口内确认 1、日期未确认 1、观察池 3）；二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Elevated errors with ChatGPT billing and Ads billing",
+      "url": "https://status.openai.com/incidents/01M7C40W0N5MZHNW0YM09QV962",
+      "source": "OpenAI Status",
+      "publishedAt": "2026-11-14 12:11 +08:00",
+      "summary": "OpenAI 监控到 ChatGPT 账单（含结账）与 Ads 发票检索错误，并于上海时间 13:27 宣布恢复。",
+      "tags": ["ChatGPT", "Status", "Billing"]
+    },
+    {
+      "title": "Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet/",
+      "source": "OpenAI",
+      "publishedAt": "",
+      "summary": "官方页面标注 2026-11-13 但没有精确时刻；Wallet 让 Agent 使用替代支付凭证付款，并要求用户逐笔安全确认。",
+      "tags": ["ChatGPT", "Agent", "日期未确认"]
+    },
+    {
+      "title": "Codex 0.171.0-alpha.5",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-11-14 09:20 +08:00",
+      "summary": "Codex CLI 预发布版本，发布时间比本轮窗口起点早约 2 小时 19 分，且 release 页面无详细变更说明。",
+      "tags": ["Codex", "CLI", "观察池"]
+    },
+    {
+      "title": "OpenAI Python SDK 3.51.0",
+      "url": "https://github.com/openai/openai-python/releases/tag/v3.51.0",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-11-14 05:12 +08:00",
+      "summary": "Python SDK 扩展 Agent、Image、Live 与 external key 支持；发布时间在本轮窗口外。",
+      "tags": ["SDK", "Agents", "观察池"]
+    },
+    {
+      "title": "OpenAI Node SDK 7.57.0",
+      "url": "https://github.com/openai/openai-node/releases/tag/v7.57.0",
+      "source": "OpenAI GitHub",
+      "publishedAt": "2026-11-14 05:13 +08:00",
+      "summary": "Node SDK 更新 Agents、Live、Images 与 admin 类型；发布时间在本轮窗口外。",
+      "tags": ["SDK", "Agents", "观察池"]
+    }
+  ]
+}

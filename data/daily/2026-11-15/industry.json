@@ -1,0 +1,56 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-15T11:39:29+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Engineering / Research（本轮窗口内未发现可独立核实的行业新增）",
+      "OpenAI News / Research / Developer changelog（本轮窗口内未发现可独立核实的行业新增）",
+      "Google DeepMind / Google Research 官方列表（无可核实 24 小时新增）",
+      "Meta AI、Microsoft Research / AI、Mistral、Cohere 官方列表（无可核实 24 小时新增）",
+      "xAI News、xAI Docs / API、xAI GitHub：显式检查 Grok 模型、API、DeepSearch、语音、编码、工具调用和 Agent；未找到可由官方原文确认的新增",
+      "Qwen / Alibaba / DAMO、ByteDance Seed / Doubao、Baidu、Tencent Hunyuan、DeepSeek、Zhipu、Moonshot / Kimi、StepFun、MiniMax 官方入口",
+      "NVIDIA Developer / Research、Hugging Face Blog、LangChain、LlamaIndex 官方入口",
+      "Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 的产品与生态信号（本轮未发现需跨页重复的行业级事件）",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客列表（无可确认的新一期）",
+      "可信二手聚合与中文补搜：Pondero、Stillflood、People's Daily"
+    ],
+    "failedSources": [
+      "部分厂商动态列表依赖客户端渲染或搜索索引尚未收录，无法逐条确认发布时间",
+      "X / 官方社交账号搜索需要登录，未将搜索摘要当作已确认事实",
+      "若干二手站点声称 xAI、Google、OpenAI 有新品，但未找到对应官方原文，均仅保留为观察信号"
+    ],
+    "candidateCount": 6,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n扫描窗口：2026-11-14 11:39–2026-11-15 11:39（Asia/Shanghai）。本轮没有找到能够以厂商官方原文完整确认、且发布时间落在 24 小时窗口内的重大技术发布。搜索结果出现数个二手信号，但因缺少官方原文，统一放入观察池，不把产品名、价格或能力写成事实。\n\n## 优先动态\n\n| 厂商 | 结论 | 证据状态 |\n|---|---|---|\n| xAI / Grok | 已专项检查 News、Docs/API、GitHub，以及 DeepSearch、语音、编码、工具调用和 Agent 关键词；未找到可由官方原文确认的窗口内新增。 | 无新增 |\n| Anthropic | 已检查官方新闻、工程与研究入口；未发现需在行业页重复的窗口内新增。 | 无新增；详见 Claude 专题页 |\n| OpenAI | 已检查官方新闻、研究与开发者入口；未发现需在行业页重复的窗口内新增。 | 无新增；详见 OpenAI 专题页 |\n| Coding Agent / Harness | 已检查 Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH 的产品方向、分发、合作、融资、企业采用与生态信号；无行业级新增。 | 无新增；详见开源专题页 |\n\n## 近两日补充\n\n- **百度世界 2026 的官方媒体记录（2026-11-13）**：人民日报版面记载百度发布文心大模型 5.5 Flash 预览版，并称相关 API 上线百度智能云千帆。该来源早于主窗口，作为近两日补充而非今日发布。 [来源](https://paper.people.com.cn/rmrb/pc/attachement/202611/13/7a72920f-904c-4dd3-a044-30f014d8a60d.pdf)\n\n## 近三日补充\n\n本轮没有新增且可由原始来源确认的 48–72 小时条目。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客入口均已检查；没有确认到窗口内新一期。\n\n## 日期未确认\n\n暂无仅缺发布时间但具备官方原文的候选。\n\n## 观察池\n\n- **xAI / Grok 团队协作 Bot 说法**：二手站 Pondero 在 11 月 14 日称 xAI 推出可进入 Slack、Teams 和视频会议的 Grok Bot，但本轮没有找到 xAI 官方公告或文档佐证；产品名、版本与价格均未确认，不作为发布事实。 [二手线索](https://pondero.ai/news/)\n- **腾讯混元 Hy Realtime 工具调用说法**：中文二手日报提到相关能力，但未找到对应腾讯官方原文，保留为待核实线索。 [二手线索](https://sflood.com/zh/daily/ai-2026-11-14)\n\n## 一句话总结\n\n今日厂商官方渠道较安静；最值得继续追踪的是二手渠道所述 Grok 团队协作能力与混元实时工具调用，但两者当前都不能视为已确认发布。\n\n## 采集状态\n\n- 已检查来源：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok、Mistral、Cohere、Qwen/阿里、字节、百度、腾讯、DeepSeek、智谱、Kimi、StepFun、MiniMax、NVIDIA、Hugging Face、LangChain、LlamaIndex、Coding Agent/Harness 与六组播客入口。\n- 失败来源：部分列表依赖客户端渲染；X 需要登录；若干搜索摘要缺少官方落地页。\n- 初始候选：6；最终保留来源：3；二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Baidu World 2026",
+      "url": "https://paper.people.com.cn/rmrb/pc/attachement/202611/13/7a72920f-904c-4dd3-a044-30f014d8a60d.pdf",
+      "source": "人民日报",
+      "publishedAt": "2026-11-13 +08:00",
+      "summary": "人民日报版面记录百度世界 2026 的模型与企业 API 发布信息，作为近两日补充。",
+      "tags": ["百度", "近两日补充"]
+    },
+    {
+      "title": "AI News — Pondero",
+      "url": "https://pondero.ai/news/",
+      "source": "Pondero",
+      "publishedAt": "2026-11-14",
+      "summary": "二手聚合页提供 Grok Bot 线索；未找到 xAI 原文，因此只进入观察池。",
+      "tags": ["xAI", "Grok", "观察池", "二手来源"]
+    },
+    {
+      "title": "AI 前沿日报 2026-11-14",
+      "url": "https://sflood.com/zh/daily/ai-2026-11-14",
+      "source": "Stillflood",
+      "publishedAt": "2026-11-14",
+      "summary": "中文二手日报提供腾讯混元工具调用线索；缺少官方原文，保留为观察池。",
+      "tags": ["腾讯混元", "观察池", "二手来源"]
+    }
+  ]
+}

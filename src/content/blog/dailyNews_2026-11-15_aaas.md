@@ -1,0 +1,79 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-11-15T00:00:00+08:00"
+updatedAt: "2026-11-15T11:39:29+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTitle: "Anyone running Claude Code on a remote VM instead of locally?"
+featuredUrl: "https://www.reddit.com/r/ClaudeCode/comments/1xvc7u6/anyone_running_claude_code_on_a_remote_vm_instead/"
+featuredSummary: "社区讨论远程 Claude Code 会话的持久运行、并行任务与终端接回；仅作为采用信号。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-11-14"
+featuredTags: ["Claude Code","社区信号","远程执行"]
+tags:
+  - "多 Agent"
+  - "二手来源"
+  - "观察池"
+  - "较旧背景"
+  - "企业控制"
+  - "社区信号"
+  - "远程执行"
+  - "AaaS"
+  - "Agent"
+  - "Claude Code"
+  - "Cloud Agent"
+  - "Grok Bot"
+  - "Managed Agent"
+---
+
+## 今日结论
+
+扫描窗口：2026-11-14 11:39–2026-11-15 11:39（Asia/Shanghai）。本轮没有找到可由厂商一手原文确认的 24 小时 AaaS 发布。社区对远程 Claude Code 的持续运行与多机调度有新讨论，但属于采用信号，不等同于新品发布。
+
+## Top items
+
+| 项目 | 状态 | AaaS 判断 |
+|---|---|---|
+| Cognition Devin | 已专项检查官方产品新闻、changelog、文档、定价、企业接入与集成入口，未发现窗口内新增。 | 无新增；其既有托管异步执行属于 AaaS，但本轮不重复旧背景 |
+| xAI / Grok | 已专项检查 News、Grok Bot changelog、Grok Build `/goal` 与 API 文档，未发现窗口内新增。 | 普通模型/API 动态不计入 AaaS |
+| Cline / Pi / DSH 等 Harness | 检查云端托管、后台/定时任务、远程环境、并发与企业控制面，没有符合边界的新证据。 | 本地或自托管 harness 更新不进入本页；详见开源专题页 |
+
+## 远程 / 云端 Agent 执行
+
+- **远程 Claude Code 的社区采用信号**：11 月 14 日讨论聚焦云端 VM 会话在本地设备关闭后继续执行，以及多任务并行与接回终端的使用方式。这是用户讨论，不能替代 Anthropic 官方产品文档；详见 Claude 专题页。 [讨论](https://www.reddit.com/r/ClaudeCode/comments/1xvc7u6/anyone_running_claude_code_on_a_remote_vm_instead/)
+- **多机编排讨论**：另一条社区讨论描述每个任务使用独立机器、仓库副本与队列，说明企业用户关注隔离和容量调度；证据只是个别用户陈述，不代表厂商采用规模。 [讨论](https://www.reddit.com/r/ClaudeCode/comments/1xv9sgb/how_are_you_coordinating_claude_code_agents/)
+
+## 海外厂商
+
+Anthropic、OpenAI、Google、Microsoft、GitHub、Replit、Cognition、xAI、Cursor、Lindy、CrewAI、LangGraph、Amazon、Cloudflare、Factory 与 Sourcegraph/Amp 的入口均已检查；除上述社区采用信号外，没有确认到主窗口内新发布。Claude 与 OpenAI 相关既有能力分别详见 Claude 专题页、OpenAI 专题页。
+
+## 中国市场（含字节重点）
+
+已检查字节 Coze/火山引擎/豆包/Trae/Seed，以及阿里百炼/Qoder/通义/夸克、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek。未找到可核实的 24 小时托管执行、远程环境、并发、企业控制面或定价新增。
+
+## 日期未确认
+
+暂无仅缺发布日期但具备一手 AaaS 证据的新增候选。
+
+## 未证实传闻
+
+本轮未保留单一来源的产品发布传闻。
+
+## 邻近信号观察池
+
+- **云端 Coding Agent 比较指南**：一篇 11 月 12 日的二手指南罗列 Claude、Codex、Cursor、Copilot、Devin 与 AQ 的运行环境和并发差异；它可作为市场地图，但其中产品状态与日期未逐项获得一手确认。 [二手指南](https://aq.dev/guides/best-cloud-coding-agents/)
+- **Grok Bot Cloud Agent 背景**：xAI 的公开 changelog 显示 11 月 11 日 v1.0.1 中 Bot 可启动 Project，由 Cloud Agent 规划并运行其他 agents。该条已超过主窗口且接近/超出 72 小时边界，仅作较旧背景；不作为首页候选或配图。 [官方 changelog](https://x.ai/changelog/bot)
+
+## AaaS 与 MaaS / PaaS 边界
+
+本页只把服务商托管或管理 Agent 执行生命周期、异步任务、环境、编排、观测、企业权限或远程编码工作的能力计入 AaaS。单纯模型 API 是 MaaS，通用云资源是 PaaS；因此普通 Grok 模型/API 与本地 Harness 更新均未提升为 AaaS 动态。
+
+## 趋势
+
+本轮最明确的信号不是新产品，而是用户继续把“持久运行、独立环境、排队与多机调度”当作远程 Agent 的核心价值；但仅凭两条社区讨论无法判断采用规模。
+
+## 采集状态
+
+- 已检查来源：覆盖海外、中国、Devin、Grok，以及 Cline/Pi/DSH/OpenCode/Aider/Continue/Roo Code 的 AaaS 边界入口。
+- 失败来源：部分页面更新时间不可见或依赖客户端渲染，X 需登录；比较站缺少逐项一手链接。
+- 初始候选：7；最终保留来源：4；二次补搜：否（最终来源不为 0）。
+
+今日扫描完成，共 4 条动态/信号，重点：窗口内无确认新品，远程持久执行与隔离调度仍是社区关注点。
