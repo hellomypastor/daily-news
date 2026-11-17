@@ -1,0 +1,89 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-11-17T10:42:00+08:00",
+  "image": {
+    "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/agent-names.jpeg",
+    "alt": "Windows 诊断组件代码中列出的多种编码 Agent 与开发工具名称",
+    "sourceUrl": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+    "caption": "图片来源：Xusheng Li 技术博客原文"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline 官方 GitHub 仓库与 Releases（cline/cline）",
+      "Pi Coding Agent / pi-mono 官方 GitHub 仓库与 Releases（badlogic/pi-mono，已重定向至 earendil-works/pi）",
+      "DeepSeek Harness / DSH 官方 GitHub 仓库与 Releases（deepseek-ai/deepseek-harness）",
+      "OpenCode 官方 GitHub 仓库、Releases 与 changelog（sst/opencode，已重定向至 anomalyco/opencode）",
+      "Aider 官方 GitHub 仓库与 Releases（Aider-AI/aider）",
+      "Continue 官方 GitHub 仓库与 Releases（continuedev/continue）",
+      "Roo Code 官方 GitHub 仓库与 Releases（RooCodeInc/Roo-Code）",
+      "Hacker News newest 与 Algolia 最近 24 小时 agent/coding-agent 检索",
+      "GitHub Trending overall、Python、TypeScript 入口及第三方趋势快照",
+      "arXiv cs.AI/cs.LG/cs.DC 最近论文",
+      "Hugging Face Papers 与官方 Blog",
+      "Simon Willison 博客与独立工程博客",
+      "E4S/HPSF 官方发布"
+    ],
+    "failedSources": [
+      "GitHub Trending 官方页面：动态榜单未提供可稳定复核的历史快照，未引用具体星增量",
+      "部分项目 Releases：Cline、Pi、DSH、Aider、Continue、Roo Code 在本轮窗口内无新 release",
+      "Simon Willison：本轮窗口未检出与 Agent harness 直接相关的新文章"
+    ],
+    "candidateCount": 18,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口为 **2026-11-16 10:42 至 2026-11-17 10:42（Asia/Shanghai）**；论文与开源项目精选额外回看 48 小时，并把更早但本轮重新进入讨论的内容单列。最明确的新变化来自 OpenCode 的进程守护组件发布、Windows 对编码 Agent 使用情况的诊断遥测研究，以及 Hugging Face 与 OpenRouter 对开放权重模型路由的整合。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 核查结论 |\n|---|---|---|\n| Cline | 无新增 | 官方仓库与 Releases 已核对；最近可见 release 早于本轮窗口。 |\n| Pi Coding Agent / pi-mono | 无新增 | `badlogic/pi-mono` 的 release 请求已重定向至当前一方仓库；最近可见版本为 11 月 10 日，未把旧版本重复写成新动态。 |\n| DeepSeek Harness / DSH | 无新增 | 官方 release 最新为 11 月 13 日的 `dsh-v0.2.2-rc.3`，已超出本页 48 小时精选窗口。 |\n| OpenCode | **有新增** | [process-daemon v0.6.0](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.6.0) 于 11 月 17 日 07:36（上海时间）发布，将 `@opencode/pty` 升至 0.6.0、协议升至 9；官方说明很短，不能据此推断更多行为变化。 |\n| Aider | 无新增 | 官方 Releases 未出现窗口内新版本。 |\n| Continue | 无新增 | 官方 Releases 未出现窗口内新版本。 |\n| Roo Code | 无新增 | 官方 Releases 未出现窗口内新版本。 |\n\n## 已验证精选\n\n### 1. OpenCode 发布 process-daemon v0.6.0\n\nOpenCode 官方 [release](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.6.0) 显示，进程守护/PTY 包在 11 月 16 日 23:36 UTC 发布 0.6.0，协议版本为 9。它位于编码 Agent 的 shell/终端执行链路，值得升级用户留意兼容性；但 release notes 未列出协议 9 的具体差异，本页不做额外推断。\n\n### 2. Windows 诊断遥测包含编码 Agent 与开发工具使用位\n\nXusheng Li 的逆向工程文章 [Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use](https://xusheng.dev/posts/windows-coding-agent-telemetry/) 发布时间为 11 月 16 日 00:00（美东，上海时间 13:00），作者称在 `MissionControlAggregator` 的 ETW 诊断报告中发现多种编码 Agent/开发工具的使用标记。该文在本轮 HN 检索时约有 279 points、157 comments；互动数字仅作为发现时快照。它的重要性在于，编码 Agent 的采用信号正在进入操作系统级诊断数据，也提醒团队核对遥测与隐私策略。\n\n### 3. Hugging Face Inference Providers 转向 OpenRouter 路由\n\nHugging Face 11 月 16 日的官方文章 [Hugging Face and OpenRouter join forces to make open-weight models easy to run](https://huggingface.co/blog/openrouter) 宣布，语言模型请求的 Inference Providers 路由改由 OpenRouter 承担，并提供 Claude Code、Codex、OpenCode、Pi 和 Hermes Agent 的设置指南。对开源 Agent 工具链而言，这把模型选择、故障重试和会话级缓存路由进一步下沉到统一推理入口；同时官方明确说明，自带供应商密钥的方式对这些语言模型请求发生了破坏性变化。\n\n### 4. E4S 26.11 把更多 Agent 工具纳入可复现 HPC-AI 环境\n\nE4S/HPSF 11 月 16 日发布的 [E4S 26.11 公告](https://e4s.io/news/NEWS_RELEASE_E4S_26.11.pdf) 显示，新镜像加入 Hermes Agent desktop、Pi coding agent、OpenCode、Ollama 与 Orca IDE，并与既有 MCP、LangChain、LangGraph、A2A 及厂商 SDK 一起构建测试。其意义不是单个 harness 的功能升级，而是编码 Agent 开始被纳入跨 x86_64、aarch64、ppc64le 的可复现科学计算软件栈。\n\n## GitHub Trending\n\n官方动态榜单在本轮未能提供可稳定复核的历史快照，因此不报告具体“今日新增 stars”。第三方趋势页显示多个 Agent 项目正在增长，但这只能证明榜单/采集时刻的热度，不能证明项目在今天发布；相关候选保留在观察池，待官方仓库与版本证据补强。\n\n## Hacker News 讨论\n\n- 上述 Windows 遥测逆向文章在本轮形成显著讨论，技术事实以作者原文为准，HN 分数只作热度快照。\n- 另有多篇关于 Agent 凭据隔离、容器与远程控制的投稿；其中部分原文早于窗口或互动有限，未提升为今日已验证重点。\n\n## 论文 / 研究\n\n[Evolving Infra: Agent-Adaptive LLM Serving at Scale](https://arxiv.org/abs/2611.12304) 初稿提交于 11 月 9 日、11 月 12 日修订，已超出本轮 48 小时窗口，因此作为较旧研究背景而非今日新闻。论文提出针对 Agent 工作负载动态调整 prefill/decode 计算与 KV cache 管理，并公开系统实现；论文自报在编码、数学和计算机使用任务上，相对 Dynamo 将平均端到端延迟与 P95 TTFT 最多降低 4.1 倍和 14 倍，这些数字尚应由独立复现验证。\n\n## 较旧内容重新进入讨论\n\n[Running coding agents without handing them my credentials](https://blog.antonio.cx/running-agents-with-lend) 原文日期为 11 月 13 日，本轮因 HN 讨论再次出现。作者介绍通过租约与代理套接字让 Agent 使用 SSH 等能力而不直接看到长期凭据；由于原文超过 48 小时，本页仅作安全架构背景，不计作今天发布。\n\n## 日期未确认\n\n本轮没有需要以“日期未确认”状态保留并进入 `sources` 的高相关候选。GitHub 动态榜单上的仓库更新时间不等于发布日，已统一留在观察池说明。\n\n## 观察池\n\n- 第三方趋势快照显示本地 Agent、安全代理、上下文压缩与多 Agent SDK 项目热度上升；尚未逐项取得官方版本说明，暂不把 stars 增量或功能宣传写成事实。\n- OpenCode 2.3.0（11 月 13 日）包含后台 subagent、实验性 MCP events 与 shell 后台化等重要 harness 变化，但已超出本轮 48 小时精选窗口；今天的 0.6.0 进程守护包没有足够说明证明它改变了这些上层能力。\n\n## 来源链接\n\n- [OpenCode process-daemon v0.6.0](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.6.0)\n- [Windows 11 编码 Agent 遥测逆向](https://xusheng.dev/posts/windows-coding-agent-telemetry/)\n- [Hugging Face 与 OpenRouter 合作](https://huggingface.co/blog/openrouter)\n- [E4S 26.11 官方公告](https://e4s.io/news/NEWS_RELEASE_E4S_26.11.pdf)\n- [Evolving Infra 论文](https://arxiv.org/abs/2611.12304)\n- [Coding Agent 凭据隔离实践](https://blog.antonio.cx/running-agents-with-lend)\n\n## 采集状态\n\n- **已检查来源**：七个必查 Coding Agent/Harness 的官方仓库、release/changelog；HN newest/Algolia；GitHub Trending overall/Python/TypeScript；arXiv；Hugging Face Papers/Blog；Simon Willison；独立工程博客；E4S/HPSF。\n- **失败来源**：GitHub Trending 缺少稳定的历史榜单快照，未采用无法复核的星增量；部分项目只有窗口外 release；Simon Willison 本轮无直接相关新文。\n- **候选数量**：初筛 18 条，保留 6 个有原始来源的条目（其中 4 条为窗口内重点，2 条明确标为较旧背景）。\n- **二次补搜**：否；本页最终来源不为 0。",
+  "sources": [
+    {
+      "title": "process-daemon v0.6.0",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.6.0",
+      "source": "OpenCode GitHub",
+      "publishedAt": "2026-11-17 07:36 +08:00",
+      "summary": "OpenCode 发布 @opencode/pty 0.6.0，进程守护协议升至 9。",
+      "tags": ["OpenCode", "Coding Agent", "Harness"]
+    },
+    {
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "source": "Xusheng Li",
+      "publishedAt": "2026-11-16 13:00 +08:00",
+      "summary": "逆向工程显示 Windows 诊断 ETW 报告包含多种编码 Agent 与开发工具的使用标记。",
+      "tags": ["Coding Agent", "Windows", "Privacy"]
+    },
+    {
+      "title": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+      "url": "https://huggingface.co/blog/openrouter",
+      "source": "Hugging Face",
+      "publishedAt": "2026-11-16",
+      "summary": "Hugging Face Inference Providers 的语言模型路由转向 OpenRouter，并提供多个编码 Agent 的接入指南。",
+      "tags": ["Hugging Face", "OpenRouter", "Open Weight"]
+    },
+    {
+      "title": "E4S Release 26.11 Now Available",
+      "url": "https://e4s.io/news/NEWS_RELEASE_E4S_26.11.pdf",
+      "source": "E4S / HPSF",
+      "publishedAt": "2026-11-16",
+      "summary": "E4S 26.11 将 Pi、OpenCode、Hermes Agent 等工具纳入跨架构 HPC-AI 软件环境。",
+      "tags": ["E4S", "HPC", "Coding Agent"]
+    },
+    {
+      "title": "Evolving Infra: Agent-Adaptive LLM Serving at Scale",
+      "url": "https://arxiv.org/abs/2611.12304",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12 16:20 +08:00",
+      "summary": "较旧背景：面向 Agent 工作负载动态调配 prefill/decode 与 KV cache 的开源服务框架。",
+      "tags": ["较旧背景", "LLM Serving", "Agent"]
+    },
+    {
+      "title": "Running coding agents without handing them my credentials",
+      "url": "https://blog.antonio.cx/running-agents-with-lend",
+      "source": "Antonio's blog",
+      "publishedAt": "2026-11-13",
+      "summary": "较旧背景：以代理套接字和租约隔离编码 Agent 与长期凭据的工程实践。",
+      "tags": ["较旧背景", "Coding Agent", "Security"]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-11-17T10:42:47+08:00",
+  "image": {
+    "url": "https://images.ctfassets.net/kftzwdyauwt9/JEPsGb10RBI3TRoCF2MGd/07abdbf116e0a370e7e20edddca5e96b/advancing-computer-use-for-healthcare-teams-social.png?w=1600&h=900&fit=fill",
+    "alt": "OpenAI 医疗团队 computer-use agents 研究发布配图",
+    "sourceUrl": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+    "caption": "图片来源：OpenAI 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Index（官方发布）",
+      "OpenAI API Changelog 与模型发布说明",
+      "ChatGPT Release Notes",
+      "ChatGPT Enterprise / Edu Release Notes",
+      "OpenAI Codex GitHub releases / issues",
+      "OpenAI Agents SDK Python / TypeScript releases",
+      "OpenAI Developer Community Announcements",
+      "Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding（搜索抽样）",
+      "Hacker News 与 X/YouTube 搜索抽样"
+    ],
+    "failedSources": [
+      "部分 OpenAI Help Center 英文页面在搜索索引中未及时展示 11 月 16 日条目，改用同站可访问的本地化/镜像页面交叉核实",
+      "X 未登录搜索无法稳定取得完整时间线与互动量，因此未把零散帖子计入口碑结论",
+      "Reddit 搜索结果缺少可独立核实且与本轮官方动态直接相关的高质量新帖"
+    ],
+    "candidateCount": 11,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口为 **2026-11-16 10:42 至 2026-11-17 10:42（Asia/Shanghai）**。OpenAI 在医疗与科研垂直场景集中更新：医疗团队的 computer-use agents 发布了新的性能、安全与成本结果，ChatGPT for Healthcare 增强临床搜索并新增医疗插件；科研人员资助计划扩大。Codex、Responses API、Agents SDK 与 Realtime API 在官方渠道未发现窗口内的新版本公告。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品 / 能力 | 本轮状态 | 说明 |\n|---|---|---|\n| Codex CLI | 无新增 | 官方仓库 release 未发现窗口内新版本。 |\n| VS Code / JetBrains 集成 | 无新增 | 未发现窗口内独立官方更新。 |\n| Codex cloud / remote tasks / PR agents | 无新增 | 未发现窗口内新公告。 |\n| ChatGPT agentic mode | **有更新** | 医疗场景披露 computer-use agents 的评测与落地方式。 |\n| Agent 构建产品 | **有更新** | ChatGPT for Healthcare 引入跨医疗软件执行多步工作的 computer-use agents。 |\n| Responses API | 无新增 | API changelog 未发现窗口内条目。 |\n| Agents SDK（Python / TypeScript） | 无新增 | 官方 release 未发现窗口内稳定版更新。 |\n| Assistants API 迁移 | 无新增 | 官方迁移文档仍说明 Assistants API 已于 2026-08-26 下线，应迁往 Responses API。 |\n| Realtime API | 无新增 | 未发现窗口内新模型或接口公告。 |\n| 当前 GPT / reasoning / Codex 模型族 | **有限更新** | 新增受审批限制的 CSAM 图像分类器；并非通用对话或 Codex 模型升级。 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品组 | 本轮状态 |\n|---|---|\n| Browser / Operator、Desktop、GPTs / GPT Store、Canvas、Sora / video、Images | 无新增 |\n| Voice、Connectors / MCP | 医疗插件有新增；普通 Voice 与通用 MCP 未见窗口内更新。 |\n\n## Tier 3：企业、医疗、科研与安全\n\n- **医疗 computer-use agents**：OpenAI 发布面向医疗团队的 computer-use agents 新结果，覆盖临床与行政工作流的性能、安全和成本，并列出 Abridge、Ambience、Cigna Healthcare、CVS Health 等合作方。该页面强调 Agent 可在现有软件间点击、输入并完成多步流程。[官方原文](https://openai.com/index/advancing-computer-use-for-healthcare-teams/)\n- **ChatGPT for Healthcare**：临床搜索获得改进，并新增 20 多个医疗插件；computer-use agents 用于在 EHR、政策、排程和保险门户之间推进工作。[官方原文](https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/)\n- **科研资助扩容**：ChatGPT for Academic Researchers 计划目标扩大到全球最多 20 万名研究人员，下一轮拟新增 5 万份资助，每份可覆盖申请者与最多两名协作者。[官方原文](https://openai.com/index/expanding-chatgpt-for-academic-researchers/)\n- **企业采用**：LVMH 媒体部门与 OpenAI 签署战略合作，计划向旗下媒体团队部署 OpenAI 工具与 ChatGPT Enterprise。[官方原文](https://openai.com/index/lvmh-media-division-partnership/)\n- **安全工具**：OpenAI 模型发布说明新增 CSAM 图像分类器，免费 API 访问需申请、验证与项目 onboarding；官方明确它用于辅助受训审核人员排序，不能替代人工判断。[官方说明](https://help.openai.com/en/articles/9624314-model-release-notes)\n\n## 官方更新（由新到旧）\n\n1. **ChatGPT for Healthcare 与医疗 Agent（11 月 16 日）**：这是本轮最明确的 Agent 产品信号，重点不在新基础模型，而在跨系统执行、临床证据搜索和插件生态。\n2. **科研人员计划扩容（11 月 16 日）**：属于 Science / Edu 采用信号，强调数据默认不用于训练。\n3. **LVMH 媒体部门合作（11 月 16 日）**：属于 Enterprise 采用信号。\n4. **CSAM 图像分类器（11 月 16 日）**：属于受限安全 API，而非公众通用模型发布。\n\n## Love\n\n本轮没有发现可量化、可交叉核实的新增正面社区样本。官方发布与合作公告不计作正面口碑。\n\n## Hate\n\n- GitHub 用户提交了可复现报告，称其 macOS Codex / ChatGPT 桌面环境内置 Node 仍为 24.22.1，并复现与 2026 年 11 月 Node 安全公告相关的 TLS session cache-key 差异。报告明确没有证明端到端可利用性，且截至采集时属于**社区问题单、尚未获维护者确认**。[GitHub issue #61756](https://github.com/openai/codex/issues/61756)\n\n## 口碑判断\n\n**中性，置信度低。** 官方侧有明显医疗 Agent 与企业/科研采用进展，但公开社区样本不足；唯一保留的负面样本是具备复现实验的 GitHub issue，仍不能外推为普遍安全事件或完整产品口碑。\n\n## 对比与 Agent 生态\n\n本轮官方信息表明 OpenAI 正把 computer-use agents 推入受监管医疗工作流，竞争维度从模型能力转向跨系统执行、安全评测、插件与组织采购。窗口内未发现足以支持 Codex 与 Claude Code、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH 的性能优劣结论；完整 harness 更新留给开源专题页。\n\n## 日期未确认\n\n- OpenAI Developer Community 的公告列表在 11 月 16 日显示若干条目，但部分帖子列表时间更像“最新活动时间”而非原始发布时间，且搜索结果存在历史条目排序异常，因此未将这些候选写成当日事实。\n\n## 观察池\n\n- Agents SDK Python 的 alpha release 页面可见 durable sessions、native execution、hosted tools 等方向，但最近可核实发布时间为 11 月 8 日，已超出本轮 24 小时窗口，留作后续版本观察。\n- API changelog 仍显示 managed Codex harness、Agents API 与 hosted sandboxes 等既有能力；本轮未发现新条目，不重复旧闻。\n\n## 来源链接\n\n- [Advancing computer-use agents for healthcare teams](https://openai.com/index/advancing-computer-use-for-healthcare-teams/)\n- [More ways to move care forward with ChatGPT for Healthcare](https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/)\n- [Broadening access to AI for scientists](https://openai.com/index/expanding-chatgpt-for-academic-researchers/)\n- [LVMH’s Media Division announces strategic partnership with OpenAI](https://openai.com/index/lvmh-media-division-partnership/)\n- [OpenAI Model Release Notes](https://help.openai.com/en/articles/9624314/model-release-notes)\n- [Codex bundled Node security issue #61756](https://github.com/openai/codex/issues/61756)\n\n## 采集状态\n\n- 已检查：OpenAI 官方 Index、API changelog、模型与 ChatGPT/Enterprise 发布说明、Codex 与 Agents SDK GitHub、Developer Community，以及 Reddit / HN / X / YouTube 搜索抽样。\n- 失败或受限：英文 Help Center 索引延迟，使用同站可访问页面交叉核验；X 未登录时间线不稳定；Reddit 未得到足够可靠的新样本。\n- 初始候选 **11** 条，最终保留 **6** 个来源；因最终来源不为 0，未触发二次补搜。",
+  "sources": [
+    {
+      "title": "Advancing computer-use agents for healthcare teams",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-16（官方页面未给出具体时刻）",
+      "summary": "OpenAI 披露医疗 computer-use agents 的性能、安全、成本评测与合作落地。",
+      "tags": ["Agent", "Healthcare", "Computer Use"]
+    },
+    {
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-16（官方页面未给出具体时刻）",
+      "summary": "ChatGPT for Healthcare 增强临床搜索、引入 computer-use agents，并扩展医疗插件生态。",
+      "tags": ["ChatGPT", "Healthcare", "Plugins"]
+    },
+    {
+      "title": "Broadening access to AI for scientists",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-16（官方页面未给出具体时刻）",
+      "summary": "OpenAI 扩大面向全球科研人员的 ChatGPT 资助计划。",
+      "tags": ["Science", "Education", "ChatGPT"]
+    },
+    {
+      "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "url": "https://openai.com/index/lvmh-media-division-partnership/",
+      "source": "OpenAI / LVMH Media Division",
+      "publishedAt": "2026-11-16（官方页面未给出具体时刻）",
+      "summary": "LVMH 媒体部门计划部署 OpenAI 工具和 ChatGPT Enterprise。",
+      "tags": ["Enterprise", "Partnership", "Media"]
+    },
+    {
+      "title": "OpenAI Model Release Notes — CSAM image classifier",
+      "url": "https://help.openai.com/en/articles/9624314/model-release-notes",
+      "source": "OpenAI Help Center",
+      "publishedAt": "2026-11-16（发布说明未给出具体时刻）",
+      "summary": "OpenAI 向获批组织提供免费的受限 CSAM 图像分类器 API。",
+      "tags": ["Safety", "API", "Image Classifier"]
+    },
+    {
+      "title": "Codex bundled Node 24.22.1 still reproduces November TLS cache-key issue",
+      "url": "https://github.com/openai/codex/issues/61756",
+      "source": "GitHub community issue（未获维护者确认）",
+      "publishedAt": "2026-11-16（GitHub 页面未显示具体时刻）",
+      "summary": "社区用户提供了 Codex 桌面内置 Node TLS cache-key 差异的复现步骤，但未证明端到端可利用性。",
+      "tags": ["Codex", "社区反馈", "未确认"]
+    }
+  ]
+}
