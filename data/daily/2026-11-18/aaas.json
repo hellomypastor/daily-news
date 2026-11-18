@@ -1,0 +1,74 @@
+{
+  "slug": "aaas",
+  "title": "AaaS（Agent-as-a-Service）行业动态日报",
+  "description": "托管 Agent、远程异步执行平台及其商业化与生态动态。",
+  "tags": ["AaaS", "Agent", "Cloud Agent", "Managed Agent"],
+  "order": 50,
+  "updatedAt": "2026-11-18T10:47:13+08:00",
+  "image": {
+    "url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1R5Z5o3JKUiGPhVNUYovLc/01b2bdf97e72fd4b6295c16196cdb51a/changlog-eve.png",
+    "alt": "Vercel eve 1.0 发布页展示的托管 Agent 运行界面",
+    "sourceUrl": "https://vercel.com/blog/eve-is-now-generally-available",
+    "caption": "图片来源：Vercel eve 1.0 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "Vercel eve / Agents / Workflow SDK 官方博客与文档",
+      "OpenAI API Changelog 与 Responses API Background mode 文档",
+      "Cognition Devin 官方 Blog、docs.devin.ai release notes、产品文档与定价入口（专项检查）",
+      "xAI / Grok News、Grok Bot 与 Grok Build changelog、开发者文档（专项检查）",
+      "Anthropic Managed Agents / Claude Agent SDK / Claude Code 官方渠道",
+      "Google Vertex AI Agent、Gemini / Jules / Antigravity 官方入口",
+      "Microsoft Copilot Studio / Azure Agent Services、GitHub coding agent 官方入口",
+      "Replit Agent、Cursor、Lindy、CrewAI、LangGraph Platform、Cloudflare Agents / Sandboxes、Factory、Sourcegraph / Amp",
+      "字节 Coze / Volcano / Doubao / Trae / Seed，阿里 Bailian / Qoder，腾讯、百度、智谱、Kimi、MiniMax、DeepSeek 官方入口",
+      "Cline 官方仓库 / changelog（托管、后台、远程、并发、企业控制与定价专项）",
+      "Pi Coding Agent / badlogic/pi-mono 官方仓库与 releases（同上专项）",
+      "DeepSeek Harness / DSH 官方仓库、releases 与文档（同上专项）",
+      "OpenCode、Aider、Continue、Roo Code 官方仓库与 releases（AaaS 边界快查）",
+      "可信二手发布索引与中英文搜索补充"
+    ],
+    "failedSources": [
+      "docs.devin.ai release notes 的搜索索引未稳定暴露 11 月 17 日原始条目，第三方发布索引仅作为日期未确认线索",
+      "部分中国厂商动态页需要脚本渲染或登录，搜索结果不足以核验具体发布时间，未据此写成事实",
+      "X 未登录时间线不可稳定访问，未把零散帖文当作产品发布证据"
+    ],
+    "candidateCount": 12,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n主窗口为 **2026-11-17 10:47 至 2026-11-18 10:47（Asia/Shanghai）**，并向前查看 24–72 小时观察信号。本轮核实到两条明确的 24 小时 AaaS 动态：Vercel 发布 eve 1.0，把可自托管的 Agent harness 与 Vercel Workflows、Sandbox、Agent Runs 组合成托管运行栈；OpenAI Responses API 新增 2 小时与 8 小时后台完成窗口，用延迟换取更低费率。Devin 与 Grok 已完成专项检查：Devin 有一条可信二手索引中的会话生命周期线索，但官方原文入口未稳定打开，放入“日期未确认”；Grok 最近 changelog 主要是本地/客户端改进，没有把普通模型、API 或本地 harness 更新误写成 AaaS。\n\n## 重点动态\n\n### 1. Vercel eve 1.0：开源 harness + 托管耐久执行\n\nVercel 于 11 月 17 日宣布 eve 1.0 GA。eve 本身开源、可自托管；当部署到 Vercel 时，由 Workflows 提供可恢复的耐久执行、Sandbox 隔离 Agent 生成代码、Agent Runs 展示 session、模型调用、工具、子 Agent 和审批。它还支持多租户、跨 session memory、计划任务、后台任务与等待 webhook / timer 后恢复，符合本页对托管执行生命周期与可观测性的定义。[Vercel 官方发布](https://vercel.com/blog/eve-is-now-generally-available)\n\n官方披露的 hosted stress test 是固定 mock-model 工作负载，并非模型智能或真实业务吞吐基准；其 414ms 中位延迟与成本下降应按该测试条件理解，不能外推到所有 Agent。\n\n### 2. OpenAI Responses API：后台完成窗口公测\n\nOpenAI 11 月 17 日 API changelog 新增 2 小时与 8 小时 completion window，支持 GPT-6.2 Astra、GPT-6.2 Sol、GPT-6.1 Terra 和 GPT-6 Luna。官方称相对 Standard 模式 token 费率分别低 30% 和 40%，任务进入共享的 Batch / Background rate limit。这是托管异步执行能力，而不只是模型 API 版本更新；详见 OpenAI 专题页。[API Changelog](https://developers.openai.com/api/docs/changelog)\n\n[Background mode 文档](https://developers.openai.com/api/docs/guides/background)说明可在创建 Response 时设置 `background_options.completion_window`，再轮询或使用 webhook 获取结果。它仍是托管推理任务，不等同于含环境、代码沙箱和企业控制面的完整远程编码 Agent。\n\n## 远程 / 云端 Agent 执行\n\n| 平台 | 执行形态 | 本轮变化 | 证据状态 |\n|---|---|---|---|\n| Vercel eve | Workflows 耐久执行 + Sandbox + Agent Runs + schedules | 1.0 GA，明确支持后台 / 可恢复任务与托管部署 | 官方确认，24h |\n| OpenAI Responses API | 托管后台 completion | 新增 2h / 8h 窗口与折扣费率 | 官方确认，24h；详见 OpenAI 专题页 |\n| Cognition Devin | 云端 session、环境、自动化与企业控制 | 未核实到窗口内官方原文可访问的新异步能力 | 已专项检查 |\n| xAI / Grok Bot / Grok Build | 持久 Bot、cloud agent、工具与本地 / 远程工作流 | 最近 24h 未见符合定义的新托管生命周期发布 | 已专项检查 |\n\n## 海外厂商\n\n- **Vercel**：eve 1.0 的差异化不只是 SDK，而是开源 harness 与托管 Workflows / Sandbox / Drives / Connect / Agent Runs 的组合；用户可以保留 Agent 源码，也可购买托管运行能力。\n- **OpenAI**：后台完成窗口强化了异步推理的成本层，但公开文档没有把它描述为完整的远程开发环境；详见 OpenAI 专题页。\n- **Anthropic、Google、Microsoft / GitHub、Replit、Cursor、Lindy、CrewAI、LangGraph、Cloudflare、Factory、Sourcegraph / Amp**：官方渠道未核实到主窗口内新的 GA、定价、并发或企业控制面发布；无动态时不重复较旧背景。\n\n## 中国厂商（字节系重点）\n\n- **字节 Coze / Volcano / Doubao / Trae / Seed**：检查了托管 Agent、远程环境与商业化入口，未核实到窗口内可由原文确认的新发布。\n- **阿里 Bailian / Qoder、腾讯、百度、智谱、Kimi、MiniMax、DeepSeek**：未核实到主窗口内新的托管执行、并发或企业控制面发布。需要脚本渲染或登录的页面被记录为扫描限制，不据此制造“无变化”以外的事实。\n\n## Coding Agent / Harness 的 AaaS 边界检查\n\n| Harness | 本轮 AaaS 结论 |\n|---|---|\n| Cline | 官方仓库 / changelog 已检查；未发现 24h 内新的厂商托管异步执行、远程环境、企业控制面或定价证据。 |\n| Pi Coding Agent / pi-mono | 官方仓库 / releases 已检查；未发现符合 AaaS 定义的新托管服务。 |\n| DeepSeek Harness / DSH | 最新可见 release 仍以本地 / 桌面 / SDK / SSH 能力为主；没有把远端连接或 headless 能力自动等同于厂商托管服务。 |\n| OpenCode、Aider、Continue、Roo Code | 快查官方仓库与 releases；普通本地 harness 更新不进入 AaaS。Roo Code 历史 cloud 方向没有窗口内新原文，不重复旧闻。 |\n\n## AaaS 与 MaaS / PaaS 边界\n\n- **eve on Vercel** 属于 AaaS / Agent runtime：包含运行生命周期、耐久状态、沙箱、可观测性、审批和托管部署。\n- **Responses background completion** 属于较窄的托管异步 Agent / inference primitive：有后台任务与完成窗口，但没有公开宣称提供完整代码环境和 Agent 控制面。\n- 单纯的新模型、模型 API、普通云函数、GPU 或本地 CLI 更新仍分别属于 MaaS、PaaS 或本地工具，不因带有“Agent”字样自动升级为 AaaS。\n\n## 日期未确认\n\n- 一个可信二手发布索引声称 Devin 在 11 月 17 日新增 session 订阅侧栏，并以 “Mark done” 取代 Archive，使 session 即使移入 Done 仍可继续运行并留在其他订阅者侧栏。这与托管 session 生命周期有关，但本轮未能从 docs.devin.ai 稳定取得对应官方原文，且该索引自身的更新时间标记存在不一致，因此只保留为**日期与原文待确认**线索，不写成已确认发布。[二手发布索引](https://releases.sh/cognition)\n\n## 未证实传闻\n\n本轮没有保留达到最低可信度的一源泄漏或发布传闻。\n\n## 邻近信号观察池\n\n- Grok Build 11 月 16 日 v1.0.88 主要是 MCP 动态 headers、dashboard 与本地 session / worktree 体验修复；没有新的托管异步任务、远程环境或企业控制面证据，因此不计作 AaaS 动态。\n- DSH 11 月 11 日预发布包含多层子 Agent、scheduled tasks、SSH helper 与 headless 能力，但证据指向本地 / 自托管 harness，而非供应商托管执行生命周期；只作为能力边界参考，不重复收录为当日来源。\n\n## 趋势\n\n托管 Agent 平台正在分出两条成本曲线：一条像 eve，销售完整的耐久运行、沙箱、状态、连接和可观测性；另一条像 Responses background completion，只提供延迟容忍的托管任务原语。采购与架构评估需要明确自己买的是完整 Agent 控制面，还是更便宜的异步模型执行。\n\n## 来源链接\n\n- [Introducing eve 1.0](https://vercel.com/blog/eve-is-now-generally-available)\n- [OpenAI API Changelog](https://developers.openai.com/api/docs/changelog)\n- [OpenAI Background mode](https://developers.openai.com/api/docs/guides/background)\n- [Cognition release index（可信二手，日期未确认）](https://releases.sh/cognition)\n\n## 采集状态\n\n- 已检查：Vercel、OpenAI、Anthropic、Google、Microsoft / GitHub、Replit、Cognition Devin、xAI / Grok、Cursor、Lindy、CrewAI、LangGraph、Cloudflare、Factory、Sourcegraph / Amp；中国厂商入口；Cline、pi-mono、DSH、OpenCode、Aider、Continue、Roo Code。\n- 失败或受限：Devin 11 月 17 日官方 release 原文未被搜索索引稳定暴露；部分中国厂商页面需脚本渲染或登录；X 未登录时间线不稳定。\n- 初始候选 **12** 条，最终保留 **4** 个来源；其中 24 小时内有 2 条官方确认动态，故未触发“零来源 / 零验证动态”二次补搜，`secondPass=false`。\n\n今日扫描完成，共 4 条动态或证据线索，重点：Vercel eve 1.0 托管耐久 Agent 栈 GA，以及 OpenAI Responses API 新增 2 小时 / 8 小时后台完成窗口。",
+  "sources": [
+    {
+      "title": "Introducing eve 1.0",
+      "url": "https://vercel.com/blog/eve-is-now-generally-available",
+      "source": "Vercel",
+      "publishedAt": "2026-11-17（官方页面未给出具体时刻）",
+      "summary": "Vercel 发布 eve 1.0，提供可自托管 harness，并可结合 Vercel Workflows、Sandbox 与 Agent Runs 托管运行。",
+      "tags": ["AaaS", "Durable Execution", "Sandbox", "GA"]
+    },
+    {
+      "title": "OpenAI API Changelog — background completion windows",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "source": "OpenAI Developers",
+      "publishedAt": "2026-11-17（changelog 未给出具体时刻）",
+      "summary": "Responses API 公测 2 小时与 8 小时后台完成窗口，并给出相对 Standard 的折扣费率。",
+      "tags": ["Async Agent", "Responses API", "Background", "详见 OpenAI 专题页"]
+    },
+    {
+      "title": "Background mode",
+      "url": "https://developers.openai.com/api/docs/guides/background",
+      "source": "OpenAI Developers",
+      "publishedAt": "2026-11-17（文档随 changelog 更新，页面未给具体时刻）",
+      "summary": "官方文档说明 completion window、共享后台限额、轮询与 webhook 获取结果的方式。",
+      "tags": ["Async Execution", "Hosted Task", "详见 OpenAI 专题页"]
+    },
+    {
+      "title": "Cognition release index — Sessions get subscriber sidebar; Mark done replaces Archive",
+      "url": "https://releases.sh/cognition",
+      "source": "Release Notes Index（可信二手索引）",
+      "publishedAt": "",
+      "summary": "二手索引提供 Devin 托管 session 生命周期候选，但官方原文与准确日期本轮未能稳定核实。",
+      "tags": ["Devin", "日期未确认", "二手来源", "Managed Session"]
+    }
+  ]
+}

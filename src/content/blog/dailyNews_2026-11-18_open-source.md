@@ -1,0 +1,131 @@
+---
+title: "今日 AI / Agent 开源项目与技术博客精选"
+date: "2026-11-18T00:00:00+08:00"
+updatedAt: "2026-11-18T10:49:32+08:00"
+description: "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredTitle: "Maintainers don't need more AI bug reports. They need fixes."
+featuredUrl: "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/"
+featuredSummary: "GitHub 主张 AI 安全工具交付可复现、带测试且可审查的修复，而不只是增加漏洞报告。 经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。"
+featuredPublishedAt: "2026-11-18 02:29 +08:00"
+featuredTags: ["Open Source","Security","Maintainers"]
+featuredImage: "https://github.blog/wp-content/uploads/2026/11/image-17.png"
+featuredImageAlt: "GitHub 关于开源维护者需要可验证修复而非更多 AI 漏洞报告的文章配图"
+featuredImageCaption: "图片来源：GitHub 官方博客"
+tags:
+  - "日期未确认"
+  - "Agent"
+  - "AI"
+  - "CLI"
+  - "Coding Agent"
+  - "DeepSeek Harness"
+  - "GPT-6.2"
+  - "Harness"
+  - "Inference"
+  - "LiveShare"
+  - "LLM"
+  - "Maintainers"
+  - "MCP"
+  - "Open Source"
+  - "OpenCode"
+  - "Prompt Cache"
+  - "Sandbox"
+  - "Security"
+  - "Tool Design"
+  - "Trainium"
+---
+
+## 今日概览
+
+本轮主要发现窗口为 **2026-11-17 10:47 至 2026-11-18 10:47（Asia/Shanghai）**，开源项目与论文额外回看 48 小时。最明确的 harness 变化来自 DeepSeek Harness 修复桌面 LiveShare，以及 OpenCode 把超时 shell 转为后台任务、默认启用后台压缩并加入实验性 automations；工程侧则出现了外部沙箱边界、MCP 工具收敛和开源维护者处置 AI 漏洞报告的具体经验。
+
+## Coding Agent / Harness 雷达
+
+| 项目 | 本轮状态 | 核查结论 |
+|---|---|---|
+| Cline | 无新增 | 官方仓库、release 与 changelog 已核对；最近公开 release 早于 48 小时窗口。 |
+| Pi Coding Agent / pi-mono | 无新增 | `badlogic/pi-mono` 已迁移至当前一方仓库 `earendil-works/pi`；最新 release 为 11 月 10 日，未重复写作今日动态。 |
+| DeepSeek Harness / DSH | **有新增** | [v0.2.2-rc.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.4) 于 11 月 18 日 01:53（上海时间）发布，改善异常模型响应处理，并修复桌面端 LiveShare 无法创建分享。 |
+| OpenCode | **有新增** | [v2.3.1](https://github.com/anomalyco/opencode/releases/tag/v2.3.1) 与 [v2.3.2](https://github.com/anomalyco/opencode/releases/tag/v2.3.2) 均在窗口内；涉及后台 shell、后台压缩、automations、插件更新与提示缓存修复。 |
+| Aider | 无新增 | 官方 Releases 未出现窗口内新版本。 |
+| Continue | 无新增 | 官方 Releases 未出现窗口内新版本。 |
+| Roo Code | 无新增 | 官方 Releases 未出现窗口内新版本。 |
+
+## 已验证精选
+
+### 1. OpenCode v2.3.1：后台 shell、预写压缩与 automations
+
+OpenCode [v2.3.1](https://github.com/anomalyco/opencode/releases/tag/v2.3.1) 于 11 月 18 日 08:17（上海时间）发布。超时但仍运行的 shell 命令会转入后台而不是被终止；会话接近自动压缩时可在后台先写摘要；实验性 schedules 被 automations 取代，可按时间、间隔、cron 或 MCP 事件触发提示或 Code Mode 程序。该版本同时改善子 Agent 权限提示、后台 shell 唤醒 ACP 回合以及桌面插件更新。对 harness 设计而言，这是一组围绕长任务、上下文延迟和自动化入口的实质变化。
+
+### 2. OpenCode v2.3.2 修复 GPT-6.2 提示缓存
+
+随后发布的 [v2.3.2](https://github.com/anomalyco/opencode/releases/tag/v2.3.2) 把 Responses 路由上的系统提示改为前置 developer message，以便 GPT-6.2 从第二步起复用缓存。官方 release 给出了 GitHub Copilot `gpt-6.2-sol` 的单步未缓存输入从约 14,000 tokens 降到 3 的案例；这是发布方测得的特定路径结果，不应外推为所有模型或供应商的通用节省比例。
+
+### 3. DeepSeek Harness v0.2.2-rc.4 修复桌面分享
+
+DSH 官方 [v0.2.2-rc.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.4) 于 11 月 17 日 17:53 UTC 发布。说明仅列出两项修复：改善收到异常模型消息响应时的处理，以及修复 LiveShare 在桌面端无法创建分享。由于 release notes 没有更多技术细节，本页不推断兼容范围或稳定性提升幅度。
+
+### 4. 外部沙箱：把隔离边界与 Agent 进程分开
+
+Prime Radiant 的工程文章 [External sandboxes for coding agents](https://blog.primeradiant.com/external-sandboxes-for-coding-agents/) 发布于 11 月 17 日。文章讨论将沙箱控制面置于编码 Agent 进程之外，使被攻陷或发生提示注入的 Agent 不能自行改变隔离策略；这是安全架构建议而非产品基准，价值在于明确区分工具权限提示与真正的进程/网络隔离边界。
+
+### 5. Metabase 复盘 MCP 工具从 REST 包装转向任务界面
+
+Metabase 11 月 17 日的工程复盘 [Rebuilding the Metabase MCP server](https://www.metabase.com/blog/mcp-tool-design-lessons) 说明，第一版几乎把 REST endpoint 逐一变成工具，模型难以稳定使用；重构后用更少、更宽的工具覆盖读取和写入任务，并用可恢复的 archive 操作代替 delete。文章给出的具体例子是：新服务器 24 个工具中有 10 个覆盖 11 类内容读取与主要写入路径。对 MCP/harness 开发者而言，重点是按模型任务形态设计 schema，而不是机械暴露后端 API。
+
+### 6. TrnRT 面向 AWS Trainium 的开源推理引擎
+
+RunAnywhere 发布的 [TrnRT](https://github.com/RunanywhereAI/trnrt) 是 Apache-2.0 开源的 Trainium LLM 推理引擎，提供 OpenAI 兼容 API、NKI megakernel 和设备/主机分层 prefix cache；当前 README 明确首个支持模型为 GLM-5.3-Flash。仓库同时展示自报吞吐与成本结果，但这些数字尚缺少独立复现，因此本页只确认架构与公开代码，不把性能宣传当成普遍结论。
+
+### 7. GitHub：AI 安全报告需要附带可验证修复
+
+GitHub 官方博客 [Maintainers don't need more AI bug reports. They need fixes](https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/) 发布于 11 月 18 日 02:29（上海时间）。文章把维护者的压力点放在低质量、重复或不可复现的 AI 漏洞报告，并主张工具应提供复现、测试和可审查修复，而不是只增加告警数量。它反映了安全 Agent 的评价目标正在从“找到更多问题”转向“交付维护者可验证的补丁”。
+
+<figure class="source-image">
+  <a href="https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/"><img src="https://github.blog/wp-content/uploads/2026/11/image-17.png" alt="GitHub 关于开源维护者需要可验证修复而非更多 AI 漏洞报告的文章配图" loading="lazy" /></a>
+  <figcaption><a href="https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/">图片来源：GitHub 官方博客</a></figcaption>
+</figure>
+
+## GitHub Trending
+
+本轮检查了 overall、Python 和 TypeScript 动态入口，但榜单没有可稳定回溯的历史快照，因此不报告无法复核的“今日新增 stars”。候选项目均回到官方仓库验证；当前热度只作为发现信号，不等于今天发布。
+
+## Hacker News 讨论
+
+- TrnRT 的 Show HN 投稿在采集时约 46 points、7 comments；互动量仅为发现时快照，技术事实以仓库为准。
+- 外部沙箱文章、Metabase MCP 复盘以及多项新编码 Agent 项目进入 newest；其中互动较低的项目没有被包装成社区趋势。
+
+## 论文 / 研究
+
+Hugging Face 11 月 17 日 Daily Papers 中出现异步具身 Agent runtime、多 Agent serving benchmark、Agent memory 和长程 coding 等候选。由于本轮未能逐篇同时核实 arXiv 初稿时间、代码可用性与实验可复现条件，未将其提升为已验证重点，保留到后续扫描。
+
+## 较旧内容重新进入讨论
+
+本轮没有同时满足“原文早于七天、最近 24 小时在 HN 显著重新讨论”且证据完整的条目。
+
+## 日期未确认
+
+[Agav](https://github.com/prapaa-ai/agav) 是一个实验性、终端原生的开源编码 Agent，仓库说明包含读写文件、运行测试与验证修改等能力。本轮 HN 投稿提供了发现时间，但仓库首页没有可确认的首次发布日期，因此仅作为“日期未确认”候选，不宣称它于今天发布。
+
+## 观察池
+
+- HN 出现自改进 CI、Agent 任务队列、截图驱动 PR 和本地 trace 查看器等 Show HN 候选；目前主要证据来自项目自述，等待版本记录、采用数据或可复现实验。
+- Hugging Face 论文榜单中的 multi-agent serving、memory 与 long-horizon coding 候选值得后续核查；榜单日期不自动等同于论文初次提交日。
+- Cerebras 的 disaggregated inference 属于重要推理基础设施信号，但不是开源 harness 更新，交由行业主题判断是否收录。
+
+## 来源链接
+
+- [OpenCode v2.3.1](https://github.com/anomalyco/opencode/releases/tag/v2.3.1)
+- [OpenCode v2.3.2](https://github.com/anomalyco/opencode/releases/tag/v2.3.2)
+- [DeepSeek Harness v0.2.2-rc.4](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.4)
+- [External sandboxes for coding agents](https://blog.primeradiant.com/external-sandboxes-for-coding-agents/)
+- [Metabase MCP 工具设计复盘](https://www.metabase.com/blog/mcp-tool-design-lessons)
+- [TrnRT](https://github.com/RunanywhereAI/trnrt)
+- [GitHub：维护者需要可验证修复](https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/)
+- [Agav](https://github.com/prapaa-ai/agav)
+
+## 采集状态
+
+- **已检查来源**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 七个必查 Harness 的官方仓库/release/changelog；HN newest/Algolia；GitHub Trending；arXiv；Hugging Face Papers/Blog；Simon Willison；GitHub、Metabase 与 Prime Radiant 工程博客。
+- **失败来源**：GitHub Trending 无稳定历史快照；五个必查项目无窗口内新 release；Simon Willison 无窗口内直接相关新文；部分 Show HN 只有项目自述或互动不足。
+- **候选数量**：初筛 24 条，保留 8 个有原始来源的条目，其中 7 条为日期已确认或官方 release，1 条明确标记“日期未确认”。
+- **二次补搜**：否；本页最终来源不为 0。

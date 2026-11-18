@@ -1,0 +1,93 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-11-18T10:47:13+08:00",
+  "image": {
+    "url": "https://cdn.openai.com/mdx-assets/e193aefe-5e58-431c-8cd2-adadac0c1496/a65f0cc2-bfdc-4ad6-8a93-12628621bc0f.c298a622.webp",
+    "alt": "OpenAI 展示 GPT-6.2 Astra 生成的估值工作簿示例",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+    "caption": "图片来源：OpenAI GPT-6.2 Astra 与 Sol 官方发布页"
+  },
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Product Releases / Index",
+      "OpenAI API Changelog、模型目录与 deprecations 页面",
+      "ChatGPT Release Notes、Enterprise / Edu Release Notes",
+      "Codex CLI、VS Code / JetBrains、cloud / remote tasks 官方页面与 GitHub releases",
+      "OpenAI Agents SDK Python / TypeScript GitHub releases",
+      "Responses API、Realtime API、Assistants API migration 官方文档",
+      "OpenAI Developer Community Announcements",
+      "Reddit r/OpenAI、r/ChatGPT、r/codex、r/ChatGPTCoding",
+      "Hacker News、X 与 YouTube 搜索抽样"
+    ],
+    "failedSources": [
+      "X 未登录搜索无法稳定取得完整时间线与互动量，因此未把零散 X 帖子计入口碑样本",
+      "YouTube 搜索未发现可核验且独立于官方发布的新技术信息",
+      "官方发布页只标注 2026-11-17、未给具体时刻；用当日官方社交发布与实时社区讨论确认其属于本轮窗口"
+    ],
+    "candidateCount": 14,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口为 **2026-11-17 10:47 至 2026-11-18 10:47（Asia/Shanghai）**。主线非常集中：OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol，并同时把两款模型带到 ChatGPT Work、Codex 与 API；API 还新增 2 小时和 8 小时的后台完成窗口。企业侧另有 ChatGPT for Sales 与 30 多个新增或扩展的合作伙伴插件。社区早期反馈明显分化：价格/效率获认可，但也出现分批上线不一致以及 Codex 对新模型元数据识别异常的可复现报告。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品 / 能力 | 本轮状态 | 说明 |\n|---|---|---|\n| Codex CLI | **有更新** | GPT-6.2 Astra 与 Sol 上线 Codex；未发现窗口内独立 CLI release。 |\n| VS Code / JetBrains 集成 | 有模型更新 | Codex 模型面更新；未发现窗口内单独的 IDE 插件版本公告。 |\n| Codex cloud / remote tasks / PR agents | 有模型更新 | 新模型可用于 Codex；remote tasks / PR agent 未见独立功能公告。 |\n| ChatGPT agentic mode | 无独立更新 | 未发现窗口内单独的 agentic mode 发布。 |\n| Agent 构建产品 | **有更新** | Responses API 新增后台完成窗口，适合延迟容忍的长任务。 |\n| Responses API | **有更新** | GPT-6.2 两款模型上线，并新增 2 小时 / 8 小时后台完成窗口公测。 |\n| Agents SDK（Python / TypeScript） | 无新增 | 官方 releases 未发现窗口内新稳定版本。 |\n| Assistants API 迁移 | 无新增 | 未发现窗口内迁移或弃用时间线变更。 |\n| Realtime API | 无新增 | 未发现窗口内新接口或模型公告。 |\n| 当前 GPT / reasoning / Codex 模型族 | **有更新** | GPT-6.2 Astra 面向高难度推理与编码，Sol 面向日常编码与 Agent 工作流。 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品组 | 本轮状态 |\n|---|---|\n| Browser / Operator、Desktop、GPTs / GPT Store、Canvas | 无独立新增；GPT-6.2 可在 ChatGPT Work 使用。 |\n| Sora / video、Images、Voice | 未发现窗口内官方新发布。 |\n| Connectors / MCP / Plugins | **有更新**：ChatGPT for Sales 带来 Sales 插件以及 30 多个新增或扩展的合作伙伴插件。 |\n\n## Tier 3：企业、行业与安全\n\n- **GPT-6.2 Astra 与 Sol（官方确认，11 月 17 日）**：Astra 定位复杂专业工作与高难度编码，Sol 定位日常工作、编码和 Agent 流程。两者在 Plus、Pro、Enterprise、Edu 的 ChatGPT Work 与 Codex 中提供，并进入 API。[官方发布](https://openai.com/index/introducing-gpt-6-2-astra-sol/)\n- **ChatGPT for Sales（官方确认，11 月 17 日）**：新 Sales 插件提供销售工作流，并整合 Salesforce、HubSpot、Confluence、Canva 等合作伙伴插件；这是 Enterprise / Business 工作流扩张信号。[官方发布](https://openai.com/index/introducing-chatgpt-for-sales/)\n- **安全评估**：系统卡确认两款模型达到网络安全 Critical、生物与化学 High 阈值；Astra 还达到 AI Self-Improvement High 阈值，发布伴随更严格的监控与控制。[系统卡](https://deploymentsafety.openai.com/gpt-6-2-astra-sol/gpt-6-2-astra-sol.pdf)\n\n## 官方更新（由新到旧）\n\n1. **GPT-6.2 模型与 Codex / API 可用性**：官方称 Astra API 定价为每百万 token 输入 8 美元、缓存输入 0.40 美元、输出 40 美元；Sol 延续每百万 token 2 / 0.10 / 10 美元。官方比较与基准均按其披露的测试条件理解，不外推为所有实际工作负载。\n2. **Responses API 后台完成窗口**：可选择 2 小时或 8 小时窗口，官方称相对 Standard 的模型 token 费率分别低 30% 和 40%；这是延迟换成本的异步执行能力。[API Changelog](https://developers.openai.com/api/docs/changelog)\n3. **ChatGPT for Sales**：把销售数据、内容制作与 CRM 插件放进 ChatGPT 工作流。\n\n## Love\n\n- r/OpenAI 的高互动发布讨论中，正面反馈主要集中在 **Astra 降价、缓存输入折扣与 Sol 的性价比**；该帖同时包含大量质疑，因此只能代表单个社区样本，不能外推为整体口碑。[社区讨论](https://www.reddit.com/r/OpenAI/comments/1xyr27j/openai_launched_gpt62_astra_and_gpt62_sol/)\n- Hacker News 讨论中也有用户把成本效率视作核心亮点，但评论同时对隐私、速度与基准代表性提出质疑，整体并非单向积极。[HN 讨论](https://news.ycombinator.com/item?id=50535230)\n\n## Hate\n\n- 同一 r/OpenAI 讨论里，早期用户对 Sol Max 的个别编码分数、Astra 的文字细节和滚动上线不一致提出负面反馈；这些是首日体验，尚无统一可复现实验。\n- 一篇 r/OpenAI 报告给出了 Codex 本地日志证据：切换到 GPT-6.2 Sol Max 后客户端提示未知模型并使用回退元数据，导致频繁 compaction 与异常 token 消耗。该问题尚未见 OpenAI 维护者确认，应标为**可复现社区报告、影响范围未确认**。[问题报告](https://www.reddit.com/r/OpenAI/comments/1xywsm2/the_models_take_months_the_disappointment_takes/)\n\n## 口碑判断\n\n**正负分化，置信度中低。** 正面集中在官方定价、缓存折扣与效率承诺；负面集中在首日 rollout 差异、模型体验分歧和一例 Codex 元数据/compaction 异常。发布后不足一天，样本容易被新模型热度放大，暂不作“追平”或“超过”竞品的结论。\n\n## 对比与 Agent 生态\n\nOpenAI 官方给出 Agents’ Last Exam、FrontierCode 2.0、Terminal-Bench-Science 等具名评测，但其中不少比较来自 OpenAI 自身或合作方配置，需结合方法与真实任务复核。窗口内没有足够独立证据证明 Codex 已全面超过 Claude Code、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH；完整 harness 扫描留给开源专题页。\n\n## 日期未确认\n\n- 官方 GPT-6.2 与 Sales 页面确认日期为 2026-11-17，但未披露具体发布时间。结合官方社交链接进入 HN 的实时记录与首日社区上线讨论，可判断属于本轮 24 小时窗口；具体上海时间仍未确认。\n\n## 观察池\n\n- Developer Community 同日出现“API credits”与模型可用性讨论，但论坛列表的 activity 时间可能不是首发时间，且可用性以官方模型发布与 API changelog 为准，未单独计作产品事实。\n- GPT-6.2 首日社区基准、截图和对比实验差异较大；除具名公开评测外，不把单次体验写成性能定论。\n\n## 来源链接\n\n- [Introducing GPT-6.2 Astra and Sol](https://openai.com/index/introducing-gpt-6-2-astra-sol/)\n- [Introducing ChatGPT for Sales](https://openai.com/index/introducing-chatgpt-for-sales/)\n- [OpenAI API Changelog](https://developers.openai.com/api/docs/changelog)\n- [GPT-6.2 Astra and Sol system card](https://deploymentsafety.openai.com/gpt-6-2-astra-sol/gpt-6-2-astra-sol.pdf)\n- [r/OpenAI launch discussion](https://www.reddit.com/r/OpenAI/comments/1xyr27j/openai_launched_gpt62_astra_and_gpt62_sol/)\n- [r/OpenAI Codex compaction report](https://www.reddit.com/r/OpenAI/comments/1xywsm2/the_models_take_months_the_disappointment_takes/)\n- [Hacker News discussion](https://news.ycombinator.com/item?id=50535230)\n\n## 采集状态\n\n- 已检查：OpenAI News / Product Releases、API changelog / models / deprecations、ChatGPT 与 Enterprise / Edu release notes、Codex 和 Agents SDK GitHub releases、Responses / Realtime / Assistants 文档、Developer Community，以及 Reddit / HN / X / YouTube 抽样。\n- 失败或受限：X 未登录搜索不能稳定取得完整时间线和互动量；YouTube 未发现独立新增事实；官方发布页未给具体时刻。\n- 初始候选 **14** 条，最终保留 **7** 个来源；最终来源不为 0，未触发二次补搜。",
+  "sources": [
+    {
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-17（官方页面未给出具体时刻）",
+      "summary": "OpenAI 发布 GPT-6.2 Astra 与 Sol，覆盖 ChatGPT Work、Codex、API、定价、评测和可用性。",
+      "tags": ["GPT-6.2", "Codex", "API", "Agent"]
+    },
+    {
+      "title": "Introducing ChatGPT for Sales",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-17（官方页面未给出具体时刻）",
+      "summary": "OpenAI 推出 ChatGPT for Sales、Sales 插件与 30 多个新增或扩展的合作伙伴插件。",
+      "tags": ["ChatGPT", "Enterprise", "Plugins", "Sales"]
+    },
+    {
+      "title": "OpenAI API Changelog — GPT-6.2 and background completion windows",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "source": "OpenAI Developers",
+      "publishedAt": "2026-11-17（changelog 未给出具体时刻）",
+      "summary": "API changelog 记录 GPT-6.2 Astra / Sol 上线及 2 小时、8 小时后台完成窗口公测。",
+      "tags": ["Responses API", "Background", "Pricing"]
+    },
+    {
+      "title": "GPT-6.2 Astra and Sol system card",
+      "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol/gpt-6-2-astra-sol.pdf",
+      "source": "OpenAI Deployment Safety",
+      "publishedAt": "2026-11-17",
+      "summary": "系统卡披露 GPT-6.2 Astra 与 Sol 的 Preparedness 阈值、安全评测与部署控制。",
+      "tags": ["Safety", "System Card", "GPT-6.2"]
+    },
+    {
+      "title": "OpenAI launched GPT-6.2 Astra and GPT-6.2 Sol",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1xyr27j/openai_launched_gpt62_astra_and_gpt62_sol/",
+      "source": "Reddit r/OpenAI（社区样本）",
+      "publishedAt": "2026-11-17（Reddit 显示日期，具体时刻未稳定取得）",
+      "summary": "高互动社区讨论同时呈现价格效率认可、首日可用性差异与性能质疑。",
+      "tags": ["社区口碑", "GPT-6.2", "未独立验证"]
+    },
+    {
+      "title": "The models take months. The disappointment takes minutes. (Ft. GPT-6.2 Sol)",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1xywsm2/the_models_take_months_the_disappointment_takes/",
+      "source": "Reddit r/OpenAI（社区问题报告）",
+      "publishedAt": "2026-11-17（Reddit 显示日期，具体时刻未稳定取得）",
+      "summary": "用户以 Codex 日志报告 GPT-6.2 Sol 元数据回退、频繁 compaction 与异常 token 消耗，尚未获官方确认。",
+      "tags": ["Codex", "Bug Report", "社区反馈", "未确认"]
+    },
+    {
+      "title": "GPT-6.2 Astra and Sol — Hacker News discussion",
+      "url": "https://news.ycombinator.com/item?id=50535230",
+      "source": "Hacker News（社区样本）",
+      "publishedAt": "2026-11-17（HN 页面未显示统一时区的精确首发时刻）",
+      "summary": "HN 讨论涵盖成本效率、独立小型评测、速度和隐私等正反观点。",
+      "tags": ["社区口碑", "Hacker News", "GPT-6.2"]
+    }
+  ]
+}
