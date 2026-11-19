@@ -1,0 +1,61 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-11-19T10:45:00+08:00",
+  "image": {
+    "url": "https://assets.claude.com/6d4a0d28992ade92d6fa63646fd9c9d318245c6c.jpg",
+    "alt": "Anthropic 首次公开募股定价公告的官方配图",
+    "sourceUrl": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+    "caption": "图片来源：Anthropic 官方公告"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic Newsroom（产品、公司与研究列表）",
+      "Anthropic Claude Code GitHub releases 与 changelog",
+      "Anthropic Claude Code GitHub commits",
+      "Anthropic Platform 文档与模型弃用页",
+      "Anthropic Status",
+      "Claude Code CLI、VS Code/JetBrains、Managed Agents、Skills、Developer Platform、Agent SDK、Cowork、Design、Tag/@Claude、现行模型关键词",
+      "Chrome/browser agent、Desktop/Preview、Marketplace/Connectors/Plugins、创意/视频模型、Voice、Microsoft 365 关键词",
+      "Reddit r/ClaudeAI、r/ClaudeCode、r/Anthropic、r/LocalLLaMA",
+      "Hacker News、YouTube 与可信技术媒体检索"
+    ],
+    "failedSources": [
+      "Anthropic Status 历史页：搜索索引未返回本采集窗口的逐项事件详情",
+      "X 官方与社区检索：未登录环境无法稳定核验原帖时间和互动量",
+      "JetBrains/VS Code 独立更新流：未发现可核验的窗口内独立公告"
+    ],
+    "candidateCount": 8,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-11-18 10:45 至 2026-11-19 10:45（Asia/Shanghai）。窗口内确认到一项与编码 Agent 直接相关的重大版本更新：Claude Code v2.1.328 扩展了第三方云上的 auto mode、自托管 runner 管理能力，并集中修复云会话、Code Mode、MCP、compaction 与远程控制问题。公司层面，Anthropic 公布首次公开募股定价；这是企业发展信号，不等同于 Claude 产品能力更新。\n\n## Tier 1：编码与 Agent 主轴\n\n| 产品/能力 | 状态 | 过去 24 小时证据 |\n|---|---|---|\n| Claude Code CLI | **有新增** | [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 于 11 月 19 日 09:14（上海时间）发布，新增 Opus 4.6 / Sonnet 4.6 在 Bedrock、Google Cloud Agent Platform、Microsoft Foundry 与 Claude apps gateway 的 auto mode，并修复 compaction、终端、权限与长会话问题。 |\n| VS Code / JetBrains | 部分关联更新 | 同一 [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 含 VS Code 权限提示与工具失败信息展示修复；未发现 JetBrains 独立公告。 |\n| Managed Agents / 云会话 / 环境 / memory stores | **有新增** | [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 修复远程会话消息、云会话恢复、自托管 runner 队列与环境标签，并新增 runner 指标；未发现 memory stores 独立更新。 |\n| Skills / Marketplace | 无独立新增 | 版本说明含 managed-settings plugin 的加载与 Git marketplace 改进，但未发现 Skills 标准或市场的独立发布。 |\n| Claude Developer Platform | 无新增 | 官方新闻与文档检索未发现窗口内独立平台公告。 |\n| Agent SDK | 部分关联更新 | [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 涉及 SDK hosts、子 Agent 等待行为与长会话内存改进，但不是单独 SDK release。 |\n| Cowork | 无新增 | 官方入口与关键词检索无窗口内公告。 |\n| Design | 无新增 | 官方入口与关键词检索无窗口内公告。 |\n| Tag / @Claude sessions | 部分关联更新 | [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 改进跨会话消息与 Remote Control；未见 Tag 独立发布。 |\n| 当前官方编码模型 | 无新模型 | 本轮未发现新模型公告；版本说明明确提到 Opus 4.6、Sonnet 4.6 的第三方云 auto mode 支持。 |\n\n## Tier 2：其他产品面\n\n| 范围 | 状态 | 说明 |\n|---|---|---|\n| Chrome/browser agent | 维护更新 | [v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 调整 Claude in Chrome 的权限说明，未见独立功能发布。 |\n| Desktop / Preview | 维护更新 | 同一版本含 Desktop 与 Remote Control 的多项修复。 |\n| Marketplace / Connectors / Plugins | 维护更新 | 同一版本改进 managed plugins，并修复插件界面与连接状态问题。 |\n| 创意/视频模型、Voice、Microsoft 365 | 无新增 | 官方新闻、帮助入口与关键词检索未发现窗口内可核验公告。 |\n\n## Tier 3：行业应用与企业信号\n\nAnthropic 在 11 月 18 日发布[首次公开募股定价公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)：Class A 普通股发行价为每股 83 美元，预计 11 月 19 日以 `ANT` 在 Nasdaq 开始交易。该条属于公司与资本市场动态，不据此推断 Claude 产品采用率或技术能力变化。安全、科学、金融服务、生命科学、医疗、法律、政府、非营利、教育与客服方向，本轮未发现窗口内新的官方产品公告。\n\n## 官方更新（由新到旧）\n\n### Claude Code v2.1.328：云、自托管与可靠性集中更新\n\n[v2.1.328 发布说明](https://github.com/anthropics/claude-code/releases/tag/v2.1.328) 的主线不是单一 UI 功能，而是执行控制和会话可靠性：auto mode 扩展到多家第三方云；`mcp_tool` hook 支持失败即阻断；自托管 runner 增加仓库目录、hook 标签、环境 metadata 与队列等待指标；自动 compaction、Code Mode、MCP schema、云会话恢复、Remote Control、后台 Agent 和长会话内存均有修复或改进。对团队用户而言，最值得关注的是权限策略、可观测性、自托管 runner 生命周期以及远程会话恢复。\n\n### Anthropic 公布 IPO 定价\n\n[Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)确认发行价与预计交易日期。这是可核验的公司事件，但不是产品发布，也不作为社区正面口碑计数。\n\n## Love\n\n本窗口未找到互动量足够、可代表广泛用户态度的独立正面样本。官方 release 不计入正面口碑。\n\n## Hate\n\n本窗口未找到同时满足原帖可访问、时间可核验且互动量足够的集中负面样本。版本说明修复了大量云会话、权限提示、终端冻结与插件 UI 问题，这证明相关缺陷存在过，但不能仅凭修复列表推断当前社区负面情绪强度。\n\n## 口碑判断\n\n**中性，低置信度。** 可核验证据主要来自官方版本说明；社区样本少且互动较低，因此不对总体满意度作方向性外推。\n\n## 比较与生产力观察\n\n本轮 Claude Code 的差异化信号集中在跨云 auto mode、自托管 runner、Remote Control、Code Mode 与多 Agent 可靠性，而不是新模型 benchmark。未发现具名、可复现实验足以支持其“追平”或“超过” Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness / DSH 的结论；这些工具的完整动态由开源 Harness 专题扫描。\n\n## 日期未确认\n\n未保留日期无法确认的产品发布候选。搜索结果中存在把旧功能包装成“最新”的聚合页，但缺少可靠原始发布时间，未将其列为事实。\n\n## 观察池\n\nReddit 出现一则关于 `/last30days` skill 与普通 Claude Code 搜索覆盖差异的[低互动讨论](https://www.reddit.com/r/claudeskills/comments/1xzd4m6/tested_the_last30days_skill_against_plain_claude/)。抓取结果显示 11 月 18 日发布、约 6 票；它提示用户重视 Reddit/HN 等社区检索覆盖，但样本量极小，不能代表整体口碑，也没有证明技能输出的事实完整性。\n\n## 来源链接\n\n- [Claude Code v2.1.328 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.328)\n- [Anthropic prices initial public offering](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)\n- [社区观察：last30days skill 对比](https://www.reddit.com/r/claudeskills/comments/1xzd4m6/tested_the_last30days_skill_against_plain_claude/)\n\n## 采集状态\n\n- 已检查：Anthropic Newsroom、Claude Code releases/commits、平台文档、模型弃用页、状态页，以及 Tier 1/2/3 全部产品关键词；并抽样 Reddit、Hacker News、YouTube 与技术媒体。\n- 失败入口：Anthropic Status 未返回窗口内逐项事件详情；X 在未登录环境下无法稳定核验原帖时间/互动量；JetBrains/VS Code 独立更新流未找到窗口内公告。\n- 初始候选数：8；最终保留来源：3。\n- 二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.328",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "source": "Anthropic / GitHub",
+      "publishedAt": "2026-11-19 09:14 +08:00",
+      "summary": "Claude Code 扩展第三方云 auto mode、自托管 runner 管理与指标能力，并修复云会话、Code Mode、MCP、compaction 和远程控制问题。",
+      "tags": ["Claude Code", "Agent", "Release", "Managed Agents"]
+    },
+    {
+      "title": "Anthropic prices initial public offering",
+      "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+      "source": "Anthropic",
+      "publishedAt": "2026-11-18",
+      "summary": "Anthropic 公布首次公开募股定价与预计 Nasdaq 交易日期，属于公司发展信号而非产品能力更新。",
+      "tags": ["Anthropic", "Company", "IPO"]
+    },
+    {
+      "title": "Tested the last30days skill against plain Claude Code",
+      "url": "https://www.reddit.com/r/claudeskills/comments/1xzd4m6/tested_the_last30days_skill_against_plain_claude/",
+      "source": "Reddit r/claudeskills",
+      "publishedAt": "2026-11-18",
+      "summary": "低互动社区样本比较一个社区检索 skill 与普通 Claude Code 的信息覆盖，作为观察信号保留，不代表总体口碑。",
+      "tags": ["观察池", "社区", "Skills"]
+    }
+  ]
+}
