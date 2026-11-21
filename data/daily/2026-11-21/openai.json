@@ -1,0 +1,79 @@
+{
+  "slug": "openai",
+  "title": "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报",
+  "description": "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["OpenAI", "ChatGPT", "Codex", "Agent"],
+  "order": 20,
+  "updatedAt": "2026-11-21T10:46:00+08:00",
+  "image": {
+    "url": "https://developers.openai.com/og/api/docs/models/gpt-live-1.1.png",
+    "alt": "OpenAI Developers 的 GPT-Live-1.1 模型文档预览图",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-live-1.1",
+    "caption": "图片来源：OpenAI Developers"
+  },
+  "scan": {
+    "checkedSources": [
+      "OpenAI News / Index / Research / Safety 官方列表",
+      "OpenAI API Changelog、模型目录、GPT-Live-1.1 模型与 Live 指南、Responses API、Realtime API、Assistants API deprecations / migration",
+      "ChatGPT Release Notes、Model Release Notes、Enterprise / Edu Release Notes",
+      "Codex CLI、VS Code / JetBrains、cloud / remote tasks 官方文档与 openai/codex GitHub releases",
+      "OpenAI Agents SDK Python / TypeScript GitHub changelog与 releases",
+      "OpenAI Developer Blog、Developer Community Announcements / Hot / Latest",
+      "OpenAI Status",
+      "Reddit r/OpenAI、r/ChatGPT、r/ChatGPTCoding、r/singularity",
+      "Hacker News 2026-11-20 front / newest、X 与 YouTube 搜索抽样"
+    ],
+    "failedSources": [
+      "X 未登录搜索无法稳定取得完整时间线与互动量，未把零散帖子计入口碑样本",
+      "Reddit 站内近期检索召回不稳定，仅保留搜索引擎可打开且有明确日期的一份测试帖",
+      "YouTube 未发现独立于官方文档、且能核验发布时间的新技术事实",
+      "ChatGPT Release Notes 与 API Changelog 只标日期、不标具体发布时刻，相关条目标注日期边界",
+      "Codex GitHub releases 搜索索引最新可见稳定版停留在 11 月 10 日，未发现窗口内 release"
+    ],
+    "candidateCount": 11,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口为 **2026-11-20 10:46 至 2026-11-21 10:46（Asia/Shanghai）**。窗口内可核实的 OpenAI 主更新集中在语音 Agent：GPT-Live-1.1 开放 API，并为 GPT-Live-1 / 1.1 的 WebRTC 会话新增 standby；官方称新版改善多语发音、口音一致性与转写，并可把复杂工作委派给后端 Agent。Codex、Responses API、Agents SDK 与通用 ChatGPT Agent 未发现窗口内独立发布。\n\n## Tier 1：编码、Agent 与开发者平台\n\n| 产品 / 能力 | 本轮状态 | 说明 |\n|---|---|---|\n| Codex CLI | 无新增 | 官方仓库 releases 未发现窗口内新的稳定版。 |\n| VS Code / JetBrains 集成 | 无新增 | 未发现窗口内独立插件版本或功能公告。 |\n| Codex cloud / remote tasks / PR agents | 无新增 | 官方文档、开发者博客与公告入口未见窗口内新发布。 |\n| ChatGPT agentic mode | 无新增 | 未发现窗口内通用 Agent 模式公告。 |\n| 当前官方 Agent 构建产品 | 无新增 | Responses API / Agents API 与官方指南未见窗口内独立变更。 |\n| Responses API | 无新增 | API changelog 未列出窗口内新条目。 |\n| Agents SDK Python / TypeScript | 无新增 | 两个官方 SDK 未发现窗口内稳定 release。 |\n| Assistants API 迁移 | 无新增 | 未发现弃用或迁移时间线变化。 |\n| Realtime / GPT-Live | **有更新** | GPT-Live-1.1 可通过 Live API 使用；WebRTC standby 可在静默时暂停推理、保留连接并在用户再次说话时恢复。[API Changelog](https://developers.openai.com/api/docs/changelog) |\n| 当前 GPT / reasoning / Codex 模型族 | 无新文本 / 编码型号 | 本轮只确认语音模型 GPT-Live-1.1 的 API 开放；未发现新的通用 GPT 或 Codex 型号。 |\n\n## Tier 2：ChatGPT 产品面\n\n| 产品组 | 本轮状态 |\n|---|---|\n| Browser / Operator、GPTs / GPT Store、Canvas | 未发现窗口内独立新增。 |\n| Desktop apps | 未发现窗口内独立发布；11 月 19 日移动端改版因具体时刻不明列入“日期未确认”。 |\n| Sora / video、GPT Image / DALL·E | 未发现窗口内官方新发布。 |\n| Voice | **开发者侧有更新**：GPT-Live-1.1 支持全双工语音、后端委派与 standby；官方模型页列出 active 每分钟 0.05 美元、standby 每分钟 0.02 美元，后端模型和工具另计。[模型页](https://developers.openai.com/api/docs/models/gpt-live-1.1) |\n| Connectors / MCP / Plugins | 未发现窗口内新的协议或目录公告。 |\n\n## Tier 3：企业、行业与安全\n\n- 企业、Business、Edu、Gov、Science 与安全入口未发现窗口内独立新发布。\n- GPT-Live-1.1 的 standby 为持续语音 Agent 提供了明确的空闲计费状态，但它是 API 能力，不代表新的企业套餐或托管业务上线。\n\n## 官方更新（由新到旧）\n\n1. **GPT-Live-1.1 API 与 standby**：OpenAI Developer Community 的官方公告显示帖子发布于 11 月 20 日 04:12（论坛显示时间）；模型能在说话时继续聆听，并可把复杂推理或工具流程交给后端。standby 的空闲超时可设为 5–60 秒，WebRTC 连接保持开启。[官方社区公告](https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537)\n2. **技术边界**：模型页显示 GPT-Live-1.1 使用 `v1/live/sessions`，支持 function calling，但不支持图像 / 视频输入与 structured outputs；并建议应用自行检查权限与动作确认。\n\n## Love\n\n- 一家语音 Agent 开发团队发布同日对照测试，报告 GPT-Live-1.1 相比 GPT-Live-1 的起声中位时间为 1.0 秒对 1.3 秒，并在 205 个真实通话片段的“给出企业批准回复”测试中取得 43% 对 34%。这是具名样本与同日对照，说明脚本遵循可能改善，但属于厂商自测而非独立基准。[社区测试](https://www.reddit.com/r/OpenAI/comments/1y1caw4/gptlive11_vs_gptlive1_our_phonecall_test_results/)\n\n## Hate\n\n- 同一测试仍观察到拼写姓名、分段回读电话号码及重复询问已回答问题；50 个模拟通话场景各只运行一次，不能据此推导稳定失败率。\n- standby 只降低静默阶段的语音会话费率，后端模型和工具仍另行计费；实际总成本取决于委派频率和工作流长度。\n\n## 口碑判断\n\n**语音 Agent 的可用性信号偏正，但置信度低到中等。** 官方材料确认能力、接口和价格；社区只有一份带样本量的开发者自测，虽同时报告改善与失败案例，仍不足以代表广泛生产体验。官方公告不计作正面社区口碑。\n\n## 对比与 Agent 生态\n\n本轮没有独立、可复现的具名评测足以证明 Codex 或 OpenAI Agent 全面追平或超过 Claude Code、Cursor、Cline、Pi Coding Agent、DeepSeek Harness / DSH。GPT-Live-1.1 的前台语音与后端 Agent 分离是架构能力，不等同于编码 Agent 排名；完整开源 harness 扫描留给开源专题页。\n\n## 日期未确认\n\n- **ChatGPT 新移动体验（官方日期 11 月 19 日，具体时刻未给）**：官方 release notes 称新版给 dot 独立标签页，并允许把 Codex、Projects、Images 等固定到标签栏；先面向符合条件的美国等地区成年 Pro 用户逐步推出。因无法确认是否落入本轮 24 小时窗口，仅作日期未确认候选。[ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)\n- API Changelog 将 GPT-Live-1.1 条目标为 11 月 19 日，而官方社区公告显示 11 月 20 日 04:12；可能是文档记账日与公开公告时刻不同，因此正文只把 API 可用性作为已确认事实，不猜测精确上线分钟。\n\n## 观察池\n\n- 社区电话测试由语音 Agent 厂商自行完成，测试集、提示、音频链路与评分方法尚未经过第三方复现；性能数字不得外推为全行业结论。\n- 新移动体验仍是分批推出且存在地区、年龄与计划限制，实际账户可见性可能不同。\n\n## 来源链接\n\n- [OpenAI API Changelog](https://developers.openai.com/api/docs/changelog)\n- [GPT-Live-1.1 模型页](https://developers.openai.com/api/docs/models/gpt-live-1.1)\n- [GPT-Live-1.1 has arrived in the API](https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537)\n- [GPT-Live-1.1 vs GPT-Live-1：电话测试](https://www.reddit.com/r/OpenAI/comments/1y1caw4/gptlive11_vs_gptlive1_our_phonecall_test_results/)\n- [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)\n\n## 采集状态\n\n- 已检查：OpenAI News / Research / Safety、API changelog / models / Live / Responses / Realtime / Assistants、ChatGPT / Model / Enterprise / Edu release notes、Codex 与 Agents SDK GitHub、Developer Blog / Community、Status，以及 Reddit / HN / X / YouTube 抽样。\n- 失败或受限：X 未登录时间线、Reddit 近期召回、YouTube 新事实召回及官方页面精确时刻存在限制；Codex 搜索索引未显示窗口内 release。\n- 初始候选 **11** 条，最终保留 **5** 个来源；最终来源不为 0，未触发二次补搜。",
+  "sources": [
+    {
+      "title": "OpenAI API Changelog — GPT-Live-1.1",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "source": "OpenAI Developers",
+      "publishedAt": "2026-11-19（官方页面未给出具体时刻）",
+      "summary": "官方 changelog 确认 GPT-Live-1.1 与 GPT-Live WebRTC standby，并说明多语发音、口音一致性和转写改进。",
+      "tags": ["GPT-Live-1.1", "Live API", "Voice", "日期边界"]
+    },
+    {
+      "title": "GPT-Live-1.1 Model",
+      "url": "https://developers.openai.com/api/docs/models/gpt-live-1.1",
+      "source": "OpenAI Developers",
+      "publishedAt": "2026-11-20 可访问（模型页未标首发时刻）",
+      "summary": "模型页记录 GPT-Live-1.1 的全双工、多语、后端委派、接口、能力边界和按分钟价格。",
+      "tags": ["GPT-Live-1.1", "Model", "Pricing", "Agent"]
+    },
+    {
+      "title": "GPT-Live-1.1 has arrived in the API",
+      "url": "https://community.openai.com/t/gpt-live-1-1-has-arrived-in-the-api/1418537",
+      "source": "OpenAI Developer Community（官方公告）",
+      "publishedAt": "2026-11-20 04:12（论坛显示时间，时区未明确）",
+      "summary": "官方社区公告确认 API 可用性、5–60 秒 standby 空闲超时及 active / standby 费率。",
+      "tags": ["GPT-Live-1.1", "API", "Standby", "Agent"]
+    },
+    {
+      "title": "GPT-Live-1.1 vs GPT-Live-1: our phone-call test results",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1y1caw4/gptlive11_vs_gptlive1_our_phonecall_test_results/",
+      "source": "Reddit r/OpenAI（开发者自测）",
+      "publishedAt": "2026-11-20（Reddit 日期）",
+      "summary": "语音 Agent 团队报告同日对照测试的延迟与脚本遵循改善，同时披露拼写、号码回读和重复提问问题。",
+      "tags": ["GPT-Live-1.1", "Community", "Benchmark", "观察池"]
+    },
+    {
+      "title": "ChatGPT Release Notes — New mobile experience for ChatGPT",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI Help Center",
+      "publishedAt": "2026-11-19（release notes 未给具体时刻）",
+      "summary": "新版移动体验为 dot 提供独立标签页，并允许固定 Codex、Projects、Images 等入口；分批推出且时间边界未确认。",
+      "tags": ["ChatGPT", "Mobile", "Codex", "日期未确认"]
+    }
+  ]
+}
