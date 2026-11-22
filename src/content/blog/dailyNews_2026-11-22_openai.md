@@ -1,0 +1,100 @@
+---
+title: "OpenAI / ChatGPT 全家桶过去 24 小时动态与口碑日报"
+date: "2026-11-22T00:00:00+08:00"
+updatedAt: "2026-11-22T10:51:00+08:00"
+description: "OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredTitle: "Code review repeatedly blocked by cybersecurity warning on 6.2-Sol-High"
+featuredUrl: "https://www.reddit.com/r/OpenaiCodex/comments/1y27292/code_review_repeatedly_blocked_by_cybersecurity/"
+featuredSummary: "用户报告普通代码审查中反复触发网络安全提示；为未经官方确认的社区个案。 OpenAI 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。"
+featuredPublishedAt: "2026-11-21"
+featuredTags: ["Codex","社区口碑","Hate","安全"]
+tags:
+  - "安全"
+  - "观察池"
+  - "日期未确认"
+  - "社区口碑"
+  - "Agent"
+  - "ChatGPT"
+  - "Codex"
+  - "GPT-6.2"
+  - "Hate"
+  - "OpenAI"
+  - "Space"
+---
+
+## 今日概览
+
+采集窗口：2026-11-21 10:40 至 2026-11-22 10:40（Asia/Shanghai）。本窗口内未核实到 OpenAI 官方新闻、API changelog 或 Codex release 的全新条目；最明确的新信号来自 Codex 用户对 GPT-6.2 安全拦截与任务连续性的反馈。官方论坛的 GPT-6.2 公告在 11 月 21 日仍有活动，但页面索引不能证明当天是首发日期，因此仅列入日期未确认。
+
+## Tier 1：编码、Agent 与开发者平台
+
+| 产品 / 能力 | 本轮状态 | 核查结论 |
+|---|---|---|
+| Codex CLI | 有社区反馈 | 两个近期讨论指向代码审查、逆向分析场景中的安全拦截；均为用户个案，不能外推为整体回归 |
+| VS Code / JetBrains 集成 | 无新增 | 官方文档、变更记录与仓库未发现窗口内可确认更新 |
+| Codex cloud / remote tasks / PR agents | 无新增 | 未发现窗口内新的托管任务、PR Agent 或配额公告 |
+| ChatGPT agentic mode | 无新增 | 发布说明未见窗口内新增 |
+| 当前官方 Agent 构建产品 | 无新增 | Responses API、Agents SDK Python / TypeScript 均未发现窗口内 changelog |
+| Responses API | 无新增 | API changelog 最近可见更新早于本窗口 |
+| Agents SDK Python / TypeScript | 无新增 | 官方仓库、文档未见窗口内 release |
+| Assistants API 弃用 / 迁移 | 无新增 | 未发现窗口内迁移节点变化 |
+| Realtime API | 无新增 | 未发现窗口内官方更新 |
+| 当前 GPT、推理与 Codex 模型族 | 日期未确认信号 | 官方开发者社区的 GPT-6.2 Astra / Sol 主题在 11 月 21 日有活动，但首发时间无法由列表页确认 |
+
+## Tier 2：ChatGPT 产品面
+
+| 产品组 | 状态 | 说明 |
+|---|---|---|
+| 浏览器 / Operator 能力、桌面应用 | 无新增 | 官方发布说明未见窗口内新条目 |
+| GPTs / GPT Store、Canvas | 无新增 | 未发现可核实更新 |
+| Sora / 视频、GPT Image / DALL·E | 无新增 | 未发现窗口内官方发布；社区存在图像拒绝投诉但证据不足，未列为产品事实 |
+| Voice、Connectors / MCP | 近两日背景 | 11 月 20 日发布说明中的 ChatGPT Space 面向 Plus 推出，属于窗口外邻近背景，不作为今日官方新发布 |
+
+## Tier 3：行业方案与安全
+
+Enterprise、Business、Edu、Gov、Science 与行业方案均未检出窗口内可确认的官方新发布。安全侧出现用户关于网络安全代码审查被频繁拦截的个案，见下方口碑区；尚无官方说明证明策略在本窗口发生变更。
+
+## 官方更新（最新优先）
+
+本窗口内暂无已核实的官方首发。OpenAI Developer Community 的 [GPT-6.2 Astra 与 Sol 公告列表](https://community.openai.com/c/announcements/6) 显示 11 月 21 日活动，但列表页同时混合主题首发时间与最新互动时间，故不能据此断言当日发布。
+
+## Love
+
+本轮没有达到可单独列为正向口碑的 24 小时高可信样本。官方公告不计作正向口碑。
+
+## Hate
+
+- 一位 r/OpenaiCodex 用户报告，GPT-6.2 Sol High 在普通 Rust 项目代码审查中反复触发网络安全提示；帖子只有少量附和，属于个案证据：[原帖](https://www.reddit.com/r/OpenaiCodex/comments/1y27292/code_review_repeatedly_blocked_by_cybersecurity/)。
+- 另一位 r/codex 用户称使用 Codex macOS 应用分析旧游戏 ROM 时遇到更严格的只读限制，并引发较多讨论；这是社区观察，未获 OpenAI 确认：[原帖](https://www.reddit.com/r/codex/comments/1y1iv2u/restriction_on_game_reverse_engineering_with_gpt62/)。
+
+## 情绪判断
+
+- **方向：偏负面；置信度：中低。** 依据是两个相近场景的独立 Reddit 讨论，但样本集中在安全与逆向工程边界，不能代表一般编码任务。
+- **主要疑问：** 拦截来自模型行为、系统策略、客户端版本还是账户权限，目前公开证据无法区分。
+- **需要继续观察：** 后续 Codex changelog、OpenAI 安全文档或更多可复现实验是否解释变化。
+
+## 比较与生产力观察
+
+本窗口没有可复现评测支持 Codex 与 Claude Code、Cline、Pi Coding Agent、DeepSeek Harness / DSH、Cursor 等工具的胜负判断。社区帖子只说明特定安全边界下的体验差异，不应外推成综合性能比较；开源 harness 的完整扫描详见开源专题页。
+
+## 日期未确认
+
+- [GPT-6.2 Astra 与 Sol 公告主题](https://community.openai.com/c/announcements/6)：OpenAI Developer Community 列表显示 11 月 21 日有活动，但无法确认是主题首发还是后续回复；仅作为官方渠道仍在讨论的信号。
+
+## 观察池
+
+- [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) 的 11 月 20 日条目记录 ChatGPT Space 向 Plus 用户推出。它紧邻但早于本轮 24 小时窗口，保留作产品背景，不计为今日更新。
+- 两个安全拦截讨论值得等待官方说明或稳定复现；当前不得表述为 GPT-6.2 全面收紧或 Codex 整体质量下降。
+
+## 来源链接
+
+1. [OpenAI Developer Community Announcements](https://community.openai.com/c/announcements/6)
+2. [ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
+3. [Codex 代码审查安全拦截讨论](https://www.reddit.com/r/OpenaiCodex/comments/1y27292/code_review_repeatedly_blocked_by_cybersecurity/)
+4. [GPT-6.2 游戏逆向限制讨论](https://www.reddit.com/r/codex/comments/1y1iv2u/restriction_on_game_reverse_engineering_with_gpt62/)
+
+## 采集状态
+
+- 已检查：OpenAI 新闻 / Research、Developer API changelog、模型与弃用文档、ChatGPT / Model Release Notes、Codex changelog 与 GitHub releases、Developer Community、Responses API、Agents SDK、Realtime API，以及 Reddit、HN、X、YouTube 和开发者播客。
+- 失败来源：X 无法稳定取得完整原帖时间与互动量；YouTube 无可核实的官方 24 小时新发布；Codex GitHub releases 的公开索引无本窗口版本。
+- 初始候选 8 条，保留 4 条来源；最终来源不为 0，未触发二次补搜。
