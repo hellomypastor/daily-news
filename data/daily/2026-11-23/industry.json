@@ -1,0 +1,62 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-23T10:52:00+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Research / Engineering（本轮无新增；详见 Claude 专题页）",
+      "OpenAI News / Research / Developer Platform（本轮无新增；详见 OpenAI 专题页）",
+      "Google DeepMind / Google Research / Google Blog",
+      "Meta AI Blog",
+      "Microsoft Research / Microsoft AI / Microsoft Foundry Blog",
+      "xAI News / Grok 文档 / API 与模型说明 / 官方仓库（逐项检查模型、API、DeepSearch、语音、编码、工具调用与 Agent；本轮无可核实新增）",
+      "Mistral News / Research 与 Cohere Blog / Research / Release Notes",
+      "Qwen / Alibaba Cloud / DAMO 与 ByteDance Seed / Doubao",
+      "Baidu Research / Wenxin 与 Tencent Hunyuan 官方入口",
+      "DeepSeek 官方仓库 / News；Zhipu GLM、Moonshot Kimi、StepFun、MiniMax 官方入口",
+      "NVIDIA Developer / Research / Omniverse Blog",
+      "Hugging Face Blog / Papers",
+      "LangChain / LlamaIndex Blog",
+      "Cline / Pi Coding Agent / DeepSeek Harness 官方仓库、发布页与生态讨论（例行变更详见开源专题页）",
+      "Latent Space / Dwarkesh / No Priors / The Cognitive Revolution / a16z AI 与厂商播客"
+    ],
+    "failedSources": [
+      "xAI/Grok：官方新闻、文档、API/模型入口与公开仓库没有发现截止时间前 24 小时内可核实的新公告，未用旧材料补位",
+      "部分中国厂商列表页采用动态渲染，搜索索引只暴露摘要而没有稳定的原文时间，未将摘要升级为事实",
+      "播客聚合页能显示最近更新日期，但无法稳定回到全部原始节目页核实发布时间，未收录聚合摘要",
+      "部分厂商官方列表只给日级日期，无法严格判断 24/48/72 小时边界，相关候选降级到日期未确认"
+    ],
+    "candidateCount": 9,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n截至 2026-11-23 10:52（Asia/Shanghai），严格 24 小时窗口内未发现能够由厂商原文同时确认发布时间与关键事实的重大模型或 Agent 发布。本页保留两条日期精度不足但有一手页面支撑的微软候选，以及一条较旧的 NVIDIA 工程观察；它们均未被写成‘今日发布’。\n\n## 优先动态（过去 24 小时）\n\n本轮无经严格时间核验的优先动态。Anthropic 与 OpenAI 的相关扫描详见 Claude、OpenAI 专题页；没有用跨日旧公告填充。\n\n## 例行扫描\n\n| 厂商 / 机构 | 状态 | 说明 |\n|---|---|---|\n| xAI / Grok | 无新增 | 已单独检查 xAI 新闻、Grok 文档、API/模型说明与官方仓库，覆盖模型/API、DeepSearch、语音、编码、工具调用及 Agent 能力；未发现窗口内可核实新公告。 |\n| Google / Meta / Mistral / Cohere | 无新增 | 官方新闻、研究与产品入口未发现可核实的 24 小时新条目。 |\n| Qwen / Seed / DeepSeek / GLM / Kimi / StepFun / MiniMax | 无新增 | 官方入口未发现可同时核实原文和窗口时间的新条目；动态列表摘要不作为事实。 |\n| Cline / Pi / DeepSeek Harness | 无行业级新增 | 已检查产品方向、分发、合作、融资、企业采用、评测与生态增长；窗口内讨论以例行工程问题和社区插件为主，详见开源专题页。 |\n\n## 日期未确认\n\n### Microsoft Foundry：托管 Agent 私网排障指南\n\n微软 Foundry 团队的 [《Hosted agents in your own virtual network: five checks when the Agents page times out》](https://devblogs.microsoft.com/foundry/hosted-agents-private-network-setup/) 标注 2026-11-21，但未给出可换算到上海时区的具体时刻，因此不强行归入 24–48 小时或 48–72 小时。文章说明托管 Agent 会话及项目级数据代理运行在委派子网，并给出私有 DNS、Entra ID、TLS 检查、对等网络与子网回收的诊断路径。它的重要性在于把生产 Agent 的网络边界、身份和可观测故障落到可操作的基础设施检查。\n\n### Microsoft Research：MANAS 脑健康世界模型研究计划\n\nMicrosoft Research 列表将 [MANAS](https://www.microsoft.com/en-us/research/project/manas-2/) 标注为 2026-11-21。项目探索解剖结构感知表征与脑部变化世界模型；由于只公开日级日期，本轮将它放入日期未确认，而不宣称属于精确 48 小时窗口。\n\n## 观察池\n\n### 较旧背景：NVIDIA Omniverse 与前沿 Agent 的仿真工作流\n\nNVIDIA 在 2026-11-19 发布的 [Omniverse 工程案例汇总](https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/) 已超过本轮 72 小时重点窗口，故仅作较旧背景。原文展示开发者如何用前沿模型配合 Omniverse、Isaac Sim 和开放技能构建数字孪生、机器人抓取、语音 VR 与批量物理仿真；其行业信号是 Agent 正在进入可检查、可回放的工程仿真环节，而不只是文本工作流。\n\n## 播客扫描\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 及厂商播客均已检查。聚合入口显示最近节目多停留在 11 月 19–21 日，且部分无法稳定回到原始节目页确认精确时间，本轮未把聚合摘要列为正式条目。\n\n## 今日判断\n\n今日行业面没有足够证据支持‘重大模型发布’结论；更值得持续观察的是托管 Agent 的私网落地与研究型世界模型，但两者的时间边界需要继续核实。\n\n## 来源链接\n\n- [Microsoft Foundry：Hosted agents in your own virtual network](https://devblogs.microsoft.com/foundry/hosted-agents-private-network-setup/)\n- [Microsoft Research：MANAS](https://www.microsoft.com/en-us/research/project/manas-2/)\n- [NVIDIA：How Developers Turn Ideas Into Simulations With Frontier AI Agents](https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/)\n\n## 采集状态\n\n- 采集窗口：2026-11-22 10:52 至 2026-11-23 10:52（Asia/Shanghai）；补充检查延伸至 72 小时，较旧内容只进观察池。\n- 已检查来源：Anthropic、OpenAI、Google、Meta、Microsoft、xAI/Grok、Mistral、Cohere、中外主要模型厂商、NVIDIA、Hugging Face、LangChain/LlamaIndex、Coding Agent 厂商与指定播客。\n- 失败来源：xAI/Grok 无窗口内新增；部分中国厂商页面动态渲染；播客聚合缺少原始时间；若干列表只有日级日期。\n- 初始候选数：9；保留来源数：3；二次补搜：否（最终来源不为 0）。",
+  "sources": [
+    {
+      "title": "Hosted agents in your own virtual network: five checks when the Agents page times out",
+      "url": "https://devblogs.microsoft.com/foundry/hosted-agents-private-network-setup/",
+      "source": "Microsoft Foundry Blog",
+      "publishedAt": "2026-11-21",
+      "summary": "微软介绍 Foundry 托管 Agent 私网中的会话运行、数据代理、身份、DNS 与网络排障路径；仅有日级日期。",
+      "tags": ["Microsoft", "Foundry", "Hosted Agent", "日期未确认"]
+    },
+    {
+      "title": "MANAS",
+      "url": "https://www.microsoft.com/en-us/research/project/manas-2/",
+      "source": "Microsoft Research",
+      "publishedAt": "2026-11-21",
+      "summary": "解剖结构感知的脑健康表征与世界模型研究计划；官方列表仅提供日级日期。",
+      "tags": ["Microsoft Research", "World Model", "Healthcare", "日期未确认"]
+    },
+    {
+      "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+      "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+      "source": "NVIDIA Blog",
+      "publishedAt": "2026-11-19",
+      "summary": "NVIDIA 汇总前沿 Agent 与 Omniverse/Isaac Sim 结合的仿真案例；超过本轮 72 小时重点窗口，仅作较旧背景。",
+      "tags": ["NVIDIA", "Omniverse", "Agent", "较旧背景"]
+    }
+  ]
+}
