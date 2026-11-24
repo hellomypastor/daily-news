@@ -1,0 +1,97 @@
+---
+title: "AaaS（Agent-as-a-Service）行业动态日报"
+date: "2026-11-24T00:00:00+08:00"
+updatedAt: "2026-11-24T10:48:42+08:00"
+description: "托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredTitle: "What's new - AWS DevOps Agent"
+featuredUrl: "https://docs.aws.amazon.com/devopsagent/latest/userguide/whats-new.html"
+featuredSummary: "AWS 记录 DevOps Agent Sandbox 扩区、custom agents 独立临时环境、包仓库控制与 Automatic Reviews 采样率更新。 托管 Agent、远程异步执行平台及其商业化与生态动态。"
+featuredPublishedAt: "2026-11-22"
+featuredTags: ["AWS DevOps Agent","Sandbox","评测","近三日补充"]
+tags:
+  - "定价"
+  - "近三日补充"
+  - "邻近信号"
+  - "评测"
+  - "治理"
+  - "AaaS"
+  - "Agent"
+  - "AWS DevOps Agent"
+  - "Cloud Agent"
+  - "Cloud Sandbox"
+  - "GitHub Copilot"
+  - "Managed Agent"
+  - "MCP"
+  - "Runpod"
+  - "Sandbox"
+---
+
+## 今日概览
+
+本轮主窗口为 **2026-11-23 10:45 至 2026-11-24 10:45（Asia/Shanghai）**。窗口内最明确的 AaaS 商业化变化，是 GitHub Copilot 的托管云沙箱按预告在 11 月 23 日开始计费；这不是新产品发布，但会直接改变远程 Agent 的使用成本。AWS DevOps Agent 在 24–72 小时范围内补齐了托管沙箱与质量评审能力。Devin 与 Grok 均已完成强制核查，官方入口未发现主窗口内可独立确认的新发布。
+
+## 重点动态
+
+### GitHub Copilot 云沙箱进入计费日
+
+GitHub 早前公布的新一体化 Copilot 云体验默认在 GitHub 托管的安全沙箱中运行，可跨界面恢复会话；官方页面明确写明，云沙箱使用量从 **2026 年 11 月 23 日**起计费，并从包含的 GitHub Actions 权益中扣减。对 AaaS 采购与容量规划而言，托管执行已从功能可用性问题进入可核算的 compute entitlement 问题。来源：[GitHub Changelog](https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/)（原文发布较早、11 月 19 日更新计费日期；本轮记录的是 11 月 23 日生效事件）。
+
+## 远程 / 云端 Agent 执行
+
+| 平台 | 状态 | 本轮判断 |
+|---|---|---|
+| GitHub Copilot | 已验证生效事件 | 云沙箱默认托管、可恢复；11 月 23 日开始计费，属于远程 Agent 的商业化变化。 |
+| AWS DevOps Agent | 近三日补充 | 11 月 21 日把 Sandbox 扩至所有商业 Region，并允许 custom agents 使用独立临时环境；11 月 22 日为 Automatic Reviews 预览设置 1–10% 采样率。 |
+| Cognition Devin | 无新增 | 已查官方 release notes、blog 与文档；官方 release notes 当前最新日期为 11 月 20 日，窗口内无可确认的托管执行、环境、并发、定价或企业集成新项。 |
+| xAI / Grok | 无新增 | 已查 xAI news、Grok Bot/Grok Build changelog 与 API docs；没有发现窗口内新的 Cloud Agent、异步任务或远程执行发布。普通模型/API 信息未误归入 AaaS。 |
+
+## 海外厂商
+
+### 近三日补充：AWS DevOps Agent 沙箱与自动评审
+
+AWS 官方“What's new”记录显示：11 月 21 日，DevOps Agent Sandbox 扩至所有商业 AWS Region，并为 `pip`/`npm` 增加托管、自定义或禁用包仓库的选择；custom agents 的每次调用可获得独立临时环境。11 月 22 日，Automatic Reviews 预览阶段可配置 1–10% 的采样率。它们分别增强了托管执行环境和评测控制面，符合 AaaS 定义。来源：[AWS DevOps Agent 更新历史](https://docs.aws.amazon.com/devopsagent/latest/userguide/whats-new.html)。
+
+### 其他重点入口
+
+Anthropic、OpenAI、Google、Microsoft、Replit、Cursor、Lindy、CrewAI、LangGraph Platform、Factory 与 Sourcegraph/Amp 均完成官方入口扫描，本轮未发现可在主窗口内确认且尚未由其他条目覆盖的托管执行新发布。Claude/OpenAI 相关信息如有产品侧变化，详见 Claude 专题页与 OpenAI 专题页。
+
+## 中国市场
+
+已检查字节系 Coze/火山/Doubao/Trae/Seed、阿里百炼/Qoder/通义/夸克、腾讯元宝/混元/云、百度 AgentBuilder/Comate，以及智谱、Kimi、MiniMax、DeepSeek 的公开入口。本轮没有找到同时满足“窗口内可核验日期”与“服务方托管执行生命周期”的新条目；部分页面依赖客户端渲染或登录，限制已记入失败来源，不据此推断“没有发布”。
+
+## Coding Agent / Harness 边界检查
+
+Cline、Pi Coding Agent / pi-mono、DeepSeek Harness / DSH，以及 OpenCode、Aider、Continue、Roo Code 已逐项检查托管/云执行、后台或定时任务、远程环境、并发、企业控制面和定价证据。未发现主窗口内足以从本地 harness 更新升级为 AaaS 动态的官方证据；普通 CLI、IDE、桌面或自托管改动留在开源专题页。
+
+## 日期未确认
+
+- 搜索聚合页把 Devin 的若干界面/Jira 变化标成 11 月 23 日，但 Devin 官方 release notes 当前只显示到 11 月 20 日。由于原始发布日期无法对齐，本页不把它写成窗口内发布，也不加入来源清单。
+
+## 未证实传闻
+
+本轮未保留单一消息源的产品发布传闻。
+
+## 邻近信号观察池
+
+- Runpod 托管 MCP 的公开问题单指称服务曾提示 Agent 调用评分/获客调查工具，并要求不向用户提及；问题页及维护者讨论显示相关提示随后被撤下。它反映托管 Agent 工具供应链的透明度与治理风险，但不等于新的 Agent 执行服务发布，故仅作邻近信号。来源：[Runpod MCP issue #202](https://github.com/runpod/runpod-mcp/issues/202)。
+- AWS STS `GetScopedCredentials`、Cloudflare CLI/MCP 反馈工具等属于 Agent 基础设施或工具治理更新；本轮没有把单独的身份 API、MCP 或通用云能力当作 AaaS 产品发布。
+
+## 趋势判断
+
+远程 Agent 的竞争点正在从“能否在云端跑”转向三类控制面：可计量的沙箱成本、每次任务隔离的执行环境，以及可抽样的自动质量评审。与此同时，托管 MCP 对 Agent 的隐式指令也提示平台需要可审计、可见的工具策略。
+
+## 来源链接
+
+1. [GitHub：Copilot connected cloud experience 与云沙箱计费](https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/)
+2. [AWS DevOps Agent：What's new](https://docs.aws.amazon.com/devopsagent/latest/userguide/whats-new.html)
+3. [Runpod MCP issue #202](https://github.com/runpod/runpod-mcp/issues/202)
+
+## 采集状态
+
+- **已检查来源**：Anthropic、OpenAI、Google、Microsoft、GitHub、AWS、Cloudflare、Devin、xAI/Grok、海外 AaaS 厂商、中国厂商及八个 Coding Agent / harness 的官方入口；强制检查的 Devin 与 Grok 已分别记录。
+- **失败来源**：Devin 聚合日期与官方页不一致；部分中国厂商页面依赖客户端渲染/登录；X 未登录不稳定；Runpod 对应补丁 release 的索引不稳定。
+- **初始候选数**：6。
+- **最终保留数**：3 个唯一来源。
+- **二次补搜**：否；GitHub 的 11 月 23 日计费生效事件构成已验证的主窗口动态，因此未触发“零条 24h 动态”的强制二次补搜。
+
+今日扫描完成，共 **3** 条来源，重点：Copilot 云沙箱进入计费日，AWS DevOps Agent 在近三日补齐临时沙箱与自动评审采样控制。

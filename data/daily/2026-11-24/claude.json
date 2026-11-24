@@ -1,0 +1,82 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-11-24T10:45:01+08:00",
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Product Updates / Research / System Cards",
+      "Claude Platform docs and release notes",
+      "Claude Help Center release notes",
+      "Claude Status incident history",
+      "anthropics/claude-code GitHub releases, changelog and commits",
+      "Claude Code CLI, VS Code and JetBrains integration documentation",
+      "Claude Managed Agents, Agent SDK, Skills, marketplace and Developer Platform documentation",
+      "Claude Cowork, Design and Tag documentation",
+      "Claude browser/Chrome, Desktop, connectors/plugins, voice and Microsoft 365 documentation",
+      "Reddit r/ClaudeAI, r/ClaudeCode and r/Anthropic",
+      "Hacker News recent submissions",
+      "Anthropic/Claude official YouTube and recent web search"
+    ],
+    "failedSources": [
+      "X 实时搜索：未登录环境无法稳定读取帖子时间线与互动量",
+      "部分 claude.com 英文页面：本地直接请求遇到证书链错误，改由搜索索引与官方文档交叉核对",
+      "JetBrains 独立变更日志：未发现可按本轮窗口确认的新条目"
+    ],
+    "candidateCount": 7,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-11-23 10:45 至 2026-11-24 10:45（Asia/Shanghai）。本轮确认一项企业平台更新：Enterprise Frontier Safeguards（EFS）进入 beta；另确认一次已恢复的多模型短时错误。Claude Code、IDE 集成、Managed Agents、Agent SDK、Skills 与主要模型在窗口内未发现可核实的新版本发布。社区讨论集中在 2.1.330 后的用量消耗体验，但证据互相矛盾，不能据此断言官方调整了配额或计费。\n\n## Tier 1\n\n| 产品/入口 | 本轮状态 | 证据与说明 |\n|---|---|---|\n| Claude Code CLI | 无新增 | 官方 GitHub release 页显示最新可核实版本仍为 2.1.330，发布时间早于本轮窗口；窗口内仅见仓库例行 mods 更新，不作为产品发布。[官方 releases](https://github.com/anthropics/claude-code/releases) |\n| VS Code 集成 | 无新增 | 已检查 Claude Code changelog 与扩展相关说明，未发现窗口内独立发布。 |\n| JetBrains 集成 | 无新增 | 已检查产品文档与搜索入口，未发现窗口内可核实更新。 |\n| Managed Agents（sessions/webhooks/environments/memory stores） | 无新增 | 已检查平台文档与状态页；EFS 文档明确说明 Managed Agents sessions 不属于 EFS 覆盖的数据存储范围。 |\n| Skills 与 marketplace | 无新增 | 已检查官方文档、目录与 Claude Code changelog。 |\n| Claude Developer Platform | **有更新** | [EFS 官方产品更新](https://claude.com/en/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards)称其进入 beta，让符合条件的企业在使用前沿模型时保持零数据保留；[技术文档](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview)说明密封安全数据写入客户自有云存储，由客户团队审查 Safety Cases。 |\n| Agent SDK | 无新增 | 已检查 Python/TypeScript SDK 与平台更新入口。 |\n| Cowork | 无新增 | 状态页显示服务正常，窗口内未见功能发布。 |\n| Design | 无新增 | 已检查官方产品与帮助中心入口。 |\n| Tag / @Claude sessions | 无新增 | 已检查官方产品、帮助与开发者入口。 |\n| 当前 Sonnet / Opus / Haiku 编码模型 | **服务事件** | [Claude Status](https://status.claude.com/)记录 11 月 23 日 17:39–17:56（北京时间）多模型请求错误升高，随后恢复；这是可用性事件，不是模型版本更新。 |\n\n## Tier 2\n\n浏览器/Chrome Agent、Desktop/Preview、Marketplace/Connectors/Plugins、创意/视频能力、Voice Mode 与 Microsoft 365 集成均已检查；本轮窗口内没有发现可由官方原文确认的功能发布。\n\n## Tier 3\n\n安全与企业方向出现 EFS beta：它把跨请求滥用检测需要的密封安全数据写入客户自有云桶，并关闭 Anthropic 人工审查，面向受监管和高敏感数据场景。医疗、金融服务与法律是官方举例的适用行业；Science、政府、非营利、教育与客服方向本轮未见新的官方发布。\n\n## 官方更新（最新优先）\n\n### Enterprise Frontier Safeguards 进入 beta\n\nAnthropic 在 [官方产品更新](https://claude.com/en/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards) 中宣布 EFS 进入 beta。官方称该方案在保持零数据保留的同时进行跨请求自动化滥用检测，并由客户控制存储与审查流程；这是企业使用高能力模型时隐私、安全和治理边界的重要变化。\n\n[平台技术文档](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview)补充了边界：EFS 覆盖配置工作区中的 Messages API 请求，但代码执行容器、Files API、Batch API 结果与 Managed Agents sessions 等为功能本身存储的数据不在覆盖范围内。EFS 本身不额外收费，不过客户仍承担云存储及密钥操作费用。\n\n### 多模型短时错误已恢复\n\n[Claude Status](https://status.claude.com/)显示，Claude Fable 5.2、Mythos 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5 等请求在北京时间 11 月 23 日 17:39–17:56 出现错误升高；官方随后部署修复并宣布恢复。当前状态页显示相关系统正常。\n\n## Love\n\n一则窗口内社区帖认为 Opus 5.5 在发布两个月后仍具备很强竞争力，但评论同时认为 Fable 5.2 在部分复杂任务上更强。[Reddit 讨论](https://www.reddit.com/r/ClaudeCode/comments/1y3c5vr/its_been_2_months_since_opus_55_launched_and_it/)仅代表个体体验，缺少统一评测，不能外推为总体口碑。\n\n## Hate\n\n[Claude Code 2.1.330 用量讨论](https://www.reddit.com/r/ClaudeCode/comments/1y3eud0/claude_code_21330_higer_token_usage/)中，有用户称五小时会话额度消耗明显加快，也有人表示没有观察到变化，并建议对比 session JSONL 的版本与缓存 token 指标。当前没有官方证据证明配额、计费或 token 计算发生调整，因此将其视为待复现的问题信号。\n\n## 情绪判断\n\n社区情绪为**分化、置信度低**：正面样本认可 Opus/Fable 的编码与复杂任务能力；负面样本关注 2.1.330 后的用量消耗与会话限额。样本来自少量 Reddit 帖子，且用户配置、插件、MCP、缓存命中率和任务类型不同，不足以形成趋势结论。官方公告不计入正面情绪。\n\n## 比较\n\n窗口内没有具名基准或可复现实验足以证明 Claude Code 相对 Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness/DSH 的位次发生变化。社区帖中的模型优劣判断均保留为个体体验；Cline、Pi 与 DSH 的完整产品扫描见开源专题页。\n\n## 日期未确认\n\n- 未发现需要保留但发布时间无法确认的官方 Claude 候选。\n\n## 观察池\n\n- [Claude Code releases](https://github.com/anthropics/claude-code/releases)：2.1.330 早于本轮 24 小时窗口，包含企业管理登录、内置图表 mod、延长循环/定时任务期限和权限修复等；本轮仅作版本背景，不作为今日新发布。\n- 社区关于 2.1.330 用量增加的报告尚未形成可复现实验或官方确认；后续应观察 GitHub issue、changelog 与更多版本对照数据。\n\n## 来源链接\n\n- [EFS 官方产品更新](https://claude.com/en/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards)\n- [EFS 平台技术文档](https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview)\n- [Claude Status](https://status.claude.com/)\n- [Claude Code 官方 releases](https://github.com/anthropics/claude-code/releases)\n- [Reddit：2.1.330 用量讨论](https://www.reddit.com/r/ClaudeCode/comments/1y3eud0/claude_code_21330_higer_token_usage/)\n- [Reddit：Opus 5.5 社区评价](https://www.reddit.com/r/ClaudeCode/comments/1y3c5vr/its_been_2_months_since_opus_55_launched_and_it/)\n\n## 采集状态\n\n已检查 Anthropic 新闻、产品更新、研究与 system cards，Claude Platform 文档/更新、Help Center、Status、Claude Code GitHub releases/changelog/commits、主要产品文档，以及 Reddit、Hacker News、YouTube 与网页搜索。失败来源：X 实时搜索受登录限制；部分 claude.com 页面本地直连证书链异常，已通过搜索索引与官方文档交叉核对；JetBrains 未找到独立窗口内日志。初始候选 7 条，最终保留 6 个唯一 URL；由于最终来源不为 0，未触发二次补搜。",
+  "sources": [
+    {
+      "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+      "url": "https://claude.com/en/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+      "source": "Anthropic / Claude",
+      "publishedAt": "2026-11-23 21:00 +08:00",
+      "summary": "Anthropic 宣布 EFS 进入 beta，为符合条件的企业提供兼容零数据保留的跨请求滥用检测。",
+      "tags": ["Enterprise", "Security", "Claude Platform"]
+    },
+    {
+      "title": "Enterprise Frontier Safeguards",
+      "url": "https://platform.claude.com/docs/en/manage-claude/enterprise-frontier-safeguards/overview",
+      "source": "Claude Platform Docs",
+      "publishedAt": "2026-11-23 21:00 +08:00",
+      "summary": "技术文档说明 EFS 的客户自有存储、Safety Cases 审查流程、费用与数据覆盖边界。",
+      "tags": ["Documentation", "ZDR", "Governance"]
+    },
+    {
+      "title": "Elevated errors for multiple models",
+      "url": "https://status.claude.com/",
+      "source": "Claude Status",
+      "publishedAt": "2026-11-23 19:07 +08:00",
+      "summary": "官方状态页记录多款 Claude 模型短时错误升高并在约 17 分钟影响窗口后恢复。",
+      "tags": ["Incident", "Reliability"]
+    },
+    {
+      "title": "Releases · anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code/releases",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-11-21 00:00 +08:00",
+      "summary": "用于核对 Claude Code 最新版本；2.1.330 早于本轮窗口，作为较旧版本背景保留。",
+      "tags": ["较旧背景", "Claude Code", "Changelog"]
+    },
+    {
+      "title": "Claude Code (2.1.330) - Higher Token Usage",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1y3eud0/claude_code_21330_higer_token_usage/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-11-23 00:00 +08:00",
+      "summary": "社区用户对 2.1.330 后用量消耗是否增加意见不一，尚无官方确认或统一复现。",
+      "tags": ["观察池", "Community", "Usage"]
+    },
+    {
+      "title": "It's been 2 months since Opus 5.5 launched and it still mogs all the other models in the market",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1y3c5vr/its_been_2_months_since_opus_55_launched_and_it/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-11-23 00:00 +08:00",
+      "summary": "少量社区样本肯定 Opus 5.5 的编码表现，同时认为 Fable 5.2 在部分任务更强。",
+      "tags": ["Community", "Sentiment", "日期未确认"]
+    }
+  ]
+}
