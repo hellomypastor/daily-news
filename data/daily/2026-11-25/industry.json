@@ -1,0 +1,113 @@
+{
+  "slug": "ai-industry",
+  "title": "主流 AI / Agent 厂商技术动态日报",
+  "description": "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。",
+  "tags": ["AI", "Agent", "Industry", "Research"],
+  "order": 40,
+  "updatedAt": "2026-11-25T10:58:00+08:00",
+  "image": {
+    "url": "https://about.fb.com/wp-content/uploads/2026/11/England_v2a_4x3.png?w=1200",
+    "alt": "Meta Muse 英国发布文章中的 Muse 角色与英国主题插图",
+    "sourceUrl": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/",
+    "caption": "图片来源：Meta Newsroom"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Research / Claude resources / Platform updates",
+      "OpenAI Index / Research / API changelog / model release notes",
+      "Google DeepMind news、model cards 与 Google Research blog",
+      "Meta AI blog、Meta Newsroom 与官方模型入口",
+      "Microsoft Research blog、Microsoft AI blog 与研究列表",
+      "xAI News、xAI Docs、API/model release notes 与官方仓库：逐项检查 Grok 模型/API、DeepSearch、语音、编码、工具调用和 Agent 能力",
+      "Mistral news/docs 与 Cohere blog/changelog",
+      "Qwen/Alibaba/DAMO、阿里云 Model Studio 与官方仓库",
+      "ByteDance Seed/Doubao、百度、腾讯混元、DeepSeek、智谱/GLM、Moonshot/Kimi、StepFun、MiniMax 官方入口",
+      "NVIDIA Developer/Research、Hugging Face blog/papers、LangChain 与 LlamaIndex blog",
+      "Cline、Pi Coding Agent/pi-mono、DeepSeek Harness/DSH 官方仓库、release 与公司级动态",
+      "Latent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客公开归档"
+    ],
+    "failedSources": [
+      "xAI News/Docs/API release notes 可访问，但未发现 2026-11-22 10:58 至 2026-11-25 10:58 内新的 Grok 模型、API、DeepSearch、语音、编码、工具调用或 Agent 公告",
+      "部分中国厂商官网依赖客户端渲染或搜索索引未显示精确发布时间，未把摘要日期当成发布证据",
+      "X 官方账号时间线在未登录环境下不可稳定核验发布时间与互动量，改查官网、文档、changelog 和 GitHub",
+      "部分播客 RSS/归档未提供精确到时刻的发布时间；公开列表未显示本轮 24 小时内新集"
+    ],
+    "candidateCount": 12,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：**2026-11-24 10:58 至 2026-11-25 10:58（Asia/Shanghai）**；另按规范检查 24–48 小时与 48–72 小时补充。本轮可核实的主线是：OpenAI 将 GPT-6 系列扩展到医疗合规配置与蛋白设计研究，Anthropic 扩展 MCP 服务器可分发的 Agent 能力，机器人侧则出现从仿真训练到真实部署的完整工作流。Meta Muse 英国上线与 Google DeepCrossAttention 属于近两日补充。xAI/Grok 的新闻、文档、API/model release notes 与官方仓库已逐项检查，未发现 72 小时内可核实的新公告。\n\n## 优先动态（过去 24 小时）\n\n| 厂商/机构 | 标题 | 类型 | 日期/状态 | 摘要与意义 |\n|---|---|---|---|---|\n| OpenAI | [Healthcare model configurations in the OpenAI API](https://help.openai.com/en/articles/20001656-healthcare-model-configurations-in-the-openai-api) | API / 合规 | 2026-11-24，已核实 | OpenAI 为 GPT-6.2、GPT-6.1 与 GPT-6 mini 提供面向受监管医疗工作负载的特定配置，强调数据驻留、保留与零数据保留等控制。这是前沿模型向行业合规部署下沉的信号，**详见 OpenAI 专题页**。 |\n| OpenAI | [GPT-6 models demonstrate intrinsic protein-design capabilities](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/) | 科学研究 | 2026-11-24，已核实 | OpenAI 报告 GPT-6 系列在蛋白设计任务上的实验，并公开研究背景与限制；它把通用模型的科学能力从文本评测推向可实验验证的设计任务，**详见 OpenAI 专题页**。 |\n| Anthropic | [MCP servers can now ship skills, run tasks, and more with Claude](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more) | Agent / MCP | 2026-11-24，日期到日已确认 | Anthropic 说明 MCP 服务器可携带 Skills、运行 Tasks 并使用 Elicitation，扩展连接器从工具暴露到工作流封装；官方页未披露具体时刻，**详见 Claude 专题页**。 |\n| NVIDIA / Hugging Face | [Microduck Obstacle Avoidance](https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance) | 机器人 / Sim2Real | 2026-11-24，已核实 | 教程用 Isaac Lab、Newton、ToF 传感与冻结步态策略构建避障控制器，覆盖并行训练、ONNX 导出和真机测试。价值在于给出从仿真到硬件部署的可复现链路，而非只展示机器人演示。 |\n\n## 常规动态\n\n| 厂商/机构 | 动态 | 状态 | 说明 |\n|---|---|---|---|\n| OpenAI | [API Changelog](https://developers.openai.com/api/docs/changelog) | 2026-11-24，已核实 | 官方变更日志记录 GPT-6 医疗模型配置；与上方医疗说明共同支持 API 侧事实，详见 OpenAI 专题页。 |\n| Meta / Microsoft / Mistral / Cohere | 官方新闻、研究与变更入口已检查 | 主窗口无新增 | 没有把较旧条目或搜索摘要日期包装成过去 24 小时发布。 |\n| Qwen/阿里 / 字节 Seed / 百度 / 腾讯混元 / DeepSeek / 智谱 / Kimi / 阶跃 / MiniMax | 官方新闻、文档或仓库已检查 | 主窗口无新增 | 部分动态页日期信息不完整，限制已记录；不据此推断厂商没有内部更新。 |\n| LangChain / LlamaIndex | 官方博客与文档已检查 | 主窗口无新增 | 未发现可由原始页面确认的新平台发布。 |\n\n## Coding Agent / Harness 行业信号\n\nCline、Pi Coding Agent / pi-mono 与 DeepSeek Harness / DSH 的官方仓库、release、文档和公司级入口均已检查。本轮未发现融资、合作、企业采用、桌面/IDE 分发、具名评测或生态扩张等足以进入行业页的新事件；例行版本与代码变化留在开源专题页，**详见开源专题页**。\n\n## 近两日补充（24–48 小时）\n\n- **Meta Muse 英国上线**：Meta 于 11 月 23 日宣布 [Muse 在英国面向 18 岁以上用户开放](https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/)，覆盖 iOS、Android、muse.ai 和 WhatsApp。官方说明其可在用户关闭应用后继续长任务，敏感动作需要批准，并提供连接器、审计记录与可选订阅；这是消费级托管 Agent 的区域扩张与控制面信号。\n- **Google Research DeepCrossAttention**：Google 于 11 月 23 日发布 [Supercharging transformer residual connections](https://www.research.google/blog/supercharging-transformer-residual-connections/)，介绍按 token 动态选择历史层表示的深度交叉注意力。官方实验称它在特定设置下以更少训练步达到标准 Transformer 的质量；结论限定在文章列出的实验与基准内。\n- **Ai2 RoboTrack**：Ai2 于 11 月 23 日发布 [RoboTrack](https://huggingface.co/blog/allenai/robotrack)，包含 307 段人工标注视频的 RoboTrack-Bench、1500 万轨迹的仿真数据与两个点跟踪模型。其意义是揭示通用点跟踪基准可能高估真实机器人操作表现，并提供可复核数据。\n\n## 近三日补充（48–72 小时）\n\n未发现需要补入且尚未由近两日条目覆盖的原始来源。\n\n## 播客\n\nLatent Space、Dwarkesh、No Priors、The Cognitive Revolution、a16z AI 与厂商播客的公开归档已检查；当前公开列表没有显示过去 24 小时内可确认的新集，不用较旧节目填充。\n\n## 日期未确认\n\n- Anthropic MCP 文章可确认日期为 11 月 24 日，但没有公开具体时刻，因此可能落在主窗口边界两侧；本页保留为“日期到日已确认、时刻未确认”，不声称精确发布时间。\n\n## 观察池\n\n- [Axios：AI employees sound alarm](https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks) 引述二十多名匿名消息源，称 Anthropic 与 OpenAI 内部对未发布模型的安全风险存在争论。该报道属于可信二手来源，但核心材料无法由公开原始文件独立验证，因此仅作公司治理与安全文化信号，不把“存在某个不可发布模型”写成已确认事实。\n- xAI/Grok：官方新闻、开发者文档、API/model release notes 与仓库已检查；普通模型/API、DeepSearch、语音、编码、工具调用和 Agent 方向均无本轮可报告变化，不以 11 月 19 日及更早的旧条目填充。\n\n## 来源链接\n\n1. [OpenAI：Healthcare model configurations](https://help.openai.com/en/articles/20001656-healthcare-model-configurations-in-the-openai-api)\n2. [OpenAI：GPT-6 protein-design research](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/)\n3. [Anthropic：Skills over MCP, Tasks and more](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more)\n4. [NVIDIA / Hugging Face：Microduck obstacle avoidance](https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance)\n5. [OpenAI API Changelog](https://developers.openai.com/api/docs/changelog)\n6. [Meta：Muse in the UK](https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/)\n7. [Google Research：DeepCrossAttention](https://www.research.google/blog/supercharging-transformer-residual-connections/)\n8. [Ai2：RoboTrack](https://huggingface.co/blog/allenai/robotrack)\n9. [Axios：AI employees sound alarm](https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks)\n\n## 采集状态\n\n已检查规范列出的全部厂商、研究机构、Agent 框架与播客入口，并显式覆盖 xAI/Grok 的模型/API、DeepSearch、语音、编码、工具调用和 Agent 渠道，以及 Cline、pi-mono、DeepSeek Harness/DSH 的行业级信号。失败或受限项为 xAI 本轮无 72 小时新条目、部分中国厂商脚本型页面缺少精确日期、X 未登录限制与部分播客归档时间粒度不足。初始候选 **12** 条，最终保留 **9** 个唯一 URL；来源不为 0，未触发二次补搜。\n\n今日结论：行业更新从单纯模型发布进一步分化为合规行业配置、Agent 协议封装和可复现的机器人训练/评测链路。",
+  "sources": [
+    {
+      "title": "Healthcare model configurations in the OpenAI API",
+      "url": "https://help.openai.com/en/articles/20001656-healthcare-model-configurations-in-the-openai-api",
+      "source": "OpenAI Help Center",
+      "publishedAt": "2026-11-24",
+      "summary": "OpenAI 说明 GPT-6 系列面向受监管医疗工作负载的模型配置与数据控制。",
+      "tags": ["OpenAI", "Healthcare", "API", "详见 OpenAI 专题页"]
+    },
+    {
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-24",
+      "summary": "OpenAI 报告 GPT-6 系列蛋白设计实验、方法与限制。",
+      "tags": ["OpenAI", "Science", "Protein Design", "详见 OpenAI 专题页"]
+    },
+    {
+      "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "source": "Anthropic",
+      "publishedAt": "2026-11-24（具体时刻未披露）",
+      "summary": "Anthropic 扩展 MCP 服务器可携带 Skills、运行 Tasks 并使用 Elicitation。",
+      "tags": ["Anthropic", "MCP", "Agent", "日期未确认", "详见 Claude 专题页"]
+    },
+    {
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "source": "NVIDIA on Hugging Face",
+      "publishedAt": "2026-11-24",
+      "summary": "NVIDIA 团队公开 Microduck 避障从并行仿真训练、ONNX 导出到真机测试的工作流。",
+      "tags": ["NVIDIA", "Robotics", "Sim2Real"]
+    },
+    {
+      "title": "Changelog | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "source": "OpenAI Developers",
+      "publishedAt": "2026-11-24",
+      "summary": "OpenAI API 变更日志记录 GPT-6 医疗模型配置。",
+      "tags": ["OpenAI", "API", "Changelog", "详见 OpenAI 专题页"]
+    },
+    {
+      "title": "Introducing Muse in the UK: A Personal AI Agent You Control",
+      "url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/",
+      "source": "Meta Newsroom",
+      "publishedAt": "2026-11-23",
+      "summary": "Meta 将 Muse 个人 Agent 扩展至英国，披露后台任务、连接器、审批、审计与订阅信息。",
+      "tags": ["Meta", "Muse", "Agent", "近两日补充"]
+    },
+    {
+      "title": "Supercharging transformer residual connections",
+      "url": "https://www.research.google/blog/supercharging-transformer-residual-connections/",
+      "source": "Google Research",
+      "publishedAt": "2026-11-23",
+      "summary": "Google Research 介绍用动态层路由与深度交叉注意力改造 Transformer 残差连接。",
+      "tags": ["Google", "Research", "Transformer", "近两日补充"]
+    },
+    {
+      "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+      "url": "https://huggingface.co/blog/allenai/robotrack",
+      "source": "Ai2 on Hugging Face",
+      "publishedAt": "2026-11-23",
+      "summary": "Ai2 发布真实机器人操作点跟踪基准、仿真数据集与模型。",
+      "tags": ["Ai2", "Robotics", "Benchmark", "近两日补充"]
+    },
+    {
+      "title": "AI employees sound alarm: models too powerful to ever release",
+      "url": "https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks",
+      "source": "Axios",
+      "publishedAt": "2026-11-24",
+      "summary": "Axios 基于匿名消息源报道前沿实验室内部安全争论；核心说法尚无公开原始文件验证。",
+      "tags": ["观察池", "可信二手来源", "Safety", "Industry"]
+    }
+  ]
+}

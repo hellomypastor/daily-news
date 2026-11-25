@@ -1,0 +1,81 @@
+{
+  "slug": "claude",
+  "title": "Claude 全家桶过去 24 小时动态与口碑日报",
+  "description": "Claude 编码、Agent、模型、桌面与企业生态的每日动态和社区口碑。",
+  "tags": ["Claude", "Claude Code", "Anthropic", "Agent"],
+  "order": 10,
+  "updatedAt": "2026-11-25T10:47:00+08:00",
+  "image": {
+    "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more/opengraph-image/og",
+    "alt": "Anthropic 发布的 MCP Skills、Tasks 与 Elicitation 产品更新题图",
+    "sourceUrl": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+    "caption": "图片来源：Claude by Anthropic 官方产品更新"
+  },
+  "scan": {
+    "checkedSources": [
+      "Anthropic News / Product Updates / Research / System Cards",
+      "Claude Resources product updates and enterprise announcements",
+      "Claude Platform docs, release notes and model deprecations",
+      "Claude Help Center release notes and Claude Status incident history",
+      "anthropics/claude-code GitHub releases, changelog, Atom feed and latest release API",
+      "Claude Code CLI, VS Code and JetBrains integration documentation",
+      "Claude Managed Agents, Agent SDK, Skills, marketplace and Developer Platform documentation",
+      "Claude Cowork, Design, Tag/@Claude sessions and Claude Ship documentation",
+      "Claude browser/Chrome, Desktop/Preview, artifacts, connectors/plugins, voice and Microsoft 365 documentation",
+      "Current official Sonnet, Opus, Haiku, Mythos and Fable model pages",
+      "Reddit r/ClaudeAI, r/ClaudeCode and r/Anthropic recent discussions",
+      "Hacker News recent submissions and Anthropic/Claude official YouTube",
+      "Recent Chinese and English web search"
+    ],
+    "failedSources": [
+      "X 实时搜索：未登录环境无法稳定读取帖子时间线与互动量",
+      "JetBrains 独立变更日志：未发现可按本轮窗口确认的新条目",
+      "Claude Status 历史事件详情：公开首页未显示本轮新增事故，未将无事件状态写成来源"
+    ],
+    "candidateCount": 9,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n采集窗口：2026-11-24 10:45 至 2026-11-25 10:45（Asia/Shanghai）。本轮确认 [Claude Code 2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) 于北京时间 11 月 25 日 09:32 发布，重点加入 MCP server skills（beta）、技能加载前的 shell hook，以及大量 compaction、MCP、IDE、云模型路由和稳定性修复。Anthropic 另在 11 月 24 日发布 MCP 与桌面 artifacts 两项产品更新；官方页面没有披露具体时刻，因此日期可确认，但是否严格落入本轮 24 小时窗口仍标注限制。\n\n## Tier 1\n\n| 产品/入口 | 本轮状态 | 证据与说明 |\n|---|---|---|\n| Claude Code CLI | **有更新** | [2.1.332 release](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) 精确发布时间为 2026-11-25 09:32（北京时间），增加 MCP server skills beta、`PreSkillShellCommand` hook，并修复 compaction、MCP、Remote Control、headless/cloud 与内存问题。 |\n| VS Code 集成 | **随 2.1.332 更新** | 新增会话无法完整保存/恢复时的告警，并修复 diff、登录、会话状态、性能、语音等一批问题；属于同一 release，不重复计 URL。 |\n| JetBrains 集成 | 无新增 | 已检查官方文档与检索入口，未发现窗口内独立发布。 |\n| Managed Agents（sessions/webhooks/environments/memory stores） | 无独立新增 | 已检查平台入口；2.1.332 包含 self-hosted runner、cloud/headless session 与 Remote Control 修复，但未发现 Managed Agents 产品公告。 |\n| Skills 与 marketplace | **有更新** | [MCP 产品更新](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more)宣布 Skills over MCP 进入 public beta；server 可随工具发布按需加载的技能。2.1.332 同步加入 CLI 支持。 |\n| Claude Developer Platform | **有更新** | MCP Tasks 与 Elicitation 进入 GA，File Uploads 即将推出；官方称 Tasks 可让 server 后台执行长任务或完整 agent loop。 |\n| Agent SDK | 无独立新增 | 2.1.332 含 SDK hosted sessions、headless runs 和中断/恢复修复，但未发现 SDK 独立版本公告。 |\n| Cowork | 无独立新增 | 2.1.332 新增 Cowork message tool 的 OpenTelemetry `assistant_response` 事件；未发现 Cowork 产品页独立发布。 |\n| Design | 无独立新增 | 2.1.332 修复从 standalone Design 迁移的长 README 信息丢失；未发现新产品公告。 |\n| Tag / @Claude sessions | 近两日补充 | [Claude Ship](https://claude.com/resources/articles/introducing-claude-ship)案例说明 Claude Tag 可开启 PR 并交给 Ship 后续处理；文章日期为 11 月 23 日，早于主窗口，列入观察池。 |\n| 当前 Sonnet / Opus / Haiku 编码模型 | 无新模型发布 | 已检查官方模型与弃用页；2.1.332 调整多云 alias、fallback 与默认路由，不等同于发布新模型。 |\n\n## Tier 2\n\n- **Desktop / Artifacts：** [Install as app](https://claude.com/resources/articles/install-as-app)进入 Mac 与 Windows beta，artifact 可获得独立窗口、图标、通知与分级本机权限；所有套餐滚动开放，Enterprise 默认关闭。官方仅标注 11 月 24 日，未披露具体时刻。\n- **Marketplace / Connectors / Plugins：** MCP Skills public beta、Tasks/Elicitation GA 属于本轮重点；2.1.332 还支持 plugin manifest 的 optional dependencies。\n- **Browser/Chrome、创意/视频模型、Voice Mode、Microsoft 365：** 已检查，未发现可由官方原文确认的独立发布；2.1.332 延长 tap-mode voice dictation 的静默和总时限，但属于 Claude Code/IDE release。\n\n## Tier 3\n\nEnterprise 方向的主要信号来自 MCP 与桌面 artifacts：Team 管理员可启用 Skills over MCP；Team/Enterprise 管理员可控制 installed apps 权限，Enterprise 默认关闭该能力。安全方面，2.1.332 新增技能或 slash command 加载内联 shell 前的 `PreSkillShellCommand` hook，并修复多类权限、MCP 洪泛、压缩失败和自托管 runner 问题。Science、金融服务、生命科学、医疗、法律、政府、非营利、教育和客服方向，本轮未发现新的独立官方发布。\n\n## 官方更新（最新优先）\n\n### Claude Code 2.1.332：MCP Skills 与稳定性集中更新\n\n[官方 GitHub release](https://github.com/anthropics/claude-code/releases/tag/v2.1.332)显示版本于北京时间 11 月 25 日 09:32 发布。MCP server skills 会以 `server:skill` 出现在命令菜单；新的 `PreSkillShellCommand` hook 可在技能或命令加载时阻止其内联 shell。该版本还修复自动压缩、超长 hook 输出、MCP 连接、Remote Control 状态、云端/无头 session、VS Code 交互与内存问题，并调整 Bedrock、Google Cloud Agent Platform、Foundry 的模型 alias/fallback。\n\n### MCP server 可发布技能并承接长任务\n\n[MCP 官方产品更新](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more)称 Skills over MCP 已在 Claude 与 Claude Code 进入 public beta，Tasks 和 Elicitation GA，File Uploads 即将推出。Skills 按需加载 server 附带的工作流知识；Tasks 让 server 在后台运行耗时操作或 agent loop；Elicitation 允许任务中途通过表单或链接请求批准。文章日期为 11 月 24 日，但无具体发布时刻，故不把严格窗口归属写成已确认。\n\n### Artifacts 可安装为 Mac / Windows 应用\n\n[官方介绍](https://claude.com/resources/articles/install-as-app)显示，Artifacts 的 Install as app 已面向 Mac 与 Windows 以 beta 滚动开放。安装后可独立启动、自动跟随 artifact 更新，并按默认、应用权限、完整电脑访问三档授权；完整访问仅可授予本人或同组织制作的应用。该文章同样只标注 11 月 24 日。\n\n## Love\n\n本轮尚未发现足够数量、且可核验时间和互动量的社区正面样本来形成新趋势。官方公告不计入正面情绪。\n\n## Hate\n\n一则 [Reddit 讨论](https://www.reddit.com/r/ClaudeCode/comments/1y4qanb/what_happened_to_the_weekly_change_log/)质疑 Claude Code weekly changelog 自 9 月后没有更新，用户需要转向 GitHub releases、Atom feed 或逐版本 changelog。讨论样本很小，且问题指向信息汇总体验，不代表 Claude Code 停止发布；2.1.332 的精确 release 记录反而证实版本仍持续更新。\n\n## 情绪判断\n\n社区情绪证据不足，置信度低。当前可保留的负面信号是“周报式变更摘要停更造成可发现性下降”；尚无足够窗口内样本评价 2.1.332、MCP Skills 或 artifact apps 的实际质量，因此不做总体正负面结论。\n\n## 比较\n\nMCP Tasks 把长任务和 agent loop 委派给 server，2.1.332 则把 server skills 直接接入 Claude Code，这加强了 harness 的可扩展性；但本轮没有具名基准或可复现实验证明 Claude Code 相对 Codex、Cursor、Cline、Pi Coding Agent 或 DeepSeek Harness/DSH 的性能位次变化。Cline、Pi 与 DSH 的完整扫描见开源专题页。\n\n## 日期未确认\n\n- [MCP Skills / Tasks 产品更新](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more)：官方日期确认是 2026-11-24，但未披露具体时刻，无法确认是否晚于本轮窗口起点 10:45。\n- [Artifacts Install as app](https://claude.com/resources/articles/install-as-app)：官方日期确认是 2026-11-24，但未披露具体时刻；功能为滚动 beta。\n\n## 观察池\n\n- [Claude Ship](https://claude.com/resources/articles/introducing-claude-ship)：11 月 23 日发布，早于主窗口。Code Review 已 GA，PR Steward 与 Claude Approvals 为 beta，`/ship` 从 Claude Code/desktop 滚动开放；保留为近两日重要背景，不作为今日已确认窗口内发布。\n- [weekly changelog 社区讨论](https://www.reddit.com/r/ClaudeCode/comments/1y4qanb/what_happened_to_the_weekly_change_log/)：用户称周度摘要停在 9 月；评论指出 GitHub release/Atom feed 仍持续更新。属于小样本信息架构反馈。\n\n## 来源链接\n\n- [Claude Code 2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332)\n- [MCP servers can now ship skills, run tasks, and more with Claude](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more)\n- [Turn artifacts into Mac and Windows apps](https://claude.com/resources/articles/install-as-app)\n- [Introducing Claude Ship](https://claude.com/resources/articles/introducing-claude-ship)\n- [Reddit：What happened to the weekly change log?](https://www.reddit.com/r/ClaudeCode/comments/1y4qanb/what_happened_to_the_weekly_change_log/)\n\n## 采集状态\n\n已检查 Anthropic 新闻/产品更新/研究/System Cards、Claude Resources、Platform 文档和 release notes、Help Center、Status、Claude Code GitHub releases/changelog/API/Atom、CLI 与 IDE 文档、Managed Agents、Agent SDK、Skills/marketplace、Cowork、Design、Tag、Ship、browser/Desktop/artifacts/connectors/voice/Microsoft 365、当前模型页面，以及 Reddit、Hacker News、YouTube 和中英文网页搜索。失败来源：X 实时搜索受登录限制；JetBrains 未找到独立窗口内日志；Status 首页未显示本轮新增事故。初始候选 9 条，最终保留 5 个唯一 URL；来源不为 0，未触发二次补搜。",
+  "sources": [
+    {
+      "title": "Claude Code v2.1.332",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "source": "Anthropic GitHub",
+      "publishedAt": "2026-11-25 09:32 +08:00",
+      "summary": "Claude Code 新增 MCP server skills beta、PreSkillShellCommand hook，并集中修复 compaction、MCP、云端 session、IDE 与内存问题。",
+      "tags": ["Claude Code", "MCP", "Skills", "Release"]
+    },
+    {
+      "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "source": "Claude by Anthropic",
+      "publishedAt": "2026-11-24（官方未披露具体时刻）",
+      "summary": "Skills over MCP 进入 public beta，Tasks 与 Elicitation GA，File Uploads 即将推出；精确发布时刻未披露。",
+      "tags": ["日期未确认", "MCP", "Skills", "Agent"]
+    },
+    {
+      "title": "Turn artifacts into Mac and Windows apps",
+      "url": "https://claude.com/resources/articles/install-as-app",
+      "source": "Claude by Anthropic",
+      "publishedAt": "2026-11-24（官方未披露具体时刻）",
+      "summary": "Artifacts 的 Install as app 在 Mac 和 Windows 进入滚动 beta，提供独立应用形态与分级本机权限。",
+      "tags": ["日期未确认", "Artifacts", "Desktop", "Beta"]
+    },
+    {
+      "title": "Introducing Claude Ship",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "source": "Claude by Anthropic",
+      "publishedAt": "2026-11-23",
+      "summary": "Claude Ship 把 Code Review、PR Steward 和 Claude Approvals 串成 PR 审查、修复与策略审批流程；早于主窗口。",
+      "tags": ["较旧背景", "Claude Ship", "Coding Agent", "Enterprise"]
+    },
+    {
+      "title": "What happened to the weekly change log?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1y4qanb/what_happened_to_the_weekly_change_log/",
+      "source": "Reddit r/ClaudeCode",
+      "publishedAt": "2026-11-24（页面相对时间，精确时刻未确认）",
+      "summary": "小样本社区讨论认为 weekly changelog 停更降低了版本变化的可发现性，但 GitHub releases 仍持续更新。",
+      "tags": ["观察池", "Community", "Documentation"]
+    }
+  ]
+}
