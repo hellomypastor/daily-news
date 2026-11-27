@@ -1,0 +1,91 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-11-27T10:46:27+08:00",
+  "image": {
+    "url": "https://raw.githubusercontent.com/wenshao/qwen-code/ef8c1b02b27acd1fbfd1444a6fd8dbf9c517e553/pr18009/9727ae7cbd/browser-02-retained-overview.png",
+    "alt": "Qwen Code 工作树快照保留与恢复界面",
+    "sourceUrl": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7",
+    "caption": "图片来源：Qwen Code 官方 Release"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline 官方仓库、Changelog 与 GitHub Releases（cline/cline）",
+      "Pi Coding Agent / pi-mono 官方仓库与 GitHub Releases（官方入口重定向至 earendil-works/pi）",
+      "DeepSeek Harness / DSH 官方仓库、文档与 GitHub Releases（deepseek-ai/deepseek-harness）",
+      "OpenCode 官方仓库与 GitHub Releases（anomalyco/opencode）",
+      "Aider 官方仓库、HISTORY 与 GitHub Releases（Aider-AI/aider）",
+      "Continue 官方仓库与 GitHub Releases（continuedev/continue）",
+      "Roo Code 官方仓库、文档与 GitHub Releases（RooCodeInc/Roo-Code）",
+      "Qwen Code 官方仓库与 GitHub Releases（QwenLM/qwen-code）",
+      "GitHub Trending（overall、Python、TypeScript）",
+      "Hacker News front/newest 与 Algolia recent submissions",
+      "arXiv cs.AI/cs.CL recent",
+      "Hugging Face Papers、Blog 与模型卡",
+      "Simon Willison Weblog / AI feed",
+      "MIT HAN Lab QDA 项目页与代码入口"
+    ],
+    "failedSources": [
+      "GitHub Trending：公开页面未稳定提供可复核的当日 stars/day 数字，未记录波动指标",
+      "arXiv recent：本轮未检出可同时确认发布日期和高相关性的新增论文",
+      "Hugging Face 部分模型页：网页抓取入口返回内部错误，改用公开搜索索引核对模型卡变更",
+      "QDA 项目页：未公开原始发布日期，仅能核验过去 24 小时的 HN 首次提交时间"
+    ],
+    "candidateCount": 10,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮发现窗口为 **2026-11-26 10:45 至 2026-11-27 10:45（Asia/Shanghai）**，技术精选同时向前检查 48 小时。共保留 6 条原始来源：Cline 在同一发布批次更新扩展、桌面与 SDK；Qwen Code v0.28.7 则集中推进 Harness 内核、托管会话接管与工作树恢复。MIT HAN Lab 的 QDA 和 Horizon Labs 的提示注入防护模型因页面缺少精确发布时间，按证据状态分别进入“日期未确认”。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 本轮状态 | 证据与意义 |\n|---|---|---|\n| Cline | **v4.1.28 / Desktop v0.0.51 / SDK v0.2.2，已验证** | 三个 [官方 Release](https://github.com/cline/cline/releases/tag/v4.1.28)、[Desktop Release](https://github.com/cline/cline/releases/tag/desktop-v0.0.51) 与 [SDK Release](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.2) 均在主窗口内发布。共同主题是刷新模型目录、移除上游已标记弃用的模型 ID、加入 Concentrate 与 Prima Labs provider，并清理遥测依赖；这属于模型路由与分发面的实质维护。 |\n| Pi Coding Agent / pi-mono | 无新增 | 已检查官方仓库与 Releases；最新可核验版本仍为 11 月 25 日的 v1.6.1，早于主窗口，未跨日重复旧来源。 |\n| DeepSeek Harness / DSH | 无新增 | 已检查 `deepseek-ai/deepseek-harness` 仓库、文档与 Releases；最新标签仍为 11 月 22 日的 v0.2.3-alpha.2。 |\n| OpenCode | 无新增 | 已检查官方仓库与 Releases；v2.4.2 发布于 11 月 26 日 08:59（上海时间），在本轮主窗口前且已由前一日日报收录。 |\n| Aider | 无新增 | 已检查官方仓库、HISTORY 与 Releases，未发现窗口内发布。 |\n| Continue | 无新增 | 已检查官方仓库与 Releases，未发现窗口内发布。 |\n| Roo Code | 无新增 | 已检查官方仓库、文档与 Releases；未发现窗口内发布。 |\n| Qwen Code | **v0.28.7，已验证** | [官方 Release](https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7) 于 11 月 27 日 02:04（上海时间）发布，覆盖 Harness 内核、托管会话跨控制平面接管、工作树快照、权限上下文和守护进程可靠性。 |\n\n## 已验证技术精选\n\n### 1. Cline 同步更新扩展、桌面与 SDK 的模型目录\n\n[Cline v4.1.28](https://github.com/cline/cline/releases/tag/v4.1.28) 与 [Desktop v0.0.51](https://github.com/cline/cline/releases/tag/desktop-v0.0.51) 于 11 月 26 日 17:54–17:57（上海时间）发布，[SDK v0.2.2](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.2) 则发布于 16:40。三者都依据上游目录移除已标记弃用的 OpenAI 模型 ID，并加入 Concentrate 与 Prima Labs provider；SDK 还减少 `@cline/llms` 依赖并移除部分遥测 helper 导出。这里能确认的是 Cline 的可选目录发生变化，不应反推被移除模型在其原厂 API 同时下线。\n\n### 2. Qwen Code v0.28.7 把 CLI、Hosted Harness 与恢复机制放进同一版本\n\n[Qwen Code v0.28.7](https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7) 将 Qwen Code CLI 接入 Harness 内核，默认关闭使用统计；托管侧允许暂停会话释放 placement、由健康实例接管，并将 Web Terminal 单次票据放入 SQL 以支持多控制平面。客户端则按模型保存 reasoning effort 与上下文窗口，并按工作区保留、恢复 worktree 快照。值得注意的是版本同时取消模型循环检测和工具调用次数上限，让工具结果原样回到模型；这简化了核心路径，但也把防循环责任更多交给模型、调用方和运行时策略。\n\n## GitHub Trending\n\n已检查 overall、Python 与 TypeScript 榜单。榜单反映当前注意力，不等于当天首次发布；公开页没有稳定提供可复核的 stars/day 数字，因此本轮不记录易波动排名，也不把“更新于 11 月 26 日”直接写成发布事件。\n\n## HN 讨论\n\nHN Algolia 显示 QDA 项目页在 11 月 27 日 08:09（上海时间）首次提交，另有 Siren 沙箱评测等讨论；后者原文日期为 11 月 24 日且应由 Claude 专题处理，因此本页不重复作为新增来源。QDA 的原文日期无法确认，按“日期未确认”保留。\n\n## 论文 / 研究\n\nMIT HAN Lab 的 [QDA 项目页](https://mit-han-lab.github.io/qda-blog/) 给出闭环量化设计：Agent 组合 21 种后训练量化方法，以 KL 指标快速筛选候选，再用完整评测验收。作者报告在四个推理模型、三种精度上超过其选定的最强公开 recipe，并公开论文、代码和模型入口；这些数字是作者结果，尚不能视为独立复现。\n\n## 旧文再浮现\n\n本轮没有发现满足“原文超过 7 天、过去 24 小时在 HN 形成可核验新讨论且技术相关性足够高”的条目。\n\n## 日期未确认\n\n- [QDA: Closed-Loop LLM Quantization Design with Agents](https://mit-han-lab.github.io/qda-blog/)：项目页未标日期；HN 首次提交处于主窗口，只能确认发现时间，不能确认原始发布时间。项目描述的 350–990× 加速、精度与成本均为作者报告。\n- [Prompt Injection Guard Small](https://huggingface.co/Horizon-Labs/prompt-injection-guard-small)：公开模型卡搜索索引标注 v2.6.1 于 2026-11-26 更新，仅调整 tokenizer/normalizer 以减少 ANSI 彩色终端输出的误报，权重未变；页面抓取入口失败且没有精确时刻，因此不把它写成严格 24 小时已验证发布。\n\n## 观察池\n\n- Cline 三个 release 属同一产品批次，分别保留 URL 是为了让扩展、桌面与 SDK 的版本证据可直接追溯，不将其夸大为三个独立事件。\n- Qwen Code v0.28.7 的 Hosted Harness 条目同时具有 AaaS 意义，但本页只分析其开源 harness 与会话恢复机制；托管商业边界由 AaaS 专题核验。\n- GitHub Topics 中出现多个当天更新的 Agent 项目，但“仓库更新”不足以证明形成新版本或获得采用，本轮不升级为技术精选。\n\n## 来源链接\n\n1. [Cline v4.1.28](https://github.com/cline/cline/releases/tag/v4.1.28)\n2. [Cline Desktop v0.0.51](https://github.com/cline/cline/releases/tag/desktop-v0.0.51)\n3. [Cline SDK v0.2.2](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.2)\n4. [Qwen Code v0.28.7](https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7)\n5. [QDA: Closed-Loop LLM Quantization Design with Agents](https://mit-han-lab.github.io/qda-blog/)\n6. [Prompt Injection Guard Small](https://huggingface.co/Horizon-Labs/prompt-injection-guard-small)\n\n## 采集状态\n\n- **已检查来源**：Cline、Pi/pi-mono、DeepSeek Harness/DSH、OpenCode、Aider、Continue、Roo Code 与 Qwen Code 的官方仓库/Release/changelog；GitHub Trending；HN front/newest/Algolia；arXiv；Hugging Face Papers/Blog/模型卡；Simon Willison；MIT HAN Lab。\n- **失败或受限来源**：Trending 无稳定日增；arXiv 未检出可同时确认日期和高相关性的新增；Hugging Face 模型页抓取失败；QDA 原文未给发布日期。\n- **初始候选数**：10；**最终保留来源数**：6；**二次补搜**：否（最终来源非 0）。",
+  "sources": [
+    {
+      "title": "Cline v4.1.28",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.28",
+      "source": "Cline / GitHub",
+      "publishedAt": "2026-11-26 17:57 +08:00",
+      "summary": "Cline 扩展刷新模型目录、移除上游标记弃用的模型 ID、加入两个 provider，并补全第三方许可清单。",
+      "tags": ["Coding Agent", "Release", "Model Routing"]
+    },
+    {
+      "title": "Cline Desktop v0.0.51",
+      "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.51",
+      "source": "Cline / GitHub",
+      "publishedAt": "2026-11-26 17:54 +08:00",
+      "summary": "Cline 桌面版同步刷新模型目录与 provider，并补全设置页第三方许可说明。",
+      "tags": ["Coding Agent", "Desktop", "Release"]
+    },
+    {
+      "title": "Cline SDK v0.2.2",
+      "url": "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.2",
+      "source": "Cline / GitHub",
+      "publishedAt": "2026-11-26 16:40 +08:00",
+      "summary": "Cline SDK 刷新模型目录，并精简遥测 helper 与 llms 包依赖。",
+      "tags": ["Coding Agent", "SDK", "Release"]
+    },
+    {
+      "title": "Qwen Code v0.28.7",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7",
+      "source": "Qwen Code / GitHub",
+      "publishedAt": "2026-11-27 02:04 +08:00",
+      "summary": "Qwen Code 更新 Harness 内核 CLI、托管会话跨实例接管、终端票据、工作树恢复与模型设置持久化。",
+      "tags": ["Coding Agent", "Harness", "Managed Agent"]
+    },
+    {
+      "title": "QDA: Closed-Loop LLM Quantization Design with Agents",
+      "url": "https://mit-han-lab.github.io/qda-blog/",
+      "source": "MIT HAN Lab / NVIDIA",
+      "publishedAt": "",
+      "summary": "QDA 让 coding agent 在量化方法库、快速 KL 指标和完整验收之间闭环搜索模型专用量化 recipe；原文未标发布日期。",
+      "tags": ["Research", "Quantization", "日期未确认"]
+    },
+    {
+      "title": "Prompt Injection Guard Small v2.6.1",
+      "url": "https://huggingface.co/Horizon-Labs/prompt-injection-guard-small",
+      "source": "Horizon Labs / Hugging Face",
+      "publishedAt": "2026-11-26（页面未提供时刻）",
+      "summary": "模型卡称 v2.6.1 仅更新 tokenizer normalizer，以降低 ANSI 终端输出误报，权重未变；精确时刻未确认。",
+      "tags": ["Agent Security", "Prompt Injection", "日期未确认"]
+    }
+  ]
+}
