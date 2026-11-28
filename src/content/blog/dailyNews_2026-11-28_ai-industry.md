@@ -1,0 +1,100 @@
+---
+title: "主流 AI / Agent 厂商技术动态日报"
+date: "2026-11-28T00:00:00+08:00"
+updatedAt: "2026-11-28T10:51:00+08:00"
+description: "主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredTitle: "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems"
+featuredUrl: "https://huggingface.co/blog/training-swarms"
+featuredSummary: "讨论多智能体系统的结构、训练和评测方法。 主流 AI 厂商、研究机构、Agent 平台和技术播客的最新动态。"
+featuredPublishedAt: "2026-11-26"
+featuredTags: ["Multi-Agent","Training","Evaluation"]
+featuredImage: "https://huggingface.co/blog/assets/training-swarms/thumbnail.png"
+featuredImageAlt: "Hugging Face 多智能体系统训练与评测文章的官方封面图"
+featuredImageCaption: "图片来源：Hugging Face"
+tags:
+  - "观察池"
+  - "近三日补充"
+  - "Agent"
+  - "AI"
+  - "AMD"
+  - "AWS"
+  - "Benchmark"
+  - "Document AI"
+  - "Enterprise"
+  - "Evaluation"
+  - "Fine-tuning"
+  - "Hugging Face"
+  - "Industry"
+  - "Inference"
+  - "llama.cpp"
+  - "Multi-Agent"
+  - "NVIDIA"
+  - "Podcast"
+  - "Research"
+  - "Safety"
+  - "Training"
+  - "Video"
+---
+
+## 今日概览
+
+扫描窗口为 2026-11-27 10:43 至 2026-11-28 10:43（Asia/Shanghai）。主窗口内可核验的厂商级更新集中在 Hugging Face 与 AWS 的视频生成工程实践；近两日则出现多智能体训练、可复现实验基准和开源推理评测基础设施等值得跟踪的技术信号。xAI / Grok 已按强制项检查，未发现可核验的新发布。
+
+## 优先动态（过去 24 小时）
+
+| 厂商 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| Hugging Face × AWS | [Taking Trainium3 to the Track: Generating Videos with LTX-2.5](https://huggingface.co/blog/video-trainium3) | 工程 / 推理 | 2026-11-27（已核验） | 团队在 Trainium3 上运行 LTX-2.5，并公开张量并行、序列并行与主机侧优化；10 秒、2048×1024、带声音视频在模型加载后耗时约 22–23 秒。 | 给出了可复核代码、瓶颈与优化数据，是生成式视频从 CUDA 之外扩展到专用加速器的具体工程样本。 |
+
+## 常规与近两日补充（24–48 小时）
+
+| 厂商 / 社区 | 标题 | 类型 | 日期 / 状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|---|
+| Hugging Face / ggml-org / AMD | [Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon](https://huggingface.co/blog/ggml-org/llamacpp-amd-bench) | 基准 / 本地推理 | 2026-11-26（已核验） | 新仪表盘公开 llama.cpp 在 AMD Ryzen / Radeon、不同模型、量化与构建版本上的 PP512、TG128 和上下文扩展数据。 | 公开工作流和原始结果可帮助开发者区分模型、量化与内核变化带来的真实性能差异。 |
+| NVIDIA × Hugging Face | [Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference](https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin) | 模型 / 文档解析 | 2026-11-26（已核验） | 官方团队围绕 Nemotron 3.5 Parse 说明开放数据、微调与推理优化路径。 | 文档解析是检索、企业知识与 Agent 工具链的上游能力，开放训练与优化细节比单一榜单更便于复现。 |
+| Hugging Face | [Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](https://huggingface.co/blog/training-swarms) | 多智能体 / 训练评测 | 2026-11-26（已核验） | 文章系统讨论多智能体系统的构建、训练与评估，并把协作结构与可测量的系统行为联系起来。 | 多 Agent 从编排演示走向可训练、可评测系统，需要明确角色、反馈与评价框架。 |
+
+<figure class="source-image">
+  <a href="https://huggingface.co/blog/training-swarms"><img src="https://huggingface.co/blog/assets/training-swarms/thumbnail.png" alt="Hugging Face 多智能体系统训练与评测文章的官方封面图" loading="lazy" /></a>
+  <figcaption><a href="https://huggingface.co/blog/training-swarms">图片来源：Hugging Face</a></figcaption>
+</figure>
+
+## 播客与访谈
+
+| 节目 | 标题 | 日期 / 状态 | 摘要 | 为什么重要 |
+|---|---|---|---|---|
+| Latent Space | [How Clay Builds GTM Agents — Jeff Barg, Head of AI](https://forck.live/podcasts/latent-space/qjPcaZf_plo) | 2026-11-26；可信聚合页，官方原始频道日期未在本轮稳定打开 | 节目讨论 Clay 的 GTM Agent，以及外部 coding harness 连接业务工具的使用方式；聚合页称接近一半 Agent 工作来自 Claude Code 等外部工具。 | 这是 Agent 产品从封闭应用转向“业务系统 + 外部 harness”分工的采用信号；因来源为可信聚合入口，相关比例不作独立事实外推。 |
+
+## 近三日补充（48–72 小时）
+
+- [Reflexive Agents: A 32B Agent That Heals Its Own Wrong Actions, from 14.5% to 60%](https://huggingface.co/blog/cg3849/reflexive-agents-full-story)（2026-11-25，Hugging Face 社区文章）：作者公开了在 τ²-bench 上以可验证纠错数据训练 Agent 的实验；结果显示工具幻觉显著下降，但错误决策仍难定位。它是社区实验而非厂商正式产品结论，指标只适用于文中设置。
+
+## 日期未确认
+
+- 本轮未保留需要猜测发布日期的厂商发布。搜索索引中出现的若干模型名称和版本因未能回到当日官方原文，均未写成已发布事实。
+
+## 观察池
+
+- **xAI / Grok**：已检查官方 News、文档 / API release notes、Grok changelog 与官方仓库，主窗口内未见可核验的模型、DeepSearch、语音、编码、工具调用或 Agent 新发布；普通社交转述不纳入。
+- **Cline / Pi Coding Agent / DeepSeek Harness（DSH）**：已检查产品方向、IDE / 桌面分发、合作、融资、企业采用、评测和生态增长信号；本轮未见需要跨页重复的行业级事件，例行发布详见开源专题页。
+- **Anthropic / OpenAI**：已检查各自官方更新；相关条目与社区口碑详见 Claude 专题页和 OpenAI 专题页，本页不以重复旧背景填充。
+- **其余厂商**：Google DeepMind / Research、Meta AI、Microsoft AI / Research、Mistral、Cohere、Qwen / Alibaba / DAMO、ByteDance、Baidu、Tencent、DeepSeek、Zhipu、Moonshot / Kimi、StepFun、MiniMax、NVIDIA、LangChain 与 LlamaIndex 均完成入口检查，未发现主窗口内更高置信的新发布。
+
+## 一句话总结
+
+今天的可验证信号不是新一轮基础模型竞赛，而是生成视频专用加速、多 Agent 训练评测与本地推理基准逐步变得更公开、更可复现。
+
+## 来源链接
+
+- [Hugging Face × AWS：Trainium3 上的 LTX-2.5](https://huggingface.co/blog/video-trainium3)
+- [Hugging Face / ggml-org：AMD llama.cpp benchmark dashboard](https://huggingface.co/blog/ggml-org/llamacpp-amd-bench)
+- [NVIDIA × Hugging Face：Nemotron 3.5 Parse](https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin)
+- [Hugging Face：多智能体系统训练与评测](https://huggingface.co/blog/training-swarms)
+- [Latent Space 节目聚合页：Clay GTM Agents](https://forck.live/podcasts/latent-space/qjPcaZf_plo)
+- [Hugging Face 社区：Reflexive Agents](https://huggingface.co/blog/cg3849/reflexive-agents-full-story)
+
+## 采集状态
+
+- 已检查来源：主流厂商官方新闻、研究、文档、changelog、GitHub 与指定播客入口；xAI / Grok 及 Cline、Pi、DSH 已逐项检查。
+- 失败来源：xAI 官方 X 时间线受未登录限制；部分中国厂商、Meta 与播客列表页缺少稳定日期或依赖客户端渲染。
+- 初始候选 9 条，保留 6 个唯一来源；最终来源非 0，未触发二次补搜（secondPass=false）。

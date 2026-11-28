@@ -1,0 +1,65 @@
+{
+  "slug": "open-source",
+  "title": "今日 AI / Agent 开源项目与技术博客精选",
+  "description": "经过时效验证的 AI、Agent、LLM 开源项目、技术博客与研究精选。",
+  "tags": ["AI", "Agent", "Open Source", "LLM"],
+  "order": 30,
+  "updatedAt": "2026-11-28T10:55:00+08:00",
+  "image": {
+    "url": "https://huggingface.co/blog/assets/training-swarms/thumbnail.png",
+    "alt": "Hugging Face 多智能体系统训练文章的示意图",
+    "sourceUrl": "https://huggingface.co/blog/training-swarms",
+    "caption": "图片来源：Hugging Face 官方博客"
+  },
+  "scan": {
+    "checkedSources": [
+      "Cline 官方仓库与 Releases",
+      "Pi Coding Agent / earendil-works/pi 官方仓库与 Releases（badlogic/pi-mono 已迁移）",
+      "DeepSeek Harness / DSH 官方仓库与 Releases",
+      "OpenCode 官方仓库与 Releases",
+      "Aider 官方仓库与 Releases",
+      "Continue 官方仓库与 Releases",
+      "Roo Code 官方仓库与 Releases",
+      "Hacker News newest 与 Algolia 最近提交",
+      "GitHub Trending overall / Python / TypeScript",
+      "arXiv cs.AI / cs.SE 最近论文",
+      "Hugging Face Papers 与官方博客",
+      "Simon Willison 博客"
+    ],
+    "failedSources": [
+      "GitHub Trending：动态页面未稳定返回完整当日榜单，未记录无法复核的星标增量",
+      "arXiv 检索：窗口内结果噪声较高，仅保留能由原始页面核实的候选",
+      "部分 HN 外链：仅有低互动或营销型落地页，降级为扫描候选但未写成技术事实"
+    ],
+    "candidateCount": 18,
+    "secondPass": false
+  },
+  "content": "## 今日概览\n\n本轮窗口截至 2026-11-28 10:43（Asia/Shanghai）。24 小时内最明确的 Coding Agent / Harness 更新来自 Pi v1.7.0；另外保留一条 48 小时内的 Cline 版本和一篇有复现实验的 Hugging Face 多智能体训练文章。没有依据零散讨论声称任何 harness 已经追平或超过另一产品。\n\n## Coding Agent / Harness 雷达\n\n| 项目 | 状态 | 关键变化 | 证据 |\n|---|---|---|---|\n| Pi Coding Agent | **24 小时内更新** | v1.7.0 增加终端会话恢复，恢复命令会保留工具限制、扩展、Skill 与 system prompt 等访问边界；同时移除新安装与更新的安装遥测，并修复上下文估算与多模型推理状态问题。 | [官方 Release](https://github.com/earendil-works/pi/releases/tag/v1.7.0) |\n| Cline | **48 小时内补充** | v4.1.28 刷新模型目录，移除上游已标记弃用的一批模型 ID，并补充第三方许可证清单。发布时间为 2026-11-26 17:57（上海时间），已超出本页 24 小时主窗但仍在技术精选 48 小时窗内。 | [官方 Release](https://github.com/cline/cline/releases/tag/v4.1.28) |\n| DeepSeek Harness / DSH | 无新增 | 已检查官方仓库、release 与文档；最新可见 release 为 11 月 22 日，不跨日复述旧背景。 | 扫描记录 |\n| OpenCode | 无新增 | 已检查官方仓库、release 与 changelog；窗口内无可报告版本。 | 扫描记录 |\n| Aider | 无新增 | 已检查官方仓库与 release；窗口内无可报告版本。 | 扫描记录 |\n| Continue | 无新增 | 已检查官方仓库、release 与 changelog；窗口内无可报告版本。 | 扫描记录 |\n| Roo Code | 无新增 | 已检查官方仓库、release 与 changelog；窗口内无可报告版本。 | 扫描记录 |\n\n## 已验证技术精选\n\n### Pi v1.7.0：会话恢复不放宽权限边界\n\nPi 的 [v1.7.0 官方发布说明](https://github.com/earendil-works/pi/releases/tag/v1.7.0) 显示，新版通过 OSC 7577 Program Resume Protocol 让兼容终端在重启后恢复原会话，并把 `--tools`、`--no-extensions`、Skill 与 system prompt 等限制带回恢复命令。对长期运行的编码 Agent 而言，重要点不只是“能恢复”，而是恢复后不应意外获得比原会话更宽的工具权限。该版本发布时间为 2026-11-28 01:01（上海时间）。\n\n### Cline v4.1.28：模型目录跟随上游弃用状态\n\nCline [v4.1.28 官方发布说明](https://github.com/cline/cline/releases/tag/v4.1.28) 主要是模型目录与合规清单维护：OpenAI provider 不再展示上游目录已标记弃用的多个 ID，同时加入新 provider。它属于 24–48 小时补充，并非今天主窗的新发布。\n\n## 论文与研究\n\nHugging Face 在 [《Swarms, Flocks, Gangs》](https://huggingface.co/blog/training-swarms) 中给出一个可复现的四 Agent 协作训练示例：四个 Agent 共享 Qwen3-0.6B 策略，但各自持有独立上下文和私有输入，通过消息工具汇总信息。文章同时强调，多 Agent 的提升必须与等预算独立重试比较；单纯增加 Agent 数量并不能证明协作有效。原文标注发布日期为 2026-11-26，但未给出具体时刻，因此将其视为 48 小时候选，不把日期边界解释成精确到小时的结论。\n\n## GitHub Trending\n\n本轮检查了 overall、Python 与 TypeScript 榜单，但动态页面未能稳定返回可复核的完整当日快照，因此不记录星标或“今日增长”数字，也不以第三方聚合榜单代替 GitHub 官方证据。\n\n## Hacker News 讨论\n\n最近提交中出现多个 coding-agent session 可视化、监控和工具提案，但截至扫描时互动较低，且若干外链更接近产品落地页而非可审计的技术说明。本轮将它们计入候选数，不据此形成采用趋势结论。\n\n## 日期未确认\n\n- Hugging Face 多智能体训练文章的发布日期可确认到 2026-11-26，但原页没有具体发布时间；它是否严格落入以 10:43 为边界的 48 小时窗口无法精确确认，故保留日期边界说明。\n\n## 观察池\n\n- HN newest 中出现 coding-agent session 图谱、运行监控和消息协议候选；目前证据主要是低互动提交或产品页，等待代码仓库、设计文档或独立采用信号。\n- GitHub Trending 的第三方镜像给出若干 AI 项目热度榜，但无法与本轮官方动态页完整交叉验证，因此未引用其具体排名或增量。\n\n## 采集状态\n\n- **扫描窗口**：24 小时主窗为 2026-11-27 10:43 至 2026-11-28 10:43（Asia/Shanghai）；技术精选同时查看前 48 小时。\n- **已检查**：Cline、Pi、DSH、OpenCode、Aider、Continue、Roo Code 的官方仓库/release/changelog；HN newest/Algolia；GitHub Trending；arXiv；Hugging Face Papers/博客；Simon Willison。\n- **失败或受限入口**：GitHub Trending 动态榜单未稳定返回完整快照；arXiv 窗口查询噪声高；部分 HN 候选只有营销落地页。\n- **候选与留存**：初始候选 18 条，最终保留 3 个原始来源；其余仅进入不带 URL 的观察摘要，避免把低证据候选包装成事实。\n- **二次补搜**：否。最终来源不为 0，且已覆盖规定的官方入口与备用聚合入口。"
+  ,
+  "sources": [
+    {
+      "title": "v1.7.0",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v1.7.0",
+      "source": "Pi Coding Agent / GitHub",
+      "publishedAt": "2026-11-28 01:01 +08:00",
+      "summary": "Pi v1.7.0 增加保留权限限制的终端会话恢复，移除安装遥测并修复多项上下文与模型状态问题。",
+      "tags": ["Pi", "Coding Agent", "Session", "Permissions"]
+    },
+    {
+      "title": "Cline v4.1.28",
+      "url": "https://github.com/cline/cline/releases/tag/v4.1.28",
+      "source": "Cline / GitHub",
+      "publishedAt": "2026-11-26 17:57 +08:00",
+      "summary": "Cline 更新模型目录以跟随上游弃用状态，并补充第三方许可证清单。",
+      "tags": ["Cline", "Coding Agent", "Release", "48 小时补充"]
+    },
+    {
+      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "source": "Hugging Face",
+      "publishedAt": "2026-11-26",
+      "summary": "Hugging Face 给出四 Agent 共享策略、独立上下文与消息协作的可复现训练示例，并讨论等预算评估。",
+      "tags": ["Multi-Agent", "TRL", "Research", "日期边界"]
+    }
+  ]
+}
